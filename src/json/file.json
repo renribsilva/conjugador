@@ -1,0 +1,107 @@
+{
+  "verb": "ser",
+  "conjugations": {
+    "gd": {
+      "n": "sendo"
+    },
+    "pa": {
+      "n": "sido"
+    },
+    "pr_ind": {
+      "p1": "sou*",
+      "p2": "és*",
+      "p3": "é*",
+      "p4": "somos*",
+      "p5": "sois*",
+      "p6": "são*"
+    },
+    "pt1_ind": {
+      "p1": "era*",
+      "p2": "eras*",
+      "p3": "era*",
+      "p4": "éramos*",
+      "p5": "éreis*",
+      "p6": "eram*"
+    },
+    "pt2_ind": {
+      "p1": "fui*",
+      "p2": "foste*",
+      "p3": "foi*",
+      "p4": "fomos*",
+      "p5": "fostes*",
+      "p6": "foram*"
+    },
+    "pt3_ind": {
+      "p1": "fora*",
+      "p2": "foras*",
+      "p3": "fora*",
+      "p4": "fôramos*",
+      "p5": "fôreis*",
+      "p6": "foram*"
+    },
+    "ft1_ind": {
+      "p1": "serei",
+      "p2": "serás",
+      "p3": "será",
+      "p4": "seremos",
+      "p5": "sereis",
+      "p6": "serão"
+    },
+    "ft2_ind": {
+      "p1": "seria",
+      "p2": "serias",
+      "p3": "seria",
+      "p4": "seríamos",
+      "p5": "seríeis",
+      "p6": "seriam"
+    },
+    "pr_sub": {
+      "p1": "seja*",
+      "p2": "sejas*",
+      "p3": "seja*",
+      "p4": "sejamos*",
+      "p5": "sejais*",
+      "p6": "sejam*"
+    },
+    "pt_sub": {
+      "p1": "fosse*",
+      "p2": "fosses*",
+      "p3": "fosse*",
+      "p4": "fôssemos*",
+      "p5": "fôsseis*",
+      "p6": "fossem*"
+    },
+    "fut_sub": {
+      "p1": "for*",
+      "p2": "fores*",
+      "p3": "for*",
+      "p4": "formos*",
+      "p5": "fordes*",
+      "p6": "forem*"
+    },
+    "inf": {
+      "p1": "ser",
+      "p2": "seres",
+      "p3": "ser",
+      "p4": "sermos",
+      "p5": "serdes",
+      "p6": "serem"
+    },
+    "im1": {
+      "p1": "---",
+      "p2": "sê*",
+      "p3": "seja*",
+      "p4": "sejamos*",
+      "p5": "sede*",
+      "p6": "sejam*"
+    },
+    "im2": {
+      "p1": "---",
+      "p2": "sejas*",
+      "p3": "seja*",
+      "p4": "sejamos*",
+      "p5": "sejais*",
+      "p6": "sejam*"
+    }
+  }
+}

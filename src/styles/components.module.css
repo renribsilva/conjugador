@@ -1,0 +1,48 @@
+/*************************************************/
+/*********************TABLE***********************/
+/*************************************************/
+
+.table {
+  background-color: aqua;
+  width: fit-content;
+  /* margin: 0; */
+  /* padding: 5px; */
+}
+
+.b3 {
+  display: flex;
+}
+
+.mod {
+  background-color: rgb(255, 166, 0);
+  display: flex;
+  justify-content: center;
+  margin-inline: 5px;
+  margin-top: 20px;
+  /* padding: 0px; */
+}
+
+.row {
+  background-color: rgb(83, 130, 192);
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  /* margin: 0px; */
+  /* padding: 0px; */
+}
+
+.col {
+  background-color: blueviolet;
+  text-align: center;
+  width: 300px;
+  margin: 5px;
+}
+
+.tense {
+  background-color: aquamarine;
+}
+
+.imp_inf {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
