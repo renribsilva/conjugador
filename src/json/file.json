@@ -1,107 +1,107 @@
 {
-  "verb": "ser",
+  "verb": "caber",
   "conjugations": {
     "gd": {
-      "n": "sendo"
+      "n": "cabendo"
     },
     "pa": {
-      "n": "sido"
+      "n": "cabido"
     },
     "pr_ind": {
-      "p1": "sou*",
-      "p2": "és*",
-      "p3": "é*",
-      "p4": "somos*",
-      "p5": "sois*",
-      "p6": "são*"
+      "p1": "caibo*",
+      "p2": "cabes",
+      "p3": "cabe",
+      "p4": "cabemos",
+      "p5": "cabeis",
+      "p6": "cabem"
     },
     "pt1_ind": {
-      "p1": "era*",
-      "p2": "eras*",
-      "p3": "era*",
-      "p4": "éramos*",
-      "p5": "éreis*",
-      "p6": "eram*"
+      "p1": "cabia",
+      "p2": "cabias",
+      "p3": "cabia",
+      "p4": "cabíamos",
+      "p5": "cabíeis",
+      "p6": "cabiam"
     },
     "pt2_ind": {
-      "p1": "fui*",
-      "p2": "foste*",
-      "p3": "foi*",
-      "p4": "fomos*",
-      "p5": "fostes*",
-      "p6": "foram*"
+      "p1": "coube*",
+      "p2": "coubeste*",
+      "p3": "coube*",
+      "p4": "coubemos*",
+      "p5": "coubestes*",
+      "p6": "couberam*"
     },
     "pt3_ind": {
-      "p1": "fora*",
-      "p2": "foras*",
-      "p3": "fora*",
-      "p4": "fôramos*",
-      "p5": "fôreis*",
-      "p6": "foram*"
+      "p1": "coubera*",
+      "p2": "couberas*",
+      "p3": "coubera*",
+      "p4": "coubêramos*",
+      "p5": "coubêreis*",
+      "p6": "couberam*"
     },
     "ft1_ind": {
-      "p1": "serei",
-      "p2": "serás",
-      "p3": "será",
-      "p4": "seremos",
-      "p5": "sereis",
-      "p6": "serão"
+      "p1": "caberei",
+      "p2": "caberás",
+      "p3": "caberá",
+      "p4": "caberemos",
+      "p5": "cabereis",
+      "p6": "caberão"
     },
     "ft2_ind": {
-      "p1": "seria",
-      "p2": "serias",
-      "p3": "seria",
-      "p4": "seríamos",
-      "p5": "seríeis",
-      "p6": "seriam"
+      "p1": "caberia",
+      "p2": "caberias",
+      "p3": "caberia",
+      "p4": "caberíamos",
+      "p5": "caberíeis",
+      "p6": "caberiam"
     },
     "pr_sub": {
-      "p1": "seja*",
-      "p2": "sejas*",
-      "p3": "seja*",
-      "p4": "sejamos*",
-      "p5": "sejais*",
-      "p6": "sejam*"
+      "p1": "caiba*",
+      "p2": "caibas*",
+      "p3": "caiba*",
+      "p4": "caibamos*",
+      "p5": "caibais*",
+      "p6": "caibam*"
     },
     "pt_sub": {
-      "p1": "fosse*",
-      "p2": "fosses*",
-      "p3": "fosse*",
-      "p4": "fôssemos*",
-      "p5": "fôsseis*",
-      "p6": "fossem*"
+      "p1": "coubesse*",
+      "p2": "coubesses*",
+      "p3": "coubesse*",
+      "p4": "coubéssemos*",
+      "p5": "coubésseis*",
+      "p6": "coubessem*"
     },
     "fut_sub": {
-      "p1": "for*",
-      "p2": "fores*",
-      "p3": "for*",
-      "p4": "formos*",
-      "p5": "fordes*",
-      "p6": "forem*"
+      "p1": "couber*",
+      "p2": "couberes*",
+      "p3": "couber*",
+      "p4": "coubermos*",
+      "p5": "couberdes*",
+      "p6": "couberem*"
     },
     "inf": {
-      "p1": "ser",
-      "p2": "seres",
-      "p3": "ser",
-      "p4": "sermos",
-      "p5": "serdes",
-      "p6": "serem"
+      "p1": "caber",
+      "p2": "caberes",
+      "p3": "caber",
+      "p4": "cabermos",
+      "p5": "caberdes",
+      "p6": "caberem"
     },
     "im1": {
       "p1": "---",
-      "p2": "sê*",
-      "p3": "seja*",
-      "p4": "sejamos*",
-      "p5": "sede*",
-      "p6": "sejam*"
+      "p2": "cabe",
+      "p3": "caiba*",
+      "p4": "caibamos*",
+      "p5": "cabei",
+      "p6": "caibam*"
     },
     "im2": {
       "p1": "---",
-      "p2": "sejas*",
-      "p3": "seja*",
-      "p4": "sejamos*",
-      "p5": "sejais*",
-      "p6": "sejam*"
+      "p2": "caibas*",
+      "p3": "caiba*",
+      "p4": "caibamos*",
+      "p5": "caibais*",
+      "p6": "caibam*"
     }
   }
 }
