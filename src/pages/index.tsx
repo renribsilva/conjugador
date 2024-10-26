@@ -1,74 +1,75 @@
-import { useState } from 'react';
-import { ni } from '../lib/normalizeVerb';
+// components/Conjugations.tsx
+import { useEffect, useState } from 'react';
+import { conjVerbByAPI } from '../lib/conjVerbByAPI';
 import Table from '../components/table';
-import checkVerbByAPI from '../lib/checkVerbByAPI';
-import { writeConjVerbByAPI } from '../lib/writeConjVerbByAPI';
-import { findedVerbByAPI } from '../lib/findedVerbByAPI';
+import { findedVerbByAPI } from '../lib/findedVerbByAPI'; // Importando a função findedVerbByAPI
 
-export default function Home() {
-  const [verb, setVerb] = useState('');
-  const [result, setResult] = useState(null);
-  const [showTable, setShowTable] = useState(false);
-  const [foundVerb, setFoundVerb] = useState<string | null>(null); // Permite que foundVerb seja string ou null
+const Conjugations = () => {
+  const [conjugations, setConjugations] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [inputValue, setInputValue] = useState<string>('');
+  const [showConjugations, setShowConjugations] = useState<boolean>(false);
+  const [foundVerbValue, setFoundVerbValue] = useState<string | null>(null); // Novo estado para armazenar o valor encontrado
 
-  const handleChange = (event) => {
-    setVerb(event.target.value);
-  };
-
-  const normalized = ni(verb);
-
-  const handleCheckVerb = async () => {
-    const exists = await checkVerbByAPI(normalized);
-    setResult(exists);
-    return exists;
-  };
-
-  const handleKeyDown = async (event) => {
-    if (event.key === 'Enter') {
-      const exists = await handleCheckVerb();
-      if (exists) {
-        try {
-          const result = await findedVerbByAPI(normalized); // Chama a função de fetch
-          setFoundVerb(result); // Atualiza o estado com o resultado
-        } catch (error) {
-          setFoundVerb(error.message); // Atualiza o estado com a mensagem de erro
-        }
-
-        await writeConjVerbByAPI(normalized);
-        setShowTable(true);
-      } else {
-        setShowTable(false);
-        setFoundVerb(null); // Limpa o verbo encontrado se não existir
+  const fetchConjugations = async () => {
+    try {
+      const response = await fetch('/api/queryVerb');
+      if (!response.ok) {
+        throw new Error('Erro ao buscar as conjugações');
       }
+      const data = await response.json();
+      setConjugations(data);
+    } catch (err: any) {
+      setError(err.message);
     }
   };
 
+  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && inputValue.trim() !== '') {
+      try {
+        // Verifique se o verbo existe usando findedVerbByAPI
+        const result = await findedVerbByAPI(inputValue);
+        setFoundVerbValue(result); // Armazena o valor encontrado
+        
+        // Se o verbo não for encontrado, lance um erro
+        if (!result) {
+          setError('O verbo informado não foi encontrado.');
+          return; // Interrompa a execução se o verbo não existir
+        }
+
+        // Prossiga com a chamada para conjVerbByAPI
+        await conjVerbByAPI(inputValue);
+        await fetchConjugations();
+        setShowConjugations(true);
+      } catch (err) {
+        setError('Erro ao processar a conjunção: ' + err.message);
+      }
+      setInputValue('');
+    }
+  };
+
+  useEffect(() => {
+    fetchConjugations();
+  }, []);
+
+  if (error) return <div>Error: {error}</div>;
+
   return (
-    <>
-      <div>
-        <h1>Conjugar Verbo</h1>
-        <input
-          type="text"
-          value={verb}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          placeholder="Digite o verbo"
-        />
-        {result !== null && foundVerb && (
-          <div>
-            <p>
-              {verb !== foundVerb 
-                ? result 
-                  ? `Você quis dizer '${foundVerb}'? Aqui está a conjugação para o verbo '${foundVerb}'` 
-                  : `${foundVerb} não consta em nossa base de dados.`
-                : result 
-                  ? `Conjugação para o verbo '${foundVerb}'.` 
-                  : `'${foundVerb}' não consta em nossa base de dados.`}
-            </p>
-          </div>
-        )}
-      </div>
-      {showTable && <Table verb={normalized} />} {/* Renderiza a tabela apenas se showTable for true */}
-    </>
+    <div>
+      <h1>Conjugations</h1>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder="Digite a conjugação e pressione Enter"
+      />
+      {foundVerbValue && <p>Verbo encontrado: {foundVerbValue}</p>} {/* Exibe o valor encontrado */}
+      {showConjugations && conjugations && (
+        <Table conjugations={conjugations} />
+      )}
+    </div>
   );
-}
+};
+
+export default Conjugations;

@@ -1,43 +1,27 @@
-import fs from 'fs/promises'; // Importa fs/promises para usar async/await
-import path from 'path';
-import { conjugateVerb } from '../../lib/conjugateVerb'; // Importe a função de conjugação
+import { sql } from '@vercel/postgres';
+import { NextApiResponse, NextApiRequest } from 'next';
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { verb } = req.body;
-
-    // Verifica se o verbo foi fornecido
-    if (!verb) {
-      return res.status(400).json({ message: 'verbo não fornecido em conjVerb' });
-    }
-
-    // Conjugue o verbo usando a função importada
-    const conjugations = conjugateVerb(verb);
-
-    // Verifica se as conjugações são válidas
-    if (!conjugations) {
-      return res.status(500).json({ message: 'conjugateVerb() em conVerbs failed' });
-    }
-
-    // Define o caminho onde você quer salvar o arquivo JSON
-    const jsonDir = path.join(process.cwd(), 'src', 'json');
-
+export default async function handler(
+  request: NextApiRequest,
+  response: NextApiResponse,
+) {
+  if (request.method === 'POST') {
     try {
-      // Cria o diretório se não existir
-      await fs.mkdir(jsonDir, { recursive: true });
+      const { verb, conjugations } = request.body; // Obtém verbo e conjugações do corpo da requisição
 
-      // Define o caminho do arquivo como file.json
-      const filePath = path.join(jsonDir, 'file.json'); // Nome do arquivo fixo
+      if (!verb || !conjugations) throw new Error('Verb and conjugations are required');
 
-      // Escreve o arquivo JSON com o verbo e suas conjugações
-      await fs.writeFile(filePath, JSON.stringify({ verb, conjugations }, null, 2), 'utf8');
-      return res.status(200).json({ message: 'file.json salvo com sucesso por conjVerb', verb, conjugations, filePath });
+      // Deleta todas as entradas anteriores da tabela json
+      await sql`DELETE FROM json;`;
+
+      // Insere as novas conjugações na tabela JSON
+      await sql`INSERT INTO json (conjugations) VALUES (${JSON.stringify(conjugations)});`;
+
+      return response.status(200).json({ message: 'Conjugations saved successfully!' });
     } catch (error) {
-      console.error('Erro ao salvar o arquivo:', error.message, error.stack);
-      return res.status(500).json({ message: 'Erro ao escrever file.json por conjVerb', error: error.message });
+      return response.status(500).json({ error: error.message });
     }
   } else {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end(`Method ${req.method} Not Allowed`);
+    return response.status(405).json({ error: 'Method Not Allowed' });
   }
 }

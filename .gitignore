@@ -9,5 +9,9 @@
 # vscode
 /.vscode/
 
+# env
+.env
+
 # workspace
 conjugador.code-workspace
+.vercel

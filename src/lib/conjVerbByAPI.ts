@@ -1,6 +1,6 @@
 import { conjugateVerb } from './conjugateVerb';
 
-export const writeConjVerbByAPI = async (verb: string) => {
+export const conjVerbByAPI = async (verb: string) => {
   // Chama a função de conjugação
   const conjugations = conjugateVerb(verb);
 
