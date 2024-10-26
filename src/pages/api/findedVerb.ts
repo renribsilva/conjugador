@@ -15,7 +15,6 @@ export default async function handler(
 
   const { verb } = request.query; // Obtém o verbo da query string
 
-  // Verifica se 'verb' é uma string antes de usá-lo
   if (Array.isArray(verb)) {
     return response.status(400).json({ error: 'Verbo deve ser uma string única.' });
   }
@@ -24,15 +23,12 @@ export default async function handler(
     return response.status(400).json({ error: 'Verbo não fornecido.' });
   }
 
-  // Caminho para o arquivo JSON
   const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
 
   try {
-    // Lendo o arquivo JSON
     const data = await fs.readFile(filePath, 'utf-8');
     const jsonObject = JSON.parse(data);
 
-    // Verificando se a chave existe e retornando a primeira string do array
     if (verb in jsonObject) {
       return response.status(200).json({ result: jsonObject[verb][0] });
     } else {
