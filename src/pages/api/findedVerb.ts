@@ -1,9 +1,28 @@
-// pages/api/findVerb.js
+// pages/api/findVerb.ts
 import fs from 'fs/promises';
 import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req, res) {
-  const { verb } = req.query; // Obtém o verbo da query string
+export default async function handler(
+  request: NextApiRequest,
+  response: NextApiResponse,
+) {
+  
+  // Verifica se o método HTTP é GET
+  if (request.method !== 'GET') {
+    return response.status(405).json({ error: 'Método não permitido' });
+  }
+
+  const { verb } = request.query; // Obtém o verbo da query string
+
+  // Verifica se 'verb' é uma string antes de usá-lo
+  if (Array.isArray(verb)) {
+    return response.status(400).json({ error: 'Verbo deve ser uma string única.' });
+  }
+
+  if (verb === undefined) {
+    return response.status(400).json({ error: 'Verbo não fornecido.' });
+  }
 
   // Caminho para o arquivo JSON
   const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
@@ -14,12 +33,12 @@ export default async function handler(req, res) {
     const jsonObject = JSON.parse(data);
 
     // Verificando se a chave existe e retornando a primeira string do array
-    if (jsonObject.hasOwnProperty(verb)) {
-      return res.status(200).json({ result: jsonObject[verb][0] });
+    if (verb in jsonObject) {
+      return response.status(200).json({ result: jsonObject[verb][0] });
     } else {
-      return res.status(404).json({ error: 'Verbo não encontrado por findedVerb.' });
+      return response.status(404).json({ error: 'Verbo não encontrado por findVerb.' });
     }
   } catch (err) {
-    return res.status(500).json({ error: 'Erro ao processar o arquivo JSON por findedVerb: ' + err.message });
+    return response.status(500).json({ error: 'Erro ao processar o arquivo JSON por findVerb: ' + err.message });
   }
 }

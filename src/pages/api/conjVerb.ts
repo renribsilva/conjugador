@@ -5,6 +5,7 @@ export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse,
 ) {
+  
   if (request.method === 'POST') {
     try {
       const { verb, conjugations } = request.body; // Obtém verbo e conjugações do corpo da requisição

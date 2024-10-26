@@ -11,10 +11,10 @@ type Person = {
 
 export interface Conjugation {
   gd: {
-    n: string; // "amando"
+    n: string;
   };
   pa: {
-    n: string; // "amado"
+    n: string;
   };
   im1: Person;
   im2: Person;

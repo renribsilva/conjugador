@@ -2,8 +2,9 @@
 import React from 'react';
 import styles from "../styles/components.module.css";
 import { nw } from '../lib/normalizeVerb';
+import { Conjugation } from '../types';
 
-const Table = ({ conjugations }: { conjugations: any }) => {
+const Table = ({ conjugations }: { conjugations: Conjugation }) => {
   return (
     <section>
         <div>

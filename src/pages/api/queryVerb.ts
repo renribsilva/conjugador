@@ -6,6 +6,7 @@ export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse,
 ) {
+  
   if (request.method !== 'GET') {
     return response.status(405).json({ error: 'Método não permitido' });
   }
