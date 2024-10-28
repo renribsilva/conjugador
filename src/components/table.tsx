@@ -138,7 +138,7 @@ const Table = ({ conjugations }: { conjugations: Conjugation }) => {
               <div className={styles.mod}>Infinitivo</div>
               <div className={styles.row}>
                 <div className={styles.col}>
-                  <div className={styles.tense}>Infinitivo</div>
+                  <div className={styles.tense}>Infinitivo Pessoal</div>
                   <div>por {nw(conjugations.inf.p1)} eu</div>
                   <div>por {nw(conjugations.inf.p2)} tu</div>
                   <div>por {nw(conjugations.inf.p3)} ele</div>
