@@ -1,7 +1,7 @@
-## conjugador-gules.vercel.app
+## EM DESENVOLVIMENTO
 
 _[conjugador-gules.vercel.app](https://conjugador-gules.vercel.app)_ 
-é um conjugador de verbos da língua portuguesa que 
+é um conjugador de verbos da língua portuguesa para a web que 
 estou escrevendo basicamente em _typescript_, a fim de conhecer novas palavras no processo 
 e para ter alguma diversão (por que não?).
 Ele está sendo criado com [nextjs](https://nextjs.org/) 
