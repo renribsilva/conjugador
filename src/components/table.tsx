@@ -27,7 +27,7 @@ const Table = ({ conjugations }: { conjugations: Conjugation }) => {
                 <div>elas {nw(conjugations.pr_ind.p6)}</div>
               </div>
               <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Imperfeito</div>
+                <div className={styles.tense}>Pretérito Perfeito</div>
                 <div>eu {nw(conjugations.pt1_ind.p1)}</div>
                 <div>tu {nw(conjugations.pt1_ind.p2)}</div>
                 <div>ela {nw(conjugations.pt1_ind.p3)}</div>
@@ -36,7 +36,7 @@ const Table = ({ conjugations }: { conjugations: Conjugation }) => {
                 <div>elas {nw(conjugations.pt1_ind.p6)}</div>
               </div>
               <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Perfeito</div>
+                <div className={styles.tense}>Pretérito Imperfeito</div>
                 <div>eu {nw(conjugations.pt2_ind.p1)}</div>
                 <div>tu {nw(conjugations.pt2_ind.p2)}</div>
                 <div>ela {nw(conjugations.pt2_ind.p3)}</div>

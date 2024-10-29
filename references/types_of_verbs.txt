@@ -1,0 +1,5 @@
+tipo 1 = regular (mantém o radical e as desinências inalterados)
+tipo 2 = irregular (o radical e as desinências sofrem variações)
+tipo 3 = defectivo (não possui conjugação completa)
+tipo 4 = abundante (possui mais de uma forma com valor equivalente, normalmente, no particípio)
+tipo 5 = anômalo (possui mais de um radical na sua conjugação)
