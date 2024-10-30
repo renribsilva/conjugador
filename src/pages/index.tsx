@@ -4,6 +4,7 @@ import Table from '../components/table';
 import { findedVerbByAPI } from '../lib/findedVerbByAPI';
 import { ni } from '../lib/normalizeVerb';
 import { isIrregVerbByAPI } from '../lib/isIrregVerbByAPI';
+import { findTypeOfVerb } from '../lib/findTypeOfVerb';
 
 const Conjugations = () => {
   const [conjugations, setConjugations] = useState<any>(null);
@@ -11,6 +12,7 @@ const Conjugations = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [showConjugations, setShowConjugations] = useState<boolean>(false);
   const [foundVerbValue, setFoundVerbValue] = useState<string | null>(null);
+  const [verbType, setVerbType] = useState<string | null>(null); // Novo estado para o tipo do verbo
   const [loading, setLoading] = useState<boolean>(false); // Estado de carregamento
 
   const fetchConjugations = async () => {
@@ -25,6 +27,7 @@ const Conjugations = () => {
       // Resetar estados em caso de erro
       setConjugations(null);
       setFoundVerbValue(null);
+      setVerbType(null); // Resetar o tipo do verbo
       setShowConjugations(false);
     } finally {
       setLoading(false); // Finaliza o carregamento
@@ -54,14 +57,16 @@ const Conjugations = () => {
         await conjVerbByAPI(normalizedInputValue);
         await fetchConjugations(); // Chama a função para buscar as conjugações
 
-        // Atualiza o estado apenas se não houver erro
+        // Atualiza os estados apenas se não houver erro
         setFoundVerbValue(result);
+        setVerbType(findTypeOfVerb(normalizedInputValue)); // Armazena o tipo do verbo
         setShowConjugations(true);
       } catch (err) {
         setError('A palavra informada não foi encontrada na nossa base de dados.');
         // Resetar estados em caso de erro
         setConjugations(null);
         setFoundVerbValue(null);
+        setVerbType(null); // Resetar o tipo do verbo
         setShowConjugations(false);
       } finally {
         setLoading(false); // Finaliza o carregamento
@@ -108,6 +113,7 @@ const Conjugations = () => {
       {showConjugations && conjugations && foundVerbValue && !error && (
         <>
           <p>Verbo encontrado: {foundVerbValue}</p>
+          <p>Tipo: {verbType}</p>
           <Table conjugations={conjugations} />
         </>
       )}

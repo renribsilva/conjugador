@@ -6,20 +6,18 @@ function innerSearch(obj: object, P: string, M: string, D: string) {
   let rule: string | null = null;
 
   // Função recursiva para buscar dentro do objeto
-  function Search(o: object) {
-    if (typeof o === 'object' && o !== null) {
-      for (const key in o) {
-        if (key === D) {
-          for (const subKey in o[key]) {
-            if (o[key][subKey][M]?.includes(P)) {
-              hasTarget = true;
-              rule = subKey;
-              return;
-            }
+  function Search(o: any) {
+    if (o && typeof o === 'object') {
+      if (o[D]) {
+        for (const subKey in o[D]) {
+          if (o[D][subKey][M]?.includes(P)) {
+            hasTarget = true;
+            rule = subKey;
+            return;
           }
-        } else {
-          Search(o[key]);
         }
+      } else {
+        Object.values(o).forEach(Search);
       }
     }
   }
@@ -36,27 +34,20 @@ function innerSearch(obj: object, P: string, M: string, D: string) {
 
 // Função para encontrar a terminação do verbo e buscar irregularidades
 export function findIrregRule(verb: string, P: string, M: string, D: string) {
-  const endings = Object.keys(irreg);
-
-  endings.sort((a, b) => b.length - a.length);
-
+  const endings = Object.keys(irreg).sort((a, b) => b.length - a.length);
   const ending = endings.find((end) => verb.endsWith(end));
 
   if (ending) {
-    // Verifica se a terminação e o verbo existem no objeto irreg
     const verbRules = irreg[ending]?.[verb];
-    
-    if (verbRules && verbRules.rules) {
-      const selectedObject = verbRules.rules;
-      const res = innerSearch(selectedObject, P, M, D);
+
+    if (verbRules?.rules) {
+      const res = innerSearch(verbRules.rules, P, M, D);
 
       return {
-        hasTarget: res.hasTarget,
+        ...res,
         ending,
         verb,
-        targetP: res.P,
-        targetM: res.M,
-        rule: res.rule,
+        types: verbRules.type,
       };
     }
   }
@@ -64,12 +55,14 @@ export function findIrregRule(verb: string, P: string, M: string, D: string) {
   return {
     hasTarget: false,
     rule: null,
+    P: null,
+    M: null,
     ending: null,
-    P,
-    M
+    verb: null,
+    types: null,
   };
 }
 
 // Exemplo de uso
-// const res = findIrregRule("saber", "p1", "pr_ind", "RAD");
+// const res = findIrregRule("amar", "p1", "pr_ind", "VT");
 // console.log(res);
