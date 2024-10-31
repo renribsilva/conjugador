@@ -1,4 +1,4 @@
-import irreg from '../json/rulesForIrreg.json';
+import irreg from '../json/rulesForNoReg.json';
 
 // Função para buscar irregularidades
 function innerSearch(obj: object, P: string, M: string, D: string) {

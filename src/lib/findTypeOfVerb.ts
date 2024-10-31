@@ -1,4 +1,4 @@
-import irreg from '../json/rulesForIrreg.json';
+import irreg from '../json/rulesForNoReg.json';
 
 // Função para encontrar o tipo de irregularidade apenas com base no verbo
 export function findTypeOfVerb(verb: string): string {

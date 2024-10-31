@@ -33,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const filePath = path.join(process.cwd(), 'public', 'verbosIrregulares.txt');
-  const jsonFilePath = path.join(process.cwd(), 'src', 'json', 'rulesForIrreg.json');
+  const jsonFilePath = path.join(process.cwd(), 'src', 'json', 'rulesForNoReg.json');
 
   try {
     const verbosData = fs.readFileSync(filePath, 'utf8');
