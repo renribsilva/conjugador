@@ -33,7 +33,7 @@ function innerSearch(obj: object, P: string, M: string, D: string) {
 }
 
 // Função para encontrar a terminação do verbo e buscar irregularidades
-export function findIrregRule(verb: string, P: string, M: string, D: string) {
+export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   const endings = Object.keys(irreg).sort((a, b) => b.length - a.length);
   const ending = endings.find((end) => verb.endsWith(end));
 

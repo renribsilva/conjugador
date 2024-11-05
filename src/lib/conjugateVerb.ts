@@ -1,7 +1,7 @@
 import reg from '../json/rulesForReg.json'; 
+import { findNoRegRule } from './findNoRegVerbs';
 import { nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
-import { findIrregRule } from './findIrregVerbs';
 
 export const conjugateVerb = (verb: string) => {
   const r = verb.slice(0, -2); 
@@ -10,16 +10,16 @@ export const conjugateVerb = (verb: string) => {
 
   // Função para buscar a regra
   const F = (P: string, M: string, D: string): string | null => {
-    const result = findIrregRule(verb, P, M, D);
+    const result = findNoRegRule(verb, P, M, D);
     return result.hasTarget ? result.rule : NOT_FOUND;
   };
 
   // Função para obter dados do verbo
   const getVerbData = (P: string, M: string, num: number) => {
-    const forRrule = findIrregRule(verb, P, M, "RAD").hasTarget;
-    const forVTrule = findIrregRule(verb, P, M, "VT").hasTarget;
-    const forMTrule = findIrregRule(verb, P, M, "MT").hasTarget;
-    const forNPrule = findIrregRule(verb, P, M, "NP").hasTarget;
+    const forRrule = findNoRegRule(verb, P, M, "RAD").hasTarget;
+    const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
+    const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
+    const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
     const verbRules = reg[M]?.[str]; // Usar operador de encadeamento opcional
 
     if (!verbRules) return NOT_FOUND; // Se não encontrar regras para o verbo, retorna N/A
