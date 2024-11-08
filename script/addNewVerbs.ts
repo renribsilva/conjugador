@@ -18,6 +18,7 @@ export function addNewVerbs(words: string[]): Promise<string[]> {
 
       // Adiciona cada palavra ao array original, filtrando palavras vazias
       const additionalWords = data.split('\n').map((word) => word.trim()).filter(Boolean);
+      console.log(additionalWords)
       words.push(...additionalWords);
       resolve(words);
     });
@@ -48,13 +49,15 @@ async function readJsonFile(filePath: string): Promise<Verbos> {
 // Função para comparar os verbos irregulares com os verbos normais
 export async function findMissingIrregularVerbs(): Promise<string[]> {
   const irregularFilePath = path.join(process.cwd(), 'public', 'verbosIrregulares.txt');
-  const verbsJsonPath = path.join(process.cwd(), 'src', 'json', 'verbos.json');
+  const verbsJsonPath = path.join(process.cwd(), 'src', 'json', 'allVerbs.json');
 
   try {
     const irregularVerbs = await readWordsFromFile(irregularFilePath);
     const verbsJson = await readJsonFile(verbsJsonPath);
     const verbKeys = Object.keys(verbsJson);
     const missingVerbs = irregularVerbs.filter(verb => !verbKeys.includes(verb));
+
+    // console.log(irregularVerbs)
 
     return missingVerbs;
 

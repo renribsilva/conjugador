@@ -1,7 +1,7 @@
 import fs from 'fs';
 import https from 'https';
 import path from 'path';
-import { ni } from '../src/lib/normalizeVerb';
+import { ni, nw } from '../src/lib/normalizeVerb';
 import { addNewVerbs } from './addNewVerbs';
 import { findMissingIrregularVerbs } from './addNewVerbs'; // Importando a função
 
@@ -29,7 +29,7 @@ async function downloadFile(url: string, dest: string): Promise<void> {
 // Função para ler um palavras.txt e retornar seu conteúdo como um array de palavras
 async function readFileLines(filePath: string): Promise<string[]> {
   const data = await fs.promises.readFile(filePath, 'utf-8');
-  return data.split('\n').map((word) => word.replace(/\/.*/, '').trim());
+  return data.split('\n').map((word) => nw(word.replace(/\/.*/, '')));
 }
 
 // Função para obter o comprimento de verbosIrregulares.txt
@@ -40,14 +40,12 @@ async function getIrregularVerbsLength(filePath: string): Promise<number> {
 
 // Função para filtrar verbos contidos em palavras.txt e normalizá-los
 async function getVerbsFromVocabulary(filePath: string): Promise<Record<string, string[]>> {
+  
   const cleanedWords = await readFileLines(filePath);
   const updatedWords = await addNewVerbs(cleanedWords);
-
-  // Puxando verbos irregulares para serem acrescidos
   const irregularVerbs = await findMissingIrregularVerbs();
-
-  // Filtrar palavras que terminam em "ar", "er", "ir", "por", e que não contenham hífen
   const exceptions = ["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"];
+
   const verbs = updatedWords.concat(irregularVerbs).filter((word) => 
     /(ar|er|ir|por|pôr)$/.test(word) && // Verifica a terminação
     !/-/.test(word) && // Ignora palavras que contêm hífen
@@ -61,7 +59,7 @@ async function getVerbsFromVocabulary(filePath: string): Promise<Record<string, 
     normalizedVerbs[normalized] = normalizedVerbs[normalized] || []; // Cria o array se não existir
     normalizedVerbs[normalized].push(verb); // Adiciona o verbo original ao array
   });
-
+  console.log(irregularVerbs)
   return normalizedVerbs;
 }
 
@@ -70,7 +68,7 @@ async function main() {
   const url = 'https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic';
   const filePath = path.join(process.cwd(), 'public', 'palavras.txt');
   const irregularVerbsPath = path.join(process.cwd(), 'public', 'verbosIrregulares.txt'); // Caminho do arquivo verbosIrregulares
-  const outputFilePath = path.join(process.cwd(), 'src', 'json', 'verbos.json');
+  const outputFilePath = path.join(process.cwd(), 'src', 'json', 'allVerbs.json');
 
   try {
     // Verificar se o arquivo já existe
