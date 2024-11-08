@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { nw } from '../src/lib/normalizeVerb';
 
 // Função para adicionar novos verbos de um arquivo
 export function addNewVerbs(words: string[]): Promise<string[]> {
@@ -33,7 +34,7 @@ interface Verbos {
 // Função para ler um arquivo e retornar seu conteúdo como um array de palavras
 async function readWordsFromFile(filePath: string): Promise<string[]> {
   const data = await fs.promises.readFile(filePath, 'utf-8');
-  return data.split('\n').map(word => word.trim()).filter(Boolean);
+  return data.split('\n').map(word => nw(word)).filter(Boolean);
 }
 
 // Função para ler o JSON e retornar como um objeto
