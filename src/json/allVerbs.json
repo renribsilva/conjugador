@@ -55354,7 +55354,304 @@
   "reiniciar": [
     "reiniciar"
   ],
+  "aferir": [
+    "aferir"
+  ],
+  "antedar": [
+    "antedar"
+  ],
+  "antepor": [
+    "antepor"
+  ],
+  "antever": [
+    "antever"
+  ],
+  "atrair": [
+    "atrair"
+  ],
+  "autodestruir": [
+    "autodestruir"
+  ],
+  "contradizer": [
+    "contradizer"
+  ],
+  "contrafazer": [
+    "contrafazer"
+  ],
+  "contrapor": [
+    "contrapor"
+  ],
+  "contrapropor": [
+    "contrapropor"
+  ],
+  "desafazer": [
+    "desafazer"
+  ],
+  "desaguar": [
+    "desaguar"
+  ],
+  "desapor": [
+    "desapor"
+  ],
+  "desaprazer": [
+    "desaprazer"
+  ],
+  "desavir": [
+    "desavir"
+  ],
+  "descaber": [
+    "descaber"
+  ],
+  "descobrir": [
+    "descobrir"
+  ],
+  "descompor": [
+    "descompor"
+  ],
+  "descomprazer": [
+    "descomprazer"
+  ],
+  "desconstruir": [
+    "desconstruir"
+  ],
+  "desconvir": [
+    "desconvir"
+  ],
+  "descrer": [
+    "descrer"
+  ],
+  "desdar": [
+    "desdar"
+  ],
+  "desdizer": [
+    "desdizer"
+  ],
+  "desimpedir": [
+    "desimpedir"
+  ],
+  "desimpor": [
+    "desimpor"
+  ],
+  "desmedir": [
+    "desmedir"
+  ],
+  "desmentir": [
+    "desmentir"
+  ],
+  "desmobiliar": [
+    "desmobiliar"
+  ],
+  "despedir": [
+    "despedir"
+  ],
+  "despolir": [
+    "despolir"
+  ],
+  "despor": [
+    "despor"
+  ],
+  "desprecaver": [
+    "desprecaver"
+  ],
+  "desprover": [
+    "desprover"
+  ],
+  "desquerer": [
+    "desquerer"
+  ],
+  "dessaber": [
+    "dessaber"
+  ],
+  "desvaler": [
+    "desvaler"
+  ],
+  "desver": [
+    "desver"
+  ],
+  "extrapor": [
+    "extrapor"
+  ],
+  "indeferir": [
+    "indeferir"
+  ],
+  "indispor": [
+    "indispor"
+  ],
+  "inferir": [
+    "inferir"
+  ],
+  "ingerir": [
+    "ingerir"
+  ],
+  "insatisfazer": [
+    "insatisfazer"
+  ],
+  "interdizer": [
+    "interdizer"
+  ],
+  "intermediar": [
+    "intermediar"
+  ],
+  "interpor": [
+    "interpor"
+  ],
+  "interver": [
+    "interver"
+  ],
+  "maldispor": [
+    "maldispor"
+  ],
+  "pospor": [
+    "pospor"
+  ],
   "por": [
     "pôr"
+  ],
+  "predispor": [
+    "predispor"
+  ],
+  "predizer": [
+    "predizer"
+  ],
+  "preferir": [
+    "preferir"
+  ],
+  "prepor": [
+    "prepor"
+  ],
+  "proferir": [
+    "proferir"
+  ],
+  "prossupor": [
+    "prossupor"
+  ],
+  "readequar": [
+    "readequar"
+  ],
+  "reavir": [
+    "reavir"
+  ],
+  "recobrir": [
+    "recobrir"
+  ],
+  "recompor": [
+    "recompor"
+  ],
+  "reconvir": [
+    "reconvir"
+  ],
+  "redar": [
+    "redar"
+  ],
+  "redispor": [
+    "redispor"
+  ],
+  "redizer": [
+    "redizer"
+  ],
+  "reexpedir": [
+    "reexpedir"
+  ],
+  "reexpor": [
+    "reexpor"
+  ],
+  "refazer": [
+    "refazer"
+  ],
+  "referir": [
+    "referir"
+  ],
+  "refletir": [
+    "refletir"
+  ],
+  "refugir": [
+    "refugir"
+  ],
+  "reimpor": [
+    "reimpor"
+  ],
+  "reindispor": [
+    "reindispor"
+  ],
+  "reinserir": [
+    "reinserir"
+  ],
+  "reler": [
+    "reler"
+  ],
+  "remediar": [
+    "remediar"
+  ],
+  "remedir": [
+    "remedir"
+  ],
+  "reobter": [
+    "reobter"
+  ],
+  "reouvir": [
+    "reouvir"
+  ],
+  "repedir": [
+    "repedir"
+  ],
+  "repor": [
+    "repor"
+  ],
+  "repropor": [
+    "repropor"
+  ],
+  "ressentir": [
+    "ressentir"
+  ],
+  "retrair": [
+    "retrair"
+  ],
+  "retranspor": [
+    "retranspor"
+  ],
+  "rever": [
+    "rever"
+  ],
+  "revestir": [
+    "revestir"
+  ],
+  "revir": [
+    "revir"
+  ],
+  "sobreexpor": [
+    "sobreexpor"
+  ],
+  "sobrepor": [
+    "sobrepor"
+  ],
+  "sotopor": [
+    "sotopor"
+  ],
+  "subpor": [
+    "subpor"
+  ],
+  "subsumir": [
+    "subsumir"
+  ],
+  "subtrair": [
+    "subtrair"
+  ],
+  "superexpor": [
+    "superexpor"
+  ],
+  "superimpor": [
+    "superimpor"
+  ],
+  "superpor": [
+    "superpor"
+  ],
+  "transfazer": [
+    "transfazer"
+  ],
+  "transfugir": [
+    "transfugir"
+  ],
+  "transpor": [
+    "transpor"
   ]
 }
