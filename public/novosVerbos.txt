@@ -1,3 +1,2 @@
 reiniciar
 desabrir
-repor
