@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'inputValue deve ser uma string' });
   }
 
-  const filePath = path.join(process.cwd(), 'public', 'verbosIrregulares.txt');
+  const filePath = path.join(process.cwd(), 'assets', 'verbosIrregulares.txt');
   const jsonFilePath = path.join(process.cwd(), 'src', 'json', 'rulesForNoReg.json');
 
   try {

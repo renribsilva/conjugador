@@ -67,7 +67,7 @@ async function getVerbsFromVocabulary(filePath: string): Promise<Record<string, 
 async function main() {
   const url = 'https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic';
   const filePath = path.join(process.cwd(), 'public', 'palavras.txt');
-  const irregularVerbsPath = path.join(process.cwd(), 'public', 'verbosIrregulares.txt'); // Caminho do arquivo verbosIrregulares
+  const irregularVerbsPath = path.join(process.cwd(), 'assets', 'verbosIrregulares.txt'); // Caminho do arquivo verbosIrregulares
   const outputFilePath = path.join(process.cwd(), 'src', 'json', 'allVerbs.json');
 
   try {
