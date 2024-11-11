@@ -186,7 +186,7 @@
     }
   },
   "por": {
-    "por": {
+    "...por": {
       "note":[],
       "type": [2],
       "abundance":{},
@@ -653,6 +653,18 @@
     }
   },
   "abar": {
+    "...": {
+      "note":["todos os verbos terminados em 'abar' são regulares"],
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "a":{
+            "pr_ind":["p1"]
+          }
+        }
+      }
+    }
   },
   "aber": {
     "caber": {
@@ -735,6 +747,18 @@
     }
   },
   "abir": {
+    "...": {
+      "note":["todos os verbos terminados em 'abir' são regulares"],
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "a":{
+            "pr_ind":["p1"]
+          }
+        }
+      }
+    }
   },
   "abrir": {
     "abrir": {
@@ -783,6 +807,17 @@
     }
   },
   "acar":{
-    "...":{}
+    "...": {
+      "note":["todos os verbos terminados em 'abir' são regulares"],
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "a":{
+            "pr_ind":["p1"]
+          }
+        }
+      }
+    }
   }
 }

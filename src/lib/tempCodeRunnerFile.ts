@@ -1,0 +1,1 @@
+console.log(irreg[ending])

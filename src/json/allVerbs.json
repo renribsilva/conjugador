@@ -53558,9 +53558,6 @@
   "tutuviar": [
     "tutuviar"
   ],
-  "twitter": [
-    "twitter"
-  ],
   "uberar": [
     "uberar"
   ],
@@ -55357,10 +55354,6 @@
   "desabrir": [
     "desabrir"
   ],
-  "repor": [
-    "repor",
-    "repor"
-  ],
   "aferir": [
     "aferir"
   ],
@@ -55378,6 +55371,15 @@
   ],
   "autodestruir": [
     "autodestruir"
+  ],
+  "bem-dizer": [
+    "bem-dizer"
+  ],
+  "bem-fazer": [
+    "bem-fazer"
+  ],
+  "bem-querer": [
+    "bem-querer"
   ],
   "contradizer": [
     "contradizer"
@@ -55601,6 +55603,9 @@
   "repedir": [
     "repedir"
   ],
+  "repor": [
+    "repor"
+  ],
   "repropor": [
     "repropor"
   ],
@@ -55621,6 +55626,9 @@
   ],
   "revir": [
     "revir"
+  ],
+  "sobre-expor": [
+    "sobre-expor"
   ],
   "sobreexpor": [
     "sobreexpor"
