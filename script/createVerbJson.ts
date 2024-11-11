@@ -1,100 +1,91 @@
 import fs from 'fs';
-import https from 'https';
 import path from 'path';
 import { ni, nw } from '../src/lib/normalizeVerb';
-import { addNewVerbs } from './addNewVerbs';
-import { findMissingIrregularVerbs } from './addNewVerbs'; // Importando a função
+import pullLibreOfficeWords from './pullLibreOfficeWords';
+import readTxtLines from './readTxtLines';
 
-// Função para baixar a lista de palavras do LibreOffice
-async function downloadFile(url: string, dest: string): Promise<void> {
-  const file = fs.createWriteStream(dest);
-  return new Promise((resolve, reject) => {
-    https.get(url, (response) => {
-      response.pipe(file);
-      file.on('finish', () => {
-        file.close((err) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve();
-          }
-        });
-      });
-    }).on('error', (error) => {
-      fs.unlink(dest, () => reject(error));
-    });
-  });
+const assetsDir = path.join(process.cwd(), 'assets');
+const srcDir = path.join(process.cwd(), 'src');
+const publicDir = path.join(process.cwd(), 'public');
+
+// Definição do tipo 'Verbos' como um mapeamento de strings para arrays de strings
+type Verbos = Record<string, string[]>;
+
+// Função para ler verbos e adicionar os do arquivo 'newVerbs.txt'
+async function addNewVerbs(words: string[]): Promise<string[]> {
+  try {
+    const newWordPath = path.join(assetsDir, 'newVerbs.txt');
+    const additionalWords = await readTxtLines(newWordPath);
+    return [...words, ...additionalWords];
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.warn('Arquivo newVerbs.txt não encontrado.');
+    } else {
+      throw err;
+    }
+    return words;
+  }
 }
 
-// Função para ler um palavras.txt e retornar seu conteúdo como um array de palavras
-async function readFileLines(filePath: string): Promise<string[]> {
+// Função para ler verbos irregulares e encontrar os ausentes no JSON
+async function findMissingIrregularVerbs(): Promise<string[]> {
+  const irregularVerbsPath = path.join(assetsDir, 'irregVerbs.txt');
+  const irregularVerbs = await readTxtLines(irregularVerbsPath);
+  const verbsJson = await readJsonFile(path.join(srcDir, 'json', 'allVerbs.json'));
+  return irregularVerbs.filter(verb => !Object.keys(verbsJson).includes(verb));
+}
+
+// Função para ler e parsear JSON de verbos
+async function readJsonFile(filePath: string): Promise<Verbos> {
   const data = await fs.promises.readFile(filePath, 'utf-8');
-  return data.split('\n').map((word) => nw(word.replace(/\/.*/, '')));
+  return JSON.parse(data);
 }
 
-// Função para obter o comprimento de verbosIrregulares.txt
-async function getIrregularVerbsLength(filePath: string): Promise<number> {
-  const irregularVerbs = await readFileLines(filePath);
-  return irregularVerbs.length;
-}
-
-// Função para filtrar verbos contidos em palavras.txt e normalizá-los
-async function getVerbsFromVocabulary(filePath: string): Promise<Record<string, string[]>> {
-  
-  const cleanedWords = await readFileLines(filePath);
+// Função para obter verbos normalizados a partir de um vocabulário
+async function getVerbsFromVocabulary(filePath: string): Promise<Verbos> {
+  const cleanedWords = await readTxtLines(filePath);
   const updatedWords = await addNewVerbs(cleanedWords);
   const irregularVerbs = await findMissingIrregularVerbs();
-  const exceptions = ["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"];
 
-  const verbs = updatedWords.concat(irregularVerbs).filter((word) => 
-    /(ar|er|ir|por|pôr)$/.test(word) && // Verifica a terminação
-    !/-/.test(word) && // Ignora palavras que contêm hífen
-    (word.length > 3 || exceptions.includes(word)) // Verifica o comprimento ou exceções
+  const exceptions = new Set(["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"]);
+
+  const verbs = [...updatedWords, ...irregularVerbs].filter(word =>
+    /(ar|er|ir|por|pôr)$/.test(word) &&
+    !/-/.test(word) &&
+    (word.length > 3 || exceptions.has(word))
   );
 
-  // Criar um objeto onde cada verbo normalizado é a chave e seu valor é um array com o verbo original
-  const normalizedVerbs: Record<string, string[]> = {};
-  verbs.forEach((verb) => {
-    const normalized = ni(verb); // Aplica a normalização
-    normalizedVerbs[normalized] = normalizedVerbs[normalized] || []; // Cria o array se não existir
-    normalizedVerbs[normalized].push(verb); // Adiciona o verbo original ao array
-  });
-  console.log(irregularVerbs)
-  return normalizedVerbs;
+  // Normaliza os verbos e agrupa no objeto
+  return verbs.reduce((acc, verb) => {
+    const normalized = ni(verb);
+    acc[normalized] = acc[normalized] || [];
+    acc[normalized].push(verb);
+    return acc;
+  }, {} as Verbos);
 }
 
-// Função principal para baixar, processar e salvar os verbos em verbos.json
+// Função principal para processar e salvar verbos
 async function main() {
-  const url = 'https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic';
-  const filePath = path.join(process.cwd(), 'public', 'palavras.txt');
-  const irregularVerbsPath = path.join(process.cwd(), 'assets', 'verbosIrregulares.txt'); // Caminho do arquivo verbosIrregulares
-  const outputFilePath = path.join(process.cwd(), 'src', 'json', 'allVerbs.json');
+  const filePath = path.join(publicDir, 'palavras.txt');
+  const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
 
   try {
-    // Verificar se o arquivo já existe
+    // Verifica se o arquivo já existe, caso contrário, faz o download
     if (!fs.existsSync(filePath)) {
-      console.log('Arquivo não encontrado. Baixando o arquivo...');
-      await downloadFile(url, filePath);
-      console.log('Arquivo baixado com sucesso.');
+      console.log('Arquivo não encontrado. Baixando...');
+      await pullLibreOfficeWords('https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic', filePath);
     } else {
-      console.log('Arquivo já existe. Pulando o download.');
+      console.log('Arquivo já existe.');
     }
 
     console.log('Lendo e filtrando verbos...');
     const verbs = await getVerbsFromVocabulary(filePath);
-    
-    // Obter o comprimento dos verbos irregulares
-    const irregularVerbsCount = await getIrregularVerbsLength(irregularVerbsPath);
+    const irregularVerbsCount = (await readTxtLines(path.join(assetsDir, 'verbosIrregulares.txt'))).length;
 
-    // Salvar os verbos normalizados no arquivo JSON
     await fs.promises.writeFile(outputFilePath, JSON.stringify(verbs, null, 2));
-
-    const totalVerbs = Object.keys(verbs).length;
-    
-    console.log(`Total de verbos encontrados: ${totalVerbs}`);
+    console.log(`Total de verbos encontrados: ${Object.keys(verbs).length}`);
     console.log(`Total de verbos irregulares: ${irregularVerbsCount}`);
-    console.log('Está tudo pronto!');
-
+    console.log('Processamento concluído!');
   } catch (error) {
     console.error('Erro:', error);
   }
