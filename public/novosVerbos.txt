@@ -1,1 +1,3 @@
 reiniciar
+desabrir
+repor

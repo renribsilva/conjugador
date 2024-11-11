@@ -55354,6 +55354,13 @@
   "reiniciar": [
     "reiniciar"
   ],
+  "desabrir": [
+    "desabrir"
+  ],
+  "repor": [
+    "repor",
+    "repor"
+  ],
   "aferir": [
     "aferir"
   ],
@@ -55593,9 +55600,6 @@
   ],
   "repedir": [
     "repedir"
-  ],
-  "repor": [
-    "repor"
   ],
   "repropor": [
     "repropor"

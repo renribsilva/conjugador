@@ -1,8 +1,9 @@
 {
   "ir":{
     "ir":{
+      "note":[],
       "type":[2,5],
-      "abundance":[],
+      "abundance":{},
       "rules":{
         "RAD":{
           "v":{
@@ -91,8 +92,9 @@
   },
   "dar": {
     "dar": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules": {
         "VT":{
           "o":{
@@ -143,8 +145,9 @@
   },
   "ler": {
     "ler": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules": {
         "VT":{
           "e":{
@@ -184,8 +187,9 @@
   },
   "por": {
     "por": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules": {
         "VT":{
           "o":{
@@ -271,8 +275,9 @@
   },
   "rir": {
     "rir": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules": {
         "VT":{
           "i":{
@@ -304,8 +309,9 @@
   },
   "ser":{
     "ser":{
+      "note":[],
       "type": [5,2],
-      "abundance":[],
+      "abundance":{},
       "rules":{
         "RAD":{
           "":{
@@ -383,8 +389,9 @@
   },
   "ter": {
     "ter": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules": {
         "VT":{
           "e":{
@@ -460,8 +467,9 @@
   },
   "ver": {
     "ver": {
+      "note":[],
       "type": [2],
-      "abundance":[],
+      "abundance":{},
       "rules":{
         "VT":{
           "e":{
@@ -514,8 +522,9 @@
   },
   "vir": {
     "vir": {
+      "note":[],
       "type":[2],
-      "abundance":[],
+      "abundance":{},
       "rules":{
         "VT":{
           "e":{
@@ -603,8 +612,9 @@
   },
   "crer": {
     "crer": {
+      "note":[],
       "type":[2],
-      "abundance":[],
+      "abundance":{},
       "rules":{
         "VT":{
           "e":{
@@ -646,16 +656,133 @@
   },
   "aber": {
     "caber": {
-      "type": [],
-      "abundance":[],
+      "note":[],
+      "type": [2],
+      "abundance":{},
       "rules": {
+        "RAD":{
+          "caib":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "coub":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
       }
     },
     "saber": {
-      "type": [],
-      "abundance":[],
+      "note":[],
+      "type": [2],
+      "abundance":{},
       "rules": {
+        "RAD":{
+          "s":{
+            "pr_ind":["p1"]
+          },
+          "soub":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "saib":{
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "e":{
+            "pr_ind":["p1"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "i":{
+            "pr_ind":["p1"]
+          },
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
       }
     }
+  },
+  "abir": {
+  },
+  "abrir": {
+    "abrir": {
+      "note":[],
+      "type": [2],
+      "abundance":{},
+      "rules":{
+        "RAD":{
+          "ab":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "e":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "rto": {
+            "pa":["n"]
+          }
+        }
+      }
+    },
+    "desabrir": {
+      "note":["'desabrido' é de outro étimo que 'desabrir', cujo particípio é 'desaberto'"],
+      "type":[2],
+      "abundance":{},
+      "rules":{
+        "RAD":{
+          "desab":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "e":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "rto": {
+            "pa":["n"]
+          }
+        }
+      }
+    }
+  },
+  "acar":{
+    "...":{}
   }
 }
