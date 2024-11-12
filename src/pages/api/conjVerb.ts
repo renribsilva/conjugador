@@ -18,7 +18,7 @@ export default async function handler(
       // Insere as novas conjugações na tabela JSON
       await sql`INSERT INTO json (conjugations) VALUES (${JSON.stringify(conjugations)});`;
 
-      return response.status(200).json({ message: 'Conjugations saved successfully!' });
+      return response.status(200).json({ message: 'Conjugations rewrite successfully!' });
     } catch (error) {
       return response.status(500).json({ error: error.message });
     }

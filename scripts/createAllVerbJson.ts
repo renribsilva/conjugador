@@ -85,7 +85,7 @@ async function findMissingIrregularVerbs(verbs: Record<string, string[]>): Promi
   return missingVerbs;
 }
 
-async function createVerbJson() {
+async function createAllVerbJson() {
   const filePath = path.join(publicDir, 'words.txt');
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
 
@@ -112,4 +112,4 @@ async function createVerbJson() {
   }
 }
 
-createVerbJson();
+createAllVerbJson();

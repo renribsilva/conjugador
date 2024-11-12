@@ -1,57 +1,30 @@
-// pages/api/buscarVerbo.ts
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { ni } from '../../lib/normalizeVerb';
 
-const verificarVerboNaLista = (inputValue: string, verbos: string[]): boolean => {
-  const normalizedInput = ni(inputValue);
-  return verbos.some(verb => ni(verb) === normalizedInput);
-};
+const verbsFilePath = path.join(process.cwd(), 'src/json/irregVerbs.json');
 
-const verificarVerboNoJSON = (inputValue: string, jsonData: any): boolean => {
-  const normalizedInput = ni(inputValue);
+export default async function handler(
+  request: NextApiRequest,
+  response: NextApiResponse,
+) {
+  if (request.method !== 'GET') return response.status(405).end();
 
-  if (Object.keys(jsonData).length === 0) return false;
+  const { verb } = request.query;
 
-  for (const primeiraChave of Object.keys(jsonData)) {
-    const subObjeto = jsonData[primeiraChave];
-    if (subObjeto && typeof subObjeto === 'object') {
-      if (subObjeto.hasOwnProperty(normalizedInput)) return true;
-    }
-  }
+  if (!verb || Array.isArray(verb)) return response.status(400).end();
 
-  return false;
-};
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { inputValue } = req.query;
-
-  if (typeof inputValue !== 'string') {
-    return res.status(400).json({ error: 'inputValue deve ser uma string' });
-  }
-
-  const filePath = path.join(process.cwd(), 'assets', 'verbosIrregulares.txt');
-  const jsonFilePath = path.join(process.cwd(), 'src', 'json', 'rulesForNoReg.json');
+  const normalizedVerb = ni(verb as string)
 
   try {
-    const verbosData = fs.readFileSync(filePath, 'utf8');
-    const verbos = verbosData.split('\n');
-    const verboEncontradoNaLista = verificarVerboNaLista(inputValue, verbos);
+    const data = await fs.readFile(verbsFilePath, 'utf-8');
+    const verbArray: string[] = JSON.parse(data);
 
-    const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf8'));
-    const verboEncontradoNoJSON = verificarVerboNoJSON(inputValue, jsonData);
-
-    const resultadoFinal = verboEncontradoNaLista && !verboEncontradoNoJSON ? false : true;
-
-    return res.status(200).json({
-      results: resultadoFinal,
-      isIrreg: verboEncontradoNaLista,
-      hasRUles: verboEncontradoNoJSON
-    });
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: 'Erro ao processar as requisições' });
+    return verbArray.includes(normalizedVerb)
+      ? response.status(200).json({ result: true })
+      : response.status(404).json({ result: false });
+  } catch {
+    return response.status(500).end();
   }
 }

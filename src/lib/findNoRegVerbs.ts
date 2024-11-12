@@ -1,5 +1,6 @@
-import irreg from '../json/rulesForNoReg.json';
-import loadAfixos from './loadAfixos';
+import afixos from '../json/afixos.json';  // Carrega afixos.json
+import irregularidades from '../json/rulesForNoReg.json';  // Carrega rulesForNoReg.json
+import { ni } from './normalizeVerb';
 
 // Função recursiva para buscar irregularidades
 function innerSearch(obj: object, P: string, M: string, D: string) {
@@ -34,31 +35,34 @@ function innerSearch(obj: object, P: string, M: string, D: string) {
 
 // Função principal para encontrar a regra de um verbo
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
-
-  const afixos = loadAfixos();
-  const sortedAfixos = afixos.sort((a, b) => b.length - a.length);
-  const endings = Object.keys(irreg).sort((a, b) => b.length - a.length);
-
-  // Função para filtrar regras com base na terminação do verbo ou no próprio verbo
+  const sortedAfixos = afixos.sort((a, b) => b.length - a.length);  // Ordena afixos
+  const endings = Object.keys(irregularidades).sort((a, b) => b.length - a.length);  // Ordena terminações
+  
+  // Função para buscar regras para a terminação do verbo
   function getVerbKeys(verb: string, endings: string[]): any {
-    const ending = endings.find((end) => verb.endsWith(end));  
-    const rules = ending ? irreg[ending] : null;
-    return { ending, rules };
+    const ending = endings.find((end) => verb.endsWith(end));
+    const rules = ending ? irregularidades[ending] : null;
+  
+    if (rules) {
+      const normalizedRules: any = {};
+      Object.keys(rules).forEach(key => {
+        normalizedRules[ni(key)] = rules[key]; // Normaliza a chave e mantém o valor
+      });
+      return { rules: normalizedRules, ending }; 
+    }
+
+    return { rules: null, ending }; 
   }
 
-  // Função para verificar se um verbo começa com um afixo válido
+  // Função para verificar se o verbo começa com um afixo válido
   function isValidPrefix(verb: string, sortedAfixos: string[]): boolean {
     return sortedAfixos.some((afixo) => verb.startsWith(afixo));
   }
 
-  // Executando getVerbKeys e guardando em um objeto
-  const { ending, rules: verbRules } = getVerbKeys(verb, endings);
-  console.log('Regras associadas à terminação:', verbRules);
+  const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
-  // Caso o verbo tenha regras associadas a ele
+  // Caso o verbo tenha regras associadas
   if (verbRules) {
-
-    // Ignora verbos passados à função com exatamente "..."
     if (verb.startsWith("...")) {
       return {
         hasTarget: false,
@@ -70,11 +74,10 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
         types: null,
         abundance: null,
         note: null,
-        afixo: null  // Retorna null para afixo
+        afixo: null  
       };
     }
 
-    // Caso o verbo tenha a chave exata "..."
     if (verbRules["..."]) {
       const verbRule = verbRules["..."];
       if (verbRule?.rules) {
@@ -86,52 +89,50 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           types: verbRule.type,
           abundance: verbRule.abundance,
           note: verbRule.note,
-          afixo: null  // Sem afixo
+          afixo: null  
         };
       }
     }
 
-    // Verifica afixos válidos para verbos com terminações que começam com "..."
     const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
     for (const ending of endingsThatStartWith) {
       const isValidPrefixForEnding = isValidPrefix(verb, sortedAfixos);
-      if (isValidPrefixForEnding && verb.endsWith(ending.substring(3))) { // Remove "..."
+      if (isValidPrefixForEnding && verb.endsWith(ending.substring(3))) {
         const baseVerbRules = verbRules[ending];
         if (baseVerbRules?.rules) {
           const res = innerSearch(baseVerbRules.rules, P, M, D);
           const afixoEncontrado = sortedAfixos.find((afixo) => verb.startsWith(afixo));
           return {
             ...res,
-            ending, 
+            ending,
             verb,
             types: baseVerbRules.type,
             abundance: baseVerbRules.abundance,
             note: baseVerbRules.note,
-            afixo: afixoEncontrado  // Retorna o afixo encontrado
+            afixo: afixoEncontrado  
           };
         }
       }
     }
 
-    // Caso o verbo tenha regras diretamente associadas a ele
     if (verbRules[verb]) {
       const verbRule = verbRules[verb];
       if (verbRule?.rules) {
         const res = innerSearch(verbRule.rules, P, M, D);
         return {
           ...res,
-          ending,  // Retorna a terminação específica (não mais todas as chaves)
+          ending,
           verb,
           types: verbRule.type,
           abundance: verbRule.abundance,
           note: verbRule.note,
-          afixo: null  // Sem afixo
+          afixo: null  
         };
       }
     }
   }
 
-  // Caso o verbo não tenha uma terminação válida ou regras associadas
+  // Caso o verbo não tenha regras associadas
   return {
     hasTarget: false,
     rule: null,
@@ -142,16 +143,16 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     types: null,
     abundance: null,
     note: null,
-    afixo: null  // Sem afixo
+    afixo: null  
   };
 }
 
-// Exemplos de uso
+// Exemplos de uso (comentados)
 const res1 = findNoRegRule("ir", "p1", "pr_ind", "VT");
-console.log(res1); // Verifique se está retornando o ending como "ir"
+console.log(res1); 
 
-const res2 = findNoRegRule("repor", "p1", "pr_ind", "VT");
-console.log(res2); // Verifique se está retornando o ending como "repor"
+const res2 = findNoRegRule("por", "p1", "pr_ind", "VT");
+console.log(res2); 
 
-const res3 = findNoRegRule("superpor", "p1", "pr_ind", "VT");
-console.log(res3); // Verifique se está retornando o ending como "sotopor"
+const res3 = findNoRegRule("reler", "p1", "pr_ind", "VT");
+console.log(res3); 

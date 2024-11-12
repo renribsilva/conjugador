@@ -15,14 +15,14 @@ export const conjugateVerb = (verb: string) => {
   };
 
   // Função para obter dados do verbo
-  const getVerbData = (P: string, M: string, num: number) => {
+  const getVerbData = (P: string, M: string, num: number): string => {
     const forRrule = findNoRegRule(verb, P, M, "RAD").hasTarget;
     const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
     const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
     const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
-    const verbRules = reg[M]?.[str]; // Usar operador de encadeamento opcional
+    const verbRules = reg[M]?.[str];
 
-    if (!verbRules) return NOT_FOUND; // Se não encontrar regras para o verbo, retorna N/A
+    if (!verbRules) return NOT_FOUND;
 
     const verbData = (forRrule || forVTrule || forMTrule || forNPrule)
       ? nw(`
@@ -39,7 +39,7 @@ export const conjugateVerb = (verb: string) => {
     return verbData;
   };
 
-  // Função para gerar as conjugações
+  // Função para gerar conjugação
   const W = (x: string, P1: string | null = null) => {
     return {
         p1: P1 ?? getVerbData("p1", x, 0),
@@ -51,13 +51,14 @@ export const conjugateVerb = (verb: string) => {
     };
   };
 
+  // Função para gerar conjugação no singular
   const N = (x: string) => {
     return {
         n: getVerbData("n", x, 0)
     };
   };
 
-  // Gera as conjugações usando as terminações corretas
+  // Conjugações
   const conj = {
     gd: N("gd"),
     pa: N("pa"),  
@@ -77,11 +78,13 @@ export const conjugateVerb = (verb: string) => {
 
   // console.log(conj)
 
-  // Gera as conjugações
-  const conjugations = {};
+  // Retorna as conjugações
+  const conjugations: Record<string, any> = {};
   for (const [tense, reg] of Object.entries(conj)) {
-    conjugations[tense] = reg; // Adiciona as terminações diretamente
+    conjugations[tense] = reg;
   }
 
   return conjugations;
 };
+
+// conjugateVerb("amar");
