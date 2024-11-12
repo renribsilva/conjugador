@@ -14,5 +14,5 @@ livremente [aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt
 — no projeto, ela foi salva em `palavras.txt` na pasta `/public` do 
 [repositório da aplicação](https://github.com/renribsilva/conjugador).
 Essa base de vocábulos conta com mais de 320 mil palavras, dentre as quais
-em torno de 20 mil são verbos. Destes, até o momento, 315 são irregulares e receberão
+cerca de 18 mil são verbos. Destes, até o momento, 316 são irregulares e receberão
 regras de conjugação próprias, o que deverá levar algum tempo.
