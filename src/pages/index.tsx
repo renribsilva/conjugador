@@ -2,69 +2,112 @@ import { useEffect, useState } from 'react';
 import { conjVerbByAPI } from '../lib/conjVerbByAPI';
 import Table from '../components/table';
 import { ni } from '../lib/normalizeVerb';
-import { findTypeOfVerb } from '../lib/findTypeOfVerb';
 import { isValidVerbByAPI } from '../lib/isValidVerbByAPI';
+import { findPropsOfVerb } from '../lib/findPropsOfVerb';
 
 const Conjugations = () => {
   const [conjugations, setConjugations] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>('');
+  const [inputReq, setInputReq] = useState<string>('');
   const [showConjugations, setShowConjugations] = useState<boolean>(false);
-  const [verbType, setVerbType] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
   const [foundVerb, setFoundVerb] = useState<string | null>(null);
+  const [isValidVerb, setIsvalidVerb] = useState<boolean>(false);
+  const [abundance, setAbundance] = useState<object | null | undefined>(null);
+  const [afixo, setAfixo] = useState<string | null | undefined>(null);
+  const [ending, setEnding] = useState<string | null | undefined>(null);
+  const [hasTarget, setHasTarget] = useState<string | null | undefined>(null);
+  const [note, setNote] = useState<string[] | null | undefined>(null);
+  const [types, setTypes] = useState<string[] | null | undefined>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const fetchConjugations = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('/api/queryVerb');
-      if (!response.ok) throw new Error('Erro ao buscar as conjugações');
-      setConjugations(await response.json());
-    } catch (err) {
-      setError('Erro ao buscar conjugações');
-      setConjugations(null);
-      setVerbType(null);
-      setShowConjugations(false);
-    } finally {
-      setLoading(false);
-    }
+    const response = await fetch('/api/queryVerb');
+    if (!response.ok) throw new Error('Erro ao buscar as conjugações');
+    setConjugations(await response.json());
+    setLoading(false);
   };
 
+  const normalizedInputValue = ni(inputValue);
+
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' && inputValue.trim()) {
-      const normalizedInputValue = ni(inputValue);
-      setError(null);
-      setLoading(true);
+    if (event.key === 'Enter' && inputValue !== '') {
+      const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
+      const propsOfWord = await findPropsOfVerb(normalizedInputValue, result, findedWord);
+
+      setInputReq(inputValue);
+      setFoundVerb(findedWord);
+      setIsvalidVerb(result);
+
+      setAbundance(propsOfWord?.abundance);
+      setAfixo(propsOfWord?.afixo);
+      setEnding(propsOfWord?.ending);
+      setTypes(propsOfWord?.types);
+      setHasTarget(null);
+      setNote(null);
+
       setShowConjugations(false);
 
-      try {
-        const { result, findedVerb } = await isValidVerbByAPI(normalizedInputValue);
-        if (!result) return setError('A palavra solicitada não consta na nossa lista de verbos.');
-        setFoundVerb(findedVerb);
+      if (!result) {
 
+        setConjugations(null);
+        setShowConjugations(false);
+        setHasTarget(propsOfWord?.hasTarget);
+        setNote(propsOfWord?.note);
+
+      } else {
+
+        setLoading(true);
         await conjVerbByAPI(normalizedInputValue);
         await fetchConjugations();
-        setVerbType(findTypeOfVerb(normalizedInputValue));
         setShowConjugations(true);
-      } catch {
-        setError('A palavra informada não foi encontrada.');
-        setConjugations(null);
-        setVerbType(null);
-        setShowConjugations(false);
-      } finally {
-        setLoading(false);
+        setHasTarget(propsOfWord?.hasTarget);
+        setNote(propsOfWord?.note);
+
       }
     }
   };
 
   useEffect(() => {
-    fetchConjugations();
-  }, []);
+    const data = {
+      conjugations,
+      inputReq,
+      hasTarget,
+      showConjugations,
+      foundVerb,
+      abundance,
+      afixo,
+      ending,
+      note,
+      types,
+      isValidVerb,
+    };
+
+    console.log(data);
+  }, [
+    inputReq,
+    conjugations,
+    hasTarget,
+    showConjugations,
+    foundVerb,
+    abundance,
+    afixo,
+    ending,
+    note,
+    types,
+    isValidVerb,
+  ]);
+
+  // Função para formatar o array `types` como uma string
+  const formatTypes = (types: string[] | null | undefined) => {
+    if (!types || types.length === 0) return '';
+    if (types.length === 1) return types[0];
+    return types.slice(0, -1).join(', ') + ' e ' + types[types.length - 1];
+  };
 
   return (
     <div>
       <h1>Conjugations</h1>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div>
         <input
           type="text"
           value={inputValue}
@@ -73,20 +116,23 @@ const Conjugations = () => {
           placeholder="Digite o verbo e pressione Enter"
           style={{ marginRight: 10, width: 300 }}
         />
-        {loading && (
-          <span style={{ marginLeft: 10 }}>&#x21BB;</span> // Ícone de carregamento
-        )}
+        {loading && "conjugando..."}
       </div>
-
-      {error && <div style={{ color: 'orange', margin: '10px 0' }}>{error}</div>}
-
-      {showConjugations && conjugations && !error && (
-        <>
-          <p>Verbo encontrado: {foundVerb}</p>
-          <p>Tipo: {verbType}</p>
-          <Table conjugations={conjugations} />
-        </>
-      )}
+      <section>
+        {!showConjugations && conjugations === null && hasTarget && (
+          <p>{hasTarget}</p> // Exibe o hasTarget quando conjugations for null
+        )}
+      </section>
+      <section>
+        {showConjugations && conjugations !== null && (
+          <>
+            <p>{hasTarget}</p>
+            <p>{note}</p>
+            <p>{types && <p>Classificação: {formatTypes(types)}</p>}</p>
+            <Table conjugations={conjugations} />
+          </>
+        )}
+      </section>
     </div>
   );
 };

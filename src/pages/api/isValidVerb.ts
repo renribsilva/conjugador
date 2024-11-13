@@ -32,21 +32,22 @@ export default async function handler(
     if (normalizedVerb in normalizedJsonObject) {
       // Pega o verbo original (não normalizado)
       const originalVerb = Object.keys(jsonObject).find(key => ni(key) === normalizedVerb);
-      const originalValue = jsonObject[originalVerb as string]; // Valor original do verbo
-
-      // Pega a primeira chave e o valor associado ao verbo original
-      const firstKey = Object.keys(originalValue)[0];
-      const findedVerb = originalValue[firstKey];
+      const originalValue = jsonObject[originalVerb as string]; 
+      const findedWord = originalValue[0];
 
       // Retorna o verbo original e o valor associado à primeira chave
       return response.status(200).json({
         result: true,
-        findedVerb,
+        findedWord,
       });
     } else {
-      return response.status(200).json({ result: false });
+      return response.status(200).json({ 
+        result: false,
+        findedWord: null,
+      });
     }
-  } catch {
+  } catch (error) {
+    console.error(error)
     return response.status(500).end();
   }
 }

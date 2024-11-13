@@ -148,11 +148,11 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 }
 
 // Exemplos de uso (comentados)
-const res1 = findNoRegRule("ir", "p1", "pr_ind", "VT");
-console.log(res1); 
+// const res1 = findNoRegRule("ir", "p1", "pr_ind", "VT");
+// console.log(res1); 
 
-const res2 = findNoRegRule("por", "p1", "pr_ind", "VT");
-console.log(res2); 
+// const res2 = findNoRegRule("por", "p1", "pr_ind", "VT");
+// console.log(res2); 
 
-const res3 = findNoRegRule("reler", "p1", "pr_ind", "VT");
-console.log(res3); 
+// const res3 = findNoRegRule("acabar", "p1", "pr_ind", "VT");
+// console.log(res3); 
