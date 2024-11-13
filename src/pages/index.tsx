@@ -119,7 +119,7 @@ const Conjugations = () => {
         {loading && "conjugando..."}
       </div>
       <section>
-        {!showConjugations && conjugations === null && hasTarget && (
+        {!showConjugations && conjugations === null && (
           <p>{hasTarget}</p> // Exibe o hasTarget quando conjugations for null
         )}
       </section>
