@@ -9,7 +9,7 @@ type Person = {
   p6: string;
 };
 
-export interface Conjugation {
+export type Conjugation = {
   gd: {
     n: string;
   };

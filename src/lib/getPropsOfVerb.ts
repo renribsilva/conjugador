@@ -24,8 +24,8 @@ function mapTypesToStrings(types) {
   return types.map(type => typeDescriptions[type] || "tipo desconhecido");
 }
 
-// Corrige a função findPropsOfVerb para armazenar apenas os resultados com hasTarget true em um único objeto
-export async function findPropsOfVerb(verb: string, isValidVerb: boolean, validVerb: string): Promise<VerbProps | null> {
+// Corrige a função getPropsOfVerb para armazenar apenas os resultados com hasTarget true em um único objeto
+export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVerb: string): Promise<VerbProps | null> {
   const P = ["p1", "p2", "p3", "p4", "p5", "p6"];
   const M = ["gd", "pa", "pr_ind", "pt1_ind", "pt2_ind", "pt3_ind", "ft1_ind", "ft2_ind", 
              "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2"];
@@ -104,7 +104,7 @@ export async function findPropsOfVerb(verb: string, isValidVerb: boolean, validV
 
 // Testando a função
 // const test = async () => {
-//   const resultado = await findPropsOfVerb("acabar", true, "acabar");
+//   const resultado = await getPropsOfVerb("acabar", true, "acabar");
 //   console.log(resultado); // Exibe o resultado ou null se não encontrar
 // };
 // test();
