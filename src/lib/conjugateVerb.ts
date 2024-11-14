@@ -90,8 +90,8 @@ export const conjugateVerb = (verb: string) => {
   for (const [tense, reg] of Object.entries(conj)) {
     conjugations[tense] = reg;
   }
-  console.log(conjugations)
+  // console.log(conjugations)
   return conjugations;
 };
 
-conjugateVerb("abraçar");
+// conjugateVerb("abraçar");
