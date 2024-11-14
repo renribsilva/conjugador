@@ -8,9 +8,9 @@ const Table = ({ conjugations }: { conjugations: Conjugation }) => {
   return (
     <section>
         <div>
-          <div>Infinitivo: {nw(conjugations.inf.p1)}</div>
-          <div>Gerúndio: {nw(conjugations.gd.n)}</div>
-          <div>Particípio: {nw(conjugations.pa.n)}</div>
+          <div><strong>Infinitivo: </strong> {nw(conjugations.inf.p1)}</div>
+          <div><strong>Gerúndio: </strong> {nw(conjugations.gd.n)}</div>
+          <div><strong>Particípio: </strong>{nw(conjugations.pa.n)}</div>
         </div>
         <div className={styles.table}>
           {/* Indicativo */}

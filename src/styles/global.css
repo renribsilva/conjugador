@@ -25,9 +25,11 @@
 }
 
 :root {
-  background-color: aquamarine;
+  background-color:rgb(243, 243, 243);
 }
 
 body {
+  background-color: rgb(20, 20, 12);
   margin: 0;
+  font-family: "Roboto";
 }

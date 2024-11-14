@@ -1,25 +1,36 @@
 import Table from '../components/table';
 import { flowOfReact } from '../lib/flowOfReact';
-import getSimilarVerbs from '../lib/getSimilarWords';
-import styles from "../styles/pages.module.css"
-import postReqVerbByAPI from '../lib/postReqVerbByAPI'; // Importe a função
+import postReqVerbByAPI from '../lib/postReqVerbByAPI';
 import { useState, useEffect } from 'react';
+import styles from "../styles/pages.module.css";
 
 const Conjugations = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
-  // Resetar a mensagem, esconder o botão e limpar a solicitação quando o valor do input mudar
   useEffect(() => {
     if (state.inputValue) {
-      setIsButtonDisabled(false); // Reabilitar o botão se o input mudar
-      setState(prevState => ({ 
-        ...prevState, 
-        hasTarget: null, // Limpar a mensagem
-        showButton: false, // Esconder o botão
+      setIsButtonDisabled(false);
+      setState(prevState => ({
+        ...prevState,
+        hasTarget: null,
+        showButton: false,
       }));
     }
   }, [state.inputValue, setState]);
+
+  const handleEnterKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      setState(prevState => ({
+        ...prevState,
+        hasTarget: null,
+        showButton: false,
+        showConjugations: false,
+        conjugations: null,
+      }));
+      setIsButtonDisabled(false);
+    }
+  };
 
   const formatTypes = (types: string[] | null | undefined) => {
     if (!types || types.length === 0) return '';
@@ -28,52 +39,65 @@ const Conjugations = () => {
   };
 
   const handleButtonClick = async () => {
-    await postReqVerbByAPI(state.inputValue); // Envia a solicitação
-    setState(prevState => ({
-      ...prevState,
-      hasTarget: null
-    }));
-    setIsButtonDisabled(true); // Desativa o botão após o clique
+    await postReqVerbByAPI(state.inputValue);
+    setState(prevState => ({ ...prevState, hasTarget: null }));
+    setIsButtonDisabled(true);
   };
 
   return (
     <section className={styles.principal}>
-      <menu className={styles.menu}>
-        <h1 className={styles.h1}>Conjugations</h1>
-        <input
-          type="text"
-          value={state.inputValue}
-          onChange={(e) => setState({ ...state, inputValue: e.target.value })}
-          onKeyDown={handleKeyDown}
-          placeholder="Digite o verbo e pressione Enter"
-          style={{ marginRight: 10, width: 300 }}
-        />
-        {state.loading && "conjugando..."}
-      </menu>
-      <section>
-        {/* Exibe o botão somente se o estado corresponder à condição */}
-        {!state.showConjugations && state.conjugations === null && (
-          <>
-            <p>{state.hasTarget}</p>
-            {!isButtonDisabled && state.showButton && (
-              <button onClick={handleButtonClick}>Solicitar</button> // Botão desabilitado após o clique
+      <div className={styles.menu}>
+        <div>
+          <input
+            className={styles.input}
+            type="text"
+            value={state.inputValue}
+            onChange={(e) => setState({ ...state, inputValue: e.target.value })}
+            onKeyDown={(e) => {
+              handleKeyDown(e);
+              handleEnterKey(e);
+            }}
+            placeholder="amar, viajar, colorir, ..."
+            style={{ marginRight: 10, width: 300 }}
+          />
+        </div>
+        <div>
+          <h1 className={styles.title}>Conjugação Aberta</h1>
+        </div>
+      </div>
+      <div className={styles.panel}>
+        <div className={styles. subpanel}>
+          <div className={styles.antesala1}>
+            {state.loading && "conjugando..."}
+            {!state.showConjugations && state.conjugations === null && (
+              <>
+                <p>{state.hasTarget}</p>
+                {!isButtonDisabled && state.showButton && (
+                  <button onClick={handleButtonClick}>Solicitar</button>
+                )}
+                {isButtonDisabled && (
+                  <p>Muito obrigado! Já recebemos a tua solicitação.</p>
+                )}
+              </>
             )}
-            {isButtonDisabled && (
-              <p>Muito obrigado! Já recebemos a tua solicitação. Muito em breve iremos analisar o pedido.</p> // Mensagem de confirmação
+          </div>
+          <div className={styles.antesala2}>
+            {state.showConjugations && state.conjugations !== null && (
+              <>
+                <h2>Verbo {state.foundVerb}</h2>
+                <p>{state.note}</p>
+                {state.types && (
+                  <p>
+                    <strong>Classificação: </strong>
+                    <span>{formatTypes(state.types)}</span>
+                  </p>
+                )}
+                <Table conjugations={state.conjugations} />
+              </>
             )}
-          </>
-        )}
-      </section>
-      <section>
-        {/* Exibe as conjugações se existirem */}
-        {state.showConjugations && state.conjugations !== null && (
-          <>
-            <p>{state.note}</p>
-            {state.types && <p>Classificação: {formatTypes(state.types)}</p>}
-            <Table conjugations={state.conjugations} />
-          </>
-        )}
-      </section>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
