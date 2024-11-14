@@ -3,6 +3,7 @@ import { flowOfReact } from '../lib/flowOfReact';
 import postReqVerbByAPI from '../lib/postReqVerbByAPI';
 import { useState, useEffect } from 'react';
 import styles from "../styles/pages.module.css";
+import getSimilarVerbs from '../lib/getSimilarWords';
 
 const Conjugations = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
@@ -44,6 +45,8 @@ const Conjugations = () => {
     setIsButtonDisabled(true);
   };
 
+  const suggestions = getSimilarVerbs(state.inputReq)
+
   return (
     <section className={styles.principal}>
       <div className={styles.menu}>
@@ -57,7 +60,7 @@ const Conjugations = () => {
               handleKeyDown(e);
               handleEnterKey(e);
             }}
-            placeholder="amar, viajar, colorir, ..."
+            placeholder="amar, escrever, colorir, ..."
             style={{ marginRight: 10, width: 300 }}
           />
         </div>
@@ -76,7 +79,7 @@ const Conjugations = () => {
                   <button onClick={handleButtonClick}>Solicitar</button>
                 )}
                 {isButtonDisabled && (
-                  <p>Muito obrigado! Já recebemos a tua solicitação.</p>
+                  <p>Muito obrigado! A sua ajuda é muito importante. Em breve iremos analisar o pedido</p>
                 )}
               </>
             )}
