@@ -5,13 +5,15 @@ import { structureOfVerb } from './structureOfVerb';
 
 export const conjugateVerb = (verb: string) => {
   const r = verb.slice(0, -2); 
+  const r_m = verb.slice(0, -3); 
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
 
-  // Função para buscar a regra
-  const F = (P: string, M: string, D: string): string | null => {
+  // Função auxiliar de F
+  const F = (P: string, M: string, D: string): string => {
     const result = findNoRegRule(verb, P, M, D);
-    return result.hasTarget ? result.rule : NOT_FOUND;
+    const rule = result.hasTarget ? result.rule : NOT_FOUND;
+    return rule ?? NOT_FOUND;  // Se 'rule' for null, retorna 'NOT_FOUND'
   };
 
   // Função para obter dados do verbo
@@ -22,6 +24,9 @@ export const conjugateVerb = (verb: string) => {
     const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
     const verbRules = reg[M]?.[str];
 
+    // console.log(verbRules)
+    // console.log(forRrule)
+
     if (!verbRules) return NOT_FOUND;
 
     const verbData = (forRrule || forVTrule || forMTrule || forNPrule)
@@ -30,6 +35,7 @@ export const conjugateVerb = (verb: string) => {
           ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
           ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
           ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`)
+          .replace("...", r_m)
       : nw(`
           ${r}
           ${verbRules.VT[num]}
@@ -83,8 +89,8 @@ export const conjugateVerb = (verb: string) => {
   for (const [tense, reg] of Object.entries(conj)) {
     conjugations[tense] = reg;
   }
-
+  // console.log(conjugations)
   return conjugations;
 };
 
-// conjugateVerb("amar");
+// conjugateVerb("abraçar");

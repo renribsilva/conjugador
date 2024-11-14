@@ -32,6 +32,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
+  // console.log(verbRules)
+
   if (verbRules) {
     if (verb.startsWith("...")) {
       return getDefaultResponse(); 
@@ -108,5 +110,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   }
 }
 
-// const res3 = findNoRegRule("propor", "p1", "pr_ind", "VT");
+// const res3 = findNoRegRule("abraçar", "p1", "pt1_ind", "RAD");
 // console.log(res3); 

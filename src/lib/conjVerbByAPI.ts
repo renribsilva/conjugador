@@ -5,7 +5,7 @@ export const conjVerbByAPI = async (verb: string) => {
   const conjugations = conjugateVerb(verb);
 
   try {
-    console.log('Enviando verbo e conjugações para a API:', { verb, conjugations });
+    // console.log('Enviando verbo e conjugações para a API:', { verb, conjugations });
 
     const response = await fetch('/api/conjVerb', {
       method: 'POST',

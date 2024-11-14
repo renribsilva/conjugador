@@ -1216,13 +1216,33 @@
   },
   "acar":{
     "...": {
-      "note":["todos os verbos terminados em 'acar' são regulares, mas mudam algumas conjugações têm o 'c' substituído por 'qu' antes do 'e' desinencial."],
+      "note":["Todos os verbos terminados em 'acar' são regulares, mas algumas conjugações têm o 'c' substituído por 'qu' antes do 'e' desinencial."],
       "type": [1],
       "abundance":{},
       "rules": {
-        "VT":{
-          "a":{
-            "pr_ind":["p1"]
+        "RAD":{
+          "...qu":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "açar":{
+    "...": {
+      "note":["Todos os verbos terminados em 'açar' são regulares, mas algumas conjugações têm o 'ç' substituído por 'c' antes do 'e' desinencial."],
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "...c":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
           }
         }
       }

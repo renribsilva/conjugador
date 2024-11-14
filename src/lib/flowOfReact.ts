@@ -56,50 +56,38 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    const normalizedInputValue = ni(state.inputValue);
-
     if (event.key === 'Enter' && state.inputValue !== '') {
 
+      const normalizedInputValue = ni(state.inputValue)
       const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
-      const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-      const suggestions = getSimilarVerbs(state.inputValue)
-
-      // console.log(suggestions)
+      const propsOfWord = await getPropsOfVerb(findedWord, result, normalizedInputValue);
+      // const suggestions = getSimilarVerbs(state.inputValue)
 
       setState(prev => ({
         ...prev,
+        conjugations: null,
         inputReq: state.inputValue,
+        showConjugations: false,
         foundVerb: findedWord,
         isValidVerb: result,
-        suggestions: suggestions,
+        hasTarget: propsOfWord[0].hasTarget,
+        ending: propsOfWord[0].ending,
+        types: propsOfWord[0].types,
+        abundance: propsOfWord[0].abundance,
+        note: propsOfWord[0].note,
+        afixo: propsOfWord[0].afixo,
+        loading: false,
+        suggestions: null,
         showButton: false,
-        isButtonDisabled: true
-      }));
-
-      setState(prev => ({
-        ...prev,
-        abundance: propsOfWord?.abundance,
-        afixo: propsOfWord?.afixo,
-        ending: propsOfWord?.ending,
-        types: propsOfWord?.types,
-        hasTarget: null,
-        note: null,
-      }));
-
-      setState(prev => ({
-        ...prev,
-        showConjugations: false,
+        isButtonDisabled: true,
       }));
 
       if (!result) {
 
         setState(prev => ({
           ...prev,
-          conjugations: null,
-          showConjugations: false,
           hasTarget: `Que pena! A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
           showButton: true,
-          note: null,
         }));
 
       } else {
@@ -108,40 +96,19 @@ export const flowOfReact = () => {
           ...prev,
           loading: true,
         }));
-
-        await conjVerbByAPI(normalizedInputValue);
+        
+        await conjVerbByAPI(findedWord);
         await fetchConjugations();
 
         setState(prev => ({
           ...prev,
           showConjugations: true,
-          hasTarget: propsOfWord?.hasTarget,
-          note: propsOfWord?.note,
         }));
       }
     }
   };
 
-  useEffect(() => {
-    const data = {
-      conjugations: state.conjugations,
-      inputReq: state.inputReq,
-      hasTarget: state.hasTarget,
-      showConjugations: state.showConjugations,
-      foundVerb: state.foundVerb,
-      abundance: state.abundance,
-      afixo: state.afixo,
-      ending: state.ending,
-      note: state.note,
-      types: state.types,
-      isValidVerb: state.isValidVerb,
-      suggestions: state.suggestions,
-      showButton: state.showButton,
-      isButtonDisabled: state.isButtonDisabled
-    };
-
-    console.log(data);
-  }, [
+  const dependencies = [
     state.inputReq,
     state.conjugations,
     state.hasTarget,
@@ -156,7 +123,30 @@ export const flowOfReact = () => {
     state.suggestions,
     state.showButton,
     state.isButtonDisabled
-  ]);
+  ];
+  
+  useEffect(() => {
+    const data = {
+      conjugations: state.conjugations,
+      inputValue: state.inputValue,
+      inputReq: state.inputReq,
+      showConjugations: state.showConjugations,
+      foundVerb: state.foundVerb,
+      isValidVerb: state.isValidVerb,
+      abundance: state.abundance,
+      afixo: state.afixo,
+      ending: state.ending,
+      hasTarget: state.hasTarget,
+      note: state.note,
+      types: state.types,
+      loading: state.loading,
+      suggestions: state.suggestions,
+      showButton: state.showButton,
+      isButtonDisabled: state.isButtonDisabled,
+    };
+  
+    console.log(data);
+  }, dependencies);
 
   return {
     state,

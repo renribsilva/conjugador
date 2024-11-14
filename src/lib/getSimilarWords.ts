@@ -65,8 +65,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-// const word = "amor";  // Altere conforme necessário
+// const word = "abraçar";  // Altere conforme necessário
 // const result = getSimilarVerbs(word);
-
-// Exibe o resultado no console
 // console.log(result);
