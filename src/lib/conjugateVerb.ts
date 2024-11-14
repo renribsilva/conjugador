@@ -1,11 +1,12 @@
 import reg from '../json/rulesForReg.json'; 
 import { findNoRegRule } from './findNoRegVerbs';
-import { nw } from './normalizeVerb';
+import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 
 export const conjugateVerb = (verb: string) => {
-  const r = verb.slice(0, -2); 
-  const r_m = verb.slice(0, -3); 
+
+  const r = ni(verb).slice(0, -2); 
+  const r_m = ni(verb).normalize("NFC").slice(0, -3); 
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
 
@@ -13,20 +14,17 @@ export const conjugateVerb = (verb: string) => {
   const F = (P: string, M: string, D: string): string => {
     const result = findNoRegRule(verb, P, M, D);
     const rule = result.hasTarget ? result.rule : NOT_FOUND;
-    // console.log(rule)
-    return rule ?? NOT_FOUND;  
+    return rule ?? NOT_FOUND; 
   };
 
   // Função para obter dados do verbo
   const getVerbData = (P: string, M: string, num: number): string => {
+    
     const forRrule = findNoRegRule(verb, P, M, "RAD").hasTarget;
     const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
     const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
     const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
     const verbRules = reg[M]?.[str];
-
-    // console.log(verbRules)
-    // console.log(forRrule)
 
     if (!verbRules) return NOT_FOUND;
 

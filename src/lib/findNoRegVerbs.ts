@@ -1,18 +1,36 @@
 import afixos from '../json/afixos.json';  // Carrega afixos.json
 import irregularidades from '../json/rulesByTerm.json';  // Carrega rulesForNoReg.json
 import innerSearchOfRules from './innerSearchOfRules';
-import { ni } from './normalizeVerb';
+import { ni, nw } from './normalizeVerb';
 
 // Função principal para encontrar a regra de um verbo
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const sortedAfixos = afixos.sort((a, b) => b.length - a.length);  
   const endings = Object.keys(irregularidades).sort((a, b) => b.length - a.length); 
+
+  // console.log(endings)
   
   // Função para buscar regras para a terminação do verbo
   function getVerbKeys(verb: string, endings: string[]): any {
-    const ending = endings.find((end) => verb.endsWith(end));
+    
+    let ending = endings.find((end) => ni(verb).endsWith(ni(end)));
+
+    // console.log(ending)
+
+    if (!ending) {
+      for (let i = 0; i < endings.length; i++) {
+        if (verb.endsWith(endings[i])) {
+          ending = endings[i];
+          break;
+        }
+      }
+    }
+
+    
     const rules = ending ? irregularidades[ending] : null;
+
+    // console.log(ending)
   
     if (rules) {
       const normalizedRules = Object.keys(rules).reduce((acc, key) => {
@@ -33,6 +51,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
   // console.log(verbRules)
+  // console.log(ending)
 
   if (verbRules) {
     if (verb.startsWith("...")) {

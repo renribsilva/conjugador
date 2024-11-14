@@ -60,12 +60,13 @@ export const flowOfReact = () => {
 
       const normalizedInputValue = ni(state.inputValue)
       const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
-      const propsOfWord = await getPropsOfVerb(findedWord, result, normalizedInputValue);
+      const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
       // const suggestions = getSimilarVerbs(state.inputValue)
 
       setState(prev => ({
         ...prev,
         conjugations: null,
+        inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
         foundVerb: findedWord,
