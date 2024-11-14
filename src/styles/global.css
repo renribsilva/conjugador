@@ -1,0 +1,33 @@
+:root, html, body {
+  --color-fill-light: rgb(255, 255, 255);
+  --color-text-base-light: rgb(39, 39, 40);
+  --color-subtitle-light: rgb(128, 110, 96); /* Ajustado para melhorar o contraste */
+  --color-hr-light: rgb(209, 198, 180); 
+  
+  --color-fill-dark: rgb(33, 39, 55); 
+  --color-text-base-dark: rgb(243, 238, 234);
+  --color-subtitle-dark: rgb(189, 155, 123); /* Ajustado para melhorar o contraste */
+  --color-hr-dark: rgb(94, 81, 71); 
+}
+
+[data-theme="dark"] {
+  --background: var(--color-fill-dark);
+  --foreground: var(--color-text-base-dark);
+  --subtitle: var(--color-subtitle-dark);
+  --hr: var(--color-hr-dark)
+}
+
+[data-theme="light"] {
+  --background: var(--color-fill-light);
+  --foreground: var(--color-text-base-light);
+  --subtitle: var(--color-subtitle-light);
+  --hr: var(--color-hr-light)
+}
+
+:root {
+  background-color: aquamarine;
+}
+
+body {
+  margin: 0;
+}

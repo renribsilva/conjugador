@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { conjVerbByAPI } from '../lib/conjVerbByAPI';
-import { ni } from '../lib/normalizeVerb';
-import { isValidVerbByAPI } from '../lib/isValidVerbByAPI';
-import { getPropsOfVerb } from '../lib/getPropsOfVerb';
+import { conjVerbByAPI } from './conjVerbByAPI';
+import { ni } from './normalizeVerb';
+import { isValidVerbByAPI } from './isValidVerbByAPI';
+import { getPropsOfVerb } from './getPropsOfVerb';
 import type { Conjugation } from '../types';
+import getSimilarVerbs from './getSimilarWords';
 
-export const useConjugations = () => {
+export const flowOfReact = () => {
   const [state, setState] = useState<{
     conjugations: Conjugation | null;
     inputValue: string;
@@ -16,10 +17,13 @@ export const useConjugations = () => {
     abundance: object | null | undefined;
     afixo: string | null | undefined;
     ending: string | null | undefined;
-    hasTarget: string | null | undefined;
+    hasTarget: string | boolean | null | undefined;
     note: string[] | null | undefined;
     types: string[] | null | undefined;
     loading: boolean;
+    suggestions: string[] | null;
+    showButton: boolean;
+    isButtonDisabled: boolean
   }>({
     conjugations: null,
     inputValue: '',
@@ -34,6 +38,9 @@ export const useConjugations = () => {
     note: null,
     types: null,
     loading: false,
+    suggestions: null,
+    showButton: false,
+    isButtonDisabled: true,
   });
 
   const fetchConjugations = async () => {
@@ -48,18 +55,25 @@ export const useConjugations = () => {
   };
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+
     const normalizedInputValue = ni(state.inputValue);
 
     if (event.key === 'Enter' && state.inputValue !== '') {
 
       const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
       const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
+      const suggestions = getSimilarVerbs(state.inputValue)
+
+      // console.log(suggestions)
 
       setState(prev => ({
         ...prev,
         inputReq: state.inputValue,
         foundVerb: findedWord,
         isValidVerb: result,
+        suggestions: suggestions,
+        showButton: false,
+        isButtonDisabled: true
       }));
 
       setState(prev => ({
@@ -83,8 +97,9 @@ export const useConjugations = () => {
           ...prev,
           conjugations: null,
           showConjugations: false,
-          hasTarget: propsOfWord?.hasTarget,
-          note: propsOfWord?.note,
+          hasTarget: `Que pena! A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
+          showButton: true,
+          note: null,
         }));
 
       } else {
@@ -120,6 +135,9 @@ export const useConjugations = () => {
       note: state.note,
       types: state.types,
       isValidVerb: state.isValidVerb,
+      suggestions: state.suggestions,
+      showButton: state.showButton,
+      isButtonDisabled: state.isButtonDisabled
     };
 
     console.log(data);
@@ -135,6 +153,9 @@ export const useConjugations = () => {
     state.note,
     state.types,
     state.isValidVerb,
+    state.suggestions,
+    state.showButton,
+    state.isButtonDisabled
   ]);
 
   return {

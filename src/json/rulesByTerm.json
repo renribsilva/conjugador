@@ -1072,7 +1072,7 @@
   },
   "abar": {
     "...": {
-      "note":["todos os verbos terminados em 'abar' são regulares"],
+      "note":["Todos os verbos terminados em 'abar' são regulares"],
       "type": [1],
       "abundance":{},
       "rules": {
@@ -1161,44 +1161,17 @@
   },
   "abir": {
     "...": {
-      "note":["todos os verbos terminados em 'abir' são regulares"],
+      "note":["Todos os verbos terminados em 'abir' são regulares"],
       "type": [1],
       "abundance":{},
       "rules": {
-        "VT":{
-          "a":{
-            "pr_ind":["p1"]
-          }
-        }
       }
     }
   },
   "abrir": {
-    "abrir": {
-      "note":[],
-      "type": [2],
-      "abundance":{},
-      "rules":{
-        "RAD":{
-          "ab":{
-            "pa":["n"]
-          }
-        },
-        "VT":{
-          "e":{
-            "pa":["n"]
-          }
-        },
-        "MT":{
-          "rto": {
-            "pa":["n"]
-          }
-        }
-      }
-    },
-    "desabrir": {
-      "note":["'desabrido' é de outro étimo que 'desabrir', cujo particípio é 'desaberto'"],
-      "type":[2],
+    "...abrir": {
+      "note":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+      "type":[1],
       "abundance":{},
       "rules":{
         "RAD":{
@@ -1217,11 +1190,33 @@
           }
         }
       }
+    },
+    "abrir": {
+      "note":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+      "type": [1],
+      "abundance":{},
+      "rules":{
+        "RAD":{
+          "ab":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "e":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "rto": {
+            "pa":["n"]
+          }
+        }
+      }
     }
   },
   "acar":{
     "...": {
-      "note":["todos os verbos terminados em 'abir' são regulares"],
+      "note":["todos os verbos terminados em 'acar' são regulares, mas mudam algumas conjugações têm o 'c' substituído por 'qu' antes do 'e' desinencial."],
       "type": [1],
       "abundance":{},
       "rules": {

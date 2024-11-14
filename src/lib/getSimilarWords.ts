@@ -33,8 +33,8 @@ function levenshtein(a: string, b: string): number {
   return tmp[alen][blen];
 }
 
-// Função que recebe um verbo e retorna um JSON com verbos semelhantes (máximo de 5)
-function getSimilarVerbs(verb: string): { [key: string]: string[] } {
+// Função que recebe um verbo e retorna um array com verbos semelhantes (máximo de 5)
+export default function getSimilarVerbs(verb: string): string[] {
   const similarVerbs: string[] = [];
   let distanceThreshold = 1; // Inicia com distância de Levenshtein 1
 
@@ -60,13 +60,13 @@ function getSimilarVerbs(verb: string): { [key: string]: string[] } {
     }
   }
 
-  // Retorna um JSON com o verbo e seus verbos semelhantes (máximo de 5)
-  return { [verb]: similarVerbs.slice(0, 5) };  // Garante que no máximo 5 verbos sejam retornados
+  // Retorna um array simples com os verbos semelhantes (máximo de 5)
+  return similarVerbs.slice(0, 5);  // Garante que no máximo 5 verbos sejam retornados
 }
 
 // Exemplo de uso
-const word = "amor";  // Altere conforme necessário
-const result = getSimilarVerbs(word);
+// const word = "amor";  // Altere conforme necessário
+// const result = getSimilarVerbs(word);
 
 // Exibe o resultado no console
-console.log(result);
+// console.log(result);

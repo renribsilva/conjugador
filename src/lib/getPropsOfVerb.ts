@@ -3,7 +3,7 @@ import { ni } from "./normalizeVerb";
 
 // Definição da tipagem para os objetos retornados
 interface VerbProps {
-  hasTarget: string | null;
+  hasTarget: boolean | string | null;
   ending: string | null;
   verb: string | null;
   types: string[] | null;
@@ -46,7 +46,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
           
           if (result.ending !== null && result.types.includes(1)) {
             const A: VerbProps = {
-              hasTarget: `Oba, o verbo '${validVerb}' foi encontrado em nossa base de dados. Ele será conjugado como verbo regular`,
+              hasTarget: result.hasTarget,
               ending: result.ending,
               verb: validVerb,
               types: mappedTypes,
@@ -60,7 +60,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
           
           else if (result.ending !== null && result.types.includes(2)) { 
             const B: VerbProps = {
-              hasTarget: `Oba! O verbo '${validVerb}' foi encontrado em nossa base de dados. Ele será conjugado como verbo irregular`,
+              hasTarget: result.hasTarget,
               ending: result.ending,
               verb: validVerb,
               types: mappedTypes,
@@ -74,7 +74,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
           else if (result.ending === null && result.types === null && isValidVerb) { 
             const C: VerbProps = {
-              hasTarget: `Oba! O verbo '${validVerb}' foi encontrado em nossa base de dados. Ele será conjugado como verbo regular`,
+              hasTarget: result.hasTarget,
               ending: result.ending,
               verb: validVerb,
               types: [ "regular" ],
@@ -104,7 +104,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 // Testando a função
 // const test = async () => {
-//   const resultado = await getPropsOfVerb("acabar", true, "acabar");
+//   const resultado = await getPropsOfVerb("abacar", true, "abacar");
 //   console.log(resultado); // Exibe o resultado ou null se não encontrar
 // };
 // test();
