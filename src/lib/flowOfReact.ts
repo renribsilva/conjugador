@@ -97,7 +97,7 @@ export const flowOfReact = () => {
           loading: true,
         }));
         
-        await conjVerbByAPI(findedWord);
+        await conjVerbByAPI(ni(findedWord));
         await fetchConjugations();
 
         setState(prev => ({

@@ -13,7 +13,8 @@ export const conjugateVerb = (verb: string) => {
   const F = (P: string, M: string, D: string): string => {
     const result = findNoRegRule(verb, P, M, D);
     const rule = result.hasTarget ? result.rule : NOT_FOUND;
-    return rule ?? NOT_FOUND;  // Se 'rule' for null, retorna 'NOT_FOUND'
+    // console.log(rule)
+    return rule ?? NOT_FOUND;  
   };
 
   // Função para obter dados do verbo
@@ -89,8 +90,8 @@ export const conjugateVerb = (verb: string) => {
   for (const [tense, reg] of Object.entries(conj)) {
     conjugations[tense] = reg;
   }
-  // console.log(conjugations)
+  console.log(conjugations)
   return conjugations;
 };
 
-// conjugateVerb("abraçar");
+conjugateVerb("abraçar");

@@ -1,8 +1,9 @@
 import { conjugateVerb } from './conjugateVerb';
+import { ni } from './normalizeVerb';
 
 export const conjVerbByAPI = async (verb: string) => {
   // Chama a função de conjugação
-  const conjugations = conjugateVerb(verb);
+  const conjugations = conjugateVerb(ni(verb));
 
   try {
     // console.log('Enviando verbo e conjugações para a API:', { verb, conjugations });
