@@ -3,7 +3,8 @@ import Table from '../components/table';
 import { flowOfReact } from '../lib/flowOfReact';
 import postReqVerbByAPI from '../lib/postReqVerbByAPI';
 import styles from "../styles/pages.module.css";
-import { conjugateVerb } from '../lib/conjugateVerb';
+import Link from 'next/link';
+import Home from "../mdx/Home.mdx"
 
 const Conjugations = () => {
 
@@ -34,7 +35,6 @@ const Conjugations = () => {
         cancelable: true,
         key: 'Enter',
         code: 'Enter',
-        keyCode: 13,
       });
       inputRef.current.dispatchEvent(enterEvent); 
     }
@@ -47,6 +47,20 @@ const Conjugations = () => {
       inputReq: verb
     });
   };
+
+  function linkToRepository () {
+    return (
+      <span>
+        <Link 
+          href="https://github.com/renribsilva/conjugador" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          https//github.com/renribsilva/conjugador
+        </Link>
+      </span>
+    )
+  }
 
   return (
     <section className={styles.principal}>
@@ -64,9 +78,10 @@ const Conjugations = () => {
           />
         </div>
         <div>
-          <h1 className={styles.title}>Conjugação Aberta</h1>
+          <h1 className={styles.title}>conjugador-gules</h1>
         </div>
       </div>
+      <Home />
       <div className={styles.panel}>
         <div className={styles.subpanel}>
           <div className={styles.antesala1}>
@@ -82,7 +97,15 @@ const Conjugations = () => {
             )}
             {state.isButtonDisabled && (
               <>
-                <h2>Ah, muito obrigado! Sua solicitação já foi registrada. Em breve iremos analisar o pedido. Enquanto isso, gostaria de ver a conjugação de outros verbos?</h2>
+                <h2>Ah, muito obrigado!</h2>
+                <span>
+                  <p>O pedido foi registrado. E lembramos que a sua contribuição é fundamental, pois não coletamos nenhum tipo de dado sem a sua expressa vontade. Quer conferir? Acesse o repositório desta aplicação: {linkToRepository()}</p>
+                </span>
+              </>
+            )}
+            {state.conjugations === null && state.showSuggestions && (
+              <>
+                <p>Selecionamos alguns verbos que podem ser parecidos com a palavra solicitada...</p>
                 <ul>
                   {state.suggestions?.map((verb, index) => (
                     <li key={index}>

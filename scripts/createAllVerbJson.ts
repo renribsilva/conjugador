@@ -103,9 +103,11 @@ async function createAllVerbJson() {
     console.log('Salvando verbos no arquivo JSON...');
     await fs.promises.writeFile(outputFilePath, JSON.stringify(verbs, null, 2));
 
+    const libreOfficeWordsCount = (await readTxtLines(path.join(publicDir, 'words.txt'))).length;
     const irregularVerbsCount = (await readTxtLines(path.join(assetsDir, 'irregVerbs.txt'))).length;
-    console.log(`Total de verbos encontrados: ${Object.keys(verbs).length}`);
-    console.log(`Total de verbos irregulares: ${irregularVerbsCount}`);
+    console.log(`Total de entradas na lista libreOffice: ${libreOfficeWordsCount}`);
+    console.log(`Total de palavras terminadas em 'ar', 'er', 'ir' e 'or': ${Object.keys(verbs).length}`);
+    console.log(`Total de verbos na lista de verbos irregulares: ${irregularVerbsCount}`);
     console.log('Processamento concluído!');
   } catch (error) {
     console.error('Erro:', error);

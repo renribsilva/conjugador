@@ -22,6 +22,7 @@ export const flowOfReact = () => {
     types: string[] | null | undefined;
     loading: boolean;
     suggestions: string[] | null;
+    showSuggestions: boolean;
     showButton: boolean;
     isButtonDisabled: boolean
   }>({
@@ -41,6 +42,7 @@ export const flowOfReact = () => {
     suggestions: null,
     showButton: false,
     isButtonDisabled: false,
+    showSuggestions: false
   });
 
   const fetchConjugations = async () => {
@@ -74,6 +76,7 @@ export const flowOfReact = () => {
         loading: false,
         suggestions: null,
         showButton: false,
+        showSuggestions: false,
         isButtonDisabled: false,
       }));
 
@@ -83,6 +86,7 @@ export const flowOfReact = () => {
           ...prev,
           showButton: true,
           suggestions: suggestions,
+          showSuggestions: true,
           ending: null,
           hasTarget: `A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
           types: null,
@@ -129,7 +133,8 @@ export const flowOfReact = () => {
     state.isValidVerb,
     state.suggestions,
     state.showButton,
-    state.isButtonDisabled
+    state.isButtonDisabled,
+    state.showSuggestions
   ];
   
   useEffect(() => {
@@ -150,9 +155,10 @@ export const flowOfReact = () => {
       suggestions: state.suggestions,
       showButton: state.showButton,
       isButtonDisabled: state.isButtonDisabled,
+      showSuggestions: state.showSuggestions
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies);
 
   return {

@@ -1,7 +1,3 @@
-// O verbo pôr e seus derivados ( compor, dispor, repor, supor, etc)
-// pertencem por motivos históricos à 2ª conjugação (sua forma
-// arcaica era poer).
-
 export const structureOfVerb = (verb: string): string => {
   if (verb.endsWith("ar")) {
     return "1st";
