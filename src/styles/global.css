@@ -1,6 +1,6 @@
 :root, html, body {
   --color-fill-light: rgb(255, 255, 255);
-  --color-text-base-light: rgb(39, 39, 40);
+  --color-text-base-light: rgb(39, 39, 39);
   --color-subtitle-light: rgb(128, 110, 96); /* Ajustado para melhorar o contraste */
   --color-hr-light: rgb(209, 198, 180); 
   
@@ -22,6 +22,10 @@
   --foreground: var(--color-text-base-light);
   --subtitle: var(--color-subtitle-light);
   --hr: var(--color-hr-light)
+}
+
+* {
+  color: var(--color-text-base-light) ;
 }
 
 :root {

@@ -3,7 +3,6 @@
 }
 
 .customP {
-font-weight: 300;
-color: var(--color-text-base-light);
-line-height: 22px;
+  font-weight: 300;
+  line-height: 22px;
 }
