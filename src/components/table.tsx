@@ -4,7 +4,7 @@ import styles from "../styles/components.module.css";
 import { nw } from '../lib/normalizeVerb';
 import { Conjugation } from '../types';
 
-const Table = ({ conjugations }: { conjugations: Conjugation }) => {
+export default function Table ({ conjugations }: { conjugations: Conjugation }) {
   return (
     <section>
         <div>
@@ -153,5 +153,3 @@ const Table = ({ conjugations }: { conjugations: Conjugation }) => {
       </section>
   );
 };
-
-export default Table;

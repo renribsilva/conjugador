@@ -44,3 +44,20 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
+/**************************************************/
+/*********************NAVBAR***********************/
+/**************************************************/
+
+.navbar {
+  /* margin: 0; */
+  /* padding: 0  ; */
+  background-color: rgb(219, 215, 211);
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar div {
+  display: flex;
+}

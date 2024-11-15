@@ -29,3 +29,12 @@ export type Conjugation = {
   pt2_ind: Person;
   pt3_ind: Person;
 }
+
+export type InputTypes = {
+  A: React.RefObject<HTMLInputElement>;
+  B: { inputValue: string };
+  C: React.Dispatch<React.SetStateAction<{ inputValue: string }>>;
+  D: { inputValue: string };
+  E: (e: React.KeyboardEvent) => void;
+  children?: React.ReactNode; 
+}
