@@ -24,19 +24,36 @@ const Conjugations = () => {
     });
   };
 
-  // Define the ref with the correct type for a button element
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-  // Ensure buttonRef is updated once the component is mounted
   useEffect(() => {
-    console.log(buttonRef.current);
+    if (inputRef.current) {
+      const enterEvent = new KeyboardEvent('keydown', {
+        bubbles: true,
+        cancelable: true,
+        key: 'Enter',
+        code: 'Enter',
+        keyCode: 13,
+      });
+      inputRef.current.dispatchEvent(enterEvent); 
+    }
   }, [state.inputReq]);
+
+  const handleVerbClick = (verb: string) => {
+    setState({ 
+      ...state,
+      inputValue: verb,
+      inputReq: verb
+    });
+  };
 
   return (
     <section className={styles.principal}>
       <div className={styles.menu}>
         <div>
           <input
+            ref={inputRef}  // Referência do input
             className={styles.input}
             type="text"
             value={state.inputValue}
@@ -67,18 +84,11 @@ const Conjugations = () => {
               <>
                 <h2>Ah, muito obrigado! Sua solicitação já foi registrada. Em breve iremos analisar o pedido. Enquanto isso, gostaria de ver a conjugação de outros verbos?</h2>
                 <ul>
-                  {state.suggestions && state.suggestions.map((verb, index) => (
+                  {state.suggestions?.map((verb, index) => (
                     <li key={index}>
-                      <button
+                      <button 
                         ref={buttonRef}
-                        onClick={() => {
-                          conjugateVerb(verb)
-                          setState({ 
-                            ...state, 
-                            inputValue: verb 
-                          });
-                          buttonRef.current
-                        }}
+                        onClick={() => { handleVerbClick(verb) }}
                       >
                         {verb}
                       </button>
