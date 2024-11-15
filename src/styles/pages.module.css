@@ -1,61 +1,59 @@
 /*************************************************/
-/*********************INDEX***********************/
+/*********************NAVBAR***********************/
 /*************************************************/
 
-.principal {
-  /* margin: 0; */
-  /* height: 120px; */
+.navbar {
   background-color: aqua;
-}
-
-.menu {
-  /* margin: 0; */
-  /* padding: 0  ; */
-  background-color: rgb(53, 48, 43);
-  height: 150px;
+  height: 130px;
   display: flex;
   justify-content: space-between;
+  position:fixed;
+  width: 100%;
 }
 
-.menu div {
+.input_container {
+  background-color: aquamarine;
+  /* justify-content: center; */
   display: flex;
-}
-
-.title {
-  margin: 0;
-  /* padding: 0; */
-  /* background-color: rgb(79, 180, 69); */
-  height: 100%;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  font-weight: 300;
-  font-size: 40px;
-  margin-right: 20px;
-  color: aliceblue;
+  margin-left: 100px;
 }
 
 .input {
-  background-color: rgb(219, 209, 230);
+  /* background-color: rgb(219, 209, 230); */
   border-radius: 10rem;
   border: none;
-  padding: 30px;
+  padding: 28px;
   height: 20px;
   align-self: center;
-  margin-left: 20px;
+  justify-content: center;
+  /* margin-left: 20px; */
   font-size: 18px;
 }
 
-.panel {
-  background-color: aquamarine;
-  margin-inline: 20px;
+/*************************************************/
+/*********************MAIN***********************/
+/*************************************************/
+
+.main {
+  /* background-color: aquamarine; */
+  padding-top: 150px;
   display: flex;
   justify-content: center;
 }
 
+.panel {
+  /* background-color: rgb(180, 206, 197); */
+  width: 800px;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 1%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 .subpanel {
-  background-color: rgb(51, 97, 82);
-  max-width: 800px;
+  /* background-color: rgb(51, 97, 82) */
 }
 
 .antesala2_weigth {

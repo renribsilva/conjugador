@@ -4,9 +4,9 @@ import { flowOfReact } from '../lib/flowOfReact';
 import postReqVerbByAPI from '../lib/postReqVerbByAPI';
 import styles from "../styles/pages.module.css";
 import Link from 'next/link';
+import Footer from '../components/footer';
+import Socials from '../components/socials';
 import Home from "../mdx/Home.mdx"
-import Layout from '../layout/layout_index';
-import { InputTypes } from '../types';
 
 const Conjugations = () => {
 
@@ -64,25 +64,35 @@ const Conjugations = () => {
     )
   }
 
-  const inputProps: InputTypes = {
-    A: inputRef,
-    B: state,
-    C: setState,
-    D: state,
-    E: handleKeyDown,
-    children: null,  // Aqui, você pode passar o conteúdo da página ou apenas null
-  };
-
   return (
-    <Layout {...inputProps}>
-      <section className={styles.principal}>
-        <Home />
+    <>
+      <section className={styles.navbar}>
+        <div className={styles.input_container}>
+          <input
+            ref={inputRef}  // Referência do input
+            className={styles.input}
+            type="text"
+            value={state.inputValue}
+            onChange={(e) => setState({ ...state, inputValue: e.target.value })}
+            onKeyDown={(e) => { handleKeyDown(e); }}
+            placeholder="amar, escrever, colorir, ..."
+            style={{ marginRight: 10, width: 300 }}
+          />
+        </div>
+        <div>
+          <button>Conjugação Aberta</button>
+          <button>Sobre</button>
+        </div>
+      </section>
+
+      <section className={styles.main}>
         <div className={styles.panel}>
           <div className={styles.subpanel}>
-            <div className={styles.antesala1}>
+            <div>
               {state.loading && "conjugando..."}
             </div>
-            <div>
+            <div className={styles.nonFoundedVerb}>
+              {state.showHome && <Home />}
               {state.conjugations === null && state.showButton && (
                 <>
                   <h2>Que pena!</h2>
@@ -116,7 +126,7 @@ const Conjugations = () => {
                 </>
               )}
             </div>
-            <div className={styles.antesala2}>
+            <div className={styles.foundedVerb}>
               {state.conjugations !== null && (
                 <>
                   <h2>Verbo {state.foundVerb}</h2>
@@ -134,7 +144,13 @@ const Conjugations = () => {
           </div>
         </div>
       </section>
-    </Layout>
+
+      <section>
+        <Socials />
+        <Footer />
+      </section>
+
+    </>
   );
 };
 

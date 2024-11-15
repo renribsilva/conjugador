@@ -1,0 +1,9 @@
+.customA {
+  /* text-decoration: none; */
+}
+
+.customP {
+font-weight: 300;
+color: var(--color-text-base-light);
+line-height: 22px;
+}

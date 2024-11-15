@@ -25,6 +25,8 @@ export const flowOfReact = () => {
     showSuggestions: boolean;
     showButton: boolean;
     isButtonDisabled: boolean
+    showHome: boolean
+    gotoHome: boolean
   }>({
     conjugations: null,
     inputValue: '',
@@ -42,7 +44,9 @@ export const flowOfReact = () => {
     suggestions: null,
     showButton: false,
     isButtonDisabled: false,
-    showSuggestions: false
+    showSuggestions: false,
+    showHome: true,
+    gotoHome: false
   });
 
   const fetchConjugations = async () => {
@@ -58,10 +62,27 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
+    if (event.key === 'Enter' && state.inputValue === '') {
+
+      setState(prev => ({
+        ...prev,
+        gotoHome: true
+      }));
+    }
+
     if (event.key === 'Enter' && state.inputValue !== '') {
 
       const normalizedInputValue = ni(state.inputValue)
-      const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
+
+      let result = false;
+      let findedWord = "";
+  
+      if (normalizedInputValue !== '') {
+        const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+        result = apiResponse.result;
+        findedWord = apiResponse.findedWord;
+      }
+
       const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
       const suggestions = getSimilarVerbs(state.inputValue)
 
@@ -78,6 +99,8 @@ export const flowOfReact = () => {
         showButton: false,
         showSuggestions: false,
         isButtonDisabled: false,
+        showHome: false,
+        gotoHome: false,
       }));
 
       if (!result) {
@@ -134,7 +157,9 @@ export const flowOfReact = () => {
     state.suggestions,
     state.showButton,
     state.isButtonDisabled,
-    state.showSuggestions
+    state.showSuggestions,
+    state.showHome,
+    state.gotoHome
   ];
   
   useEffect(() => {
@@ -155,7 +180,9 @@ export const flowOfReact = () => {
       suggestions: state.suggestions,
       showButton: state.showButton,
       isButtonDisabled: state.isButtonDisabled,
-      showSuggestions: state.showSuggestions
+      showSuggestions: state.showSuggestions,
+      showHome: state.showHome,
+      gotoHome: state.gotoHome
     };
   
     // console.log(data);
