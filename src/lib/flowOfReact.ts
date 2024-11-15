@@ -17,7 +17,7 @@ export const flowOfReact = () => {
     abundance: object | null | undefined;
     afixo: string | null | undefined;
     ending: string | null | undefined;
-    hasTarget: string | boolean | null | undefined;
+    hasTarget: string | boolean | null ;
     note: string[] | null | undefined;
     types: string[] | null | undefined;
     loading: boolean;
@@ -40,7 +40,7 @@ export const flowOfReact = () => {
     loading: false,
     suggestions: null,
     showButton: false,
-    isButtonDisabled: true,
+    isButtonDisabled: false,
   });
 
   const fetchConjugations = async () => {
@@ -61,7 +61,7 @@ export const flowOfReact = () => {
       const normalizedInputValue = ni(state.inputValue)
       const { result, findedWord } = await isValidVerbByAPI(normalizedInputValue);
       const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-      // const suggestions = getSimilarVerbs(state.inputValue)
+      const suggestions = getSimilarVerbs(state.inputValue)
 
       setState(prev => ({
         ...prev,
@@ -71,24 +71,24 @@ export const flowOfReact = () => {
         showConjugations: false,
         foundVerb: findedWord,
         isValidVerb: result,
-        hasTarget: propsOfWord[0].hasTarget,
-        ending: propsOfWord[0].ending,
-        types: propsOfWord[0].types,
-        abundance: propsOfWord[0].abundance,
-        note: propsOfWord[0].note,
-        afixo: propsOfWord[0].afixo,
         loading: false,
         suggestions: null,
         showButton: false,
-        isButtonDisabled: true,
+        isButtonDisabled: false,
       }));
 
       if (!result) {
 
         setState(prev => ({
           ...prev,
-          hasTarget: `Que pena! A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
           showButton: true,
+          suggestions: suggestions,
+          ending: null,
+          hasTarget: `A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
+          types: null,
+          abundance: null,
+          note: null,
+          afixo: null,
         }));
 
       } else {
@@ -96,6 +96,12 @@ export const flowOfReact = () => {
         setState(prev => ({
           ...prev,
           loading: true,
+          ending: propsOfWord[0].ending,
+          hasTarget: propsOfWord[0].hasTarget,
+          types: propsOfWord[0].types,
+          abundance: propsOfWord[0].abundance,
+          note: propsOfWord[0].note,
+          afixo: propsOfWord[0].afixo,
         }));
         
         await conjVerbByAPI(ni(findedWord));
