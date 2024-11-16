@@ -1,19 +1,62 @@
-## conjugador-gules.vercel.app
+# É assim...
 
-_[conjugador-gules.vercel.app](https://conjugador-gules.vercel.app)_ 
-é um conjugador de verbos da língua portuguesa para a web que 
-estou escrevendo basicamente em _typescript_, a fim de conhecer novas palavras no processo 
-e para ter alguma diversão (por que não?).
-Ele está sendo criado com [nextjs](https://nextjs.org/) 
-e [postgresql](https://www.postgresql.org/), dois recursos totalmente
-gratuitos dentro da hospedagem do [vercel](https://vercel.com), que usa o github como 
-[repositório da aplicação](https://github.com/renribsilva/conjugador),
-também grátis. neste projeto, a base de vocábulos é a lista de palavras do corretor 
+**conjugador-gules**
+é um conjugador de verbos da língua portuguesa. Escrito essencialmente em 
+_typescript_, uma extensão do _javascript_, e o seu código poder ser
+conferido clicando [aqui](https://github.com/renribsilva/conjugador) ou em _source_
+no rodapé desta página.
+
+### por quê?
+
+1. é divertido codificar
+2. é possível ampliar o próprio vocabulário no processo
+3. é inevitável conhecer melhor a língua portuguesa por meio do seu desenvolvimento
+4. é possível conjugar verbos sem ser assediado com anúncios não solicitados
+
+### base de dados
+
+neste projeto, a base de vocábulos é a lista de palavras do corretor 
 ortográfico do [libreoffice](https://pt-br.libreoffice.org/), que pode ser acessada
 livremente [aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic)
-— no projeto, ela foi salva em `palavras.txt` na pasta `/public` do 
-[repositório da aplicação](https://github.com/renribsilva/conjugador).
+— no repositória da aplicação, ela foi salva em `palavras.txt` na pasta `/public`
 Essa base de vocábulos conta com mais de 312 mil entradas, dentre as quais
 cerca de 18 mil são palavras terminadas em 'ar', 'er', 'ir' e 'or'. 
 Destes, até o momento, 316 são consideradas irregulares e receberão 
 regras de conjugação próprias, o que deverá levar algum tempo.
+
+### processamento de dados
+
+Sem trocar em miúdos, como diria o Chico Buarque, 
+as palavras terminadas em 'ar', 'er', 'ir' e 'or' são filtradas e guardadas. Em seguida, elas 
+passam por um processamento que adiciona novos verbos (caso não estejam presentes na lista
+original do libreOfice) e que remove as palavras com tais terminação mas 
+que não são verbos. Feito isso, uma combinação é feita entre um radical, uma desinência e um
+sufixo. O radical você já entendeu de onde ele vem. Quanto à desinência e ao sufixo, eles
+foram escritos como 'regras de conjugação', uma para os verbos regulares e outra para os
+irregulares. 
+
+* Atenção: a lista de palavras do corretor ortográfico do libreOffice não é uma 
+fonte oficial de vocábulos da língua portugesa
+
+### montagem e exibição
+
+esse trem aqui não tem uma base de dados com todas as conjugações de todos
+os verbos. Como dito antes, tem uma base de informação é que processada, de modo 
+que suas partes podem ser usadas para uma combinação. Então como é feito essa poha?
+Tudo é feito e desfeito com o apertar do enter na caixa de texto. Como assim?
+No apertar do 'enter', um radical é buscado na lista de palvras previamente processada,
+e ele é combinado com suas respectivas regras de conjugação. 
+Daí então isso tudo é montado numa tabela e exibido na tela.
+Quando outro 'enter' é pressionado, todas as informações da primeira conjugação
+são apagadas um novo processo é iniciado. Nenhum dado é coletado ou armazenado nessa ação. 
+
+### nenhum dado é coletado nessa giribosca?
+
+pera lá! Sim, mas só se você quiser. Os dados coletados nesta aplicação só são armazenados
+com a tua ação. Como assim? Na página há vários alguns botões que, quando clicados, 
+podem registrar palavras em listas. São basicamente duas listas: uma para palavras que 
+não estão na nossa base de dados e que precisam ser incluídas; e uma para palavras que estão
+conjugadas de forma errada (erra é humano, né, poha). Mas essa coleta de informação só é feita
+se tu apertar o botão, se não nada feito.
+
+### 
