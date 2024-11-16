@@ -3,46 +3,93 @@
 /*************************************************/
 
 .table {
-  /* background-color: aqua; */
-  width: fit-content;
+  /* background-color: aquamarine; */
+  margin-top: 40px;
 }
 
 .b3 {
   display: flex;
 }
 
+@media (max-width: 800px) {
+  .b3 {
+    display: block;
+  }
+
+  .b2, .b3, .section2_b3 {
+    margin-top: 40px;
+  }
+}
+
+.section1_b3 {
+  flex: 2;
+}
+
+.section2_b3 {
+  flex: 1;
+}
+
 .mod {
-  background-color: rgb(255, 166, 0);
+  background-color: var(--modbox);
   display: flex;
   justify-content: center;
-  margin-inline: 5px;
-  margin-top: 20px;
-  /* padding: 0px; */
-}
-
-.row {
-  background-color: rgb(83, 130, 192);
-  display: flex;
-  justify-content: center;
-  width: fit-content;
-  /* margin: 0px; */
-  /* padding: 0px; */
-}
-
-.col {
-  background-color: blueviolet;
-  text-align: center;
-  width: 257px;
+  align-items: center;
+  height: 40px;
+  border-radius: 0.3rem;
+  box-shadow: var(--smallshadow);
   margin: 5px;
 }
 
-.tense {
-  background-color: aquamarine;
+@media (max-width: 800px) {
+ .mod {
+    margin: 0;
+    margin-bottom: 10px;
+ }
 }
 
-.imp_inf {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+.row {
+  /* background-color: rgb(83, 130, 192); */
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .row {
+    display: block;
+  }
+}
+
+.col {
+  display: block;
+  background-color: var(--background);
+  text-align: center;
+  width: 100%;
+  margin: 5px;
+  padding-bottom: 10px;
+  border-radius: 0.3rem;
+  box-shadow: var(--smallshadow);
+}
+
+@media (max-width: 800px) {
+  .col {
+    margin: 0;
+    margin-top: 5px;
+  }
+}
+
+.ten {
+  background-color: var(--tensebox);
+  font-weight: 500;
+  height: 30px;
+  margin-bottom: 10px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pronouns, .adv {
+  color: rgb(152, 153, 153);
 }
 
 /***************************************************/
@@ -72,8 +119,9 @@
 /**************************************************/
 
 .theme_button {
-  /* background-color:aqua; */
+  background-color:var(--background);
   border: none;
+  height: 25px;
 }
 
 /***************************************************/

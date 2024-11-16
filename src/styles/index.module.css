@@ -3,56 +3,88 @@
 /*************************************************/
 
 .navbar_container {
+  /* background-color: aqua; */
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 170px;
+}
+
+@media (max-width: 800px) {
+  .navbar_container {
+    height: auto;
+  }
 }
 
 .navbar {
   /* background-color: rgb(240, 164, 78); */
-  height: 130px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   width: 840px;
 }
 
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap-reverse;
+  }
+}
+
 .input_container {
   display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .input_container {
+    height: 100px;
+    justify-content: center;
+  }
 }
 
 .input {
   border-radius: 10rem;
   border: none;
-  padding: 28px;
-  height: 20px;
+  padding: 12px 28px;
+  height: 55px;
   align-self: center;
   justify-content: center;
   font-size: 18px;
   outline: none; /* Remove a borda padrão do foco */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: var(--largeshadow)
 }
 
-.buttons {
-  /* background-color: aqua; */
+@media (max-width: 800px) {
+  .input {
+    height: 45px;
+    padding-right: 0px;
+  }
+}
+
+.buttons_container {
+  /* background-color: rgb(123, 255, 0); */
   width: 100%;
   height: 100%;
-  padding-left: 50px;
-  padding-top: 22px;
-  /* display: flex; */
-  justify-content: right;
 }
 
-.buttons div {
-  /* background-color: rgb(85, 67, 43); */
-  width: 320px;
-  height: 50px;
+.button_sup {
+  /* background-color: blueviolet; */
+  width: 100%;
+  height: 50%;
   display: flex;
   justify-content: right;
-  /* align-items: center; */
-  gap: 10px;
+  align-items: flex-end;
 }
 
-.button_title{
+@media (max-width: 800px) {
+  .button_sup {
+    justify-content: center;
+    height: 60px;
+  }
+}
+
+.button_title {
   border: none;
   background-color:var(--background); 
   font-family: 'Roboto';
@@ -60,17 +92,41 @@
   font-weight: 900;
   cursor: pointer;
   z-index: 1000;
+  display: flex;
+  justify-content: right;
+  min-width: 300px;
+  height: fit-content;
+}
+
+@media (max-width: 800px) {
+  .button_title {
+    justify-content: center;
+  }
+}
+
+.button_inf {
+  /* background-color: aquamarine; */
+  height: 45%;
+  padding-top: 8px;
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .button_inf {
+    justify-content: center;
+  }
 }
 
 .button_about {
-  /* background-color:aqua; */
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 16px;
-  /* padding-top: 15px; */
-  /* padding-bottom: 10px; */
-  cursor: pointer;
+  background-color: var(--background);
   border: none;
+  height: 25px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
 }
 
 /*************************************************/
@@ -79,21 +135,17 @@
 
 .main {
   /* background-color: aquamarine; */
-  padding-top: 40px;
   display: flex;
   justify-content: center;
 }
 
 .panel {
   /* background-color: rgb(180, 206, 197); */
-  width: 800px;
+  width:800px;
   min-height: 300px;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 0.4rem;
+  box-shadow: var(--largeshadow)
 }
 
 /******************************************************/

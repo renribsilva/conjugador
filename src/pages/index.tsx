@@ -90,8 +90,8 @@ const Conjugations = () => {
               style={{ marginRight: 10, width: 300 }}
             />
           </div>
-          <div className={styles.buttons}>
-            <div className={styles.buttons_sup}>
+          <div className={styles.buttons_container}>
+            <div className={styles.button_sup}>
               <button 
                 className={styles.button_title}
                 onClick={handleHome}

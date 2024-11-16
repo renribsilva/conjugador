@@ -4,7 +4,57 @@ import styles from "../styles/components.module.css";
 import { nw } from '../lib/normalizeVerb';
 import { Conjugation } from '../types';
 
+const pronouns = {
+  eu: "eu",
+  tu: "tu",
+  ele: "ele",
+  nós: "nós",
+  vós: "vós",
+  eles: "eles"
+}
+
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
+
+  const block = ({ adv, ten, conj, mod }) => {
+    const X = conj[mod];
+    const isSpecialOrder = ten === "Afirmativo" || ten === "Negativo";
+    const isInfinitive = ten === "Pessoal";
+  
+    return (
+      <div className={styles.col}>
+        <div className={styles.ten}>{ten}</div>
+        {isSpecialOrder ? (
+          <>
+            <div>{nw(X.p1)}</div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{pronouns.tu}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{pronouns.ele}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{pronouns.nós}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{pronouns.vós}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{pronouns.eles}</span></div>
+          </>
+        ) : isInfinitive ? (
+          <>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p1)} <span className={styles.pronouns}>{pronouns.eu}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{pronouns.tu}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{pronouns.ele}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{pronouns.nós}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{pronouns.vós}</span></div>
+            <div><span className={styles.adv}>{adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{pronouns.eles}</span></div>
+          </>
+        ) : (
+          <>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.eu}</span> {nw(X.p1)}</div>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.tu}</span> {nw(X.p2)}</div>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.ele}</span> {nw(X.p3)}</div>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.nós}</span> {nw(X.p4)}</div>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.vós}</span> {nw(X.p5)}</div>
+            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.eles}</span> {nw(X.p6)}</div>
+          </>
+        )}
+      </div>
+    );
+  };  
+
   return (
     <section>
         <div>
@@ -15,137 +65,41 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
         <div className={styles.table}>
           {/* Indicativo */}
           <div className={styles.b1}>
-            <div className={styles.mod}>Indicativo</div>
+            <h3 className={styles.mod}>Indicativo</h3>
             <div className={styles.row}>
-              <div className={styles.col}>
-                <div className={styles.tense}>Presente</div>
-                <div>eu {nw(conjugations.pr_ind.p1)}</div>
-                <div>tu {nw(conjugations.pr_ind.p2)}</div>
-                <div>ela {nw(conjugations.pr_ind.p3)}</div>
-                <div>nós {nw(conjugations.pr_ind.p4)}</div>
-                <div>vós {nw(conjugations.pr_ind.p5)}</div>
-                <div>elas {nw(conjugations.pr_ind.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Perfeito</div>
-                <div>eu {nw(conjugations.pt1_ind.p1)}</div>
-                <div>tu {nw(conjugations.pt1_ind.p2)}</div>
-                <div>ela {nw(conjugations.pt1_ind.p3)}</div>
-                <div>nós {nw(conjugations.pt1_ind.p4)}</div>
-                <div>vós {nw(conjugations.pt1_ind.p5)}</div>
-                <div>elas {nw(conjugations.pt1_ind.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Imperfeito</div>
-                <div>eu {nw(conjugations.pt2_ind.p1)}</div>
-                <div>tu {nw(conjugations.pt2_ind.p2)}</div>
-                <div>ela {nw(conjugations.pt2_ind.p3)}</div>
-                <div>nós {nw(conjugations.pt2_ind.p4)}</div>
-                <div>vós {nw(conjugations.pt2_ind.p5)}</div>
-                <div>elas {nw(conjugations.pt2_ind.p6)}</div>
-              </div>
+              {block({ adv: '', ten: 'Presente', conj: conjugations, mod: "pr_ind"})}
+              {block({ adv: '', ten: 'Pretérito Perfeito', conj: conjugations, mod: "pt1_ind"})}
+              {block({ adv: '', ten: 'Pretérito Imperfeito', conj: conjugations, mod: "pt2_ind"})}
             </div>
             <div className={styles.row}>
-              <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Mais-que-perfeito</div>
-                <div>eu {nw(conjugations.pt3_ind.p1)}</div>
-                <div>tu {nw(conjugations.pt3_ind.p2)}</div>
-                <div>ela {nw(conjugations.pt3_ind.p3)}</div>
-                <div>nós {nw(conjugations.pt3_ind.p4)}</div>
-                <div>vós {nw(conjugations.pt3_ind.p5)}</div>
-                <div>elas {nw(conjugations.pt3_ind.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Futuro do Presente</div>
-                <div>eu {nw(conjugations.ft1_ind.p1)}</div>
-                <div>tu {nw(conjugations.ft1_ind.p2)}</div>
-                <div>ela {nw(conjugations.ft1_ind.p3)}</div>
-                <div>nós {nw(conjugations.ft1_ind.p4)}</div>
-                <div>vós {nw(conjugations.ft1_ind.p5)}</div>
-                <div>elas {nw(conjugations.ft1_ind.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Futuro do Pretérito</div>
-                <div>eu {nw(conjugations.ft2_ind.p1)}</div>
-                <div>tu {nw(conjugations.ft2_ind.p2)}</div>
-                <div>ela {nw(conjugations.ft2_ind.p3)}</div>
-                <div>nós {nw(conjugations.ft2_ind.p4)}</div>
-                <div>vós {nw(conjugations.ft2_ind.p5)}</div>
-                <div>elas {nw(conjugations.ft2_ind.p6)}</div>
-              </div>
+              {block({ adv: '', ten: 'Pretérito Mais-que-perfeito', conj: conjugations, mod: "pt3_ind"})}
+              {block({ adv: '', ten: 'Futuro do Presente', conj: conjugations, mod: "ft1_ind"})}
+              {block({ adv: '', ten: 'Futuro do Pretérito', conj: conjugations, mod: "ft2_ind"})}
             </div>
           </div>
           {/* Subjuntivo */}
           <div className={styles.b2}>
-            <div className={styles.mod}>Subjuntivo</div>
+            <h3 className={styles.mod}>Subjuntivo</h3>
             <div className={styles.row}>
-              <div className={styles.col}>
-                <div className={styles.tense}>Presente</div>
-                <div>que eu {nw(conjugations.pr_sub.p1)}</div>
-                <div>que tu {nw(conjugations.pr_sub.p2)}</div>
-                <div>que ela {nw(conjugations.pr_sub.p3)}</div>
-                <div>que nós {nw(conjugations.pr_sub.p4)}</div>
-                <div>que vós {nw(conjugations.pr_sub.p5)}</div>
-                <div>que elas {nw(conjugations.pr_sub.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Pretérito Imperfeito</div>
-                <div>se eu {nw(conjugations.pt_sub.p1)}</div>
-                <div>se tu {nw(conjugations.pt_sub.p2)}</div>
-                <div>se ela {nw(conjugations.pt_sub.p3)}</div>
-                <div>se nós {nw(conjugations.pt_sub.p4)}</div>
-                <div>se vós {nw(conjugations.pt_sub.p5)}</div>
-                <div>se elas {nw(conjugations.pt_sub.p6)}</div>
-              </div>
-              <div className={styles.col}>
-                <div className={styles.tense}>Futuro</div>
-                <div>quando eu {nw(conjugations.fut_sub.p1)}</div>
-                <div>quando tu {nw(conjugations.fut_sub.p2)}</div>
-                <div>quando ela {nw(conjugations.fut_sub.p3)}</div>
-                <div>quando nós {nw(conjugations.fut_sub.p4)}</div>
-                <div>quando vós {nw(conjugations.fut_sub.p5)}</div>
-                <div>quando elas {nw(conjugations.fut_sub.p6)}</div>
-              </div>
+              {block({ adv: 'que', ten: 'Presente', conj: conjugations, mod: "pr_sub"})}
+              {block({ adv: 'se', ten: 'Pretérito Imperfeito', conj: conjugations, mod: "pt_sub"})}
+              {block({ adv: 'quando', ten: 'Futuro', conj: conjugations, mod: "fut_sub"})}
             </div>
           </div>
           {/* Imperativo */}
           <div className={styles.b3}>
             <section className={styles.section1_b3}>
-              <div className={styles.mod}>Imperativo</div>
+              <h3 className={styles.mod}>Imperativo</h3>
               <div className={styles.row}>
-                <div className={styles.col}>
-                  <div className={styles.tense}>Afirmativo</div>
-                  <div>{nw(conjugations.im1.p1)}</div>
-                  <div>{nw(conjugations.im1.p2)} tu</div>
-                  <div>{nw(conjugations.im1.p3)} você</div>
-                  <div>{nw(conjugations.im1.p4)} nós</div>
-                  <div>{nw(conjugations.im1.p5)} vós</div>
-                  <div>{nw(conjugations.im1.p6)} vocês</div>
-                </div>
-                <div className={styles.col}>
-                  <div className={styles.tense}>Negativo</div>
-                  <div>{nw(conjugations.im2.p1)}</div>
-                  <div>não {nw(conjugations.im2.p2)} tu</div>
-                  <div>não {nw(conjugations.im2.p3)} você</div>
-                  <div>não {nw(conjugations.im2.p4)} nós</div>
-                  <div>não {nw(conjugations.im2.p5)} vós</div>
-                  <div>não {nw(conjugations.im2.p6)} vocês</div>
-                </div>
+                {block({ adv: '', ten: 'Afirmativo', conj: conjugations, mod: "im1"})}
+                {block({ adv: 'não', ten: 'Negativo', conj: conjugations, mod: "im2"})}
               </div>
             </section>
             <section className={styles.section2_b3}>
               {/* Infinitivo */}
-              <div className={styles.mod}>Infinitivo</div>
+              <h3 className={styles.mod}>Infinitivo</h3>
               <div className={styles.row}>
-                <div className={styles.col}>
-                  <div className={styles.tense}>Infinitivo Pessoal</div>
-                  <div>por {nw(conjugations.inf.p1)} eu</div>
-                  <div>por {nw(conjugations.inf.p2)} tu</div>
-                  <div>por {nw(conjugations.inf.p3)} ele</div>
-                  <div>por {nw(conjugations.inf.p4)} nós</div>
-                  <div>por {nw(conjugations.inf.p5)} vós</div>
-                  <div>por {nw(conjugations.inf.p6)} eles</div>
-                </div>
+                {block({ adv: 'por', ten: 'Pessoal', conj: conjugations, mod: "inf"})}
               </div>
             </section>
           </div>

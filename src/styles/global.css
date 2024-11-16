@@ -1,36 +1,39 @@
 :root, html, body {
   --color-fill-light: rgb(255, 255, 255);
-  --color-text-base-light: rgb(39, 39, 39);
-  --color-subtitle-light: rgb(128, 110, 96); /* Ajustado para melhorar o contraste */
-  --color-hr-light: rgb(209, 198, 180); 
+  --color-text-base-light: rgb(61, 61, 61);
+  --color-mod-light: rgba(139, 139, 139, 0.24);
+  --color-tense-light: rgba(179, 179, 179, 0.226);
   
-  --color-fill-dark: rgb(33, 39, 55); 
-  --color-text-base-dark: rgb(243, 238, 234);
-  --color-subtitle-dark: rgb(189, 155, 123); /* Ajustado para melhorar o contraste */
-  --color-hr-dark: rgb(94, 81, 71); 
+  --color-fill-dark: rgb(34, 34, 34); /* fundo escuro */
+  --color-text-base-dark: rgb(235, 235, 235); /* texto claro */
+  --color-mod-dark: rgba(139, 139, 139, 0.089); /* modulação escura */
+  --color-tense-dark: rgba(139, 139, 139, 0.062); /* cor de tenso escura */
 }
 
 [data-theme="dark"] {
   --background: var(--color-fill-dark);
   --foreground: var(--color-text-base-dark);
-  --subtitle: var(--color-subtitle-dark);
-  --hr: var(--color-hr-dark)
+  --largeshadow: rgba(0, 0, 0, 0.8) 0px 2px 10px;
+  --smallshadow: rgba(0, 0, 0, 0.8) 0px 1px 5px;
+  --modbox:var(--color-mod-dark);
+  --tensebox:var(--color-tense-dark)
 }
 
 [data-theme="light"] {
   --background: var(--color-fill-light);
   --foreground: var(--color-text-base-light);
-  --subtitle: var(--color-subtitle-light);
-  --hr: var(--color-hr-light)
+  --largeshadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
+  --smallshadow: rgba(0, 0, 0, 0.2) 0px 0.5px 2px;
+  --modbox:var(--color-mod-light);
+  --tensebox:var(--color-tense-light)
 }
 
 * {
-  background-color: var(--background);
+  /* background-color: var(--background); */
   color: var(--foreground) ;
 }
 
 :root {
-  background-color: var(--color-fill-light);
   display: flex;
   justify-content: center;
 }
@@ -38,21 +41,22 @@
 body {
   /* background-color: rgb(175, 175, 73); */
   margin: 0;
+  margin-inline: 15px;
   font-family: "Roboto";
   font-weight: 300;
   line-height: 22px;
   width: 100%;
+  min-width: 320px;
 }
 
 .material-symbols-outlined {
+  /* background-color: aqua; */
   font-variation-settings:
     'FILL' 1,
     'wght' 300,
     'GRAD' 0,
     'opsz' 30;
-  /* background-color: aqua; */
-  font-size: 20px;
+  font-size: 23px;
+  text-align: center;
   color: var(--foreground);
-  display: flex;
-  align-items: center;
 }
