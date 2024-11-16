@@ -25,7 +25,8 @@
 }
 
 * {
-  color: var(--color-text-base-light) ;
+  background-color: var(--background);
+  color: var(--foreground) ;
 }
 
 :root {
@@ -35,19 +36,23 @@
 }
 
 body {
-  /* background-color: rgb(20, 20, 12); */
+  /* background-color: rgb(175, 175, 73); */
   margin: 0;
   font-family: "Roboto";
   font-weight: 300;
-  max-width:840px;
+  line-height: 22px;
+  width: 100%;
 }
 
 .material-symbols-outlined {
   font-variation-settings:
-    'FILL' 0,
-    'wght' 200,
+    'FILL' 1,
+    'wght' 300,
     'GRAD' 0,
-    'opsz' 10;
+    'opsz' 30;
   /* background-color: aqua; */
   font-size: 20px;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
 }

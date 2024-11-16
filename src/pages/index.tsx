@@ -2,11 +2,13 @@ import { useRef, useEffect } from 'react';
 import Table from '../components/table';
 import { flowOfReact } from '../lib/flowOfReact';
 import postReqVerbByAPI from '../lib/postReqVerbByAPI';
-import styles from "../styles/pages.module.css";
+import styles from "../styles/index.module.css";
 import Footer from '../components/footer';
 import Socials from '../components/socials';
 import Home from "../mdx/Home.mdx"
 import Gracias from "../mdx/Gracias.mdx"
+import About from "../mdx/About.mdx"
+import Theme from '../components/theme';
 
 const Conjugations = () => {
 
@@ -40,6 +42,20 @@ const Conjugations = () => {
       ...state,
       inputValue: '',
       inputReq: '',
+      showHome: false,
+      showSobre: true,
+      conjugations: null
+    });
+  }
+
+  const handleHome = () => {
+    setState({ 
+      ...state,
+      inputValue: '',
+      inputReq: '',
+      showHome: true,
+      showSobre: false,
+      conjugations: null
     });
   }
 
@@ -74,9 +90,24 @@ const Conjugations = () => {
               style={{ marginRight: 10, width: 300 }}
             />
           </div>
-          <div>
-            <button>Conjugação Aberta</button>
-            <button>Sobre</button>
+          <div className={styles.buttons}>
+            <div className={styles.buttons_sup}>
+              <button 
+                className={styles.button_title}
+                onClick={handleHome}
+              >
+                conjugador-gules
+              </button>
+            </div>
+            <div className={styles.button_inf}>
+              <button 
+                onClick={handleSobre}
+                className={styles.button_about}
+              >
+                Sobre
+              </button>
+              <Theme />
+            </div>
           </div>
         </div>
       </section>
@@ -88,7 +119,16 @@ const Conjugations = () => {
               {state.loading && "conjugando..."}
             </div>
             <div className={styles.nonFoundedVerb}>
-              {state.showHome && <Home />}
+              {state.showHome && !state.showSobre &&
+                <>
+                  <Home />
+                  <button onClick={handleSobre}>saiba mais dessa poha</button>
+                </>}
+              {!state.showHome && state.showSobre &&
+                <>
+                  <About />
+                  <button onClick={handleHome}>voltar pra Home</button>
+                </>}
               {state.conjugations === null && state.showButton && (
                 <>
                   <h2>Que pena!</h2>

@@ -26,7 +26,7 @@ export const flowOfReact = () => {
     showButton: boolean;
     isButtonDisabled: boolean
     showHome: boolean
-    gotoHome: boolean
+    showSobre: boolean
   }>({
     conjugations: null,
     inputValue: '',
@@ -46,7 +46,7 @@ export const flowOfReact = () => {
     isButtonDisabled: false,
     showSuggestions: false,
     showHome: true,
-    gotoHome: false
+    showSobre: false
   });
 
   const fetchConjugations = async () => {
@@ -61,14 +61,6 @@ export const flowOfReact = () => {
   };
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-
-    if (event.key === 'Enter' && state.inputValue === '') {
-
-      setState(prev => ({
-        ...prev,
-        gotoHome: true
-      }));
-    }
 
     if (event.key === 'Enter' && state.inputValue !== '') {
 
@@ -100,7 +92,7 @@ export const flowOfReact = () => {
         showSuggestions: false,
         isButtonDisabled: false,
         showHome: false,
-        gotoHome: false,
+        showSobre: false
       }));
 
       if (!result) {
@@ -159,7 +151,7 @@ export const flowOfReact = () => {
     state.isButtonDisabled,
     state.showSuggestions,
     state.showHome,
-    state.gotoHome
+    state.showSobre
   ];
   
   useEffect(() => {
@@ -182,7 +174,7 @@ export const flowOfReact = () => {
       isButtonDisabled: state.isButtonDisabled,
       showSuggestions: state.showSuggestions,
       showHome: state.showHome,
-      gotoHome: state.gotoHome
+      showSobre: state.showSobre
     };
   
     // console.log(data);

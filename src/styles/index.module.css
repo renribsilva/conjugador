@@ -3,9 +3,9 @@
 /*************************************************/
 
 .navbar_container {
-  /* display: flex; */
-  /* justify-content: center; */
-  background-color: aqua;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar {
@@ -13,13 +13,10 @@
   height: 130px;
   display: flex;
   justify-content: space-between;
-  position:fixed;
-  width: 800px;
+  width: 840px;
 }
 
 .input_container {
-  /* background-color: rgb(221, 204, 199); */
-  /* justify-content: center; */
   display: flex;
 }
 
@@ -35,12 +32,46 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-/* .input:focus {
-  outline: 2px solid #6a0dad; 
-  box-shadow: 0 0 5px 2px #6a0dad; 
-} */
+.buttons {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  padding-top: 22px;
+  /* display: flex; */
+  justify-content: right;
+}
 
+.buttons div {
+  /* background-color: rgb(85, 67, 43); */
+  width: 320px;
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  /* align-items: center; */
+  gap: 10px;
+}
 
+.button_title{
+  border: none;
+  background-color:var(--color-fill-light); 
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.button_about {
+  /* background-color:aqua; */
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 16px;
+  /* padding-top: 15px; */
+  /* padding-bottom: 10px; */
+  cursor: pointer;
+  border: none;
+}
 
 /*************************************************/
 /*********************MAIN************************/
@@ -48,7 +79,7 @@
 
 .main {
   /* background-color: aquamarine; */
-  padding-top: 150px;
+  padding-top: 40px;
   display: flex;
   justify-content: center;
 }
