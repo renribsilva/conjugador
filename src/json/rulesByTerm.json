@@ -1250,7 +1250,7 @@
   },
   "acir": {
     "...": {
-      "note":["Todos os verbos terminados em 'acir' são regulares. Neste conjugador, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui."],
+      "note":["Todos os verbos terminados em 'acir' são regulares. Neste conjugador, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui. Contate-me via Mastodon"],
       "type": [1],
       "abundance":{},
       "rules": {

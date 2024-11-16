@@ -124,7 +124,7 @@ const Conjugations = () => {
               {state.showHome && !state.showSobre &&
                 <>
                   <Home />
-                  <button onClick={handleSobre}>saiba mais dessa poha</button>
+                  <button onClick={handleSobre}>saber mais sobre essa poha</button>
                 </>}
               {!state.showHome && state.showSobre &&
                 <>
