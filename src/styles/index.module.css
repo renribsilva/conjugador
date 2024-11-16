@@ -31,6 +31,7 @@
 }
 
 .input_container {
+  /* background-color: bisque; */
   display: flex;
   justify-content: left;
   width: 100%;
@@ -51,8 +52,9 @@
   align-self: center;
   justify-content: center;
   font-size: 18px;
-  outline: none; /* Remove a borda padrão do foco */
-  box-shadow: var(--largeshadow)
+  outline: none; 
+  box-shadow: var(--largeshadow);
+  width: 300px;
 }
 
 @media (max-width: 800px) {
@@ -145,7 +147,17 @@
   min-height: 300px;
   padding: 20px;
   border-radius: 0.4rem;
-  box-shadow: var(--largeshadow)
+  box-shadow: var(--largeshadow);
+}
+
+@media (max-width: 800px) {
+  .panel {
+    margin-top: 20px;
+  }
+}
+
+.subpanel {
+  width: 100%;
 }
 
 /******************************************************/

@@ -22,3 +22,5 @@ amigar
 amigar
 amigo
 amigo
+amigo
+migo

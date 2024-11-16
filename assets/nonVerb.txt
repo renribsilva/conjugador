@@ -9,3 +9,5 @@ abir
 agiar
 almir
 amidar
+jamir
+amber

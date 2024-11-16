@@ -44,7 +44,10 @@ const Conjugations = () => {
       inputReq: '',
       showHome: false,
       showSobre: true,
-      conjugations: null
+      conjugations: null,
+      showSuggestions: false,
+      showButton: false,
+      isButtonDisabled: false
     });
   }
 
@@ -87,7 +90,6 @@ const Conjugations = () => {
               onChange={(e) => setState({ ...state, inputValue: e.target.value })}
               onKeyDown={(e) => { handleKeyDown(e); }}
               placeholder="amar, escrever, colorir, ..."
-              style={{ marginRight: 10, width: 300 }}
             />
           </div>
           <div className={styles.buttons_container}>
@@ -115,7 +117,7 @@ const Conjugations = () => {
       <section className={styles.main}>
         <div className={styles.panel}>
           <div className={styles.subpanel}>
-            <div className={styles.conjugando}>
+            <div>
               {state.loading && "conjugando..."}
             </div>
             <div className={styles.nonFoundedVerb}>
@@ -140,7 +142,7 @@ const Conjugations = () => {
                 <Gracias />
               )}
               {state.conjugations === null && state.showSuggestions && (
-                <>
+                <div>
                   <p>Selecionamos alguns verbos que podem ser parecidos com a palavra solicitada...</p>
                   <ul>
                     {state.suggestions?.map((verb, index) => (
@@ -154,7 +156,7 @@ const Conjugations = () => {
                       </li>
                     ))}
                   </ul>
-                </>
+                </div>
               )}
             </div>
             <div className={styles.foundedVerb}>
