@@ -54,7 +54,7 @@
 
 .button_title{
   border: none;
-  background-color:var(--color-fill-light); 
+  background-color:var(--background); 
   font-family: 'Roboto';
   font-size: 36px;
   font-weight: 900;
