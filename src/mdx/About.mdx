@@ -22,31 +22,43 @@ cerca de 18 mil são palavras terminadas em 'ar', 'er', 'ir' e 'or'.
 Destas, até o momento, 316 são consideradas verbos irregulares e receberão 
 regras de conjugação próprias, o que deverá levar algum tempo.
 
-### processamento de dados
+### pré-processamento de dados
 
-Sem trocar em miúdos, como diria o Chico Buarque, 
-as palavras terminadas em 'ar', 'er', 'ir' e 'or' são filtradas e guardadas. Em seguida, elas 
-passam por um processamento que adiciona novos verbos (caso não estejam presentes na lista
-original do libreOfice) e que remove as palavras com tais terminação mas 
-que não são verbos. Feito isso, uma combinação é feita entre um radical, uma desinência e um
-sufixo. O radical você já entendeu de onde ele vem. Quanto à desinência e ao sufixo, eles
-foram escritos como 'regras de conjugação', uma para os verbos regulares e outra para os
-irregulares. 
+Nem todas as palavras terminadas em 'ar', 'er', 'ir' e 'or' são verbos. E nem todos os
+verbos existentes estão presentes na lista de palavras do corretor ortográfico do
+libreOffice. Por tais razões, um pré-processamento dessa base de vocábulos é necessária, 
+sempre que uma palvra não verbo terminada em 'ar', 'er', 'ir' e 'or' for identificada, 
+ou um verbo ausente da lista original precisar ser acrescido. Assim, dado o devido 
+tratamento, é possível obter uma lista de verbos bastante expressiva, com cerca de
+18 mil entradas.
 
 * Atenção: a lista de palavras do corretor ortográfico do libreOffice não é uma 
 fonte oficial de vocábulos da língua portugesa
 
-### montagem e exibição
+### montagem da conjugação
 
-esse trem aqui não tem uma base de dados com todas as conjugações de todos
-os verbos. Como dito antes, tem uma base de informação é que processada, de modo 
-que suas partes podem ser usadas para uma combinação. Então como é feito essa poha?
-Tudo é feito e desfeito com o apertar do enter na caixa de texto. Como assim?
-No apertar do 'enter', um radical é buscado na lista de palvras previamente processada,
-e ele é combinado com suas respectivas regras de conjugação. 
-Daí então isso tudo é montado numa tabela e exibido na tela.
-Quando outro 'enter' é pressionado, todas as informações da primeira conjugação
-são apagadas um novo processo é iniciado. Nenhum dado é coletado ou armazenado nessa ação. 
+a lista de cerca de 18 mil verbos não é uma base de verbos conjugados. Mas então
+como é que a conjugação é feita? Montando as partes! O verbo é composto de partes, as
+quais, por razões históricas e linguísticas que não conheço, seguem um padrão bastante
+reproduzível. Então como é feita essa poha? Pega-se as partes, isto é, o radical, a
+desinência e o sufixo, e faz-se uma combinação com elas. O radical você
+com certeza já percebeu de onde vem... Sim, da lista de palavras terminadas
+em 'ar', 'er', 'ir' e 'or', com cerca de 18 mil entradas. Quanto à desinência E
+ao sufixo, eles foram escritos em dois arquivos: um para verbos regulares e um
+para verbos irregulares. A partir destes elementos, tem-se todas as conjugação 
+possíveis para um verbo!
+
+### exibição da conjugação
+
+tudo é feito e desfeito com o apertar do 'enter' na caixa de texto. Como assim?
+No apertar do 'enter', uma palavra igual a solicitada é buscada na lista de palvras
+previamente processada e um radical é obtido dela.
+Em seguida, esse radical é combinado com suas respectivas regras de conjugação, formando 
+palavras inteiras que guardadas temporariamente em uma
+nuvem, o postgresql. Depois disso, as palvras são dispostas numa tabela, a partir
+da qual são exibidas na tua tela.
+Quando outro 'enter' é pressionado, todas as informações da conjugação anterior
+são apagadas e um novo processo é iniciado. Nenhum dado é coletado ou armazenado nessa ação. 
 
 ### coleta de dados solicitada
 
