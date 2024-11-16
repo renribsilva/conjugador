@@ -45,6 +45,39 @@
   grid-template-columns: 2fr 1fr;
 }
 
-/**************************************************/
-/*********************NAVBAR***********************/
-/**************************************************/
+/***************************************************/
+/*********************SOCIALS***********************/
+/***************************************************/
+
+.socials {
+  /* background-color: azure; */
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+  min-width: 320px;
+  height: 25px;
+  align-items: center;
+}
+
+.socials a {
+  text-decoration: none;
+  display: flex;
+}
+
+/***************************************************/
+/*********************FOOTER************************/
+/***************************************************/
+
+.footer {
+  /* background-color: aquamarine; */
+  margin-bottom: 50px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  height: 25px;
+}

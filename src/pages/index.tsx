@@ -3,10 +3,10 @@ import Table from '../components/table';
 import { flowOfReact } from '../lib/flowOfReact';
 import postReqVerbByAPI from '../lib/postReqVerbByAPI';
 import styles from "../styles/pages.module.css";
-import Link from 'next/link';
 import Footer from '../components/footer';
 import Socials from '../components/socials';
 import Home from "../mdx/Home.mdx"
+import Gracias from "../mdx/Gracias.mdx"
 
 const Conjugations = () => {
 
@@ -18,7 +18,7 @@ const Conjugations = () => {
     return types.slice(0, -1).join(', ') + ' e ' + types[types.length - 1];
   };
 
-  const handleReqButton = async (inputReq) => {
+  const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq);
     setState({ 
       ...state, 
@@ -26,6 +26,22 @@ const Conjugations = () => {
       isButtonDisabled: true 
     });
   };
+
+  const handleVerbClick = (verb: string) => {
+    setState({ 
+      ...state,
+      inputValue: verb,
+      inputReq: verb
+    });
+  };
+
+  const handleSobre = () => {
+    setState({ 
+      ...state,
+      inputValue: '',
+      inputReq: '',
+    });
+  }
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -42,53 +58,33 @@ const Conjugations = () => {
     }
   }, [state.inputReq]);
 
-  const handleVerbClick = (verb: string) => {
-    setState({ 
-      ...state,
-      inputValue: verb,
-      inputReq: verb
-    });
-  };
-
-  function linkToRepository () {
-    return (
-      <span>
-        <Link 
-          href="https://github.com/renribsilva/conjugador" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          https//github.com/renribsilva/conjugador
-        </Link>
-      </span>
-    )
-  }
-
   return (
     <>
-      <section className={styles.navbar}>
-        <div className={styles.input_container}>
-          <input
-            ref={inputRef}  // Referência do input
-            className={styles.input}
-            type="text"
-            value={state.inputValue}
-            onChange={(e) => setState({ ...state, inputValue: e.target.value })}
-            onKeyDown={(e) => { handleKeyDown(e); }}
-            placeholder="amar, escrever, colorir, ..."
-            style={{ marginRight: 10, width: 300 }}
-          />
-        </div>
-        <div>
-          <button>Conjugação Aberta</button>
-          <button>Sobre</button>
+      <section className={styles.navbar_container}>
+        <div className={styles.navbar}>
+          <div className={styles.input_container}>
+            <input
+              ref={inputRef}  // Referência do input
+              className={styles.input}
+              type="text"
+              value={state.inputValue}
+              onChange={(e) => setState({ ...state, inputValue: e.target.value })}
+              onKeyDown={(e) => { handleKeyDown(e); }}
+              placeholder="amar, escrever, colorir, ..."
+              style={{ marginRight: 10, width: 300 }}
+            />
+          </div>
+          <div>
+            <button>Conjugação Aberta</button>
+            <button>Sobre</button>
+          </div>
         </div>
       </section>
 
       <section className={styles.main}>
         <div className={styles.panel}>
           <div className={styles.subpanel}>
-            <div>
+            <div className={styles.conjugando}>
               {state.loading && "conjugando..."}
             </div>
             <div className={styles.nonFoundedVerb}>
@@ -97,16 +93,11 @@ const Conjugations = () => {
                 <>
                   <h2>Que pena!</h2>
                   <p>{state.hasTarget}</p>
-                  <button onClick={() => handleReqButton(state.inputReq)}>Solicitar</button>
+                  <button onClick={() => handleSolicitar(state.inputReq)}>Solicitar</button>
                 </>
               )}
               {state.isButtonDisabled && (
-                <>
-                  <h2>Ah, muito obrigado!</h2>
-                  <span>
-                    <p>O pedido foi registrado. E lembramos que a sua contribuição é fundamental, pois não coletamos nenhum tipo de dado sem a sua expressa vontade. Quer conferir? Acesse o repositório desta aplicação: {linkToRepository()}</p>
-                  </span>
-                </>
+                <Gracias />
               )}
               {state.conjugations === null && state.showSuggestions && (
                 <>
@@ -145,7 +136,7 @@ const Conjugations = () => {
         </div>
       </section>
 
-      <section>
+      <section className={styles.foot_info}>
         <Socials />
         <Footer />
       </section>

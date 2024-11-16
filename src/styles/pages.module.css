@@ -2,36 +2,48 @@
 /*********************NAVBAR***********************/
 /*************************************************/
 
-.navbar {
+.navbar_container {
+  /* display: flex; */
+  /* justify-content: center; */
   background-color: aqua;
+}
+
+.navbar {
+  /* background-color: rgb(240, 164, 78); */
   height: 130px;
   display: flex;
   justify-content: space-between;
   position:fixed;
-  width: 100%;
+  width: 800px;
 }
 
 .input_container {
-  background-color: aquamarine;
+  /* background-color: rgb(221, 204, 199); */
   /* justify-content: center; */
   display: flex;
-  margin-left: 100px;
 }
 
 .input {
-  /* background-color: rgb(219, 209, 230); */
   border-radius: 10rem;
   border: none;
   padding: 28px;
   height: 20px;
   align-self: center;
   justify-content: center;
-  /* margin-left: 20px; */
   font-size: 18px;
+  outline: none; /* Remove a borda padrão do foco */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+/* .input:focus {
+  outline: 2px solid #6a0dad; 
+  box-shadow: 0 0 5px 2px #6a0dad; 
+} */
+
+
+
 /*************************************************/
-/*********************MAIN***********************/
+/*********************MAIN************************/
 /*************************************************/
 
 .main {
@@ -44,19 +56,22 @@
 .panel {
   /* background-color: rgb(180, 206, 197); */
   width: 800px;
-  height: 300px;
+  min-height: 300px;
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 1%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.subpanel {
-  /* background-color: rgb(51, 97, 82) */
+/******************************************************/
+/*********************FOOT_INFO************************/
+/******************************************************/
+
+.foot_info {
+  padding-top: 20px;
 }
 
-.antesala2_weigth {
-  font-style: italic;
-  font-weight: 800;
-}
+
+
