@@ -119,9 +119,8 @@
 
 @media (max-width: 800px) {
   .button_inf {
-    flex-direction: row-reverse;
     justify-content: center;
-    gap: 200px;
+    gap: 20px;
   }
 }
 
