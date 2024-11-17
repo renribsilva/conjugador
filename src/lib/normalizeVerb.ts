@@ -17,7 +17,8 @@ export function ni(input: string): string {
     .toLowerCase() 
     .replace(/--+/g, "-") 
     .replace(/\s+/g, "") 
-    .trim();
+    .trim()
+    .normalize('NFC');
 }
 
 export const nw = (word: string | any): string => {
@@ -29,7 +30,8 @@ export const nw = (word: string | any): string => {
   return word
     .toLowerCase()
     .replace(/\s+/g, '')
-    .trim();
+    .trim()
+    .normalize('NFC');
 };
 
 // console.log(ni("pôr"));      

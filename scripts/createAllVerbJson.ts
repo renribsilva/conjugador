@@ -1,91 +1,18 @@
+// processVerbs.ts
 import fs from 'fs';
 import path from 'path';
-import { ni } from '../src/lib/normalizeVerb';
 import pullLibreOfficeWords from './pullLibreOfficeWords';
 import readTxtLines from './readTxtLines';
 import addNewVerbs from './addNewVerbs';
+import { ni } from '../src/lib/normalizeVerb';
+import { filterNonVerbs } from './filterNonVerbs';
 
 const assetsDir = path.join(process.cwd(), 'assets');
 const srcDir = path.join(process.cwd(), 'src');
 const publicDir = path.join(process.cwd(), 'public');
 
-async function createVerbsObject(filePath: string): Promise<Record<string, string[]>> {
-  const cleanedWords = await readTxtLines(filePath);
-  const updatedWords = await addNewVerbs(cleanedWords);
+async function processVerbsFile(): Promise<void> {
 
-  // Definir exceções (verbos que não precisam passar pela lógica de filtragem)
-  const exceptions = new Set(["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"]);
-
-  const verbs = updatedWords.filter(word =>
-    /(ar|er|ir|por|pôr)$/.test(word) &&  // Verifica a terminação
-    !/-/.test(word) &&                  // Ignora palavras com hífen
-    (word.length > 3 || exceptions.has(word)) // Inclui palavras com 3 letras ou mais, exceto as exceções
-  );
-
-  let verbsObject = verbs.reduce((acc, verb) => {
-    const normalized = ni(verb);
-    acc[normalized] = acc[normalized] || [];
-    acc[normalized].push(verb);
-    return acc;
-  }, {} as Record<string, string[]>);
-
-  // console.log('Objeto de verbos inicial:', verbsObject);
-
-  verbsObject = await addIrregVerbsToObject(verbsObject);
-  // console.log('Objeto após adicionar verbos irregulares:', verbsObject);
-
-  verbsObject = await removeNonVerbsFromObject(verbsObject);
-  // console.log('Objeto após remover palavras não verbais:', verbsObject);
-
-  return verbsObject;
-}
-
-async function removeNonVerbsFromObject(verbs: Record<string, string[]>): Promise<Record<string, string[]>> {
-  const nonVerbsPath = path.join(assetsDir, 'nonVerb.txt');
-  const nonVerbs = await readTxtLines(nonVerbsPath);
-
-  const nonVerbsSet = new Set(nonVerbs.map(verb => ni(verb)));
-
-  for (const key of Object.keys(verbs)) {
-    if (nonVerbsSet.has(key)) {
-      delete verbs[key];
-    }
-  }
-
-  // console.log('Non-verbs removidos:', nonVerbsSet);
-  return verbs;
-}
-
-async function addIrregVerbsToObject(verbs: Record<string, string[]>): Promise<Record<string, string[]>> {
-  const missingIrregularVerbs = await findMissingIrregularVerbs(verbs);
-
-  missingIrregularVerbs.forEach(verb => {
-    const normalized = ni(verb);
-    if (!verbs[normalized]) {
-      verbs[normalized] = [];
-    }
-    verbs[normalized].push(verb);
-  });
-
-  // console.log(verbs)
-  return verbs;
-}
-
-async function findMissingIrregularVerbs(verbs: Record<string, string[]>): Promise<string[]> {
-  const irregularVerbsPath = path.join(assetsDir, 'irregVerbs.txt');
-  const irregularVerbs = await readTxtLines(irregularVerbsPath);
-
-  // console.log('Verbos irregulares lidos:', irregularVerbs);
-
-  const missingVerbs = irregularVerbs.filter(verb => {
-    return !verbs[verb];
-  });
-
-  // console.log('Verbos irregulares ausentes:', missingVerbs);
-  return missingVerbs;
-}
-
-async function createAllVerbJson() {
   const filePath = path.join(publicDir, 'words.txt');
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
 
@@ -98,20 +25,47 @@ async function createAllVerbJson() {
     }
 
     console.log('Lendo e filtrando verbos...');
-    const verbs = await createVerbsObject(filePath);
 
-    console.log('Salvando verbos no arquivo JSON...');
-    await fs.promises.writeFile(outputFilePath, JSON.stringify(verbs, null, 2));
+    const cleanedWords = await readTxtLines(filePath);
+    const updatedWords = await addNewVerbs(cleanedWords);
 
-    const libreOfficeWordsCount = (await readTxtLines(path.join(publicDir, 'words.txt'))).length;
-    const irregularVerbsCount = (await readTxtLines(path.join(assetsDir, 'irregVerbs.txt'))).length;
-    console.log(`Total de entradas na lista libreOffice: ${libreOfficeWordsCount}`);
-    console.log(`Total de palavras terminadas em 'ar', 'er', 'ir' e 'or': ${Object.keys(verbs).length}`);
-    console.log(`Total de verbos na lista de verbos irregulares: ${irregularVerbsCount}`);
-    console.log('Processamento concluído!');
+    const exceptions = new Set(["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"]);
+    const verbs = updatedWords.filter(word =>
+      /(ar|er|ir|por|pôr)$/.test(word) &&
+      !/'/.test(word) &&
+      (word.length > 3 || exceptions.has(word))
+    );
+
+    console.log('Incrementando a lista de verbos...');
+
+    const irregularVerbsPath = path.join(assetsDir, 'irregVerbs.txt');
+    const irregularVerbs = await readTxtLines(irregularVerbsPath);
+    const allVerbsSet = new Set([...verbs, ...irregularVerbs]);
+
+    let allVerbs = Array.from(allVerbsSet);
+
+    console.log("Removendo vocábulos não verbos...")
+
+    allVerbs = await filterNonVerbs(allVerbs, 'nonVerb.txt');
+    allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
+
+    console.log("Montando o arquivo allVerbs.json...")
+
+    const J = allVerbs.reduce((acc, verb) => {
+      const normalized = String(ni(verb));
+      acc[normalized] = acc[normalized] || [];
+      acc[normalized].push(verb);
+      return acc;
+    }, {} as Record<string, string[]>);
+
+    await fs.promises.writeFile(outputFilePath, JSON.stringify(J, null, 2));
+
+    console.log(`Número total de vocábulos: ${Object.keys(J).length}`);
+    console.log(`Número de verbos irregulares: ${Object.keys(irregularVerbs).length}`);
+
   } catch (error) {
     console.error('Erro:', error);
   }
 }
 
-createAllVerbJson();
+processVerbsFile();

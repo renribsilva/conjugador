@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { nw } from '../src/lib/normalizeVerb';
 
 function createAfixosJson() {
   const caminhoTxt = path.join(process.cwd(), 'assets', 'afixos.txt');
@@ -10,7 +11,7 @@ function createAfixosJson() {
     const dados = fs.readFileSync(caminhoTxt, 'utf-8');
 
     // Divide o conteúdo em linhas e remove linhas vazias
-    const linhas = dados.split('\n').map(linha => linha.trim()).filter(Boolean);
+    const linhas = dados.split('\n').map(linha => nw(linha)).filter(Boolean);
 
     // Converte as linhas em um array JSON
     const jsonData = JSON.stringify(linhas, null, 2);
