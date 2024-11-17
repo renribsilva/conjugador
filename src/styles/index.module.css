@@ -59,6 +59,10 @@
   width: 300px;
 }
 
+.input::placeholder {
+  color: var(--foreground); 
+}
+
 @media (max-width: 800px) {
   .input {
     height: 45px;

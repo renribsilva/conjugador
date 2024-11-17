@@ -4,17 +4,17 @@
   --color-mod-light: rgba(139, 139, 139, 0.24);
   --color-tense-light: rgba(179, 179, 179, 0.226);
   
-  --color-fill-dark: rgb(64, 64, 64); /* fundo escuro */
-  --color-text-base-dark: rgb(240, 240, 240); /* texto claro */
-  --color-mod-dark: rgba(139, 139, 139, 0.089); /* modulação escura */
-  --color-tense-dark: rgba(139, 139, 139, 0.062); /* cor de tenso escura */
+  --color-fill-dark: rgb(45, 45, 45);
+  --color-text-base-dark: rgb(240, 240, 240);
+  --color-mod-dark: rgba(139, 139, 139, 0.089); 
+  --color-tense-dark: rgba(139, 139, 139, 0.062); 
 }
 
 [data-theme="dark"] {
   --background: var(--color-fill-dark);
   --foreground: var(--color-text-base-dark);
-  --largeshadow: rgba(0, 0, 0, 0.9) 0px 2px 10px;
-  --smallshadow: rgba(0, 0, 0, 0.9) 0px 1px 5px;
+  --largeshadow: rgba(0, 0, 0, 1) 0px 0px 15px;
+  --smallshadow: rgba(0, 0, 0, 1) 0px 0px 5px;
   --modbox:var(--color-mod-dark);
   --tensebox:var(--color-tense-dark)
 }
@@ -22,8 +22,8 @@
 [data-theme="light"] {
   --background: var(--color-fill-light);
   --foreground: var(--color-text-base-light);
-  --largeshadow: rgba(0, 0, 0, 0.2) 0px 2px 10px;
-  --smallshadow: rgba(0, 0, 0, 0.2) 0px 0.5px 2px;
+  --largeshadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+  --smallshadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
   --modbox:var(--color-mod-light);
   --tensebox:var(--color-tense-light)
 }
@@ -53,10 +53,10 @@ body {
   /* background-color: aqua; */
   font-variation-settings:
     'FILL' 0,
-    'wght' 400,
+    'wght' 300,
     'GRAD' 0,
     'opsz' 30;
   font-size: 23px;
   text-align: center;
   color: var(--foreground);
-}
+} 
