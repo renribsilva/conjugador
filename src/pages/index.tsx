@@ -8,7 +8,11 @@ import Socials from '../components/socials';
 import Home from "../mdx/Home.mdx"
 import Gracias from "../mdx/Gracias.mdx"
 import About from "../mdx/About.mdx"
+import Warning from "../mdx/Warning.mdx"
+import SobreErros from "../mdx/SobreErros.mdx"
 import Theme from '../components/theme';
+import Button from '../components/button';
+import postReqConjByAPI from '../lib/postReqConjByAPI';
 
 const Conjugations = () => {
 
@@ -26,6 +30,15 @@ const Conjugations = () => {
       ...state, 
       showButton: false,
       isButtonDisabled: true 
+    });
+  };
+
+  const handleReview = async (inputReq) => {
+    await postReqConjByAPI(inputReq);
+    setState({ 
+      ...state, 
+      showButton: false,
+      showReviewButton: false 
     });
   };
 
@@ -77,6 +90,26 @@ const Conjugations = () => {
     }
   }, [state.inputReq]);
 
+  function NoteRefList({ noteRef }) {
+    if (!noteRef || Object.keys(noteRef).length === 0) {
+      return null; // Retorna null se não houver notas de referência
+    }
+  
+    return (
+      <ol>
+        {Object.keys(noteRef)
+          .sort((a, b) => parseInt(a) - parseInt(b)) // Ordena as chaves numericamente
+          .map((key) => (
+            Array.isArray(noteRef[key]) && noteRef[key].map((text, index) => (
+              <li key={`${key}-${index}`}>{text}</li>
+            ))
+          ))}
+      </ol>
+    );
+  }
+
+  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
+
   return (
     <>
       <section className={styles.navbar_container}>
@@ -117,25 +150,29 @@ const Conjugations = () => {
       <section className={styles.main}>
         <div className={styles.panel}>
           <div className={styles.subpanel}>
-            <div>
+            <div className={styles.loading}>
               {state.loading && "conjugando..."}
             </div>
-            <div className={styles.nonFoundedVerb}>
+            <div>
               {state.showHome && !state.showSobre &&
                 <>
                   <Home />
-                  <button onClick={handleSobre}>saber mais sobre essa poha</button>
+                  <Button onClick={handleSobre}>saber mais sobre essa poha</Button>
                 </>}
               {!state.showHome && state.showSobre &&
                 <>
                   <About />
-                  <button onClick={handleHome}>voltar pra Home</button>
+                  <Button onClick={handleHome}>voltar pra Home</Button>
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
                   <h2>Que pena!</h2>
                   <p>{state.hasTarget}</p>
-                  <button onClick={() => handleSolicitar(state.inputReq)}>Solicitar</button>
+                  <Button 
+                    onClick={() => handleSolicitar(state.inputReq)}
+                  >
+                    Solicitar
+                  </Button>
                 </>
               )}
               {state.isButtonDisabled && (
@@ -147,23 +184,23 @@ const Conjugations = () => {
                   <ul>
                     {state.suggestions?.map((verb, index) => (
                       <li key={index}>
-                        <button 
+                        <Button 
                           ref={buttonRef}
                           onClick={() => { handleVerbClick(verb) }}
                         >
                           {verb}
-                        </button>
+                        </Button>
                       </li>
                     ))}
                   </ul>
                 </div>
               )}
             </div>
-            <div className={styles.foundedVerb}>
+            <div>
               {state.conjugations !== null && (
                 <>
                   <h2>Verbo {state.foundVerb}</h2>
-                  <p>{state.note}</p>
+                  <p>{state.note_plain}</p>
                   {state.types && (
                     <p>
                       <strong>Classificação: </strong>
@@ -171,6 +208,33 @@ const Conjugations = () => {
                     </p>
                   )}
                   <Table conjugations={state.conjugations} />
+                  <div className={styles.warning}>
+                    <strong>Aviso:</strong>
+                    <ul><Warning /></ul>
+                  </div>
+                  <div className={styles.warning}>
+                    <strong>Sobre erros:</strong>
+                    <ul>
+                      <SobreErros />
+                      {state.showReviewButton && state.showConjugations && (
+                        <Button
+                          onClick={() => handleReview(state.inputReq)}                      
+                        >
+                          Revisar a conjugação de '{state.inputReq}'
+                        </Button>
+                      )}
+                      {!state.showReviewButton && state.showConjugations && (
+                        <p>Solicitação enviada</p>
+                      )}
+                    </ul>
+                  </div>
+                  {hasNotes && (
+                    <div className={styles.references}>
+                      <strong>Referências:</strong>
+                      <NoteRefList noteRef={state.note_ref} />
+                    </div>
+                  )}
+
                 </>
               )}
             </div>

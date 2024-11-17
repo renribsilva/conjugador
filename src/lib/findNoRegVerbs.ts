@@ -68,7 +68,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           verb,
           types: verbRule.type,
           abundance: verbRule.abundance,
-          note: verbRule.note,
+          note_plain: verbRule.note.plain,
+          note_ref: verbRule.note.ref,
           afixo: null  
         };
       }
@@ -87,7 +88,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
             verb,
             types: baseVerbRules.type,
             abundance: baseVerbRules.abundance,
-            note: baseVerbRules.note,
+            note_plain: baseVerbRules.note.plain,
+            note_ref: baseVerbRules.note.ref,
             afixo: afixoEncontrado  
           };
         }
@@ -104,7 +106,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           verb,
           types: verbRule.type,
           abundance: verbRule.abundance,
-          note: verbRule.note,
+          note_plain: verbRule.note.plain,
+          note_ref: verbRule.note.ref,
           afixo: null  
         };
       }
@@ -123,11 +126,12 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
       verb: null,
       types: null,
       abundance: null,
-      note: null,
+      note_plain: null,
+      note_ref: null,
       afixo: null  
     };
   }
 }
 
-// const res3 = findNoRegRule("abraçar", "p1", "pt1_ind", "RAD");
+// const res3 = findNoRegRule("acabar", "p1", "pt1_ind", "RAD");
 // console.log(res3); 

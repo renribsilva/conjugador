@@ -52,6 +52,7 @@
   align-self: center;
   justify-content: center;
   font-size: 18px;
+  color: var(--foreground);
   outline: none; 
   box-shadow: var(--largeshadow);
   width: 300px;
@@ -158,6 +159,18 @@
 
 .subpanel {
   width: 100%;
+}
+
+.references, .warning {
+  /* background-color: aquamarine; */
+  margin-top: 20px;
+  margin-inline: 20px;
+  font-size: small;
+}
+
+.foundedVerb, .notFoundedVerb {
+  background-color: aqua;
+  margin-inline: 10px;
 }
 
 /******************************************************/

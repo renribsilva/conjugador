@@ -1,7 +1,7 @@
 {
   "ir":{
     "ir":{
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type":[2,5],
       "abundance":{},
       "rules":{
@@ -92,7 +92,7 @@
   },
   "dar": {
     "dar": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -145,7 +145,7 @@
   },
   "ler": {
     "...ler": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -185,7 +185,7 @@
       }
     },
     "ler": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -227,7 +227,11 @@
   },
   "por": {
     "...por": {
-      "note":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não."],
+      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+              "ref":{
+                "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -312,7 +316,11 @@
       }
     },
     "pôr": {
-      "note":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não."],
+      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+              "ref":{
+                "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -400,7 +408,7 @@
   },
   "rir": {
     "...rir": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -432,7 +440,7 @@
       }
     },
     "rir": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -466,7 +474,7 @@
   },
   "ser":{
     "ser":{
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [5,2],
       "abundance":{},
       "rules":{
@@ -546,7 +554,7 @@
   },
   "ter": {
     "...ter": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -624,7 +632,7 @@
       }
     },
     "ter": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -704,7 +712,7 @@
   },  
   "ver": {
     "...ver": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules":{
@@ -757,7 +765,7 @@
       }
     },
     "ver": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules":{
@@ -812,7 +820,7 @@
   },
   "vir": {
     "...vir": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
       "rules":{
@@ -900,7 +908,7 @@
       }
     },
     "vir": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
       "rules":{
@@ -990,7 +998,7 @@
   },
   "crer": {
     "...crer": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
       "rules":{
@@ -1030,7 +1038,7 @@
       }
     },
     "crer": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
       "rules":{
@@ -1072,7 +1080,11 @@
   },
   "abar": {
     "...": {
-      "note":["Todos os verbos terminados em 'abar' são regulares"],
+      "note": { "plain": ["Todos os verbos terminados em 'abar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
       "type": [1],
       "abundance":{},
       "rules": {
@@ -1081,7 +1093,7 @@
   },
   "aber": {
     "caber": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1116,7 +1128,7 @@
       }
     },
     "saber": {
-      "note":[],
+      "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1161,7 +1173,10 @@
   },
   "abir": {
     "...": {
-      "note":["Todos os verbos terminados em 'abir' são regulares"],
+      "note":{"plain":["Todos os verbos terminados em 'abir' são regulares"], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type": [1],
       "abundance":{},
       "rules": {
@@ -1170,7 +1185,10 @@
   },
   "abrir": {
     "...abrir": {
-      "note":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+      "note":{"plain":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type":[1],
       "abundance":{},
       "rules":{
@@ -1192,7 +1210,10 @@
       }
     },
     "abrir": {
-      "note":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+      "note":{"plain":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type": [1],
       "abundance":{},
       "rules":{
@@ -1216,7 +1237,10 @@
   },
   "acar":{
     "...": {
-      "note":["Todos os verbos terminados em 'acar' são regulares, mas algumas conjugações têm o 'c' substituído por 'qu' antes do 'e' desinencial."],
+      "note":{"plain":["Todos os verbos terminados em 'acar' são regulares, mas algumas conjugações têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type": [1],
       "abundance":{},
       "rules": {
@@ -1233,7 +1257,10 @@
   },
   "açar":{
     "...": {
-      "note":["Todos os verbos terminados em 'açar' são regulares, mas algumas conjugações têm o 'ç' substituído por 'c' antes do 'e' desinencial."],
+      "note":{"plain":["Todos os verbos terminados em 'açar' são regulares, mas algumas conjugações têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type": [1],
       "abundance":{},
       "rules": {
@@ -1250,7 +1277,10 @@
   },
   "acir": {
     "...": {
-      "note":["Todos os verbos terminados em 'acir' são regulares. Neste conjugador, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui. Contate-me via Mastodon"],
+      "note":{"plain":["Todos os verbos terminados em 'acir' são regulares¹. Neste conjugador, no entanto, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui. Contate-me via Mastodon"], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
       "type": [1],
       "abundance":{},
       "rules": {

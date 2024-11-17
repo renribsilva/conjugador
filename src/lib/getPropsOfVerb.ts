@@ -7,7 +7,8 @@ interface VerbProps {
   verb: string | null;
   types: string[] | null;
   abundance: {} | null;
-  note: string[] | null;
+  note_plain: [] | null;
+  note_ref: {} | null;
   afixo: string | null | undefined;
 }
 
@@ -44,7 +45,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
         if (result) {
           const mappedTypes = result.types && result.types.length > 0 ? mapTypesToStrings(result.types) : null;
           const abundance = result.abundance && Object.keys(result.abundance).length > 0 ? result.abundance : null;
-          const note = result.note && result.note.length > 0 ? result.note : null;
+          const note_plain = result.note_plain && result.note_plain.length > 0 ? result.note_plain : null;
+          const note_ref = result.note_ref && Object.keys(result.note_ref).length > 0 ? result.note_ref : null;
 
           if (result.ending !== null) {
             if (result.types.includes(1) || result.types.includes(2)) {
@@ -54,7 +56,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
                 verb: validVerb,
                 types: mappedTypes,
                 abundance: abundance,
-                note: note,
+                note_plain: note_plain,
+                note_ref: note_ref,
                 afixo: result.afixo
               });
             }
@@ -65,7 +68,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
               verb: validVerb,
               types: ["regular"],
               abundance: abundance,
-              note: note,
+              note_plain: note_plain,
+              note_ref: note_ref,
               afixo: result.afixo
             });
           }
@@ -93,7 +97,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 // Testando a função
 // const test = async () => {
-//   const resultado = await getPropsOfVerb("abraçar", true, "abraçar");
+//   const resultado = await getPropsOfVerb("acabar", true, "acabar");
 //   console.log(resultado); // Exibe o resultado ou null se não encontrar
 // };
 // test();

@@ -18,15 +18,17 @@ export const flowOfReact = () => {
     afixo: string | null | undefined;
     ending: string | null | undefined;
     hasTarget: string | boolean | null ;
-    note: string[] | null | undefined;
+    note_plain: string[] | null | undefined;
+    note_ref: object | null;
     types: string[] | null | undefined;
     loading: boolean;
     suggestions: string[] | null;
     showSuggestions: boolean;
     showButton: boolean;
-    isButtonDisabled: boolean
-    showHome: boolean
-    showSobre: boolean
+    isButtonDisabled: boolean;
+    showHome: boolean;
+    showSobre: boolean;
+    showReviewButton: boolean;
   }>({
     conjugations: null,
     inputValue: '',
@@ -38,7 +40,8 @@ export const flowOfReact = () => {
     afixo: null,
     ending: null,
     hasTarget: null,
-    note: null,
+    note_plain: null,
+    note_ref: null,
     types: null,
     loading: false,
     suggestions: null,
@@ -46,7 +49,8 @@ export const flowOfReact = () => {
     isButtonDisabled: false,
     showSuggestions: false,
     showHome: true,
-    showSobre: false
+    showSobre: false,
+    showReviewButton: false
   });
 
   const fetchConjugations = async () => {
@@ -92,7 +96,8 @@ export const flowOfReact = () => {
         showSuggestions: false,
         isButtonDisabled: false,
         showHome: false,
-        showSobre: false
+        showSobre: false,
+        showReviewButton: false
       }));
 
       if (!result) {
@@ -106,8 +111,10 @@ export const flowOfReact = () => {
           hasTarget: `A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
           types: null,
           abundance: null,
-          note: null,
+          note_plain: null,
+          note_ref: null,
           afixo: null,
+          showReviewButton: false
         }));
 
       } else {
@@ -119,8 +126,10 @@ export const flowOfReact = () => {
           hasTarget: propsOfWord[0].hasTarget,
           types: propsOfWord[0].types,
           abundance: propsOfWord[0].abundance,
-          note: propsOfWord[0].note,
+          note_plain: propsOfWord[0].note_plain,
+          note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
+          showReviewButton: true
         }));
         
         await conjVerbByAPI(ni(findedWord));
@@ -143,7 +152,8 @@ export const flowOfReact = () => {
     state.abundance,
     state.afixo,
     state.ending,
-    state.note,
+    state.note_plain,
+    state.note_ref,
     state.types,
     state.isValidVerb,
     state.suggestions,
@@ -151,7 +161,8 @@ export const flowOfReact = () => {
     state.isButtonDisabled,
     state.showSuggestions,
     state.showHome,
-    state.showSobre
+    state.showSobre,
+    state.showReviewButton
   ];
   
   useEffect(() => {
@@ -166,7 +177,7 @@ export const flowOfReact = () => {
       afixo: state.afixo,
       ending: state.ending,
       hasTarget: state.hasTarget,
-      note: state.note,
+      note_plain: state.note_ref,
       types: state.types,
       loading: state.loading,
       suggestions: state.suggestions,
@@ -174,7 +185,9 @@ export const flowOfReact = () => {
       isButtonDisabled: state.isButtonDisabled,
       showSuggestions: state.showSuggestions,
       showHome: state.showHome,
-      showSobre: state.showSobre
+      showSobre: state.showSobre,
+      showReviewButton: state.showReviewButton
+      
     };
   
     // console.log(data);
