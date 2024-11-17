@@ -178,7 +178,7 @@ const Conjugations = () => {
               {state.isButtonDisabled && (
                 <Gracias />
               )}
-              {state.conjugations === null && state.showSuggestions && (
+              {/* {state.conjugations === null && state.showSuggestions && (
                 <div>
                   <p>Selecionamos alguns verbos que podem ser parecidos com a palavra solicitada...</p>
                   <ul>
@@ -194,7 +194,7 @@ const Conjugations = () => {
                     ))}
                   </ul>
                 </div>
-              )}
+              )} */}
             </div>
             <div>
               {state.conjugations !== null && (

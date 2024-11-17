@@ -1,56 +1,66 @@
+
 **conjugador-gules**
-é um conjugador de verbos da língua portuguesa. Escrito essencialmente em 
-_typescript_, uma extensão do _javascript_, e o seu código poder ser
+é um conjugador de verbos da língua portuguesa brasileira. Escrito essencialmente em 
+_typescript_, uma extensão do _javascript_, o seu código é aberto e pode ser
 conferido clicando [aqui](https://github.com/renribsilva/conjugador) ou em _source_
 no rodapé desta página.
 
-### por quê?
+### fodasse a ABL
 
-1. é divertido codificar
-2. é possível ampliar o próprio vocabulário no processo
-3. é inevitável conhecer melhor a língua portuguesa por meio do seu desenvolvimento
-4. é possível conjugar verbos sem ser assediado com anúncios não solicitados
+A quem pertence o registro oficial de vocábulos falados no Brasil? 
+A todos os brasileiros? Alguém poderia dizer que sim. Mas não pertence. 
+Ele é propriedade da Academia Brasileira de Letras, que por décadas 
+foi a instituição responsável por registrar todas as palavras da
+nossa língua no Vocabulário Ortográfico da língua
+Portuguesa (VOLP). Esse processo contou inclusive com muitos recursos públicos.
+Mas isso não a impediu de restringir o acesso à base digital de dados do VOLP, acessível
+somente pelo buscador oficial presente no site desta
+instituição. Assim, ela pretende ser o guardião dos vocábulos portugueses, porém
+só ela pode ter acesso irrestrito. Só ela pode saber o que tem lá, 
+quantos são assim ou quantos são assado. Então, fodasse a ABL.
 
-### base de dados
+### viva a rede digital colaborativa
 
-neste projeto, a base de vocábulos é a lista de palavras do corretor 
-ortográfico do [libreoffice](https://pt-br.libreoffice.org/), que pode ser acessada
-livremente [aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic)
-— no repositória da aplicação, ela foi salva em `palavras.txt` na pasta `/public`.
-Essa base de vocábulos conta com mais de 312 mil entradas, dentre as quais
-cerca de 18 mil são palavras terminadas em 'ar', 'er', 'ir' e 'or'. 
-Destas, até o momento, 316 são consideradas verbos irregulares e receberão 
-regras de conjugação próprias, o que deverá levar algum tempo.
+Felizmente existe uma rede colaborativa fantástica no Brasil que 
+constrói todos os dias a nossa inteligência coletiva de forma espontânea
+e consciente com a democratização da informação. Nesse contexto, é preciso louvar
+o projeto VERO do libreOffice, criado em janeiro de 2006 
+com objetivo de identificar e corrigir erros de ortografia. Esse projeto fez nascer
+uma base de vocábulos aberta e acessível, a qual pode ser acessada
+livremente [aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic). 
+Com isso, é possível ter acesso digital livre a mais de 312 mil entradas, 
+as quais podem ser bastante útil, por exemplo, para a construção de um conjugador de
+verbos também aberto e livre.
 
 ### pré-processamento de dados
 
-Nem todas as palavras terminadas em 'ar', 'er', 'ir' e 'or' são verbos. E nem todos os
-verbos existentes estão presentes na lista de palavras do corretor ortográfico do
-libreOffice. Por tais razões, um pré-processamento dessa base de vocábulos é necessária, 
-sempre que uma palvra não verbo terminada em 'ar', 'er', 'ir' e 'or' for identificada, 
-ou um verbo ausente da lista original precisar ser acrescido. Assim, dado o devido 
-tratamento, é possível obter uma lista de verbos bastante expressiva, com cerca de
-18 mil entradas.
+A lista de vocábulos do corretor ortográfico do libreOffice contém cerca de 320 mil
+entradas. Destas, cerca de 19 mil são palavras terminadas em 'ar', 'er', 'ir' e 'or'; 
+e destas, até o momento, 316 são tidas aqui como verbos irregulares. Mas nem todas as
+19 mil palavras são verbos. Para se ter uma ideia, o
+Dicionário Houaiss de Conjugação de Verbos, de 2012, registra pouca mais de 15 mil vebos,
+de modo que há cerca de 4 mil palavras terminadas em 'ar', 'er', 'ir' e 'or' na nossa
+base de dados que não são verbos. Por essa razão, um pré-processamento dessa lista de
+vocábulos se tornou necessário e uma constante revisão será imposta diante deste
+cenário no qual tentamos existir por nós mesmos, sem precisar bater continência
+para nenhum fardão da ABL.
 
-* Atenção: a lista de palavras do corretor ortográfico do libreOffice não é uma 
-fonte oficial de vocábulos da língua portugesa
+### combinação das partes
 
-### montagem da conjugação
-
-a lista de cerca de 18 mil verbos não é uma base de verbos conjugados. Mas então
-como é que a conjugação é feita? Montando as partes! O verbo é composto de partes, as
-quais, por razões históricas e linguísticas que não conheço, seguem um padrão bastante
-reproduzível. Então como é feita essa poha? Pega-se as partes, isto é, o radical, a
-desinência e o sufixo, e faz-se uma combinação com elas. O radical você
-com certeza já percebeu de onde vem... Sim, da lista de palavras terminadas
-em 'ar', 'er', 'ir' e 'or', com cerca de 18 mil entradas. Quanto à desinência E
-ao sufixo, eles foram escritos em dois arquivos: um para verbos regulares e um
-para verbos irregulares. A partir destes elementos, tem-se todas as conjugação 
-possíveis para um verbo!
+Entrando no mérito do código, quero dizer um pouco sobre como este conjugdor usa a lista 
+do verificador ortográfico do libreOffice. Assim, pode-se fazer a pergunta: 
+como é que a poha da conjugação é feita? Bem, basicamente, por meio de uma combinação
+entre as partes do verbos. Isso mesmo. Monta-se as partes a cada requisição feita. 
+Senão, vejamos. O verbo é composto de partes, certo? O radical, a vogal temática
+e o sufixo (modo-temporal e/ou número-pessoal). 
+A primeira parte, o radical, tu já deve ter sacada de onde vem. Isso mesmo. Da lista
+do libreOffice. No que diz respeito as outras partes, foi necessário criar
+'regras de conjugação', uma para os verbos regulares e outra pra os verbos
+irregulares. Com isso, fica fácil imaginar o resto: combinação das partes.
 
 ### exibição da conjugação
 
-tudo é feito e desfeito com o apertar do 'enter' na caixa de texto. Como assim?
+Tudo é feito e desfeito com o apertar do 'enter' na caixa de texto. Como assim?
 No apertar do 'enter', uma palavra igual a solicitada é buscada na lista de palvras
 previamente processada e um radical é obtido dela.
 Em seguida, esse radical é combinado com suas respectivas regras de conjugação, formando 
@@ -62,7 +72,8 @@ são apagadas e um novo processo é iniciado. Nenhum dado é coletado ou armazen
 
 ### coleta de dados solicitada
 
-nenhum dado é coletado nessa giribosca? pera lá! Sim, mas só se você quiser. Os dados coletados nesta aplicação só são armazenados
+Nenhum dado é coletado nessa giribosca? pera lá! Sim, mas só se você quiser. 
+Os dados coletados nesta aplicação só são armazenados
 com a tua ação. Como assim? Na página há vários alguns botões que, quando clicados, 
 podem registrar palavras em listas. São basicamente duas listas: uma para palavras que 
 não estão na nossa base de dados e que precisam ser incluídas; e uma para palavras que estão
@@ -71,4 +82,18 @@ se tu apertar o botão, se não nada feito.
 
 ### referência bibliográficas
 
-https://doi.org/10.11606/T.8.2007.tde-04102007-143455
+Um trabalho acadêmico extremamente importante que possibilitou a confecção 
+deste conjugador é [Morfologia do verbo português em obras de referência](https://doi.org/10.11606/T.8.2007.tde-04102007-143455),
+da doutora Maria Elizabeth Leuba Salum. Muitas das glosas que este conjugador
+apresenta juntamente com a conjugação foram extraídas 
+dessa tese, cuja revisão de obras referenciais, como o Dicionário Houiass, não
+só tornam públicas as várias terminações de verbos tratadas por Houiass, como também
+traz novas terminações que não foram estabelecidas por ele.
+
+### benefícios deste conjugador para o seu criador
+
+1. diversão para os momentos de tédio: é divertido codificar;
+2. possibilidade de conhecer novas palavras e ampliar o vocabulário;
+3. conhecer melhor a língua portuguesa;
+4. conjugar verbos sem ser assediado com anúncios não solicitados;
+5. participar de alguma forma do movimento que defende o software livre e aberto.
