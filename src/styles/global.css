@@ -4,7 +4,7 @@
   --color-mod-light: rgba(139, 139, 139, 0.24);
   --color-tense-light: rgba(179, 179, 179, 0.226);
   
-  --color-fill-dark: rgb(44, 44, 44); /* fundo escuro */
+  --color-fill-dark: rgb(65, 65, 65); /* fundo escuro */
   --color-text-base-dark: rgb(240, 240, 240); /* texto claro */
   --color-mod-dark: rgba(139, 139, 139, 0.089); /* modulação escura */
   --color-tense-dark: rgba(139, 139, 139, 0.062); /* cor de tenso escura */
@@ -13,8 +13,8 @@
 [data-theme="dark"] {
   --background: var(--color-fill-dark);
   --foreground: var(--color-text-base-dark);
-  --largeshadow: rgba(0, 0, 0, 0.85) 0px 2px 10px;
-  --smallshadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;
+  --largeshadow: rgba(0, 0, 0, 0.9) 0px 2px 10px;
+  --smallshadow: rgba(0, 0, 0, 0.9) 0px 1px 5px;
   --modbox:var(--color-mod-dark);
   --tensebox:var(--color-tense-dark)
 }
