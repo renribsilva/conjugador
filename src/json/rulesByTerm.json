@@ -1655,7 +1655,7 @@
       }
     },
     "adir": {
-      "note": { "plain": ["Todos os verbos terminados em 'adir' são regulares. Porém, 'adir' só é conjugado nas suas formas arrizotônicas, isto é, naquelas em que a vogal tônica se situa fora do radical.¹"],
+      "note": { "plain": ["Todos os verbos terminados em 'adir' são regulares. Porém, o verbo 'adir' só é conjugado nas suas formas arrizotônicas, isto é, naquelas em que a vogal tônica se situa fora do radical.¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -1692,6 +1692,65 @@
             "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
             "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "adrar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'adar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "aer": {
+    "...": {
+      "note": { "plain": ["É sabido que existe apenas um único verbo terminado em 'aer'. Isso mesmo. Ademais, 'Raer' é considerado um verbo fóssil e o seu uso foi reduzido ao uso no infinitivo, além de ter sofrido remissão para a forma 'rer', um verbo monossilábico¹. Apesar disso, aqui ele é conjugado como verbo regular, dado que não foram encontradas informações no sentido contrário. Por fim, de acordo com com o Dicionário Houaiss, ele tem duas acepções: raspar (o sal) na peça da salina e juntá-lo com o rodo; limpar (forno), depois de aquecido, para o cozimento."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "afar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'afar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "agar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'agar' são regulares, mas algumas conjugações têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "...gu":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }

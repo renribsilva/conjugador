@@ -150,5 +150,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   }
 }
 
-const res3 = findNoRegRule("persuadir", "p1", "pt1_ind", "RAD");
-console.log(res3); 
+// const res3 = findNoRegRule("persuadir", "p1", "pt1_ind", "RAD");
+// console.log(res3); 

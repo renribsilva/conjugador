@@ -12,7 +12,7 @@ interface VerbProps {
   afixo: string | null | undefined;
 }
 
-function mapTypesToStrings(types) {
+function mapTypesToStrings(types:any) {
   const typeDescriptions = {
     1: "regular",
     2: "irregular",
@@ -98,8 +98,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 
 // Testando a função
-const test = async () => {
-  const resultado = await getPropsOfVerb("persuadir", true, "persuadir");
-  console.log(resultado); 
-};
-test();
+// const test = async () => {
+//   const resultado = await getPropsOfVerb("persuadir", true, "persuadir");
+//   console.log(resultado); 
+// };
+// test();
