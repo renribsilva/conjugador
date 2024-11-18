@@ -3,7 +3,6 @@ import path from 'path';
 import { nw } from '../src/lib/normalizeVerb';
 
 function createAfixosJson() {
-
   const caminhoTxt = path.join(process.cwd(), 'public', 'afixos.txt');
   const caminhoJson = path.join(process.cwd(), 'src', 'json', 'afixos.json');
 
@@ -11,8 +10,12 @@ function createAfixosJson() {
     // Lê o arquivo de texto
     const dados = fs.readFileSync(caminhoTxt, 'utf-8');
 
-    // Divide o conteúdo em linhas e remove linhas vazias
-    const linhas = dados.split('\n').map(linha => nw(linha)).filter(Boolean);
+    // Divide o conteúdo em linhas, normaliza, remove linhas vazias e elimina duplicados
+    const linhas = Array.from(new Set(
+      dados.split('\n')
+           .map(linha => nw(linha))   // Normaliza as linhas
+           .filter(Boolean)            // Remove linhas vazias
+    ));
 
     // Converte as linhas em um array JSON
     const jsonData = JSON.stringify(linhas, null, 2);
@@ -26,4 +29,4 @@ function createAfixosJson() {
   }
 }
 
-createAfixosJson()
+createAfixosJson();
