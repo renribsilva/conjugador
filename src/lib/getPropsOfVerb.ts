@@ -42,6 +42,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
       for (let d of D) {
         const result = findNoRegRule(verb, p, m, d);
 
+        // console.log(result)
+
         if (result) {
           const mappedTypes = result.types && result.types.length > 0 ? mapTypesToStrings(result.types) : null;
           const abundance = result.abundance && Object.keys(result.abundance).length > 0 ? result.abundance : null;
@@ -96,8 +98,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 
 // Testando a função
-// const test = async () => {
-//   const resultado = await getPropsOfVerb("acabar", true, "acabar");
-//   console.log(resultado); // Exibe o resultado ou null se não encontrar
-// };
-// test();
+const test = async () => {
+  const resultado = await getPropsOfVerb("persuadir", true, "persuadir");
+  console.log(resultado); 
+};
+test();

@@ -7,10 +7,10 @@ import { Conjugation } from '../types';
 const pronouns = {
   eu: "eu",
   tu: "tu",
-  ele: "ele",
+  ele: "ela",
   nós: "nós",
   vós: "vós",
-  eles: "eles"
+  eles: "elas"
 }
 
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
@@ -26,29 +26,29 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
         {isSpecialOrder ? (
           <>
             <div>{nw(X.p1)}</div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{pronouns.tu}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{pronouns.ele}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{pronouns.nós}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{pronouns.vós}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{pronouns.eles}</span></div>
+            <div><span className={styles.adv}>{X.p2 === '---' ? '' : adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{X.p2 === '---' ? '' : pronouns.tu}</span></div>
+            <div><span className={styles.adv}>{X.p3 === '---' ? '' : adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{X.p3 === '---' ? '' : pronouns.ele}</span></div>
+            <div><span className={styles.adv}>{X.p4 === '---' ? '' : adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{X.p4 === '---' ? '' : pronouns.nós}</span></div>
+            <div><span className={styles.adv}>{X.p5 === '---' ? '' : adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{X.p5 === '---' ? '' : pronouns.vós}</span></div>
+            <div><span className={styles.adv}>{X.p6 === '---' ? '' : adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{X.p6 === '---' ? '' : pronouns.eles}</span></div>
           </>
         ) : isInfinitive ? (
           <>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p1)} <span className={styles.pronouns}>{pronouns.eu}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{pronouns.tu}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{pronouns.ele}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{pronouns.nós}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{pronouns.vós}</span></div>
-            <div><span className={styles.adv}>{adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{pronouns.eles}</span></div>
+            <div><span className={styles.adv}>{X.p1 === '---' ? '' : adv} </span>{nw(X.p1)} <span className={styles.pronouns}>{X.p1 === '---' ? '' : pronouns.eu}</span></div>
+            <div><span className={styles.adv}>{X.p2 === '---' ? '' : adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{X.p2 === '---' ? '' : pronouns.tu}</span></div>
+            <div><span className={styles.adv}>{X.p3 === '---' ? '' : adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{X.p3 === '---' ? '' : pronouns.ele}</span></div>
+            <div><span className={styles.adv}>{X.p4 === '---' ? '' : adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{X.p4 === '---' ? '' : pronouns.nós}</span></div>
+            <div><span className={styles.adv}>{X.p5 === '---' ? '' : adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{X.p5 === '---' ? '' : pronouns.vós}</span></div>
+            <div><span className={styles.adv}>{X.p6 === '---' ? '' : adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{X.p6 === '---' ? '' : pronouns.eles}</span></div>
           </>
         ) : (
           <>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.eu}</span> {nw(X.p1)}</div>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.tu}</span> {nw(X.p2)}</div>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.ele}</span> {nw(X.p3)}</div>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.nós}</span> {nw(X.p4)}</div>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.vós}</span> {nw(X.p5)}</div>
-            <div><span className={styles.adv}>{adv} </span><span className={styles.pronouns}>{pronouns.eles}</span> {nw(X.p6)}</div>
+            <div><span className={styles.adv}>{X.p1 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p1 === '---' ? '' : pronouns.eu}</span> {nw(X.p1)}</div>
+            <div><span className={styles.adv}>{X.p2 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p2 === '---' ? '' : pronouns.tu}</span> {nw(X.p2)}</div>
+            <div><span className={styles.adv}>{X.p3 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p3 === '---' ? '' : pronouns.ele}</span> {nw(X.p3)}</div>
+            <div><span className={styles.adv}>{X.p4 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p4 === '---' ? '' : pronouns.nós}</span> {nw(X.p4)}</div>
+            <div><span className={styles.adv}>{X.p5 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p5 === '---' ? '' : pronouns.vós}</span> {nw(X.p5)}</div>
+            <div><span className={styles.adv}>{X.p6 === '---' ? '' : adv} </span><span className={styles.pronouns}>{X.p6 === '---' ? '' : pronouns.eles}</span> {nw(X.p6)}</div>
           </>
         )}
       </div>

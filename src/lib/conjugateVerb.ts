@@ -24,22 +24,30 @@ export const conjugateVerb = (verb: string) => {
     const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
     const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
     const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
+
+    const forRcontent = findNoRegRule(verb, P, M, "RAD").rule;
+    const forVTcontent = findNoRegRule(verb, P, M, "VT").rule;
+    const forMTcontent = findNoRegRule(verb, P, M, "MT").rule;
+    const forNPcontent = findNoRegRule(verb, P, M, "NP").rule;
+
     const verbRules = reg[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;
 
-    const verbData = (forRrule || forVTrule || forMTrule || forNPrule)
-      ? nw(`
-          ${F(P, M, "RAD") === NOT_FOUND ? r : F(P, M, "RAD")}
-          ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
-          ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
-          ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`)
-          .replace("...", r_m)
-      : nw(`
-          ${r}
-          ${verbRules.VT[num]}
-          ${verbRules.MT[num]}
-          ${verbRules.NP[num]}`);
+    const verbData = (forRcontent === '' && forVTcontent === '' && forMTcontent === '' && forNPcontent === '')
+      ? '---'
+      : (forRrule || forVTrule || forMTrule || forNPrule)
+          ? nw(`
+              ${F(P, M, "RAD") === NOT_FOUND ? r : F(P, M, "RAD")}
+              ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
+              ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
+              ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`)
+              .replace("...", r_m)
+          : nw(`
+              ${r}
+              ${verbRules.VT[num]}
+              ${verbRules.MT[num]}
+              ${verbRules.NP[num]}`);
 
     return verbData;
   };

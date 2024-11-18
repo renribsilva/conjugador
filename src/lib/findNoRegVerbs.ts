@@ -67,17 +67,18 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   // console.log(ending)
 
   if (verbRules) {
+    
     if (verb.startsWith("...")) {
       return getDefaultResponse(); 
     }
 
-    if (verbRules["..."]) {
-      const verbRule = verbRules["..."];
+    if (verbRules[verb]) {
+      const verbRule = verbRules[verb];
       if (verbRule?.rules) {
         const res = innerSearchOfRules(verbRule.rules, P, M, D);
         return {
           ...res,
-          ending: "...",
+          ending,
           verb,
           types: verbRule.type,
           abundance: verbRule.abundance,
@@ -112,13 +113,13 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
       }
     }
 
-    if (verbRules[verb]) {
-      const verbRule = verbRules[verb];
+    if (verbRules["..."]) {
+      const verbRule = verbRules["..."];
       if (verbRule?.rules) {
         const res = innerSearchOfRules(verbRule.rules, P, M, D);
         return {
           ...res,
-          ending,
+          ending: "...",
           verb,
           types: verbRule.type,
           abundance: verbRule.abundance,
@@ -149,5 +150,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   }
 }
 
-// const res3 = findNoRegRule("escrever", "p1", "pt1_ind", "RAD");
-// console.log(res3); 
+const res3 = findNoRegRule("persuadir", "p1", "pt1_ind", "RAD");
+console.log(res3); 
