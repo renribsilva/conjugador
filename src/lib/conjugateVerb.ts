@@ -5,8 +5,8 @@ import { structureOfVerb } from './structureOfVerb';
 
 export const conjugateVerb = (verb: string) => {
 
-  const r = ni(verb).slice(0, -2); 
-  const r_m = ni(verb).normalize("NFC").slice(0, -3); 
+  let r = nw(ni(verb)).slice(0, -2);
+  let R = ''
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
 
@@ -25,30 +25,45 @@ export const conjugateVerb = (verb: string) => {
     const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
     const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
 
-    const forRcontent = findNoRegRule(verb, P, M, "RAD").rule;
-    const forVTcontent = findNoRegRule(verb, P, M, "VT").rule;
-    const forMTcontent = findNoRegRule(verb, P, M, "MT").rule;
-    const forNPcontent = findNoRegRule(verb, P, M, "NP").rule;
+    const Rcontent = findNoRegRule(verb, P, M, "RAD").rule;
+    const VTcontent = findNoRegRule(verb, P, M, "VT").rule;
+    const MTcontent = findNoRegRule(verb, P, M, "MT").rule;
+    const NPcontent = findNoRegRule(verb, P, M, "NP").rule;
+
+    if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
+
+      let sliceLength: number;
+      sliceLength = nw(Rcontent as string).match(/\d+/g)?.map(num => parseInt(num, 10))?.[0] || 0;
+      let ralt = nw(Rcontent as string).replace("...", '').replace(/\d+/g,'')
+      const originalR = r
+      R = nw(originalR.slice(0,-sliceLength) + ralt)
+
+    }
 
     const verbRules = reg[M]?.[str];
 
-    if (!verbRules) return NOT_FOUND;
+    if (!verbRules) return NOT_FOUND;    
 
-    const verbData = (forRcontent === '' && forVTcontent === '' && forMTcontent === '' && forNPcontent === '')
+    const verbData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
       ? '---'
       : (forRrule || forVTrule || forMTrule || forNPrule)
-          ? nw(`
-              ${F(P, M, "RAD") === NOT_FOUND ? r : F(P, M, "RAD")}
-              ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
-              ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
-              ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`)
-              .replace("...", r_m)
-          : nw(`
+        ? (() => {
+          let result = nw(`
+            ${F(P, M, "RAD") === NOT_FOUND ? r : F(P, M, "RAD")}
+            ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
+            ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
+            ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`);
+          if (Rcontent !== null) {
+            result = result.replace(Rcontent, R);
+          }
+          return result;
+        })()
+        : nw(`
               ${r}
               ${verbRules.VT[num]}
               ${verbRules.MT[num]}
               ${verbRules.NP[num]}`);
-
+    
     return verbData;
   };
 
@@ -100,4 +115,4 @@ export const conjugateVerb = (verb: string) => {
   return conjugations;
 };
 
-// conjugateVerb("abraçar");
+// conjugateVerb("desabrir");

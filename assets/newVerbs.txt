@@ -1,3 +1,5 @@
 reiniciar
 desabrir
 reabrir
+reagir
+realçar
