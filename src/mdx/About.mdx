@@ -71,34 +71,37 @@ irregulares. Com isso, fica fácil imaginar o resto: combinação das partes.
 ### exibição da conjugação na tua tela
 
 Tudo é feito e desfeito com o apertar do 'enter' na caixa de texto. Como assim?
-No apertar do 'enter', uma palavra igual a solicitada é buscada na lista de palvras
-previamente processada e um radical é obtido dela.
+No apertar do 'enter', a palavra digitada é pesquisada na lista de palvras
+previamente processada e um radical é obtido dela caso ela esteja lá.
 Em seguida, esse radical é combinado com suas respectivas regras de conjugação, formando 
-palavras inteiras que guardadas temporariamente em uma
-nuvem, o postgresql. Depois disso, as palvras são dispostas numa tabela, a partir
-da qual são exibidas na tua tela.
-Quando outro 'enter' é pressionado, todas as informações da conjugação anterior
-são apagadas e um novo processo é iniciado. Nenhum dado é coletado ou armazenado nessa ação. 
+formas verbais inteiras para cada modo, tempo e flexão verbal. Após isso, elas são 
+armazenadas temporariamente em uma nuvem, o postgresql. De lá, elas são então 
+dispostas numa tabela para então serem exibidas na tua tela. Tudo isso é feito
+de forma muito rápida e nada fica armazenado na nuvem, pois uma requisição posterior
+de conjugação apaga todas as informações da conjugação anterior e um novo processo é iniciado. 
+Logo, nenhum dado é coletado ou armazenado pelas conjugações. 
 
 ### coleta de dados solicitada
 
-Nenhum dado é coletado nessa giribosca? pera lá! Sim, mas só se você quiser. 
-Os dados coletados nesta aplicação só são armazenados
-com a tua ação. Como assim? Na página há vários alguns botões que, quando clicados, 
-podem registrar palavras em listas. São basicamente duas listas: uma para palavras que 
-não estão na nossa base de dados e que precisam ser incluídas; e uma para palavras que estão
-conjugadas de forma errada (erra é humano, né, poha). Mas essa coleta de informação só é feita
-se tu apertar o botão, se não nada feito.
+Então quer dizer que nenhum dado é coletado nessa giribosca? 
+Pera lá! Sim, mas só se você quiser. 
+Os dados usados nesta aplicação só são armazenados
+com se você quiser ajudar ela a ficar melhora a cada dia.
+Como assim? Os únicos dados que interessa a esse conjugador é os que 
+podem corrigir erros dele próprio. Como isso é feito? Com botões! No conjugador há
+alguns botões que você pode clicar se encontrar algum erro. Essa ação captura
+a palavra digitada no conjugador e salva ela para posterior revisão ou 
+inserção na lista de verbos. Só isso! Essa coleta de informação só é feita
+se tu apertar o botão, se não nada feito. Para colaborações mais elaboradas,
+contate-me no [Mastodon](https://ursal.zone/@renribsilva)
 
 ### referência bibliográficas
 
-Um trabalho acadêmico extremamente importante que possibilitou a confecção 
-deste conjugador é [Morfologia do verbo português em obras de referência](https://doi.org/10.11606/T.8.2007.tde-04102007-143455),
-da doutora Maria Elizabeth Leuba Salum. Muitas das glosas que este conjugador
-apresenta juntamente com a conjugação foram extraídas 
-dessa tese, cuja revisão de obras referenciais, como o Dicionário Houiass, não
-só tornam públicas as várias terminações de verbos tratadas por Houiass, como também
-traz novas terminações que não foram estabelecidas por ele.
+Um outro aspecto importante desse conjugador é a referência bibliográfica usada
+para apoiar o seu desenvolvimento. Assim, destaco o trabalho acadêmico 
+extremamente importante que possibilitou a confecção 
+desta aplicação: [Morfologia do verbo português em obras de referência](https://doi.org/10.11606/T.8.2007.tde-04102007-143455),
+da doutora Maria Elizabeth Leuba Salum. Esse trabalho foi uma luz e um norte.
 
 ### benefícios deste conjugador para o seu criador
 
