@@ -42,13 +42,13 @@ const Conjugations = () => {
     });
   };
 
-  const handleVerbClick = (verb: string) => {
-    setState({ 
-      ...state,
-      inputValue: verb,
-      inputReq: verb
-    });
-  };
+  // const handleVerbClick = (verb: string) => {
+  //   setState({ 
+  //     ...state,
+  //     inputValue: verb,
+  //     inputReq: verb
+  //   });
+  // };
 
   const handleSobre = () => {
     setState({ 
@@ -75,7 +75,7 @@ const Conjugations = () => {
     });
   }
 
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  // const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -123,6 +123,7 @@ const Conjugations = () => {
               onChange={(e) => setState({ ...state, inputValue: e.target.value })}
               onKeyDown={(e) => { handleKeyDown(e); }}
               placeholder="amar, escrever, colorir, ..."
+              maxLength={50}
             />
           </div>
           <div className={styles.buttons_container}>
