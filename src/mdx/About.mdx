@@ -72,13 +72,14 @@ irregulares. Com isso, fica fácil imaginar o resto: combinação das partes.
 
 Tudo é feito e desfeito com o apertar do 'enter' na caixa de texto. Como assim?
 No apertar do 'enter', a palavra digitada é pesquisada na lista de palvras
-previamente processada e um radical é obtido dela caso ela esteja lá.
+previamente processada e um radical é obtido dela.
 Em seguida, esse radical é combinado com suas respectivas regras de conjugação, formando 
-formas verbais inteiras para cada modo, tempo e flexão verbal. Após isso, elas são 
+formas verbais inteiras para cada modo, tempo e flexão verbal. Após isso, as 
+conjugações são 
 armazenadas temporariamente em uma nuvem, o postgresql. De lá, elas são então 
-dispostas numa tabela para então serem exibidas na tua tela. Tudo isso é feito
+dispostas numa tabela para serem exibidas na tua tela. Tudo isso é feito
 de forma muito rápida e nada fica armazenado na nuvem, pois uma requisição posterior
-de conjugação apaga todas as informações da conjugação anterior e um novo processo é iniciado. 
+apaga todas as informações da conjugação anterior, e um novo processo é iniciado. 
 Logo, nenhum dado é coletado ou armazenado pelas conjugações. 
 
 ### coleta de dados solicitada
