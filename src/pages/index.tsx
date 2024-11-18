@@ -162,7 +162,9 @@ const Conjugations = () => {
               {!state.showHome && state.showSobre &&
                 <>
                   <About />
-                  <Button onClick={handleHome}>voltar pra Home</Button>
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar pra o início</Button>
+                  </div>
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
@@ -171,7 +173,7 @@ const Conjugations = () => {
                   <Button 
                     onClick={() => handleSolicitar(state.inputReq)}
                   >
-                    Solicitar
+                    solicitar
                   </Button>
                 </>
               )}
