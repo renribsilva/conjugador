@@ -1,10 +1,9 @@
 import allVerbs from '../json/allVerbs.json';
-import afixos from '../json/afixos.json';  // Carrega afixos.json
-import irregularidades from '../json/rulesByTerm.json';  // Carrega rulesForNoReg.json
+import afixos from '../json/afixos.json';  
+import irregularidades from '../json/rulesByTerm.json';  
 import innerSearchOfRules from './innerSearchOfRules';
 import { ni, nw } from './normalizeVerb';
 
-// Função principal para encontrar a regra de um verbo
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const sortedAfixos = afixos.sort((a, b) => b.length - a.length);
@@ -36,7 +35,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   
     if (rules) {
       const normalizedRules = Object.keys(rules).reduce((acc, key) => {
-        acc[ni(key)] = rules[key];  // Normaliza a chave e mantém o valor
+        acc[ni(key)] = rules[key]; 
         return acc;
       }, {});
       return { rules: normalizedRules, ending };

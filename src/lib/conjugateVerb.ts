@@ -86,7 +86,6 @@ export const conjugateVerb = (verb: string) => {
     };
   };
 
-  // Conjugações
   const conj = {
     gd: N("gd"),
     pa: N("pa"),  
@@ -104,15 +103,14 @@ export const conjugateVerb = (verb: string) => {
     im2: W("im2", "---"),         
   };
 
-  // console.log(conj)
-
-  // Retorna as conjugações
   const conjugations: Record<string, any> = {};
   for (const [tense, reg] of Object.entries(conj)) {
     conjugations[tense] = reg;
   }
+
   // console.log(conjugations)
   return conjugations;
+  
 };
 
 // conjugateVerb("desabrir");

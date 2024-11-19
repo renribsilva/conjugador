@@ -1,6 +1,5 @@
 import { findNoRegRule } from "./findNoRegVerbs";
 
-// Definição da tipagem para os objetos retornados
 interface VerbProps {
   hasTarget: boolean | null;
   ending: string | null;

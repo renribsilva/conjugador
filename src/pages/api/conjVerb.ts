@@ -8,7 +8,7 @@ export default async function handler(
   
   if (request.method === 'POST') {
     try {
-      const { verb, conjugations } = request.body; // Obtém verbo e conjugações do corpo da requisição
+      const { verb, conjugations } = request.body; 
 
       if (!verb || !conjugations) throw new Error('Verb and conjugations are required');
 

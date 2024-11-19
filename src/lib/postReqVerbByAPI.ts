@@ -1,22 +1,21 @@
-// Função para chamar a API e passar a string
 export default async function postReqVerbByAPI(data) {
   try {
-    // Chama a API usando fetch e passa a string como JSON
+   
     const response = await fetch('api/postReqVerb', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', // Define o tipo do conteúdo como JSON
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ data }), // Passa a string 'data' no corpo da requisição
+      body: JSON.stringify({ data }),
     });
 
-    // Checa se a resposta foi bem-sucedida
+    
     if (response.ok) {
       const result = await response.json();
-      console.log(result.message); // Exibe a mensagem de sucesso
+      console.log(result.message);
     } else {
       const error = await response.json();
-      console.error('Erro:', error.error); // Exibe o erro, se houver
+      console.error('Erro:', error.error); 
     }
   } catch (error) {
     console.error('Erro na requisição:', error);
