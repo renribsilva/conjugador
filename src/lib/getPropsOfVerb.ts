@@ -5,13 +5,13 @@ interface VerbProps {
   ending: string | null;
   verb: string | null;
   types: string[] | null;
-  abundance: {} | null;
+  abundance: object | null;
   note_plain: [] | null;
-  note_ref: {} | null;
+  note_ref: object | null;
   afixo: string | null | undefined;
 }
 
-function mapTypesToStrings(types:any) {
+function mapTypesToStrings(types) {
   const typeDescriptions = {
     1: "regular",
     2: "irregular",
@@ -36,9 +36,9 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
   const results: VerbProps[] = [];
 
-  for (let p of P) {
-    for (let m of M) {
-      for (let d of D) {
+  for (const p of P) {
+    for (const m of M) {
+      for (const d of D) {
         const result = findNoRegRule(verb, p, m, d);
 
         // console.log(result)

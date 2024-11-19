@@ -1,27 +1,27 @@
-import { useRef, useEffect } from 'react';
-import Table from '../components/table';
-import { flowOfReact } from '../lib/flowOfReact';
-import postReqVerbByAPI from '../lib/postReqVerbByAPI';
+import { useRef, useEffect } from "react";
+import Table from "../components/table";
+import { flowOfReact } from "../lib/flowOfReact";
+import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import styles from "../styles/index.module.css";
-import Footer from '../components/footer';
-import Socials from '../components/socials';
-import Home from "../mdx/Home.mdx"
-import Gracias from "../mdx/Gracias.mdx"
-import About from "../mdx/About.mdx"
-import Warning from "../mdx/Warning.mdx"
-import SobreErros from "../mdx/SobreErros.mdx"
-import Theme from '../components/theme';
-import Button from '../components/button';
-import postReqConjByAPI from '../lib/postReqConjByAPI';
+import Footer from "../components/footer";
+import Socials from "../components/socials";
+import Home from "../mdx/Home.mdx";
+import Gracias from "../mdx/Gracias.mdx";
+import About from "../mdx/About.mdx";
+import Warning from "../mdx/Warning.mdx";
+import SobreErros from "../mdx/SobreErros.mdx";
+import Theme from "../components/theme";
+import Button from "../components/button";
+import postReqConjByAPI from "../lib/postReqConjByAPI";
 
 const Conjugations = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const formatTypes = (types: string[] | null | undefined) => {
-    if (!types || types.length === 0) return '';
-    if (types.length === 1) return types[0];
-    return types.slice(0, -1).join(', ') + ' e ' + types[types.length - 1];
+    if (!types || types.length === 0) {return "";}
+    if (types.length === 1) {return types[0];}
+    return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
   const handleSolicitar = async (inputReq) => {
@@ -53,8 +53,8 @@ const Conjugations = () => {
   const handleSobre = () => {
     setState({ 
       ...state,
-      inputValue: '',
-      inputReq: '',
+      inputValue: "",
+      inputReq: "",
       showHome: false,
       showSobre: true,
       conjugations: null,
@@ -62,29 +62,29 @@ const Conjugations = () => {
       showButton: false,
       isButtonDisabled: false
     });
-  }
+  };
 
   const handleHome = () => {
     setState({ 
       ...state,
-      inputValue: '',
-      inputReq: '',
+      inputValue: "",
+      inputReq: "",
       showHome: true,
       showSobre: false,
       conjugations: null
     });
-  }
+  };
 
   // const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (inputRef.current) {
-      const enterEvent = new KeyboardEvent('keydown', {
+      const enterEvent = new KeyboardEvent("keydown", {
         bubbles: true,
         cancelable: true,
-        key: 'Enter',
-        code: 'Enter',
+        key: "Enter",
+        code: "Enter",
       });
       inputRef.current.dispatchEvent(enterEvent); 
     }
