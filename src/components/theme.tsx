@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import styles from "../styles/components.module.css";
 
 function Theme() {
   
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   const toggleTheme = () => {
     setTheme(resolvedTheme === "light" ? "dark" : "light");
