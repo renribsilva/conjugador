@@ -1,4 +1,3 @@
-// processVerbs.ts
 import fs from 'fs';
 import path from 'path';
 import pullLibreOfficeWords from './pullLibreOfficeWords';
