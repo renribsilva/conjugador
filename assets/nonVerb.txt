@@ -12,3 +12,5 @@ amidar
 jamir
 amber
 embraer
+valdir
+aldir
