@@ -1,17 +1,18 @@
 import { findNoRegRule } from "./findNoRegVerbs";
 
+// Definição da tipagem para os objetos retornados
 interface VerbProps {
   hasTarget: boolean | null;
   ending: string | null;
   verb: string | null;
   types: string[] | null;
-  abundance: object | null;
+  abundance: {} | null;
   note_plain: [] | null;
-  note_ref: object | null;
+  note_ref: {} | null;
   afixo: string | null | undefined;
 }
 
-function mapTypesToStrings(types) {
+function mapTypesToStrings(types:any) {
   const typeDescriptions = {
     1: "regular",
     2: "irregular",
@@ -31,14 +32,14 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
  
   const P = ["p1", "p2", "p3", "p4", "p5", "p6"];
   const M = ["gd", "pa", "pr_ind", "pt1_ind", "pt2_ind", "pt3_ind", "ft1_ind", "ft2_ind", 
-             "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2", "alt"];
+             "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2", "ralt"];
   const D = ["RAD", "VT", "MT", "NP"];
 
   const results: VerbProps[] = [];
 
-  for (const p of P) {
-    for (const m of M) {
-      for (const d of D) {
+  for (let p of P) {
+    for (let m of M) {
+      for (let d of D) {
         const result = findNoRegRule(verb, p, m, d);
 
         // console.log(result)
