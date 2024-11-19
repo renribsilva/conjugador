@@ -47319,6 +47319,9 @@
   "requisitar": [
     "requisitar"
   ],
+  "rer": [
+    "rer"
+  ],
   "resbunar": [
     "resbunar"
   ],
@@ -55645,11 +55648,11 @@
   "zurzir": [
     "zurzir"
   ],
-  "reiniciar": [
-    "reiniciar"
-  ],
   "desabrir": [
     "desabrir"
+  ],
+  "reiniciar": [
+    "reiniciar"
   ],
   "reabrir": [
     "reabrir"
@@ -55659,6 +55662,9 @@
   ],
   "realçar": [
     "realçar"
+  ],
+  "ressorrir": [
+    "ressorrir"
   ],
   "aferir": [
     "aferir"

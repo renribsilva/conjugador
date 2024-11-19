@@ -42,13 +42,13 @@ const Conjugations = () => {
     });
   };
 
-  // const handleVerbClick = (verb: string) => {
-  //   setState({ 
-  //     ...state,
-  //     inputValue: verb,
-  //     inputReq: verb
-  //   });
-  // };
+  const handleVerbClick = (verb: string) => {
+    setState({ 
+      ...state,
+      inputValue: verb,
+      inputReq: verb
+    });
+  };
 
   const handleSobre = () => {
     setState({ 
@@ -75,7 +75,7 @@ const Conjugations = () => {
     });
   };
 
-  // const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -86,7 +86,8 @@ const Conjugations = () => {
         key: "Enter",
         code: "Enter",
       });
-      inputRef.current.dispatchEvent(enterEvent); 
+      inputRef.current.dispatchEvent(enterEvent);
+      inputRef.current.focus();
     }
   }, [state.inputReq]);
 
@@ -169,13 +170,38 @@ const Conjugations = () => {
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
-                  <h2>Que pena!</h2>
-                  <p>{state.hasTarget}</p>
-                  <Button 
-                    onClick={() => handleSolicitar(state.inputReq)}
-                  >
-                    solicitar
-                  </Button>
+                  <h2>Poxa vida!</h2>
+                  {!state.hasOriginalVerb && (
+                    <>
+                      <p>{`A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
+                      <Button 
+                        onClick={() => handleSolicitar(state.inputReq)}
+                      >
+                        solicitar
+                      </Button>
+                  </>
+                  )}
+                  {state.hasOriginalVerb && (
+                    <>
+                    <p>
+                      <span>{`Por alguma razão, verbos prefixados com 're' não estão incluídos na lista de palavras do verificador ortográfico do libreOffice, a nossa base de dados. Porém, encontramos o verbo `}</span>
+                      <span><strong>{`'${state.originalVerb}`}'</strong></span>
+                      <span>{`, sem o prefixo, cuja conjugação é exatamente igual à forma prefixada. Para conjugá-lo, basta clicar no botão abaixo.`}</span>
+                    </p>
+                    <Button 
+                      ref={buttonRef}
+                      onClick={() => { handleVerbClick((state.originalVerb as string)) }}
+                    >
+                      {state.originalVerb}
+                    </Button>
+                    <p>Para solicitar a inclusão da forma prefixada, clique em:</p>
+                    <Button 
+                      onClick={() => handleSolicitar(state.inputReq)}
+                    >
+                      solicitar
+                    </Button>
+                  </>
+                  )}
                 </>
               )}
               {state.isButtonDisabled && (

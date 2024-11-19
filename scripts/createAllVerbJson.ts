@@ -28,7 +28,7 @@ async function processVerbsFile(): Promise<void> {
     const cleanedWords = await readTxtLines(filePath);
     const updatedWords = await addNewVerbs(cleanedWords);
 
-    const exceptions = new Set(["dar", "ir", "ler", "pôr", "rir", "ser", "ter", "ver", "vir"]);
+    const exceptions = new Set(["dar", "ir", "ler", "pôr", "rer", "rir", "ser", "ter", "ver", "vir"]);
     const verbs = updatedWords.filter(word =>
       /(ar|er|ir|por|pôr)$/.test(word) &&
       !/'/.test(word) &&

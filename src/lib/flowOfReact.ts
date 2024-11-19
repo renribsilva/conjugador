@@ -5,6 +5,7 @@ import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
+import isValidPrefix from "./isValidPrefix";
 
 export const flowOfReact = () => {
   const [state, setState] = useState<{
@@ -29,6 +30,8 @@ export const flowOfReact = () => {
     showHome: boolean;
     showSobre: boolean;
     showReviewButton: boolean;
+    hasOriginalVerb: boolean
+    originalVerb: string | null
   }>({
     conjugations: null,
     inputValue: "",
@@ -50,7 +53,9 @@ export const flowOfReact = () => {
     showSuggestions: false,
     showHome: true,
     showSobre: false,
-    showReviewButton: false
+    showReviewButton: false,
+    hasOriginalVerb: false,
+    originalVerb: null
   });
 
   const fetchConjugations = async () => {
@@ -72,11 +77,26 @@ export const flowOfReact = () => {
 
       let result = false;
       let findedWord = "";
+      let isRePrefix = isValidPrefix(state.inputValue)
+      let hasOriginalVerb = false
+      let originalVerb = null
   
       if (normalizedInputValue !== "") {
+
         const apiResponse = await isValidVerbByAPI(normalizedInputValue);
         result = apiResponse.result;
         findedWord = apiResponse.findedWord;
+
+        if ( isRePrefix.isValid ) {
+
+          let or = state.inputValue.replace((isRePrefix.afixo as string), '');
+          const apiRes = await isValidVerbByAPI(ni(or))
+          hasOriginalVerb = apiRes.result
+          originalVerb = apiRes.findedWord
+          // console.log(hasOriginalVerb)
+
+        }
+
       }
 
       const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
@@ -97,7 +117,9 @@ export const flowOfReact = () => {
         isButtonDisabled: false,
         showHome: false,
         showSobre: false,
-        showReviewButton: false
+        showReviewButton: false,
+        hasOriginalVerb: hasOriginalVerb,
+        originalVerb: originalVerb
       }));
 
       if (!result) {
@@ -108,13 +130,15 @@ export const flowOfReact = () => {
           suggestions: suggestions,
           showSuggestions: true,
           ending: null,
-          hasTarget: `A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`,
+          hasTarget: null,
           types: null,
           abundance: null,
           note_plain: null,
           note_ref: null,
           afixo: null,
-          showReviewButton: false
+          showReviewButton: false,
+          hasOriginalVerb: hasOriginalVerb,
+          originalVerb: originalVerb
         }));
 
       } else {
@@ -162,7 +186,8 @@ export const flowOfReact = () => {
     state.showSuggestions,
     state.showHome,
     state.showSobre,
-    state.showReviewButton
+    state.showReviewButton,
+    state.hasOriginalVerb
   ];
   
   useEffect(() => {
@@ -186,11 +211,11 @@ export const flowOfReact = () => {
       showSuggestions: state.showSuggestions,
       showHome: state.showHome,
       showSobre: state.showSobre,
-      showReviewButton: state.showReviewButton
-      
+      showReviewButton: state.showReviewButton,
+      hasOriginalVerb: state.hasOriginalVerb
     };
   
-    // console.log(data);
+    console.log(data);
   }, dependencies);
 
   return {

@@ -1,13 +1,10 @@
-import allVerbs from '../json/allVerbs.json';
-import afixos from '../json/afixos.json';  
 import irregularidades from '../json/rulesByTerm.json';  
 import innerSearchOfRules from './innerSearchOfRules';
-import { ni, nw } from './normalizeVerb';
+import isValidPrefix from './isValidPrefix';
+import { ni } from './normalizeVerb';
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const sortedAfixos = afixos.sort((a, b) => b.length - a.length);
-  const normSortedAfixos = sortedAfixos.map(afixo => nw(afixo));
   const endings = Object.keys(irregularidades).sort((a, b) => b.length - a.length); 
 
   // console.log(endings)
@@ -44,22 +41,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     return { rules: null, ending };
   }
 
-  function isValidPrefix(verb: string, normSortedAfixos: string[]): boolean {    
-    for (const afixo of normSortedAfixos) {
-      if (verb.startsWith(afixo)) {
-        
-        const restOfVerb = verb.slice(afixo.length);
-        // console.log(restOfVerb)
-        
-        if (allVerbs.hasOwnProperty(restOfVerb)) {
-          return true;
-        }
-      }
-    }
-    
-    return false;
-  }
-
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
   // console.log(verbRules)
@@ -89,15 +70,16 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     }
 
     const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+    const prefixPros = isValidPrefix(verb);
 
     // console.log(endingsThatStartWith)
 
     for (const ending of endingsThatStartWith) {
-      if (isValidPrefix(verb, normSortedAfixos) && verb.endsWith(ending.substring(3))) {
+      if (prefixPros.isValid && verb.endsWith(ending.substring(3))) {
         const baseVerbRules = verbRules[ending];
         if (baseVerbRules?.rules) {
           const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-          const foundedAfixo = normSortedAfixos.find((afixo) => verb.startsWith(afixo));
+          const foundedAfixo = prefixPros.afixo
           return {
             ...res,
             ending,
