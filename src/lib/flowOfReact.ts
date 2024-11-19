@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { conjVerbByAPI } from './conjVerbByAPI';
-import { ni } from './normalizeVerb';
-import { isValidVerbByAPI } from './isValidVerbByAPI';
-import { getPropsOfVerb } from './getPropsOfVerb';
-import type { Conjugation } from '../types';
-import getSimilarVerbs from './getSimilarWords';
+import { useState, useEffect } from "react";
+import { conjVerbByAPI } from "./conjVerbByAPI";
+import { ni } from "./normalizeVerb";
+import { isValidVerbByAPI } from "./isValidVerbByAPI";
+import { getPropsOfVerb } from "./getPropsOfVerb";
+import type { Conjugation } from "../types";
+import getSimilarVerbs from "./getSimilarWords";
 
 export const flowOfReact = () => {
   const [state, setState] = useState<{
@@ -31,8 +31,8 @@ export const flowOfReact = () => {
     showReviewButton: boolean;
   }>({
     conjugations: null,
-    inputValue: '',
-    inputReq: '',
+    inputValue: "",
+    inputReq: "",
     showConjugations: false,
     foundVerb: null,
     isValidVerb: false,
@@ -54,8 +54,8 @@ export const flowOfReact = () => {
   });
 
   const fetchConjugations = async () => {
-    const response = await fetch('/api/queryVerb');
-    if (!response.ok) throw new Error('Erro ao buscar as conjugações');
+    const response = await fetch("/api/queryVerb");
+    if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
     const data: Conjugation = await response.json();
     setState(prev => ({
       ...prev,
@@ -66,21 +66,21 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    if (event.key === 'Enter' && state.inputValue !== '') {
+    if (event.key === "Enter" && state.inputValue !== "") {
 
-      const normalizedInputValue = ni(state.inputValue)
+      const normalizedInputValue = ni(state.inputValue);
 
       let result = false;
       let findedWord = "";
   
-      if (normalizedInputValue !== '') {
+      if (normalizedInputValue !== "") {
         const apiResponse = await isValidVerbByAPI(normalizedInputValue);
         result = apiResponse.result;
         findedWord = apiResponse.findedWord;
       }
 
       const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-      const suggestions = getSimilarVerbs(state.inputValue)
+      const suggestions = getSimilarVerbs(state.inputValue);
 
       setState(prev => ({
         ...prev,

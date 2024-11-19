@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from "../styles/components.module.css"
+import React from "react";
+import styles from "../styles/components.module.css";
 
 function Button({ children, ...props }) {
   return (

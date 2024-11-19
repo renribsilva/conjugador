@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import styles from "../styles/components.module.css";
+import React from "react";
 
 function Theme() {
   
