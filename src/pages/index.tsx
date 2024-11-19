@@ -45,6 +45,9 @@ const Conjugations = () => {
   const handleVerbClick = (verb: string) => {
     setState({ 
       ...state,
+      hasOriginalVerb: false,
+      showButton:false,
+      loading: true,
       inputValue: verb,
       inputReq: verb
     });
@@ -122,7 +125,7 @@ const Conjugations = () => {
               type="text"
               value={state.inputValue}
               onChange={(e) => setState({ ...state, inputValue: e.target.value })}
-              onKeyDown={(e) => { handleKeyDown(e); }}
+              onKeyDown={(e) => { handleKeyDown(e) } }
               placeholder="amar, escrever, colorir, ..."
               maxLength={50}
             />

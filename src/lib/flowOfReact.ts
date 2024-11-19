@@ -65,7 +65,6 @@ export const flowOfReact = () => {
     setState(prev => ({
       ...prev,
       conjugations: data,
-      loading: false,
     }));
   };
 
@@ -104,12 +103,12 @@ export const flowOfReact = () => {
       setState(prev => ({
         ...prev,
         conjugations: null,
+        loading: true,
         inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
         foundVerb: findedWord,
         isValidVerb: result,
-        loading: true,
         suggestions: null,
         showButton: false,
         showSuggestions: false,
@@ -152,7 +151,7 @@ export const flowOfReact = () => {
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
-          showReviewButton: true
+          showReviewButton: true,
         }));
         
         await conjVerbByAPI(ni(findedWord));
@@ -160,6 +159,7 @@ export const flowOfReact = () => {
 
         setState(prev => ({
           ...prev,
+          loading: false,
           showConjugations: true,
         }));
       }
