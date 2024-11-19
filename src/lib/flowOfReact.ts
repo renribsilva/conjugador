@@ -64,8 +64,8 @@ export const flowOfReact = () => {
     const data: Conjugation = await response.json();
     setState(prev => ({
       ...prev,
-      loading: false,
       conjugations: data,
+      loading: false,
     }));
   };
 
@@ -109,7 +109,7 @@ export const flowOfReact = () => {
         showConjugations: false,
         foundVerb: findedWord,
         isValidVerb: result,
-        loading: false,
+        loading: true,
         suggestions: null,
         showButton: false,
         showSuggestions: false,
@@ -137,14 +137,14 @@ export const flowOfReact = () => {
           afixo: null,
           showReviewButton: false,
           hasOriginalVerb: hasOriginalVerb,
-          originalVerb: originalVerb
+          originalVerb: originalVerb,
+          loading: false,
         }));
 
       } else {
 
         setState(prev => ({
           ...prev,
-          loading: true,
           ending: propsOfWord[0].ending,
           hasTarget: propsOfWord[0].hasTarget,
           types: propsOfWord[0].types,

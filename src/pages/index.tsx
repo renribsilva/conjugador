@@ -153,7 +153,7 @@ const Conjugations = () => {
         <div className={styles.panel}>
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && "conjugando..."}
+              {state.loading && "buscando..."}
             </div>
             <div>
               {state.showHome && !state.showSobre &&
