@@ -89,11 +89,10 @@ export const flowOfReact = () => {
 
         if ( isRePrefix.isValid ) {
 
-          let or = state.inputValue.replace((isRePrefix.afixo as string), '');
+          let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
           const apiRes = await isValidVerbByAPI(ni(or))
           hasOriginalVerb = apiRes.result
           originalVerb = apiRes.findedWord
-          // console.log(hasOriginalVerb)
 
         }
 
@@ -215,7 +214,7 @@ export const flowOfReact = () => {
       hasOriginalVerb: state.hasOriginalVerb
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies);
 
   return {

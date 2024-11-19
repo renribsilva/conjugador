@@ -173,34 +173,28 @@ const Conjugations = () => {
                   <h2>Poxa vida!</h2>
                   {!state.hasOriginalVerb && (
                     <>
-                      <p>{`A palavra '${state.inputValue}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
+                      <p>{`A palavra '${state.inputReq}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
                       <Button 
                         onClick={() => handleSolicitar(state.inputReq)}
                       >
                         solicitar
                       </Button>
-                  </>
+                    </>
                   )}
                   {state.hasOriginalVerb && (
                     <>
-                    <p>
-                      <span>{`Por alguma razão, verbos prefixados com 're' não estão incluídos na lista de palavras do verificador ortográfico do libreOffice, a nossa base de dados. Porém, encontramos o verbo `}</span>
-                      <span><strong>{`'${state.originalVerb}`}'</strong></span>
-                      <span>{`, sem o prefixo, cuja conjugação é exatamente igual à forma prefixada. Para conjugá-lo, basta clicar no botão abaixo.`}</span>
-                    </p>
-                    <Button 
-                      ref={buttonRef}
-                      onClick={() => { handleVerbClick((state.originalVerb as string)) }}
-                    >
-                      {state.originalVerb}
-                    </Button>
-                    <p>Para solicitar a inclusão da forma prefixada, clique em:</p>
-                    <Button 
-                      onClick={() => handleSolicitar(state.inputReq)}
-                    >
-                      solicitar
-                    </Button>
-                  </>
+                      <p>
+                        <span>{`Infelizmente, a lista de palavras do verificador ortográfico do libreOffice, nossa base de dados, não contém todas as formas verbais prefixadas. Porém, encontramos o verbo `}</span>
+                        <span><strong>{`'${state.originalVerb}`}'</strong></span>
+                        <span>{`, sem o prefixo, cuja conjugação é exatamente igual à forma prefixada. Para conjugá-lo, basta clicar no botão abaixo.`}</span>
+                      </p>
+                      <Button 
+                        ref={buttonRef}
+                        onClick={() => { handleVerbClick((state.originalVerb as string)) }}
+                      >
+                        {state.originalVerb}
+                      </Button>
+                    </>
                   )}
                 </>
               )}
