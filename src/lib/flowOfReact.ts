@@ -64,8 +64,8 @@ export const flowOfReact = () => {
     const data: Conjugation = await response.json();
     setState(prev => ({
       ...prev,
-      conjugations: data,
       loading: false,
+      conjugations: data,
     }));
   };
 
