@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Table from "../components/table";
 import { flowOfReact } from "../lib/flowOfReact";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
@@ -13,6 +13,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import { stat } from "fs";
 
 const Conjugations = () => {
 
@@ -73,7 +74,9 @@ const Conjugations = () => {
       inputReq: "",
       showHome: true,
       showSobre: false,
-      conjugations: null
+      conjugations: null,
+      showButton: false,
+      hasPunct: false
     });
   };
 
@@ -91,6 +94,8 @@ const Conjugations = () => {
       inputRef.current.dispatchEvent(enterEvent);
       inputRef.current.focus();
     }
+    randomOhNo();
+    randomAxi();
   }, [state.inputReq]);
 
   function NoteRefList({ noteRef }) {
@@ -112,6 +117,28 @@ const Conjugations = () => {
   }
 
   const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
+
+  const ohNoExpression = ["Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
+  const [ohNo, setOhNo] = useState<string>('');
+  const randomOhNo = () => {
+    const randomIndex = Math.floor(Math.random() * ohNoExpression.length);
+    setOhNo(ohNoExpression[randomIndex]);
+  };
+
+  const axiExpression = ["Tu é leso é!?", "Té doidé!?", "Axi credo!", "Oxi!"]
+  const [axi, setAxi] = useState<string>('');
+  const randomAxi = () => {
+    const randomIndex = Math.floor(Math.random() * axiExpression.length);
+    setAxi(axiExpression[randomIndex]);
+  };
+
+  const formatPuncts = (puncts: string[] | null) => {
+    if (!puncts || puncts.length === 0) return null;
+  
+    return puncts
+      .map(punct => `${punct}`)
+      .join(' ');
+  };
 
   return (
     <>
@@ -139,13 +166,17 @@ const Conjugations = () => {
               </button>
             </div>
             <div className={styles.button_inf}>
-              <button 
-                onClick={handleSobre}
-                className={styles.button_about}
-              >
-                Sobre
-              </button>
-              <Theme />
+              <div className={styles.buttonSobre}>
+                <button 
+                  onClick={handleSobre}
+                  className={styles.button_about}
+                >
+                  Sobre
+                </button>
+              </div>
+              <div className={styles.buttonTheme}>
+                <Theme />
+              </div>
             </div>
           </div>
         </div>
@@ -169,14 +200,43 @@ const Conjugations = () => {
                 <>
                   <About />
                   <div className={styles.gotohome}>
-                    <Button onClick={handleHome}>voltar pra o início</Button>
+                    <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
-                  <h2>Poxa vida!</h2>
-                  {!state.hasOriginalVerb && (
+                  {state.hasPunct && state.puncts && 
                     <>
+                      <h2>{axi}</h2>
+                      <div>
+                        <span>A palavra solicitada contém pontuações, tais quais </span>
+                        <span><strong>" {formatPuncts(state.puncts)} "</strong></span>
+                        <span>{`, que não podemos consultar.`}</span>
+                        {state.isValidVerb && (
+                          <>
+                            <span>. Mas encontramos o verbo <span>
+                            </span><strong>'{state.foundVerb}'</strong></span>
+                            <span>, que você pode conjugar clicando no botão abaixo:</span>
+                            <p>
+                              <Button 
+                                ref={buttonRef}
+                                onClick={() => { handleVerbClick((state.foundVerb as string)) }}
+                              >
+                                {state.foundVerb}
+                              </Button>
+                            </p>
+                            <p>Ou, se preferir:</p>
+                          </>
+                        )}
+                      </div>
+                      <p>
+                        <Button onClick={handleHome}>voltar para o início</Button>
+                      </p>
+                    </>
+                  }
+                  {!state.hasOriginalVerb && !state.hasPunct &&(
+                    <>
+                      <h2>{ohNo}</h2>
                       <p>{`A palavra '${state.inputReq}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
                       <Button 
                         onClick={() => handleSolicitar(state.inputReq)}
@@ -185,8 +245,9 @@ const Conjugations = () => {
                       </Button>
                     </>
                   )}
-                  {state.hasOriginalVerb && (
+                  {state.hasOriginalVerb && !state.hasPunct && (
                     <>
+                      <h2>{ohNo}</h2>
                       <p>
                         <span>{`Infelizmente, a lista de palavras do verificador ortográfico do libreOffice, nossa base de dados, não contém todas as formas verbais prefixadas. Porém, encontramos o verbo `}</span>
                         <span><strong>{`'${state.originalVerb}`}'</strong></span>
@@ -203,7 +264,12 @@ const Conjugations = () => {
                 </>
               )}
               {state.isButtonDisabled && (
-                <Gracias />
+                <>
+                  <Gracias />
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </>
               )}
               {/* {state.conjugations === null && state.showSuggestions && (
                 <div>
@@ -226,7 +292,7 @@ const Conjugations = () => {
             <div>
               {/* {state.askForSimilar && (
                 <>
-                  <h2>Eita!</h2>
+                  <h2>Eita! Ulha!</h2>
                   <p>Encontramos dois verbos cuja única diferença é a cedilha. Clique no verbo desejado para conjugá-lo.</p>
                   <div>
                   <ul>
@@ -244,9 +310,9 @@ const Conjugations = () => {
                 </div>
                 </>
               )} */}
-              {state.conjugations !== null && !state.askForSimilar && (
+              {state.conjugations !== null && !state.askForSimilar &&  (
                 <>
-                  <h2>Verbo {state.foundVerb}</h2>
+                  <h2>Verbo {state.inputReq}</h2>
                   <p>{state.note_plain}</p>
                   {state.types && (
                     <p>

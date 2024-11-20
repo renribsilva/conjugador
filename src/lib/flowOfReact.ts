@@ -33,8 +33,12 @@ export const flowOfReact = () => {
     hasOriginalVerb: boolean;
     originalVerb: string | null;
     similar: string[] | null;
-    askForSimilar: boolean
+    askForSimilar: boolean;
+    hasPunct: boolean;
+    puncts: string[] | null
+
   }>({
+
     conjugations: null,
     inputValue: "",
     inputReq: "",
@@ -59,7 +63,10 @@ export const flowOfReact = () => {
     hasOriginalVerb: false,
     originalVerb: null,
     similar: null,
-    askForSimilar: false
+    askForSimilar: false,
+    hasPunct:false,
+    puncts: null
+
   });
 
   const fetchConjugations = async () => {
@@ -96,7 +103,8 @@ export const flowOfReact = () => {
         showReviewButton: false,
         hasOriginalVerb: hasOriginalVerb,
         originalVerb: originalVerb,
-        askForSimilar: false
+        askForSimilar: false,
+
       }));
 
       let result = false;
@@ -105,13 +113,19 @@ export const flowOfReact = () => {
       let hasOriginalVerb = false
       let originalVerb = null
       let similar = null
+      let hasPunctAPI  = false
+      let punctAPI  = null
   
       if (normalizedInputValue !== "") {
 
         const apiResponse = await isValidVerbByAPI(normalizedInputValue);
         result = apiResponse.result;
         findedWord = apiResponse.findedWord;
-        similar = apiResponse.similar
+        similar = apiResponse.similar;
+        hasPunctAPI = apiResponse.hasPunct
+        punctAPI = apiResponse.punct
+
+        // console.log(apiResponse)
         
         // if (similar !== null) {
         //   setState(prev => ({
@@ -120,6 +134,20 @@ export const flowOfReact = () => {
         //     askForSimilar: true,
         //   }))
         // }
+
+        if (hasPunctAPI) {
+          setState(prev => ({
+            ...prev,
+            loading: false,
+            hasPunct: hasPunctAPI,
+            puncts: punctAPI,
+            showButton: true,
+            conjugations: null,
+            isValidVerb: result,
+            foundVerb: findedWord
+          }));
+          return
+        }
 
         if ( isRePrefix.isValid ) {
 
@@ -153,6 +181,9 @@ export const flowOfReact = () => {
           showReviewButton: false,
           hasOriginalVerb: hasOriginalVerb,
           originalVerb: originalVerb,
+          hasPunct: hasPunctAPI,
+          puncts:punctAPI
+
         }));
 
       } else {
@@ -204,7 +235,9 @@ export const flowOfReact = () => {
     state.showReviewButton,
     state.hasOriginalVerb,
     state.similar,
-    state.askForSimilar
+    state.askForSimilar,
+    state.hasPunct,
+    state.puncts
   ];
   
   useEffect(() => {
@@ -231,10 +264,13 @@ export const flowOfReact = () => {
       showReviewButton: state.showReviewButton,
       hasOriginalVerb: state.hasOriginalVerb,
       similar: state.similar,
-      askForSimilar: state.askForSimilar
+      askForSimilar: state.askForSimilar,
+      hasPunct: state.hasPunct,
+      puncts: state.puncts
+
     };
   
-    // console.log(data);
+    console.log(data);
   }, dependencies);
 
   return {

@@ -139,7 +139,7 @@
 .button {
   border: none;
   box-shadow: var(--largeshadow);
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 10px;
   padding-inline: 10px;
   cursor: pointer;
