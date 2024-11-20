@@ -13,7 +13,6 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
-import { stat } from "fs";
 
 const Conjugations = () => {
 
@@ -102,6 +101,7 @@ const Conjugations = () => {
   }, [state.inputReq]);
 
   function NoteRefList({ noteRef }) {
+    
     if (!noteRef || Object.keys(noteRef).length === 0) {
       return null; 
     }
@@ -313,45 +313,8 @@ const Conjugations = () => {
                   </div>
                 </>
               )}
-              {/* {state.conjugations === null && state.showSuggestions && (
-                <div>
-                  <p>Selecionamos alguns verbos que podem ser parecidos com a palavra solicitada...</p>
-                  <ul>
-                    {state.suggestions?.map((verb, index) => (
-                      <li key={index}>
-                        <Button 
-                          ref={buttonRef}
-                          onClick={() => { handleVerbClick(verb) }}
-                        >
-                          {verb}
-                        </Button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )} */}
             </div>
             <div>
-              {/* {state.askForSimilar && (
-                <>
-                  <h2>Eita! Ulha!</h2>
-                  <p>Encontramos dois verbos cuja única diferença é a cedilha. Clique no verbo desejado para conjugá-lo.</p>
-                  <div>
-                  <ul>
-                    {state.similar?.map((verb, index) => (
-                      <li key={index}>
-                        <Button 
-                          ref={buttonRef}
-                          onClick={() => { handleVerbClick(verb) }}
-                        >
-                          {verb}
-                        </Button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                </>
-              )} */}
               {state.conjugations !== null && !state.askForSimilar &&  (
                 <>
                   <h2>Verbo {state.inputReq}</h2>
@@ -395,7 +358,6 @@ const Conjugations = () => {
           </div>
         </div>
       </section>
-
       <section className={styles.foot_info}>
         <Socials />
         <Footer />
