@@ -34,8 +34,12 @@ export default async function handler(
 
     const normalizedJsonObject = normalizeJsonKeys(jsonObject);
     const similarWords = findSimilarWords(jsonObject, normalizedVerb);
+    const formatted = findOriginalVerbFormatted(jsonObject, normalizedVerb)
+    
+    // console.log(formatted)
 
     if (normalizedVerb in normalizedJsonObject) {
+      
       const originalVerb = findOriginalVerb(jsonObject, normalizedVerb);
       const originalValue = jsonObject[originalVerb as string];
       const findedWord = originalValue[0];
@@ -46,19 +50,43 @@ export default async function handler(
         similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
         hasPunct,
         punct,
+        forced: false
+      });
+
+    } else if (formatted in normalizedJsonObject) {
+
+      const originalVerb = findOriginalVerbFormatted(jsonObject, normalizedVerb);
+      const originalValue = jsonObject[originalVerb as string];
+      const findedWord = originalValue[0];
+
+      return response.status(200).json({
+        result: true,
+        findedWord,
+        similar: null,
+        hasPunct,
+        punct,
+        forced: true
+
+      });
+
+    } else {
+
+      return response.status(200).json({
+
+        result: false,
+        findedWord: null,
+        similar: null,
+        hasPunct,
+        punct,
+
       });
     }
 
-    return response.status(200).json({
-      result: false,
-      findedWord: null,
-      similar: null,
-      hasPunct,
-      punct,
-    });
   } catch (error) {
+
     console.error('Error reading or parsing file:', error);
     return response.status(500).end();
+
   }
 }
 
@@ -91,6 +119,26 @@ function normalizeJsonKeys(jsonObject: Record<string, any>) {
 
 function findOriginalVerb(jsonObject: Record<string, any>, normalizedVerb: string) {
   return Object.keys(jsonObject).find((key) => ni(key) === normalizedVerb);
+}
+
+function findOriginalVerbFormatted(jsonObject: Record<string, any>, normalizedVerb: string): string {
+  let currentVerb = normalizedVerb;
+
+  for (let i = 0; i < currentVerb.length; i++) {
+    if (currentVerb[i] === 'c') {
+      currentVerb = currentVerb.slice(0, i) + 'ç' + currentVerb.slice(i + 1);
+
+      const foundKey = Object.keys(jsonObject).find(
+        (key) => ni(key) === currentVerb
+      );
+
+      if (foundKey) {
+        return foundKey;
+      }
+    }
+  }
+
+  return normalizedVerb;
 }
 
 function findSimilarWords(jsonObject: Record<string, any>, normalizedVerb: string) {

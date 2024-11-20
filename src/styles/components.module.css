@@ -143,6 +143,7 @@
   padding: 10px;
   padding-inline: 10px;
   cursor: pointer;
+  min-width: 100px;
 }
 
 /***************************************************/

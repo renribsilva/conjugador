@@ -6,6 +6,7 @@ import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 import isValidPrefix from "./isValidPrefix";
+import { stat } from "fs";
 
 export const flowOfReact = () => {
   const [state, setState] = useState<{
@@ -35,7 +36,9 @@ export const flowOfReact = () => {
     similar: string[] | null;
     askForSimilar: boolean;
     hasPunct: boolean;
-    puncts: string[] | null
+    puncts: string[] | null;
+    forced: boolean;
+    goThrough: boolean
 
   }>({
 
@@ -65,7 +68,9 @@ export const flowOfReact = () => {
     similar: null,
     askForSimilar: false,
     hasPunct:false,
-    puncts: null
+    puncts: null,
+    forced: false,
+    goThrough: false
 
   });
 
@@ -84,6 +89,7 @@ export const flowOfReact = () => {
     if (event.key === "Enter" && state.inputValue !== "") {
 
       const normalizedInputValue = ni(state.inputValue);
+      const suggestions = getSimilarVerbs(state.inputValue);
 
       setState(prev => ({
         ...prev,
@@ -92,76 +98,90 @@ export const flowOfReact = () => {
         inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
-        foundVerb: findedWord,
-        isValidVerb: result,
-        suggestions: null,
-        showButton: false,
+        suggestions: suggestions,
         showSuggestions: false,
+        showButton: false,
         isButtonDisabled: false,
         showHome: false,
         showSobre: false,
         showReviewButton: false,
-        hasOriginalVerb: hasOriginalVerb,
-        originalVerb: originalVerb,
+        hasOriginalVerb: false,
+        originalVerb: null,
         askForSimilar: false,
+
+        foundVerb: null,
+        isValidVerb: false,
+        abundance: null,
+        afixo: null,
+        ending: null,
+        hasTarget: null,
+        note_plain: null,
+        note_ref: null,
+        types: null,
+        similar: null,
+        hasPunct:false,
+        puncts: null,
+        forced:false,
+        // goThrough: false
 
       }));
 
-      let result = false;
-      let findedWord = "";
       let isRePrefix = isValidPrefix(state.inputValue)
       let hasOriginalVerb = false
       let originalVerb = null
+
+      if ( isRePrefix.isValid ) {
+
+        let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
+        const apiRes = await isValidVerbByAPI(ni(or))
+        hasOriginalVerb = apiRes.result
+        originalVerb = apiRes.findedWord
+
+      }
+
+      setState(prev => ({
+        ...prev,
+        hasOriginalVerb: hasOriginalVerb,
+        originalVerb: originalVerb
+      }))
+
+      let result = false;
+      let findedWord = "";
       let similar = null
-      let hasPunctAPI  = false
-      let punctAPI  = null
+      let hasPunct  = false
+      let punct  = null
+      let forced = null
   
       if (normalizedInputValue !== "") {
 
         const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+
         result = apiResponse.result;
         findedWord = apiResponse.findedWord;
         similar = apiResponse.similar;
-        hasPunctAPI = apiResponse.hasPunct
-        punctAPI = apiResponse.punct
+        hasPunct = apiResponse.hasPunct;
+        punct = apiResponse.punct;
+        forced = apiResponse.forced
 
-        // console.log(apiResponse)
-        
-        // if (similar !== null) {
-        //   setState(prev => ({
-        //     ...prev,
-        //     loading:false,
-        //     askForSimilar: true,
-        //   }))
-        // }
-
-        if (hasPunctAPI) {
-          setState(prev => ({
-            ...prev,
-            loading: false,
-            hasPunct: hasPunctAPI,
-            puncts: punctAPI,
-            showButton: true,
-            conjugations: null,
-            isValidVerb: result,
-            foundVerb: findedWord
-          }));
-          return
-        }
-
-        if ( isRePrefix.isValid ) {
-
-          let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
-          const apiRes = await isValidVerbByAPI(ni(or))
-          hasOriginalVerb = apiRes.result
-          originalVerb = apiRes.findedWord
-
-        }
+        console.log(apiResponse)
 
       }
 
-      const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-      const suggestions = getSimilarVerbs(state.inputValue);
+      if (hasPunct) {
+
+        setState(prev => ({
+          ...prev,
+          loading: false,
+          hasPunct: hasPunct,
+          puncts: punct,
+          showButton: true,
+          conjugations: null,
+          isValidVerb: result,
+          foundVerb: findedWord
+
+        }));
+        return
+      }
 
       if (!result) {
 
@@ -169,25 +189,40 @@ export const flowOfReact = () => {
           ...prev,
           loading: false,
           showButton: true,
-          suggestions: suggestions,
           showSuggestions: true,
-          ending: null,
-          hasTarget: null,
-          types: null,
-          abundance: null,
-          note_plain: null,
-          note_ref: null,
-          afixo: null,
-          showReviewButton: false,
-          hasOriginalVerb: hasOriginalVerb,
-          originalVerb: originalVerb,
-          hasPunct: hasPunctAPI,
-          puncts:punctAPI
-
         }));
 
       } else {
 
+        if (forced) {
+          setState(prev => ({
+
+            ...prev,
+            loading: false,
+            showButton: true,
+            showSuggestions: true,
+            forced: forced,
+            foundVerb: findedWord
+
+          }));
+          return
+        }
+
+        if (similar !== null && !state.goThrough) {
+
+          setState(prev => ({
+            ...prev,
+            loading: false,
+            showButton: true,
+            showSuggestions: true,
+            similar:similar,
+            foundVerb: findedWord
+          }));
+          return
+        }
+
+        const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
+        
         setState(prev => ({
           ...prev,
           ending: propsOfWord[0].ending,
@@ -199,6 +234,7 @@ export const flowOfReact = () => {
           afixo: propsOfWord[0].afixo,
           similar: similar,
           showReviewButton: true,
+          goThrough: false
         }));
         
         await conjVerbByAPI(ni(findedWord));
@@ -237,7 +273,10 @@ export const flowOfReact = () => {
     state.similar,
     state.askForSimilar,
     state.hasPunct,
-    state.puncts
+    state.puncts,
+    state.forced,
+    state.goThrough
+
   ];
   
   useEffect(() => {
@@ -266,7 +305,9 @@ export const flowOfReact = () => {
       similar: state.similar,
       askForSimilar: state.askForSimilar,
       hasPunct: state.hasPunct,
-      puncts: state.puncts
+      puncts: state.puncts,
+      forced: state.forced,
+      goThrough: state.goThrough
 
     };
   

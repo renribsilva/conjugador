@@ -50,6 +50,7 @@ const Conjugations = () => {
       showButton:false,
       inputValue: verb,
       inputReq: verb,
+      goThrough: true
     });
   };
 
@@ -97,6 +98,7 @@ const Conjugations = () => {
     }
     randomOhNo();
     randomAxi();
+    randomEita();
   }, [state.inputReq]);
 
   function NoteRefList({ noteRef }) {
@@ -126,11 +128,18 @@ const Conjugations = () => {
     setOhNo(ohNoExpression[randomIndex]);
   };
 
-  const axiExpression = ["Tu é leso é!?", "Té doidé!?", "Axi credo!", "Oxi!"]
+  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
   const [axi, setAxi] = useState<string>('');
   const randomAxi = () => {
     const randomIndex = Math.floor(Math.random() * axiExpression.length);
     setAxi(axiExpression[randomIndex]);
+  };
+
+  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!"]
+  const [eita, setEita] = useState<string>('');
+  const randomEita = () => {
+    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
+    setEita(eitaExpression[randomIndex]);
   };
 
   const formatPuncts = (puncts: string[] | null) => {
@@ -206,6 +215,17 @@ const Conjugations = () => {
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
+                  {!state.hasOriginalVerb && !state.hasPunct && state.similar === null && !state.forced && (
+                    <>
+                      <h2>{ohNo}</h2>
+                      <p>{`A palavra '${state.inputReq}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
+                      <Button 
+                        onClick={() => handleSolicitar(state.inputReq)}
+                      >
+                        solicitar
+                      </Button>
+                    </>
+                  )}
                   {state.hasPunct && state.puncts && 
                     <>
                       <h2>{axi}</h2>
@@ -235,15 +255,36 @@ const Conjugations = () => {
                       </p>
                     </>
                   }
-                  {!state.hasOriginalVerb && !state.hasPunct &&(
+                  {!state.hasOriginalVerb && state.forced && (
                     <>
                       <h2>{ohNo}</h2>
-                      <p>{`A palavra '${state.inputReq}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
+                      <p>{`Não conseguimos encontrar a palavra '${state.inputReq}', mas encontramos a palavra '${state.foundVerb}', que é muito parecida. Gostaria de conjugá-la? É só clicar no botão abaixo:`}</p>
                       <Button 
-                        onClick={() => handleSolicitar(state.inputReq)}
+                        ref={buttonRef}
+                        onClick={() => { handleVerbClick((state.foundVerb as string)) }}
                       >
-                        solicitar
+                        {state.foundVerb}
                       </Button>
+                    </>
+                  )}
+                  {!state.hasOriginalVerb && state.similar !== null && (
+                    <>
+                      <h2>{eita}</h2>
+                      <p>{`Encontramos duas palavras com uma pequena diferença formal: "ç". Por isso, você pode escolher qual forma conjugar, clincando no palavra desejada:`}</p>
+                      <div>
+                        <ul className={styles.similarButton}>
+                          {state.similar?.map((verb, index) => (
+                            <li key={index}>
+                              <Button 
+                                ref={buttonRef}
+                                onClick={() => { handleVerbClick(verb) }}
+                              >
+                                {verb}
+                              </Button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </>
                   )}
                   {state.hasOriginalVerb && !state.hasPunct && (
