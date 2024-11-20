@@ -47,9 +47,8 @@ const Conjugations = () => {
       ...state,
       hasOriginalVerb: false,
       showButton:false,
-      loading: true,
       inputValue: verb,
-      inputReq: verb
+      inputReq: verb,
     });
   };
 
@@ -96,13 +95,13 @@ const Conjugations = () => {
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
-      return null; // Retorna null se não houver notas de referência
+      return null; 
     }
   
     return (
       <ol>
         {Object.keys(noteRef)
-          .sort((a, b) => parseInt(a) - parseInt(b)) // Ordena as chaves numericamente
+          .sort((a, b) => parseInt(a) - parseInt(b)) 
           .map((key) => (
             Array.isArray(noteRef[key]) && noteRef[key].map((text, index) => (
               <li key={`${key}-${index}`}>{text}</li>
@@ -120,7 +119,7 @@ const Conjugations = () => {
         <div className={styles.navbar}>
           <div className={styles.input_container}>
             <input
-              ref={inputRef}  // Referência do input
+              ref={inputRef}  
               className={styles.input}
               type="text"
               value={state.inputValue}
@@ -225,7 +224,27 @@ const Conjugations = () => {
               )} */}
             </div>
             <div>
-              {state.conjugations !== null && (
+              {/* {state.askForSimilar && (
+                <>
+                  <h2>Eita!</h2>
+                  <p>Encontramos dois verbos cuja única diferença é a cedilha. Clique no verbo desejado para conjugá-lo.</p>
+                  <div>
+                  <ul>
+                    {state.similar?.map((verb, index) => (
+                      <li key={index}>
+                        <Button 
+                          ref={buttonRef}
+                          onClick={() => { handleVerbClick(verb) }}
+                        >
+                          {verb}
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                </>
+              )} */}
+              {state.conjugations !== null && !state.askForSimilar && (
                 <>
                   <h2>Verbo {state.foundVerb}</h2>
                   <p>{state.note_plain}</p>
@@ -262,7 +281,6 @@ const Conjugations = () => {
                       <NoteRefList noteRef={state.note_ref} />
                     </div>
                   )}
-
                 </>
               )}
             </div>

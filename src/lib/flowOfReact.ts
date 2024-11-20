@@ -30,8 +30,10 @@ export const flowOfReact = () => {
     showHome: boolean;
     showSobre: boolean;
     showReviewButton: boolean;
-    hasOriginalVerb: boolean
-    originalVerb: string | null
+    hasOriginalVerb: boolean;
+    originalVerb: string | null;
+    similar: string[] | null;
+    askForSimilar: boolean
   }>({
     conjugations: null,
     inputValue: "",
@@ -55,7 +57,9 @@ export const flowOfReact = () => {
     showSobre: false,
     showReviewButton: false,
     hasOriginalVerb: false,
-    originalVerb: null
+    originalVerb: null,
+    similar: null,
+    askForSimilar: false
   });
 
   const fetchConjugations = async () => {
@@ -74,32 +78,6 @@ export const flowOfReact = () => {
 
       const normalizedInputValue = ni(state.inputValue);
 
-      let result = false;
-      let findedWord = "";
-      let isRePrefix = isValidPrefix(state.inputValue)
-      let hasOriginalVerb = false
-      let originalVerb = null
-  
-      if (normalizedInputValue !== "") {
-
-        const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-        result = apiResponse.result;
-        findedWord = apiResponse.findedWord;
-
-        if ( isRePrefix.isValid ) {
-
-          let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
-          const apiRes = await isValidVerbByAPI(ni(or))
-          hasOriginalVerb = apiRes.result
-          originalVerb = apiRes.findedWord
-
-        }
-
-      }
-
-      const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-      const suggestions = getSimilarVerbs(state.inputValue);
-
       setState(prev => ({
         ...prev,
         conjugations: null,
@@ -117,13 +95,51 @@ export const flowOfReact = () => {
         showSobre: false,
         showReviewButton: false,
         hasOriginalVerb: hasOriginalVerb,
-        originalVerb: originalVerb
+        originalVerb: originalVerb,
+        askForSimilar: false
       }));
+
+      let result = false;
+      let findedWord = "";
+      let isRePrefix = isValidPrefix(state.inputValue)
+      let hasOriginalVerb = false
+      let originalVerb = null
+      let similar = null
+  
+      if (normalizedInputValue !== "") {
+
+        const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+        result = apiResponse.result;
+        findedWord = apiResponse.findedWord;
+        similar = apiResponse.similar
+        
+        // if (similar !== null) {
+        //   setState(prev => ({
+        //     ...prev,
+        //     loading:false,
+        //     askForSimilar: true,
+        //   }))
+        // }
+
+        if ( isRePrefix.isValid ) {
+
+          let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
+          const apiRes = await isValidVerbByAPI(ni(or))
+          hasOriginalVerb = apiRes.result
+          originalVerb = apiRes.findedWord
+
+        }
+
+      }
+
+      const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
+      const suggestions = getSimilarVerbs(state.inputValue);
 
       if (!result) {
 
         setState(prev => ({
           ...prev,
+          loading: false,
           showButton: true,
           suggestions: suggestions,
           showSuggestions: true,
@@ -137,7 +153,6 @@ export const flowOfReact = () => {
           showReviewButton: false,
           hasOriginalVerb: hasOriginalVerb,
           originalVerb: originalVerb,
-          loading: false,
         }));
 
       } else {
@@ -151,6 +166,7 @@ export const flowOfReact = () => {
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
+          similar: similar,
           showReviewButton: true,
         }));
         
@@ -186,7 +202,9 @@ export const flowOfReact = () => {
     state.showHome,
     state.showSobre,
     state.showReviewButton,
-    state.hasOriginalVerb
+    state.hasOriginalVerb,
+    state.similar,
+    state.askForSimilar
   ];
   
   useEffect(() => {
@@ -211,7 +229,9 @@ export const flowOfReact = () => {
       showHome: state.showHome,
       showSobre: state.showSobre,
       showReviewButton: state.showReviewButton,
-      hasOriginalVerb: state.hasOriginalVerb
+      hasOriginalVerb: state.hasOriginalVerb,
+      similar: state.similar,
+      askForSimilar: state.askForSimilar
     };
   
     // console.log(data);

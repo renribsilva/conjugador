@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ni } from '../../lib/normalizeVerb'; // A função ni deve normalizar o verbo
+import { ni } from '../../lib/normalizeVerb';
 
 const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
 
@@ -13,41 +13,58 @@ export default async function handler(
 
   const { verb } = request.query;
 
-  // Valida se o verbo é uma string e não um array
   if (Array.isArray(verb) || !verb) return response.status(400).end();
 
-  const normalizedVerb = ni(verb as string); // Normaliza o verbo antes de fazer a busca
+  const normalizedVerb = ni(verb as string); 
 
   try {
     const data = await fs.readFile(filePath, 'utf-8');
     const jsonObject = JSON.parse(data);
+    const similarWords: string[] = [];
 
-    // Normaliza todos os verbos nas chaves do JSON, mas preserva os valores originais
     const normalizedJsonObject = Object.keys(jsonObject).reduce((acc, key) => {
-      acc[ni(key)] = jsonObject[key]; // Aqui normalizamos apenas as chaves
+      acc[ni(key)] = jsonObject[key]; 
       return acc;
     }, {} as Record<string, any>);
 
-    // Verifica se o verbo normalizado está presente no JSON normalizado
     if (normalizedVerb in normalizedJsonObject) {
-      // Pega o verbo original (não normalizado)
       const originalVerb = Object.keys(jsonObject).find(key => ni(key) === normalizedVerb);
       const originalValue = jsonObject[originalVerb as string]; 
       const findedWord = originalValue[0];
 
-      // Retorna o verbo original e o valor associado à primeira chave
-      return response.status(200).json({
-        result: true,
-        findedWord,
-      });
+      for (const key of Object.keys(jsonObject)) {
+        if (
+          ni(key) !== normalizedVerb &&
+          (ni(key).replace(/ç/g, 'c') === normalizedVerb ||
+          ni(key).replace(/c/g, 'ç') === normalizedVerb)
+        ) {
+          similarWords.push(key);
+        }
+      }
+
+      if (similarWords.length > 0) {
+        similarWords.unshift(originalVerb as string);
+        return response.status(200).json({
+          result: true,
+          findedWord,
+          similar: similarWords,  // Retorna como array
+        });
+      } else {
+        return response.status(200).json({
+          result: true,
+          findedWord,
+          similar: null,  // Retorna null se não houver palavras similares
+        });
+      }
     } else {
       return response.status(200).json({ 
         result: false,
         findedWord: null,
+        similar: null,
       });
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     return response.status(500).end();
   }
 }
