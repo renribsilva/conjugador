@@ -76,7 +76,8 @@ const Conjugations = () => {
       showSobre: false,
       conjugations: null,
       showButton: false,
-      hasPunct: false
+      hasPunct: false,
+      isButtonDisabled: false
     });
   };
 
@@ -209,12 +210,12 @@ const Conjugations = () => {
                     <>
                       <h2>{axi}</h2>
                       <div>
-                        <span>A palavra solicitada contém pontuações, tais quais </span>
+                        <span>{`A palavra ${state.inputValue} contém pontuações, tais quais `}</span>
                         <span><strong>" {formatPuncts(state.puncts)} "</strong></span>
-                        <span>{`, que não podemos consultar.`}</span>
+                        <span>, que não podemos consultar.</span>
                         {state.isValidVerb && (
                           <>
-                            <span>. Mas encontramos o verbo <span>
+                            <span> Mas encontramos o verbo <span>
                             </span><strong>'{state.foundVerb}'</strong></span>
                             <span>, que você pode conjugar clicando no botão abaixo:</span>
                             <p>
