@@ -10,6 +10,9 @@ type ValidPrefixResult = {
 };
 
 const cache = new Map<string, ValidPrefixResult>();
+const allVerbsSet = new Set(Object.keys(allVerbs)); // Melhor desempenho
+const normalizedVerbs = new Set(Object.keys(allVerbs).map(ni)); // Pré-normalização
+const normalizedAfixos = afixos.map(nw); // Pré-normalização
 
 export default function isValidPrefix(input: string): ValidPrefixResult {
   if (cache.has(input)) {
@@ -19,7 +22,7 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
   function tryVariations(verb: string, index: number): string | null {
     if (index >= verb.length) return null;
 
-    const foundKey = Object.keys(allVerbs).find((key) => ni(key) === verb);
+    const foundKey = Array.from(normalizedVerbs).find((key) => ni(key) === verb); // Busca eficiente
     if (foundKey) return foundKey;
 
     if (verb[index] === 'c') {
@@ -38,10 +41,9 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
   let verb: string | null = input.replace(/-/g, '');
   const originalInput = input;
 
-  const sortedAfixos = afixos
+  const sortedAfixos = normalizedAfixos
     .slice()
-    .sort((a, b) => b.length - a.length)
-    .map(nw);
+    .sort((a, b) => b.length - a.length);
 
   for (const afixo of sortedAfixos) {
     if (verb?.startsWith(afixo)) {
@@ -61,7 +63,7 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
 
       verb = restOfVerb;
 
-      if (allVerbs.hasOwnProperty(verb)) {
+      if (allVerbsSet.has(ni(verb))) {
         const result = { isValid: true, afixo, conector, originalInput };
         cache.set(input, result);
         return result;
@@ -69,7 +71,7 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
 
       verb = tryVariations(verb, 0);
 
-      if (verb && allVerbs.hasOwnProperty(verb)) {
+      if (verb && allVerbsSet.has(ni(verb))) {
         const result = { isValid: true, afixo, conector, originalInput };
         cache.set(input, result);
         return result;
