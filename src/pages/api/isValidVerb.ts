@@ -2,10 +2,10 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ni, nw } from '../../lib/normalizeVerb';
-import isValidPrefix from '../../lib/isValidPrefix';
+import findOriginalVerbFormatted from '../../lib/findOriginalVerbFormatted';
 
 const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
-const PUNCTUATION_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~";
+const INVALID_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~1234567890";
 
 export default async function handler(
 
@@ -30,17 +30,16 @@ export default async function handler(
   }
 
   try {
+
     const data = await fs.readFile(filePath, 'utf-8');
     const jsonObject = JSON.parse(data);
 
     const normalizedJsonObject = normalizeJsonKeys(jsonObject);
-    const similarWords = findSimilarWords(jsonObject, normalizedVerb);
     const formatted = findOriginalVerbFormatted(jsonObject, normalizedVerb)
-    
-    // console.log(formatted)
 
     if (normalizedVerb in normalizedJsonObject) {
-      
+
+      const similarWords = findSimilarWords(jsonObject, normalizedVerb);      
       const originalVerb = findOriginalVerb(jsonObject, normalizedVerb);
       const originalValue = jsonObject[originalVerb as string];
       const findedWord = originalValue[0];
@@ -52,21 +51,24 @@ export default async function handler(
         hasPunct,
         punct,
         forced: false,
+        originalInput: formatted.originalInput
       });
 
-    } else if (formatted in normalizedJsonObject) {
+    } else if (formatted.isForced && formatted.forcedVerb in normalizedJsonObject) {
 
-      const originalVerb = findOriginalVerbFormatted(jsonObject, normalizedVerb);
+      const similarWords = findSimilarWords(jsonObject, formatted.forcedVerb);
+      const originalVerb = formatted.forcedVerb;
       const originalValue = jsonObject[originalVerb as string];
       const findedWord = originalValue[0];
 
       return response.status(200).json({
         result: true,
         findedWord,
-        similar: null,
+        similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
         hasPunct,
         punct,
-        forced: true
+        forced: true,
+        originalInput: formatted.originalInput
 
       });
 
@@ -79,6 +81,7 @@ export default async function handler(
         similar: null,
         hasPunct,
         punct,
+        originalInput: formatted.originalInput
 
       });
     }
@@ -95,7 +98,7 @@ function extractPunctuation(verb: string) {
   const content = { hasPunct: false, punct: null as string[] | null };
 
   for (const char of verb) {
-    if (PUNCTUATION_CHARS.includes(nw(char))) {
+    if (INVALID_CHARS.includes(nw(char))) {
       if (!content.punct) content.punct = [];
       if (!content.punct.includes(nw(char))) content.punct.push(nw(char));
     }
@@ -120,31 +123,6 @@ function normalizeJsonKeys(jsonObject: Record<string, any>) {
 
 function findOriginalVerb(jsonObject: Record<string, any>, normalizedVerb: string) {
   return Object.keys(jsonObject).find((key) => ni(key) === normalizedVerb);
-}
-
-function findOriginalVerbFormatted(jsonObject: Record<string, any>, normalizedVerb: string): string {
-  
-  function tryVariations(verb: string, index: number): string | null {
-    
-    if (index >= verb.length) {
-      return null;
-    }
-
-    const foundKey = Object.keys(jsonObject).find((key) => ni(key) === verb);
-    if (foundKey) {
-      return foundKey;
-    }
-
-    if (verb[index] === 'c') {
-      const modifiedVerb = verb.slice(0, index) + 'ç' + verb.slice(index + 1);
-      const result = tryVariations(modifiedVerb, index + 1);
-      if (result) {
-        return result;
-      }
-    }
-    return tryVariations(verb, index + 1);
-  }
-  return tryVariations(normalizedVerb, 0) || normalizedVerb;
 }
 
 function findSimilarWords(jsonObject: Record<string, any>, normalizedVerb: string) {

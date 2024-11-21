@@ -30,15 +30,16 @@ export const flowOfReact = () => {
     showHome: boolean;
     showSobre: boolean;
     showReviewButton: boolean;
-    hasOriginalVerb: boolean;
-    originalVerb: string | null;
+    hasNonPrefixVerb: boolean;
+    nonPrefixVerb: string | null;
     similar: string[] | null;
     askForSimilar: boolean;
     hasPunct: boolean;
     puncts: string[] | null;
     forced: boolean;
     goThrough: boolean;
-    enter: boolean
+    enter: boolean;
+    originalInput: string | null
 
   }>({
 
@@ -63,15 +64,16 @@ export const flowOfReact = () => {
     showHome: true,
     showSobre: false,
     showReviewButton: false,
-    hasOriginalVerb: false,
-    originalVerb: null,
+    hasNonPrefixVerb: false,
+    nonPrefixVerb: null,
     similar: null,
     askForSimilar: false,
     hasPunct:false,
     puncts: null,
     forced: false,
     goThrough: false,
-    enter: false
+    enter: false,
+    originalInput: null
 
   });
 
@@ -106,8 +108,8 @@ export const flowOfReact = () => {
         showHome: false,
         showSobre: false,
         showReviewButton: false,
-        hasOriginalVerb: false,
-        originalVerb: null,
+        hasNonPrefixVerb: false,
+        nonPrefixVerb: null,
         askForSimilar: false,
 
         foundVerb: null,
@@ -123,27 +125,27 @@ export const flowOfReact = () => {
         hasPunct:false,
         puncts: null,
         forced:false,
-        // goThrough: false
+        originalInput: null
 
       }));
 
       let isRePrefix = isValidPrefix(state.inputValue)
-      let hasOriginalVerb = false
-      let originalVerb = null
+      let hasNonPrefixVerb = false
+      let nonPrefixVerb = null
 
       if ( isRePrefix.isValid ) {
 
         let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
         const apiRes = await isValidVerbByAPI(ni(or))
-        hasOriginalVerb = apiRes.result
-        originalVerb = apiRes.findedWord
+        hasNonPrefixVerb = apiRes.result
+        nonPrefixVerb = apiRes.findedWord
 
       }
 
       setState(prev => ({
         ...prev,
-        hasOriginalVerb: hasOriginalVerb,
-        originalVerb: originalVerb
+        hasNonPrefixVerb: hasNonPrefixVerb,
+        nonPrefixVerb: nonPrefixVerb
       }))
 
       let result = false;
@@ -152,6 +154,7 @@ export const flowOfReact = () => {
       let hasPunct  = false
       let punct  = null
       let forced = null
+      let originalInput = null
   
       if (normalizedInputValue !== "") {
 
@@ -162,11 +165,17 @@ export const flowOfReact = () => {
         similar = apiResponse.similar;
         hasPunct = apiResponse.hasPunct;
         punct = apiResponse.punct;
-        forced = apiResponse.forced
+        forced = apiResponse.forced;
+        originalInput = apiResponse.originalInput
 
-        // console.log(apiResponse)
+        // console.log(similar)
 
       }
+
+      setState(prev => ({
+        ...prev,
+        originalInput: originalInput
+      }))
 
       if (hasPunct) {
 
@@ -276,13 +285,15 @@ export const flowOfReact = () => {
     state.showHome,
     state.showSobre,
     state.showReviewButton,
-    state.hasOriginalVerb,
+    state.hasNonPrefixVerb,
+    state.nonPrefixVerb,
     state.similar,
     state.askForSimilar,
     state.hasPunct,
     state.puncts,
     state.forced,
-    state.goThrough
+    state.goThrough,
+    state.originalInput
 
   ];
   
@@ -308,17 +319,19 @@ export const flowOfReact = () => {
       showHome: state.showHome,
       showSobre: state.showSobre,
       showReviewButton: state.showReviewButton,
-      hasOriginalVerb: state.hasOriginalVerb,
+      hasNonPrefixVerb: state.hasNonPrefixVerb,
+      nonPrefixVerb: state.nonPrefixVerb,
       similar: state.similar,
       askForSimilar: state.askForSimilar,
       hasPunct: state.hasPunct,
       puncts: state.puncts,
       forced: state.forced,
-      goThrough: state.goThrough
+      goThrough: state.goThrough,
+      originalInput: state.originalInput
 
     };
   
-    // console.log(data);
+    console.log(data);
   }, dependencies);
 
   return {
