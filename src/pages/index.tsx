@@ -216,7 +216,11 @@ const Conjugations = () => {
                   {!state.hasOriginalVerb && !state.hasPunct && state.similar === null && !state.forced && (
                     <>
                       <h2>{ohNo}</h2>
-                      <p>{`A palavra '${state.inputReq}' não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?`}</p>
+                      <p>
+                        <span>A palavra </span>
+                        <span><strong>{`'${state.inputReq}'`}</strong></span>
+                        <span> não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?</span>
+                      </p>
                       <Button 
                         onClick={() => handleSolicitar(state.inputReq)}
                       >
@@ -256,7 +260,13 @@ const Conjugations = () => {
                   {!state.hasOriginalVerb && state.forced && (
                     <>
                       <h2>{ohNo}</h2>
-                      <p>{`Não conseguimos encontrar a palavra '${state.inputReq}', mas encontramos a palavra '${state.foundVerb}', que é cedilhada. Gostaria de conjugá-la? É só clicar no botão abaixo:`}</p>
+                      <p>
+                        <span>Não conseguimos encontrar a palavra </span>
+                        <span><strong>{`'${state.inputReq}'`}</strong></span>
+                        <span>, mas encontramos a palavra </span>
+                        <span><strong>{`'${state.foundVerb}'`}</strong></span>
+                        <span>, que é cedilhada. Gostaria de conjugá-la? É só clicar no botão abaixo:</span>
+                      </p>
                       <Button 
                         ref={buttonRef}
                         onClick={() => { handleVerbClick((state.foundVerb as string)) }}

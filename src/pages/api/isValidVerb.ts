@@ -2,6 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ni, nw } from '../../lib/normalizeVerb';
+import isValidPrefix from '../../lib/isValidPrefix';
 
 const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
 const PUNCTUATION_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~";
@@ -50,7 +51,7 @@ export default async function handler(
         similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
         hasPunct,
         punct,
-        forced: false
+        forced: false,
       });
 
     } else if (formatted in normalizedJsonObject) {
@@ -122,6 +123,7 @@ function findOriginalVerb(jsonObject: Record<string, any>, normalizedVerb: strin
 }
 
 function findOriginalVerbFormatted(jsonObject: Record<string, any>, normalizedVerb: string): string {
+  
   function tryVariations(verb: string, index: number): string | null {
     
     if (index >= verb.length) {
