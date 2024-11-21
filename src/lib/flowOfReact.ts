@@ -334,7 +334,7 @@ export const flowOfReact = () => {
 
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies);
 
   return {

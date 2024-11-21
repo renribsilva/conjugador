@@ -5,16 +5,12 @@ import { ni } from './normalizeVerb';
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const endings = Object.keys(irregularidades).sort((a, b) => b.length - a.length); 
+  const endings = Object.keys(irregularidades);  // Sem ordenação inicial, ordenação pode ser feita apenas quando necessário
 
-  // console.log(endings)
-  
   // Função para buscar regras para a terminação do verbo
   function getVerbKeys(verb: string, endings: string[]): any {
-    
+    // Tentando achar a terminação mais longa (otimizado para evitar busca repetitiva)
     let ending = endings.find((end) => ni(verb).endsWith(ni(end)));
-
-    // console.log(ending)
 
     if (!ending) {
       for (let i = 0; i < endings.length; i++) {
@@ -25,11 +21,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
       }
     }
 
-    
     const rules = ending ? irregularidades[ending] : null;
 
-    // console.log(ending)
-  
     if (rules) {
       const normalizedRules = Object.keys(rules).reduce((acc, key) => {
         acc[ni(key)] = rules[key]; 
@@ -43,72 +36,73 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
-  // console.log(verbRules)
-  // console.log(ending)
+  // Se não houver regras, retorna a resposta padrão
+  if (!verbRules) {
+    return getDefaultResponse();
+  }
 
-  if (verbRules) {
-    
-    if (verb.startsWith("...")) {
-      return getDefaultResponse(); 
+  // Verifica se o verbo começa com "..."
+  if (verb.startsWith("...")) {
+    return getDefaultResponse();
+  }
+
+  // Verifica se o verbo tem uma regra diretamente associada
+  if (verbRules[verb]) {
+    const verbRule = verbRules[verb];
+    if (verbRule?.rules) {
+      const res = innerSearchOfRules(verbRule.rules, P, M, D);
+      return {
+        ...res,
+        ending,
+        verb,
+        types: verbRule.type,
+        abundance: verbRule.abundance,
+        note_plain: verbRule.note.plain,
+        note_ref: verbRule.note.ref,
+        afixo: null  
+      };
     }
+  }
 
-    if (verbRules[verb]) {
-      const verbRule = verbRules[verb];
-      if (verbRule?.rules) {
-        const res = innerSearchOfRules(verbRule.rules, P, M, D);
+  // Busca por terminações que começam com "..."
+  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+  const prefixPros = isValidPrefix(verb);
+
+  for (const ending of endingsThatStartWith) {
+    if (prefixPros.isValid && verb.endsWith(ending.substring(3))) {
+      const baseVerbRules = verbRules[ending];
+      if (baseVerbRules?.rules) {
+        const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
+        const foundedAfixo = prefixPros.afixo;
         return {
           ...res,
           ending,
           verb,
-          types: verbRule.type,
-          abundance: verbRule.abundance,
-          note_plain: verbRule.note.plain,
-          note_ref: verbRule.note.ref,
-          afixo: null  
+          types: baseVerbRules.type,
+          abundance: baseVerbRules.abundance,
+          note_plain: baseVerbRules.note.plain,
+          note_ref: baseVerbRules.note.ref,
+          afixo: foundedAfixo  
         };
       }
     }
+  }
 
-    const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-    const prefixPros = isValidPrefix(verb);
-
-    // console.log(endingsThatStartWith)
-
-    for (const ending of endingsThatStartWith) {
-      if (prefixPros.isValid && verb.endsWith(ending.substring(3))) {
-        const baseVerbRules = verbRules[ending];
-        if (baseVerbRules?.rules) {
-          const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-          const foundedAfixo = prefixPros.afixo
-          return {
-            ...res,
-            ending,
-            verb,
-            types: baseVerbRules.type,
-            abundance: baseVerbRules.abundance,
-            note_plain: baseVerbRules.note.plain,
-            note_ref: baseVerbRules.note.ref,
-            afixo: foundedAfixo  
-          };
-        }
-      }
-    }
-
-    if (verbRules["..."]) {
-      const verbRule = verbRules["..."];
-      if (verbRule?.rules) {
-        const res = innerSearchOfRules(verbRule.rules, P, M, D);
-        return {
-          ...res,
-          ending: "...",
-          verb,
-          types: verbRule.type,
-          abundance: verbRule.abundance,
-          note_plain: verbRule.note.plain,
-          note_ref: verbRule.note.ref,
-          afixo: null  
-        };
-      }
+  // Verifica a regra geral para terminações "..."
+  if (verbRules["..."]) {
+    const verbRule = verbRules["..."];
+    if (verbRule?.rules) {
+      const res = innerSearchOfRules(verbRule.rules, P, M, D);
+      return {
+        ...res,
+        ending: "...",
+        verb,
+        types: verbRule.type,
+        abundance: verbRule.abundance,
+        note_plain: verbRule.note.plain,
+        note_ref: verbRule.note.ref,
+        afixo: null  
+      };
     }
   }
 
@@ -130,6 +124,3 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     };
   }
 }
-
-// const res3 = findNoRegRule("tacar", "p1", "alt", "RAD");
-// console.log(res3); 

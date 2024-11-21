@@ -51,6 +51,7 @@ export default async function handler(request: NextApiRequest, response: NextApi
 
     const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
     const formatted = findOriginalVerbFormatted(jsonObject, normalizedVerb);
+
     const originalVerb = findOriginalVerb(normalizedJsonObject, normalizedVerb);
 
     if (originalVerb) {

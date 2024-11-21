@@ -361,7 +361,7 @@ const Conjugations = () => {
                             <span> Não encontramos a palavra </span>
                             <span><strong>'{state.inputReq}'</strong></span>
                             <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'</strong></span>
+                            <span><strong>'{state.foundVerb}'.</strong></span>
                             <span> Caso queira conjugá-lo, clique no botão abaixo</span>
                           </p>
                           <div>
@@ -382,7 +382,7 @@ const Conjugations = () => {
                             <span> Não encontramos a palavra </span>
                             <span><strong>'{state.inputReq}'</strong></span>
                             <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'</strong></span>
+                            <span><strong>'{state.foundVerb}'.</strong></span>
                             <span> Caso queira conjugá-lo, clique no botão abaixo</span>
                           </p>
                           <div>

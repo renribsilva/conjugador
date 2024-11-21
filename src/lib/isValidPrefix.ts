@@ -9,41 +9,55 @@ type ValidPrefixResult = {
   originalInput: string; 
 };
 
+const afixosNormalized = afixos.map(afixo => nw(afixo)).sort((a, b) => b.length - a.length);
+
 export default function isValidPrefix(input: string): ValidPrefixResult {
 
-  function tryVariations(verb: string, index: number): string | null {
-    if (index >= verb.length) return null;
+  // Função para verificar as variações de um verbo (c/ç)
+  function tryVariations(verb: string): string | null {
+    const variations = new Set([verb]);
 
-    const foundKey = Object.keys(allVerbs).find((key) => ni(key) === verb);
-    if (foundKey) return foundKey;
+    // Verifica as variações c/ç de forma iterativa
+    const queue = [verb];
+    while (queue.length) {
+      const currentVerb = queue.shift()!;
+      if (Object.keys(allVerbs).includes(ni(currentVerb))) return ni(currentVerb);
 
-    if (verb[index] === 'c') {
-      const modifiedVerb = verb.slice(0, index) + 'ç' + verb.slice(index + 1);
-      const result = tryVariations(modifiedVerb, index + 1);
-      if (result) return result;
-    } else if (verb[index] === 'ç') {
-      const modifiedVerb = verb.slice(0, index) + 'c' + verb.slice(index + 1);
-      const result = tryVariations(modifiedVerb, index + 1);
-      if (result) return result;
+      // Tentar variações c/ç
+      if (currentVerb.includes('c')) {
+        const modified = currentVerb.replace('c', 'ç');
+        if (!variations.has(modified)) {
+          variations.add(modified);
+          queue.push(modified);
+        }
+      } else if (currentVerb.includes('ç')) {
+        const modified = currentVerb.replace('ç', 'c');
+        if (!variations.has(modified)) {
+          variations.add(modified);
+          queue.push(modified);
+        }
+      }
     }
 
-    return tryVariations(verb, index + 1);
+    return null; // Nenhuma variação válida encontrada
   }
 
-  let verb: string | null = input.replace(/-/g, '');
+  let verb = input.replace(/-/g, '');
   const originalInput = input;
 
-  const sortedAfixos = afixos.sort((a, b) => b.length - a.length);
-  const normSortedAfixos = sortedAfixos.map(afixo => nw(afixo));
+  // Verificar se o verbo já existe diretamente
+  if (allVerbs.hasOwnProperty(verb)) {
+    return { isValid: true, afixo: '', conector: null, originalInput };
+  }
 
-  for (const afixo of normSortedAfixos) {
-
-    if (verb?.startsWith(afixo)) {
-
+  // Testando os afixos
+  for (const afixo of afixosNormalized) {
+    if (verb.startsWith(afixo)) {
       let restOfVerb = verb.slice(afixo.length);
       let conector: string | null = null;
 
-      if (/^([rs])\1/.test(restOfVerb)) {
+      // Verificação de conectores
+      if (/^(rs)/.test(restOfVerb)) {
         conector = restOfVerb[0];
         restOfVerb = restOfVerb.slice(1);
       } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) {
@@ -54,20 +68,19 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
         restOfVerb = restOfVerb.slice(1);
       }
 
-      verb = restOfVerb;
-
-      if (allVerbs.hasOwnProperty(verb)) {
-        return { isValid: true, afixo, conector, originalInput }; 
+      // Verificar se o verbo é válido
+      if (allVerbs.hasOwnProperty(restOfVerb)) {
+        return { isValid: true, afixo, conector, originalInput };
       }
 
-      verb = tryVariations(verb, 0);
-
-      if (verb && allVerbs.hasOwnProperty(verb)) {
-        return { isValid: true, afixo, conector, originalInput }; 
+      // Verificar as variações do verbo
+      const variation = tryVariations(restOfVerb);
+      if (variation && allVerbs.hasOwnProperty(variation)) {
+        return { isValid: true, afixo, conector, originalInput };
       }
     }
   }
 
+  // Caso não encontre um verbo válido
   return { isValid: false, afixo: null, conector: null, originalInput };
-
 }
