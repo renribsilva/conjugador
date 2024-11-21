@@ -160,7 +160,7 @@ const Conjugations = () => {
               value={state.inputValue}
               onChange={(e) => setState({ ...state, inputValue: e.target.value })}
               onKeyDown={(e) => { handleKeyDown(e) } }
-              // placeholder="amar, escrever, colorir, ..."
+              placeholder="amar, escrever, colorir, ..."
               maxLength={50}
             />
           </div>
