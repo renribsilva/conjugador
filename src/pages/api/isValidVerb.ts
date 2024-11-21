@@ -122,23 +122,27 @@ function findOriginalVerb(jsonObject: Record<string, any>, normalizedVerb: strin
 }
 
 function findOriginalVerbFormatted(jsonObject: Record<string, any>, normalizedVerb: string): string {
-  let currentVerb = normalizedVerb;
+  function tryVariations(verb: string, index: number): string | null {
+    
+    if (index >= verb.length) {
+      return null;
+    }
 
-  for (let i = 0; i < currentVerb.length; i++) {
-    if (currentVerb[i] === 'c') {
-      currentVerb = currentVerb.slice(0, i) + 'ç' + currentVerb.slice(i + 1);
+    const foundKey = Object.keys(jsonObject).find((key) => ni(key) === verb);
+    if (foundKey) {
+      return foundKey;
+    }
 
-      const foundKey = Object.keys(jsonObject).find(
-        (key) => ni(key) === currentVerb
-      );
-
-      if (foundKey) {
-        return foundKey;
+    if (verb[index] === 'c') {
+      const modifiedVerb = verb.slice(0, index) + 'ç' + verb.slice(index + 1);
+      const result = tryVariations(modifiedVerb, index + 1);
+      if (result) {
+        return result;
       }
     }
+    return tryVariations(verb, index + 1);
   }
-
-  return normalizedVerb;
+  return tryVariations(normalizedVerb, 0) || normalizedVerb;
 }
 
 function findSimilarWords(jsonObject: Record<string, any>, normalizedVerb: string) {

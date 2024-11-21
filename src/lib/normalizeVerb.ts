@@ -1,6 +1,6 @@
 export function ni(input: string): string {
+  
   const normalizedInput = input.normalize("NFD");
-  console.log(normalizedInput)
 
   if (typeof normalizedInput !== 'string') {
     console.error('Erro: nw failed -> word não é uma string:', normalizedInput);
