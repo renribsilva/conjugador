@@ -9,55 +9,46 @@ type ValidPrefixResult = {
   originalInput: string; 
 };
 
-const afixosNormalized = afixos.map(afixo => nw(afixo)).sort((a, b) => b.length - a.length);
+const cache = new Map<string, ValidPrefixResult>();
 
 export default function isValidPrefix(input: string): ValidPrefixResult {
+  if (cache.has(input)) {
+    return cache.get(input)!;
+  }
 
-  // Função para verificar as variações de um verbo (c/ç)
-  function tryVariations(verb: string): string | null {
-    const variations = new Set([verb]);
+  function tryVariations(verb: string, index: number): string | null {
+    if (index >= verb.length) return null;
 
-    // Verifica as variações c/ç de forma iterativa
-    const queue = [verb];
-    while (queue.length) {
-      const currentVerb = queue.shift()!;
-      if (Object.keys(allVerbs).includes(ni(currentVerb))) return ni(currentVerb);
+    const foundKey = Object.keys(allVerbs).find((key) => ni(key) === verb);
+    if (foundKey) return foundKey;
 
-      // Tentar variações c/ç
-      if (currentVerb.includes('c')) {
-        const modified = currentVerb.replace('c', 'ç');
-        if (!variations.has(modified)) {
-          variations.add(modified);
-          queue.push(modified);
-        }
-      } else if (currentVerb.includes('ç')) {
-        const modified = currentVerb.replace('ç', 'c');
-        if (!variations.has(modified)) {
-          variations.add(modified);
-          queue.push(modified);
-        }
-      }
+    if (verb[index] === 'c') {
+      const modifiedVerb = verb.slice(0, index) + 'ç' + verb.slice(index + 1);
+      const result = tryVariations(modifiedVerb, index + 1);
+      if (result) return result;
+    } else if (verb[index] === 'ç') {
+      const modifiedVerb = verb.slice(0, index) + 'c' + verb.slice(index + 1);
+      const result = tryVariations(modifiedVerb, index + 1);
+      if (result) return result;
     }
 
-    return null; // Nenhuma variação válida encontrada
+    return tryVariations(verb, index + 1);
   }
 
-  let verb = input.replace(/-/g, '');
+  let verb: string | null = input.replace(/-/g, '');
   const originalInput = input;
 
-  // Verificar se o verbo já existe diretamente
-  if (allVerbs.hasOwnProperty(verb)) {
-    return { isValid: true, afixo: '', conector: null, originalInput };
-  }
+  const sortedAfixos = afixos
+    .slice()
+    .sort((a, b) => b.length - a.length)
+    .map(nw);
 
-  // Testando os afixos
-  for (const afixo of afixosNormalized) {
-    if (verb.startsWith(afixo)) {
+  for (const afixo of sortedAfixos) {
+    if (verb?.startsWith(afixo)) {
       let restOfVerb = verb.slice(afixo.length);
       let conector: string | null = null;
 
-      // Verificação de conectores
-      if (/^(rs)/.test(restOfVerb)) {
+      if (/^([rs])\1/.test(restOfVerb)) {
         conector = restOfVerb[0];
         restOfVerb = restOfVerb.slice(1);
       } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) {
@@ -68,19 +59,25 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
         restOfVerb = restOfVerb.slice(1);
       }
 
-      // Verificar se o verbo é válido
-      if (allVerbs.hasOwnProperty(restOfVerb)) {
-        return { isValid: true, afixo, conector, originalInput };
+      verb = restOfVerb;
+
+      if (allVerbs.hasOwnProperty(verb)) {
+        const result = { isValid: true, afixo, conector, originalInput };
+        cache.set(input, result);
+        return result;
       }
 
-      // Verificar as variações do verbo
-      const variation = tryVariations(restOfVerb);
-      if (variation && allVerbs.hasOwnProperty(variation)) {
-        return { isValid: true, afixo, conector, originalInput };
+      verb = tryVariations(verb, 0);
+
+      if (verb && allVerbs.hasOwnProperty(verb)) {
+        const result = { isValid: true, afixo, conector, originalInput };
+        cache.set(input, result);
+        return result;
       }
     }
   }
 
-  // Caso não encontre um verbo válido
-  return { isValid: false, afixo: null, conector: null, originalInput };
+  const result = { isValid: false, afixo: null, conector: null, originalInput };
+  cache.set(input, result);
+  return result;
 }
