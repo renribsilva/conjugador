@@ -228,7 +228,7 @@ const Conjugations = () => {
                     <>
                       <h2>{axi}</h2>
                       <div>
-                        <span>{`A palavra ${state.inputValue} contém pontuações, tais quais `}</span>
+                        <span>{`A palavra '${state.inputReq}' contém pontuações, tais quais `}</span>
                         <span><strong>" {formatPuncts(state.puncts)} "</strong></span>
                         <span>, que não podemos consultar.</span>
                         {state.isValidVerb && (
