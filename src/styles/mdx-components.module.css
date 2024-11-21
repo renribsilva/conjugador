@@ -2,3 +2,11 @@
   font-weight: 300;
   line-height: 22px;
 }
+
+.customHR {
+  /* background-color: aqua; */
+  border: none;
+  border-bottom: 1px solid var(--modbox);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

@@ -1,10 +1,6 @@
 // Importa o pacote @next/mdx
 import createMDX from '@next/mdx';
-
-// Cria a configuração MDX
-const withMDX = createMDX({
-  // Adicione plugins de markdown aqui, se necessário
-});
+import remarkFootnotes from 'remark-footnotes';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,5 +13,15 @@ const nextConfig = {
   },
 };
 
-// Exporta a configuração MDX junto com a configuração do Next.js
-export default withMDX(nextConfig);
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [
+      [remarkFootnotes, { inlineNotes: true }],
+    ],
+  },
+});
+
+export default withMDX({
+  ...nextConfig,
+});

@@ -64,3 +64,11 @@ body {
   text-align: center;
   color: var(--foreground);
 } 
+
+.footnotes h2 {
+  font-size: 16px;
+}
+
+.footnotes ol * {
+  font-size: 14px;
+}

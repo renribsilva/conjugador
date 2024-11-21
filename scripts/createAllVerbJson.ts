@@ -59,11 +59,26 @@ async function processVerbsFile(): Promise<void> {
 
     await fs.promises.writeFile(outputFilePath, JSON.stringify(J, null, 2));
 
-    console.log(`Número total de vocábulos: ${Object.keys(J).length}`);
+    const ar = Object.keys(J).filter(key => key.endsWith('ar')).length;
+    console.log(`Quantidade de entradas terminadas em 'ar': ${ar}`);
+
+    const er = Object.keys(J).filter(key => key.endsWith('er')).length;
+    console.log(`Quantidade de entradas terminadas em 'er': ${er}`);
+
+    const ir = Object.keys(J).filter(key => key.endsWith('ir')).length;
+    console.log(`Quantidade de entradas terminadas em 'ir': ${ir}`);
+
+    const porCount = Object.keys(J).filter(key => key.endsWith('por') || key.endsWith('pôr')).length;
+    console.log(`Quantidade de entradas terminadas em 'por': ${porCount}`);
+
+    const entriesJ = Object.keys(irregularVerbs).length
+    console.log(`Número total de vocábulos: ${entriesJ}`);
     console.log(`Número de verbos irregulares: ${Object.keys(irregularVerbs).length}`);
 
   } catch (error) {
+
     console.error('Erro:', error);
+    
   }
 }
 

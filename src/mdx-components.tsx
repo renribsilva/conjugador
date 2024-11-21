@@ -21,6 +21,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </p> 
     ),
 
+    hr: (props) => <hr {...props} className={styles.customHR} />,
+
     ...components,
   };
 }
