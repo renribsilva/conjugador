@@ -269,7 +269,7 @@ const Conjugations = () => {
                   {!state.hasOriginalVerb && state.similar !== null && (
                     <>
                       <h2>{eita}</h2>
-                      <p>{`Encontramos duas palavras com uma pequena diferença formal: "ç". Por isso, você pode escolher qual forma conjugar, clincando no palavra desejada:`}</p>
+                      <p>{`Encontramos duas palavras com uma pequena diferença formal: "ç". Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:`}</p>
                       <div>
                         <ul className={styles.similarButton}>
                           {state.similar?.map((verb, index) => (
