@@ -13,6 +13,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import { stat } from "fs";
 
 const Conjugations = () => {
 
@@ -45,8 +46,7 @@ const Conjugations = () => {
   const handleVerbClick = (verb: string) => {
     setState({ 
       ...state,
-      hasOriginalVerb: false,
-      showButton:false,
+      // showButton:false,
       inputValue: verb,
       inputReq: verb,
       goThrough: true
@@ -83,6 +83,8 @@ const Conjugations = () => {
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  console.log(buttonRef)
+  console.log(inputRef)
 
   useEffect(() => {
     if (inputRef.current) {
@@ -98,7 +100,7 @@ const Conjugations = () => {
     randomOhNo();
     randomAxi();
     randomEita();
-  }, [state.inputReq]);
+  }, [state.enter]);
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {

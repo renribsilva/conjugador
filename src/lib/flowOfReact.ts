@@ -6,7 +6,6 @@ import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 import isValidPrefix from "./isValidPrefix";
-import { stat } from "fs";
 
 export const flowOfReact = () => {
   const [state, setState] = useState<{
@@ -38,7 +37,8 @@ export const flowOfReact = () => {
     hasPunct: boolean;
     puncts: string[] | null;
     forced: boolean;
-    goThrough: boolean
+    goThrough: boolean;
+    enter: boolean
 
   }>({
 
@@ -70,7 +70,8 @@ export const flowOfReact = () => {
     hasPunct:false,
     puncts: null,
     forced: false,
-    goThrough: false
+    goThrough: false,
+    enter: false
 
   });
 
@@ -93,6 +94,7 @@ export const flowOfReact = () => {
 
       setState(prev => ({
         ...prev,
+        enter:true,
         conjugations: null,
         loading: true,
         inputValue: "",
@@ -247,6 +249,12 @@ export const flowOfReact = () => {
         }));
       }
     }
+
+    setState(prev => ({
+      ...prev,
+      enter:false
+    }))
+    
   };
 
   const dependencies = [
