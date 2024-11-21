@@ -101,7 +101,7 @@ export const flowOfReact = () => {
         inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
-        suggestions: suggestions,
+        // suggestions: suggestions,
         showSuggestions: false,
         showButton: false,
         isButtonDisabled: false,
@@ -168,8 +168,6 @@ export const flowOfReact = () => {
         forced = apiResponse.forced;
         originalInput = apiResponse.originalInput
 
-        // console.log(similar)
-
       }
 
       setState(prev => ({
@@ -200,11 +198,14 @@ export const flowOfReact = () => {
           loading: false,
           showButton: true,
           showSuggestions: true,
+          foundVerb: findedWord
+
         }));
 
       } else {
 
         if (forced) {
+
           setState(prev => ({
 
             ...prev,
@@ -215,6 +216,7 @@ export const flowOfReact = () => {
             foundVerb: findedWord
 
           }));
+
           return
         }
 
@@ -230,9 +232,9 @@ export const flowOfReact = () => {
           }));
           return
         }
-
-        const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
         
+        const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
+
         setState(prev => ({
           ...prev,
           ending: propsOfWord[0].ending,
@@ -244,9 +246,10 @@ export const flowOfReact = () => {
           afixo: propsOfWord[0].afixo,
           similar: similar,
           showReviewButton: true,
-          goThrough: false
+          goThrough: false,
+          foundVerb:findedWord
         }));
-        
+
         await conjVerbByAPI(ni(findedWord));
         await fetchConjugations();
 

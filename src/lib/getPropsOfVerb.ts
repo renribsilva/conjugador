@@ -31,7 +31,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
  
   const P = ["p1", "p2", "p3", "p4", "p5", "p6"];
   const M = ["gd", "pa", "pr_ind", "pt1_ind", "pt2_ind", "pt3_ind", "ft1_ind", "ft2_ind", 
-             "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2", "ralt"];
+             "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2"];
   const D = ["RAD", "VT", "MT", "NP"];
 
   const results: VerbProps[] = [];
