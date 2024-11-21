@@ -94,7 +94,6 @@ export const flowOfReact = () => {
 
       setState(prev => ({
         ...prev,
-        enter:true,
         conjugations: null,
         loading: true,
         inputValue: "",
@@ -165,7 +164,7 @@ export const flowOfReact = () => {
         punct = apiResponse.punct;
         forced = apiResponse.forced
 
-        console.log(apiResponse)
+        // console.log(apiResponse)
 
       }
 
@@ -254,7 +253,7 @@ export const flowOfReact = () => {
       ...prev,
       enter:false
     }))
-    
+
   };
 
   const dependencies = [
@@ -319,7 +318,7 @@ export const flowOfReact = () => {
 
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies);
 
   return {
