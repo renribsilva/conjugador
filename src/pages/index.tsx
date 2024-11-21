@@ -3,7 +3,7 @@ import Table from "../components/table";
 import { flowOfReact } from "../lib/flowOfReact";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import styles from "../styles/index.module.css";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import Socials from "../components/socials";
 import Home from "../mdx/Home.mdx";
 import Gracias from "../mdx/Gracias.mdx";
@@ -13,6 +13,9 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import('../components/footer'), { ssr: false });
 
 const Conjugations = () => {
 

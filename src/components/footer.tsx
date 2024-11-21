@@ -21,11 +21,9 @@ export default function Footer() {
       <span>
         criado com:{" "}
         {linkfooter.map(({ label, href }) => (
-          <React.Fragment key={href}>
-            <Link href={href} {...linkProps}>
-              {label}
-            </Link>
-          </React.Fragment>
+          <Link key={href} href={href} {...linkProps} prefetch={false}>
+          {label}
+        </Link>
         ))}
       </span>
     </footer>
