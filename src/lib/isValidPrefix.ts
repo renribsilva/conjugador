@@ -15,6 +15,7 @@ const normalizedVerbs = new Set(Object.keys(allVerbs).map(ni)); // Pré-normaliz
 const normalizedAfixos = afixos.map(nw); // Pré-normalização
 
 export default function isValidPrefix(input: string): ValidPrefixResult {
+
   if (cache.has(input)) {
     return cache.get(input)!;
   }
@@ -46,7 +47,9 @@ export default function isValidPrefix(input: string): ValidPrefixResult {
     .sort((a, b) => b.length - a.length);
 
   for (const afixo of sortedAfixos) {
+
     if (verb?.startsWith(afixo)) {
+      
       let restOfVerb = verb.slice(afixo.length);
       let conector: string | null = null;
 
