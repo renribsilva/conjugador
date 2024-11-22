@@ -14,7 +14,6 @@ let normalizedCache: Record<string, string> | null = null;
 // Função para carregar o objeto JSON, aproveitando o cache
 async function loadJsonObject() {
   if (!cachedJsonObject) {
-
     const data = await fs.readFile(filePath, 'utf-8');
     cachedJsonObject = JSON.parse(data);
   }
@@ -33,7 +32,7 @@ function getNormalizedJsonKeys(jsonObject: Record<string, any>) {
 }
 
 // Função principal para processar o verbo
-export async function isValidVerbProcess (verb: string) {
+export async function processVerb(verb: string) {
   const normalizedVerb = ni(verb);
   const { hasPunct, punct } = extractPunctuation(normalizedVerb);
 
