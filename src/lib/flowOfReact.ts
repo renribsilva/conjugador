@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
-import { ni } from "./normalizeVerb";
+import { ni, nw } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
@@ -36,10 +36,12 @@ export const flowOfReact = () => {
     askForSimilar: boolean;
     hasPunct: boolean;
     puncts: string[] | null;
-    forced: boolean;
+    formattedForcedVerb: string | null,
+    formattedIsForced: boolean;
+    formattedOriginalInput: string | null;
+    formattedValidPrefix: boolean;
     goThrough: boolean;
     enter: boolean;
-    originalInput: string | null
 
   }>({
 
@@ -70,10 +72,12 @@ export const flowOfReact = () => {
     askForSimilar: false,
     hasPunct:false,
     puncts: null,
-    forced: false,
+    formattedForcedVerb: null,
+    formattedIsForced: false,
+    formattedOriginalInput: null,
+    formattedValidPrefix: false,
     goThrough: false,
     enter: false,
-    originalInput: null
 
   });
 
@@ -101,7 +105,7 @@ export const flowOfReact = () => {
         inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
-        // suggestions: suggestions,
+        suggestions: suggestions,
         showSuggestions: false,
         showButton: false,
         isButtonDisabled: false,
@@ -124,12 +128,15 @@ export const flowOfReact = () => {
         similar: null,
         hasPunct:false,
         puncts: null,
-        forced:false,
-        originalInput: null
+        formattedForcedVerb: null,
+        formattedIsForced: false,
+        formattedOriginalInput: null,
+        formattedValidPrefix: false,
+        goThrough: false,
 
       }));
 
-      let isRePrefix = isValidPrefix(state.inputValue)
+      let isRePrefix = isValidPrefix(nw(state.inputValue))
       let hasNonPrefixVerb = false
       let nonPrefixVerb = null
 
@@ -153,8 +160,10 @@ export const flowOfReact = () => {
       let similar = null
       let hasPunct  = false
       let punct  = null
-      let forced = null
-      let originalInput = null
+      let formattedForcedVerb = null
+      let formattedIsForced = false
+      let formattedOriginalInput = null
+      let formattedValidPrefix = false
   
       if (normalizedInputValue !== "") {
 
@@ -165,14 +174,24 @@ export const flowOfReact = () => {
         similar = apiResponse.similar;
         hasPunct = apiResponse.hasPunct;
         punct = apiResponse.punct;
-        forced = apiResponse.forced;
-        originalInput = apiResponse.originalInput
+        formattedForcedVerb = apiResponse.formatted.forcedVerb;
+        formattedIsForced = apiResponse.formatted.isForced;
+        formattedOriginalInput = apiResponse.formatted.originalInput;
+        formattedValidPrefix = apiResponse.formatted.validPrefix
 
       }
 
       setState(prev => ({
         ...prev,
-        originalInput: originalInput
+        result: result,
+        findedWord: findedWord,
+        similar: similar,
+        hasPunct: hasPunct,
+        punct: punct,
+        formattedForcedVerb: formattedForcedVerb,
+        formattedIsForced: formattedIsForced,
+        formattedOriginalInput: formattedOriginalInput,
+        formattedValidPrefix:formattedValidPrefix
       }))
 
       if (hasPunct) {
@@ -180,14 +199,13 @@ export const flowOfReact = () => {
         setState(prev => ({
           ...prev,
           loading: false,
-          hasPunct: hasPunct,
-          puncts: punct,
           showButton: true,
           conjugations: null,
           isValidVerb: result,
           foundVerb: findedWord
 
         }));
+
         return
       }
 
@@ -204,7 +222,7 @@ export const flowOfReact = () => {
 
       } else {
 
-        if (forced) {
+        if (formattedIsForced) {
 
           setState(prev => ({
 
@@ -212,7 +230,6 @@ export const flowOfReact = () => {
             loading: false,
             showButton: true,
             showSuggestions: true,
-            forced: forced,
             foundVerb: findedWord
 
           }));
@@ -227,10 +244,11 @@ export const flowOfReact = () => {
             loading: false,
             showButton: true,
             showSuggestions: true,
-            similar:similar,
             foundVerb: findedWord
           }));
+
           return
+
         }
         
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
@@ -244,7 +262,6 @@ export const flowOfReact = () => {
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
-          similar: similar,
           showReviewButton: true,
           goThrough: false,
           foundVerb:findedWord
@@ -294,9 +311,7 @@ export const flowOfReact = () => {
     state.askForSimilar,
     state.hasPunct,
     state.puncts,
-    state.forced,
     state.goThrough,
-    state.originalInput
 
   ];
   
@@ -328,9 +343,7 @@ export const flowOfReact = () => {
       askForSimilar: state.askForSimilar,
       hasPunct: state.hasPunct,
       puncts: state.puncts,
-      forced: state.forced,
       goThrough: state.goThrough,
-      originalInput: state.originalInput
 
     };
   

@@ -66,14 +66,14 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   // Busca por terminações que começam com "..."
   const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-  const prefixPros = isValidPrefix(verb);
+  const prefixProps = isValidPrefix(verb);
 
   for (const ending of endingsThatStartWith) {
-    if (prefixPros.isValid && verb.endsWith(ending.substring(3))) {
+    if (prefixProps.isValid && verb.endsWith(ending.substring(3))) {
       const baseVerbRules = verbRules[ending];
       if (baseVerbRules?.rules) {
         const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-        const foundedAfixo = prefixPros.afixo;
+        const foundedAfixo = prefixProps.afixo;
         return {
           ...res,
           ending,

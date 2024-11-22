@@ -1,0 +1,11 @@
+!hasNonPrefixedVerb (F)
+  forced (F) && similar (F) - amigo
+  forced (F) && similar (V) - abracar/abraçar
+  forced (V) && similar (F) - alcar | macar
+  forced (V) && similar (V) - 
+
+!hasNonPrefixedVerb (V)
+  forced (F) && similar (F) - 
+  forced (F) && similar (V) - reabracar/reabraçar
+  forced (V) && similar (F) - realcar | remacar
+  forced (V) && similar (V) - 

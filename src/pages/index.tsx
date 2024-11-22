@@ -244,7 +244,7 @@ const Conjugations = () => {
                   }
                   {!state.hasNonPrefixVerb && !state.hasPunct && (
                     <>
-                      {state.similar === null && !state.forced && (
+                      {state.similar === null && !state.formattedIsForced && (
                         <>
                           <h2>
                             <span>{ohNo}</span>
@@ -262,14 +262,16 @@ const Conjugations = () => {
                           </Button>
                         </>
                       )}
-                      {state.similar !== null && !state.forced && (
+                      {state.similar !== null && !state.formattedIsForced && (
                         <>
                           <h2>
                             <span>{eita}</span>
                           </h2>
                           <p>
                             <span>[err 12] </span>
-                            <span>{`Encontramos duas palavras com uma pequena diferença formal: "ç". Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:`}</span>
+                            <span>Quando buscamos a palavra </span>
+                            <span><strong>'{state.inputReq}', </strong></span>
+                            <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
                           </p>
                           <div>
                             <ul className={styles.similarButton}>
@@ -287,7 +289,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar === null && state.forced && (
+                      {state.similar === null && state.formattedIsForced && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -310,7 +312,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar !== null && state.forced && (
+                      {state.similar !== null && state.formattedIsForced && (
                         <>
                           <h2>{eita}</h2>
                           <p>
@@ -337,7 +339,7 @@ const Conjugations = () => {
                   )}
                   {state.hasNonPrefixVerb && !state.hasPunct && (
                     <>
-                      {state.similar === null && !state.forced && (
+                      {state.similar === null && !state.formattedIsForced && (
                         <>
                           <h2>{ohNo}</h2>
                           <p>
@@ -353,33 +355,41 @@ const Conjugations = () => {
                           </Button>
                         </>
                       )}
-                      {state.similar !== null && !state.forced && (
+                      {state.similar !== null && !state.formattedIsForced && (
                         <>
-                          <h2>{eita}</h2>
+                          <h2>
+                            <span>{eita}</span>
+                          </h2>
                           <p>
                             <span>[err 22] </span>
-                            <span> Não encontramos a palavra </span>
+                            <span>Não encontramos a palavra </span>
                             <span><strong>'{state.inputReq}'</strong></span>
-                            <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'.</strong></span>
-                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
+                            <span>. Mas encontramos palavras muito parecidas. Clique no botão da palavra que gostaria de conjugar:</span>
                           </p>
                           <div>
-                          <Button 
-                            ref={buttonRef}
-                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                          >
-                            {state.foundVerb}
-                          </Button>
+                            <ul className={styles.similarButton}>
+                              {state.similar?.map((verb, index) => (
+                                <li key={index}>
+                                  <Button 
+                                    ref={buttonRef}
+                                    onClick={() => { handleVerbClick(verb) }}
+                                  >
+                                    {verb}
+                                  </Button>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                         </>
                       )}
-                      {state.similar === null && state.forced && (
+                      {state.similar === null && state.formattedIsForced && (
                         <>
-                          <h2>{eita}</h2>
+                          <h2>
+                            <span>{eita}</span>
+                          </h2>
                           <p>
                             <span>[err 23] </span>
-                            <span> Não encontramos a palavra </span>
+                            <span>Não encontramos a palavra </span>
                             <span><strong>'{state.inputReq}'</strong></span>
                             <span> solicitada. Mas encontramos o verbo </span>
                             <span><strong>'{state.foundVerb}'.</strong></span>
@@ -395,24 +405,30 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar !== null && state.forced && (
+                      {state.similar !== null && state.formattedIsForced && (
                         <>
-                          <h2>{eita}</h2>
+                          <h2>
+                            <span>{eita}</span>
+                          </h2>
                           <p>
-                            <span>[err 24] </span>
-                            <span> Não encontramos a palavra </span>
-                            <span><strong>'{state.inputReq}'</strong></span>
-                            <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'.</strong></span>
-                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
+                            <span>[err 12] </span>
+                            <span>Quando buscamos a palavra </span>
+                            <span><strong>'{state.inputReq}', </strong></span>
+                            <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
                           </p>
                           <div>
-                          <Button 
-                            ref={buttonRef}
-                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                          >
-                            {state.foundVerb}
-                          </Button>
+                            <ul className={styles.similarButton}>
+                              {state.similar?.map((verb, index) => (
+                                <li key={index}>
+                                  <Button 
+                                    ref={buttonRef}
+                                    onClick={() => { handleVerbClick(verb) }}
+                                  >
+                                    {verb}
+                                  </Button>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                         </>
                       )}

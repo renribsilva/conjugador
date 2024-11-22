@@ -5,25 +5,40 @@ type VerbResult = {
   forcedVerb: string;
   originalInput: string;
   isForced: boolean;
+  validPrefix: boolean
 };
 
-export default function findOriginalVerbFormatted(jsonObject: Record<string, any>, normalizedVerb: string): VerbResult {
+export default function findOriginalVerbFormatted (
+  jsonObject: Record<string, any>,
+  normalizedVerb: string
+): VerbResult {
+
   const verb: string = normalizedVerb;
+  let isForced: boolean = false;
 
   function tryVariations(verb: string, index: number): string | null {
     if (index >= verb.length) return null;
 
     const foundKey = Object.keys(jsonObject).find((key) => ni(key) === verb);
-    if (foundKey) return foundKey;
+    if (foundKey) {
+      isForced = false
+      return foundKey
+    };
 
     if (verb[index] === 'c') {
       const modifiedVerb = verb.slice(0, index) + 'ç' + verb.slice(index + 1);
       const result = tryVariations(modifiedVerb, index + 1);
-      if (result) return result;
+      if (result) {
+        isForced = true
+        return result
+      };
     } else if (verb[index] === 'ç') {
       const modifiedVerb = verb.slice(0, index) + 'c' + verb.slice(index + 1);
       const result = tryVariations(modifiedVerb, index + 1);
-      if (result) return result;
+      if (result) {
+        isForced = true
+        return result
+      };
     }
 
     return tryVariations(verb, index + 1);
@@ -32,7 +47,7 @@ export default function findOriginalVerbFormatted(jsonObject: Record<string, any
   const prefix = isValidPrefix(verb);
   let afixo = '';
   let conector = '';
-  let isForced: boolean = false;
+  let validPrefix = false
 
   const originalInput = prefix.originalInput;
 
@@ -41,20 +56,32 @@ export default function findOriginalVerbFormatted(jsonObject: Record<string, any
 
   let forcedVerb = verb;
 
-  if (prefix.isValid) {
+  if (!prefix.isValid) {
+
+    const resultWithoutPrefix = tryVariations(normalizedVerb, 0);
+    if (resultWithoutPrefix) {
+      forcedVerb = resultWithoutPrefix;
+      validPrefix = false
+    }
+    return { forcedVerb, originalInput, isForced, validPrefix };
+
+  } else if (prefix.isValid) {
+
     const normalizedWithoutPrefix = verb.replace(afixo + conector, '');
     const resultWithoutPrefix = tryVariations(normalizedWithoutPrefix, 0);
     if (resultWithoutPrefix) {
       forcedVerb = resultWithoutPrefix;
-      isForced = true
+      validPrefix = true
     }
-  } else {
-    const resultWithoutPrefix = tryVariations(normalizedVerb, 0);
-    if (resultWithoutPrefix) {
-      forcedVerb = resultWithoutPrefix;
-      isForced = true
-    }
+    return { forcedVerb, originalInput, isForced, validPrefix };
   }
 
-  return { forcedVerb, originalInput, isForced };
+  // Retorno padrão para evitar o erro
+  return {
+    forcedVerb,
+    originalInput,
+    isForced,
+    validPrefix
+  };
 }
+

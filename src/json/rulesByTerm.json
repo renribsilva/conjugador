@@ -2692,5 +2692,140 @@
       "rules": {
       }
     }
+  },
+  "anar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'anar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ancar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'ancar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "qu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ançar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'ançar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "c1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "anchar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'anchar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "andar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'andar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "andir":{
+    "...": {
+      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Com exceção do verbo 'brandir', que também é defectivo, todos os outros são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "brandir": {
+      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, com exceção de 'brandir' que também é defectivo¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
   }
 }
