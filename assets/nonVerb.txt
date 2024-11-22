@@ -2,6 +2,7 @@ bacar
 agiar
 amidar
 alcar
+cometar
 
 twitter
 amber

@@ -5,34 +5,24 @@ import { ni } from './normalizeVerb';
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const endings = Object.keys(irregularidades);  // Sem ordenação inicial, ordenação pode ser feita apenas quando necessário
+  const endings = Object.keys(irregularidades); 
 
-  // Função para buscar regras para a terminação do verbo
   function getVerbKeys(verb: string, endings: string[]): any {
-    // Tentando achar a terminação mais longa (otimizado para evitar busca repetitiva)
-    let ending = endings.find((end) => ni(verb).endsWith(ni(end)));
-
-    if (!ending) {
-      for (let i = 0; i < endings.length; i++) {
-        if (verb.endsWith(endings[i])) {
-          ending = endings[i];
-          break;
-        }
-      }
-    }
-
+    
+    endings.sort((a, b) => b.length - a.length);
+    const ending = endings.find((end) => ni(verb).endsWith(ni(end)));  
     const rules = ending ? irregularidades[ending] : null;
-
+  
     if (rules) {
       const normalizedRules = Object.keys(rules).reduce((acc, key) => {
-        acc[ni(key)] = rules[key]; 
+        acc[ni(key)] = rules[key];
         return acc;
       }, {});
       return { rules: normalizedRules, ending };
     }
-
+  
     return { rules: null, ending };
-  }
+  }  
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
@@ -67,7 +57,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   // Busca por terminações que começam com "..."
   const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
   const prefixProps = isValidPrefix(verb);
-  console.log(prefixProps)
 
   for (const ending of endingsThatStartWith) {
     if (prefixProps.isValid && verb.endsWith(ending.substring(3))) {
@@ -125,3 +114,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     };
   }
 }
+
+const res = findNoRegRule('rangir', 'p1','pr_ind',"RAD")
+console.log(res)
