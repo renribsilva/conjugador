@@ -3,13 +3,12 @@ import innerSearchOfRules from './innerSearchOfRules';
 import isValidPrefix from './isValidPrefix';
 import { ni } from './normalizeVerb';
 
-export function findNoRegRule(verb: string, P: string, M: string, D: string) {
+export async function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const endings = Object.keys(irregularidades);  // Sem ordenação inicial, ordenação pode ser feita apenas quando necessário
+  const endings = Object.keys(irregularidades);  
 
-  // Função para buscar regras para a terminação do verbo
+  // Função para buscar as terminações
   function getVerbKeys(verb: string, endings: string[]): any {
-    // Tentando achar a terminação mais longa (otimizado para evitar busca repetitiva)
     let ending = endings.find((end) => ni(verb).endsWith(ni(end)));
 
     if (!ending) {

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { processVerb } from '../../lib/isValidVerbProcess';
+import { isValidVerbProcess } from '../../lib/isValidVerbProcess';
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   if (request.method !== 'GET') return response.status(405).end();
@@ -8,7 +8,7 @@ export default async function handler(request: NextApiRequest, response: NextApi
   if (Array.isArray(verb) || !verb) return response.status(400).end();
 
   try {
-    const result = await processVerb(verb as string);
+    const result = await isValidVerbProcess(verb as string);
     return response.status(200).json(result);
   } catch (error) {
     console.error('Error processing verb:', error);

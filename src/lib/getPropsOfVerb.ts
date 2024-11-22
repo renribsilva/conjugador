@@ -53,7 +53,9 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
   for (let p of P) {
     for (let m of M) {
       for (let d of D) {
-        const result = findNoRegRule(verb, p, m, d);
+        // Usando await para aguardar a resolução da Promise
+        const result = await findNoRegRule(verb, p, m, d);
+
         if (result) {
           const mappedTypes = result.types?.length ? mapTypesToStrings(result.types) : null;
           const abundance = result.abundance && Object.keys(result.abundance).length > 0 ? result.abundance : null;
@@ -61,7 +63,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
           const note_ref = result.note_ref && Object.keys(result.note_ref).length > 0 ? result.note_ref : null;
 
           if (result.ending !== null) {
-            if (result.types.some(type => validTypes.includes(type))) {
+            if (result.types && result.types.some(type => validTypes.includes(type))) {
               const verbProps: VerbProps = {
                 hasTarget: result.hasTarget,
                 ending: result.ending,
