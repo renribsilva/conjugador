@@ -2454,7 +2454,7 @@
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [1],
+      "type": [1, 3],
       "abundance":{},
       "rules": {
         "RAD":{
@@ -3345,6 +3345,242 @@
   "ansar": {
     "...": {
       "note": { "plain": ["Todos os verbos terminados em 'ansar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ansir": {
+    "transir": {
+      "note": { "plain": ["O verbo 'transir' e seus derivados são todos defectivos¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1,3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "antar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'antar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "anter": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'anter' são conjugados com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "e":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "ê":{
+            "pr_ind":["p6"]
+          },
+          "i":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pr_ind":["p2","p3"]
+          }
+        },
+        "MT":{
+          "nh":{
+            "pr_ind":["p1"]
+          },
+          "n":{
+            "pr_ind":["p2","p5"],
+            "im1":["p5"]
+          },
+          "m":{
+            "pr_ind":["p3"],
+            "im1":["p2"]
+          },
+          "ve":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "nha":{
+            "pt2_ind":["p1","p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "nhe":{
+            "pt2_ind":["p5"]
+          },
+          "vera":{
+            "pt3_ind":["p1","p2","p3","p6"]
+          },
+          "véra":{
+            "pt3_ind":["p4"]
+          },
+          "vére":{
+            "pt3_ind":["p5"]
+          },
+          "vesse":{
+            "pt_sub":["p1","p2","p3","p6"]
+          },
+          "vésse":{
+            "pt_sub":["p4","p5"]
+          },
+          "ver":{
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "des":{
+            "pr_ind":["p5"]
+          },
+          "":{
+            "pt1_ind":["p1","p3"]
+          },
+          "de":{
+            "im1":["p5"]
+          }
+        }
+      }
+    }
+  },
+  "antir": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'antir' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "anzar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'anzar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "anzir": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'anzir' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "apar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'apar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "apir": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'apir' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "aptar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'aptar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "arar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'arar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
