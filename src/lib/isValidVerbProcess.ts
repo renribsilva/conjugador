@@ -1,35 +1,13 @@
-import fs from 'fs/promises';
-import path from 'path';
 import { ni } from './normalizeVerb';
 import findOriginalVerbFormatted from './findOriginalVerbFormatted';
 import isValidPrefix from './isValidPrefix';
-
-const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
-const INVALID_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~1234567890";
-
-// Caches
-let cachedJsonObject: Record<string, any> | null = null;
-let normalizedCache: Record<string, string> | null = null;
-
-// Função para carregar o objeto JSON, aproveitando o cache
-async function loadJsonObject() {
-  if (!cachedJsonObject) {
-    const data = await fs.readFile(filePath, 'utf-8');
-    cachedJsonObject = JSON.parse(data);
-  }
-  return cachedJsonObject;
-}
-
-// Função para normalizar as chaves do JSON, aproveitando o cache
-function getNormalizedJsonKeys(jsonObject: Record<string, any>) {
-  if (!normalizedCache) {
-    normalizedCache = Object.keys(jsonObject).reduce((acc, key) => {
-      acc[ni(key)] = key;
-      return acc;
-    }, {} as Record<string, string>);
-  }
-  return normalizedCache;
-}
+import { 
+  extractPunctuation, 
+  findOriginalVerb, 
+  findSimilarWords, 
+  getNormalizedJsonKeys, 
+  loadJsonObject 
+} from './isValidVerbUtils';
 
 // Função principal para processar o verbo
 export async function processVerb(verb: string) {
@@ -99,32 +77,4 @@ export async function processVerb(verb: string) {
       formatted
     };
   }
-}
-
-// Função para extrair pontuação do verbo
-function extractPunctuation(verb: string) {
-  const punct = verb.split('').filter((char) => INVALID_CHARS.includes(char));
-  return {
-    hasPunct: punct.length > 0,
-    punct: punct.length > 0 ? Array.from(new Set(punct)) : null,
-  };
-}
-
-// Função para encontrar o verbo original na lista normalizada
-function findOriginalVerb(normalizedJsonObject: Record<string, string>, normalizedVerb: string) {
-  return normalizedJsonObject[normalizedVerb] || null;
-}
-
-// Função para encontrar palavras similares ao verbo normalizado
-function findSimilarWords(normalizedJsonObject: Record<string, string>, normalizedVerb: string) {
-  const similarWords: string[] = [];
-  for (const [normalizedKey, originalKey] of Object.entries(normalizedJsonObject)) {
-    if (
-      normalizedKey !== normalizedVerb &&
-      (normalizedKey.replace(/ç/g, 'c') === normalizedVerb || normalizedKey.replace(/c/g, 'ç') === normalizedVerb)
-    ) {
-      similarWords.push(originalKey);
-    }
-  }
-  return similarWords;
 }

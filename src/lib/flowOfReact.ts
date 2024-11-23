@@ -222,7 +222,7 @@ export const flowOfReact = () => {
 
       } else {
 
-        if (formattedIsForced) {
+        if (formattedIsForced || findedWord !== formattedOriginalInput) {
 
           setState(prev => ({
 

@@ -341,18 +341,25 @@ const Conjugations = () => {
                     <>
                       {state.similar === null && !state.formattedIsForced && (
                         <>
-                          <h2>{ohNo}</h2>
+                          <h2>
+                            <span>{eita}</span>
+                          </h2>
                           <p>
-                            <span>[err 21] </span>
-                            <span>A palavra </span>
-                            <span><strong>{`'${state.inputReq}'`}</strong></span>
-                            <span> não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?</span>
+                            <span>[err 23] </span>
+                            <span>Não encontramos a palavra </span>
+                            <span><strong>'{state.inputReq}'</strong></span>
+                            <span> solicitada. Mas encontramos o verbo </span>
+                            <span><strong>'{state.foundVerb}'.</strong></span>
+                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
                           </p>
+                          <div>
                           <Button 
-                            onClick={() => handleSolicitar(state.inputReq)}
+                            ref={buttonRef}
+                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
                           >
-                            solicitar
+                            {state.foundVerb}
                           </Button>
+                          </div>
                         </>
                       )}
                       {state.similar !== null && !state.formattedIsForced && (
