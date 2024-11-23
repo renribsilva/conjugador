@@ -3,6 +3,8 @@ agiar
 amidar
 alcar
 cometar
+ácar
+acar
 
 twitter
 amber

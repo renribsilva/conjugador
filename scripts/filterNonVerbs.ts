@@ -8,7 +8,7 @@ export async function filterNonVerbs(allVerbs: string[], fileName: string): Prom
 
   const filePath = path.join(assetsDir, fileName);
   const nonVerbs = await readTxtLines(filePath);
-  const normNonVerbs = nonVerbs.map(verb => nw(verb));
+  const normNonVerbs = nonVerbs.map(verb => nw(verb)).filter(Boolean);
   
   return allVerbs.filter(verb => !normNonVerbs.includes(verb));
   

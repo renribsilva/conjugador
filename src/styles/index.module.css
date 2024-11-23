@@ -205,6 +205,20 @@
   padding-top: 10px;
 }
 
+.lascou {
+  display: flex;
+  flex-direction: column;
+}
+
+.lascou_main {
+  min-height: 260px;
+}
+
+.lascou_foot {
+  display: flex;
+  justify-content: center;
+}
+
 /******************************************************/
 /*********************FOOT_INFO************************/
 /******************************************************/

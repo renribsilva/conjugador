@@ -1,6 +1,4 @@
 import { ni } from './normalizeVerb';
-import findOriginalVerbFormatted from './findOriginalVerbFormatted';
-import isValidPrefix from './isValidPrefix';
 import { 
   extractPunctuation, 
   findOriginalVerb, 
@@ -8,73 +6,79 @@ import {
   getNormalizedJsonKeys, 
   loadJsonObject 
 } from './isValidVerbUtils';
+import findVariations from './findVariation';
 
-// Função principal para processar o verbo
-export async function processVerb(verb: string) {
+export async function processVerb (verb: string) {
+
   const normalizedVerb = ni(verb);
-  const { hasPunct, punct } = extractPunctuation(normalizedVerb);
+  const { punct } = extractPunctuation(normalizedVerb);
 
   let cleanedVerb = normalizedVerb;
-  if (hasPunct && punct) {
+  
+  if (punct) {
     const regex = new RegExp(`[${punct.join('')}]`, 'g');
     cleanedVerb = cleanedVerb.replace(regex, '');
   }
 
-  // Carregar dados JSON do arquivo ou do cache
   const jsonObject = await loadJsonObject();
+
   if (!jsonObject) {
     throw new Error('Failed to load JSON data.');
   }
 
-  // Obter as chaves normalizadas do JSON
   const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
-
-  // Procurar pelo verbo original formatado
-  const formatted = findOriginalVerbFormatted(jsonObject, cleanedVerb);
   const originalVerb = findOriginalVerb(normalizedJsonObject, cleanedVerb);
 
-  if (originalVerb) {
+  if (originalVerb && originalVerb in normalizedJsonObject) {
   
     const similarWords = findSimilarWords(normalizedJsonObject, cleanedVerb);
     const originalValue = jsonObject[originalVerb];
     const findedWord = originalValue[0];
-    const hasPrefix = isValidPrefix(cleanedVerb).isValid
 
     return {
-      result: true,
-      findedWord,
-      similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
-      hasPunct,
-      punct,
-      hasPrefix, 
-      formatted
-    };
 
-  } else if (formatted.forcedVerb && formatted.forcedVerb in normalizedJsonObject) {
+      originalVerb: {
+        result: true,
+        findedWord,
+        similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
+        punct,
+        variations: null
+      },
+      variationVerb: null
+
+    };
+  } 
+  
+  // console.log(variations)
+  const variations = findVariations(cleanedVerb)
+  
+  if (variations.processedInput) {
     
-    const similarWords = findSimilarWords(normalizedJsonObject, formatted.forcedVerb);
-    const originalValue = jsonObject[formatted.forcedVerb];
+    const similarWords = findSimilarWords(normalizedJsonObject, variations.processedInput);
+    const originalValue = jsonObject[variations.processedInput];
     const findedWord = originalValue[0];
-    const hasPrefix = isValidPrefix(formatted.forcedVerb).isValid
+    console.log(findedWord)
 
     return {
-      result: true,
-      findedWord,
-      similar: similarWords.length > 0 ? [formatted.forcedVerb, ...similarWords] : null,
-      hasPunct,
-      punct,
-      hasPrefix,
-      formatted
+
+      originalVerb: null,
+      variationVerb: {
+        result: true,
+        findedWord,
+        similar: similarWords.length > 0 ? [variations.processedInput, ...similarWords] : null,
+        punct,  
+        variations
+      },
     };
+
   } else {
+    
     return {
-      result: false,
-      findedWord: null,
-      similar: null,
-      hasPunct,
-      punct,
-      hasPrefix: false,
-      formatted
+
+      originalVerb: null,
+      variationVerb: null,
+
     };
+
   }
 }

@@ -8,7 +8,6 @@ const INVALID_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~1234567890";
 export function extractPunctuation(verb: string) {
   const punct = verb.split('').filter((char) => INVALID_CHARS.includes(char));
   return {
-    hasPunct: punct.length > 0,
     punct: punct.length > 0 ? Array.from(new Set(punct)) : null,
   };
 }

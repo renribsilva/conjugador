@@ -1,7 +1,8 @@
 import irregularidades from '../json/rulesByTerm.json';  
 import innerSearchOfRules from './innerSearchOfRules';
-import isValidPrefix from './isValidPrefix';
+import isValidPrefix from './findVariation';
 import { ni } from './normalizeVerb';
+import findVariations from './findVariation';
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
@@ -23,6 +24,22 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   
     return { rules: null, ending };
   }  
+
+  function getDefaultResponse() {
+    return {
+      hasTarget: false,
+      rule: null,
+      P: null,
+      M: null,
+      ending: null,
+      verb: null,
+      types: null,
+      abundance: null,
+      note_plain: null,
+      note_ref: null,
+      afixo: null  
+    };
+  }
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
 
@@ -56,14 +73,14 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   // Busca por terminações que começam com "..."
   const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-  const prefixProps = isValidPrefix(verb);
+  const prefixProps = findVariations(verb);
 
   for (const ending of endingsThatStartWith) {
-    if (prefixProps.isValid && verb.endsWith(ending.substring(3))) {
+    if (prefixProps.prefixFounded && verb.endsWith(ending.substring(3))) {
       const baseVerbRules = verbRules[ending];
       if (baseVerbRules?.rules) {
         const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-        const foundedAfixo = prefixProps.afixo;
+        const foundedAfixo = prefixProps.matchingAfixo;
         return {
           ...res,
           ending,
@@ -97,22 +114,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   }
 
   return getDefaultResponse();
-  
-  function getDefaultResponse() {
-    return {
-      hasTarget: false,
-      rule: null,
-      P: null,
-      M: null,
-      ending: null,
-      verb: null,
-      types: null,
-      abundance: null,
-      note_plain: null,
-      note_ref: null,
-      afixo: null  
-    };
-  }
+
 }
 
 // const res = findNoRegRule('rangir', 'p1','pr_ind',"RAD")

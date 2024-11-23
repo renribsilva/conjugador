@@ -75,7 +75,7 @@ const Conjugations = () => {
       showSobre: false,
       conjugations: null,
       showButton: false,
-      hasPunct: false,
+      punct: null,
       isButtonDisabled: false
     });
   };
@@ -213,38 +213,41 @@ const Conjugations = () => {
                 </>}
               {state.conjugations === null && state.showButton && (
                 <>
-                  {state.hasPunct && state.puncts && 
-                    <>
-                      <h2>{axi}</h2>
-                      <div>
-                        <span>[err 00] </span>
-                        <span>{`A palavra '${state.inputReq}' contém caracteres que não podemos consultar: `}</span>
-                        <span><strong>" {formatPuncts(state.puncts)} "</strong></span>
-                        {state.isValidVerb && (
-                          <>
-                            <span> Mas encontramos o verbo <span>
-                            </span><strong>'{state.foundVerb}'</strong></span>
-                            <span>, que você pode conjugar clicando no botão abaixo:</span>
-                            <p>
-                              <Button 
-                                ref={buttonRef}
-                                onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                              >
-                                {state.foundVerb}
-                              </Button>
-                            </p>
-                            <p>Ou, se preferir:</p>
-                          </>
-                        )}
+                  {state.punct !== null && 
+                    <div className={styles.lascou}>
+                      <div className={styles.lascou_main}>
+                        <h2>{axi}</h2>
+                        <p>
+                          <span>[err 00] </span>
+                          <span>A palavra </span>
+                          <span><strong>'{state.inputReq}'</strong></span>
+                          <span> contém caracteres que não podemos consultar: </span>
+                          <span><strong>" {formatPuncts(state.punct)} "</strong></span>
+                          {state.foundVerb && (
+                            <>
+                              <span> Mas encontramos o verbo <span>
+                              </span><strong>'{state.foundVerb}'</strong></span>
+                              <span>, que você pode conjugar clicando no botão abaixo:</span>
+                              <p>
+                                <Button 
+                                  ref={buttonRef}
+                                  onClick={() => { handleVerbClick((state.foundVerb as string)) }}
+                                >
+                                  {state.foundVerb}
+                                </Button>
+                              </p>
+                            </>
+                          )}
+                        </p>
                       </div>
-                      <p>
+                      <div className={styles.lascou_foot}>
                         <Button onClick={handleHome}>voltar para o início</Button>
-                      </p>
-                    </>
+                      </div>
+                    </div>
                   }
-                  {!state.hasNonPrefixVerb && !state.hasPunct && (
+                  {!state.originalVerb && !state.varPrefixFounded && state.punct === null && (
                     <>
-                      {state.similar === null && !state.formattedIsForced && (
+                      {!state.varForcedVerb && state.similar === null && (
                         <>
                           <h2>
                             <span>{ohNo}</span>
@@ -262,7 +265,7 @@ const Conjugations = () => {
                           </Button>
                         </>
                       )}
-                      {state.similar !== null && !state.formattedIsForced && (
+                      {!state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -289,7 +292,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar === null && state.formattedIsForced && (
+                      {state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -312,7 +315,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar !== null && state.formattedIsForced && (
+                      {state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>{eita}</h2>
                           <p>
@@ -337,9 +340,9 @@ const Conjugations = () => {
                       )}
                     </>
                   )}
-                  {state.hasNonPrefixVerb && !state.hasPunct && (
+                  {!state.originalVerb && state.varPrefixFounded && state.punct === null && (
                     <>
-                      {state.similar === null && !state.formattedIsForced && (
+                      {!state.varForcedVerb && state.similar === null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -362,7 +365,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar !== null && !state.formattedIsForced && (
+                      {!state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -389,7 +392,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar === null && state.formattedIsForced && (
+                      {state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -412,13 +415,13 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.similar !== null && state.formattedIsForced && (
+                      {state.varForcedVerb && state.similar !== null && (
                         <>
                           <h2>
                             <span>{eita}</span>
                           </h2>
                           <p>
-                            <span>[err 12] </span>
+                            <span>[err 24] </span>
                             <span>Quando buscamos a palavra </span>
                             <span><strong>'{state.inputReq}', </strong></span>
                             <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
@@ -453,7 +456,7 @@ const Conjugations = () => {
               )}
             </div>
             <div>
-              {state.conjugations !== null && !state.askForSimilar &&  (
+              {state.conjugations !== null && (
                 <>
                   <h2>Verbo {state.foundVerb}</h2>
                   <p>{state.note_plain}</p>

@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
-import { ni, nw } from "./normalizeVerb";
+import { ni } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
-import isValidPrefix from "./isValidPrefix";
 
 export const flowOfReact = () => {
   const [state, setState] = useState<{
@@ -14,9 +13,7 @@ export const flowOfReact = () => {
     inputReq: string;
     showConjugations: boolean;
     foundVerb: string | null;
-    isValidVerb: boolean;
     abundance: object | null | undefined;
-    afixo: string | null | undefined;
     ending: string | null | undefined;
     hasTarget: string | boolean | null ;
     note_plain: string[] | null | undefined;
@@ -30,18 +27,24 @@ export const flowOfReact = () => {
     showHome: boolean;
     showSobre: boolean;
     showReviewButton: boolean;
-    hasNonPrefixVerb: boolean;
-    nonPrefixVerb: string | null;
-    similar: string[] | null;
-    askForSimilar: boolean;
-    hasPunct: boolean;
-    puncts: string[] | null;
-    formattedForcedVerb: string | null,
-    formattedIsForced: boolean;
-    formattedOriginalInput: string | null;
-    formattedValidPrefix: boolean;
     goThrough: boolean;
     enter: boolean;
+
+    originalVerb: object | null;
+    variationVerb: object| null,
+    result: boolean,
+    findedWord: string | null,
+    similar: string[] | null,
+    punct: string [] | null,
+
+    variations: object | null,
+    varHasVariations: boolean,
+    varProcessedInput: string | null,
+    varForcedVerb: boolean,
+    varPrefixFounded: boolean,
+    varMatchingAfixo: string | null,
+    varConector: string | null,
+    varOriginalInput: string | null,
 
   }>({
 
@@ -50,9 +53,7 @@ export const flowOfReact = () => {
     inputReq: "",
     showConjugations: false,
     foundVerb: null,
-    isValidVerb: false,
     abundance: null,
-    afixo: null,
     ending: null,
     hasTarget: null,
     note_plain: null,
@@ -66,18 +67,24 @@ export const flowOfReact = () => {
     showHome: true,
     showSobre: false,
     showReviewButton: false,
-    hasNonPrefixVerb: false,
-    nonPrefixVerb: null,
-    similar: null,
-    askForSimilar: false,
-    hasPunct:false,
-    puncts: null,
-    formattedForcedVerb: null,
-    formattedIsForced: false,
-    formattedOriginalInput: null,
-    formattedValidPrefix: false,
     goThrough: false,
     enter: false,
+
+    originalVerb: null,
+    variationVerb: null,
+    result: false,
+    findedWord: null,
+    similar: null,
+    punct: null,
+
+    variations: null,
+    varHasVariations: false,
+    varProcessedInput: null,
+    varForcedVerb: false,
+    varPrefixFounded: false,
+    varMatchingAfixo: null,
+    varConector: null,
+    varOriginalInput: null,
 
   });
 
@@ -112,145 +119,148 @@ export const flowOfReact = () => {
         showHome: false,
         showSobre: false,
         showReviewButton: false,
-        hasNonPrefixVerb: false,
-        nonPrefixVerb: null,
-        askForSimilar: false,
 
         foundVerb: null,
-        isValidVerb: false,
         abundance: null,
-        afixo: null,
         ending: null,
         hasTarget: null,
         note_plain: null,
         note_ref: null,
         types: null,
-        similar: null,
-        hasPunct:false,
-        puncts: null,
-        formattedForcedVerb: null,
-        formattedIsForced: false,
-        formattedOriginalInput: null,
-        formattedValidPrefix: false,
+
         goThrough: false,
+
+        originalVerb: null,
+        variationVerb: null,
+        result: false,
+        findedWord: null,
+        similar: null,
+        punct: null,
+
+        variations: null,
+        varHasVariations: false,
+        varProcessedInput: null,
+        varForcedVerb: false,
+        varPrefixFounded: false,
+        varMatchingAfixo: null,
+        varConector: null,
+        varOriginalInput: null,
 
       }));
 
-      let isRePrefix = isValidPrefix(nw(state.inputValue))
-      let hasNonPrefixVerb = false
-      let nonPrefixVerb = null
+      if (normalizedInputValue === "") {
 
-      if ( isRePrefix.isValid ) {
+        setState(prev => ({
+          ...prev,
+        }));
 
-        let or = state.inputValue.replace((isRePrefix.afixo as string), '').replace(/-/g, '');
-        const apiRes = await isValidVerbByAPI(ni(or))
-        hasNonPrefixVerb = apiRes.result
-        nonPrefixVerb = apiRes.findedWord
+        return
 
       }
 
-      setState(prev => ({
-        ...prev,
-        hasNonPrefixVerb: hasNonPrefixVerb,
-        nonPrefixVerb: nonPrefixVerb
-      }))
+      const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
+      const originalVerb = apiResponse.originalVerb;
+      const variationVerb = apiResponse.variationVerb;
 
-      let result = false;
-      let findedWord = "";
-      let similar = null
-      let hasPunct  = false
-      let punct  = null
-      let formattedForcedVerb = null
-      let formattedIsForced = false
-      let formattedOriginalInput = null
-      let formattedValidPrefix = false
-  
       if (normalizedInputValue !== "") {
-
-        const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-
-        result = apiResponse.result;
-        findedWord = apiResponse.findedWord;
-        similar = apiResponse.similar;
-        hasPunct = apiResponse.hasPunct;
-        punct = apiResponse.punct;
-        formattedForcedVerb = apiResponse.formatted.forcedVerb;
-        formattedIsForced = apiResponse.formatted.isForced;
-        formattedOriginalInput = apiResponse.formatted.originalInput;
-        formattedValidPrefix = apiResponse.formatted.validPrefix
+        
+        setState(prev => ({
+          ...prev,
+          originalVerb: originalVerb,
+          variationVerb: variationVerb
+        }))
 
       }
 
-      setState(prev => ({
-        ...prev,
-        result: result,
-        findedWord: findedWord,
-        similar: similar,
-        hasPunct: hasPunct,
-        punct: punct,
-        formattedForcedVerb: formattedForcedVerb,
-        formattedIsForced: formattedIsForced,
-        formattedOriginalInput: formattedOriginalInput,
-        formattedValidPrefix:formattedValidPrefix
-      }))
-
-      if (hasPunct) {
+      if (originalVerb === null && variationVerb === null ) {
 
         setState(prev => ({
           ...prev,
           loading: false,
           showButton: true,
-          conjugations: null,
-          isValidVerb: result,
-          foundVerb: findedWord
+        }));
+
+        return
+
+      }
+
+      let puncts = null
+      puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
+
+
+      if (originalVerb !== null || variationVerb !== null ) {
+
+        setState(prev => ({          
+          ...prev,
+          punct: puncts
+        }))
+
+      }
+
+      if (puncts !== null) {
+
+        setState(prev => ({
+          
+          ...prev,
+          loading: false,
+          showButton: true,
+          punct: puncts,
+          foundVerb: apiResponse.originalVerb.findedWord || apiResponse.variationVerb.findedWord
 
         }));
 
         return
       }
 
-      if (!result) {
+      let result = false;
+      let findedWord = ''
+      let similar = null
+      let variations = null
+
+      let varHasVariations = false
+      let varForcedVerb = false 
+      let varProcessedInput = null
+      let varOriginalInput = null
+      let varPrefixFounded = false 
+      let varMatchingAfixo = null
+      let varConector = null
+
+      if (originalVerb === null && variationVerb !== null) {
+
+        result = apiResponse.variationVerb.result;
+        findedWord = apiResponse.variationVerb.findedWord;
+        similar = apiResponse.variationVerb.similar;
+        variations = apiResponse.variationVerb.variations;
+
+        varHasVariations = apiResponse.variationVerb.hasVariations;
+        varForcedVerb = apiResponse.variationVerb.variationVerb
+        varProcessedInput = apiResponse.variationVerb.processedInput;
+        varOriginalInput = apiResponse.variationVerb.originalInput;
+        varPrefixFounded = apiResponse.variationVerb.prefixFounded;
+        varMatchingAfixo = apiResponse.variationVerb.matchingAfixo;
+        varConector = apiResponse.variationVerb.conector;
 
         setState(prev => ({
+          
           ...prev,
+          inputReq: state.inputValue,
           loading: false,
           showButton: true,
-          showSuggestions: true,
           foundVerb: findedWord
 
         }));
 
-      } else {
+        return
 
-        if (formattedIsForced || findedWord !== formattedOriginalInput) {
+      }
 
-          setState(prev => ({
+      if (originalVerb !== null && variationVerb === null) {
 
-            ...prev,
-            loading: false,
-            showButton: true,
-            showSuggestions: true,
-            foundVerb: findedWord
+        result = apiResponse.originalVerb.result;
+        findedWord = apiResponse.originalVerb.findedWord;
+        similar = apiResponse.originalVerb.similar;
+        variations = apiResponse.originalVerb.variations;
 
-          }));
-
-          return
-        }
-
-        if (similar !== null && !state.goThrough) {
-
-          setState(prev => ({
-            ...prev,
-            loading: false,
-            showButton: true,
-            showSuggestions: true,
-            foundVerb: findedWord
-          }));
-
-          return
-
-        }
-        
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
 
         setState(prev => ({
@@ -279,25 +289,27 @@ export const flowOfReact = () => {
     }
 
     setState(prev => ({
+
       ...prev,
       enter:false
+
     }))
 
   };
 
   const dependencies = [
-    state.inputReq,
     state.conjugations,
-    state.hasTarget,
+    // state.inputValue,
+    state.inputReq,
     state.showConjugations,
     state.foundVerb,
     state.abundance,
-    state.afixo,
     state.ending,
+    state.hasTarget,
     state.note_plain,
     state.note_ref,
     state.types,
-    state.isValidVerb,
+    state.loading,
     state.suggestions,
     state.showButton,
     state.isButtonDisabled,
@@ -305,14 +317,22 @@ export const flowOfReact = () => {
     state.showHome,
     state.showSobre,
     state.showReviewButton,
-    state.hasNonPrefixVerb,
-    state.nonPrefixVerb,
-    state.similar,
-    state.askForSimilar,
-    state.hasPunct,
-    state.puncts,
     state.goThrough,
-
+    state.enter,
+    state.originalVerb,
+    state.variationVerb,
+    state.result,
+    state.findedWord,
+    state.similar,
+    state.punct,
+    state.variations,
+    state.varHasVariations,
+    state.varProcessedInput,
+    state.varForcedVerb,
+    state.varPrefixFounded,
+    state.varMatchingAfixo,
+    state.varConector,
+    state.varOriginalInput,
   ];
   
   useEffect(() => {
@@ -322,12 +342,11 @@ export const flowOfReact = () => {
       inputReq: state.inputReq,
       showConjugations: state.showConjugations,
       foundVerb: state.foundVerb,
-      isValidVerb: state.isValidVerb,
       abundance: state.abundance,
-      afixo: state.afixo,
       ending: state.ending,
       hasTarget: state.hasTarget,
-      note_plain: state.note_ref,
+      note_plain: state.note_plain, // Corrigido de state.note_ref para state.note_plain
+      note_ref: state.note_ref,
       types: state.types,
       loading: state.loading,
       suggestions: state.suggestions,
@@ -337,18 +356,26 @@ export const flowOfReact = () => {
       showHome: state.showHome,
       showSobre: state.showSobre,
       showReviewButton: state.showReviewButton,
-      hasNonPrefixVerb: state.hasNonPrefixVerb,
-      nonPrefixVerb: state.nonPrefixVerb,
-      similar: state.similar,
-      askForSimilar: state.askForSimilar,
-      hasPunct: state.hasPunct,
-      puncts: state.puncts,
       goThrough: state.goThrough,
-
+      enter: state.enter, // Adicionado porque estava no array de dependências
+      originalVerb: state.originalVerb,
+      variationVerb: state.variationVerb,
+      result: state.result,
+      findedWord: state.findedWord,
+      similar: state.similar,
+      punct: state.punct,
+      variations: state.variations,
+      varHasVariations: state.varHasVariations,
+      varProcessedInput: state.varProcessedInput,
+      varForcedVerb: state.varForcedVerb,
+      varPrefixFounded: state.varPrefixFounded,
+      varMatchingAfixo: state.varMatchingAfixo,
+      varConector: state.varConector,
+      varOriginalInput: state.varOriginalInput,
     };
   
-    // console.log(data);
-  }, dependencies);
+    console.log(data);
+  }, dependencies);  
 
   return {
     state,
