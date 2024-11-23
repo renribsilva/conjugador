@@ -225,9 +225,11 @@ const Conjugations = () => {
                           <span><strong>" {formatPuncts(state.punct)} "</strong></span>
                           {state.foundVerb && (
                             <>
-                              <span> Mas encontramos o verbo <span>
-                              </span><strong>'{state.foundVerb}'</strong></span>
-                              <span>, que você pode conjugar clicando no botão abaixo:</span>
+                              <>
+                                <span> Mas encontramos o verbo <span>
+                                </span><strong>'{state.foundVerb}'</strong></span>
+                                <span>, que você pode conjugar clicando no botão abaixo:</span>
+                              </>
                               <p>
                                 <Button 
                                   ref={buttonRef}
@@ -245,7 +247,7 @@ const Conjugations = () => {
                       </div>
                     </div>
                   }
-                  {!state.originalVerb && !state.varPrefixFounded && state.punct === null && (
+                  {!state.varPrefixFounded && state.punct === null && (
                     <>
                       {!state.varForcedVerb && state.similar === null && (
                         <>
@@ -292,7 +294,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.varForcedVerb && state.similar !== null && (
+                      {state.varForcedVerb && state.similar === null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -320,7 +322,7 @@ const Conjugations = () => {
                           <h2>{eita}</h2>
                           <p>
                             <span>[err 14] </span>
-                            <span>{`Encontramos algumas palavras que podem estar entre as que quer conjugar. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:`}</span>
+                            <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
                           </p>
                           <div>
                             <ul className={styles.similarButton}>
@@ -340,7 +342,7 @@ const Conjugations = () => {
                       )}
                     </>
                   )}
-                  {!state.originalVerb && state.varPrefixFounded && state.punct === null && (
+                  {state.varPrefixFounded && state.punct === null && (
                     <>
                       {!state.varForcedVerb && state.similar === null && (
                         <>
@@ -348,7 +350,7 @@ const Conjugations = () => {
                             <span>{eita}</span>
                           </h2>
                           <p>
-                            <span>[err 23] </span>
+                            <span>[err 21] </span>
                             <span>Não encontramos a palavra </span>
                             <span><strong>'{state.inputReq}'</strong></span>
                             <span> solicitada. Mas encontramos o verbo </span>
@@ -392,7 +394,7 @@ const Conjugations = () => {
                           </div>
                         </>
                       )}
-                      {state.varForcedVerb && state.similar !== null && (
+                      {state.varForcedVerb && state.similar === null && (
                         <>
                           <h2>
                             <span>{eita}</span>
@@ -417,14 +419,10 @@ const Conjugations = () => {
                       )}
                       {state.varForcedVerb && state.similar !== null && (
                         <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
+                          <h2>{eita}</h2>
                           <p>
                             <span>[err 24] </span>
-                            <span>Quando buscamos a palavra </span>
-                            <span><strong>'{state.inputReq}', </strong></span>
-                            <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
+                            <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
                           </p>
                           <div>
                             <ul className={styles.similarButton}>

@@ -225,20 +225,20 @@ export const flowOfReact = () => {
       let varMatchingAfixo = null
       let varConector = null
 
-      if (originalVerb === null && variationVerb !== null) {
+      if (variationVerb !== null && originalVerb === null) {
 
         result = apiResponse.variationVerb.result;
         findedWord = apiResponse.variationVerb.findedWord;
         similar = apiResponse.variationVerb.similar;
         variations = apiResponse.variationVerb.variations;
 
-        varHasVariations = apiResponse.variationVerb.hasVariations;
-        varForcedVerb = apiResponse.variationVerb.variationVerb
-        varProcessedInput = apiResponse.variationVerb.processedInput;
-        varOriginalInput = apiResponse.variationVerb.originalInput;
-        varPrefixFounded = apiResponse.variationVerb.prefixFounded;
-        varMatchingAfixo = apiResponse.variationVerb.matchingAfixo;
-        varConector = apiResponse.variationVerb.conector;
+        varHasVariations = apiResponse.variationVerb.variations.hasVariations;
+        varForcedVerb = apiResponse.variationVerb.variations.forcedVerb
+        varProcessedInput = apiResponse.variationVerb.variations.processedInput;
+        varOriginalInput = apiResponse.variationVerb.variations.originalInput;
+        varPrefixFounded = apiResponse.variationVerb.variations.prefixFounded;
+        varMatchingAfixo = apiResponse.variationVerb.variations.matchingAfixo;
+        varConector = apiResponse.variationVerb.variations.conector;
 
         setState(prev => ({
           
@@ -246,7 +246,17 @@ export const flowOfReact = () => {
           inputReq: state.inputValue,
           loading: false,
           showButton: true,
-          foundVerb: findedWord
+
+          varHasVariations: varHasVariations,
+          varForcedVerb: varForcedVerb,
+          varProcessedInput: varProcessedInput,
+          varOriginalInput: varOriginalInput,
+          varPrefixFounded: varPrefixFounded,
+          varMatchingAfixo: varMatchingAfixo,
+          varConector: varConector,
+
+          foundVerb: findedWord,
+          similar: similar
 
         }));
 
@@ -261,9 +271,27 @@ export const flowOfReact = () => {
         similar = apiResponse.originalVerb.similar;
         variations = apiResponse.originalVerb.variations;
 
+        if  (similar !== null) {
+
+          setState(prev => ({
+
+            ...prev,
+            inputReq: state.inputValue,
+            loading: false,
+            showButton: true,
+
+            foundVerb: findedWord,
+            similar: similar
+
+          }));
+
+          return
+        }
+
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
 
         setState(prev => ({
+
           ...prev,
           ending: propsOfWord[0].ending,
           hasTarget: propsOfWord[0].hasTarget,
@@ -274,7 +302,10 @@ export const flowOfReact = () => {
           afixo: propsOfWord[0].afixo,
           showReviewButton: true,
           goThrough: false,
-          foundVerb:findedWord
+
+          foundVerb:findedWord,
+          similar: similar
+          
         }));
 
         await conjVerbByAPI(ni(findedWord));

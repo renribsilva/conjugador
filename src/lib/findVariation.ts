@@ -54,7 +54,7 @@ export default function findVariations(input: string): ValidPrefixResult {
         prefixFounded: false,
         matchingAfixo: null,
         conector: null,
-        status: "1: PREFIX = NO, VARIATION = NO"
+        status: "1: PREFIX = NO, FORCED = NO"
       };
 
       cache.set(input, result);
@@ -73,7 +73,7 @@ export default function findVariations(input: string): ValidPrefixResult {
         prefixFounded: false,
         matchingAfixo: null,
         conector: null,
-        status: "2: PREFIX = NO, VARIATION = YES"
+        status: "2: PREFIX = NO, FORCED = YES"
       };
       cache.set(input, result);
       return result;
@@ -106,7 +106,7 @@ export default function findVariations(input: string): ValidPrefixResult {
         prefixFounded: true,
         matchingAfixo,
         conector,
-        status: "3: PREFIX = YES, VARIATION = NO"
+        status: "3: PREFIX = YES, FORCED = NO"
       };
 
       cache.set(input, result);
@@ -124,7 +124,7 @@ export default function findVariations(input: string): ValidPrefixResult {
         prefixFounded: true,
         matchingAfixo,
         conector,
-        status: "4: PREFIX = YES, VARIATION = YES"
+        status: "4: PREFIX = YES, FORCED = YES"
       };
       cache.set(input, result);
       return result;
@@ -141,7 +141,7 @@ export default function findVariations(input: string): ValidPrefixResult {
       prefixFounded: false,
       matchingAfixo,
       conector: null,
-      status: "5: PREFIX = NO, VARIATION = NO"
+      status: "5: PREFIX = NO, FORCED = NO"
     };
 
     cache.set(input, result);
@@ -151,8 +151,8 @@ export default function findVariations(input: string): ValidPrefixResult {
   const variation = tryVariations(verb, 0, normalizedVerbs);
 
   const result = {
-    hasVariations: false,
-    forcedVerb: false,
+    hasVariations: true,
+    forcedVerb: true,
     processedInput: variation,
     originalInput,
     prefixFounded: false,

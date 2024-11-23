@@ -5,7 +5,7 @@
   forced (V) && similar (V) - 
 
 !hasNonPrefixedVerb (V)
-  forced (F) && similar (F) - 
+  forced (F) && similar (F) - repousar
   forced (F) && similar (V) - reabracar/reabraçar
   forced (V) && similar (F) - realcar | remacar
   forced (V) && similar (V) - 
