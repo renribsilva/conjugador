@@ -174,11 +174,11 @@ const Conjugations = () => {
               </button>
             </div>
             <div className={styles.button_inf}>
-              <div className={styles.buttonSobre}>
-                <button onClick={handleHome} className={styles.button_about}>início</button>
+              <div>
+                <button onClick={handleHome} className={styles.button_nav}>início</button>
               </div>
-              <div className={styles.buttonSobre}>
-                <button onClick={handleSobre} className={styles.button_about}>sobre</button>
+              <div>
+                <button onClick={handleSobre} className={styles.button_nav}>sobre</button>
               </div>
               <div className={styles.buttonTheme}>
                 <Theme />
@@ -248,195 +248,233 @@ const Conjugations = () => {
                   {!state.varPrefixFounded && state.punct === null && (
                     <>
                       {!state.varForcedVerb && state.similar === null && (
-                        <>
-                          <h2>
-                            <span>{ohNo}</span>
-                          </h2>
-                          <p>
-                            <span>[err 11] </span>
-                            <span>A palavra </span>
-                            <span><strong>{`'${state.inputReq}'`}</strong></span>
-                            <span> não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?</span>
-                          </p>
-                          <Button 
-                            onClick={() => handleSolicitar(state.inputReq)}
-                          >
-                            solicitar
-                          </Button>
-                        </>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>{ohNo}</h2>
+                            <p>
+                              <span>[err 11] </span>
+                              <span>A palavra </span>
+                              <span><strong>{`'${state.inputReq}'`}</strong></span>
+                              <span> não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?</span>
+                            </p>
+                            <Button 
+                              onClick={() => handleSolicitar(state.inputReq)}
+                            >
+                              solicitar
+                            </Button>
+                          </div>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {!state.varForcedVerb && state.similar !== null && (
-                        <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
-                          <p>
-                            <span>[err 12] </span>
-                            <span>Quando buscamos a palavra </span>
-                            <span><strong>'{state.inputReq}', </strong></span>
-                            <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
-                          </p>
-                          <div>
-                            <ul className={styles.similarButton}>
-                              {state.similar?.map((verb, index) => (
-                                <li key={index}>
-                                  <Button 
-                                    ref={buttonRef}
-                                    onClick={() => { handleVerbClick(verb) }}
-                                  >
-                                    {verb}
-                                  </Button>
-                                </li>
-                              ))}
-                            </ul>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>
+                              <span>{eita}</span>
+                            </h2>
+                            <p>
+                              <span>[err 12] </span>
+                              <span>Quando buscamos a palavra </span>
+                              <span><strong>'{state.inputReq}', </strong></span>
+                              <span>encontramos duas palavras com pequenas diferenças formais. Por isso, você pode escolher qual forma conjugar, clicando no palavra desejada:</span>
+                            </p>
+                            <div>
+                              <ul className={styles.similarButton}>
+                                {state.similar?.map((verb, index) => (
+                                  <li key={index}>
+                                    <Button 
+                                      ref={buttonRef}
+                                      onClick={() => { handleVerbClick(verb) }}
+                                    >
+                                      {verb}
+                                    </Button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {state.varForcedVerb && state.similar === null && (
-                        <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
-                          <p>
-                            <span>[err 13] </span>
-                            <span>Não encontramos a palavra </span>
-                            <span><strong>'{state.inputReq}'</strong></span>
-                            <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'.</strong></span>
-                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
-                          </p>
-                          <div>
-                          <Button 
-                            ref={buttonRef}
-                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                          >
-                            {state.foundVerb}
-                          </Button>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>
+                              <span>{eita}</span>
+                            </h2>
+                            <p>
+                              <span>[err 13] </span>
+                              <span>Não encontramos a palavra </span>
+                              <span><strong>'{state.inputReq}'</strong></span>
+                              <span> solicitada. Mas encontramos o verbo </span>
+                              <span><strong>'{state.foundVerb}'.</strong></span>
+                              <span> Caso queira conjugá-lo, clique no botão abaixo</span>
+                            </p>
+                            <div>
+                              <Button 
+                                ref={buttonRef}
+                                onClick={() => { handleVerbClick((state.foundVerb as string)) }}
+                              >
+                                {state.foundVerb}
+                              </Button>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {state.varForcedVerb && state.similar !== null && (
-                        <>
-                          <h2>{eita}</h2>
-                          <p>
-                            <span>[err 14] </span>
-                            <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
-                          </p>
-                          <div>
-                            <ul className={styles.similarButton}>
-                              {state.similar?.map((verb, index) => (
-                                <li key={index}>
-                                  <Button 
-                                    ref={buttonRef}
-                                    onClick={() => { handleVerbClick(verb) }}
-                                  >
-                                    {verb}
-                                  </Button>
-                                </li>
-                              ))}
-                            </ul>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>{eita}</h2>
+                            <p>
+                              <span>[err 14] </span>
+                              <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
+                            </p>
+                            <div>
+                              <ul className={styles.similarButton}>
+                                {state.similar?.map((verb, index) => (
+                                  <li key={index}>
+                                    <Button 
+                                      ref={buttonRef}
+                                      onClick={() => { handleVerbClick(verb) }}
+                                    >
+                                      {verb}
+                                    </Button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                     </>
                   )}
                   {state.varPrefixFounded && state.punct === null && (
                     <>
                       {!state.varForcedVerb && state.similar === null && (
-                        <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
-                          <p>
-                            <span>[err 21] </span>
-                            <span>Não encontramos a palavra </span>
-                            <span><strong>'{state.inputReq}'</strong></span>
-                            <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'.</strong></span>
-                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
-                          </p>
-                          <div>
-                          <Button 
-                            ref={buttonRef}
-                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                          >
-                            {state.foundVerb}
-                          </Button>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>
+                              <span>{eita}</span>
+                            </h2>
+                            <p>
+                              <span>[err 21] </span>
+                              <span>Não encontramos a palavra </span>
+                              <span><strong>'{state.inputReq}'</strong></span>
+                              <span> solicitada. Mas encontramos o verbo </span>
+                              <span><strong>'{state.foundVerb}'.</strong></span>
+                              <span> Caso queira conjugá-lo, clique no botão abaixo</span>
+                            </p>
+                            <div>
+                            <Button 
+                              ref={buttonRef}
+                              onClick={() => { handleVerbClick((state.foundVerb as string)) }}
+                            >
+                              {state.foundVerb}
+                            </Button>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {!state.varForcedVerb && state.similar !== null && (
-                        <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
-                          <p>
-                            <span>[err 22] </span>
-                            <span>Não encontramos a palavra </span>
-                            <span><strong>'{state.inputReq}'</strong></span>
-                            <span>. Mas encontramos palavras muito parecidas. Clique no botão da palavra que gostaria de conjugar:</span>
-                          </p>
-                          <div>
-                            <ul className={styles.similarButton}>
-                              {state.similar?.map((verb, index) => (
-                                <li key={index}>
-                                  <Button 
-                                    ref={buttonRef}
-                                    onClick={() => { handleVerbClick(verb) }}
-                                  >
-                                    {verb}
-                                  </Button>
-                                </li>
-                              ))}
-                            </ul>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>
+                              <span>{eita}</span>
+                            </h2>
+                            <p>
+                              <span>[err 22] </span>
+                              <span>Não encontramos a palavra </span>
+                              <span><strong>'{state.inputReq}'</strong></span>
+                              <span>. Mas encontramos palavras muito parecidas. Clique no botão da palavra que gostaria de conjugar:</span>
+                            </p>
+                            <div>
+                              <ul className={styles.similarButton}>
+                                {state.similar?.map((verb, index) => (
+                                  <li key={index}>
+                                    <Button 
+                                      ref={buttonRef}
+                                      onClick={() => { handleVerbClick(verb) }}
+                                    >
+                                      {verb}
+                                    </Button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {state.varForcedVerb && state.similar === null && (
-                        <>
-                          <h2>
-                            <span>{eita}</span>
-                          </h2>
-                          <p>
-                            <span>[err 23] </span>
-                            <span>Não encontramos a palavra </span>
-                            <span><strong>'{state.inputReq}'</strong></span>
-                            <span> solicitada. Mas encontramos o verbo </span>
-                            <span><strong>'{state.foundVerb}'.</strong></span>
-                            <span> Caso queira conjugá-lo, clique no botão abaixo</span>
-                          </p>
-                          <div>
-                          <Button 
-                            ref={buttonRef}
-                            onClick={() => { handleVerbClick((state.foundVerb as string)) }}
-                          >
-                            {state.foundVerb}
-                          </Button>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>
+                              <span>{eita}</span>
+                            </h2>
+                            <p>
+                              <span>[err 23] </span>
+                              <span>Não encontramos a palavra </span>
+                              <span><strong>'{state.inputReq}'</strong></span>
+                              <span> solicitada. Mas encontramos o verbo </span>
+                              <span><strong>'{state.foundVerb}'.</strong></span>
+                              <span> Caso queira conjugá-lo, clique no botão abaixo</span>
+                            </p>
+                            <div>
+                            <Button 
+                              ref={buttonRef}
+                              onClick={() => { handleVerbClick((state.foundVerb as string)) }}
+                            >
+                              {state.foundVerb}
+                            </Button>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                       {state.varForcedVerb && state.similar !== null && (
-                        <>
-                          <h2>{eita}</h2>
-                          <p>
-                            <span>[err 24] </span>
-                            <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
-                          </p>
-                          <div>
-                            <ul className={styles.similarButton}>
-                              {state.similar?.map((verb, index) => (
-                                <li key={index}>
-                                  <Button 
-                                    ref={buttonRef}
-                                    onClick={() => { handleVerbClick(verb) }}
-                                  >
-                                    {verb}
-                                  </Button>
-                                </li>
-                              ))}
-                            </ul>
+                        <div className={styles.lascou}>
+                          <div className={styles.lascou_main}>
+                            <h2>{eita}</h2>
+                            <p>
+                              <span>[err 24] </span>
+                              <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
+                            </p>
+                            <div>
+                              <ul className={styles.similarButton}>
+                                {state.similar?.map((verb, index) => (
+                                  <li key={index}>
+                                    <Button 
+                                      ref={buttonRef}
+                                      onClick={() => { handleVerbClick(verb) }}
+                                    >
+                                      {verb}
+                                    </Button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
-                        </>
+                          <div className={styles.lascou_foot}>
+                            <Button onClick={handleHome}>voltar para o início</Button>
+                          </div>
+                        </div>
                       )}
                     </>
                   )}

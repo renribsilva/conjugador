@@ -38,18 +38,3 @@ export type InputTypes = {
   E: (e: React.KeyboardEvent) => void;
   children?: React.ReactNode; 
 }
-
-export type APIResponse = {
-  result: boolean;
-  findedWord: string | null;
-  similar: string | null;
-  hasPunct: boolean;
-  punct: string | null;
-  hasPrefix: boolean;
-  formatted: {
-    forcedVerb: string| null;
-    originalInput: string | null;
-    isForced: boolean;
-    validPrefix: boolean;
-  };
-};
