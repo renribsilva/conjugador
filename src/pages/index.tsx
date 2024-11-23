@@ -175,12 +175,10 @@ const Conjugations = () => {
             </div>
             <div className={styles.button_inf}>
               <div className={styles.buttonSobre}>
-                <button 
-                  onClick={handleSobre}
-                  className={styles.button_about}
-                >
-                  Sobre
-                </button>
+                <button onClick={handleHome} className={styles.button_about}>início</button>
+              </div>
+              <div className={styles.buttonSobre}>
+                <button onClick={handleSobre} className={styles.button_about}>sobre</button>
               </div>
               <div className={styles.buttonTheme}>
                 <Theme />
