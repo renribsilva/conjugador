@@ -4058,9 +4058,6 @@
   "altanear": [
     "altanear"
   ],
-  "altar": [
-    "altar"
-  ],
   "altear": [
     "altear"
   ],
@@ -4177,9 +4174,6 @@
   ],
   "alvanir": [
     "alvanir"
-  ],
-  "alvar": [
-    "alvar"
   ],
   "alvazir": [
     "alvazir"
@@ -17825,9 +17819,6 @@
   "diamantizar": [
     "diamantizar"
   ],
-  "diapir": [
-    "diapir"
-  ],
   "diarizar": [
     "diarizar"
   ],
@@ -27381,9 +27372,6 @@
   ],
   "espajegar": [
     "espajegar"
-  ],
-  "espaldar": [
-    "espaldar"
   ],
   "espaldear": [
     "espaldear"
@@ -51138,7 +51126,6 @@
     "tangenciar"
   ],
   "tanger": [
-    "tânger",
     "tanger"
   ],
   "tangibilizar": [
@@ -51185,9 +51172,6 @@
   ],
   "tapiçar": [
     "tapiçar"
-  ],
-  "tapir": [
-    "tapir"
   ],
   "tapizar": [
     "tapizar"
@@ -55583,9 +55567,6 @@
   "zurzir": [
     "zurzir"
   ],
-  "desabrir": [
-    "desabrir"
-  ],
   "inundar": [
     "inundar"
   ],
@@ -55597,6 +55578,12 @@
   ],
   "reiniciar": [
     "reiniciar"
+  ],
+  "abaixar": [
+    "abaixar"
+  ],
+  "desabrir": [
+    "desabrir"
   ],
   "aferir": [
     "aferir"

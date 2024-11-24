@@ -23,7 +23,7 @@ export function findSimilarWords(normalizedJsonObject: Record<string, string>, n
   for (const [normalizedKey, originalKey] of Object.entries(normalizedJsonObject)) {
     if (
       normalizedKey !== normalizedVerb &&
-      (normalizedKey.replace(/ç/g, 'c') === normalizedVerb || normalizedKey.replace(/c/g, 'ç') === normalizedVerb)
+      (normalizedKey.replace(/ç/g, 'c') === normalizedVerb )
     ) {
       similarWords.push(originalKey);
     }

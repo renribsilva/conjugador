@@ -73,7 +73,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   let endingwithoutpunct = ''
   let verbwithoutprefix = variationsProps.processedInput;
 
-  if (endingsThatStartWith.length > 0 && verbwithoutprefix) {
+  if (endingsThatStartWith.length > 0 && verbwithoutprefix !== null) {
 
     const match = endingsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
 
@@ -88,12 +88,21 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   // console.log(verbwithoutprefix)
 
 
-  if (endingsThatStartWith && endingsThatStartWith[0] !== "..." && nw(endingwithoutpunct) !== nw(verbwithoutprefix)) {
+  if (
+
+    endingsThatStartWith && 
+    endingsThatStartWith[0] !== "..." && 
+    verbwithoutprefix !== null &&
+    nw(endingwithoutpunct) !== nw(verbwithoutprefix)
+
+  ){
+
     return getDefaultResponse();
+
   }
 
   for (const ending of endingsThatStartWith) {
-    if (variationsProps.prefixFounded && verb.endsWith(ending.substring(3))) {
+    if (verb.endsWith(ending.substring(3))) {
       const baseVerbRules = verbRules[ending];
       if (baseVerbRules?.rules) {
         const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);

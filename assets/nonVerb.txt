@@ -5,10 +5,14 @@ alcar
 cometar
 ácar
 acar
+altar
+alvar
+espaldar
 
 twitter
 amber
 embraer
+tânger
 
 tacir
 acir
@@ -21,6 +25,8 @@ jamir
 valdir
 aldir
 sabir
+diapir
+tapir
 
 aerovapor
 caapor

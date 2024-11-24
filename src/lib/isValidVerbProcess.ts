@@ -49,8 +49,8 @@ export async function processVerb (verb: string) {
     };
   } 
   
-  // console.log(variations)
   const variations = findVariations(cleanedVerb)
+  // console.log()
   
   if (variations.processedInput) {
     

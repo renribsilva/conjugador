@@ -287,9 +287,9 @@ export const flowOfReact = () => {
 
           return
         }
-
+        
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
-
+        
         setState(prev => ({
 
           ...prev,

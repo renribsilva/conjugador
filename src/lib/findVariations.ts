@@ -31,40 +31,107 @@ export default function findVariations(input: string): ValidPrefixResult {
     .slice()
     .sort((a, b) => b.length - a.length);
 
-  let prefixExists = false;
-  let matchingAfixo: string | null = null;
+  const matchingAfixos = sortedAfixos.filter((afixo) => verb.startsWith(afixo));
 
-  for (const afixo of sortedAfixos) {
-    if (verb.startsWith(afixo)) {
-      matchingAfixo = afixo;
-      prefixExists = true;
-      break;
+  for (const matchingAfixo of matchingAfixos) {
+
+    if (matchingAfixo.length === 0) {
+      if (allVerbsSet.has(verb)) {
+        const result = {
+          hasVariations: false,
+          forcedVerb: false,
+          processedInput: verb,
+          originalInput,
+          prefixFounded: false,
+          matchingAfixo: null,
+          conector: null,
+          status: "1: PREFIX = NO, FORCED = NO"
+        };
+        cache.set(input, result);
+        return result;
+      }
+  
+      const variation = tryVariations(verb, 0, normalizedVerbs);
+      if (variation && allVerbsSet.has(variation)) {
+        const result = {
+          hasVariations: true,
+          forcedVerb: true,
+          processedInput: variation,
+          originalInput,
+          prefixFounded: false,
+          matchingAfixo: null,
+          conector: null,
+          status: "2: PREFIX = NO, FORCED = YES"
+        };
+        cache.set(input, result);
+        return result;
+      }
     }
-  }
+  
+    if (matchingAfixo.length > 0) {
+      let restOfVerb = verb.slice(matchingAfixo.length);
+      let conector: string | null = null;
 
-  if (!prefixExists && matchingAfixo === null) {
+      if (/^([rs])\1/.test(restOfVerb)) {
+        conector = restOfVerb[0];
+        restOfVerb = restOfVerb.slice(1);
+      } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) {
+        conector = 'n';
+        restOfVerb = restOfVerb.slice(1);
+      } else if (/^m[pb]/.test(restOfVerb)) {
+        conector = 'm';
+        restOfVerb = restOfVerb.slice(1);
+      }
+
+      if (allVerbsSet.has(restOfVerb)) {
+        const result = {
+          hasVariations: true,
+          forcedVerb: false,
+          processedInput: restOfVerb,
+          originalInput,
+          prefixFounded: true,
+          matchingAfixo,
+          conector,
+          status: "3: PREFIX = YES, FORCED = NO"
+        };
+        cache.set(input, result);
+        return result;
+      }
+
+      const variation = tryVariations(restOfVerb, 0, normalizedVerbs);
+      if (variation && allVerbsSet.has(variation)) {
+        const result = {
+          hasVariations: true,
+          forcedVerb: true,
+          processedInput: variation,
+          originalInput,
+          prefixFounded: true,
+          matchingAfixo,
+          conector,
+          status: "4: PREFIX = YES, FORCED = YES"
+        };
+        cache.set(input, result);
+        return result;
+      }
+    }
 
     if (allVerbsSet.has(verb)) {
-        
       const result = {
         hasVariations: false,
         forcedVerb: false,
         processedInput: verb,
         originalInput,
         prefixFounded: false,
-        matchingAfixo: null,
+        matchingAfixo,
         conector: null,
-        status: "1: PREFIX = NO, FORCED = NO"
+        status: "5: PREFIX = NO, FORCED = NO"
       };
-
       cache.set(input, result);
-      return result
-
+      return result;
     }
 
     const variation = tryVariations(verb, 0, normalizedVerbs);
-
-    if (variation && allVerbsSet.has(variation)) {
+    if (variation) {
       const result = {
         hasVariations: true,
         forcedVerb: true,
@@ -73,95 +140,22 @@ export default function findVariations(input: string): ValidPrefixResult {
         prefixFounded: false,
         matchingAfixo: null,
         conector: null,
-        status: "2: PREFIX = NO, FORCED = YES"
+        status: "6: PREFIX = NO, VARIATION = YES"
       };
       cache.set(input, result);
       return result;
     }
   }
 
-  if (matchingAfixo && prefixExists) {
-
-    let restOfVerb = verb.slice(matchingAfixo.length);
-    let conector: string | null = null;
-
-    if (/^([rs])\1/.test(restOfVerb)) {
-      conector = restOfVerb[0];
-      restOfVerb = restOfVerb.slice(1);
-    } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) {
-      conector = 'n';
-      restOfVerb = restOfVerb.slice(1);
-    } else if (/^m[pb]/.test(restOfVerb)) {
-      conector = 'm';
-      restOfVerb = restOfVerb.slice(1);
-    }
-
-    if (allVerbsSet.has(restOfVerb)) {
-
-      const result = {
-        hasVariations: true,
-        forcedVerb: false,
-        processedInput: restOfVerb,
-        originalInput,
-        prefixFounded: true,
-        matchingAfixo,
-        conector,
-        status: "3: PREFIX = YES, FORCED = NO"
-      };
-
-      cache.set(input, result);
-      return result;
-    }
-
-    const variation = tryVariations(restOfVerb, 0, normalizedVerbs);
-
-    if (variation && allVerbsSet.has(variation)) {
-      const result = {
-        hasVariations: true,
-        forcedVerb: true,
-        processedInput: variation,
-        originalInput,
-        prefixFounded: true,
-        matchingAfixo,
-        conector,
-        status: "4: PREFIX = YES, FORCED = YES"
-      };
-      cache.set(input, result);
-      return result;
-    }
-  }
-
-  if (allVerbsSet.has(verb)) {
-
-    const result = {
-      hasVariations: false,
-      forcedVerb: false,
-      processedInput: verb,
-      originalInput,
-      prefixFounded: false,
-      matchingAfixo,
-      conector: null,
-      status: "5: PREFIX = NO, FORCED = NO"
-    };
-
-    cache.set(input, result);
-    return result;
-  }
-
-  const variation = tryVariations(verb, 0, normalizedVerbs);
-
-  const result = {
-    hasVariations: true,
-    forcedVerb: true,
-    processedInput: variation,
-    originalInput,
+  // Adicione um retorno de fallback aqui:
+  const fallbackResult = {
+    hasVariations: false,
+    forcedVerb: false,
+    processedInput: null,
+    originalInput: nw(input),
     prefixFounded: false,
     matchingAfixo: null,
     conector: null,
-    status: "6: PREFIX = NO, VARIATION = YES"
   };
-
-  cache.set(input, result);
-  return result;
-
+  return fallbackResult;
 }

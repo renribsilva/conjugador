@@ -9,6 +9,7 @@ import Home from "../mdx/Home.mdx";
 import Gracias from "../mdx/Gracias.mdx";
 import About from "../mdx/About.mdx";
 import Warning from "../mdx/Warning.mdx";
+import Emphasis from "../mdx/Emphasis.mdx";
 import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
@@ -94,7 +95,6 @@ const Conjugations = () => {
       inputRef.current.dispatchEvent(enterEvent);
       inputRef.current.focus();
     }
-    randomOhNo();
     randomAxi();
     randomEita();
   }, [state.enter]);
@@ -119,13 +119,6 @@ const Conjugations = () => {
 
   const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
 
-  const ohNoExpression = ["Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
-  const [ohNo, setOhNo] = useState<string>('');
-  const randomOhNo = () => {
-    const randomIndex = Math.floor(Math.random() * ohNoExpression.length);
-    setOhNo(ohNoExpression[randomIndex]);
-  };
-
   const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
   const [axi, setAxi] = useState<string>('');
   const randomAxi = () => {
@@ -133,7 +126,7 @@ const Conjugations = () => {
     setAxi(axiExpression[randomIndex]);
   };
 
-  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!"]
+  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
   const [eita, setEita] = useState<string>('');
   const randomEita = () => {
     const randomIndex = Math.floor(Math.random() * eitaExpression.length);
@@ -215,7 +208,7 @@ const Conjugations = () => {
                     <div className={styles.lascou}>
                       <div className={styles.lascou_main}>
                         <h2>{axi}</h2>
-                        <p>
+                        <div>
                           <span>[err 00] </span>
                           <span>A palavra </span>
                           <span><strong>'{state.inputReq}'</strong></span>
@@ -238,7 +231,7 @@ const Conjugations = () => {
                               </p>
                             </>
                           )}
-                        </p>
+                        </div>
                       </div>
                       <div className={styles.lascou_foot}>
                         <Button onClick={handleHome}>voltar para o início</Button>
@@ -250,7 +243,7 @@ const Conjugations = () => {
                       {!state.varForcedVerb && state.similar === null && (
                         <div className={styles.lascou}>
                           <div className={styles.lascou_main}>
-                            <h2>{ohNo}</h2>
+                            <h2>{eita}</h2>
                             <p>
                               <span>[err 11] </span>
                               <span>A palavra </span>
@@ -368,9 +361,9 @@ const Conjugations = () => {
                             </h2>
                             <p>
                               <span>[err 21] </span>
-                              <span>Não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
-                              <span> solicitada. Mas encontramos o verbo </span>
+                              <span>. Mas encontramos o verbo </span>
                               <span><strong>'{state.foundVerb}'.</strong></span>
                               <span> Caso queira conjugá-lo, clique no botão abaixo</span>
                             </p>
@@ -396,7 +389,7 @@ const Conjugations = () => {
                             </h2>
                             <p>
                               <span>[err 22] </span>
-                              <span>Não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
                               <span>. Mas encontramos palavras muito parecidas. Clique no botão da palavra que gostaria de conjugar:</span>
                             </p>
@@ -428,9 +421,9 @@ const Conjugations = () => {
                             </h2>
                             <p>
                               <span>[err 23] </span>
-                              <span>Não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
-                              <span> solicitada. Mas encontramos o verbo </span>
+                              <span>. Mas encontramos o verbo </span>
                               <span><strong>'{state.foundVerb}'.</strong></span>
                               <span> Caso queira conjugá-lo, clique no botão abaixo</span>
                             </p>
@@ -506,14 +499,18 @@ const Conjugations = () => {
                     <ul><Warning /></ul>
                   </div>
                   <div className={styles.warning}>
+                    <strong>Destaques:</strong>
+                    <ul><Emphasis /></ul>
+                  </div>
+                  <div className={styles.warning}>
                     <strong>Sobre erros:</strong>
                     <ul>
                       <SobreErros />
                       {state.showReviewButton && state.showConjugations && (
                         <Button
-                          onClick={() => handleReview(state.inputReq)}                      
+                          onClick={() => handleReview(state.foundVerb)}                      
                         >
-                          Revisar a conjugação de '{state.inputReq}'
+                          Revisar a conjugação de '{state.foundVerb}'
                         </Button>
                       )}
                       {!state.showReviewButton && state.showConjugations && (
