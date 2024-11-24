@@ -41,30 +41,6 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings);
-  const variationsProps = findVariations(verb);
-  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-
-  let endingwithoutpunct = ''
-  let verbwithoutprefix = variationsProps.processedInput;
-
-  if (endingsThatStartWith.length > 0 && verbwithoutprefix) {
-
-    const match = endingsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
-
-    if (match) {
-      endingwithoutpunct = match.replace("...", '');
-
-    }
-  }
-  
-  console.log(variationsProps)
-  console.log(endingwithoutpunct)
-  console.log(verbwithoutprefix)
-
-
-  if (endingsThatStartWith && endingsThatStartWith[0] !== "..." && nw(endingwithoutpunct) !== nw(verbwithoutprefix)) {
-    return getDefaultResponse();
-  }
   
   if (!verbRules) {
     return getDefaultResponse();
@@ -89,6 +65,31 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
         afixo: null  
       };
     }
+  }
+
+  const variationsProps = findVariations(verb);
+  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+
+  let endingwithoutpunct = ''
+  let verbwithoutprefix = variationsProps.processedInput;
+
+  if (endingsThatStartWith.length > 0 && verbwithoutprefix) {
+
+    const match = endingsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
+
+    if (match) {
+      endingwithoutpunct = match.replace("...", '');
+
+    }
+  }
+  
+  // console.log(variationsProps)
+  // console.log(endingwithoutpunct)
+  // console.log(verbwithoutprefix)
+
+
+  if (endingsThatStartWith && endingsThatStartWith[0] !== "..." && nw(endingwithoutpunct) !== nw(verbwithoutprefix)) {
+    return getDefaultResponse();
   }
 
   for (const ending of endingsThatStartWith) {
@@ -132,5 +133,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-const res = findNoRegRule('aguar', 'p1','pr_ind',"RAD")
-console.log(res)
+// const res = findNoRegRule('aguar', 'p1','pr_ind',"RAD")
+// console.log(res)

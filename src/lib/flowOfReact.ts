@@ -271,7 +271,7 @@ export const flowOfReact = () => {
         similar = apiResponse.originalVerb.similar;
         variations = apiResponse.originalVerb.variations;
 
-        if  (similar !== null) {
+        if  (similar !== null && !state.goThrough) {
 
           setState(prev => ({
 

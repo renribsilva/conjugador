@@ -1709,7 +1709,7 @@
           "j1":{
             "pr_ind":["p1"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
+            "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }
@@ -3592,7 +3592,99 @@
           "ç1":{
             "pr_ind":["p1"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ardar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'ardar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "arder": {
+    "arder": {
+      "note": { "plain": ["O verbo 'arder' é regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ardir": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'ardir' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "arfar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'arfar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "argar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'argar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "gu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "argir":{
+    "...": {
+      "note":{"plain":["Antigamente tidos como defectivos, hoje os verbos terminados em 'argir' são classificados como regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "j1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }
