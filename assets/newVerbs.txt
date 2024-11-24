@@ -2,3 +2,5 @@ desabrir
 rer
 inundar
 desmaiar
+desabar
+reiniciar

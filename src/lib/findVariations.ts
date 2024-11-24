@@ -25,6 +25,7 @@ export default function findVariations(input: string): ValidPrefixResult {
   }
 
   const originalInput = nw(input);
+  
   let verb: string = ni(input.replace(/-/g, '')) || ni(input);
 
   const sortedAfixos = normalizedAfixos
@@ -40,6 +41,23 @@ export default function findVariations(input: string): ValidPrefixResult {
       prefixExists = true;
       break;
     }
+  }
+
+  if (allVerbsSet.has(verb)) {
+
+    const result = {
+      hasVariations: false,
+      forcedVerb: false,
+      processedInput: verb,
+      originalInput,
+      prefixFounded: false,
+      matchingAfixo,
+      conector: null,
+      status: "0: PREFIX = NO, FORCED = NO"
+    };
+
+    cache.set(input, result);
+    return result;
   }
 
   if (!prefixExists && matchingAfixo === null) {
@@ -131,23 +149,6 @@ export default function findVariations(input: string): ValidPrefixResult {
     }
   }
 
-  if (allVerbsSet.has(verb)) {
-
-    const result = {
-      hasVariations: false,
-      forcedVerb: false,
-      processedInput: verb,
-      originalInput,
-      prefixFounded: false,
-      matchingAfixo,
-      conector: null,
-      status: "5: PREFIX = NO, FORCED = NO"
-    };
-
-    cache.set(input, result);
-    return result;
-  }
-
   const variation = tryVariations(verb, 0, normalizedVerbs);
 
   const result = {
@@ -158,7 +159,7 @@ export default function findVariations(input: string): ValidPrefixResult {
     prefixFounded: false,
     matchingAfixo: null,
     conector: null,
-    status: "6: PREFIX = NO, VARIATION = YES"
+    status: "5: PREFIX = NO, VARIATION = YES"
   };
 
   cache.set(input, result);

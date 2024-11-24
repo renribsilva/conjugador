@@ -653,84 +653,6 @@
     }
   },
   "ser":{
-    "...ser":{
-      "note":{"plain":[], "ref":{}},
-      "type": [5,2],
-      "abundance":{},
-      "rules":{
-        "RAD":{
-          "":{
-            "pr_ind":["p2","p3"],
-            "pt2_ind":["p1","p2","p3","p4","p5","p6"]
-          },
-          "f":{
-            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
-            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
-            "pt_sub":["p1","p2","p3","p4","p5","p6"],
-            "fut_sub":["p1","p2","p3","p4","p5","p6"]
-          }
-        },
-        "VT":{
-          "o":{
-            "pr_ind":["p1","p4","p5"],
-            "pt1_ind":["p2","p3","p4","p5","p6"],
-            "pt3_ind":["p1","p2","p3","p6"],
-            "pt_sub":["p1","p2","p3","p6"],
-            "fut_sub":["p1","p2","p3","p4","p5","p6"]
-          },
-          "é":{
-            "pr_ind":["p2","p3"],
-            "pt2_ind":["p4","p5"]
-          },
-          "ã":{
-            "pr_ind":["p6"]
-          },
-          "u":{
-            "pt1_ind":["p1"]
-          },
-          "e":{
-            "pt2_ind":["p1","p2","p3","p6"],
-            "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
-            "im2":["p2","p3","p4","p5","p6"]
-          },
-          "ô":{
-            "pt3_ind":["p4","p5"],
-            "pt_sub":["p4","p5"]
-          },
-          "ê":{
-            "im1":["p2"]
-          }
-        },
-        "MT":{
-          "ra":{
-            "pt2_ind":["p1","p2","p3","p4","p6"]
-          },
-          "re":{
-            "pt2_ind":["p5"]
-          },
-          "ja":{
-            "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p5","p6"],
-            "im2":["p2","p3","p4","p5","p6"]
-          }
-        },
-        "NP":{
-          "u":{
-            "pr_ind":["p1"]
-          },
-          "o":{
-            "pr_ind":["p6"]
-          },
-          "i":{
-            "pt1_ind":["p3"]
-          },
-          "is":{
-            "im1":["p5"]
-          }
-        }
-      }
-    },
     "ser":{
       "note":{"plain":[], "ref":{}},
       "type": [5,2],
@@ -1280,13 +1202,13 @@
       "abundance":{},
       "rules": {
         "RAD":{
-          "caib":{
+          "caib4":{
             "pr_ind":["p1"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
             "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           },
-          "coub":{
+          "coub4":{
             "pt1_ind":["p1","p2","p3","p4","p5","p6"],
             "pt3_ind":["p1","p2","p3","p4","p5","p6"],
             "pt_sub":["p1","p2","p3","p4","p5","p6"],
@@ -1350,16 +1272,16 @@
       "abundance":{},
       "rules": {
         "RAD":{
-          "s":{
+          "s3":{
             "pr_ind":["p1"]
           },
-          "soub":{
+          "soub3":{
             "pt1_ind":["p1","p2","p3","p4","p5","p6"],
             "pt3_ind":["p1","p2","p3","p4","p5","p6"],
             "pt_sub":["p1","p2","p3","p4","p5","p6"],
             "fut_sub":["p1","p2","p3","p4","p5","p6"]
           },
-          "saib":{
+          "saib3":{
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
             "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
@@ -3588,6 +3510,92 @@
       "type": [1],
       "abundance":{},
       "rules": {
+      }
+    }
+  },
+  "arbar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'arbar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "arcar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'arcar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "qu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "arçar":{
+    "...": {
+      "note":{"plain":["Todos os verbos terminados em 'arçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "c1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "archar": {
+    "...": {
+      "note": { "plain": ["Todos os verbos terminados em 'archar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "arcir":{
+    "...": {
+      "note":{"plain":["Os verbos terminado em 'arcir' já foram defectivos, mas hoje em dia são regulares, percebendo que algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "ç1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
       }
     }
   }

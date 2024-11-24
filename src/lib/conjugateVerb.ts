@@ -42,7 +42,9 @@ export const conjugateVerb = (verb: string) => {
 
     const verbRules = reg[M]?.[str];
 
-    if (!verbRules) return NOT_FOUND;    
+    if (!verbRules) return NOT_FOUND;   
+    
+    console.log(Rcontent)
 
     const verbData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
       ? '---'
