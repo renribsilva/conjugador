@@ -6,7 +6,7 @@ import {
   getNormalizedJsonKeys, 
   loadJsonObject 
 } from './isValidVerbUtils';
-import findVariations from './findVariation';
+import findVariations from './findVariations';
 
 export async function processVerb (verb: string) {
 

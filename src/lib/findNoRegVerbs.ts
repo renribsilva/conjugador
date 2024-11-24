@@ -1,59 +1,66 @@
 import irregularidades from '../json/rulesByTerm.json';  
 import innerSearchOfRules from './innerSearchOfRules';
-import isValidPrefix from './findVariation';
-import { ni } from './normalizeVerb';
-import findVariations from './findVariation';
+import { ni, nw } from './normalizeVerb';
+import findVariations from './findVariations';
+
+const endings = Object.keys(irregularidades);
+
+function getVerbKeys(verb: string, endings: string[]): any {
+
+  endings.sort((a, b) => b.length - a.length);
+  const ending = endings.find((end) => ni(verb).endsWith(ni(end)));  
+  const rules = ending ? irregularidades[ending] : null;
+
+  if (rules) {
+    const normalizedRules = Object.keys(rules).reduce((acc, key) => {
+      acc[ni(key)] = rules[key];
+      return acc;
+    }, {});
+    return { rules: normalizedRules, ending };
+  }
+
+  return { rules: null, ending };
+}  
+
+function getDefaultResponse() {
+  return {
+    hasTarget: false,
+    rule: null,
+    P: null,
+    M: null,
+    ending: null,
+    verb: null,
+    types: null,
+    abundance: null,
+    note_plain: null,
+    note_ref: null,
+    afixo: null  
+  };
+}
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const endings = Object.keys(irregularidades); 
+  const { rules: verbRules, ending } = getVerbKeys(verb, endings);
+  const variationsProps = findVariations(verb);
+  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+  const endingwithoutpunct = endingsThatStartWith[0].replace("...",'')
+  const verbwithoutprefix = variationsProps.processedInput
 
-  function getVerbKeys(verb: string, endings: string[]): any {
-    
-    endings.sort((a, b) => b.length - a.length);
-    const ending = endings.find((end) => ni(verb).endsWith(ni(end)));  
-    const rules = ending ? irregularidades[ending] : null;
-  
-    if (rules) {
-      const normalizedRules = Object.keys(rules).reduce((acc, key) => {
-        acc[ni(key)] = rules[key];
-        return acc;
-      }, {});
-      return { rules: normalizedRules, ending };
-    }
-  
-    return { rules: null, ending };
-  }  
+  console.log(endingwithoutpunct)
+  console.log(verbwithoutprefix)
 
-  function getDefaultResponse() {
-    return {
-      hasTarget: false,
-      rule: null,
-      P: null,
-      M: null,
-      ending: null,
-      verb: null,
-      types: null,
-      abundance: null,
-      note_plain: null,
-      note_ref: null,
-      afixo: null  
-    };
+  if (nw(endingwithoutpunct) !== nw(verbwithoutprefix)) {
+    return getDefaultResponse();
   }
-
-  const { rules: verbRules, ending } = getVerbKeys(verb, endings); 
-
-  // Se não houver regras, retorna a resposta padrão
+  
   if (!verbRules) {
     return getDefaultResponse();
   }
 
-  // Verifica se o verbo começa com "..."
   if (verb.startsWith("...")) {
     return getDefaultResponse();
   }
 
-  // Verifica se o verbo tem uma regra diretamente associada
   if (verbRules[verb]) {
     const verbRule = verbRules[verb];
     if (verbRule?.rules) {
@@ -71,16 +78,12 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     }
   }
 
-  // Busca por terminações que começam com "..."
-  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-  const prefixProps = findVariations(verb);
-
   for (const ending of endingsThatStartWith) {
-    if (prefixProps.prefixFounded && verb.endsWith(ending.substring(3))) {
+    if (variationsProps.prefixFounded && verb.endsWith(ending.substring(3))) {
       const baseVerbRules = verbRules[ending];
       if (baseVerbRules?.rules) {
         const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-        const foundedAfixo = prefixProps.matchingAfixo;
+        const foundedAfixo = variationsProps.matchingAfixo;
         return {
           ...res,
           ending,
@@ -95,7 +98,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     }
   }
 
-  // Verifica a regra geral para terminações "..."
   if (verbRules["..."]) {
     const verbRule = verbRules["..."];
     if (verbRule?.rules) {
