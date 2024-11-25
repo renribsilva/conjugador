@@ -3,6 +3,7 @@ desmaiar
 desabar
 reiniciar
 abaixar
+apaular
 
 rer
 

@@ -9,6 +9,8 @@ altar
 alvar
 espaldar
 larvar
+paular
+aurar
 
 twitter
 amber

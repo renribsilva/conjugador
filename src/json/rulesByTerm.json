@@ -4736,5 +4736,217 @@
       "rules": {
       }
     }
+  },
+  "audar": {
+    "...": {
+      "test":["fraudar"],
+      "note": { "plain": ["Todos os verbos terminados em 'audar' são regulares, mas o verbo 'saudar' apresenta modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "saudar": {
+      "test":["saudar"],
+      "note": { "plain": ["Todos os verbos terminados em 'audar' são regulares, mas o verbo 'saudar' apresenta modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "úd2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    }
+  },
+  "aular": {
+    "...": {
+      "test":["enjaular"],
+      "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "abaular": {
+      "test":["abaular"],
+      "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "úl2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    },
+    "apaular": {
+      "test":["apaular"],
+      "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "úl2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    },
+    "desembaular": {
+      "test":["desembaular"],
+      "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "úl2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    },
+    "embaular": {
+      "test":["embaular"],
+      "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "úl2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    }
+  },
+  "aurar": {
+    "...": {
+      "test":["instaurar"],
+      "note": { "plain": ["Todos os verbos terminados em 'aurar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "aurir": {
+    "...": {
+      "test":["haurir"],
+      "note": { "plain": ["Antigamente tidos como defectivos, os verbos terminados em 'aurar' são, nos dias atuais, classificados e conjugados como regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "exaurir": {
+      "test":["haurir"],
+      "note": { "plain": ["Antigamente tidos como defectivos, os verbos terminados em 'aurar' são, nos dias atuais, classificados e conjugados como regulares. Exceção à regra é o verbo 'exaurir' que apresenta abundância no particípio com a forma 'exauto'¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{
+        "pa":["exausto"]
+      },
+      "rules": {
+      }
+    }
+  },
+  "ausar": {
+    "...": {
+      "test":["causar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ausar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "autar": {
+    "...": {
+      "test":["pautar"],
+      "note": { "plain": ["Todos os verbos terminados em 'autar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "avar": {
+    "...": {
+      "test":["cavar"],
+      "note": { "plain": ["Todos os verbos terminados em 'avar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
   }
 }

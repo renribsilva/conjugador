@@ -1,4 +1,4 @@
-Confirmações posteriores
+Dúvidas
 
 [ter]
   ...ter (confirmar acentuação da 2ª e 3ª pessoas do pr_ind)
@@ -15,3 +15,9 @@ Confirmações posteriores
 [anir]
   exinanir
   inanir
+
+[aular]
+  paular (é registrado no VOLP, mas não no Aulete ou Houaiss)
+
+[aurar]
+  aurar (é registrado no VOLP, mas não no Aulete ou Houaiss)
