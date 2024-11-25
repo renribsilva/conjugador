@@ -769,7 +769,8 @@
             "fut_sub":["p1","p2","p3","p4","p5","p6"]
           },
           "é":{
-            "pr_ind":["p2","p3"]
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
           }
         },
         "MT":{
@@ -1043,7 +1044,8 @@
             "pr_ind":["p6"]
           },
           "é":{
-            "pr_ind":["p2","p3"]
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
           }
         },
         "MT":{
@@ -3468,7 +3470,8 @@
             "fut_sub":["p1","p2","p3","p4","p5","p6"]
           },
           "é":{
-            "pr_ind":["p2","p3"]
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
           }
         },
         "MT":{
@@ -4482,7 +4485,7 @@
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [1],
+      "type": [1, 4],
       "abundance":{
         "pa":["pasmo"]
       },
@@ -4537,6 +4540,193 @@
     "...": {
       "test":["assar"],
       "note": { "plain": ["Todos os verbos terminados em 'assar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "astar": {
+    "...": {
+      "test":["desgastar"],
+      "note": { "plain": ["Todos os verbos terminados em 'astar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{
+        "pa":["gasto"]
+      },
+      "rules": {
+      }
+    },
+    "gastar": {
+      "test":["gastar"],
+      "note": { "plain": ["Todos os verbos terminados em 'astar' são regulares, observando que o verbo 'gastar' é também abundante com relação ao particípio: 'gastado' e 'gasto'. Porém, 'desgastar' só tem um particípio: 'desgastado'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 4],
+      "abundance":{
+        "pa":["gasto"]
+      },
+      "rules": {
+      }
+    }
+  },
+  "astrar": {
+    "...": {
+      "test":["desastrar"],
+      "note": { "plain": ["Todos os verbos terminados em 'astrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "atar": {
+    "...": {
+      "test":["reatar"],
+      "note": { "plain": ["Todos os verbos terminados em 'atar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ater": {
+    "...": {
+      "test":["ater"],
+      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões dos verbos derivados de 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo). O restante é regular¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "ater": {
+      "test":["ater"],
+      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo). O restante é regular¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "e":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "ê":{
+            "pr_ind":["p6"]
+          },
+          "i":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          }
+        },
+        "MT":{
+          "nh":{
+            "pr_ind":["p1"]
+          },
+          "n":{
+            "pr_ind":["p2","p5"],
+            "im1":["p5"]
+          },
+          "m":{
+            "pr_ind":["p3"],
+            "im1":["p2"]
+          },
+          "ve":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "nha":{
+            "pt2_ind":["p1","p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "nhe":{
+            "pt2_ind":["p5"]
+          },
+          "vera":{
+            "pt3_ind":["p1","p2","p3","p6"]
+          },
+          "véra":{
+            "pt3_ind":["p4"]
+          },
+          "vére":{
+            "pt3_ind":["p5"]
+          },
+          "vesse":{
+            "pt_sub":["p1","p2","p3","p6"]
+          },
+          "vésse":{
+            "pt_sub":["p4","p5"]
+          },
+          "ver":{
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "des":{
+            "pr_ind":["p5"]
+          },
+          "":{
+            "pt1_ind":["p1","p3"]
+          },
+          "de":{
+            "im1":["p5"]
+          }
+        }
+      }
+    }
+  },
+  "atir": {
+    "latir": {
+      "test":["latir"],
+      "note": { "plain": ["Em sentido metafórico, o verbo 'latir' é regular¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "atrar": {
+    "...": {
+      "test":["culatrar"],
+      "note": { "plain": ["Os poucos verbos terminados em 'atrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
