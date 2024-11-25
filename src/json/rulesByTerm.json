@@ -4951,7 +4951,7 @@
   },
   "aver": {
     "haver": {
-      "test":["havar"],
+      "test":["haver"],
       "note": { "plain": [],
                 "ref": {}
               },
@@ -5001,6 +5001,459 @@
           },
           "":{
             "pt1_ind":["p1","p3"]
+          }
+        }
+      }
+    },
+    "reaver": {
+      "test":["reaver"],
+      "note": { "plain": ["Derivado do verbo 'haver', o verbo 'reaver' só é conjugado nas flexões em que 'haver' apresenta a letra 'v'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2, 3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "reouv":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "e":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "á":{
+            "pr_ind":["p2","p3"]
+          },
+          "ã":{
+            "pr_ind":["p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "pt1_ind":["p1","p3"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "i":{
+            "pr_ind":["p1"]
+          },
+          "o":{
+            "pr_ind":["p6"]
+          }
+        }
+      }
+    },
+    "precaver": {
+      "test":["precaver"],
+      "note": { "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    },
+    "desprecaver": {
+      "test":["desprecaver"],
+      "note": { "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "avir": {
+    "...": {
+      "test":["avir", "contravir"],
+      "note": { "plain": ["Os verbos terminados em 'avir' (exceto 'desnxavir') são conjugados com os mesmos padrões de conjugação dos verbos derivados de 'vir'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type":[2],
+      "abundance":{},
+      "rules":{
+        "VT":{
+          "e":{
+            "pr_ind":["p1"],
+            "pt1_ind":["p3"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "i":{
+            "pr_ind":["p5"],
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"],
+            "im1":["p5"]
+          },
+          "ê":{
+            "pr_ind":["p6"]
+          },
+          "é":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          }
+        },
+        "MT":{
+          "ndo":{
+            "pa":["n"]
+          },
+          "nh":{
+            "pr_ind":["p1"]
+          },
+          "n":{
+            "pr_ind":["p2","p5"],
+            "im1":["p5"]
+          },
+          "e":{
+            "pt1_ind":["p2","p4","p5","p6"]
+          },
+          "i":{
+            "pt1_ind":["p3"]
+          },
+          "nha":{
+            "pt2_ind":["p1","p2","p3","p4","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "nhe":{
+            "pt2_ind":["p5"]
+          },
+          "era":{
+            "pt3_ind":["p1","p2","p3","p6"]
+          },
+          "éra":{
+            "pt3_ind":["p4"]
+          },
+          "ére":{
+            "pt3_ind":["p5"]
+          },
+          "esse":{
+            "pt_sub":["p1","p2","p3","p6"]
+          },
+          "ésse":{
+            "pt_sub":["p4","p5"]
+          },
+          "er":{
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "m":{
+            "pr_ind":["p3"],
+            "im1":["p2"]
+          },
+          "des":{
+            "pr_ind":["p5"]
+          },
+          "im":{
+            "pt1_ind":["p1"]
+          },
+          "o":{
+            "pt1_ind":["p3"]
+          },
+          "de":{
+            "im1":["p5"]
+          }
+        }
+      }
+    },
+    "desenxavir": {
+      "test":["desenxavir"],
+      "note": { "plain": ["Os verbos terminados em 'avir' são conjugados com os mesmos padrões de conjugação dos verbos derivados de 'vir'. Mas o verbo 'desenxavir' (mesmo que 'desenxabir') é regular¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type":[1],
+      "abundance":{},
+      "rules":{
+      }
+    }
+  },
+  "avrar": {
+    "...": {
+      "test":["lavrar"],
+      "note": { "plain": ["Todos os verbos terminados em 'avrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "axar": {
+    "...": {
+      "test":["taxar"],
+      "note": { "plain": ["Todos os verbos terminados em 'axar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "azar": {
+    "...": {
+      "test":["azar"],
+      "note": { "plain": ["Todos os verbos terminados em 'azar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "azer": {
+    "...fazer": {
+      "test":["bem-fazer"],
+      "note": { "plain": [],
+                "ref": {}
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "faç3":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "fiz3":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "fez3":{
+            "pt1_ind":["p3"]
+          },
+          "far3":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p3"],
+            "pt1_ind":["p3"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          },
+          "á":{
+            "ft1_ind":["p2","p3"]
+          },
+          "ã":{
+            "ft1_ind":["p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "ia":{
+            "ft2_ind":["p1","p2","p3","p6"]
+          },
+          "ía":{
+            "ft2_ind":["p4"]
+          },
+          "íe":{
+            "ft2_ind":["p5"]
+          }
+        },
+        "NP":{
+          "":{
+            "pt1_ind":["p1","p3"]
+          },
+          "/faz":{
+            "im1":["p2"]
+          }
+        }
+      }
+    },
+    "fazer": {
+      "test":["fazer"],
+      "note": { "plain": [],
+                "ref": {}
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "faç":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "fiz":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "fez":{
+            "pt1_ind":["p3"]
+          },
+          "far":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p3"],
+            "pt1_ind":["p3"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          },
+          "á":{
+            "ft1_ind":["p2","p3"]
+          },
+          "ã":{
+            "ft1_ind":["p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "ia":{
+            "ft2_ind":["p1","p2","p3","p6"]
+          },
+          "ía":{
+            "ft2_ind":["p4"]
+          },
+          "íe":{
+            "ft2_ind":["p5"]
+          }
+        },
+        "NP":{
+          "":{
+            "pt1_ind":["p1","p3"]
+          },
+          "/faz":{
+            "im1":["p2"]
           }
         }
       }

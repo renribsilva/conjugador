@@ -1,0 +1,11 @@
+[asmar]
+  pasmar (abundância em pa)
+
+[astar]
+  gastar (abundância em pa)
+
+[aurir]
+  exaurir (abundância em pa)
+
+[azer]
+  fazer (abundância em im1.p2)
