@@ -11,24 +11,24 @@ export const conjugateVerb = (verb: string) => {
   const NOT_FOUND = "N/A";
 
   // Função auxiliar de F
-  const F = (P: string, M: string, D: string): string => {
+  const F = (P: string, M: string, D: string, key: string): string => {
     const result = findNoRegRule(verb, P, M, D);
-    const rule = result.hasTarget ? result.rule : NOT_FOUND;
+    const rule = result.results[key].hasTarget ? result.results[key].rule : NOT_FOUND;
     return rule ?? NOT_FOUND; 
   };
 
   // Função para obter dados do verbo
   const getCanonical = (P: string, M: string, num: number): string => {
     
-    const forRrule = findNoRegRule(verb, P, M, "RAD").hasTarget;
-    const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
-    const forMTrule = findNoRegRule(verb, P, M, "MT").hasTarget;
-    const forNPrule = findNoRegRule(verb, P, M, "NP").hasTarget;
+    const forRrule = findNoRegRule(verb, P, M, "RAD").results.canonical.hasTarget;
+    const forVTrule = findNoRegRule(verb, P, M, "VT").results.canonical.hasTarget;
+    const forMTrule = findNoRegRule(verb, P, M, "MT").results.canonical.hasTarget;
+    const forNPrule = findNoRegRule(verb, P, M, "NP").results.canonical.hasTarget;
 
-    const Rcontent = findNoRegRule(verb, P, M, "RAD").rule;
-    const VTcontent = findNoRegRule(verb, P, M, "VT").rule;
-    const MTcontent = findNoRegRule(verb, P, M, "MT").rule;
-    const NPcontent = findNoRegRule(verb, P, M, "NP").rule;
+    const Rcontent = findNoRegRule(verb, P, M, "RAD").results.canonical.rule;
+    const VTcontent = findNoRegRule(verb, P, M, "VT").results.canonical.rule;
+    const MTcontent = findNoRegRule(verb, P, M, "MT").results.canonical.rule;
+    const NPcontent = findNoRegRule(verb, P, M, "NP").results.canonical.rule;
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -44,15 +44,15 @@ export const conjugateVerb = (verb: string) => {
 
     if (!verbRules) return NOT_FOUND;  
 
-    const verbData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
+    const canonicalData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
       ? '---'
       : (forRrule || forVTrule || forMTrule || forNPrule)
         ? (() => {
           let result = nw(`
-            ${F(P, M, "RAD") === NOT_FOUND ? r : F(P, M, "RAD")}
-            ${F(P, M, "VT") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT")}
-            ${F(P, M, "MT") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT")}
-            ${F(P, M, "NP") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP")}*`);
+            ${F(P, M, "RAD", "canonical") === NOT_FOUND ? r : F(P, M, "RAD", "canonical")}
+            ${F(P, M, "VT", "canonical") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", "canonical")}
+            ${F(P, M, "MT", "canonical") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", "canonical")}
+            ${F(P, M, "NP", "canonical") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", "canonical")}*`);
           if (Rcontent !== null) {
             result = result.replace(Rcontent, R);
           }
@@ -64,25 +64,76 @@ export const conjugateVerb = (verb: string) => {
               ${verbRules.MT[num]}
               ${verbRules.NP[num]}`);
     
-    return verbData;
+    return canonicalData;
+
+  };
+
+  const getAbundance = (P: string, M: string, num: number): string | null => {
+    
+    const forRrule = findNoRegRule(verb, P, M, "RAD").results.abundance.hasTarget;
+    const forVTrule = findNoRegRule(verb, P, M, "VT").results.abundance.hasTarget;
+    const forMTrule = findNoRegRule(verb, P, M, "MT").results.abundance.hasTarget;
+    const forNPrule = findNoRegRule(verb, P, M, "NP").results.abundance.hasTarget;
+
+    const Rcontent = findNoRegRule(verb, P, M, "RAD").results.abundance.rule;
+    const VTcontent = findNoRegRule(verb, P, M, "VT").results.abundance.rule;
+    const MTcontent = findNoRegRule(verb, P, M, "MT").results.abundance.rule;
+    const NPcontent = findNoRegRule(verb, P, M, "NP").results.abundance.rule;
+
+    if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
+
+      let sliceLength: number;
+      sliceLength = nw(Rcontent as string).match(/\d+/g)?.map(num => parseInt(num, 10))?.[0] || 0;
+      let ralt = nw(Rcontent as string).replace("...", '').replace(/\d+/g,'')
+      const originalR = r
+      R = nw(originalR.slice(0,-sliceLength) + ralt)
+
+    }
+
+    const verbRules = reg[M]?.[str];
+
+    if (!verbRules) return NOT_FOUND;  
+
+    const abundanceData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
+      ? '---'
+      : (forRrule || forVTrule || forMTrule || forNPrule)
+        ? (() => {
+          let result = nw(`
+            ${F(P, M, "RAD", "abundance") === NOT_FOUND ? r : F(P, M, "RAD", "abundance")}
+            ${F(P, M, "VT", "abundance") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", "abundance")}
+            ${F(P, M, "MT", "abundance") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", "abundance")}
+            ${F(P, M, "NP", "abundance") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", "abundance")}*`);
+          if (Rcontent !== null) {
+            result = result.replace(Rcontent, R);
+          }
+          return result;
+        })()
+        : nw('');
+
+    if (abundanceData === '') {
+      return null
+    }
+    
+    return abundanceData;
+
   };
 
   // Função para gerar conjugação
   const W = (x: string, P1: string | null = null) => {
     return {
-        p1: P1 ?? getCanonical("p1", x, 0),
-        p2: getCanonical("p2", x, 1),
-        p3: getCanonical("p3", x, 2),
-        p4: getCanonical("p4", x, 3),
-        p5: getCanonical("p5", x, 4),
-        p6: getCanonical("p6", x, 5),
+        p1: [P1 ?? getCanonical("p1", x, 0), getAbundance("p1", x, 0)],
+        p2: [getCanonical("p2", x, 1), getAbundance("p2", x, 1)],
+        p3: [getCanonical("p3", x, 2), getAbundance("p3", x, 2)],
+        p4: [getCanonical("p4", x, 3), getAbundance("p4", x, 3)],
+        p5: [getCanonical("p5", x, 4), getAbundance("p5", x, 4)],
+        p6: [getCanonical("p6", x, 5), getAbundance("p6", x, 5)],
     };
   };
 
   // Função para gerar conjugação no singular
   const N = (x: string) => {
     return {
-        n: getCanonical("n", x, 0)
+        n: [getCanonical("n", x, 0), getAbundance("n", x, 0)]
     };
   };
 
@@ -113,4 +164,4 @@ export const conjugateVerb = (verb: string) => {
   
 };
 
-conjugateVerb("prazer");
+// conjugateVerb("prazer");

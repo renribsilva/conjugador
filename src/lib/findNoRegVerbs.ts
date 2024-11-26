@@ -24,14 +24,23 @@ function getVerbKeys(verb: string, endings: string[]): any {
 
 function getDefaultResponse() {
   return {
-    hasTarget: false,
-    rule: null,
-    P: null,
-    M: null,
+    results: {
+      canonical: {
+        hasTarget: false,
+        rule: null,
+        P: null,
+        M: null,
+      },
+      abundance: {
+        hasTarget: false,
+        rule: null,
+        P: null,
+        M: null,
+      }
+    },
     ending: null,
     verb: null,
     types: null,
-    abundance: null,
     note_plain: null,
     note_ref: null,
     afixo: null  
@@ -41,6 +50,7 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: verbRules, ending } = getVerbKeys(verb, endings);
+  // console.log(verbRules)
   
   if (!verbRules) {
     return getDefaultResponse();
@@ -53,13 +63,18 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   if (verbRules[verb]) {
     const verbRule = verbRules[verb];
     if (verbRule?.rules) {
-      const res = innerSearchOfRules(verbRule.rules, P, M, D);
+
+      const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
+      const abundance = innerSearchOfRules(verbRule.abundance, P, M, D);
+
       return {
-        ...res,
+        results: {
+          canonical: {...canonical},
+          abundance: {...abundance}
+        },
         ending,
         verb,
         types: verbRule.type,
-        abundance: verbRule.abundance,
         note_plain: verbRule.note.plain,
         note_ref: verbRule.note.ref,
         afixo: null  
@@ -105,14 +120,19 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     if (verb.endsWith(ending.substring(3))) {
       const baseVerbRules = verbRules[ending];
       if (baseVerbRules?.rules) {
-        const res = innerSearchOfRules(baseVerbRules.rules, P, M, D);
+
+        const canonical = innerSearchOfRules(baseVerbRules.rules, P, M, D);
+        const abundance = innerSearchOfRules(baseVerbRules.abundance, P, M, D);
         const foundedAfixo = variationsProps.matchingAfixo;
+
         return {
-          ...res,
+          results: {
+            canonical: {...canonical},
+            abundance: {...abundance}
+          },
           ending,
           verb,
           types: baseVerbRules.type,
-          abundance: baseVerbRules.abundance,
           note_plain: baseVerbRules.note.plain,
           note_ref: baseVerbRules.note.ref,
           afixo: foundedAfixo  
@@ -124,13 +144,18 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   if (verbRules["..."]) {
     const verbRule = verbRules["..."];
     if (verbRule?.rules) {
-      const res = innerSearchOfRules(verbRule.rules, P, M, D);
+
+      const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
+      const abundance = innerSearchOfRules(verbRule.abundance, P, M, D);
+      
       return {
-        ...res,
+        results: {
+          canonical: {...canonical},
+          abundance: {...abundance}
+        },
         ending: "...",
         verb,
         types: verbRule.type,
-        abundance: verbRule.abundance,
         note_plain: verbRule.note.plain,
         note_ref: verbRule.note.ref,
         afixo: null  
@@ -142,5 +167,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('aguar', 'p1','pr_ind',"RAD")
+// const res = findNoRegRule('prazer', 'p3','pr_ind',"VT")
 // console.log(res)

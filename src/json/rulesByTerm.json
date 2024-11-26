@@ -5367,7 +5367,7 @@
       "note": { "plain": [],
                 "ref": {}
               },
-      "type": [2],
+      "type": [2, 4],
       "abundance":{
         "VT":{
           "":{
@@ -5440,8 +5440,14 @@
       "note": { "plain": [],
                 "ref": {}
               },
-      "type": [2],
-      "abundance":{},
+      "type": [2, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
       "rules": {
         "RAD":{
           "faç":{
@@ -5498,9 +5504,6 @@
         "NP":{
           "":{
             "pt1_ind":["p1","p3"]
-          },
-          "/faz":{
-            "im1":["p2"]
           }
         }
       }
@@ -5541,46 +5544,182 @@
     },
     "...prazer": {
       "test":["prazer"],
-      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. Algumas o conjugam apenas nas terceiras pessoas de cada tempo verbal, outras em todas as pessoas, observada a particularidade da conjugação da 3ª pessoa do Presente do Indicativo¹. Além disso, o Pretérito Perfeito pode ser conjugado com 'prazi', 'prazeste', 'prazeu', 'prazemos', 'prazestes' e 'prazeram', não obstante a maior frequência do radical 'prouv' nesse tempo verbal."],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal. Além disso, o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', não tão utilizadas quanto as formas 'prouve' e 'prouveram'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [2],
+      "type": [2, 3, 4],
       "abundance":{
         "RAD":{
-          "prouv":{
-            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          "praz4":{
+            "pt1_ind":["p3","p6"],
+            "pt3_ind":["p3","p6"],
+            "pt_sub":["p3","p6"],
+            "fut_sub":["p3","p6"]
           }
         }
       },
       "rules": {
+        "RAD":{
+          "":{ 
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          },
+          "prouv4":{
+            "pt1_ind":["p3","p6"],
+            "pt3_ind":["p3","p6"],
+            "pt_sub":["p3","p6"],
+            "fut_sub":["p3","p6"]
+          }
+        },
         "VT":{
           "":{
-            "pr_ind":["p3"]
+            "pr_ind":["p1","p2","p3","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p3","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
           }
         }
       }
     },
     "prazer": {
       "test":["prazer"],
-      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. Algumas o conjugam apenas nas terceiras pessoas de cada tempo verbal, outras em todas as pessoas, observada a particularidade da conjugação da 3ª pessoa do Presente do Indicativo¹. Além disso, o Pretérito Perfeito pode ser conjugado com 'prazi', 'prazeste', 'prazeu', 'prazemos', 'prazestes' e 'prazeram', não obstante a maior frequência do radical 'prouv' nesse tempo verbal."],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal. Além disso, o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', não tão utilizadas quanto as formas 'prouve' e 'prouveram'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [2],
+      "type": [2, 3, 4],
       "abundance":{
         "RAD":{
-          "prouv":{
-            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          "praz4":{
+            "pt1_ind":["p3","p6"],
+            "pt3_ind":["p3","p6"],
+            "pt_sub":["p3","p6"],
+            "fut_sub":["p3","p6"]
           }
         }
       },
       "rules": {
+        "RAD":{
+          "":{ 
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          },
+          "prouv4":{
+            "pt1_ind":["p3","p6"],
+            "pt3_ind":["p3","p6"],
+            "pt_sub":["p3","p6"],
+            "fut_sub":["p3","p6"]
+          }
+        },
         "VT":{
           "":{
-            "pr_ind":["p3"]
+            "pr_ind":["p1","p2","p3","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p4","p5"],
+            "pt1_ind":["p1","p2","p3","p4","p5"],
+            "pt2_ind":["p1","p2","p4","p5"],
+            "pt3_ind":["p1","p2","p4","p5"],
+            "ft1_ind":["p1","p2","p4","p5"],
+            "ft2_ind":["p1","p2","p4","p5"],
+            "pr_sub":["p1","p2","p4","p5"],
+            "pt_sub":["p1","p2","p4","p5"],
+            "fut_sub":["p1","p2","p4","p5"],
+            "im1":["p1","p2","p4","p5"],
+            "im2":["p1","p2","p4","p5"],
+            "inf":["p1","p2","p4","p5"]
           }
         }
       }

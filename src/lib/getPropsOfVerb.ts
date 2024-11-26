@@ -1,13 +1,13 @@
 import { findNoRegRule } from "./findNoRegVerbs";
 
 interface VerbProps {
-  hasTarget: boolean | null;
+  hasTargetCanonical: boolean | null;
+  hasTargetAbundance: boolean | null;
   ending: string | null;
   verb: string | null;
   types: string[] | null;
-  abundance: {} | null;
-  note_plain: [] | null;
-  note_ref: {} | null;
+  note_plain: string[] | null;
+  note_ref: object | null;
   afixo: string | null | undefined;
 }
 
@@ -27,11 +27,11 @@ function mapTypesToStrings(types: any) {
 // Função para verificar se dois objetos são iguais
 function areObjectsEqual(obj1: VerbProps, obj2: VerbProps): boolean {
   return (
-    obj1.hasTarget === obj2.hasTarget &&
+    obj1.hasTargetCanonical === obj2.hasTargetCanonical &&
+    obj1.hasTargetAbundance === obj2.hasTargetAbundance &&
     obj1.ending === obj2.ending &&
     obj1.verb === obj2.verb &&
     JSON.stringify(obj1.types) === JSON.stringify(obj2.types) &&
-    JSON.stringify(obj1.abundance) === JSON.stringify(obj2.abundance) &&
     JSON.stringify(obj1.note_plain) === JSON.stringify(obj2.note_plain) &&
     JSON.stringify(obj1.note_ref) === JSON.stringify(obj2.note_ref) &&
     obj1.afixo === obj2.afixo
@@ -47,76 +47,106 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
   const validTypes = [1, 2]; // Tipos válidos
 
-  const resultsMap = new Map<string, VerbProps>(); // Usar um mapa para evitar duplicatas por chave única
+  const resultsMap = new Map<string, VerbProps>();
+  // console.log(resultsMap)
 
   // Iterando sobre as combinações P, M, D
   for (let p of P) {
     for (let m of M) {
       for (let d of D) {
+
         const result = findNoRegRule(verb, p, m, d);
+        // console.log(result)
+
         if (result) {
+
           const mappedTypes = result.types?.length ? mapTypesToStrings(result.types) : null;
-          const abundance = result.abundance && Object.keys(result.abundance).length > 0 ? result.abundance : null;
           const note_plain = result.note_plain && result.note_plain.length > 0 ? result.note_plain : null;
           const note_ref = result.note_ref && Object.keys(result.note_ref).length > 0 ? result.note_ref : null;
 
           if (result.ending !== null) {
             if (result.types.some(type => validTypes.includes(type))) {
+
               const verbProps: VerbProps = {
-                hasTarget: result.hasTarget,
+
+                hasTargetCanonical: result.results.canonical.hasTarget,
+                hasTargetAbundance: result.results.abundance.hasTarget,
                 ending: result.ending,
                 verb: validVerb,
                 types: mappedTypes,
-                abundance,
                 note_plain,
                 note_ref,
                 afixo: result.afixo
+
               };
-              const key = `${validVerb}-${result.ending}-${result.afixo}`;
+
+              const key = `${validVerb}-${p}-${m}-${d}`;
+
               if (!resultsMap.has(key)) {
                 resultsMap.set(key, verbProps);
               }
+
+              // console.log(resultsMap)
+
             }
+
           } else if (result.types === null && isValidVerb) {
+            
             const verbProps: VerbProps = {
-              hasTarget: result.hasTarget,
+              hasTargetCanonical: result.results.canonical.hasTarget,
+              hasTargetAbundance: result.results.abundance.hasTarget,
               ending: result.ending,
               verb: validVerb,
               types: ["regular"],
-              abundance,
               note_plain,
               note_ref,
               afixo: result.afixo
             };
-            const key = `${validVerb}-regular-${result.afixo}`;
+
+            const key = `${validVerb}-${p}-${m}-${d}`;
+
             if (!resultsMap.has(key)) {
               resultsMap.set(key, verbProps);
             }
+
           }
         }
       }
     }
   }
 
-  // Converte os resultados do Map para um array
-  const uniqueResults = Array.from(resultsMap.values());
+  // console.log(resultsMap)
 
-  // Filtragem de objetos com `hasTarget === true`
-  const filteredTrueResults = uniqueResults.filter(result => result.hasTarget === true);
+  const uniqueResults: VerbProps[] = Array.from(resultsMap.values());
 
-  // Filtragem de objetos com `hasTarget === false`
-  const filteredFalseResults = uniqueResults.filter(result => result.hasTarget === false);
+// Acumulação para determinar as propriedades
+  const accumulatedResult: VerbProps = uniqueResults.reduce(
+    (acc, curr) => ({
+      hasTargetCanonical: acc.hasTargetCanonical || curr.hasTargetCanonical,
+      hasTargetAbundance: acc.hasTargetAbundance || curr.hasTargetAbundance,
+      ending: curr.ending || acc.ending,
+      verb: curr.verb || acc.verb,
+      types: curr.types || acc.types,
+      note_plain: curr.note_plain || acc.note_plain,
+      note_ref: curr.note_ref || acc.note_ref,
+      afixo: curr.afixo || acc.afixo,
+    }),
+    {
+      hasTargetCanonical: null,
+      hasTargetAbundance: null,
+      ending: null,
+      verb: null,
+      types: null,
+      note_plain: null,
+      note_ref: null,
+      afixo: null,
+    }
+  );
 
-  // Se todos os resultados com hasTarget === true são iguais, retorne o primeiro
-  if (filteredTrueResults.length > 0 && filteredTrueResults.every(result => areObjectsEqual(result, filteredTrueResults[0]))) {
-    return [filteredTrueResults[0]];
-  }
+  // Retornar o resultado acumulado como array
+  return [accumulatedResult];
 
-  // Se todos os resultados com hasTarget === false são iguais, retorne o primeiro
-  if (filteredFalseResults.length > 0 && filteredFalseResults.every(result => areObjectsEqual(result, filteredFalseResults[0]))) {
-    return [filteredFalseResults[0]];
-  }
-
-  // Retorne todos os resultados filtrados
-  return [...filteredTrueResults, ...filteredFalseResults];
 }
+
+// const test = getPropsOfVerb("fazer", true, "fazer")
+// console.log(test)

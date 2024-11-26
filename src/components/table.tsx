@@ -16,6 +16,7 @@ const pronouns = {
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
 
   const block = ({ adv, ten, conj, mod }) => {
+
     const X = conj[mod];
     const isSpecialOrder = ten === "Afirmativo" || ten === "Negativo";
     const isInfinitive = ten === "Pessoal";
@@ -25,30 +26,98 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
         <div className={styles.ten}>{ten}</div>
         {isSpecialOrder ? (
           <>
-            <div>{nw(X.p1)}</div>
-            <div><span className={styles.adv}>{X.p2 === "---" ? "" : adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{X.p2 === "---" ? "" : pronouns.tu}</span></div>
-            <div><span className={styles.adv}>{X.p3 === "---" ? "" : adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{X.p3 === "---" ? "" : pronouns.ele}</span></div>
-            <div><span className={styles.adv}>{X.p4 === "---" ? "" : adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{X.p4 === "---" ? "" : pronouns.nós}</span></div>
-            <div><span className={styles.adv}>{X.p5 === "---" ? "" : adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{X.p5 === "---" ? "" : pronouns.vós}</span></div>
-            <div><span className={styles.adv}>{X.p6 === "---" ? "" : adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{X.p6 === "---" ? "" : pronouns.eles}</span></div>
+            <div>{nw(X.p1[0])}</div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p2) && X.p2[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p2) && X.p2[1] !== null ? `${nw(X.p2[0])} / ${nw(X.p2[1])}` : nw(X.p2[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p2) && X.p2[0] !== "---" ? pronouns.tu : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p3) && X.p3[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p3) && X.p3[1] !== null ? `${nw(X.p3[0])} / ${nw(X.p3[1])}` : nw(X.p3[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p3) && X.p3[0] !== "---" ? pronouns.ele : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p4) && X.p4[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p4) && X.p4[1] !== null ? `${nw(X.p4[0])} / ${nw(X.p4[1])}` : nw(X.p4[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p4) && X.p4[0] !== "---" ? pronouns.nós : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p5) && X.p5[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p5) && X.p5[1] !== null ? `${nw(X.p5[0])} / ${nw(X.p5[1])}` : nw(X.p5[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p5) && X.p5[0] !== "---" ? pronouns.vós : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p6) && X.p6[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p6) && X.p6[1] !== null ? `${nw(X.p6[0])} / ${nw(X.p6[1])}` : nw(X.p6[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p6) && X.p6[0] !== "---" ? pronouns.eles : ""}</span>
+            </div>
           </>
         ) : isInfinitive ? (
           <>
-            <div><span className={styles.adv}>{X.p1 === "---" ? "" : adv} </span>{nw(X.p1)} <span className={styles.pronouns}>{X.p1 === "---" ? "" : pronouns.eu}</span></div>
-            <div><span className={styles.adv}>{X.p2 === "---" ? "" : adv} </span>{nw(X.p2)} <span className={styles.pronouns}>{X.p2 === "---" ? "" : pronouns.tu}</span></div>
-            <div><span className={styles.adv}>{X.p3 === "---" ? "" : adv} </span>{nw(X.p3)} <span className={styles.pronouns}>{X.p3 === "---" ? "" : pronouns.ele}</span></div>
-            <div><span className={styles.adv}>{X.p4 === "---" ? "" : adv} </span>{nw(X.p4)} <span className={styles.pronouns}>{X.p4 === "---" ? "" : pronouns.nós}</span></div>
-            <div><span className={styles.adv}>{X.p5 === "---" ? "" : adv} </span>{nw(X.p5)} <span className={styles.pronouns}>{X.p5 === "---" ? "" : pronouns.vós}</span></div>
-            <div><span className={styles.adv}>{X.p6 === "---" ? "" : adv} </span>{nw(X.p6)} <span className={styles.pronouns}>{X.p6 === "---" ? "" : pronouns.eles}</span></div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p1) && X.p1[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p1) && X.p1[1] !== null ? `${nw(X.p1[0])} / ${nw(X.p1[1])}` : nw(X.p1[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p1) && X.p1[0] !== "---" ? pronouns.eu : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p2) && X.p2[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p2) && X.p2[1] !== null ? `${nw(X.p2[0])} / ${nw(X.p2[1])}` : nw(X.p2[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p2) && X.p2[0] !== "---" ? pronouns.tu : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p3) && X.p3[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p3) && X.p3[1] !== null ? `${nw(X.p3[0])} / ${nw(X.p3[1])}` : nw(X.p3[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p3) && X.p3[0] !== "---" ? pronouns.ele : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p4) && X.p4[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p4) && X.p4[1] !== null ? `${nw(X.p4[0])} / ${nw(X.p4[1])}` : nw(X.p4[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p4) && X.p4[0] !== "---" ? pronouns.nós : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p5) && X.p5[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p5) && X.p5[1] !== null ? `${nw(X.p5[0])} / ${nw(X.p5[1])}` : nw(X.p5[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p5) && X.p5[0] !== "---" ? pronouns.vós : ""}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p6) && X.p6[0] !== "---" ? adv : ""} </span>
+              <span>{Array.isArray(X.p6) && X.p6[1] !== null ? `${nw(X.p6[0])} / ${nw(X.p6[1])}` : nw(X.p6[0])}</span>
+              <span className={styles.pronouns}> {Array.isArray(X.p6) && X.p6[0] !== "---" ? pronouns.eles : ""}</span>
+            </div>
           </>
         ) : (
           <>
-            <div><span className={styles.adv}>{X.p1 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p1 === "---" ? "" : pronouns.eu}</span> {nw(X.p1)}</div>
-            <div><span className={styles.adv}>{X.p2 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p2 === "---" ? "" : pronouns.tu}</span> {nw(X.p2)}</div>
-            <div><span className={styles.adv}>{X.p3 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p3 === "---" ? "" : pronouns.ele}</span> {nw(X.p3)}</div>
-            <div><span className={styles.adv}>{X.p4 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p4 === "---" ? "" : pronouns.nós}</span> {nw(X.p4)}</div>
-            <div><span className={styles.adv}>{X.p5 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p5 === "---" ? "" : pronouns.vós}</span> {nw(X.p5)}</div>
-            <div><span className={styles.adv}>{X.p6 === "---" ? "" : adv} </span><span className={styles.pronouns}>{X.p6 === "---" ? "" : pronouns.eles}</span> {nw(X.p6)}</div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p1) && X.p1[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p1) && X.p1[0] !== "---" ? pronouns.eu : ""}</span>
+              <span> {Array.isArray(X.p1) && X.p1[1] !== null ? `${nw(X.p1[0])} / ${nw(X.p1[1])}` : nw(X.p1[0])}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p2) && X.p2[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p2) && X.p2[0] !== "---" ? pronouns.tu : ""}</span>
+              <span> {Array.isArray(X.p2) && X.p2[1] !== null ? `${nw(X.p2[0])} / ${nw(X.p2[1])}` : nw(X.p2[0])}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p3) && X.p3[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p3) && X.p3[0] !== "---" ? pronouns.ele : ""}</span>
+              <span> {Array.isArray(X.p3) && X.p3[1] !== null ? `${nw(X.p3[0])} / ${nw(X.p3[1])}` : nw(X.p3[0])}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p4) && X.p4[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p4) && X.p4[0] !== "---" ? pronouns.nós : ""}</span>
+              <span> {Array.isArray(X.p4) && X.p4[1] !== null ? `${nw(X.p4[0])} / ${nw(X.p4[1])}` : nw(X.p4[0])}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p5) && X.p5[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p5) && X.p5[0] !== "---" ? pronouns.vós : ""}</span>
+              <span> {Array.isArray(X.p5) && X.p5[1] !== null ? `${nw(X.p5[0])} / ${nw(X.p5[1])}` : nw(X.p5[0])}</span>
+            </div>
+            <div>
+              <span className={styles.adv}>{Array.isArray(X.p6) && X.p6[0] !== "---" ? adv : ""} </span>
+              <span className={styles.pronouns}>{Array.isArray(X.p6) && X.p6[0] !== "---" ? pronouns.eles : ""}</span>
+              <span> {Array.isArray(X.p6) && X.p6[1] !== null ? `${nw(X.p6[0])} / ${nw(X.p6[1])}` : nw(X.p6[0])}</span>
+            </div>
           </>
         )}
       </div>
@@ -58,9 +127,33 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
   return (
     <section>
         <div>
-          <div><strong>Infinitivo: </strong> {nw(conjugations.inf.p1)}</div>
-          <div><strong>Gerúndio: </strong> {nw(conjugations.gd.n)}</div>
-          <div><strong>Particípio: </strong>{nw(conjugations.pa.n)}</div>
+          <div>
+            <strong>Infinitivo: </strong>
+            <span>{
+              Array.isArray(conjugations.inf.p3) && 
+              conjugations.inf.p3[1] !== null ? 
+                `${nw(conjugations.inf.p3[0])} / ${nw(conjugations.inf.p3[1])}` : 
+                nw(conjugations.inf.p3[0])
+            }</span>
+          </div>
+          <div>
+            <strong>Gerúndio: </strong>
+            <span>{
+              Array.isArray(conjugations.gd.n) && 
+              conjugations.gd.n[1] !== null ? 
+                `${nw(conjugations.gd.n[0])} / ${nw(conjugations.gd.n[1])}` : 
+                nw(conjugations.gd.n[0])
+            }</span>
+          </div>
+          <div>
+            <strong>Particípio: </strong>
+            <span>{
+              Array.isArray(conjugations.pa.n) && 
+              conjugations.pa.n[1] !== null ? 
+                `${nw(conjugations.pa.n[0])} / ${nw(conjugations.pa.n[1])}` : 
+                nw(conjugations.pa.n[0])
+            }</span>
+          </div>
         </div>
         <div className={styles.table}>
           {/* Indicativo */}
