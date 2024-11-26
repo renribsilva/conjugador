@@ -10,7 +10,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     a: ({ children, ...props }) => (
-      <a className={styles.customA} {...props}> 
+      <a className={styles.customA} {...props} target="_blank" rel="noopener noreferrer"> 
         {children}
       </a> 
     ),
