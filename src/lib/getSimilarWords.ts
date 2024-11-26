@@ -1,4 +1,5 @@
 import jsonData from "../json/allVerbs.json";
+import { ni } from "./normalizeVerb";
 
 type VerbsData = {
   [key: string]: string[];
@@ -6,7 +7,6 @@ type VerbsData = {
 
 const data: VerbsData = jsonData;
 
-// Calcula a distância Levenshtein entre duas strings
 function levenshtein(a: string, b: string): number {
   const tmp: number[][] = [];
   const alen = a.length, blen = b.length;
@@ -27,45 +27,39 @@ function levenshtein(a: string, b: string): number {
   return tmp[alen][blen];
 }
 
-// Similaridade baseada em substrings comuns
 function substringSimilarity(a: string, b: string): number {
   const common = a.split("").filter(char => b.includes(char)).length;
   const maxLength = Math.max(a.length, b.length);
   return common / maxLength;
 }
 
-// Combina Levenshtein e substring similarity
 function combinedSimilarity(a: string, b: string): number {
-  const maxLevenshtein = Math.max(a.length, b.length); // Normaliza para 0-1
+  const maxLevenshtein = Math.max(a.length, b.length);
   const levenshteinScore = 1 - levenshtein(a, b) / maxLevenshtein;
   const substringScore = substringSimilarity(a, b);
-  return (levenshteinScore * 0.4) + (substringScore * 0.6); // Pesos ajustáveis
+  return (levenshteinScore * 0.4) + (substringScore * 0.6);
 }
 
-// Função para obter verbos similares
 export default function getSimilarVerbs(verb: string): string[] {
   const similarVerbs: { key: string; score: number }[] = [];
 
-  // Itera sobre as chaves do objeto e os arrays
-  for (const [key, values] of Object.entries(data)) {
+  for (const values of Object.values(data)) {
     for (const value of values) {
-      if (value !== verb) { // Ignora o próprio verbo
-        const similarityScore = combinedSimilarity(verb, value);
-        if (similarityScore > 0.5) { // Limite ajustável
+      if (value !== verb) {
+        const similarityScore = combinedSimilarity(ni(verb), (ni(value)));
+        if (similarityScore > 0.5) {
           similarVerbs.push({ key: value, score: similarityScore });
         }
       }
     }
   }
 
-  // Ordena por pontuação de similaridade em ordem decrescente e retorna os top 5
   return similarVerbs
     .sort((a, b) => b.score - a.score)
     .slice(0, 5)
     .map(({ key }) => key);
 }
 
-// Exemplo de uso
-const word = "";
+const word = "siber";
 const result = getSimilarVerbs(word);
 console.log(result);
