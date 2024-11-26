@@ -11,6 +11,7 @@ espaldar
 larvar
 paular
 aurar
+algar
 
 twitter
 amber
@@ -30,6 +31,7 @@ aldir
 sabir
 diapir
 tapir
+porvir
 
 aerovapor
 caapor

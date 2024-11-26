@@ -112,13 +112,13 @@
             "pt_sub":["p4","p5"]
           },
           "ê":{
-            "im1":["p3"],
-            "im2":["p2","p3"]
+            "im1":["p3"]
           }
         },
         "MT":{
           "ê":{
-            "pr_sub":["p1","p2","p3"]
+            "pr_sub":["p1","p2","p3"],
+            "im2":["p2","p3"]
           }
         },
         "NP":{
@@ -164,13 +164,13 @@
             "pt_sub":["p4","p5"]
           },
           "ê":{
-            "im1":["p3"],
-            "im2":["p2","p3"]
+            "im1":["p3"]
           }
         },
         "MT":{
           "ê":{
-            "pr_sub":["p1","p2","p3"]
+            "pr_sub":["p1","p2","p3"],
+            "im2":["p2","p3"]
           }
         },
         "NP":{
@@ -200,8 +200,8 @@
           "v":{
             "pr_ind":["p1","p2","p3","p4","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
-            "im2":["p2","p3","p4","p5","p6"]
+            "im2":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"]
           },
           "f":{
             "pt1_ind":["p1","p2","p3","p4","p5","p6"],
@@ -228,8 +228,7 @@
           },
           "ã":{
             "pr_ind":["p6"],
-            "im1":["p6"],
-            "im2":["p6"]
+            "im1":["p6"]
           },
           "u":{
             "pt1_ind":["p1"]
@@ -239,16 +238,17 @@
             "pt_sub":["p4","p5"]
           },
           "á":{
-            "im1":["p3"],
-            "im2":["p2","p3"]
+            "im1":["p3"]
           }
         },
         "MT":{
           "á":{
-            "pr_sub":["p1","p2","p3"]
+            "pr_sub":["p1","p2","p3"],
+            "im2":["p1","p2","p3"]
           },
           "ã":{
-            "pr_sub":["p6"]
+            "pr_sub":["p6"],
+            "im2":["p6"]
           }
         },
         "NP":{
@@ -5734,6 +5734,282 @@
             "inf":["p1","p2","p4","p5"]
           }
         }
+      }
+    },
+    "...trazer": {
+      "test":[""],
+      "note": { "plain": ["O verbo 'trazer' e seus derivados são regulares¹. A abundância com relação a 2ª pessoa do Imperativo Afirmativo é registrada no dicionário online Houiass²."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+                }
+              },
+      "type": [2, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
+      "rules": {
+        "RAD":{
+          "g1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          },
+          "troux":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"] 
+          },
+          "tra":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p3"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
+      }
+    },
+    "trazer": {
+      "test":["trazer"],
+      "note": { "plain": ["O verbo 'trazer' e seus derivados são regulares¹. A abundância com relação a 2ª pessoa do Imperativo Afirmativo é registrada no dicionário online Houiass²."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+                }
+              },
+      "type": [2, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
+      "rules": {
+        "RAD":{
+          "g1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          },
+          "troux":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"] 
+          },
+          "tra":{
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p3"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
+      }
+    }
+  },
+  "ear": {
+    "...": {
+      "test":["nortear", "espernear", "tornear"],
+      "note": { "plain": ["Tida como uma das terminações mais frequentes do grupo de verbos terminados em 'ar', a terminação 'ear' tem como paradigma de conjugação o verbo 'nortear'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "i":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        },
+        "MT":{
+          "a":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          },
+          "e":{
+            "im1":["p3","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ebar": {
+    "...": {
+      "test":["ensebar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ebar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ebrar": {
+    "...": {
+      "test":["quebrar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ebrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ecar":{
+    "...": {
+      "test":["brecar"],
+      "note":{"plain":["Todos os verbos terminados em 'ecar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "qu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eçar":{
+    "...": {
+      "test":["começar"],
+      "note":{"plain":["Todos os verbos terminados em 'eçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "c1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ecer":{
+    "...": {
+      "test":["tecer"],
+      "note":{"plain":["Os verbos terminados em 'ecer' são regulares, observando que algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "ç1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "echar": {
+    "...": {
+      "test":["fechar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ebrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ecrar": {
+    "...": {
+      "test":["execrar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ecrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "ectar": {
+    "...": {
+      "test":["prospectar"],
+      "note": { "plain": ["Todos os verbos terminados em 'ectar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
       }
     }
   }
