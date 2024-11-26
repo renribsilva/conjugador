@@ -4,7 +4,7 @@ import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
 import Head from 'next/head';
 
-const title = "Gules"
+const title = "Conjugador Gules"
 const description = "Conjugador de verbos da Língua Porguesa Brasileira"
 const url = "https://conjugador-gules.vercel.app"
 
