@@ -2,6 +2,7 @@
   "crer": {
     "...crer": {
       "test":["descrer"],
+      "model": 82,
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -43,6 +44,7 @@
     },
     "crer": {
       "test":["crer"],
+      "model": 82,
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -86,6 +88,7 @@
   "dar": {
     "...dar": {
       "test":["desdar"],
+      "model": 80,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -138,6 +141,7 @@
     },
     "dar": {
       "test":["dar"],
+      "model": 80,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -192,7 +196,12 @@
   "ir":{
     "ir":{
       "test":["ir"],
-      "note":{"plain":[], "ref":{}},
+      "model": 81,
+      "note":{"plain":["O verbo 'ir', além de irregular, é tido como anômalo, porque possui radicais de origem histórica diversa¹"], 
+              "ref":{
+                "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+              }
+            },
       "type":[2,5],
       "abundance":{},
       "rules":{
@@ -284,6 +293,7 @@
   "ler": {
     "...ler": {
       "test":["reler"],
+      "model": 82,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -325,6 +335,7 @@
     },
     "ler": {
       "test":["ler"],
+      "model": 82,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -368,6 +379,7 @@
   "por": {
     "...por": {
       "test":["repor"],
+      "model": 84,
       "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
               "ref":{
                 "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
@@ -458,6 +470,7 @@
     },
     "pôr": {
       "test":["pôr"],
+      "model": 83,
       "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
               "ref":{
                 "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
@@ -551,46 +564,47 @@
   "rer":{
     "rer": {
       "test":["rer"],
-      "note":{"plain":["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, o Dicionário Online Houiass² o conjuga com os mesmo padrões da conjugação do verbo 'ler', razão pela qual 'rer' também é conjugado dessa maneira aqui. Mas trata-se de um verbo fóssil: ver 'raer'¹."], 
+      "model":98,
+      "note":{"plain":["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'¹. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'. Como o Dicionário Houiass de Conjugação de Verbos é de 2012, optou-se, aqui, por conjugar 'rer' com o paradigma de conjugação do verbo 'precaver', tal como sugere a obra de referência."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
-                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
               }
             },
-      "type": [2],
+      "type": [2, 3],
       "abundance":{},
       "rules": {
-        "VT":{
-          "e":{
-            "pr_ind":["p1"],
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
-          },
-          "ê":{
-            "pr_ind":["p2","p3"],
-            "im1":["p2"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "MT":{
-          "i":{
-            "pr_ind":["p1"]
-          },
-          "ia":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "NP":{
-          "des":{
-            "pr_ind":["p5"]
-          },
-          "em":{
-            "pr_ind":["p6"]
-          },
-          "de":{
-            "im1":["p5"]
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
           }
         }
       }
@@ -599,6 +613,7 @@
   "rir": {
     "...rir": {
       "test":["sorrir"],
+      "model":85,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -632,6 +647,7 @@
     },
     "rir": {
       "test":["rir"],
+      "model":85,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -667,8 +683,9 @@
   "ser":{
     "ser":{
       "test":["ser"],
+      "model":86,
       "note":{"plain":[], "ref":{}},
-      "type": [5,2],
+      "type": [2, 5],
       "abundance":{},
       "rules":{
         "RAD":{
@@ -748,6 +765,7 @@
   "ter": {
     "...ter": {
       "test":["reter", "deter", "manter"],
+      "model":88,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -831,6 +849,7 @@
     },
     "ter": {
       "test":["ter"],
+      "model":85,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -912,6 +931,7 @@
   "ver": {
     "...ver": {
       "test":["rever", "tresver", "prever"],
+      "model":89,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -966,6 +986,7 @@
     },
     "ver": {
       "test":["ver"],
+      "model":89,
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -1022,6 +1043,7 @@
   "vir": {
     "...vir": {
       "test":["provir"],
+      "model":91,
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -1115,6 +1137,7 @@
     },
     "vir": {
       "test":["ver"],
+      "model":90,
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -1206,6 +1229,7 @@
   "abar": {
     "...": {
       "test":["acabar"],
+      "model":1,
       "note": { "plain": ["Todos os verbos terminados em 'abar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
