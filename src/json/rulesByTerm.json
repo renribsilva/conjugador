@@ -5515,8 +5515,14 @@
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [2],
-      "abundance":{},
+      "type": [2, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
       "rules": {
         "VT":{
           "":{
@@ -5532,8 +5538,14 @@
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [2],
-      "abundance":{},
+      "type": [2, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
       "rules": {
         "VT":{
           "":{
