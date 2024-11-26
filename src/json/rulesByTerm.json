@@ -4479,15 +4479,36 @@
   },
   "asmar": {
     "...": {
+      "test":["espasmar"],
+      "note": { "plain": ["Todos os verbos terminados em 'asmar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 4],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "pasmar": {
       "test":["pasmar"],
-      "note": { "plain": ["Todos os verbos terminados em 'asar' são regulares, observando que o verbo 'parmar' apresenta, canonicamente, como particípio, a forma 'pasmado', mas não é raro ocorrer a forma 'pasmo'¹."],
+      "note": { "plain": ["Todos os verbos terminados em 'asmar' são regulares, observando que o verbo 'parmar' apresenta, canonicamente, como particípio, a forma 'pasmado', mas não é raro ocorrer a forma 'pasmo'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
       "type": [1, 4],
       "abundance":{
-        "pa":["pasmo"]
+        "VT":{
+          "o":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "":{
+            "pa":["n"]
+          }
+        }
       },
       "rules": {
       }
@@ -4574,7 +4595,16 @@
               },
       "type": [1, 4],
       "abundance":{
-        "pa":["gasto"]
+        "VT":{
+          "o":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "":{
+            "pa":["n"]
+          }
+        }
       },
       "rules": {
       }
@@ -4901,7 +4931,21 @@
               },
       "type": [1],
       "abundance":{
-        "pa":["exausto"]
+        "RAD":{
+          "exau":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "sto":{
+            "pa":["n"]
+          }
+        }
       },
       "rules": {
       }
@@ -5324,7 +5368,13 @@
                 "ref": {}
               },
       "type": [2],
-      "abundance":{},
+      "abundance":{
+        "VT":{
+          "":{
+            "im1":["p2"]
+          }
+        }
+      },
       "rules": {
         "RAD":{
           "faç3":{
@@ -5381,9 +5431,6 @@
         "NP":{
           "":{
             "pt1_ind":["p1","p3"]
-          },
-          "/faz":{
-            "im1":["p2"]
           }
         }
       }
@@ -5454,6 +5501,86 @@
           },
           "/faz":{
             "im1":["p2"]
+          }
+        }
+      }
+    },
+    "...jazer": {
+      "test":["adjazer"],
+      "note": { "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "":{
+            "pr_ind":["p3"]
+          }
+        }
+      }
+    },
+    "jazer": {
+      "test":["jazer"],
+      "note": { "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "":{
+            "pr_ind":["p3"]
+          }
+        }
+      }
+    },
+    "...prazer": {
+      "test":["prazer"],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. Algumas o conjugam apenas nas terceiras pessoas de cada tempo verbal, outras em todas as pessoas, observada a particularidade da conjugação da 3ª pessoa do Presente do Indicativo¹. Além disso, o Pretérito Perfeito pode ser conjugado com 'prazi', 'prazeste', 'prazeu', 'prazemos', 'prazestes' e 'prazeram', não obstante a maior frequência do radical 'prouv' nesse tempo verbal."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{
+        "RAD":{
+          "prouv":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "rules": {
+        "VT":{
+          "":{
+            "pr_ind":["p3"]
+          }
+        }
+      }
+    },
+    "prazer": {
+      "test":["prazer"],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. Algumas o conjugam apenas nas terceiras pessoas de cada tempo verbal, outras em todas as pessoas, observada a particularidade da conjugação da 3ª pessoa do Presente do Indicativo¹. Além disso, o Pretérito Perfeito pode ser conjugado com 'prazi', 'prazeste', 'prazeu', 'prazemos', 'prazestes' e 'prazeram', não obstante a maior frequência do radical 'prouv' nesse tempo verbal."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{
+        "RAD":{
+          "prouv":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "rules": {
+        "VT":{
+          "":{
+            "pr_ind":["p3"]
           }
         }
       }

@@ -21,3 +21,6 @@ Dúvidas
 
 [aurar]
   aurar (é registrado no VOLP, mas não no Aulete ou Houaiss)
+
+[azer]
+  prazer (a defectividade ou não da conjugação é uma incógnita e a sua abundância no Perfeito)

@@ -18,7 +18,7 @@ export const conjugateVerb = (verb: string) => {
   };
 
   // Função para obter dados do verbo
-  const getVerbData = (P: string, M: string, num: number): string => {
+  const getCanonical = (P: string, M: string, num: number): string => {
     
     const forRrule = findNoRegRule(verb, P, M, "RAD").hasTarget;
     const forVTrule = findNoRegRule(verb, P, M, "VT").hasTarget;
@@ -42,9 +42,7 @@ export const conjugateVerb = (verb: string) => {
 
     const verbRules = reg[M]?.[str];
 
-    if (!verbRules) return NOT_FOUND;   
-    
-    // console.log(Rcontent)
+    if (!verbRules) return NOT_FOUND;  
 
     const verbData = (Rcontent === '' && VTcontent === '' && MTcontent === '' && NPcontent === '')
       ? '---'
@@ -72,19 +70,19 @@ export const conjugateVerb = (verb: string) => {
   // Função para gerar conjugação
   const W = (x: string, P1: string | null = null) => {
     return {
-        p1: P1 ?? getVerbData("p1", x, 0),
-        p2: getVerbData("p2", x, 1),
-        p3: getVerbData("p3", x, 2),
-        p4: getVerbData("p4", x, 3),
-        p5: getVerbData("p5", x, 4),
-        p6: getVerbData("p6", x, 5),
+        p1: P1 ?? getCanonical("p1", x, 0),
+        p2: getCanonical("p2", x, 1),
+        p3: getCanonical("p3", x, 2),
+        p4: getCanonical("p4", x, 3),
+        p5: getCanonical("p5", x, 4),
+        p6: getCanonical("p6", x, 5),
     };
   };
 
   // Função para gerar conjugação no singular
   const N = (x: string) => {
     return {
-        n: getVerbData("n", x, 0)
+        n: getCanonical("n", x, 0)
     };
   };
 
@@ -115,4 +113,4 @@ export const conjugateVerb = (verb: string) => {
   
 };
 
-// conjugateVerb("desabrir");
+conjugateVerb("prazer");
