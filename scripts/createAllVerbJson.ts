@@ -42,6 +42,7 @@ async function processVerbsFile(): Promise<void> {
     const allVerbsSet = new Set([...verbs, ...irregularVerbs]);
 
     let allVerbs = Array.from(allVerbsSet);
+    // console.log(allVerbs)
 
     console.log("Removendo vocábulos não verbos...")
 
