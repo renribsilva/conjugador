@@ -13,9 +13,9 @@ export const flowOfReact = () => {
     inputReq: string;
     showConjugations: boolean;
     foundVerb: string | null;
-    abundance: object | null | undefined;
     ending: string | null | undefined;
-    hasTarget: string | boolean | null ;
+    hasTargetCanonical: string | boolean | null ;
+    hasTargetAbundance: string | boolean | null ;
     note_plain: string[] | null | undefined;
     note_ref: object | null;
     types: string[] | null | undefined;
@@ -53,9 +53,9 @@ export const flowOfReact = () => {
     inputReq: "",
     showConjugations: false,
     foundVerb: null,
-    abundance: null,
     ending: null,
-    hasTarget: null,
+    hasTargetCanonical: null,
+    hasTargetAbundance: null,
     note_plain: null,
     note_ref: null,
     types: null,
@@ -121,9 +121,9 @@ export const flowOfReact = () => {
         showReviewButton: false,
 
         foundVerb: null,
-        abundance: null,
         ending: null,
-        hasTarget: null,
+        hasTargetCanonical: null,
+        hasTargetAbundance: null,
         note_plain: null,
         note_ref: null,
         types: null,
@@ -294,9 +294,9 @@ export const flowOfReact = () => {
 
           ...prev,
           ending: propsOfWord[0].ending,
-          hasTarget: propsOfWord[0].hasTarget,
+          hasTargetCanonical: propsOfWord[0].hasTargetCanonical,
+          hasTargetAbundance: propsOfWord[0].hasTargetAbundance,
           types: propsOfWord[0].types,
-          abundance: propsOfWord[0].abundance,
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
@@ -334,9 +334,9 @@ export const flowOfReact = () => {
     state.inputReq,
     state.showConjugations,
     state.foundVerb,
-    state.abundance,
     state.ending,
-    state.hasTarget,
+    state.hasTargetCanonical,
+    state.hasTargetAbundance,
     state.note_plain,
     state.note_ref,
     state.types,
@@ -373,10 +373,10 @@ export const flowOfReact = () => {
       inputReq: state.inputReq,
       showConjugations: state.showConjugations,
       foundVerb: state.foundVerb,
-      abundance: state.abundance,
       ending: state.ending,
-      hasTarget: state.hasTarget,
-      note_plain: state.note_plain, // Corrigido de state.note_ref para state.note_plain
+      hasTargetCanonical: state.hasTargetCanonical,
+      hasTargetAbundance: state.hasTargetAbundance,
+      note_plain: state.note_plain, 
       note_ref: state.note_ref,
       types: state.types,
       loading: state.loading,
@@ -388,7 +388,7 @@ export const flowOfReact = () => {
       showSobre: state.showSobre,
       showReviewButton: state.showReviewButton,
       goThrough: state.goThrough,
-      enter: state.enter, // Adicionado porque estava no array de dependências
+      enter: state.enter, 
       originalVerb: state.originalVerb,
       variationVerb: state.variationVerb,
       result: state.result,
