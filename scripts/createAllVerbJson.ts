@@ -48,7 +48,7 @@ async function processVerbsFile(): Promise<void> {
 
     allVerbs = await filterNonVerbs(allVerbs, 'nonVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
-    allVerbs = await filterNonVerbs(allVerbs, 'nonDiadriticVerb.txt');
+    allVerbs = await filterNonVerbs(allVerbs, 'nonDiacriticVerb.txt');
 
     console.log("Montando o arquivo allVerbs.json...")
 

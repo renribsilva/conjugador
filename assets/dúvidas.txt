@@ -1,11 +1,5 @@
 Dúvidas
 
-[ter]
-  ...ter (confirmar acentuação da 2ª e 3ª pessoas do pr_ind)
-
-[vir]
-  ...vir (confirmar acentuação da 2ª e 3ª pessoas do pr_ind)
-
 [alir]
   combalir
   balir
