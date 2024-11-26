@@ -21,9 +21,9 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* <meta property="og:image" content={image} /> */}
         <meta property="og:url" content={url} />
         <meta property="og:type" content="link" />
-        <meta property="og:site_name" content="Conjugador-Gules" />
+        <meta property="og:site_name" content="by renribsilva" />
         <meta property="og:author_name" content="renribsilva" />
-        <meta property="og:provider_name" content="Gules" />
+        <meta property="og:provider_name" content="Conjugador Gules" />
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>
