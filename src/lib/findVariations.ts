@@ -69,6 +69,7 @@ export default function findVariations(input: string): ValidPrefixResult {
     }
   
     if (matchingAfixo.length > 0) {
+
       let restOfVerb = verb.slice(matchingAfixo.length);
       let conector: string | null = null;
 
@@ -80,6 +81,9 @@ export default function findVariations(input: string): ValidPrefixResult {
         restOfVerb = restOfVerb.slice(1);
       } else if (/^m[pb]/.test(restOfVerb)) {
         conector = 'm';
+        restOfVerb = restOfVerb.slice(1);
+      } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) {
+        conector = 'x';
         restOfVerb = restOfVerb.slice(1);
       }
 

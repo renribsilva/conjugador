@@ -84,9 +84,13 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const variationsProps = findVariations(verb);
   const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+  // console.log(endingsThatStartWith)
 
   let endingwithoutpunct = ''
   let verbwithoutprefix = variationsProps.processedInput;
+
+  // console.log(endingwithoutpunct)
+  // console.log(verbwithoutprefix)
 
   if (endingsThatStartWith.length > 0 && verbwithoutprefix !== null) {
 

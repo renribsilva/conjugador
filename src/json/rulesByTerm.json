@@ -2,7 +2,7 @@
   "crer": {
     "...crer": {
       "test":["descrer"],
-      "model": 82,
+      "model": [82],
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -44,7 +44,7 @@
     },
     "crer": {
       "test":["crer"],
-      "model": 82,
+      "model": [82],
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -88,7 +88,7 @@
   "dar": {
     "...dar": {
       "test":["desdar"],
-      "model": 80,
+      "model": [80],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -141,7 +141,7 @@
     },
     "dar": {
       "test":["dar"],
-      "model": 80,
+      "model": [80],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -196,7 +196,7 @@
   "ir":{
     "ir":{
       "test":["ir"],
-      "model": 81,
+      "model": [81],
       "note":{"plain":["O verbo 'ir', além de irregular, é tido como anômalo, porque possui radicais de origem histórica diversa¹"], 
               "ref":{
                 "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
@@ -293,7 +293,7 @@
   "ler": {
     "...ler": {
       "test":["reler"],
-      "model": 82,
+      "model": [82],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -335,7 +335,7 @@
     },
     "ler": {
       "test":["ler"],
-      "model": 82,
+      "model": [82],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -379,8 +379,8 @@
   "por": {
     "...por": {
       "test":["repor"],
-      "model": 84,
-      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+      "model": [84],
+      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
               "ref":{
                 "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
                 }
@@ -470,8 +470,8 @@
     },
     "pôr": {
       "test":["pôr"],
-      "model": 83,
-      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+      "model": [83],
+      "note":{"plain":["Os verbos terminados em 'or', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
               "ref":{
                 "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
                 }
@@ -563,48 +563,49 @@
   },
   "rer":{
     "rer": {
-      "test":["rer"],
-      "model":98,
-      "note":{"plain":["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'¹. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'. Como o Dicionário Houiass de Conjugação de Verbos é de 2012, optou-se, aqui, por conjugar 'rer' com o paradigma de conjugação do verbo 'precaver', tal como sugere a obra de referência."], 
+      "test":["ler"],
+      "model": [82],
+      "note":{"plain":["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'. Aqui, optou-se pela primeira forma."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
                 "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
                 "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
               }
             },
-      "type": [2, 3],
+      "type": [2],
       "abundance":{},
       "rules": {
-        "RAD":{
-          "":{
-            "pr_ind":["p1","p2","p3","p6"],
-            "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
-            "im2":["p2","p3","p4","p5","p6"]
-          }
-        },
         "VT":{
-          "":{
-            "pr_ind":["p1","p2","p3","p6"],
+          "e":{
+            "pr_ind":["p1"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
+            "im1":["p3","p4","p5","p6"],
             "im2":["p2","p3","p4","p5","p6"]
+          },
+          "ê":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
           }
         },
         "MT":{
-          "":{
-            "pr_ind":["p1","p2","p3","p6"],
+          "i":{
+            "pr_ind":["p1"]
+          },
+          "ia":{
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
+            "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "NP":{
-          "":{
-            "pr_ind":["p1","p2","p3","p6"],
-            "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p2","p3","p4","p6"],
-            "im2":["p2","p3","p4","p5","p6"]
+          "des":{
+            "pr_ind":["p5"]
+          },
+          "em":{
+            "pr_ind":["p6"]
+          },
+          "de":{
+            "im1":["p5"]
           }
         }
       }
@@ -613,7 +614,7 @@
   "rir": {
     "...rir": {
       "test":["sorrir"],
-      "model":85,
+      "model":[85],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -647,7 +648,7 @@
     },
     "rir": {
       "test":["rir"],
-      "model":85,
+      "model":[85],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -683,7 +684,7 @@
   "ser":{
     "ser":{
       "test":["ser"],
-      "model":86,
+      "model":[86],
       "note":{"plain":[], "ref":{}},
       "type": [2, 5],
       "abundance":{},
@@ -764,9 +765,13 @@
   },
   "ter": {
     "...ter": {
-      "test":["reter", "deter", "manter"],
-      "model":88,
-      "note":{"plain":[], "ref":{}},
+      "test":["reter", "deter"],
+      "model":[88],
+      "note": { "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 1ª e 2ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -849,7 +854,7 @@
     },
     "ter": {
       "test":["ter"],
-      "model":85,
+      "model":[87],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -931,7 +936,7 @@
   "ver": {
     "...ver": {
       "test":["rever", "tresver", "prever"],
-      "model":89,
+      "model":[89],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -986,7 +991,7 @@
     },
     "ver": {
       "test":["ver"],
-      "model":89,
+      "model":[89],
       "note":{"plain":[], "ref":{}},
       "type": [2],
       "abundance":{},
@@ -1043,8 +1048,12 @@
   "vir": {
     "...vir": {
       "test":["provir"],
-      "model":91,
-      "note":{"plain":[], "ref":{}},
+      "model":[91],
+      "note": { "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 1ª e 2ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type":[2],
       "abundance":{},
       "rules":{
@@ -1137,7 +1146,7 @@
     },
     "vir": {
       "test":["ver"],
-      "model":90,
+      "model":[90],
       "note":{"plain":[], "ref":{}},
       "type":[2],
       "abundance":{},
@@ -1229,7 +1238,7 @@
   "abar": {
     "...": {
       "test":["acabar"],
-      "model":1,
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'abar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1244,7 +1253,12 @@
   "aber": {
     "...caber": {
       "test":["descaber"],
-      "note":{"plain":[], "ref":{}},
+      "model": [70],
+      "note": { "plain": ["Alguns gramáticos e dicionaristas defendem que o verbo 'caber' e seus derivados não podem ser empregados nas formas imperativas¹, em que pese a sua conjugação em quase todas as obras de referência."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1280,7 +1294,12 @@
     },
     "caber": {
       "test":["caber"],
-      "note":{"plain":[], "ref":{}},
+      "model": [70],
+      "note": { "plain": ["Alguns gramáticos e dicionaristas defendem que o verbo 'caber' e seus derivados não podem ser empregados nas formas imperativas¹, em que pese a sua conjugação em quase todas as obras de referência."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1316,7 +1335,12 @@
     },
     "...saber": {
       "test":["dessaber"],
-      "note":{"plain":[], "ref":{}},
+      "model": [78],
+      "note": { "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade apenas na 1ª pessoa do singular do Presente do Indicativo¹."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1360,7 +1384,12 @@
     },
     "saber": {
       "test":["saber"],
-      "note":{"plain":[], "ref":{}},
+      "model": [78],
+      "note": { "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade apenas na 1ª pessoa do singular do Presente do Indicativo¹."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
       "type": [2],
       "abundance":{},
       "rules": {
@@ -1406,6 +1435,7 @@
   "abir": {
     "...": {
       "test":["desenxabir"],
+      "model": [3],
       "note":{"plain":["Todos os verbos terminados em 'abir' são regulares"], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1419,6 +1449,7 @@
   "abrir": {
     "...abrir": {
       "test":["desabrir"],
+      "model": [null],
       "note":{"plain":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1445,6 +1476,7 @@
     },
     "abrir": {
       "test":["abrir"],
+      "model": [null],
       "note":{"plain":["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1473,6 +1505,7 @@
   "acar":{
     "...": {
       "test":["atacar", "sacar"],
+      "model": [33],
       "note":{"plain":["Todos os verbos terminados em 'acar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1494,6 +1527,7 @@
   "açar":{
     "...": {
       "test":["abraçar", "ameaçar"],
+      "model": [35],
       "note":{"plain":["Todos os verbos terminados em 'açar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1515,6 +1549,7 @@
   "achar":{
     "...": {
       "test":["achar"],
+      "model": [1],
       "note":{"plain":["Todos os verbos terminados em 'achar' são regulares¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1528,6 +1563,7 @@
   "acir": {
     "...": {
       "test":[""],
+      "model": [null],
       "note":{"plain":["Todos os verbos terminados em 'acir' são regulares¹. Neste conjugador, no entanto, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui. Contate-me via Mastodon"], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1541,6 +1577,7 @@
   "acrar": {
     "...": {
       "test":["lacrar", "massacrar"],
+      "model": [1],
       "note": { "plain": ["Todos os verbos terminados em 'acrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1555,6 +1592,7 @@
   "actar": {
     "...": {
       "test":["jactar", "compactar"],
+      "model": [13],
       "note": { "plain": ["Todos os verbos terminados em 'actar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1569,6 +1607,7 @@
   "adar": {
     "...": {
       "test":["nadar", "transladar"],
+      "model": [1],
       "note": { "plain": ["Todos os verbos terminados em 'adar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1583,6 +1622,7 @@
   "adir": {
     "...": {
       "test":["invadir", "dissuadir"],
+      "model": [3],
       "note": { "plain": ["Todos os verbos terminados em 'adir' são regulares.¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1595,6 +1635,7 @@
     },
     "adir": {
       "test":["adir"],
+      "model": [101],
       "note": { "plain": ["Todos os verbos terminados em 'adir' são regulares. Porém, o verbo 'adir' só é conjugado nas suas formas arrizotônicas, isto é, naquelas em que a vogal tônica se situa fora do radical.¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1641,6 +1682,7 @@
   "adrar": {
     "...": {
       "test":["ladrar"],
+      "model": [1],
       "note": { "plain": ["Todos os verbos terminados em 'adrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1655,7 +1697,8 @@
   "aer": {
     "...": {
       "test":["raer"],
-      "note": { "plain": ["'Raer', único verbo que possui terminação 'aer', é considerado um verbo fóssil e o seu uso foi reduzido ao uso no infinitivo, além de ter sofrido remissão para a forma 'rer', um verbo monossilábico¹. Por essa razão, só o conjugamos no modo Infinitivo Pessoal. Por fim, de acordo com com o Dicionário Houaiss, ele tem duas acepções: raspar (o sal) na peça da salina e juntá-lo com o rodo; limpar (forno), depois de aquecido, para o cozimento."],
+      "model": [null],
+      "note": { "plain": ["'Raer', único verbo que possui terminação 'aer', é considerado um verbo fóssil e o seu uso foi reduzido ao uso no infinitivo, além de ter sofrido remissão para a forma 'rer', um verbo monossilábico¹. Tal como o verbo 'rer', a sua conjugação é incerta. Enquanto o Dicionário Houiass de Conjugação de Verbos² o conjuga de acordo com o paradigma de conjugação do verbo 'soer', o Dicionário Online Houiass³ simplesmente não o conjuga em nenhuma flexão. Diante do impasse, optou-se, aqui, por conjugar apenas o Infinitivo Pessoal, como forma de vizualizar o uso mencionado no início dessa glosa¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
                   "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
@@ -1730,6 +1773,7 @@
   "afar": {
     "...": {
       "test":["abafar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'afar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1744,6 +1788,7 @@
   "agar":{
     "...": {
       "test":["cagar", "apagar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'agar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1765,6 +1810,7 @@
   "agir":{
     "...": {
       "test":["agir", "foragir"],
+      "model":[39],
       "note":{"plain":["Todos os verbos terminados em 'agir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1784,6 +1830,7 @@
     },
     "vagir": {
       "test":["vagir"],
+      "model":[94],
       "note":{"plain":["Todos os verbos terminados em 'agir' são regulares e sofrem alterações em algumas flexões, quais sejam, a substituição do  'g' por 'j' antes do 'o' e do 'a' desinenciais. Todavia, o verbo 'vagir' é uma exceção a essa regra: nas formas que seriam com 'j' ele é defectivo¹."], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1830,6 +1877,7 @@
   "agnar": {
     "...": {
       "test":["estagnar"],
+      "model":[13],
       "note": { "plain": ["Todos os verbos terminados em 'agnar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1858,6 +1906,7 @@
   "aguar": {
     "...aguar": {
       "test":["desaguar"],
+      "model":[58],
       "note": { "plain": ["Nos verbos terminados em 'aguar', é comum e gramaticalmente correto ocorrer acentuação nas formas rizotônicas, isto é, nas formas que apresentam a vogal tônica no radical¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1878,6 +1927,7 @@
     },
     "aguar": {
       "test":["aguar"],
+      "model":[58],
       "note": { "plain": ["Nos verbos terminados em 'aguar', é comum e gramaticalmente correto ocorrer acentuação nas formas rizotônicas, isto é, nas formas que apresentam a vogal tônica no radical¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1900,6 +1950,7 @@
   "aiar": {
     "...": {
       "test":["ensaiar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aiar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2416,7 +2467,7 @@
     },
     "combalir": {
       "test":["combalir"],
-      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' o são e apresentam defectividade distintas. Como há ocorrência de, por exemplo, 'bale' e 'combale', de acordo com Salum¹, aqui 'balir' e seus derivados serão conjugados com as flexões da 2ª, 3ª e 6ª pessoas do Presente do Indicativo, bem como com a 2ª pessoa do Imperativo Afirmativo, em que pese a ausência dessas flexões em 'falir'"],
+      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' o são e apresentam defectividade distintas. Como há ocorrência de, por exemplo, 'bale' e 'combale', de acordo com Salum¹, aqui 'balir' e seus derivados serão conjugados com as flexões da 2ª e 3ª pessoas do singular e da 3ª pessoa do plurar do Presente do Indicativo, bem como com a 2ª pessoa do Imperativo Afirmativo, em que pese a ausência dessas flexões em 'falir'"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -3469,9 +3520,10 @@
   "anter": {
     "manter": {
       "test":["manter"],
-      "note": { "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo¹."],
+      "model": 88,
+      "note": { "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo e na 2ª pessoa do Imperativo Afirmativo¹."],
                 "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [2],
