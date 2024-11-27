@@ -1965,6 +1965,7 @@
   "aibrar": {
     "...": {
       "test":["ensaibrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aibrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1979,6 +1980,7 @@
   "aidar": {
     "envaidar": {
       "test":["envaidar"],
+      "model":[1],
       "note": { "plain": ["É sabido que há apenas um verbo com a terminação 'aidar'. 'Envaidar' é um verbo regular¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -1993,6 +1995,7 @@
   "aigar":{
     "...": {
       "test":["arraigar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'aigar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2014,6 +2017,7 @@
   "ailar": {
     "bailar": {
       "test":["bailar"],
+      "model":[1],
       "note": { "plain": ["'Bailar' é o único verbo da língua portuguesa brasileira terminado em 'ailar'¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2028,6 +2032,7 @@
   "aimar": {
     "...": {
       "test":["açaimar", "esfaimar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aimar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2042,6 +2047,7 @@
   "ainar": {
     "...": {
       "test":["amainar", "afainar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ainar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2056,6 +2062,7 @@
   "aipar": {
     "...": {
       "test":["naipar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aipar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2070,7 +2077,8 @@
   "air": {
     "...": {
       "test":["cair", "sair"],
-      "note": { "plain": ["Muitos verbos terminados em 'air', mas não todos, seguem o padrão de conjugação do verbo irregular 'sair'¹"],
+      "model":[15],
+      "note": { "plain": ["Os verbos terminados em 'air', mas não todos, seguem o padrão de conjugação do verbo irregular 'sair'¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -2122,7 +2130,8 @@
     },
     "embair": {
       "test":["embair"],
-      "note": { "plain": ["Muitos verbos terminados em 'air', mas não todos, seguem o padrão de conjugação do verbo irregular 'sair'. 'Embair' é uma das exceções, pois ele é defectivos nas flexões rizotônicas, isto é, nas formas em que a vogal tônica está contida no radical¹."],
+      "model":[100],
+      "note": { "plain": ["Muitos verbos terminados em 'air', mas não todos, seguem o padrão de conjugação do verbo irregular 'atrair'. 'Embair' é uma das exceções, pois ele é defectivos nas flexões rizotônicas, isto é, nas formas em que a vogal tônica está contida no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -2178,6 +2187,7 @@
   "airar": {
     "...": {
       "test":["pairar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'airar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2192,6 +2202,7 @@
   "airrar": {
     "abairrar": {
       "test":["abairrar"],
+      "model":[1],
       "note": { "plain": ["'Abairrar' é o único verbo conhecido que apresenta a terminação 'airrar'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2206,6 +2217,7 @@
   "aitar": {
     "...": {
       "test":["gaitar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aitar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2220,6 +2232,7 @@
   "aivar": {
     "...": {
       "test":["saraivar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aivar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2234,6 +2247,7 @@
   "aixar": {
     "...": {
       "test":["abaixar", "encaixar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aixar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2248,6 +2262,7 @@
   "ajar": {
     "...": {
       "test":["engajar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ajar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2262,6 +2277,7 @@
   "alar": {
     "...": {
       "test":["abalar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2276,6 +2292,7 @@
   "alcar":{
     "...": {
       "test":["decalcar", "calcar"],
+      "model":[33],
       "note":{"plain":["Todos os verbos terminados em 'alcar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2297,6 +2314,7 @@
   "alçar":{
     "...": {
       "test":["alçar", "calçar"],
+      "model":[35],
       "note":{"plain":["Todos os verbos terminados em 'alçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2318,6 +2336,7 @@
   "aldar": {
     "...": {
       "test":["maldar", "respaldar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aldar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2332,6 +2351,7 @@
   "aldir": {
     "gualdir": {
       "test":["gualdir"],
+      "model":[101],
       "note": { "plain": ["'Gualdir' (comer apressadamente; engolir) é conjugado de preferência somente nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2378,6 +2398,7 @@
   "aler": {
     "valer": {
       "test":["valer"],
+      "model":[69],
       "note": { "plain": [],
                 "ref": {}
               },
@@ -2406,6 +2427,7 @@
   "alfar": {
     "...": {
       "test":["escalfar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alfar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2420,6 +2442,7 @@
   "algar":{
     "...": {
       "test":["galgar", "salgar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'algar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2441,6 +2464,7 @@
   "alhar": {
     "...": {
       "test":["talhar", "calhar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alhar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2455,6 +2479,7 @@
   "alir": {
     "encalir": {
       "test":["encalir"],
+      "model":[3],
       "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' sim, e apresentam defectividade distintas¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2467,9 +2492,12 @@
     },
     "combalir": {
       "test":["combalir"],
-      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' o são e apresentam defectividade distintas. Como há ocorrência de, por exemplo, 'bale' e 'combale', de acordo com Salum¹, aqui 'balir' e seus derivados serão conjugados com as flexões da 2ª e 3ª pessoas do singular e da 3ª pessoa do plurar do Presente do Indicativo, bem como com a 2ª pessoa do Imperativo Afirmativo, em que pese a ausência dessas flexões em 'falir'"],
+      "model":[101],
+      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'balir' e 'falir' o são e apresentam defectividade distintas. De acordo com Salum¹, há ocorrência de 'bale', o que o leva a ter as flexões da 2ª e 3ª pessoas do singular e da 3ª pessoa do plural do Presente do Indicativo, bem como com a 2ª pessoa do singular do Imperativo Afirmativo, devidamente conjugadas. Mas isso não é observado em 'combalir', derivado de 'balir', cuja defectividade semelha à do verbo 'falir', tanto no Dicionário Online Houaiss² quanto no Dicionário Houaiss de Conjugação de Verbos³."],
                 "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                  "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [1, 3],
@@ -2477,33 +2505,33 @@
       "rules": {
         "RAD":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "VT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "MT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "NP":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }
@@ -2511,9 +2539,12 @@
     },
     "balir": {
       "test":["balir"],
-    "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' o são e apresentam defectividade distintas. Como há ocorrência de, por exemplo, 'bale' e 'combale', de acordo com Salum¹, aqui 'balir' e seus derivados serão conjugados com as flexões da 2ª, 3ª e 6ª pessoas do Presente do Indicativo, bem como com a 2ª pessoa do Imperativo Afirmativo, em que pese a ausência dessas flexões em 'falir'"],
+      "model":[94],
+      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'balir' e 'falir' o são e apresentam defectividade distintas. De acordo com Salum¹, há ocorrência de 'bale', o que o leva a ter as flexões da 2ª e 3ª pessoas do singular e da 3ª pessoa do plural do Presente do Indicativo, bem como com a 2ª pessoa do singular do Imperativo Afirmativo, devidamente conjugadas. Mas isso não é observado em 'combalir', derivado de 'balir', cuja defectividade semelha à do verbo 'falir', tanto no Dicionário Online Houaiss² quanto no Dicionário Houaiss de Conjugação de Verbos³."],
                 "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                  "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [1, 3],
@@ -2555,9 +2586,12 @@
     },
     "falir": {
       "test":["falir"],
-      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' sim, e apresentam defectividade distintas¹"],
+      "model":[101],
+      "note": { "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'balir' e 'falir' o são e apresentam defectividade distintas. De acordo com Salum¹, há ocorrência de 'bale', o que o leva a ter as flexões da 2ª e 3ª pessoas do singular e da 3ª pessoa do plural do Presente do Indicativo, bem como com a 2ª pessoa do singular do Imperativo Afirmativo, devidamente conjugadas. Mas isso não é observado em 'combalir', derivado de 'balir', cuja defectividade semelha à do verbo 'falir', tanto no Dicionário Online Houaiss² quanto no Dicionário Houaiss de Conjugação de Verbos³."],
                 "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                  "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [1, 3],
@@ -2601,6 +2635,7 @@
   "almar": {
     "...": {
       "test":["calmar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'almar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2615,6 +2650,7 @@
   "alpar": {
     "...": {
       "test":["palpar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alpar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2629,6 +2665,7 @@
   "alrar": {
     "...": {
       "test":["palrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2643,6 +2680,7 @@
   "alsar": {
     "...": {
       "test":["valsar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alsar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2657,6 +2695,7 @@
   "altar": {
     "...": {
       "test":["faltar", "saltar", "exaltar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'altar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2670,7 +2709,8 @@
   },
   "alvar": {
     "...": {
-      "test":["salvar"],
+      "test":["calvar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'alvar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2680,11 +2720,36 @@
       "abundance":{},
       "rules": {
       }
+    },
+    "salvar": {
+      "test":["salvar"],
+      "model":[1],
+      "note": { "plain": ["Todos os verbos terminados em 'alvar' são regulares¹"],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 4],
+      "abundance":{
+        "VT":{
+          "o":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "":{
+            "pa":["n"]
+          }
+        }
+      },
+      "rules": {
+      }
     }
   },
   "amar": {
     "...": {
       "test":["amar", "recamar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'amar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2699,6 +2764,7 @@
   "ambar": {
     "...": {
       "test":["sambar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ambar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2713,6 +2779,7 @@
   "amber": {
     "...": {
       "test":["lamber"],
+      "model":[2],
       "note": { "plain": ["Todos os verbos terminados em 'amber' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2727,6 +2794,7 @@
   "amblar": {
     "...": {
       "test":["samblar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'amblar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2741,6 +2809,7 @@
   "ambrar": {
     "...": {
       "test":["afiambrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ambrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2755,6 +2824,7 @@
   "amir": {
     "...": {
       "test":["bramir"],
+      "model":[94],
       "note": { "plain": ["Os poucos verbos terminados em 'amir' são defectivos¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2801,6 +2871,7 @@
   "ampar": {
     "...": {
       "test":["tampar", "acampar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ampar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2815,6 +2886,7 @@
   "anar": {
     "...": {
       "test":["fanar", "sanar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'anar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2829,6 +2901,7 @@
   "ancar":{
     "...": {
       "test":["mancar", "estancar"],
+      "model":[33],
       "note":{"plain":["Todos os verbos terminados em 'ancar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2850,6 +2923,7 @@
   "ançar":{
     "...": {
       "test":["dançar", "lançar"],
+      "model":[35],
       "note":{"plain":["Todos os verbos terminados em 'ançar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2871,6 +2945,7 @@
   "anchar": {
     "...": {
       "test":["lanchar", "pranchar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'anchar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2885,6 +2960,7 @@
   "andar": {
     "...": {
       "test":["andar", "mandar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'andar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -2899,7 +2975,8 @@
   "andir":{
     "...": {
       "test":["escandir", "expandir"],
-      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, com exceção de 'brandir' e 'bandir' que também são defectivo¹."],
+      "model":[3],
+      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, observando que 'brandir' e 'bandir' também são defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -2911,7 +2988,8 @@
     },
     "brandir": {
       "test":["brandir"],
-      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, com exceção de 'brandir' e 'bandir' que também são defectivo¹."],
+      "model":[94],
+      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, observando que 'brandir' e 'bandir' também são defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -2955,7 +3033,8 @@
     },
     "bandir": {
       "test":["bandir"],
-      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, com exceção de 'brandir' e 'bandir' que também são defectivo¹."],
+      "model":[94],
+      "note": { "plain": ["Há poucos verbos com a terminação 'andir'. Todos eles são regulares, observando que 'brandir' e 'bandir' também são defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -3001,6 +3080,7 @@
   "andrar": {
     "...": {
       "test":["meandrar"],
+      "model":[3],
       "note": { "plain": ["Todos os verbos terminados em 'andrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3015,6 +3095,7 @@
   "angar":{
     "...": {
       "test":["zangar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'agar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3036,6 +3117,7 @@
   "anger": {
     "...": {
       "test":["ranger", "tanger"],
+      "model":[38],
       "note":{"plain":["Os poucos verbos terminado em 'anger' são classificados como regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3057,6 +3139,7 @@
   "angir": {
     "...": {
       "test":["rangir"],
+      "model":[39],
       "note":{"plain":["Os poucos verbos terminado em 'angir' são classificados como regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3078,6 +3161,7 @@
   "angrar": {
     "...": {
       "test":["sangrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'angrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3092,6 +3176,7 @@
   "anguir":{
     "...": {
       "test":["entanguir", "languir"],
+      "model":[94],
       "note":{"plain":["Os poucos terminados em 'anguir' são defectivos¹."], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3138,6 +3223,7 @@
   "anhar": {
     "...": {
       "test":["arranhar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'anhar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3152,6 +3238,7 @@
   "anir":{
     "...": {
       "test":["granir", "ganir"],
+      "model":[3],
       "note":{"plain":["Com exceção de 'banir', 'enganir', 'exinanir' e 'inanir', que são defectivos, os poucos verbos com essa terminação são regulares¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3164,6 +3251,7 @@
     },
     "banir": {
       "test":["banir"],
+      "model":[94],
       "note":{"plain":["Com exceção de 'banir', 'enganir', 'exinanir' e 'inanir', que são defectivos, os poucos verbos com essa terminação são regulares¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3208,6 +3296,7 @@
     },
     "exinanir": {
       "test":["exinanir"],
+      "model":[101],
       "note":{"plain":["Com exceção de 'banir', 'enganir', 'exinanir' e 'inanir', que são defectivos, os poucos verbos com essa terminação são regulares¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3218,33 +3307,33 @@
       "rules": {
         "RAD":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "VT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "MT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "NP":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }
@@ -3252,6 +3341,7 @@
     },
     "inanir": {
       "test":["inanir"],
+      "model":[101],
       "note":{"plain":["Com exceção de 'banir', 'enganir', 'exinanir' e 'inanir', que são defectivos, os poucos verbos com essa terminação são regulares¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3262,33 +3352,33 @@
       "rules": {
         "RAD":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "VT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "MT":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         },
         "NP":{
           "":{
-            "pr_ind":["p1"],
+            "pr_ind":["p1","p2","p3","p6"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"],
+            "im1":["p2","p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           }
         }
@@ -3296,6 +3386,7 @@
     },
     "enganir": {
       "test":["enganir"],
+      "model":[92],
       "note":{"plain":["Com exceção de 'banir', 'enganir', 'exinanir' e 'inanir', que são defectivos, os poucos verbos com essa terminação são regulares¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3342,6 +3433,7 @@
   "anjar": {
     "...": {
       "test":["manjar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'anjar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3356,6 +3448,7 @@
   "anquir":{
     "branquir": {
       "test":["branquir"],
+      "model":[94],
       "note":{"plain":["O verbro 'branquir' é defectivo¹"], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3402,6 +3495,7 @@
   "ansar": {
     "...": {
       "test":["cansar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ansar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3416,6 +3510,7 @@
   "ansir": {
     "...transir": {
       "test":["pertransir"],
+      "model":[101],
       "note": { "plain": ["O verbo 'transir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3460,6 +3555,7 @@
     },
     "transir": {
       "test":["transir"],
+      "model":[101],
       "note": { "plain": ["O verbo 'transir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3506,6 +3602,7 @@
   "antar": {
     "...": {
       "test":["jantar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'antar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3520,7 +3617,7 @@
   "anter": {
     "manter": {
       "test":["manter"],
-      "model": 88,
+      "model": [88],
       "note": { "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo e na 2ª pessoa do Imperativo Afirmativo¹."],
                 "ref": { 
                   "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
@@ -3610,6 +3707,7 @@
   "antir": {
     "...": {
       "test":["garantir"],
+      "model":[3],
       "note": { "plain": ["Todos os verbos terminados em 'antir' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3624,6 +3722,7 @@
   "anzar": {
     "...": {
       "test":["zanzar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'anzar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3638,6 +3737,7 @@
   "anzir": {
     "...": {
       "test":["franzir"],
+      "model":[3],
       "note": { "plain": ["Todos os verbos terminados em 'anzir' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3652,6 +3752,7 @@
   "apar": {
     "...": {
       "test":["rapar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'apar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3666,13 +3767,25 @@
   "apir": {
     "usucapir": {
       "test":["usucapir"],
+      "model":[3],
       "note": { "plain": ["O verbo 'usucapir', não obstante o uso raro na 1ª pessoa do Presente do Indicativo e, por conseguinte, em todas as pessoas do Presente do Subjuntivo e Imperativo Negativo, é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
-      "type": [1],
-      "abundance":{},
+      "type": [1, 4],
+      "abundance":{
+        "VT":{
+          "":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "to":{
+            "pa":["n"]
+          }
+        }
+      },
       "rules": {
       }
     }
@@ -3680,6 +3793,7 @@
   "aptar": {
     "...": {
       "test":["captar"],
+      "model":[13],
       "note": { "plain": ["Todos os verbos terminados em 'aptar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3694,6 +3808,7 @@
   "arar": {
     "...": {
       "test":["arar", "parar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3708,6 +3823,7 @@
   "arbar": {
     "...": {
       "test":["barbar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arbar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3722,6 +3838,7 @@
   "arcar":{
     "...": {
       "test":["arcar", "marcar"],
+      "model":[33],
       "note":{"plain":["Todos os verbos terminados em 'arcar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3743,6 +3860,7 @@
   "arçar":{
     "...": {
       "test":["esgarçar", "disfarçar"],
+      "model":[35],
       "note":{"plain":["Todos os verbos terminados em 'arçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3764,6 +3882,7 @@
   "archar": {
     "...": {
       "test":["marchar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'archar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3778,6 +3897,7 @@
   "arcir":{
     "...": {
       "test":["ressarcir"],
+      "model":[37],
       "note":{"plain":["Os verbos terminado em 'arcir' já foram defectivos, mas hoje em dia são regulares, acrescentando que algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3799,6 +3919,7 @@
   "ardar": {
     "...": {
       "test":["guardar", "retardar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ardar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3813,6 +3934,7 @@
   "arder": {
     "arder": {
       "test":["arder"],
+      "model":[2],
       "note": { "plain": ["O verbo 'arder' é regular¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3827,6 +3949,7 @@
   "ardir": {
     "...": {
       "test":["encardir"],
+      "model":[3],
       "note": { "plain": ["Todos os verbos terminados em 'ardir' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3841,6 +3964,7 @@
   "arfar": {
     "...": {
       "test":["arfar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arfar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3855,6 +3979,7 @@
   "argar":{
     "...": {
       "test":["largar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'argar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3875,7 +4000,8 @@
   },
   "argir":{
     "...": {
-      "test":["espargir"],
+      "test":[""],
+      "model":[39],
       "note":{"plain":["Antigamente tidos como defectivos, hoje os verbos terminados em 'argir' são classificados como regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3892,11 +4018,48 @@
           }
         }
       }
+    },
+    "espargir": {
+      "test":["espargir"],
+      "model":[39],
+      "note":{"plain":["Antigamente tidos como defectivos, hoje os verbos terminados em 'argir' são classificados como regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1, 4],
+      "abundance":{
+        "RAD":{
+          "espar":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "so":{
+            "pa":["n"]
+          }
+        }
+      },
+      "rules": {
+        "RAD":{
+          "j1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
     }
   },
   "arir":{
     "parir": {
       "test":["parir"],
+      "model":[65],
       "note":{"plain":["Dentre os verbos terminados em 'arir', 'parir' e 'malparir' são irregulares¹."], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3917,6 +4080,7 @@
     },
     "malparir": {
       "test":["malparir"],
+      "model":[65],
       "note":{"plain":["Dentre os verbos terminados em 'arir', 'parir' e 'malparir' são irregulares¹."], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3937,6 +4101,7 @@
     },
     "guarir": {
       "test":["guarir"],
+      "model":[94],
       "note":{"plain":["Dentre os verbos terminados em 'arir', 'guarir' é regular e defectivo¹."], 
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3983,6 +4148,7 @@
   "arjar": {
     "...": {
       "test":["sarjar", "tarjar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arjar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -3997,6 +4163,7 @@
   "arlar": {
     "...": {
       "test":["parlar", "charlar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arlar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4011,6 +4178,7 @@
   "armar": {
     "...": {
       "test":["armar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'armar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4025,6 +4193,7 @@
   "arnar": {
     "...": {
       "test":["encarnar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arnar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4039,6 +4208,7 @@
   "arnir":{
     "...": {
       "test":["escarnir", "guarnir", "garnir"],
+      "model":[101],
       "note": { "plain": ["'Garnir', 'guarnir' e 'escarnir' são defectivos para as formas rizotônicas, isto é, aquelas cuja vogal tônica se encontra no radical¹. Os dois primeiros são o mesmo que 'guarnecer' e o último, 'escarnecer'²."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
@@ -4086,6 +4256,7 @@
   "arpar": {
     "...": {
       "test":["zarpar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arpar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4100,6 +4271,7 @@
   "arpir": {
     "carpir": {
       "test":["carpir"],
+      "model":[94],
       "note": { "plain": ["O verbo 'carpir' é defectivo¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4146,6 +4318,7 @@
   "arrar": {
     "...": {
       "test":["narrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arrar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4160,6 +4333,7 @@
   "arrer": {
     "barrer": {
       "test":["barrer"],
+      "model":[2],
       "note": { "plain": ["O verbo 'barrer' (mesmo que 'varrer'¹) é regular²"],
                 "ref": { 
                   "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
@@ -4173,6 +4347,7 @@
     },
     "varrer": {
       "test":["varrer"],
+      "model":[2],
       "note": { "plain": ["O verbo 'varrer' e derivados são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4187,6 +4362,7 @@
   "arrir": {
     "barrir": {
       "test":["barrir"],
+      "model":[94],
       "note": { "plain": ["Dentre os verbos terminados em 'arrir', 'barrir' (emitir barridos, o som emitido por animais como o elefante) é defectivo¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4231,6 +4407,7 @@
     },
     "esmarrir": {
       "test":["esmarrir"],
+      "model":[94],
       "note": { "plain": ["Dentre os verbos terminados em 'arrir', 'esmarrir' (perder a seiva, o vigor; ressequir) é defectivo¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4275,6 +4452,7 @@
     },
     "garrir": {
       "test":["garrir"],
+      "model":[101],
       "note": { "plain": ["O verbo 'garrir' (falar em excesso; tagarelar) é defectivo tal qual os padrões de conjugação do verbo 'falir'¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4321,6 +4499,7 @@
   "artar": {
     "...": {
       "test":["apartar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'artar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4335,6 +4514,7 @@
   "artir": {
     "...partir": {
       "test":["partir"],
+      "model":[3],
       "note": { "plain": ["O verbo 'partir' e seus derivados são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4347,6 +4527,7 @@
     },
     "partir": {
       "test":["partir"],
+      "model":[3],
       "note": { "plain": ["O verbo 'partir' e seus derivados são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4361,6 +4542,7 @@
   "arvar": {
     "...": {
       "test":["aparvar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'arvar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4375,6 +4557,7 @@
   "arzir": {
     "...": {
       "test":["esparzir"],
+      "model":[3],
       "note": { "plain": ["Todos os verbos terminados em 'arzir' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4389,6 +4572,7 @@
   "asar": {
     "...": {
       "test":["casar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'asar' são regulares¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4403,6 +4587,7 @@
   "ascar":{
     "...": {
       "test":["enrascar"],
+      "model":[33],
       "note":{"plain":["Todos os verbos terminados em 'ascar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4424,6 +4609,7 @@
   "ascer":{
     "...": {
       "test":["nascer", "pascer"],
+      "model":[36],
       "note":{"plain":["Os verbos terminado em 'ascer' são regulares, mas algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4445,6 +4631,7 @@
   "asgar":{
     "...": {
       "test":["engasgar"],
+      "model":[34],
       "note":{"plain":["Todos os verbos terminados em 'asgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4465,7 +4652,8 @@
   },
   "asir": {
     "...asir": {
-      "test":["asir"],
+      "test":[""],
+      "model":[101],
       "note": { "plain": ["O verbo 'asir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4510,6 +4698,7 @@
     },
     "asir": {
       "test":["asir"],
+      "model":[101],
       "note": { "plain": ["O verbo 'asir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4556,6 +4745,7 @@
   "asmar": {
     "...": {
       "test":["espasmar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'asmar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4568,6 +4758,7 @@
     },
     "pasmar": {
       "test":["pasmar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'asmar' são regulares, observando que o verbo 'parmar' apresenta, canonicamente, como particípio, a forma 'pasmado', mas não é raro ocorrer a forma 'pasmo'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4593,6 +4784,7 @@
   "asnar": {
     "...": {
       "test":["grasnar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'asnar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4607,6 +4799,7 @@
   "asnir": {
     "...": {
       "test":["grasnir"],
+      "model":[3],
       "note": { "plain": ["Em sentido metafórico, o verbo 'grasnir' (mesmo que 'grasnar'¹) é regular²."],
                 "ref": {
                   "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
@@ -4622,6 +4815,7 @@
   "aspar": {
     "...": {
       "test":["raspar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aspar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4636,6 +4830,7 @@
   "assar": {
     "...": {
       "test":["assar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'assar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4650,6 +4845,7 @@
   "astar": {
     "...": {
       "test":["desgastar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'astar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4664,6 +4860,7 @@
     },
     "gastar": {
       "test":["gastar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'astar' são regulares, observando que o verbo 'gastar' é também abundante com relação ao particípio: 'gastado' e 'gasto'. Porém, 'desgastar' só tem um particípio: 'desgastado'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4688,7 +4885,8 @@
   },
   "astrar": {
     "...": {
-      "test":["desastrar"],
+      "test":["castrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'astrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4703,6 +4901,7 @@
   "atar": {
     "...": {
       "test":["reatar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'atar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4716,7 +4915,8 @@
   },
   "ater": {
     "...": {
-      "test":["ater"],
+      "test":["bater"],
+      "model":[2],
       "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões dos verbos derivados de 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo). O restante é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4729,7 +4929,8 @@
     },
     "ater": {
       "test":["ater"],
-      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo). O restante é regular¹."],
+      "model":[88],
+      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões dos verbos derivados de 'ter'). O restante é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -4818,6 +5019,7 @@
   "atir": {
     "latir": {
       "test":["latir"],
+      "model":[3],
       "note": { "plain": ["Em sentido metafórico, o verbo 'latir' é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4832,6 +5034,7 @@
   "atrar": {
     "...": {
       "test":["culatrar"],
+      "model":[1],
       "note": { "plain": ["Os poucos verbos terminados em 'atrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4846,6 +5049,7 @@
   "audar": {
     "...": {
       "test":["fraudar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'audar' são regulares, mas o verbo 'saudar' apresenta modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4858,6 +5062,7 @@
     },
     "saudar": {
       "test":["saudar"],
+      "model":[24],
       "note": { "plain": ["Todos os verbos terminados em 'audar' são regulares, mas o verbo 'saudar' apresenta modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4880,6 +5085,7 @@
   "aular": {
     "...": {
       "test":["enjaular"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4892,6 +5098,7 @@
     },
     "abaular": {
       "test":["abaular"],
+      "model":[24],
       "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4912,6 +5119,7 @@
     },
     "apaular": {
       "test":["apaular"],
+      "model":[24],
       "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4932,6 +5140,7 @@
     },
     "desembaular": {
       "test":["desembaular"],
+      "model":[24],
       "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4952,6 +5161,7 @@
     },
     "embaular": {
       "test":["embaular"],
+      "model":[24],
       "note": { "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4974,6 +5184,7 @@
   "aurar": {
     "...": {
       "test":["instaurar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'aurar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4988,6 +5199,7 @@
   "aurir": {
     "...": {
       "test":["haurir"],
+      "model":[3],
       "note": { "plain": ["Antigamente tidos como defectivos, os verbos terminados em 'aurar' são, nos dias atuais, classificados e conjugados como regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -4999,7 +5211,8 @@
       }
     },
     "exaurir": {
-      "test":["haurir"],
+      "test":["exaurir"],
+      "model":[3],
       "note": { "plain": ["Antigamente tidos como defectivos, os verbos terminados em 'aurar' são, nos dias atuais, classificados e conjugados como regulares. Exceção à regra é o verbo 'exaurir' que apresenta abundância no particípio com a forma 'exauto'¹"],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5030,6 +5243,7 @@
   "ausar": {
     "...": {
       "test":["causar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'ausar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5044,6 +5258,7 @@
   "autar": {
     "...": {
       "test":["pautar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'autar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5058,6 +5273,7 @@
   "avar": {
     "...": {
       "test":["cavar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'avar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5072,6 +5288,7 @@
   "aver": {
     "haver": {
       "test":["haver"],
+      "model":[75],
       "note": { "plain": [],
                 "ref": {}
               },
@@ -5127,6 +5344,7 @@
     },
     "reaver": {
       "test":["reaver"],
+      "model":[99],
       "note": { "plain": ["Derivado do verbo 'haver', o verbo 'reaver' só é conjugado nas flexões em que 'haver' apresenta a letra 'v'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5197,6 +5415,7 @@
     },
     "precaver": {
       "test":["precaver"],
+      "model":[98],
       "note": { "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5241,6 +5460,7 @@
     },
     "desprecaver": {
       "test":["desprecaver"],
+      "model":[98],
       "note": { "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5287,7 +5507,8 @@
   "avir": {
     "...": {
       "test":["avir", "contravir"],
-      "note": { "plain": ["Os verbos terminados em 'avir' (exceto 'desnxavir') são conjugados com os mesmos padrões de conjugação dos verbos derivados de 'vir'¹."],
+      "model":[91],
+      "note": { "plain": ["Os verbos terminados em 'avir' (exceto 'desenxavir') são conjugados com os mesmos padrões de conjugação dos verbos derivados de 'vir'¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
@@ -5384,6 +5605,7 @@
     },
     "desenxavir": {
       "test":["desenxavir"],
+      "model":[3],
       "note": { "plain": ["Os verbos terminados em 'avir' são conjugados com os mesmos padrões de conjugação dos verbos derivados de 'vir'. Mas o verbo 'desenxavir' (mesmo que 'desenxabir') é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5398,6 +5620,7 @@
   "avrar": {
     "...": {
       "test":["lavrar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'avrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5412,6 +5635,7 @@
   "axar": {
     "...": {
       "test":["taxar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'axar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5426,6 +5650,7 @@
   "azar": {
     "...": {
       "test":["azar"],
+      "model":[1],
       "note": { "plain": ["Todos os verbos terminados em 'azar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5440,6 +5665,7 @@
   "azer": {
     "...fazer": {
       "test":["bem-fazer"],
+      "model":[74],
       "note": { "plain": [],
                 "ref": {}
               },
@@ -5471,13 +5697,17 @@
           "far3":{
             "ft1_ind":["p1","p2","p3","p4","p5","p6"],
             "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "fei3":{
+            "pa":["n"]
           }
         },
         "VT":{
           "":{
             "pr_ind":["p3"],
             "pt1_ind":["p3"],
-            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pa":["n"]
           },
           "é":{
             "pt3_ind":["p4","p5"],
@@ -5502,6 +5732,9 @@
           },
           "íe":{
             "ft2_ind":["p5"]
+          },
+          "to":{
+            "pa":["n"]
           }
         },
         "NP":{
@@ -5512,7 +5745,8 @@
       }
     },
     "fazer": {
-      "test":["fazer"],
+      "test":["bem-fazer"],
+      "model":[74],
       "note": { "plain": [],
                 "ref": {}
               },
@@ -5526,31 +5760,35 @@
       },
       "rules": {
         "RAD":{
-          "faç":{
+          "faç3":{
             "pr_ind":["p1"],
             "pr_sub":["p1","p2","p3","p4","p5","p6"],
             "im1":["p3","p4","p6"],
             "im2":["p2","p3","p4","p5","p6"]
           },
-          "fiz":{
+          "fiz3":{
             "pt1_ind":["p1","p2","p4","p5","p6"],
             "pt3_ind":["p1","p2","p3","p4","p5","p6"],
             "pt_sub":["p1","p2","p3","p4","p5","p6"],
             "fut_sub":["p1","p2","p3","p4","p5","p6"]
           },
-          "fez":{
+          "fez3":{
             "pt1_ind":["p3"]
           },
-          "far":{
+          "far3":{
             "ft1_ind":["p1","p2","p3","p4","p5","p6"],
             "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+          },
+          "fei3":{
+            "pa":["n"]
           }
         },
         "VT":{
           "":{
             "pr_ind":["p3"],
             "pt1_ind":["p3"],
-            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pa":["n"]
           },
           "é":{
             "pt3_ind":["p4","p5"],
@@ -5575,6 +5813,9 @@
           },
           "íe":{
             "ft2_ind":["p5"]
+          },
+          "to":{
+            "pa":["n"]
           }
         },
         "NP":{
@@ -5586,6 +5827,7 @@
     },
     "...jazer": {
       "test":["adjazer"],
+      "model":[2],
       "note": { "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5609,6 +5851,7 @@
     },
     "jazer": {
       "test":["jazer"],
+      "model":[2],
       "note": { "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5631,10 +5874,12 @@
       }
     },
     "...prazer": {
-      "test":["prazer"],
-      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal. Além disso, o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', não tão utilizadas quanto as formas 'prouve' e 'prouveram'¹."],
-                "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+      "test":["desprazer"],
+      "model":[102],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+                "ref": {
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
+                  "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
       "type": [2, 3, 4],
@@ -5660,8 +5905,8 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           },
           "prouv4":{
@@ -5673,7 +5918,7 @@
         },
         "VT":{
           "":{
-            "pr_ind":["p1","p2","p3","p4","p5"],
+            "pr_ind":["p1","p2","p4","p5"],
             "pt1_ind":["p1","p2","p4","p5"],
             "pt2_ind":["p1","p2","p4","p5"],
             "pt3_ind":["p1","p2","p4","p5"],
@@ -5682,8 +5927,8 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           }
         },
@@ -5698,15 +5943,15 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           }
         },
         "NP":{
           "":{
             "pr_ind":["p1","p2","p4","p5"],
-            "pt1_ind":["p1","p2","p3","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
             "pt2_ind":["p1","p2","p4","p5"],
             "pt3_ind":["p1","p2","p4","p5"],
             "ft1_ind":["p1","p2","p4","p5"],
@@ -5714,18 +5959,51 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
+          }
+        }
+      }
+    },
+    "comprazer": {
+      "test":["desprazer"],
+      "model":[71],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+                "ref": {
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
+                  "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2, 3, 4],
+      "abundance":{
+        "RAD":{
+          "praz4":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "rules": {
+        "RAD":{
+          "prouv4":{
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
           }
         }
       }
     },
     "prazer": {
-      "test":["prazer"],
-      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresenta variação a depender da obra de referência. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal. Além disso, o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', não tão utilizadas quanto as formas 'prouve' e 'prouveram'¹."],
-                "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+      "test":["desprazer"],
+      "model":[102],
+      "note": { "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+                "ref": {
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
+                  "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
               },
       "type": [2, 3, 4],
@@ -5751,8 +6029,8 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           },
           "prouv4":{
@@ -5764,7 +6042,7 @@
         },
         "VT":{
           "":{
-            "pr_ind":["p1","p2","p3","p4","p5"],
+            "pr_ind":["p1","p2","p4","p5"],
             "pt1_ind":["p1","p2","p4","p5"],
             "pt2_ind":["p1","p2","p4","p5"],
             "pt3_ind":["p1","p2","p4","p5"],
@@ -5773,8 +6051,8 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           }
         },
@@ -5789,15 +6067,15 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
+            "im1":["p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
             "inf":["p1","p2","p4","p5"]
           }
         },
         "NP":{
           "":{
             "pr_ind":["p1","p2","p4","p5"],
-            "pt1_ind":["p1","p2","p3","p4","p5"],
+            "pt1_ind":["p1","p2","p4","p5"],
             "pt2_ind":["p1","p2","p4","p5"],
             "pt3_ind":["p1","p2","p4","p5"],
             "ft1_ind":["p1","p2","p4","p5"],
@@ -5805,75 +6083,21 @@
             "pr_sub":["p1","p2","p4","p5"],
             "pt_sub":["p1","p2","p4","p5"],
             "fut_sub":["p1","p2","p4","p5"],
-            "im1":["p1","p2","p4","p5"],
-            "im2":["p1","p2","p4","p5"],
-            "inf":["p1","p2","p4","p5"]
-          }
-        }
-      }
-    },
-    "...trazer": {
-      "test":[""],
-      "note": { "plain": ["O verbo 'trazer' e seus derivados são regulares¹. A abundância com relação a 2ª pessoa do Imperativo Afirmativo é registrada no dicionário online Houiass²."],
-                "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
-                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
-                }
-              },
-      "type": [2, 4],
-      "abundance":{
-        "VT":{
-          "":{
-            "im1":["p2"]
-          }
-        }
-      },
-      "rules": {
-        "RAD":{
-          "g1":{
-            "pr_ind":["p1"],
-            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p5","p6"],
             "im2":["p2","p3","p4","p5","p6"],
-            "im1":["p3","p4","p6"]
-          },
-          "troux":{
-            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
-            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
-            "pt_sub":["p1","p2","p3","p4","p5","p6"],
-            "fut_sub":["p1","p2","p3","p4","p5","p6"] 
-          },
-          "tra":{
-            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
-            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
-          }
-        },
-        "VT":{
-          "":{
-            "pr_ind":["p3"],
-            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
-            "ft2_ind":["p1","p2","p3","p4","p5","p6"]
-          },
-          "é":{
-            "pt3_ind":["p4","p5"],
-            "pt_sub":["p4","p5"]
-          }
-        },
-        "NP":{
-          "e":{
-            "pt1_ind":["p1"]
-          },
-          "":{
-            "pt1_ind":["p3"]
+            "inf":["p1","p2","p4","p5"]
           }
         }
       }
     },
     "trazer": {
       "test":["trazer"],
-      "note": { "plain": ["O verbo 'trazer' e seus derivados são regulares¹. A abundância com relação a 2ª pessoa do Imperativo Afirmativo é registrada no dicionário online Houiass²."],
+      "model":[79],
+      "note": { "plain": ["O verbo 'trazer' é irregular¹. A abundância com relação a 2ª pessoa do singular do Imperativo Afirmativo é registra no Dicionário Online Houiass² e no Dicionário Houiass de Conjugação de Verbos³."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
-                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                  "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [2, 4],
@@ -5928,9 +6152,11 @@
   "ear": {
     "...": {
       "test":["nortear", "espernear", "tornear"],
-      "note": { "plain": ["Tida como uma das terminações mais frequentes do grupo de verbos terminados em 'ar', a terminação 'ear' tem como paradigma de conjugação o verbo 'nortear'¹."],
+      "model":[54],
+      "note": { "plain": ["Tida como uma das terminações mais frequentes do grupo de verbos terminados em 'ar', a terminação 'ear' tem como paradigma de conjugação o verbo 'nortear'¹ ou 'passear'²."],
                 "ref": { 
-                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                  "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [1],
@@ -5959,6 +6185,7 @@
   "ebar": {
     "...": {
       "test":["ensebar"],
+      "model":[11],
       "note": { "plain": ["Todos os verbos terminados em 'ebar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5973,6 +6200,7 @@
   "ebrar": {
     "...": {
       "test":["quebrar"],
+      "model":[11],
       "note": { "plain": ["Todos os verbos terminados em 'ebrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -5987,6 +6215,7 @@
   "ecar":{
     "...": {
       "test":["brecar"],
+      "model":[11, 33],
       "note":{"plain":["Todos os verbos terminados em 'ecar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6008,6 +6237,7 @@
   "eçar":{
     "...": {
       "test":["começar"],
+      "model":[11, 35],
       "note":{"plain":["Todos os verbos terminados em 'eçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6029,6 +6259,7 @@
   "ecer":{
     "...": {
       "test":["tecer"],
+      "model":[27, 36],
       "note":{"plain":["Os verbos terminados em 'ecer' são regulares, observando que algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6050,6 +6281,7 @@
   "echar": {
     "...": {
       "test":["fechar"],
+      "model":[42],
       "note": { "plain": ["Todos os verbos terminados em 'ebrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6064,6 +6296,7 @@
   "ecrar": {
     "...": {
       "test":["execrar"],
+      "model":[11],
       "note": { "plain": ["Todos os verbos terminados em 'ecrar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6078,6 +6311,7 @@
   "ectar": {
     "...": {
       "test":["prospectar"],
+      "model":[13],
       "note": { "plain": ["Todos os verbos terminados em 'ectar' são regulares¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
