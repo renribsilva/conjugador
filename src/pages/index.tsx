@@ -14,6 +14,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import {Tooltip} from "@nextui-org/tooltip";
 
 const Conjugations = () => {
 
@@ -140,6 +141,8 @@ const Conjugations = () => {
       .map(punct => `${punct}`)
       .join(' ');
   };
+
+  const infoContent = `Este verbo foi submetido a testes e a sua conjugação foi estabelecida de acordo com o paradigma de número ''`
 
   return (
     <>
@@ -485,7 +488,15 @@ const Conjugations = () => {
             <div>
               {state.conjugations !== null && (
                 <>
-                  <h2>Verbo {state.foundVerb}</h2>
+                  <h2>
+                    <span>Verbo </span> 
+                    <span>{state.foundVerb} </span>
+                    {/* <span>
+                      <Tooltip className={styles.tooltip} content={infoContent}>
+                        <span className="material-symbols-outlined">info</span>
+                      </Tooltip>
+                    </span> */}
+                  </h2>
                   <p>{state.note_plain}</p>
                   {state.types && (
                     <p>
@@ -524,10 +535,6 @@ const Conjugations = () => {
                       <NoteRefList noteRef={state.note_ref} />
                     </div>
                   )}
-                  <div className="container">
-      <button className="button">Passe o mouse aqui</button>
-      <p className="message">Esta é a mensagem exibida ao passar o mouse!</p>
-    </div>
                 </>
               )}
             </div>

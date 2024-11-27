@@ -405,7 +405,7 @@ export const flowOfReact = () => {
       varOriginalInput: state.varOriginalInput,
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies);  
 
   return {

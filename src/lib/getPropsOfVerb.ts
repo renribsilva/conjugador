@@ -24,20 +24,6 @@ function mapTypesToStrings(types: any) {
   return types.map(type => typeDescriptions[type] || "tipo desconhecido");
 }
 
-// Função para verificar se dois objetos são iguais
-function areObjectsEqual(obj1: VerbProps, obj2: VerbProps): boolean {
-  return (
-    obj1.hasTargetCanonical === obj2.hasTargetCanonical &&
-    obj1.hasTargetAbundance === obj2.hasTargetAbundance &&
-    obj1.ending === obj2.ending &&
-    obj1.verb === obj2.verb &&
-    JSON.stringify(obj1.types) === JSON.stringify(obj2.types) &&
-    JSON.stringify(obj1.note_plain) === JSON.stringify(obj2.note_plain) &&
-    JSON.stringify(obj1.note_ref) === JSON.stringify(obj2.note_ref) &&
-    obj1.afixo === obj2.afixo
-  );
-}
-
 // Função principal para buscar propriedades do verbo
 export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVerb: string): Promise<VerbProps[]> {
   const P = ["p1", "p2", "p3", "p4", "p5", "p6"];
@@ -70,7 +56,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
               const verbProps: VerbProps = {
 
                 hasTargetCanonical: result.results.canonical.hasTarget,
-                hasTargetAbundance: result.results.abundance.hasTarget,
+                hasTargetAbundance: result.results.abundance.hasTarget,                
                 ending: result.ending,
                 verb: validVerb,
                 types: mappedTypes,

@@ -219,6 +219,14 @@
   justify-content: center;
 }
 
+.tooltip {
+  max-width: 300px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 0.3rem;
+  padding: 10px;
+  font-size: 12px;
+}
+
 /******************************************************/
 /*********************FOOT_INFO************************/
 /******************************************************/
@@ -226,6 +234,3 @@
 .foot_info {
   padding-top: 20px;
 }
-
-
-
