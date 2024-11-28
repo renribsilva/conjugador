@@ -144,6 +144,16 @@ const Conjugations = () => {
 
   const infoContent = `Este verbo foi submetido a testes e a sua conjugação foi estabelecida de acordo com o paradigma de número ''`
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       <section className={styles.navbar_container}>
