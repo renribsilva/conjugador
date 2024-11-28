@@ -6375,5 +6375,238 @@
         }
       }
     }
+  },
+  "eglar": {
+    "...": {
+      "test":{"arreglar":[11]},
+      "note": { "plain": ["Todos os verbos terminados em 'eglar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "egmar": {
+    "...": {
+      "test":{"deflegmar":[13]},
+      "note": { "plain": ["Os poucos verbos terminados em 'egmar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "egrir": {
+    "denegrir": {
+      "test":{
+        "denegrir":[null]
+      },
+      "note": { "plain": ["Este conjugador não conjuga o verbo 'denegrir'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
+                "ref": { 
+                  "1": ["Pombo R. Dicionário de sinônimos da língua portuguesa. 2. ed. Rio de Janeiro: Academia Brasileira de Letras, 2011."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pa":["n"],
+            "gd":["n"],
+            "pr_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"],
+            "inf":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pa":["n"],
+            "gd":["n"],
+            "pr_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"],
+            "inf":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pa":["n"],
+            "gd":["n"],
+            "pr_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"],
+            "inf":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pa":["n"],
+            "gd":["n"],
+            "pr_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt1_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft1_ind":["p1","p2","p3","p4","p5","p6"],
+            "ft2_ind":["p1","p2","p3","p4","p5","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"],
+            "inf":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eguar": {
+    "...": {
+      "test":{"eguar":[57]},
+      "note": { "plain": ["Os poucos verbos terminados em 'eguar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "eguir":{
+    "...": {
+      "test":{"seguir":[29,41]},
+      "note":{"plain":["Todos os verbos terminados em 'eguir' são regulares, mas algumas flexões têm o 'segu' substituído por 'sig' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "sig4":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eiçar":{
+    "...": {
+      "test":{"beiçar": [21, 35]},
+      "note":{"plain":["Todos os verbos terminados em 'eiçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "c1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eifar": {
+    "...": {
+      "test":{"ceifar":[21]},
+      "note": { "plain": ["Os poucos verbos terminados em 'eifar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "eigar":{
+    "...": {
+      "test":{"amanteigar":[21, 34]},
+      "note":{"plain":["Todos os verbos terminados em 'eigar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "gu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eijar":{
+    "...": {
+      "test":{"beijar":[21]},
+      "note":{"plain":["Todos os verbos terminados em 'eigar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "eimar":{
+    "...": {
+      "test":{"queimar":[21]},
+      "note":{"plain":["Todos os verbos terminados em 'eimar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
   }
 }
