@@ -127,9 +127,9 @@
 /**************************************************/
 
 .theme_button {
-  background-color:var(--background);
+  /* background-color:var(--background); */
   border: none;
-  height: 30px;
+  height: 25px;
 }
 
 /***************************************************/
@@ -145,6 +145,7 @@
   cursor: pointer;
   min-width: 100px;
   font-size: 15px;
+  min-height: 45px;
 }
 
 /***************************************************/
