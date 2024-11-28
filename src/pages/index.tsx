@@ -142,8 +142,6 @@ const Conjugations = () => {
       .join(' ');
   };
 
-  const infoContent = `Este verbo foi submetido a testes e a sua conjugação foi estabelecida de acordo com o paradigma de número ''`
-
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
