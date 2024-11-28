@@ -4,6 +4,7 @@ desabar
 reiniciar
 abaixar
 apaular
+sublimar
 
 rer
 
