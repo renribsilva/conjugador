@@ -14,7 +14,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
-import {Tooltip} from "@nextui-org/tooltip";
+// import {Tooltip} from "@nextui-org/tooltip";
 
 const Conjugations = () => {
 
@@ -205,14 +205,16 @@ const Conjugations = () => {
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa poha</Button>
                   </div>
-                </>}
+                </>
+              }
               {!state.showHome && state.showSobre &&
                 <>
                   <About />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
-                </>}
+                </>
+              }
               {state.conjugations === null && state.showButton && (
                 <>
                   {state.punct !== null && 
