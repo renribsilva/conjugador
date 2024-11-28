@@ -35,22 +35,17 @@ async function processVerbsFile(): Promise<void> {
       (word.length > 3 || exceptions.has(word))
     );
 
-    console.log('Incrementando a lista de verbos...');
-
     const irregularVerbsPath = path.join(assetsDir, 'irregVerbs.txt');
     const irregularVerbs = await readTxtLines(irregularVerbsPath);
     const allVerbsSet = new Set([...verbs, ...irregularVerbs]);
 
     let allVerbs = Array.from(allVerbsSet);
-    // console.log(allVerbs)
 
-    console.log("Removendo vocábulos não verbos...")
+    console.log(`Quantidades de vocábulos terminados em 'ar', 'er, 'ir' e 'por': ${allVerbs.length}`)
 
     allVerbs = await filterNonVerbs(allVerbs, 'nonVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonDiadriticVerb.txt');
-
-    console.log("Montando o arquivo allVerbs.json...")
 
     const J = allVerbs.reduce((acc, verb) => {
       const normalized = String(ni(verb));
@@ -61,17 +56,19 @@ async function processVerbsFile(): Promise<void> {
 
     await fs.promises.writeFile(outputFilePath, JSON.stringify(J, null, 2));
 
+    console.log(`Quantidades de vocábulos terminados em 'ar', 'er, 'ir' e 'por' pós-filtragem: ${allVerbs.length}`)
+
     const ar = Object.keys(J).filter(key => key.endsWith('ar')).length;
-    console.log(`Quantidade de entradas terminadas em 'ar': ${ar}`);
+    console.log(`- entradas terminadas em 'ar': ${ar}`);
 
     const er = Object.keys(J).filter(key => key.endsWith('er')).length;
-    console.log(`Quantidade de entradas terminadas em 'er': ${er}`);
+    console.log(`- entradas terminadas em 'er': ${er}`);
 
     const ir = Object.keys(J).filter(key => key.endsWith('ir')).length;
-    console.log(`Quantidade de entradas terminadas em 'ir': ${ir}`);
+    console.log(`- entradas terminadas em 'ir': ${ir}`);
 
     const porCount = Object.keys(J).filter(key => key.endsWith('por') || key.endsWith('pôr')).length;
-    console.log(`Quantidade de entradas terminadas em 'por': ${porCount}`);
+    console.log(`- entradas terminadas em 'por': ${porCount}`);
 
     console.log(`Número de verbos irregulares: ${Object.keys(irregularVerbs).length}`);
 
