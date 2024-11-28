@@ -123,32 +123,32 @@ export const conjugateVerb = (verb: string) => {
           getCanonical("p1", x, 0), 
           getAbundance("p1", x, 0, "abundance1"),
           getAbundance("p1", x, 0, "abundance2")
-        ],
+        ].filter(value => value !== null),
         p2: [
           getCanonical("p2", x, 1), 
           getAbundance("p2", x, 1, "abundance1"),
           getAbundance("p2", x, 1, "abundance2")
-        ],
+        ].filter(value => value !== null),
         p3: [
           getCanonical("p3", x, 2), 
           getAbundance("p3", x, 2, "abundance1"),
           getAbundance("p3", x, 2, "abundance2")
-        ],
+        ].filter(value => value !== null),
         p4: [
           getCanonical("p4", x, 3), 
           getAbundance("p4", x, 3, "abundance1"),
           getAbundance("p4", x, 3, "abundance2")
-        ],
+        ].filter(value => value !== null),
         p5: [
           getCanonical("p5", x, 4), 
           getAbundance("p5", x, 4, "abundance1"),
           getAbundance("p5", x, 4, "abundance2")
-        ],
+        ].filter(value => value !== null),
         p6: [
           getCanonical("p6", x, 5), 
           getAbundance("p6", x, 5, "abundance1"),
           getAbundance("p6", x, 5, "abundance2")
-        ],
+        ].filter(value => value !== null),
     };
   };
 
@@ -158,7 +158,7 @@ export const conjugateVerb = (verb: string) => {
           getCanonical("n", x, 0), 
           getAbundance("n", x, 0, "abundance1"),
           getAbundance("n", x, 0, "abundance2")
-        ]
+        ].filter(value => value !== null)
     };
   };
 
