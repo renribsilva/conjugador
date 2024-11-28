@@ -6322,5 +6322,280 @@
       "rules": {
       }
     }
+  },
+  "ectir": {
+    "...": {
+      "test":["flectir"],
+      "model":[29],
+      "note": { "plain": ["Todos os verbos terminados em 'ectir' são regulares, observando algumas acomodações gráficas no Presente do Indicativo e, por conseguinte, no Subjuntivo e Imperativo¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "ict3":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "edar": {
+    "...": {
+      "test":["quedar"],
+      "model":[11],
+      "note": { "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    },
+    "redar": {
+      "test":["redar"],
+      "model": [80],
+      "note": { "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar' quando a sua acepção for 'dar novamente'. Neste caso, a conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "VT":{
+          "o":{
+            "pr_ind":["p1"]
+          },
+          "á":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          },
+          "ã":{
+            "pr_ind":["p6"]
+          },
+          "e":{
+            "pt1_ind":["p2","p3","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p6"],
+            "pt_sub":["p1","p2","p3","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          },
+          "ê":{
+            "im1":["p3"]
+          }
+        },
+        "MT":{
+          "ê":{
+            "pr_sub":["p1","p2","p3"],
+            "im2":["p2","p3"]
+          }
+        },
+        "NP":{
+          "u":{
+            "pr_ind":["p1"]
+          },
+          "o":{
+            "pr_ind":["p6"]
+          },
+          "em":{
+            "pr_sub":["p6"],
+            "im1":["p6"],
+            "im2":["p6"]
+          }
+        }
+      }
+    }
+  },
+  "eder": {
+    "...": {
+      "test":["ceder"],
+      "model":[27],
+      "note": { "plain": ["Todos os verbos terminados em 'eder' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "gredir": {
+    "...": {
+      "test":["pedir"],
+      "model":[45],
+      "note": { "plain": ["Verbos terminados com 'gredir' compreendem um subgrupo de verbos terminados em 'edir', com regras próprias de conjugação irregular¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "id2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "edir": {
+    "...": {
+      "test":["agredir"],
+      "model":[63],
+      "note": { "plain": ["Grande parte dos verbos terminados em 'edir' seguem o padrão abaixo de conjugação¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [2],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "ç1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    },
+    "comedir": {
+      "test":["comedir"],
+      "model":[93],
+      "note": { "plain": ["Dos verbos terminados em 'edir', 'comedir' apresenta defectividade tal como o verbo 'excelir'¹."],
+                "ref": { 
+                  "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+                }
+              },
+      "type": [1, 3],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "edrar": {
+    "...": {
+      "test":["medrar"],
+      "model":[11],
+      "note": { "plain": ["Todos os verbos terminados em 'edrar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "efar": {
+    "...": {
+      "test":["blefar"],
+      "model":[11],
+      "note": { "plain": ["Todos os verbos terminados em 'efar' são regulares¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1],
+      "abundance":{},
+      "rules": {
+      }
+    }
+  },
+  "egar":{
+    "...": {
+      "test":["chegar"],
+      "model":[43],
+      "note":{"plain":["Todos os verbos terminados em 'egar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD": {
+          "gu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eger":{
+    "...": {
+      "test":["reger"],
+      "model":[27,38],
+      "note":{"plain":["Todos os verbos terminados em 'eger' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance":{},
+      "rules": {
+        "RAD":{
+          "j1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
   }
 }

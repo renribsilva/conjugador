@@ -28,9 +28,7 @@ export async function processVerb (verb: string) {
 
   const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
   const originalVerb = findOriginalVerb(normalizedJsonObject, cleanedVerb);
-
   const variations = findVariations(cleanedVerb)
-  // console.log(variations)
 
   if (originalVerb && originalVerb in normalizedJsonObject) {
   
