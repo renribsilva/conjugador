@@ -184,9 +184,9 @@ export const conjugateVerb = (verb: string) => {
     conjugations[tense] = reg;
   }
 
-  console.log(conjugations)
+  // console.log(conjugations)
   return conjugations;
   
 };
 
-conjugateVerb("aceitar");
+// conjugateVerb("aceitar");
