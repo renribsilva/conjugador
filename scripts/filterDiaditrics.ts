@@ -23,16 +23,13 @@ function filterLinesWithDiacritics(filePath: string, outputFilePath: string): vo
       (word.length > 3 || exceptions.has(word))
     );
   
-  // Filtra as linhas que contêm diacríticos
   const filteredLines = verbs.filter(line => hasDiacritics(line));
-  
-  // Escreve as linhas filtradas em um novo arquivo
+
   fs.writeFileSync(outputFilePath, filteredLines.join('\n'), 'utf-8');
   
   console.log(`Linhas com diacríticos foram salvas em: ${outputFilePath}`);
 }
 
-// Exemplo de uso
-const filePath = './public/words.txt';  // Caminho do arquivo de entrada
-const outputFilePath = './assets/output.txt';  // Caminho do arquivo de saída
+const filePath = './public/words.txt';  
+const outputFilePath = './assets/output.txt'; 
 filterLinesWithDiacritics(filePath, outputFilePath);

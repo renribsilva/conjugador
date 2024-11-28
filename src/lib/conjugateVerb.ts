@@ -10,14 +10,12 @@ export const conjugateVerb = (verb: string) => {
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
 
-  // Função auxiliar de F
   const F = (P: string, M: string, D: string, key: string): string => {
     const result = findNoRegRule(verb, P, M, D);
     const rule = result.results[key].hasTarget ? result.results[key].rule : NOT_FOUND;
     return rule ?? NOT_FOUND; 
   };
 
-  // Função para obter dados do verbo
   const getCanonical = (P: string, M: string, num: number): string => {
     
     const forRrule = findNoRegRule(verb, P, M, "RAD").results.canonical.hasTarget;
@@ -118,7 +116,6 @@ export const conjugateVerb = (verb: string) => {
 
   };
 
-  // Função para gerar conjugação
   const W = (x: string, P1: string | null = null) => {
     return {
         p1: [P1 ?? getCanonical("p1", x, 0), getAbundance("p1", x, 0)],
@@ -130,7 +127,6 @@ export const conjugateVerb = (verb: string) => {
     };
   };
 
-  // Função para gerar conjugação no singular
   const N = (x: string) => {
     return {
         n: [getCanonical("n", x, 0), getAbundance("n", x, 0)]

@@ -6,13 +6,11 @@ function Theme() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Garantir que o código só seja executado no cliente
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    // Retorna null ou um valor de fallback até que o tema seja carregado no cliente
     return null;
   }
 

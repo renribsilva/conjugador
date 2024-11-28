@@ -1,7 +1,6 @@
 import fs from 'fs';
 import https from 'https';
 
-// Função para baixar a lista de palavras do LibreOffice
 export default async function pullLibreOfficeWords(url: string, dest: string): Promise<void> {
   const file = fs.createWriteStream(dest);
   return new Promise((resolve, reject) => {

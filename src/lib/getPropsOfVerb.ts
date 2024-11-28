@@ -11,7 +11,6 @@ interface VerbProps {
   afixo: string | null | undefined;
 }
 
-// Função para mapear tipos para strings
 function mapTypesToStrings(types: any) {
   const typeDescriptions: Record<number, string> = {
     1: "regular",
@@ -24,7 +23,6 @@ function mapTypesToStrings(types: any) {
   return types.map(type => typeDescriptions[type] || "tipo desconhecido");
 }
 
-// Função principal para buscar propriedades do verbo
 export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVerb: string): Promise<VerbProps[]> {
   const P = ["p1", "p2", "p3", "p4", "p5", "p6"];
   const M = ["gd", "pa", "pr_ind", "pt1_ind", "pt2_ind", "pt3_ind", "ft1_ind", "ft2_ind", 
@@ -105,7 +103,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
   const uniqueResults: VerbProps[] = Array.from(resultsMap.values());
 
-// Acumulação para determinar as propriedades
   const accumulatedResult: VerbProps = uniqueResults.reduce(
     (acc, curr) => ({
       hasTargetCanonical: acc.hasTargetCanonical || curr.hasTargetCanonical,

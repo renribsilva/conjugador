@@ -1,4 +1,3 @@
-// Função recursiva para buscar terminations
 export default function innerSearchOfRules(obj: object, P: string, M: string, D: string) {
   
   let hasTarget = false;
