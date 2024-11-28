@@ -31,7 +31,13 @@ function getDefaultResponse() {
         P: null,
         M: null,
       },
-      abundance: {
+      abundance1: {
+        hasTarget: false,
+        rule: null,
+        P: null,
+        M: null,
+      },
+      abundance2: {
         hasTarget: false,
         rule: null,
         P: null,
@@ -65,12 +71,14 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     if (verbRule?.rules) {
 
       const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
-      const abundance = innerSearchOfRules(verbRule.abundance, P, M, D);
+      const abundance1 = innerSearchOfRules(verbRule.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(verbRule.abundance2, P, M, D);
 
       return {
         results: {
           canonical: {...canonical},
-          abundance: {...abundance}
+          abundance1: {...abundance1},
+          abundance2: {...abundance2}
         },
         ending,
         verb,
@@ -126,13 +134,15 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
       if (baseVerbRules?.rules) {
 
         const canonical = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-        const abundance = innerSearchOfRules(baseVerbRules.abundance, P, M, D);
+        const abundance1 = innerSearchOfRules(baseVerbRules.abundance1, P, M, D);
+        const abundance2 = innerSearchOfRules(baseVerbRules.abundance2, P, M, D);
         const foundedAfixo = variationsProps.matchingAfixo;
 
         return {
           results: {
             canonical: {...canonical},
-            abundance: {...abundance}
+            abundance1: {...abundance1},
+            abundance2: {...abundance2}
           },
           ending,
           verb,
@@ -150,12 +160,14 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     if (verbRule?.rules) {
 
       const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
-      const abundance = innerSearchOfRules(verbRule.abundance, P, M, D);
+      const abundance1 = innerSearchOfRules(verbRule.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(verbRule.abundance2, P, M, D);
       
       return {
         results: {
           canonical: {...canonical},
-          abundance: {...abundance}
+          abundance1: {...abundance1},
+          abundance2: {...abundance2}
         },
         ending: "...",
         verb,

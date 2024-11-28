@@ -2,7 +2,8 @@ import { findNoRegRule } from "./findNoRegVerbs";
 
 interface VerbProps {
   hasTargetCanonical: boolean | null;
-  hasTargetAbundance: boolean | null;
+  hasTargetAbundance1: boolean | null;
+  hasTargetAbundance2: boolean | null;
   ending: string | null;
   verb: string | null;
   types: string[] | null;
@@ -54,7 +55,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
               const verbProps: VerbProps = {
 
                 hasTargetCanonical: result.results.canonical.hasTarget,
-                hasTargetAbundance: result.results.abundance.hasTarget,                
+                hasTargetAbundance1: result.results.abundance1.hasTarget, 
+                hasTargetAbundance2: result.results.abundance2.hasTarget,                
                 ending: result.ending,
                 verb: validVerb,
                 types: mappedTypes,
@@ -78,7 +80,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
             
             const verbProps: VerbProps = {
               hasTargetCanonical: result.results.canonical.hasTarget,
-              hasTargetAbundance: result.results.abundance.hasTarget,
+              hasTargetAbundance1: result.results.abundance1.hasTarget,
+              hasTargetAbundance2: result.results.abundance2.hasTarget,
               ending: result.ending,
               verb: validVerb,
               types: ["regular"],
@@ -106,7 +109,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
   const accumulatedResult: VerbProps = uniqueResults.reduce(
     (acc, curr) => ({
       hasTargetCanonical: acc.hasTargetCanonical || curr.hasTargetCanonical,
-      hasTargetAbundance: acc.hasTargetAbundance || curr.hasTargetAbundance,
+      hasTargetAbundance1: acc.hasTargetAbundance1 || curr.hasTargetAbundance1,
+      hasTargetAbundance2: acc.hasTargetAbundance2 || curr.hasTargetAbundance2,
       ending: curr.ending || acc.ending,
       verb: curr.verb || acc.verb,
       types: curr.types || acc.types,
@@ -116,7 +120,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
     }),
     {
       hasTargetCanonical: null,
-      hasTargetAbundance: null,
+      hasTargetAbundance1: null,
+      hasTargetAbundance2: null,
       ending: null,
       verb: null,
       types: null,

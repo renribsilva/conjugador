@@ -66,17 +66,17 @@ export const conjugateVerb = (verb: string) => {
 
   };
 
-  const getAbundance = (P: string, M: string, num: number): string | null => {
+  const getAbundance = (P: string, M: string, num: number, abundance: string): string | null => {
     
-    const forRrule = findNoRegRule(verb, P, M, "RAD").results.abundance.hasTarget;
-    const forVTrule = findNoRegRule(verb, P, M, "VT").results.abundance.hasTarget;
-    const forMTrule = findNoRegRule(verb, P, M, "MT").results.abundance.hasTarget;
-    const forNPrule = findNoRegRule(verb, P, M, "NP").results.abundance.hasTarget;
+    const forRrule = findNoRegRule(verb, P, M, "RAD").results[abundance].hasTarget;
+    const forVTrule = findNoRegRule(verb, P, M, "VT").results[abundance].hasTarget;
+    const forMTrule = findNoRegRule(verb, P, M, "MT").results[abundance].hasTarget;
+    const forNPrule = findNoRegRule(verb, P, M, "NP").results[abundance].hasTarget;
 
-    const Rcontent = findNoRegRule(verb, P, M, "RAD").results.abundance.rule;
-    const VTcontent = findNoRegRule(verb, P, M, "VT").results.abundance.rule;
-    const MTcontent = findNoRegRule(verb, P, M, "MT").results.abundance.rule;
-    const NPcontent = findNoRegRule(verb, P, M, "NP").results.abundance.rule;
+    const Rcontent = findNoRegRule(verb, P, M, "RAD").results[abundance].rule;
+    const VTcontent = findNoRegRule(verb, P, M, "VT").results[abundance].rule;
+    const MTcontent = findNoRegRule(verb, P, M, "MT").results[abundance].rule;
+    const NPcontent = findNoRegRule(verb, P, M, "NP").results[abundance].rule;
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -97,10 +97,10 @@ export const conjugateVerb = (verb: string) => {
       : (forRrule || forVTrule || forMTrule || forNPrule)
         ? (() => {
           let result = nw(`
-            ${F(P, M, "RAD", "abundance") === NOT_FOUND ? r : F(P, M, "RAD", "abundance")}
-            ${F(P, M, "VT", "abundance") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", "abundance")}
-            ${F(P, M, "MT", "abundance") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", "abundance")}
-            ${F(P, M, "NP", "abundance") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", "abundance")}*`);
+            ${F(P, M, "RAD", abundance) === NOT_FOUND ? r : F(P, M, "RAD", abundance)}
+            ${F(P, M, "VT", abundance) === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", abundance)}
+            ${F(P, M, "MT", abundance) === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", abundance)}
+            ${F(P, M, "NP", abundance) === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", abundance)}*`);
           if (Rcontent !== null) {
             result = result.replace(Rcontent, R);
           }
@@ -118,18 +118,47 @@ export const conjugateVerb = (verb: string) => {
 
   const W = (x: string, P1: string | null = null) => {
     return {
-        p1: [P1 ?? getCanonical("p1", x, 0), getAbundance("p1", x, 0)],
-        p2: [getCanonical("p2", x, 1), getAbundance("p2", x, 1)],
-        p3: [getCanonical("p3", x, 2), getAbundance("p3", x, 2)],
-        p4: [getCanonical("p4", x, 3), getAbundance("p4", x, 3)],
-        p5: [getCanonical("p5", x, 4), getAbundance("p5", x, 4)],
-        p6: [getCanonical("p6", x, 5), getAbundance("p6", x, 5)],
+        p1: [
+          P1 ?? 
+          getCanonical("p1", x, 0), 
+          getAbundance("p1", x, 0, "abundance1"),
+          getAbundance("p1", x, 0, "abundance2")
+        ],
+        p2: [
+          getCanonical("p2", x, 1), 
+          getAbundance("p2", x, 1, "abundance1"),
+          getAbundance("p2", x, 1, "abundance2")
+        ],
+        p3: [
+          getCanonical("p3", x, 2), 
+          getAbundance("p3", x, 2, "abundance1"),
+          getAbundance("p3", x, 2, "abundance2")
+        ],
+        p4: [
+          getCanonical("p4", x, 3), 
+          getAbundance("p4", x, 3, "abundance1"),
+          getAbundance("p4", x, 3, "abundance2")
+        ],
+        p5: [
+          getCanonical("p5", x, 4), 
+          getAbundance("p5", x, 4, "abundance1"),
+          getAbundance("p5", x, 4, "abundance2")
+        ],
+        p6: [
+          getCanonical("p6", x, 5), 
+          getAbundance("p6", x, 5, "abundance1"),
+          getAbundance("p6", x, 5, "abundance2")
+        ],
     };
   };
 
   const N = (x: string) => {
     return {
-        n: [getCanonical("n", x, 0), getAbundance("n", x, 0)]
+        n: [
+          getCanonical("n", x, 0), 
+          getAbundance("n", x, 0, "abundance1"),
+          getAbundance("n", x, 0, "abundance2")
+        ]
     };
   };
 
@@ -155,9 +184,9 @@ export const conjugateVerb = (verb: string) => {
     conjugations[tense] = reg;
   }
 
-  // console.log(conjugations)
+  console.log(conjugations)
   return conjugations;
   
 };
 
-// conjugateVerb("prazer");
+conjugateVerb("aceitar");
