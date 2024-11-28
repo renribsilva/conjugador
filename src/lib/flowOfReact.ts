@@ -15,7 +15,8 @@ export const flowOfReact = () => {
     foundVerb: string | null;
     ending: string | null | undefined;
     hasTargetCanonical: string | boolean | null ;
-    hasTargetAbundance: string | boolean | null ;
+    hasTargetAbundance1: string | boolean | null ;
+    hasTargetAbundance2: string | boolean | null ;
     note_plain: string[] | null | undefined;
     note_ref: object | null;
     types: string[] | null | undefined;
@@ -57,7 +58,8 @@ export const flowOfReact = () => {
     foundVerb: null,
     ending: null,
     hasTargetCanonical: null,
-    hasTargetAbundance: null,
+    hasTargetAbundance1: null,
+    hasTargetAbundance2: null,
     note_plain: null,
     note_ref: null,
     types: null,
@@ -127,7 +129,8 @@ export const flowOfReact = () => {
         foundVerb: null,
         ending: null,
         hasTargetCanonical: null,
-        hasTargetAbundance: null,
+        hasTargetAbundance1: null,
+        hasTargetAbundance2: null,
         note_plain: null,
         note_ref: null,
         types: null,
@@ -301,7 +304,8 @@ export const flowOfReact = () => {
           ...prev,
           ending: propsOfWord[0].ending,
           hasTargetCanonical: propsOfWord[0].hasTargetCanonical,
-          hasTargetAbundance: propsOfWord[0].hasTargetAbundance,
+          hasTargetAbundance1: propsOfWord[0].hasTargetAbundance1,
+          hasTargetAbundance2: propsOfWord[0].hasTargetAbundance2,
           types: propsOfWord[0].types,
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
@@ -342,7 +346,8 @@ export const flowOfReact = () => {
     state.foundVerb,
     state.ending,
     state.hasTargetCanonical,
-    state.hasTargetAbundance,
+    state.hasTargetAbundance1,
+    state.hasTargetAbundance2,
     state.note_plain,
     state.note_ref,
     state.types,
@@ -382,7 +387,8 @@ export const flowOfReact = () => {
       foundVerb: state.foundVerb,
       ending: state.ending,
       hasTargetCanonical: state.hasTargetCanonical,
-      hasTargetAbundance: state.hasTargetAbundance,
+      hasTargetAbundance1: state.hasTargetAbundance1,
+      hasTargetAbundance2: state.hasTargetAbundance2,
       note_plain: state.note_plain, 
       note_ref: state.note_ref,
       types: state.types,
