@@ -6409,7 +6409,7 @@
       "test":{
         "denegrir":[null]
       },
-      "note": { "plain": ["Este conjugador não conjuga o verbo 'denegrir'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
+      "note": { "plain": ["Este conjugador não irá conjuga o verbo 'denegrir'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
                 "ref": { 
                   "1": ["Pombo R. Dicionário de sinônimos da língua portuguesa. 2. ed. Rio de Janeiro: Academia Brasileira de Letras, 2011."]
                 }
@@ -6637,7 +6637,7 @@
   },
   "eitar":{
     "...": {
-      "test":{"inteirar":[21]},
+      "test":{"deitar":[21]},
       "note":{"plain":["Todos os verbos terminados em 'eitar' são regulares, observando que os verbos 'sujeitar' e 'aceitar' são abundantes¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6648,7 +6648,7 @@
       }
     },
     "aceitar": {
-      "test":{"inteirar":[21]},
+      "test":{"aceitar":[21]},
       "note":{"plain":["Todos os verbos terminados em 'eitar' são regulares, observando que os verbos 'sujeitar' e 'aceitar' são abundantes¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
@@ -6700,6 +6700,151 @@
           }
         }
       },
+      "rules": {
+      }
+    }
+  },
+  "eivar":{
+    "...": {
+      "test":{"eivar":[21]},
+      "note":{"plain":["Todos os verbos terminados em 'eivar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "eixar":{
+    "...": {
+      "test":{"deixar":[21]},
+      "note":{"plain":["Todos os verbos terminados em 'eivar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "eizar":{
+    "...": {
+      "test":{"homogeneizar":[23]},
+      "note":{"plain":["Os poucos verbos terminados em 'eizar' são regulares, observando apenas algumas acomodações gráficas nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "íz2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ejar":{
+    "...": {
+      "test":{"azulejar":[42]},
+      "note":{"plain":["Todos os verbos terminados em 'ejar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "elar":{
+    "...": {
+      "test":{"desmantelar":[11]},
+      "note":{"plain":["Todos os verbos terminados em 'elar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "eler":{
+    "...": {
+      "test":{"reler": [82]},
+      "note":{"plain":["Exceto 'exceler', que é regular, os verbos terminados em 'eler' são derivados de 'ler', razão por que são conjugados como tal¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [2],
+      "abundance1":{},
+      "rules": {
+        "VT":{
+          "e":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          },
+          "ê":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          }
+        },
+        "MT":{
+          "i":{
+            "pr_ind":["p1"]
+          },
+          "ia":{
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "des":{
+            "pr_ind":["p5"]
+          },
+          "em":{
+            "pr_ind":["p6"]
+          },
+          "de":{
+            "im1":["p5"]
+          }
+        }
+      }
+    },
+    "exceler": {
+      "test":{"exceler": [27]},
+      "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "elhar":{
+    "...": {
+      "test":{"telhar":[42]},
+      "note":{"plain":["Todos os verbos terminados em 'elhar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
       "rules": {
       }
     }
