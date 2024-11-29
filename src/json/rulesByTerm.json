@@ -6836,19 +6836,6 @@
       "rules": {
       }
     },
-    "sobrexceler": {
-      "test":{"exceler": [27]},
-      "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 
-              "ref":{
-                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
-                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
-                "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
-              }},
-      "type": [1],
-      "abundance1":{},
-      "rules": {
-      }
-    },
     "exceler": {
       "test":{"exceler": [27]},
       "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 

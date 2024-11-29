@@ -92,6 +92,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const variationsProps = findVariations(verb);
   const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
+  
+  // console.log(variationsProps)
   // console.log(endingsThatStartWith)
 
   let endingwithoutpunct = ''
@@ -104,6 +106,8 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
     const match = endingsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
 
+    // console.log(match)
+
     if (match) {
       endingwithoutpunct = match.replace("...", '');
 
@@ -112,13 +116,13 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   
   // console.log(variationsProps)
   // console.log(endingwithoutpunct)
-  // console.log(verbwithoutprefix)
+  // console.log(nw(endingwithoutpunct) === nw(verbwithoutprefix))
 
 
   if (
 
     endingsThatStartWith && 
-    endingsThatStartWith[0] !== "..." && 
+    (endingsThatStartWith.length === 1 && endingsThatStartWith[0] !== "...") && 
     verbwithoutprefix !== null &&
     nw(endingwithoutpunct) !== nw(verbwithoutprefix)
 
@@ -128,30 +132,32 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   }
 
-  for (const ending of endingsThatStartWith) {
-    if (verb.endsWith(ending.substring(3))) {
-      const baseVerbRules = verbRules[ending];
-      if (baseVerbRules?.rules) {
+  console.log(endingsThatStartWith)
 
-        const canonical = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-        const abundance1 = innerSearchOfRules(baseVerbRules.abundance1, P, M, D);
-        const abundance2 = innerSearchOfRules(baseVerbRules.abundance2, P, M, D);
-        const foundedAfixo = variationsProps.matchingAfixo;
+  if (verb.endsWith(ending.substring(3)) && nw(endingwithoutpunct) === nw(verbwithoutprefix)) {
 
-        return {
-          results: {
-            canonical: {...canonical},
-            abundance1: {...abundance1},
-            abundance2: {...abundance2}
-          },
-          ending,
-          verb,
-          types: baseVerbRules.type,
-          note_plain: baseVerbRules.note.plain,
-          note_ref: baseVerbRules.note.ref,
-          afixo: foundedAfixo  
-        };
-      }
+    const baseVerbRules = verbRules[`...${endingwithoutpunct}`];
+
+    if (baseVerbRules?.rules) {
+
+      const canonical = innerSearchOfRules(baseVerbRules.rules, P, M, D);
+      const abundance1 = innerSearchOfRules(baseVerbRules.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(baseVerbRules.abundance2, P, M, D);
+      const foundedAfixo = variationsProps.matchingAfixo;
+
+      return {
+        results: {
+          canonical: {...canonical},
+          abundance1: {...abundance1},
+          abundance2: {...abundance2}
+        },
+        ending,
+        verb,
+        types: baseVerbRules.type,
+        note_plain: baseVerbRules.note.plain,
+        note_ref: baseVerbRules.note.ref,
+        afixo: foundedAfixo  
+      };
     }
   }
 

@@ -47,8 +47,6 @@ export const flowOfReact = () => {
     varConector: string | null,
     varOriginalInput: string | null,
 
-    racistWord: boolean;
-
   }>({
 
     conjugations: null,
@@ -89,8 +87,6 @@ export const flowOfReact = () => {
     varMatchingAfixo: null,
     varConector: null,
     varOriginalInput: null,
-
-    racistWord: false
 
   });
 
@@ -152,8 +148,6 @@ export const flowOfReact = () => {
         varMatchingAfixo: null,
         varConector: null,
         varOriginalInput: null,
-
-        racistWord: false
 
       }));
 
@@ -375,7 +369,6 @@ export const flowOfReact = () => {
     state.varMatchingAfixo,
     state.varConector,
     state.varOriginalInput,
-    state.racistWord
   ];
   
   useEffect(() => {
@@ -416,7 +409,6 @@ export const flowOfReact = () => {
       varMatchingAfixo: state.varMatchingAfixo,
       varConector: state.varConector,
       varOriginalInput: state.varOriginalInput,
-      racistWord: state.racistWord
     };
   
     // console.log(data);
