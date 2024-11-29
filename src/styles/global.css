@@ -42,6 +42,11 @@
   justify-content: center;
 }
 
+html {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 body {
   /* background-color: rgb(175, 175, 73); */
   margin: 0;
