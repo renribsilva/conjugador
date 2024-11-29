@@ -195,5 +195,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('sobrexceler', 'p1','pr_ind',"VT")
-// console.log(res)
+const res = findNoRegRule('bem-dizer', 'p1','pr_ind',"VT")
+console.log(res)
