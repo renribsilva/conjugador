@@ -1663,7 +1663,8 @@
       "note": { "plain": ["'Raer', único verbo que possui terminação 'aer', é considerado um verbo fóssil e o seu uso foi reduzido ao uso no infinitivo, além de ter sofrido remissão para a forma 'rer', um verbo monossilábico¹. Tal como o verbo 'rer', a sua conjugação é incerta. Enquanto o Dicionário Houiass de Conjugação de Verbos² o conjuga de acordo com o paradigma de conjugação do verbo 'soer', o Dicionário Online Houiass³ simplesmente não o conjuga em nenhuma flexão. Diante do impasse, optou-se, aqui, por conjugar apenas o Infinitivo Pessoal, como forma de vizualizar o uso mencionado no início dessa glosa¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
-                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+                  "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                  "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
               },
       "type": [1],
@@ -6822,6 +6823,32 @@
         }
       }
     },
+    "...exceler": {
+      "test":{"exceler": [27]},
+      "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    },
+    "sobrexceler": {
+      "test":{"exceler": [27]},
+      "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."],
+                "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"],
+                "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    },
     "exceler": {
       "test":{"exceler": [27]},
       "note":{"plain":["Os verbos terminados em 'eler' são, quase todos, derivados de 'ler' e como tal são conjugados, observando apenas que 'exceler' é regular e para alguns defectivo¹. No entanto, o Dicionário Online Houaiss² e Dicionário Houiass de Conjugação de Verbos² não o tratam como defectivo, razão por que aqui também não haverá de ser tratado."], 
@@ -6846,6 +6873,267 @@
       "type": [1],
       "abundance1":{},
       "rules": {
+      }
+    }
+  },
+  "elir":{
+    "...": {
+      "test":{"compelir":[29]},
+      "note":{"plain":["Dos verbos terminados em 'elir', os verbos 'delir' e 'excelir' são regulares e defectivos¹. O restante é irregular"], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [2],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "il2":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    },
+    "delir": {
+      "test":{"delir":[93]},
+      "note":{"plain":["Dos verbos terminados em 'elir', os verbos 'delir' e 'excelir' são regulares e defectivos¹. O restante é irregular"], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1, 3],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    },
+    "excelir": {
+      "test":{"excelir":[93]},
+      "note":{"plain":["Dos verbos terminados em 'elir', os verbos 'delir' e 'excelir' são regulares e defectivos¹. O restante é irregular"], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1, 3],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p1","p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "eltrar":{
+    "...": {
+      "test":{"feltrar":[11]},
+      "note":{"plain":["Os poucos verbos terminados em 'eltrar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "elvar":{
+    "...": {
+      "test":{"relvar":[11]},
+      "note":{"plain":["Os poucos verbos terminados em 'elvar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "emar":{
+    "...": {
+      "test":{"remar":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'emar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "embrar":{
+    "...": {
+      "test":{"lembrar":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'embrar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "emer":{
+    "...": {
+      "test":{"temer":[2]},
+      "note":{"plain":["Todos os verbos terminados em 'emer' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "emir":{
+    "remir": {
+      "test":{"remir":[101]},
+      "note":{"plain":["O verbo 'remir' só é conjugado nas formas arrizitônicas, isto é, naquelas cuja vogal tônica se encontra fora do radical. O uso das formas rizotônicas pode ser feito por meio de 'redimir', que é regular¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1, 3],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    },
+    "...": {
+      "test":{"acupremir":[94]},
+      "note": { "plain": ["A defectividade dos verbos terminados em 'emir', tais como 'acupremir', 'fremir' e 'premir' seguem o mesmo padrão de 'balir'¹."],
+                "ref": { 
+                  "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+                }
+              },
+      "type": [1, 3],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
       }
     }
   }

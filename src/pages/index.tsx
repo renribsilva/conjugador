@@ -203,7 +203,7 @@ const Conjugations = () => {
                 <>
                   <Home />
                   <div className={styles.knowmore}>
-                    <Button onClick={handleSobre}>saber mais sobre essa poha</Button>
+                    <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
                 </>
               }
