@@ -34,9 +34,7 @@
 
 * {
   background-color: var(--background);
-  color: var(--foreground) ;
-  min-height: 100vh;
-  min-width: 100vw;
+  color: var(--foreground);
 }
 
 :root {
@@ -52,7 +50,8 @@ body {
   font-weight: 300;
   line-height: 22px;
   width: 100%;
-  min-width: 320px;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .material-symbols-outlined {
