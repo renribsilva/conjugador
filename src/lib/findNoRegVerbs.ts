@@ -136,8 +136,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   }
 
-  // console.log(termEntries[`...${terminationwithoutpunct}`])
-
   if ((termEntries[`...${terminationwithoutpunct}`] && nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
 
     const basetermEntries = termEntries[`...${verbwithoutprefix}`];
@@ -156,7 +154,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance2: {...abundance2}
         },
         termination,
-        basetermEntries: `...${terminationwithoutpunct}`,
+        termEntrie: `...${terminationwithoutpunct}`,
         verb,
         types: basetermEntries.type,
         note_plain: basetermEntries.note.plain,

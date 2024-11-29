@@ -181,9 +181,11 @@ export const flowOfReact = () => {
       if (originalVerb === null && variationVerb === null ) {
 
         setState(prev => ({
+          
           ...prev,
           loading: false,
           showButton: true,
+
         }));
 
         return
@@ -378,27 +380,25 @@ export const flowOfReact = () => {
   
   useEffect(() => {
     const data = {
-      inputValue: state.inputValue,
+      // inputValue: state.inputValue,
       inputReq: state.inputReq,
-      conjugations: state.conjugations,
-      showConjugations: state.showConjugations,
+      // conjugations: state.conjugations,
+      // showConjugations: state.showConjugations,
       foundVerb: state.foundVerb,
-      isValidVerbByAPI: {
-        originalVerb: state.originalVerb,
-        variationVerb: state.variationVerb,
-        result: state.result,
-        findedWord: state.findedWord,
-        similar: state.similar,
-        punct: state.punct,
-        variations: state.variations,
-        varHasVariations: state.varHasVariations,
-        varProcessedInput: state.varProcessedInput,
-        varForcedVerb: state.varForcedVerb,
-        varPrefixFounded: state.varPrefixFounded,
-        varMatchingAfixo: state.varMatchingAfixo,
-        varConector: state.varConector,
-        varOriginalInput: state.varOriginalInput,
-      },
+      // isValidVerbByAPI: {
+      //   result: state.result,
+      //   findedWord: state.findedWord,
+      //   similar: state.similar,
+      //   punct: state.punct,
+      //   variations: state.variations,
+      //   varHasVariations: state.varHasVariations,
+      //   varProcessedInput: state.varProcessedInput,
+      //   varForcedVerb: state.varForcedVerb,
+      //   varPrefixFounded: state.varPrefixFounded,
+      //   varMatchingAfixo: state.varMatchingAfixo,
+      //   varConector: state.varConector,
+      //   varOriginalInput: state.varOriginalInput,
+      // },
       propsOfVerb: {
         hasTargetCanonical: state.hasTargetCanonical,
         hasTargetAbundance1: state.hasTargetAbundance1,
@@ -409,16 +409,16 @@ export const flowOfReact = () => {
         note_plain: state.note_plain, 
         note_ref: state.note_ref,
       },
-      loading: state.loading,
-      suggestions: state.suggestions,
-      showButton: state.showButton,
-      isButtonDisabled: state.isButtonDisabled,
-      showSuggestions: state.showSuggestions,
-      showHome: state.showHome,
-      showSobre: state.showSobre,
-      showReviewButton: state.showReviewButton,
-      goThrough: state.goThrough,
-      enter: state.enter,
+      // loading: state.loading,
+      // suggestions: state.suggestions,
+      // showButton: state.showButton,
+      // isButtonDisabled: state.isButtonDisabled,
+      // showSuggestions: state.showSuggestions,
+      // showHome: state.showHome,
+      // showSobre: state.showSobre,
+      // showReviewButton: state.showReviewButton,
+      // goThrough: state.goThrough,
+      // enter: state.enter,
     };
   
     console.log(data);
