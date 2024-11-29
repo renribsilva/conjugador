@@ -110,16 +110,16 @@ export default function findVariations(input: string): ValidPrefixResult {
       if (/^([rs])\1/.test(restOfVerb)) {
         conector = restOfVerb[0];
         restOfVerb = restOfVerb.slice(1);
-      } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) { //conter
+      } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) { //manter
         conector = 'n';
         restOfVerb = restOfVerb.slice(1);
       } else if (/^m[pb]/.test(restOfVerb)) { //comprazer
         conector = 'm';
         restOfVerb = restOfVerb.slice(1);
-      } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) { //ex
+      } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) { //enxaguar
         conector = 'x';
         restOfVerb = restOfVerb.slice(1);
-      } else if (/[aeiou]$/.test(matchingAfixo) && /^[bcdfghjklmnpqrstvwxyz]/.test(restOfVerb)) {
+      } else if (/[aeiou]$/.test(matchingAfixo) && /^[bcdfghjklmnpqrstvwxyz]/.test(restOfVerb)) { //sobrexceler
         const vogalFinal = matchingAfixo.slice(-1); 
         restOfVerb = vogalFinal + restOfVerb; 
       }
