@@ -46,7 +46,7 @@ async function processVerbsFile(): Promise<void> {
 
     allVerbs = await filterNonVerbs(allVerbs, 'nonVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
-    allVerbs = await filterNonVerbs(allVerbs, 'nonDiadriticVerb.txt');
+    allVerbs = await filterNonVerbs(allVerbs, 'nonDiacriticVerb.txt');
 
     allVerbs.sort((a, b) => a.localeCompare(b));
 
