@@ -13,7 +13,8 @@ export const flowOfReact = () => {
     inputReq: string;
     showConjugations: boolean;
     foundVerb: string | null;
-    ending: string | null | undefined;
+    termination: string | null | undefined;
+    termEntrie: string | null | undefined;
     hasTargetCanonical: string | boolean | null ;
     hasTargetAbundance1: string | boolean | null ;
     hasTargetAbundance2: string | boolean | null ;
@@ -54,7 +55,8 @@ export const flowOfReact = () => {
     inputReq: "",
     showConjugations: false,
     foundVerb: null,
-    ending: null,
+    termination: null,
+    termEntrie: null,
     hasTargetCanonical: null,
     hasTargetAbundance1: null,
     hasTargetAbundance2: null,
@@ -123,7 +125,8 @@ export const flowOfReact = () => {
         showReviewButton: false,
 
         foundVerb: null,
-        ending: null,
+        termination: null,
+        termEntrie: null,
         hasTargetCanonical: null,
         hasTargetAbundance1: null,
         hasTargetAbundance2: null,
@@ -296,7 +299,8 @@ export const flowOfReact = () => {
         setState(prev => ({
 
           ...prev,
-          ending: propsOfWord[0].ending,
+          termination: propsOfWord[0].termination,
+          termEntrie: propsOfWord[0].termEntrie,
           hasTargetCanonical: propsOfWord[0].hasTargetCanonical,
           hasTargetAbundance1: propsOfWord[0].hasTargetAbundance1,
           hasTargetAbundance2: propsOfWord[0].hasTargetAbundance2,
@@ -338,7 +342,8 @@ export const flowOfReact = () => {
     state.inputReq,
     state.showConjugations,
     state.foundVerb,
-    state.ending,
+    state.termination,
+    state.termEntrie,
     state.hasTargetCanonical,
     state.hasTargetAbundance1,
     state.hasTargetAbundance2,
@@ -373,18 +378,37 @@ export const flowOfReact = () => {
   
   useEffect(() => {
     const data = {
-      conjugations: state.conjugations,
       inputValue: state.inputValue,
       inputReq: state.inputReq,
+      conjugations: state.conjugations,
       showConjugations: state.showConjugations,
       foundVerb: state.foundVerb,
-      ending: state.ending,
-      hasTargetCanonical: state.hasTargetCanonical,
-      hasTargetAbundance1: state.hasTargetAbundance1,
-      hasTargetAbundance2: state.hasTargetAbundance2,
-      note_plain: state.note_plain, 
-      note_ref: state.note_ref,
-      types: state.types,
+      isValidVerbByAPI: {
+        originalVerb: state.originalVerb,
+        variationVerb: state.variationVerb,
+        result: state.result,
+        findedWord: state.findedWord,
+        similar: state.similar,
+        punct: state.punct,
+        variations: state.variations,
+        varHasVariations: state.varHasVariations,
+        varProcessedInput: state.varProcessedInput,
+        varForcedVerb: state.varForcedVerb,
+        varPrefixFounded: state.varPrefixFounded,
+        varMatchingAfixo: state.varMatchingAfixo,
+        varConector: state.varConector,
+        varOriginalInput: state.varOriginalInput,
+      },
+      propsOfVerb: {
+        hasTargetCanonical: state.hasTargetCanonical,
+        hasTargetAbundance1: state.hasTargetAbundance1,
+        hasTargetAbundance2: state.hasTargetAbundance2,
+        termination: state.termination,
+        termEntrie: state.termEntrie,
+        types: state.types,
+        note_plain: state.note_plain, 
+        note_ref: state.note_ref,
+      },
       loading: state.loading,
       suggestions: state.suggestions,
       showButton: state.showButton,
@@ -394,24 +418,10 @@ export const flowOfReact = () => {
       showSobre: state.showSobre,
       showReviewButton: state.showReviewButton,
       goThrough: state.goThrough,
-      enter: state.enter, 
-      originalVerb: state.originalVerb,
-      variationVerb: state.variationVerb,
-      result: state.result,
-      findedWord: state.findedWord,
-      similar: state.similar,
-      punct: state.punct,
-      variations: state.variations,
-      varHasVariations: state.varHasVariations,
-      varProcessedInput: state.varProcessedInput,
-      varForcedVerb: state.varForcedVerb,
-      varPrefixFounded: state.varPrefixFounded,
-      varMatchingAfixo: state.varMatchingAfixo,
-      varConector: state.varConector,
-      varOriginalInput: state.varOriginalInput,
+      enter: state.enter,
     };
   
-    // console.log(data);
+    console.log(data);
   }, dependencies);  
 
   return {

@@ -3,23 +3,25 @@ import innerSearchOfRules from './innerSearchOfRules';
 import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';
 
-const endings = Object.keys(irregularidades);
+const terminations = Object.keys(irregularidades);
 
-function getVerbKeys(verb: string, endings: string[]): any {
+function getVerbKeys(verb: string, terminations: string[]): any {
 
-  endings.sort((a, b) => b.length - a.length);
-  const ending = endings.find((end) => ni(verb).endsWith(ni(end)));  
-  const rules = ending ? irregularidades[ending] : null;
+  terminations.sort((a, b) => b.length - a.length);
+
+  const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
+  const rules = termination ? irregularidades[termination] : null;
+  // console.log(termination)
 
   if (rules) {
     const normalizedRules = Object.keys(rules).reduce((acc, key) => {
       acc[ni(key)] = rules[key];
       return acc;
     }, {});
-    return { rules: normalizedRules, ending };
+    return { rules: normalizedRules, termination };
   }
 
-  return { rules: null, ending };
+  return { rules: null, termination };
 }  
 
 function getDefaultResponse() {
@@ -44,7 +46,8 @@ function getDefaultResponse() {
         M: null,
       }
     },
-    ending: null,
+    termination: null,
+    termEntrie: null,
     verb: null,
     types: null,
     note_plain: null,
@@ -55,10 +58,10 @@ function getDefaultResponse() {
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const { rules: verbRules, ending } = getVerbKeys(verb, endings);
-  // console.log(verbRules)
+  const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
+  // console.log(termEntries)
   
-  if (!verbRules) {
+  if (!termEntries) {
     return getDefaultResponse();
   }
 
@@ -66,13 +69,16 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     return getDefaultResponse();
   }
 
-  if (verbRules[verb]) {
-    const verbRule = verbRules[verb];
-    if (verbRule?.rules) {
+  if (termEntries[verb]) {
 
-      const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
-      const abundance1 = innerSearchOfRules(verbRule.abundance1, P, M, D);
-      const abundance2 = innerSearchOfRules(verbRule.abundance2, P, M, D);
+    const termEntrie = termEntries[verb];
+    console.log(termEntrie)
+
+    if (termEntrie?.rules) {
+
+      const canonical = innerSearchOfRules(termEntrie.rules, P, M, D);
+      const abundance1 = innerSearchOfRules(termEntrie.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(termEntrie.abundance2, P, M, D);
 
       return {
         results: {
@@ -80,51 +86,48 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },
-        ending,
+        termination,
+        termEntrie,
         verb,
-        types: verbRule.type,
-        note_plain: verbRule.note.plain,
-        note_ref: verbRule.note.ref,
+        types: termEntrie.type,
+        note_plain: termEntrie.note.plain,
+        note_ref: termEntrie.note.ref,
         afixo: null  
       };
     }
   }
 
   const variationsProps = findVariations(verb);
-  const endingsThatStartWith = Object.keys(verbRules).filter(key => key.startsWith("..."));
-  
-  // console.log(variationsProps)
-  // console.log(endingsThatStartWith)
+  const terminationsThatStartWith = Object.keys(termEntries).filter(key => key.startsWith("..."));
+  // console.log(terminationsThatStartWith)
 
-  let endingwithoutpunct = ''
+  let terminationwithoutpunct = ''
   let verbwithoutprefix = variationsProps.processedInput;
 
-  // console.log(endingwithoutpunct)
+  // console.log(terminationwithoutpunct)
   // console.log(verbwithoutprefix)
 
-  if (endingsThatStartWith.length > 0 && verbwithoutprefix !== null) {
+  if (terminationsThatStartWith.length > 0 && verbwithoutprefix !== null) {
 
-    const match = endingsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
-
-    // console.log(match)
+    const match = terminationsThatStartWith.find(key => nw(key.replace("...", '')) === nw(verbwithoutprefix));
 
     if (match) {
-      endingwithoutpunct = match.replace("...", '');
+      terminationwithoutpunct = match.replace("...", '');
 
     }
   }
   
   // console.log(variationsProps)
-  // console.log(endingwithoutpunct)
-  // console.log(nw(endingwithoutpunct) === nw(verbwithoutprefix))
+  // console.log(terminationwithoutpunct)
+  // console.log(verbwithoutprefix)
 
 
   if (
 
-    endingsThatStartWith && 
-    (endingsThatStartWith.length === 1 && endingsThatStartWith[0] !== "...") && 
+    terminationsThatStartWith && 
+    terminationsThatStartWith[0] !== "..." && 
     verbwithoutprefix !== null &&
-    nw(endingwithoutpunct) !== nw(verbwithoutprefix)
+    nw(terminationwithoutpunct) !== nw(verbwithoutprefix)
 
   ){
 
@@ -132,17 +135,15 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   }
 
-  console.log(endingsThatStartWith)
+  if ((verb.endsWith(termination.substring(3))) && (nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
 
-  if (verb.endsWith(ending.substring(3)) && nw(endingwithoutpunct) === nw(verbwithoutprefix)) {
+    const basetermEntries = termEntries[`...${verbwithoutprefix}`];
 
-    const baseVerbRules = verbRules[`...${endingwithoutpunct}`];
+    if (basetermEntries?.rules) {
 
-    if (baseVerbRules?.rules) {
-
-      const canonical = innerSearchOfRules(baseVerbRules.rules, P, M, D);
-      const abundance1 = innerSearchOfRules(baseVerbRules.abundance1, P, M, D);
-      const abundance2 = innerSearchOfRules(baseVerbRules.abundance2, P, M, D);
+      const canonical = innerSearchOfRules(basetermEntries.rules, P, M, D);
+      const abundance1 = innerSearchOfRules(basetermEntries.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(basetermEntries.abundance2, P, M, D);
       const foundedAfixo = variationsProps.matchingAfixo;
 
       return {
@@ -151,23 +152,26 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },
-        ending,
+        termination,
+        basetermEntries,
         verb,
-        types: baseVerbRules.type,
-        note_plain: baseVerbRules.note.plain,
-        note_ref: baseVerbRules.note.ref,
+        types: basetermEntries.type,
+        note_plain: basetermEntries.note.plain,
+        note_ref: basetermEntries.note.ref,
         afixo: foundedAfixo  
       };
     }
   }
 
-  if (verbRules["..."]) {
-    const verbRule = verbRules["..."];
-    if (verbRule?.rules) {
+  if (termEntries["..."]) {
 
-      const canonical = innerSearchOfRules(verbRule.rules, P, M, D);
-      const abundance1 = innerSearchOfRules(verbRule.abundance1, P, M, D);
-      const abundance2 = innerSearchOfRules(verbRule.abundance2, P, M, D);
+    const termEntrie = termEntries["..."];
+    
+    if (termEntrie?.rules) {
+
+      const canonical = innerSearchOfRules(termEntrie.rules, P, M, D);
+      const abundance1 = innerSearchOfRules(termEntrie.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(termEntrie.abundance2, P, M, D);
       
       return {
         results: {
@@ -175,11 +179,12 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },
-        ending: "...",
+        termination,
+        termEntrie,
         verb,
-        types: verbRule.type,
-        note_plain: verbRule.note.plain,
-        note_ref: verbRule.note.ref,
+        types: termEntrie.type,
+        note_plain: termEntrie.note.plain,
+        note_ref: termEntrie.note.ref,
         afixo: null  
       };
     }
@@ -189,5 +194,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('prazer', 'p3','pr_ind',"VT")
+const res = findNoRegRule('sobrexceler', 'p1','pr_ind',"VT")
 // console.log(res)
