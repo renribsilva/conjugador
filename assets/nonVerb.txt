@@ -1,3 +1,11 @@
+abacatiar
+abacavir
+abadir
+abaisir
+abarticular
+abcidar
+abeguar
+
 bacar
 agiar
 amidar
@@ -19,6 +27,8 @@ almeizar
 credeizar
 semirregular
 semipopular
+exemplar
+mal-exemplar
 
 twitter
 amber
@@ -34,6 +44,9 @@ center
 ciber
 liber
 tiber
+
+abacatiar
+abacavir
 
 tacir
 acir

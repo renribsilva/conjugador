@@ -14,6 +14,7 @@ async function processVerbsFile(): Promise<void> {
 
   const filePath = path.join(publicDir, 'words.txt');
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
+  const verbsJsonPath = path.join(srcDir, 'json', 'refinedVerbs.json');
 
   try {
     if (!fs.existsSync(filePath)) {
@@ -47,6 +48,8 @@ async function processVerbsFile(): Promise<void> {
     allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonDiadriticVerb.txt');
 
+    allVerbs.sort((a, b) => a.localeCompare(b));
+
     const J = allVerbs.reduce((acc, verb) => {
       const normalized = String(ni(verb));
       acc[normalized] = acc[normalized] || [];
@@ -55,6 +58,16 @@ async function processVerbsFile(): Promise<void> {
     }, {} as Record<string, string[]>);
 
     await fs.promises.writeFile(outputFilePath, JSON.stringify(J, null, 2));
+
+    // allVerbs.sort((a, b) => a.localeCompare(b));
+
+    // const L = allVerbs.reduce((acc, verb) => {
+    //   const normalized = String(ni(verb));
+    //   acc[normalized] = { [verb]: [] };
+    //   return acc;
+    // }, {} as Record<string, Record<string, any>>);
+    
+    // await fs.promises.writeFile(verbsJsonPath, JSON.stringify(L, null, 2), 'utf-8');
 
     console.log(`Quantidades de vocábulos terminados em 'ar', 'er, 'ir' e 'por' pós-filtragem: ${allVerbs.length}`)
 
