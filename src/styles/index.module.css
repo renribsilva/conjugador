@@ -102,7 +102,7 @@
   z-index: 1000;
   display: flex;
   justify-content: right;
-  min-width: 100vw;
+  min-width: 300px;
   height: fit-content;
 }
 
