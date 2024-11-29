@@ -40,9 +40,6 @@
 :root {
   display: flex;
   justify-content: center;
-}
-
-html {
   min-height: 100vh;
   min-width: 100vw;
 }
