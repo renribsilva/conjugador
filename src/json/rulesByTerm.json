@@ -7136,5 +7136,18 @@
         }
       }
     }
+  },
+  "empar":{
+    "...": {
+      "test":{"temer":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'empar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
   }
 }
