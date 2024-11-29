@@ -83,7 +83,7 @@
       }
     }
   },
-  "dar": {
+  "dar": { 
     "...dar": {
       "test":{"desdar": [80]},
       "note":{"plain":[], "ref":{}},
@@ -7173,6 +7173,134 @@
     "...": {
       "test":{"temer":[1]},
       "note":{"plain":["Todos os verbos terminados em 'empar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "emplar":{
+    "...": {
+      "test":{"contemplar":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'emplar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "enar":{
+    "...": {
+      "test":{"acenar":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'enar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "encar":{
+    "...": {
+      "test":{"encrencar": [33]},
+      "note":{"plain":["Todos os verbos terminados em 'encar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "qu1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "ençar":{
+    "diferençar": {
+      "test":{"diferençar": [35]},
+      "note":{"plain":["Algumas flexões do verbo 'diferençar' têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+        "RAD": {
+          "c1":{
+            "pt1_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "encer":{
+    "...": {
+      "test":{"vencer":[36]},
+      "note":{"plain":["Os verbos terminados em 'encer' são regulares, observando que algumas flexões têm o 'c' substituído por 'ç' antes do 'o' e do 'a' desinenciais¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+        "RAD":{
+          "ç1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      }
+    }
+  },
+  "encher":{
+    "...": {
+      "test":{"encher":[2]},
+      "note":{"plain":["Todos os verbos terminados em 'encher' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "endar":{
+    "...": {
+      "test":{"emendar":[1]},
+      "note":{"plain":["Todos os verbos terminados em 'endar' são regulares¹."], 
+              "ref":{
+                "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
+              }},
+      "type": [1],
+      "abundance1":{},
+      "rules": {
+      }
+    }
+  },
+  "ender":{
+    "...": {
+      "test":{"vender":[2]},
+      "note":{"plain":["Todos os verbos terminados em 'ender' são regulares¹."], 
               "ref":{
                 "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
               }},
