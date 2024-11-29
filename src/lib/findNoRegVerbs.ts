@@ -4,6 +4,7 @@ import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';
 
 const terminations = Object.keys(irregularidades);
+// console.log(terminations)
 
 function getVerbKeys(verb: string, terminations: string[]): any {
 
@@ -11,18 +12,19 @@ function getVerbKeys(verb: string, terminations: string[]): any {
 
   const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
   const rules = termination ? irregularidades[termination] : null;
-  // console.log(termination)
 
   if (rules) {
     const normalizedRules = Object.keys(rules).reduce((acc, key) => {
       acc[ni(key)] = rules[key];
       return acc;
     }, {});
+
+    //  console.log(termination)
     return { rules: normalizedRules, termination };
   }
 
   return { rules: null, termination };
-}  
+}
 
 function getDefaultResponse() {
   return {
@@ -59,7 +61,7 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
-  // console.log(termEntries)
+  // console.log(termination)
   
   if (!termEntries) {
     return getDefaultResponse();
@@ -71,14 +73,13 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   if (termEntries[verb]) {
 
-    const termEntrie = termEntries[verb];
-    console.log(termEntrie)
+    const termEntrieObject = termEntries[verb];
 
-    if (termEntrie?.rules) {
+    if (termEntrieObject?.rules) {
 
-      const canonical = innerSearchOfRules(termEntrie.rules, P, M, D);
-      const abundance1 = innerSearchOfRules(termEntrie.abundance1, P, M, D);
-      const abundance2 = innerSearchOfRules(termEntrie.abundance2, P, M, D);
+      const canonical = innerSearchOfRules(termEntrieObject.rules, P, M, D);
+      const abundance1 = innerSearchOfRules(termEntrieObject.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(termEntrieObject.abundance2, P, M, D);
 
       return {
         results: {
@@ -87,11 +88,11 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance2: {...abundance2}
         },
         termination,
-        termEntrie,
+        termEntrie: verb,
         verb,
-        types: termEntrie.type,
-        note_plain: termEntrie.note.plain,
-        note_ref: termEntrie.note.ref,
+        types: termEntrieObject.type,
+        note_plain: termEntrieObject.note.plain,
+        note_ref: termEntrieObject.note.ref,
         afixo: null  
       };
     }
@@ -125,7 +126,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   if (
 
     terminationsThatStartWith && 
-    terminationsThatStartWith[0] !== "..." && 
+    (terminationsThatStartWith.length === 1 && terminationsThatStartWith[0] !== "...") && 
     verbwithoutprefix !== null &&
     nw(terminationwithoutpunct) !== nw(verbwithoutprefix)
 
@@ -135,7 +136,9 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   }
 
-  if ((verb.endsWith(termination.substring(3))) && (nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
+  // console.log(termEntries[`...${terminationwithoutpunct}`])
+
+  if ((termEntries[`...${terminationwithoutpunct}`] && nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
 
     const basetermEntries = termEntries[`...${verbwithoutprefix}`];
 
@@ -153,7 +156,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance2: {...abundance2}
         },
         termination,
-        basetermEntries,
+        basetermEntries: `...${terminationwithoutpunct}`,
         verb,
         types: basetermEntries.type,
         note_plain: basetermEntries.note.plain,
@@ -180,7 +183,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance2: {...abundance2}
         },
         termination,
-        termEntrie,
+        termEntrie: "...",
         verb,
         types: termEntrie.type,
         note_plain: termEntrie.note.plain,
@@ -194,5 +197,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-const res = findNoRegRule('sobrexceler', 'p1','pr_ind',"VT")
+// const res = findNoRegRule('sobrexceler', 'p1','pr_ind',"VT")
 // console.log(res)

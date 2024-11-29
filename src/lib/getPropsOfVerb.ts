@@ -5,7 +5,7 @@ interface VerbProps {
   hasTargetAbundance1: boolean | null;
   hasTargetAbundance2: boolean | null;
   termination: string | null;
-  termEntrie: string | null;
+  termEntrie: string | null | undefined;
   verb: string | null;
   types: string[] | null;
   note_plain: string[] | null;
