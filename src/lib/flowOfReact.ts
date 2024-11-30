@@ -135,6 +135,7 @@ export const flowOfReact = () => {
         types: null,
 
         goThrough: false,
+        enter: true,
 
         originalVerb: null,
         variationVerb: null,
