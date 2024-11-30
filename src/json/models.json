@@ -1,57 +1,83 @@
 {
-  "1": ["passar"],
-  "2": ["bater"],
-  "3": ["partir"],
-  "11": ["apelar"],
-  "13": ["optar"],
-  "15": ["atrair"],
-  "21": ["enfeitar"],
-  "23": ["enraizar"],
-  "24": ["saudar"],
-  "27": ["mexer"],
-  "29": ["ferir"],
-  "33": ["atacar"],
-  "34": ["afagar"],
-  "35": ["dançar"],
-  "36": ["vencer"],
-  "37": ["ressarcir"],
-  "38": ["abranger"],
-  "39": ["atingir"],
-  "41": ["distinguir"],
-  "42": ["desejar"],
-  "43": ["chegar"],
-  "45": ["agredir"],
-  "54": ["passear"],
-  "57": ["averiguar"],
-  "58": ["enxaguar"],
-  "63": ["medir"],
-  "65": ["parir"], 
-  "69": ["valer"],
-  "70": ["caber"],
-  "71": ["comprazer"],
-  "74": ["fazer"],
-  "75": ["haver"],
-  "78": ["saber"],
-  "79": ["trazer"],
-  "80": ["dar"],
-  "81": ["ir"],
-  "82": ["ler", "crer"],
-  "83": ["pôr"],
-  "84": ["propor"],
-  "85": ["rir"],
-  "86": ["ser"],
-  "87": ["ter"],
-  "88": ["manter"],
-  "89": ["ver"],
-  "90": ["vir"],
-  "91": ["provir"],
-  "92": ["abolir"],
-  "93": ["excelir"],
-  "94": ["fremir"],
-  "97": ["soer"],
-  "98": ["precaver"],
-  "99": ["reaver"],
-  "100": ["embair"],
-  "101": ["falir"],
-  "102": ["aprazer"]
+  "A":{
+    "1": ["passar"],
+    "2": ["bater"],
+    "3": ["partir"],
+    "11": ["apelar"],
+    "13": ["optar"],
+    "15": ["atrair"],
+    "21": ["enfeitar"]
+  },
+  "B":{
+    "23": ["enraizar"],
+    "24": ["saudar"]
+  },
+  "C":{
+    "27": ["mexer"],
+    "29": ["ferir"]
+  },
+  "D":{
+    "33": ["atacar"],
+    "34": ["afagar"],
+    "35": ["dançar"],
+    "36": ["vencer"],
+    "37": ["ressarcir"],
+    "38": ["abranger"],
+    "39": ["atingir"],
+    "41": ["distinguir"]
+  },
+  "E":{
+    "42": ["desejar"],
+    "43": ["chegar"],
+    "45": ["agredir"]
+  },
+  "F":{
+    "54": ["passear"]  
+  },
+  "G":{
+    "57": ["averiguar"],
+    "58": ["enxaguar"]
+  },
+  "H":{
+    "63": ["medir"],
+    "65": ["parir"],
+    "69": ["valer"]
+  },
+  "I":{
+    "70": ["caber"],
+    "71": ["comprazer"],
+    "74": ["fazer"],
+    "75": ["haver"],
+    "78": ["saber"],
+    "79": ["trazer"]
+  },
+  "J":{
+    "80": ["dar"],
+    "81": ["ir"],
+    "82": ["ler", "crer"],
+    "83": ["pôr"],
+    "84": ["propor"],
+    "85": ["rir"],
+    "86": ["ser"],
+    "87": ["ter"],
+    "88": ["manter"],
+    "89": ["ver"],
+    "90": ["vir"],
+    "91": ["provir"]
+  },
+  "K":{
+    "92": ["abolir"],
+    "93": ["excelir"],
+    "94": ["fremir"],
+    "97": ["soer"]
+  },
+  "L":{
+    "98": ["precaver"],
+    "99": ["reaver"],
+    "100": ["embair"],
+    "101": ["falir"]
+  },
+  "M":{
+    "102": ["aprazer"]
+  }
 }
