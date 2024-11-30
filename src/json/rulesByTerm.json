@@ -756,7 +756,7 @@
   "ter": {
     "...ter": {
       "test":{"reter":[88], "deter":[88]},
-      "note": { "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 1ª e 2ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
+      "note": { "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
                 "ref": { 
                   "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
@@ -1034,7 +1034,7 @@
   "vir": {
     "...vir": {
       "test":{"provir":[91]},
-      "note": { "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 1ª e 2ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
+      "note": { "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem, no primeiro caso, acento agudo na parte desinencial¹."],
                 "ref": { 
                   "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
@@ -3510,7 +3510,7 @@
   "anter": {
     "manter": {
       "test":{"manter": [88]},
-      "note": { "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo e na 2ª pessoa do Imperativo Afirmativo¹."],
+      "note": { "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 2ª e 3ª pessoas do Presente do Indicativo e na 2ª pessoa do Imperativo Afirmativo¹."],
                 "ref": { 
                   "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
                 }
@@ -4752,7 +4752,7 @@
   "ater": {
     "...": {
       "test":{"bater":[2]},
-      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões dos verbos derivados de 'ter', exceto pelo acento agudo nas flexões da 1ª e 2ª pessoas do Presente do Indicativo). O restante é regular¹."],
+      "note": { "plain": ["Dentre os verbos terminados em 'ater', apenas 'ater' é irregular (é conjugado com os mesmos padrões dos verbos derivados de 'ter', exceto pelo acento agudo nas flexões da 2ª e 3ª pessoas do Presente do Indicativo). O restante é regular¹."],
                 "ref": { 
                   "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."]
                 }
