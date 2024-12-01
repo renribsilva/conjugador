@@ -3,6 +3,7 @@ import styles from "../styles/components.module.css";
 import React, { useEffect, useState } from "react";
 
 function Theme() {
+  
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
