@@ -2834,6 +2834,9 @@
   "adormentar": [
     "adormentar"
   ],
+  "adormir": [
+    "adormir"
+  ],
   "adornar": [
     "adornar"
   ],
@@ -2846,8 +2849,17 @@
   "adoudar": [
     "adoudar"
   ],
+  "adoudejar": [
+    "adoudejar"
+  ],
+  "adoutrinar": [
+    "adoutrinar"
+  ],
   "adquirir": [
     "adquirir"
+  ],
+  "adragar": [
+    "adragar"
   ],
   "adregar": [
     "adregar"
@@ -2857,9 +2869,6 @@
   ],
   "adscrever": [
     "adscrever"
-  ],
-  "adsir": [
-    "adsir"
   ],
   "adsorver": [
     "adsorver"
@@ -2879,9 +2888,6 @@
   "adubar": [
     "adubar"
   ],
-  "adubiar": [
-    "adubiar"
-  ],
   "aduchar": [
     "aduchar"
   ],
@@ -2893,6 +2899,9 @@
   ],
   "adular": [
     "adular"
+  ],
+  "adulçorar": [
+    "adulçorar"
   ],
   "adulterar": [
     "adulterar"
@@ -2912,8 +2921,14 @@
   "aduncar": [
     "aduncar"
   ],
+  "adurar": [
+    "adurar"
+  ],
   "adurir": [
     "adurir"
+  ],
+  "aduzir": [
+    "aduzir"
   ],
   "adverbar": [
     "adverbar"
@@ -2930,12 +2945,6 @@
   "advertir": [
     "advertir"
   ],
-  "advier": [
-    "advier"
-  ],
-  "advincular": [
-    "advincular"
-  ],
   "advir": [
     "advir"
   ],
@@ -2947,6 +2956,9 @@
   ],
   "advultar": [
     "advultar"
+  ],
+  "aerar": [
+    "aerar"
   ],
   "aerificar": [
     "aerificar"
@@ -2960,8 +2972,17 @@
   "aerossondar": [
     "aerossondar"
   ],
+  "aerotransportar": [
+    "aerotransportar"
+  ],
   "afaçanhar": [
     "afaçanhar"
+  ],
+  "afadigar": [
+    "afadigar"
+  ],
+  "afadistar": [
+    "afadistar"
   ],
   "afagar": [
     "afagar"
@@ -2975,6 +2996,21 @@
   "afaimar": [
     "afaimar"
   ],
+  "afainar": [
+    "afainar"
+  ],
+  "afalagar": [
+    "afalagar"
+  ],
+  "afalar": [
+    "afalar"
+  ],
+  "afalcaçar": [
+    "afalcaçar"
+  ],
+  "afalcoar": [
+    "afalcoar"
+  ],
   "afamanar": [
     "afamanar"
   ],
@@ -2987,20 +3023,38 @@
   "afamiliar": [
     "afamiliar"
   ],
+  "afanar": [
+    "afanar"
+  ],
   "afancar": [
     "afancar"
+  ],
+  "afandangar": [
+    "afandangar"
+  ],
+  "afanfar": [
+    "afanfar"
   ],
   "afangar": [
     "afangar"
   ],
-  "afar": [
-    "afar"
+  "afaquear": [
+    "afaquear"
+  ],
+  "afarar": [
+    "afarar"
+  ],
+  "afarfalhar": [
+    "afarfalhar"
   ],
   "afarvar": [
     "afarvar"
   ],
   "afastar": [
     "afastar"
+  ],
+  "afaxinar": [
+    "afaxinar"
   ],
   "afazendar": [
     "afazendar"
@@ -3016,9 +3070,6 @@
   ],
   "afegar": [
     "afegar"
-  ],
-  "afeiar": [
-    "afeiar"
   ],
   "afeiçoar": [
     "afeiçoar"
@@ -3041,9 +3092,6 @@
   "afeminar": [
     "afeminar"
   ],
-  "afer": [
-    "afer"
-  ],
   "aferar": [
     "aferar"
   ],
@@ -3059,6 +3107,9 @@
   "aferir": [
     "aferir"
   ],
+  "afermentar": [
+    "afermentar"
+  ],
   "afermosear": [
     "afermosear"
   ],
@@ -3067,6 +3118,15 @@
   ],
   "aferrenhar": [
     "aferrenhar"
+  ],
+  "aferretar": [
+    "aferretar"
+  ],
+  "aferretear": [
+    "aferretear"
+  ],
+  "aferretoar": [
+    "aferretoar"
   ],
   "aferroar": [
     "aferroar"
@@ -3077,6 +3137,9 @@
   "afervar": [
     "afervar"
   ],
+  "aferventar": [
+    "aferventar"
+  ],
   "afervescer": [
     "afervescer"
   ],
@@ -3085,6 +3148,12 @@
   ],
   "afervorizar": [
     "afervorizar"
+  ],
+  "afestoar": [
+    "afestoar"
+  ],
+  "afestonar": [
+    "afestonar"
   ],
   "afetar": [
     "afetar"
@@ -3101,6 +3170,9 @@
   "afiar": [
     "afiar"
   ],
+  "aficar": [
+    "aficar"
+  ],
   "afidalgar": [
     "afidalgar"
   ],
@@ -3110,14 +3182,32 @@
   "afigurar": [
     "afigurar"
   ],
+  "afilar": [
+    "afilar"
+  ],
   "afilhar": [
     "afilhar"
+  ],
+  "afilharar": [
+    "afilharar"
+  ],
+  "afiliar": [
+    "afiliar"
+  ],
+  "afiligranar": [
+    "afiligranar"
   ],
   "afinar": [
     "afinar"
   ],
+  "afincar": [
+    "afincar"
+  ],
   "afincoar": [
     "afincoar"
+  ],
+  "afinfar": [
+    "afinfar"
   ],
   "afingir": [
     "afingir"
@@ -3127,6 +3217,12 @@
   ],
   "afirmar": [
     "afirmar"
+  ],
+  "afistular": [
+    "afistular"
+  ],
+  "afitar": [
+    "afitar"
   ],
   "afiuzar": [
     "afiuzar"
@@ -3143,6 +3239,15 @@
   "aflar": [
     "aflar"
   ],
+  "aflautar": [
+    "aflautar"
+  ],
+  "aflautear": [
+    "aflautear"
+  ],
+  "aflechar": [
+    "aflechar"
+  ],
   "afleimar": [
     "afleimar"
   ],
@@ -3155,8 +3260,26 @@
   "afloixar": [
     "afloixar"
   ],
+  "aflorar": [
+    "aflorar"
+  ],
+  "aflouxar": [
+    "aflouxar"
+  ],
   "afloxar": [
     "afloxar"
+  ],
+  "afluir": [
+    "afluir"
+  ],
+  "afobar": [
+    "afobar"
+  ],
+  "afocinhar": [
+    "afocinhar"
+  ],
+  "afofar": [
+    "afofar"
   ],
   "afogar": [
     "afogar"
@@ -3197,11 +3320,23 @@
   "aformalar": [
     "aformalar"
   ],
+  "aformar": [
+    "aformar"
+  ],
+  "aformentar": [
+    "aformentar"
+  ],
   "aformosar": [
     "aformosar"
   ],
   "aformosear": [
     "aformosear"
+  ],
+  "aformosentar": [
+    "aformosentar"
+  ],
+  "aforquilhar": [
+    "aforquilhar"
   ],
   "aforrar": [
     "aforrar"
@@ -3209,20 +3344,38 @@
   "aforritar": [
     "aforritar"
   ],
+  "afortalecer": [
+    "afortalecer"
+  ],
+  "afortalezar": [
+    "afortalezar"
+  ],
   "afortunar": [
     "afortunar"
   ],
   "afoutar": [
     "afoutar"
   ],
+  "afracar": [
+    "afracar"
+  ],
   "afragatar": [
     "afragatar"
+  ],
+  "aframar": [
+    "aframar"
   ],
   "afrancesar": [
     "afrancesar"
   ],
   "afranzinar": [
     "afranzinar"
+  ],
+  "afraquentar": [
+    "afraquentar"
+  ],
+  "afrechar": [
+    "afrechar"
   ],
   "afreguesar": [
     "afreguesar"
@@ -3239,8 +3392,8 @@
   "afrescalhar": [
     "afrescalhar"
   ],
-  "afressurar": [
-    "afressurar"
+  "afrescar": [
+    "afrescar"
   ],
   "afretar": [
     "afretar"
@@ -3260,6 +3413,9 @@
   "afrissurar": [
     "afrissurar"
   ],
+  "afroixar": [
+    "afroixar"
+  ],
   "afroixelar": [
     "afroixelar"
   ],
@@ -3269,11 +3425,17 @@
   "afrontar": [
     "afrontar"
   ],
+  "afrouxar": [
+    "afrouxar"
+  ],
   "afrouxelar": [
     "afrouxelar"
   ],
-  "aftaguir": [
-    "aftaguir"
+  "afrutar": [
+    "afrutar"
+  ],
+  "aftiar": [
+    "aftiar"
   ],
   "afugentar": [
     "afugentar"
@@ -3290,14 +3452,26 @@
   "afumar": [
     "afumar"
   ],
+  "afumear": [
+    "afumear"
+  ],
+  "afumegar": [
+    "afumegar"
+  ],
   "afundar": [
     "afundar"
   ],
-  "afunhenhar": [
-    "afunhenhar"
+  "afundir": [
+    "afundir"
   ],
   "afunilar": [
     "afunilar"
+  ],
+  "afuroar": [
+    "afuroar"
+  ],
+  "afusar": [
+    "afusar"
   ],
   "afuselar": [
     "afuselar"
@@ -3308,14 +3482,35 @@
   "afustuar": [
     "afustuar"
   ],
+  "afutricar": [
+    "afutricar"
+  ],
+  "afuzilar": [
+    "afuzilar"
+  ],
+  "agabar": [
+    "agabar"
+  ],
   "agachar": [
     "agachar"
+  ],
+  "agadanhar": [
+    "agadanhar"
   ],
   "agafanhar": [
     "agafanhar"
   ],
+  "agaiatar": [
+    "agaiatar"
+  ],
   "agaiolar": [
     "agaiolar"
+  ],
+  "agajar": [
+    "agajar"
+  ],
+  "agalanar": [
+    "agalanar"
   ],
   "agalardoar": [
     "agalardoar"
@@ -3329,6 +3524,9 @@
   "agalhar": [
     "agalhar"
   ],
+  "agalimar": [
+    "agalimar"
+  ],
   "agalinhar": [
     "agalinhar"
   ],
@@ -3337,6 +3535,9 @@
   ],
   "agalochar": [
     "agalochar"
+  ],
+  "agalopar": [
+    "agalopar"
   ],
   "aganar": [
     "aganar"
@@ -3347,9 +3548,6 @@
   "agantar": [
     "agantar"
   ],
-  "agar": [
-    "agar"
-  ],
   "agargalar": [
     "agargalar"
   ],
@@ -3359,8 +3557,20 @@
   "agarnachar": [
     "agarnachar"
   ],
+  "agarotar": [
+    "agarotar"
+  ],
   "agarrar": [
     "agarrar"
+  ],
+  "agarrochar": [
+    "agarrochar"
+  ],
+  "agarrotar": [
+    "agarrotar"
+  ],
+  "agarruchar": [
+    "agarruchar"
   ],
   "agarrunchar": [
     "agarrunchar"
@@ -3371,17 +3581,29 @@
   "agastar": [
     "agastar"
   ],
+  "agatanhar": [
+    "agatanhar"
+  ],
   "agatificar": [
     "agatificar"
+  ],
+  "agatinhar": [
+    "agatinhar"
   ],
   "agatizar": [
     "agatizar"
   ],
+  "agatunar": [
+    "agatunar"
+  ],
+  "agaturrar": [
+    "agaturrar"
+  ],
+  "agauchar": [
+    "agauchar"
+  ],
   "agavelar": [
     "agavelar"
-  ],
-  "agavetar": [
-    "agavetar"
   ],
   "agazar": [
     "agazar"
@@ -3395,8 +3617,20 @@
   "agengibrar": [
     "agengibrar"
   ],
+  "ageolhar": [
+    "ageolhar"
+  ],
+  "agerar": [
+    "agerar"
+  ],
+  "agermanar": [
+    "agermanar"
+  ],
   "agigantar": [
     "agigantar"
+  ],
+  "agigantear": [
+    "agigantear"
   ],
   "agilitar": [
     "agilitar"
@@ -3419,8 +3653,11 @@
   "aglomerar": [
     "aglomerar"
   ],
-  "agmar": [
-    "agmar"
+  "agloterar": [
+    "agloterar"
+  ],
+  "aglutinar": [
+    "aglutinar"
   ],
   "agodelhar": [
     "agodelhar"
@@ -3431,11 +3668,23 @@
   "agoirentar": [
     "agoirentar"
   ],
+  "agolpear": [
+    "agolpear"
+  ],
+  "agomar": [
+    "agomar"
+  ],
   "agomilar": [
     "agomilar"
   ],
   "agominar": [
     "agominar"
+  ],
+  "agomitar": [
+    "agomitar"
+  ],
+  "agongorar": [
+    "agongorar"
   ],
   "agoniar": [
     "agoniar"
@@ -3445,6 +3694,9 @@
   ],
   "agorentar": [
     "agorentar"
+  ],
+  "agostar": [
+    "agostar"
   ],
   "agotar": [
     "agotar"
@@ -3464,14 +3716,26 @@
   "agradecer": [
     "agradecer"
   ],
+  "agradurar": [
+    "agradurar"
+  ],
+  "agrafar": [
+    "agrafar"
+  ],
   "agramalheirar": [
     "agramalheirar"
+  ],
+  "agranar": [
+    "agranar"
   ],
   "agrandar": [
     "agrandar"
   ],
   "agranelar": [
     "agranelar"
+  ],
+  "agranizar": [
+    "agranizar"
   ],
   "agrar": [
     "agrar"
@@ -3506,9 +3770,6 @@
   "agriçar": [
     "agriçar"
   ],
-  "agricolar": [
-    "agricolar"
-  ],
   "agricultar": [
     "agricultar"
   ],
@@ -3524,11 +3785,17 @@
   "agrimensar": [
     "agrimensar"
   ],
-  "agroalimentar": [
-    "agroalimentar"
+  "agrinaldar": [
+    "agrinaldar"
+  ],
+  "agrisalhar": [
+    "agrisalhar"
   ],
   "agrosseirar": [
     "agrosseirar"
+  ],
+  "agrumar": [
+    "agrumar"
   ],
   "agrumelar": [
     "agrumelar"
@@ -3548,8 +3815,14 @@
   "aguachar": [
     "aguachar"
   ],
+  "aguantar": [
+    "aguantar"
+  ],
   "aguar": [
     "aguar"
+  ],
+  "aguardar": [
+    "aguardar"
   ],
   "aguardentar": [
     "aguardentar"
@@ -3559,6 +3832,9 @@
   ],
   "aguarentar": [
     "aguarentar"
+  ],
+  "aguaritar": [
+    "aguaritar"
   ],
   "aguaxar": [
     "aguaxar"
@@ -3581,14 +3857,17 @@
   "aguentar": [
     "aguentar"
   ],
+  "aguerrear": [
+    "aguerrear"
+  ],
   "aguerreirar": [
     "aguerreirar"
   ],
+  "aguerrilhar": [
+    "aguerrilhar"
+  ],
   "aguerrir": [
     "aguerrir"
-  ],
-  "aguiar": [
-    "aguiar"
   ],
   "aguichar": [
     "aguichar"
@@ -3596,17 +3875,11 @@
   "aguiguiar": [
     "aguiguiar"
   ],
-  "aguilar": [
-    "aguilar"
-  ],
   "aguilhar": [
     "aguilhar"
   ],
   "aguilhoar": [
     "aguilhoar"
-  ],
-  "aguimar": [
-    "aguimar"
   ],
   "aguinir": [
     "aguinir"
@@ -3616,6 +3889,9 @@
   ],
   "aguitarrar": [
     "aguitarrar"
+  ],
+  "aguizalhar": [
+    "aguizalhar"
   ],
   "agulhar": [
     "agulhar"
@@ -3632,12 +3908,6 @@
   "aiar": [
     "aiar"
   ],
-  "aiçar": [
-    "aiçar"
-  ],
-  "aier": [
-    "aier"
-  ],
   "airar": [
     "airar"
   ],
@@ -3647,8 +3917,11 @@
   "aiunar": [
     "aiunar"
   ],
-  "ajambrar": [
-    "ajambrar"
+  "ajaezar": [
+    "ajaezar"
+  ],
+  "ajanotar": [
+    "ajanotar"
   ],
   "ajantarar": [
     "ajantarar"
@@ -3683,8 +3956,11 @@
   "ajindungar": [
     "ajindungar"
   ],
-  "ajoiar": [
-    "ajoiar"
+  "ajoeirar": [
+    "ajoeirar"
+  ],
+  "ajoelhar": [
+    "ajoelhar"
   ],
   "ajorcar": [
     "ajorcar"
@@ -3722,8 +3998,14 @@
   "ajuntar": [
     "ajuntar"
   ],
+  "ajuramentar": [
+    "ajuramentar"
+  ],
   "ajustar": [
     "ajustar"
+  ],
+  "ajustiçar": [
+    "ajustiçar"
   ],
   "ajusturar": [
     "ajusturar"
@@ -3737,6 +4019,9 @@
   "alabardar": [
     "alabardar"
   ],
+  "alabarintar": [
+    "alabarintar"
+  ],
   "alabastrar": [
     "alabastrar"
   ],
@@ -3746,17 +4031,32 @@
   "alabiar": [
     "alabiar"
   ],
-  "alacir": [
-    "alacir"
+  "alacar": [
+    "alacar"
+  ],
+  "alacranar": [
+    "alacranar"
+  ],
+  "alacrar": [
+    "alacrar"
+  ],
+  "alactar": [
+    "alactar"
   ],
   "aladainhar": [
     "aladainhar"
+  ],
+  "aladroar": [
+    "aladroar"
   ],
   "alagar": [
     "alagar"
   ],
   "alagartar": [
     "alagartar"
+  ],
+  "alagartear": [
+    "alagartear"
   ],
   "alagartixar": [
     "alagartixar"
@@ -3767,11 +4067,11 @@
   "alagunar": [
     "alagunar"
   ],
-  "alair": [
-    "alair"
+  "alambazar": [
+    "alambazar"
   ],
-  "alamar": [
-    "alamar"
+  "alambicar": [
+    "alambicar"
   ],
   "alamborar": [
     "alamborar"
@@ -3782,20 +4082,35 @@
   "alambrear": [
     "alambrear"
   ],
+  "alambuzar": [
+    "alambuzar"
+  ],
   "alamedar": [
     "alamedar"
   ],
   "alampanhar": [
     "alampanhar"
   ],
+  "alampar": [
+    "alampar"
+  ],
   "alancar": [
     "alancar"
+  ],
+  "alancear": [
+    "alancear"
   ],
   "alanguidar": [
     "alanguidar"
   ],
+  "alanhar": [
+    "alanhar"
+  ],
   "alanternear": [
     "alanternear"
+  ],
+  "alanzoar": [
+    "alanzoar"
   ],
   "alapar": [
     "alapar"
@@ -3809,6 +4124,9 @@
   "alapuzar": [
     "alapuzar"
   ],
+  "alaquear": [
+    "alaquear"
+  ],
   "alar": [
     "alar"
   ],
@@ -3821,20 +4139,29 @@
   "alardar": [
     "alardar"
   ],
+  "alardear": [
+    "alardear"
+  ],
   "alargar": [
     "alargar"
   ],
   "alarmar": [
     "alarmar"
   ],
+  "alarpar": [
+    "alarpar"
+  ],
   "alarvajar": [
     "alarvajar"
   ],
-  "alastair": [
-    "alastair"
+  "alassar": [
+    "alassar"
   ],
   "alastrar": [
     "alastrar"
+  ],
+  "alatinizar": [
+    "alatinizar"
   ],
   "alatoar": [
     "alatoar"
@@ -3850,12 +4177,6 @@
   ],
   "alazar": [
     "alazar"
-  ],
-  "albacar": [
-    "albacar"
-  ],
-  "albafar": [
-    "albafar"
   ],
   "albardar": [
     "albardar"
@@ -4588,6 +4909,9 @@
   ],
   "altigrasnar": [
     "altigrasnar"
+  ],
+  "altinar": [
+    "altinar"
   ],
   "altincar": [
     "altincar"
