@@ -138,7 +138,7 @@ export const flowOfReact = () => {
         types: null,
 
         goThrough: false,
-        enter: true,
+        enter: false,
 
         originalVerb: null,
         variationVerb: null,
@@ -421,13 +421,6 @@ export const flowOfReact = () => {
   
     console.log(data);
   }, dependencies); 
-  
-  setState(prev => ({
-
-    ...prev,
-    enter:false
-
-  }))
 
   return {
     state,
