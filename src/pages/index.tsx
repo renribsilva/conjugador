@@ -15,7 +15,6 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
-import { formatPuncts, formatTypes } from "./utils/indexUtils";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -61,7 +60,8 @@ const Index = () => {
       conjugations: null,
       showSuggestions: false,
       showButton: false,
-      isButtonDisabled: false
+      isButtonDisabled: false,
+      enter: true
     });
   };
 
@@ -76,7 +76,8 @@ const Index = () => {
       conjugations: null,
       showButton: false,
       punct: null,
-      isButtonDisabled: false
+      isButtonDisabled: false,
+      enter: true
     });
   };
 
@@ -91,7 +92,8 @@ const Index = () => {
       conjugations: null,
       showButton: false,
       punct: null,
-      isButtonDisabled: false
+      isButtonDisabled: false,
+      enter: true
     });
   };
 
@@ -145,6 +147,20 @@ const Index = () => {
   const randomEita = () => {
     const randomIndex = Math.floor(Math.random() * eitaExpression.length);
     setEita(eitaExpression[randomIndex]);
+  };
+
+  const formatPuncts = (puncts: string[] | null) => {
+    if (!puncts || puncts.length === 0) return null;
+  
+    return puncts
+      .map(punct => `${punct}`)
+      .join(' ');
+  };
+  
+  const formatTypes = (types: string[] | null | undefined) => {
+    if (!types || types.length === 0) {return "";}
+    if (types.length === 1) {return types[0];}
+    return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
   return (
