@@ -139,7 +139,7 @@ export const flowOfReact = () => {
         types: null,
 
         goThrough: false,
-        enter: false,
+        enter: true,
 
         originalVerb: null,
         variationVerb: null,
@@ -332,14 +332,6 @@ export const flowOfReact = () => {
           showConjugations: true,
         }));
       }
-
-      setState(prev => ({
-
-        ...prev,
-        enter:true
-    
-      }))
-      
     }
   };
 
