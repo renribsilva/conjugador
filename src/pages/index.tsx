@@ -143,7 +143,7 @@ const Conjugations = () => {
   };
 
   return (
-    <div className={styles.index} role="main">
+    <div className={styles.index}>
       <section className={styles.navbar_container}>
         <div className={styles.navbar}>
           <div className={styles.input_container}>
@@ -182,7 +182,7 @@ const Conjugations = () => {
         </div>
       </section>
 
-      <section className={styles.main}>
+      <section className={styles.main} role="main">
         <div className={styles.panel}>
           <div className={styles.subpanel}>
             <div className={styles.loading}>
