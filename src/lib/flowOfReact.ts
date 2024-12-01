@@ -331,6 +331,13 @@ export const flowOfReact = () => {
           showConjugations: true,
         }));
       }
+
+      setState(prev => ({
+
+        ...prev,
+        enter:true
+    
+      }))
     }
   };
 

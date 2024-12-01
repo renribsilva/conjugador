@@ -106,7 +106,11 @@ const Index = () => {
         code: "Enter",
       });
       inputRef.current.dispatchEvent(enterEvent);
-      inputRef.current.focus();
+      
+      if (state.enter) {
+        inputRef.current.focus();
+      }
+      
     }
     randomAxi();
     randomEita();
