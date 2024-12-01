@@ -143,7 +143,7 @@ const Conjugations = () => {
   };
 
   return (
-    <>
+    <div className={styles.index} role="main">
       <section className={styles.navbar_container}>
         <div className={styles.navbar}>
           <div className={styles.input_container}>
@@ -546,8 +546,7 @@ const Conjugations = () => {
         <Socials />
         <Footer />
       </section>
-
-    </>
+    </div>
   );
 };
 

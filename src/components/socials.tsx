@@ -1,6 +1,6 @@
 import styles from "../styles/components.module.css";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const SocialObjects = [
   {
@@ -14,6 +14,17 @@ const SocialObjects = [
 ];
 
 export default function Socials() {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <ul className={styles.socials}>
       {SocialObjects.map(({ name, link }) => {

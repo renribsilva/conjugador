@@ -61,6 +61,8 @@ body {
     'GRAD' 0,
     'opsz' 30;
   font-size: 23px;
+  height: 23px;
+  width: 23px;
   text-align: center;
   color: var(--foreground);
 } 
