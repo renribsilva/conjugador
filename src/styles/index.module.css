@@ -2,12 +2,17 @@
 /*********************NAVBAR***********************/
 /*************************************************/
 
+.main {
+  min-width: 100%;
+}
+
 .navbar_container {
   /* background-color: aqua; */
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   height: 170px;
+  /* min-width: 100%; */
 }
 
 @media (max-width: 800px) {
@@ -23,6 +28,7 @@
   display: flex;
   justify-content: space-between;
   width: 840px;
+  /* min-width: 100%; */
 }
 
 @media (max-width: 800px) {
@@ -35,7 +41,7 @@
   /* background-color: bisque; */
   display: flex;
   justify-content: left;
-  width: 100%;
+  /* min-width: 100%; */
 }
 
 @media (max-width: 800px) {
@@ -50,6 +56,7 @@
   border: none;
   padding: 12px 28px;
   height: 55px;
+  /* min-width: 90%; */
   align-self: center;
   justify-content: center;
   font-size: 18px;
@@ -146,6 +153,7 @@
   /* background-color: aquamarine; */
   display: flex;
   justify-content: center;
+  
 }
 
 .panel {
