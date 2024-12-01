@@ -61,7 +61,6 @@ const Index = () => {
       showSuggestions: false,
       showButton: false,
       isButtonDisabled: false,
-      enter: true
     });
   };
 
@@ -77,7 +76,6 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
-      enter: true
     });
   };
 
@@ -93,7 +91,6 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
-      enter: true
     });
   };
 
