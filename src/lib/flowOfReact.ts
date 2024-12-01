@@ -334,13 +334,6 @@ export const flowOfReact = () => {
     }
   };
 
-  setState(prev => ({
-
-    ...prev,
-    enter:false
-
-  }))
-
   const dependencies = [
     state.conjugations,
     // state.inputValue,
@@ -427,7 +420,14 @@ export const flowOfReact = () => {
     };
   
     console.log(data);
-  }, dependencies);  
+  }, dependencies); 
+  
+  setState(prev => ({
+
+    ...prev,
+    enter:false
+
+  }))
 
   return {
     state,
