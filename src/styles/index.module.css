@@ -2,17 +2,12 @@
 /*********************NAVBAR***********************/
 /*************************************************/
 
-.main {
-  min-width: 100%;
-}
-
 .navbar_container {
   /* background-color: aqua; */
   width: 100%;
   display: flex;
   justify-content: center;
   height: 170px;
-  /* min-width: 100%; */
 }
 
 @media (max-width: 800px) {
