@@ -26,7 +26,8 @@ const Index = () => {
     setState({ 
       ...state, 
       showButton: false,
-      isButtonDisabled: true 
+      isButtonDisabled: true,
+      focus: !state.focus,
     });
   };
 
@@ -35,7 +36,8 @@ const Index = () => {
     setState({ 
       ...state, 
       showButton: false,
-      showReviewButton: false 
+      showReviewButton: false,
+      focus: !state.focus, 
     });
   };
 
@@ -45,7 +47,8 @@ const Index = () => {
       inputValue: verb,
       inputReq: verb,
       goThrough: true,
-      enter:true
+      enter:true,
+      focus: !state.focus,
     });
   };
 
@@ -61,7 +64,8 @@ const Index = () => {
       showSuggestions: false,
       showButton: false,
       isButtonDisabled: false,
-    });
+      focus: !state.focus,
+    });    
   };
 
   const handleHome = () => {
@@ -76,6 +80,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
+      focus: !state.focus,
     });
   };
 
@@ -91,6 +96,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
+      focus: !state.focus,
     });
   };
 
@@ -98,21 +104,34 @@ const Index = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
+
     if (inputRef.current) {
+
       const enterEvent = new KeyboardEvent("keydown", {
         bubbles: true,
         cancelable: true,
         key: "Enter",
         code: "Enter",
+        
       });
-      
+
       inputRef.current.dispatchEvent(enterEvent);
-      inputRef.current.focus();
 
     }
     randomAxi();
     randomEita();
+
   }, [state.enter]);
+
+  useEffect(() => {
+    
+    if (inputRef.current) {
+
+      inputRef.current.focus();
+
+    }
+
+  }, [state.focus]);
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {

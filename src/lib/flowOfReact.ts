@@ -7,6 +7,7 @@ import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 
 export const flowOfReact = () => {
+
   const [state, setState] = useState<{
     conjugations: Conjugation | null;
     inputValue: string;
@@ -32,6 +33,7 @@ export const flowOfReact = () => {
     showReviewButton: boolean;
     goThrough: boolean;
     enter: boolean;
+    focus: boolean;
 
     originalVerb: object | null;
     variationVerb: object| null,
@@ -74,7 +76,8 @@ export const flowOfReact = () => {
     showStatistic: false,
     showReviewButton: false,
     goThrough: false,
-    enter: true,
+    enter: false,
+    focus: false,
 
     originalVerb: null,
     variationVerb: null,
@@ -139,7 +142,8 @@ export const flowOfReact = () => {
         types: null,
 
         goThrough: false,
-        enter: true,
+        enter: false,
+        focus: false,
 
         originalVerb: null,
         variationVerb: null,
@@ -331,8 +335,17 @@ export const flowOfReact = () => {
           loading: false,
           showConjugations: true,
         }));
+
       }
     }
+
+    setState(prev => ({
+
+      ...prev,
+      focus: true
+  
+    }));
+
   };
 
   const dependencies = [
@@ -374,6 +387,7 @@ export const flowOfReact = () => {
     state.varConector,
     state.varOriginalInput,
     state.showStatistic,
+    state.focus
   ];
   
   useEffect(() => {
@@ -418,6 +432,7 @@ export const flowOfReact = () => {
       showReviewButton: state.showReviewButton,
       goThrough: state.goThrough,
       enter: state.enter,
+      focus: state.focus
     };
   
     console.log(data);
