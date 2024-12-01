@@ -110,7 +110,7 @@ const Index = () => {
       if (state.enter) {
         inputRef.current.focus();
       }
-      
+
     }
     randomAxi();
     randomEita();
