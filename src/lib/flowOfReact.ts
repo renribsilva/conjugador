@@ -28,6 +28,7 @@ export const flowOfReact = () => {
     isButtonDisabled: boolean;
     showHome: boolean;
     showSobre: boolean;
+    showStatistic: boolean;
     showReviewButton: boolean;
     goThrough: boolean;
     enter: boolean;
@@ -70,6 +71,7 @@ export const flowOfReact = () => {
     showSuggestions: false,
     showHome: true,
     showSobre: false,
+    showStatistic: false,
     showReviewButton: false,
     goThrough: false,
     enter: true,
@@ -122,6 +124,7 @@ export const flowOfReact = () => {
         isButtonDisabled: false,
         showHome: false,
         showSobre: false,
+        showStatistic: false,
         showReviewButton: false,
 
         foundVerb: null,
@@ -377,6 +380,7 @@ export const flowOfReact = () => {
     state.varMatchingAfixo,
     state.varConector,
     state.varOriginalInput,
+    state.showStatistic,
   ];
   
   useEffect(() => {
@@ -417,6 +421,7 @@ export const flowOfReact = () => {
       // showSuggestions: state.showSuggestions,
       // showHome: state.showHome,
       // showSobre: state.showSobre,
+      // showStatistic: state.showStatistic,
       // showReviewButton: state.showReviewButton,
       // goThrough: state.goThrough,
       // enter: state.enter,

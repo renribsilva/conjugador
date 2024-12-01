@@ -8,6 +8,7 @@ import Socials from "../components/socials";
 import Home from "../mdx/Home.mdx";
 import Gracias from "../mdx/Gracias.mdx";
 import About from "../mdx/About.mdx";
+import Statistic from "../mdx/Statistic.mdx";
 import Warning from "../mdx/Warning.mdx";
 import Emphasis from "../mdx/Emphasis.mdx";
 import SobreErros from "../mdx/SobreErros.mdx";
@@ -54,13 +55,13 @@ const Conjugations = () => {
     });
   };
 
-  const handleSobre = () => {
+  const handleNavbar = () => {
     setState({ 
       ...state,
       inputValue: "",
       inputReq: "",
       showHome: false,
-      showSobre: true,
+      showSobre: false,
       conjugations: null,
       showSuggestions: false,
       showButton: false,
@@ -68,17 +69,30 @@ const Conjugations = () => {
     });
   };
 
+  const handleSobre = () => {
+    setState({ 
+      ...state,
+      showHome: false,
+      showSobre: true,
+      showStatistic: false
+    });
+  };
+
   const handleHome = () => {
     setState({ 
       ...state,
-      inputValue: "",
-      inputReq: "",
       showHome: true,
       showSobre: false,
-      conjugations: null,
-      showButton: false,
-      punct: null,
-      isButtonDisabled: false
+      showStatistic: false
+    });
+  };
+
+  const handleStatistic = () => {
+    setState({ 
+      ...state,
+      showHome: false,
+      showSobre: false,
+      showStatistic: true
     });
   };
 
@@ -169,10 +183,19 @@ const Conjugations = () => {
             </div>
             <div className={styles.button_inf}>
               <div>
-                <button onClick={handleHome} className={styles.button_nav}>início</button>
+                <button onClick={() => { handleNavbar(); handleHome(); }} className={styles.button_nav}>
+                  início
+                </button>
               </div>
               <div>
-                <button onClick={handleSobre} className={styles.button_nav}>sobre</button>
+                <button onClick={() => { handleNavbar(); handleStatistic (); }} className={styles.button_nav}>
+                  estatística
+                </button>
+              </div>
+              <div>
+                <button onClick={() => { handleNavbar(); handleSobre(); }} className={styles.button_nav}>
+                  sobre
+                </button>
               </div>
               <div className={styles.buttonTheme}>
                 <Theme />
@@ -189,7 +212,7 @@ const Conjugations = () => {
               {state.loading && "buscando..."}
             </div>
             <div>
-              {state.showHome && !state.showSobre &&
+              {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
                   <Home />
                   <div className={styles.knowmore}>
@@ -197,9 +220,17 @@ const Conjugations = () => {
                   </div>
                 </>
               }
-              {!state.showHome && state.showSobre &&
+              {!state.showHome && state.showSobre && !state.showStatistic &&
                 <>
                   <About />
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </>
+              }
+              {!state.showHome && !state.showSobre && state.showStatistic &&
+                <>
+                  <Statistic />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>

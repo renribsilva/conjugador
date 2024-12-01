@@ -9,11 +9,21 @@ import styles from "../src/styles/mdx-components.module.css";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
-    a: ({ children, ...props }) => (
-      <a className={styles.customA} {...props} target="_blank" rel="noopener noreferrer"> 
-        {children}
-      </a> 
-    ),
+    a: ({ children, ...props }) => {
+      
+      const isFooterLink = props.className?.includes("data-footnote-backref");
+
+      return (
+        <a 
+          className={styles.customA} 
+          {...props} 
+          target={!isFooterLink ? "_blank" : undefined} 
+          rel={!isFooterLink ? "noopener noreferrer" : undefined} 
+        >
+          {children}
+        </a>
+      );
+    },
 
     p: ({ children, ...props }) => (
       <p className={styles.customP} {...props}> 
