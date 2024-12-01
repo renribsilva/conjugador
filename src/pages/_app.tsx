@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import React from 'react'; // Corrigido aqui
+import React, { useEffect, useState } from 'react'; // Corrigido aqui
 import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
 import Head from 'next/head';
@@ -9,6 +9,17 @@ const description = "Conjugador de verbos da Língua Porguesa Brasileira"
 const url = "https://conjugador-gules.vercel.app"
 
 export default function App({ Component, pageProps }: AppProps) {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <ThemeProvider>
       <Head>
