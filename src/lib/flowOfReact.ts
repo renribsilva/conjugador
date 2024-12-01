@@ -332,15 +332,14 @@ export const flowOfReact = () => {
         }));
       }
     }
-
-    setState(prev => ({
-
-      ...prev,
-      enter:false
-
-    }))
-
   };
+
+  setState(prev => ({
+
+    ...prev,
+    enter:false
+
+  }))
 
   const dependencies = [
     state.conjugations,
