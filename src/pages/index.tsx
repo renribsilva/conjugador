@@ -105,11 +105,9 @@ const Index = () => {
         key: "Enter",
         code: "Enter",
       });
-      inputRef.current.dispatchEvent(enterEvent);
       
-      if (state.enter) {
-        inputRef.current.focus();
-      }
+      inputRef.current.dispatchEvent(enterEvent);
+      inputRef.current.focus();
 
     }
     randomAxi();
