@@ -15,17 +15,12 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import { formatPuncts, formatTypes } from "./utils/indexUtils";
 // import {Tooltip} from "@nextui-org/tooltip";
 
-const Conjugations = () => {
+const Index = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
-
-  const formatTypes = (types: string[] | null | undefined) => {
-    if (!types || types.length === 0) {return "";}
-    if (types.length === 1) {return types[0];}
-    return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
-  };
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq);
@@ -55,13 +50,14 @@ const Conjugations = () => {
     });
   };
 
-  const handleNavbar = () => {
+  const handleSobre = () => {
     setState({ 
       ...state,
       inputValue: "",
       inputReq: "",
       showHome: false,
-      showSobre: false,
+      showSobre: true,
+      showStatistic: false,
       conjugations: null,
       showSuggestions: false,
       showButton: false,
@@ -69,30 +65,33 @@ const Conjugations = () => {
     });
   };
 
-  const handleSobre = () => {
-    setState({ 
-      ...state,
-      showHome: false,
-      showSobre: true,
-      showStatistic: false
-    });
-  };
-
   const handleHome = () => {
     setState({ 
       ...state,
+      inputValue: "",
+      inputReq: "",
       showHome: true,
       showSobre: false,
-      showStatistic: false
+      showStatistic: false,
+      conjugations: null,
+      showButton: false,
+      punct: null,
+      isButtonDisabled: false
     });
   };
 
   const handleStatistic = () => {
     setState({ 
       ...state,
+      inputValue: "",
+      inputReq: "",
       showHome: false,
       showSobre: false,
-      showStatistic: true
+      showStatistic: true,
+      conjugations: null,
+      showButton: false,
+      punct: null,
+      isButtonDisabled: false
     });
   };
 
@@ -148,16 +147,9 @@ const Conjugations = () => {
     setEita(eitaExpression[randomIndex]);
   };
 
-  const formatPuncts = (puncts: string[] | null) => {
-    if (!puncts || puncts.length === 0) return null;
-  
-    return puncts
-      .map(punct => `${punct}`)
-      .join(' ');
-  };
-
   return (
     <div className={styles.index}>
+      {/* header */}
       <section className={styles.navbar_container}>
         <div className={styles.navbar}>
           <div className={styles.input_container}>
@@ -183,19 +175,13 @@ const Conjugations = () => {
             </div>
             <div className={styles.button_inf}>
               <div>
-                <button onClick={() => { handleNavbar(); handleHome(); }} className={styles.button_nav}>
-                  início
-                </button>
+                <button onClick={handleHome} className={styles.button_nav}>início</button>
               </div>
               <div>
-                <button onClick={() => { handleNavbar(); handleStatistic (); }} className={styles.button_nav}>
-                  estatística
-                </button>
+                <button onClick={handleStatistic} className={styles.button_nav}>estatística</button>
               </div>
               <div>
-                <button onClick={() => { handleNavbar(); handleSobre(); }} className={styles.button_nav}>
-                  sobre
-                </button>
+                <button onClick={handleSobre} className={styles.button_nav}>sobre</button>
               </div>
               <div className={styles.buttonTheme}>
                 <Theme />
@@ -204,7 +190,7 @@ const Conjugations = () => {
           </div>
         </div>
       </section>
-
+      {/* main */}
       <section className={styles.main} role="main">
         <div className={styles.panel}>
           <div className={styles.subpanel}>
@@ -247,7 +233,7 @@ const Conjugations = () => {
                           <span>A palavra </span>
                           <span><strong>'{state.inputReq}'</strong></span>
                           <span> contém caracteres que não podemos consultar: </span>
-                          <span><strong>" {formatPuncts(state.punct)} "</strong></span>
+                          <span><strong>" {formatPuncts (state.punct)} "</strong></span>
                           {state.foundVerb && (
                             <>
                               <>
@@ -556,7 +542,7 @@ const Conjugations = () => {
                         </Button>
                       )}
                       {!state.showReviewButton && state.showConjugations && (
-                        <p>Solicitação enviada</p>
+                        <p><strong>Solicitação enviada</strong></p>
                       )}
                     </ul>
                   </div>
@@ -572,7 +558,7 @@ const Conjugations = () => {
           </div>
         </div>
       </section>
-
+      {/* foot */}
       <section className={styles.foot_info}>
         <Socials />
         <Footer />
@@ -581,4 +567,4 @@ const Conjugations = () => {
   );
 };
 
-export default Conjugations;
+export default Index;
