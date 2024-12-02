@@ -117,7 +117,7 @@ const Index = () => {
 
       inputRef.current.dispatchEvent(enterEvent);
 
-    }
+    } 
 
     randomAxi();
     randomEita();
