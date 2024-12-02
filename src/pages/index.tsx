@@ -119,6 +119,8 @@ const Index = () => {
 
     }
 
+    inputRef.current?.blur();
+
     randomAxi();
     randomEita();
 
