@@ -111,7 +111,7 @@ const Index = () => {
     randomEita();
   }, [state.enter]);
 
-  console.log(inputRef)
+  // console.log(inputRef)
 
   useEffect(() => {    
     if (inputRef.current) {
