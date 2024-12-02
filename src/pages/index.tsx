@@ -27,7 +27,7 @@ const Index = () => {
       ...state, 
       showButton: false,
       isButtonDisabled: true,
-      focus: !state.focus,
+      // focus: !state.focus,
     });
   };
 
@@ -37,7 +37,7 @@ const Index = () => {
       ...state, 
       showButton: false,
       showReviewButton: false,
-      focus: !state.focus, 
+      // focus: !state.focus, 
     });
   };
 
@@ -48,7 +48,7 @@ const Index = () => {
       inputReq: verb,
       goThrough: true,
       enter:true,
-      focus: !state.focus,
+      // focus: !state.focus,
     });
   };
 
@@ -64,7 +64,7 @@ const Index = () => {
       showSuggestions: false,
       showButton: false,
       isButtonDisabled: false,
-      focus: !state.focus,
+      // focus: !state.focus,
     });    
   };
 
@@ -80,7 +80,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
-      focus: !state.focus,
+      // focus: !state.focus,
     });
   };
 
@@ -96,7 +96,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
-      focus: !state.focus,
+      // focus: !state.focus,
     });
   };
 
@@ -118,11 +118,13 @@ const Index = () => {
       inputRef.current.dispatchEvent(enterEvent);
 
     }
-    
+
     randomAxi();
     randomEita();
 
   }, [state.enter]);
+
+  console.log(inputRef)
 
   useEffect(() => {
     
