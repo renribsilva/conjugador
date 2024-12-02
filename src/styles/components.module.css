@@ -138,7 +138,8 @@
 
 .button {
   border: none;
-  box-shadow: var(--largeshadow);
+  /* box-shadow: var(--largeshadow); */
+  background-color:rgb(243, 243, 243);
   border-radius: 2rem;
   padding: 10px;
   padding-inline: 20px;
