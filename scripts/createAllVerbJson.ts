@@ -6,7 +6,7 @@ import addNewVerbs from './addNewVerbs';
 import { ni } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 
-const assetsDir = path.join(process.cwd(), 'assets');
+const listsDir = path.join(process.cwd(), 'lists');
 const srcDir = path.join(process.cwd(), 'src');
 const publicDir = path.join(process.cwd(), 'public');
 
@@ -36,7 +36,7 @@ async function processVerbsFile(): Promise<void> {
       (word.length > 3 || exceptions.has(word))
     );
 
-    const irregularVerbsPath = path.join(assetsDir, 'irregVerbs.txt');
+    const irregularVerbsPath = path.join(listsDir, 'irregVerbs.txt');
     const irregularVerbs = await readTxtLines(irregularVerbsPath);
     const allVerbsSet = new Set([...verbs, ...irregularVerbs]);
 

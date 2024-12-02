@@ -31,5 +31,5 @@ function filterLinesWithDiacritics(filePath: string, outputFilePath: string): vo
 }
 
 const filePath = './public/words.txt';  
-const outputFilePath = './assets/output.txt'; 
+const outputFilePath = './lists/output.txt'; 
 filterLinesWithDiacritics(filePath, outputFilePath);

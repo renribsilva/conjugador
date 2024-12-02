@@ -4,7 +4,7 @@ import { nw } from '../src/lib/normalizeVerb';
 
 function createIrregVerbsJson() {
   
-  const caminhoTxt = path.join(process.cwd(), 'assets', 'irregVerbs.txt');
+  const caminhoTxt = path.join(process.cwd(), 'lists', 'irregVerbs.txt');
   const caminhoJson = path.join(process.cwd(), 'src', 'json', 'irregVerbs.json');
 
   try {
