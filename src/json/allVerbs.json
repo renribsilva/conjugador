@@ -5183,11 +5183,11 @@
   "amarfanhar": [
     "amarfanhar"
   ],
-  "amarfanharferir": [
-    "amarfanharferir"
-  ],
   "amarfinar": [
     "amarfinar"
+  ],
+  "amargar": [
+    "amargar"
   ],
   "amargurar": [
     "amargurar"
@@ -5198,14 +5198,23 @@
   "amariçar": [
     "amariçar"
   ],
+  "amaridar": [
+    "amaridar"
+  ],
   "amarinhar": [
     "amarinhar"
   ],
   "amarinheirar": [
     "amarinheirar"
   ],
+  "amariolar": [
+    "amariolar"
+  ],
   "amarizar": [
     "amarizar"
+  ],
+  "amarlotar": [
+    "amarlotar"
   ],
   "amarotar": [
     "amarotar"
@@ -5219,14 +5228,29 @@
   "amarrecar": [
     "amarrecar"
   ],
+  "amarroar": [
+    "amarroar"
+  ],
   "amarronzar": [
     "amarronzar"
+  ],
+  "amarroquinar": [
+    "amarroquinar"
   ],
   "amarrotar": [
     "amarrotar"
   ],
   "amartelar": [
     "amartelar"
+  ],
+  "amartilhar": [
+    "amartilhar"
+  ],
+  "amarujar": [
+    "amarujar"
+  ],
+  "amarulhar": [
+    "amarulhar"
   ],
   "amasiar": [
     "amasiar"
@@ -5237,6 +5261,12 @@
   "amatalar": [
     "amatalar"
   ],
+  "amatalotar": [
+    "amatalotar"
+  ],
+  "amatilhar": [
+    "amatilhar"
+  ],
   "amatronar": [
     "amatronar"
   ],
@@ -5246,11 +5276,17 @@
   "amatungar": [
     "amatungar"
   ],
+  "amatutar": [
+    "amatutar"
+  ],
   "amaurosar": [
     "amaurosar"
   ],
   "amaurotizar": [
     "amaurotizar"
+  ],
+  "amazelar": [
+    "amazelar"
   ],
   "amazilhar": [
     "amazilhar"
@@ -5261,11 +5297,11 @@
   "ambarizar": [
     "ambarizar"
   ],
-  "ambianular": [
-    "ambianular"
-  ],
   "ambiar": [
     "ambiar"
+  ],
+  "ambiciar": [
+    "ambiciar"
   ],
   "ambicionar": [
     "ambicionar"
@@ -5273,20 +5309,14 @@
   "ambientar": [
     "ambientar"
   ],
-  "ambipolar": [
-    "ambipolar"
-  ],
-  "ambir": [
-    "ambir"
+  "ambiguizar": [
+    "ambiguizar"
   ],
   "ambitender": [
     "ambitender"
   ],
   "ambiverter": [
     "ambiverter"
-  ],
-  "ambrar": [
-    "ambrar"
   ],
   "ambrear": [
     "ambrear"
@@ -5303,6 +5333,12 @@
   "amear": [
     "amear"
   ],
+  "amechar": [
+    "amechar"
+  ],
+  "amedalhar": [
+    "amedalhar"
+  ],
   "amedinar": [
     "amedinar"
   ],
@@ -5318,17 +5354,20 @@
   "amedrontar": [
     "amedrontar"
   ],
-  "ameiar": [
-    "ameiar"
-  ],
   "ameijoar": [
     "ameijoar"
   ],
   "amelaçar": [
     "amelaçar"
   ],
+  "amelindrar": [
+    "amelindrar"
+  ],
   "amembranar": [
     "amembranar"
+  ],
+  "amendoar": [
+    "amendoar"
   ],
   "ameninar": [
     "ameninar"
@@ -5338,6 +5377,12 @@
   ],
   "amenosiar": [
     "amenosiar"
+  ],
+  "amentar": [
+    "amentar"
+  ],
+  "amercear": [
+    "amercear"
   ],
   "amerger": [
     "amerger"
@@ -5354,23 +5399,32 @@
   "amerrissar": [
     "amerrissar"
   ],
+  "amerujar": [
+    "amerujar"
+  ],
   "amesendar": [
     "amesendar"
   ],
   "amesendrar": [
     "amesendrar"
   ],
+  "amesquinhar": [
+    "amesquinhar"
+  ],
   "amestrar": [
     "amestrar"
+  ],
+  "amesurar": [
+    "amesurar"
   ],
   "ametalar": [
     "ametalar"
   ],
+  "amezinhar": [
+    "amezinhar"
+  ],
   "amichelar": [
     "amichelar"
-  ],
-  "amidalar": [
-    "amidalar"
   ],
   "amidoar": [
     "amidoar"
@@ -5380,9 +5434,6 @@
   ],
   "amigar": [
     "amigar"
-  ],
-  "amigdalar": [
-    "amigdalar"
   ],
   "amilenizar": [
     "amilenizar"
@@ -5402,11 +5453,20 @@
   "amineirar": [
     "amineirar"
   ],
+  "aminguar": [
+    "aminguar"
+  ],
+  "aministrar": [
+    "aministrar"
+  ],
+  "aminorar": [
+    "aminorar"
+  ],
   "amintar": [
     "amintar"
   ],
-  "amirquebir": [
-    "amirquebir"
+  "amiserar": [
+    "amiserar"
   ],
   "amistar": [
     "amistar"
@@ -5429,11 +5489,32 @@
   "amocambetar": [
     "amocambetar"
   ],
+  "amocar": [
+    "amocar"
+  ],
+  "amoçar": [
+    "amoçar"
+  ],
+  "amochar": [
+    "amochar"
+  ],
   "amochilar": [
     "amochilar"
   ],
   "amochoir": [
     "amochoir"
+  ],
+  "amodelar": [
+    "amodelar"
+  ],
+  "amodernar": [
+    "amodernar"
+  ],
+  "amodernizar": [
+    "amodernizar"
+  ],
+  "amodornar": [
+    "amodornar"
   ],
   "amodorrar": [
     "amodorrar"
@@ -5447,8 +5528,14 @@
   "amofinar": [
     "amofinar"
   ],
+  "amofumbar": [
+    "amofumbar"
+  ],
   "amoiar": [
     "amoiar"
+  ],
+  "amoinar": [
+    "amoinar"
   ],
   "amoiriscar": [
     "amoiriscar"
@@ -5456,8 +5543,14 @@
   "amoiroar": [
     "amoiroar"
   ],
+  "amoitar": [
+    "amoitar"
+  ],
   "amoixar": [
     "amoixar"
+  ],
+  "amojar": [
+    "amojar"
   ],
   "amolachar": [
     "amolachar"
@@ -5468,17 +5561,38 @@
   "amolar": [
     "amolar"
   ],
+  "amolatar": [
+    "amolatar"
+  ],
+  "amoldar": [
+    "amoldar"
+  ],
+  "amoldurar": [
+    "amoldurar"
+  ],
+  "amolecar": [
+    "amolecar"
+  ],
   "amolecer": [
     "amolecer"
   ],
   "amolegar": [
     "amolegar"
   ],
+  "amolengar": [
+    "amolengar"
+  ],
   "amolentar": [
     "amolentar"
   ],
+  "amolestar": [
+    "amolestar"
+  ],
   "amolgar": [
     "amolgar"
+  ],
+  "amolhar": [
+    "amolhar"
   ],
   "amonar": [
     "amonar"
@@ -5513,14 +5627,26 @@
   "amonturar": [
     "amonturar"
   ],
-  "amoracir": [
-    "amoracir"
+  "amoquecar": [
+    "amoquecar"
+  ],
+  "amoralizar": [
+    "amoralizar"
+  ],
+  "amorar": [
+    "amorar"
+  ],
+  "amordaçar": [
+    "amordaçar"
   ],
   "amorenar": [
     "amorenar"
   ],
   "amorfanhar": [
     "amorfanhar"
+  ],
+  "amorfar": [
+    "amorfar"
   ],
   "amorfizar": [
     "amorfizar"
@@ -5531,11 +5657,20 @@
   "amorlotar": [
     "amorlotar"
   ],
+  "amornar": [
+    "amornar"
+  ],
   "amornecer": [
     "amornecer"
   ],
+  "amorrinhar": [
+    "amorrinhar"
+  ],
   "amorroar": [
     "amorroar"
+  ],
+  "amorsegar": [
+    "amorsegar"
   ],
   "amortalhar": [
     "amortalhar"
@@ -5552,11 +5687,20 @@
   "amortizar": [
     "amortizar"
   ],
+  "amossar": [
+    "amossar"
+  ],
+  "amossegar": [
+    "amossegar"
+  ],
   "amostar": [
     "amostar"
   ],
   "amostardar": [
     "amostardar"
+  ],
+  "amostrar": [
+    "amostrar"
   ],
   "amotar": [
     "amotar"
@@ -5567,6 +5711,9 @@
   "amoucar": [
     "amoucar"
   ],
+  "amouriscar": [
+    "amouriscar"
+  ],
   "amouroar": [
     "amouroar"
   ],
@@ -5576,8 +5723,11 @@
   "amouxar": [
     "amouxar"
   ],
-  "amovir": [
-    "amovir"
+  "amover": [
+    "amover"
+  ],
+  "amoxamar": [
+    "amoxamar"
   ],
   "amparar": [
     "amparar"
@@ -5590,15 +5740,6 @@
   ],
   "amplificar": [
     "amplificar"
-  ],
-  "ampolhar": [
-    "ampolhar"
-  ],
-  "amprenavir": [
-    "amprenavir"
-  ],
-  "ampular": [
-    "ampular"
   ],
   "amputar": [
     "amputar"
@@ -5624,11 +5765,29 @@
   "amunçar": [
     "amunçar"
   ],
+  "amunhecar": [
+    "amunhecar"
+  ],
+  "amuniciar": [
+    "amuniciar"
+  ],
+  "amunicionar": [
+    "amunicionar"
+  ],
+  "amuralhar": [
+    "amuralhar"
+  ],
   "amurar": [
     "amurar"
   ],
+  "amurchecer": [
+    "amurchecer"
+  ],
   "amurilhar": [
     "amurilhar"
+  ],
+  "amurujar": [
+    "amurujar"
   ],
   "amussar": [
     "amussar"
@@ -5639,6 +5798,9 @@
   "anaçar": [
     "anaçar"
   ],
+  "anacarar": [
+    "anacarar"
+  ],
   "anacentar": [
     "anacentar"
   ],
@@ -5648,8 +5810,8 @@
   "anacronizar": [
     "anacronizar"
   ],
-  "anadar": [
-    "anadar"
+  "anadir": [
+    "anadir"
   ],
   "anafar": [
     "anafar"
@@ -5666,11 +5828,11 @@
   "anafilatizar": [
     "anafilatizar"
   ],
-  "anafragar": [
-    "anafragar"
-  ],
   "anagalhar": [
     "anagalhar"
+  ],
+  "anagar": [
+    "anagar"
   ],
   "anagramatizar": [
     "anagramatizar"
@@ -5689,6 +5851,9 @@
   ],
   "ananzar": [
     "ananzar"
+  ],
+  "anarcisar": [
+    "anarcisar"
   ],
   "anarquizar": [
     "anarquizar"
@@ -5711,20 +5876,14 @@
   "anatematizar": [
     "anatematizar"
   ],
-  "anatemizar": [
-    "anatemizar"
-  ],
   "anatomizar": [
     "anatomizar"
   ],
-  "anbar": [
-    "anbar"
+  "anavalhar": [
+    "anavalhar"
   ],
   "anchar": [
     "anchar"
-  ],
-  "ancilar": [
-    "ancilar"
   ],
   "ancilosar": [
     "ancilosar"
@@ -5747,20 +5906,11 @@
   "andejar": [
     "andejar"
   ],
-  "andir": [
-    "andir"
-  ],
-  "andiraguar": [
-    "andiraguar"
-  ],
   "andoar": [
     "andoar"
   ],
-  "andomar": [
-    "andomar"
-  ],
-  "andoxovir": [
-    "andoxovir"
+  "andorinhar": [
+    "andorinhar"
   ],
   "anear": [
     "anear"
@@ -5774,6 +5924,9 @@
   "anegalhar": [
     "anegalhar"
   ],
+  "anegar": [
+    "anegar"
+  ],
   "anegralhar": [
     "anegralhar"
   ],
@@ -5783,8 +5936,8 @@
   "anegratar": [
     "anegratar"
   ],
-  "anegrejaresfumar": [
-    "anegrejaresfumar"
+  "anegrejar": [
+    "anegrejar"
   ],
   "anegriscar": [
     "anegriscar"
@@ -5798,14 +5951,8 @@
   "anemizar": [
     "anemizar"
   ],
-  "aner": [
-    "aner"
-  ],
   "anestesiar": [
     "anestesiar"
-  ],
-  "anetematizar": [
-    "anetematizar"
   ],
   "anexar": [
     "anexar"
@@ -5816,38 +5963,23 @@
   "angelizar": [
     "angelizar"
   ],
-  "angiocardiografar": [
-    "angiocardiografar"
-  ],
-  "angioplastizar": [
-    "angioplastizar"
-  ],
   "anglicizar": [
     "anglicizar"
   ],
   "anglizar": [
     "anglizar"
   ],
-  "anglomanizar": [
-    "anglomanizar"
-  ],
-  "angolar": [
-    "angolar"
-  ],
-  "anguilar": [
-    "anguilar"
-  ],
   "angular": [
     "angular"
   ],
-  "angularizar": [
-    "angularizar"
+  "angurriar": [
+    "angurriar"
   ],
   "angustiar": [
     "angustiar"
   ],
-  "angustilaminar": [
-    "angustilaminar"
+  "anhadir": [
+    "anhadir"
   ],
   "anichar": [
     "anichar"
@@ -5876,9 +6008,6 @@
   "animadvertir": [
     "animadvertir"
   ],
-  "animalcular": [
-    "animalcular"
-  ],
   "animalizar": [
     "animalizar"
   ],
@@ -5891,8 +6020,14 @@
   "animizar": [
     "animizar"
   ],
+  "aninar": [
+    "aninar"
+  ],
   "aninhar": [
     "aninhar"
+  ],
+  "aniquilar": [
+    "aniquilar"
   ],
   "anisar": [
     "anisar"
@@ -5900,11 +6035,11 @@
   "anistiar": [
     "anistiar"
   ],
+  "anivelar": [
+    "anivelar"
+  ],
   "aniversariar": [
     "aniversariar"
-  ],
-  "anobulbar": [
-    "anobulbar"
   ],
   "anodinar": [
     "anodinar"
@@ -5927,38 +6062,35 @@
   "anonadar": [
     "anonadar"
   ],
-  "anonimar": [
-    "anonimar"
-  ],
   "anonimizar": [
     "anonimizar"
   ],
   "anordestar": [
     "anordestar"
   ],
+  "anortear": [
+    "anortear"
+  ],
   "anortistar": [
     "anortistar"
   ],
-  "anortizar": [
-    "anortizar"
+  "anotar": [
+    "anotar"
   ],
   "anoutar": [
     "anoutar"
   ],
+  "anoutecer": [
+    "anoutecer"
+  ],
   "anovear": [
     "anovear"
   ],
+  "anovelar": [
+    "anovelar"
+  ],
   "anovular": [
     "anovular"
-  ],
-  "anoxiar": [
-    "anoxiar"
-  ],
-  "anquilosar": [
-    "anquilosar"
-  ],
-  "ansar": [
-    "ansar"
   ],
   "ansiar": [
     "ansiar"

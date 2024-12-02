@@ -224,6 +224,7 @@ const Index = () => {
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
+                  <p>Aviso importante: este conjugador ainda está trabalhando sobre a sua base de verbos.</p>
                 </>
               }
               {!state.showHome && state.showSobre && !state.showStatistic &&
