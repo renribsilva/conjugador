@@ -115,9 +115,8 @@ const Index = () => {
         
       });
 
-      (enterEvent.target as HTMLInputElement).blur();
-
       inputRef.current.dispatchEvent(enterEvent);
+      inputRef.current.blur();
 
     }
     randomAxi();
