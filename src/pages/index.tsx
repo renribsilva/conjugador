@@ -220,7 +220,7 @@ const Index = () => {
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
-                  <p><strong>Aviso importante:</strong> este conjugador ainda está trabalhando sobre a sua base de verbos.</p>
+                  <p><strong>Aviso importante:</strong> a base de verbos deste conjugador ainda está sendo trabalhada.</p>
                   <Home />
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
