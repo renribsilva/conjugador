@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const components = useMDXComponents({});
 
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultTheme="light" enableSystem={true}>
       <Head>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -534,6 +534,9 @@ anortear
 anotar
 anoutecer
 anovelar
+anteceder
+antedatar
+antedizer
 
 inundar
 desmaiar
