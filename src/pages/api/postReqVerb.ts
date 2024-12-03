@@ -12,7 +12,7 @@ export default function handler(req, res) {
     }
 
     // Caminho do arquivo onde vamos gravar a string
-    const filePath = path.join(process.cwd(), 'assets', 'reqToDo', 'reqVerbs.txt');
+    const filePath = path.join(process.cwd(), 'lists', 'reqToDo', 'reqVerbs.txt');
 
     // Verifica se o diretório existe, se não, cria
     if (!fs.existsSync(path.dirname(filePath))) {
