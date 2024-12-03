@@ -5,11 +5,13 @@
   --color-modborder-light: rgb(216, 216, 216);
   --color-tense-light: rgba(179, 179, 179, 0.226);
   --color-tenseborder-light: rgb(238, 238, 238);
+  --color-button-light:rgb(240, 240, 240);
   
   --color-fill-dark: rgb(45, 45, 45);
   --color-text-base-dark: rgb(240, 240, 240);
   --color-mod-dark: rgba(139, 139, 139, 0.089);
   --color-tense-dark: rgba(139, 139, 139, 0.062);
+  --color-button-dark:rgb(61, 61, 61);
 }
 
 [data-theme="dark"] {
@@ -19,6 +21,7 @@
   --smallshadow: rgba(0, 0, 0, 1) 0px 0px 5px;
   --modbox:var(--color-mod-dark);
   --tensebox:var(--color-tense-dark);
+  --button: var(--color-button-dark)
 }
 
 [data-theme="light"] {
@@ -30,6 +33,7 @@
   --modborder: 1px solid var(--color-modborder-light);
   --tensebox:var(--color-tense-light);
   --tenseborder: 1px solid var(--color-tenseborder-light);
+  --button: var(--color-button-light)
 }
 
 * {
