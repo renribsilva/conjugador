@@ -12,14 +12,14 @@ const publicDir = path.join(process.cwd(), 'public');
 
 async function processVerbsFile(): Promise<void> {
 
-  const filePath = path.join(publicDir, 'words.txt');
+  const filePath = path.join(publicDir, 'pt_BR.txt');
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
   const verbsJsonPath = path.join(srcDir, 'json', 'refinedVerbs.json');
 
   try {
     if (!fs.existsSync(filePath)) {
       console.log('Arquivo não encontrado. Baixando...');
-      await pullLibreOfficeWords('https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic', filePath);
+      await pullLibreOfficeWords('https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic', filePath);
     } else {
       console.log('Arquivo já existe.');
     }

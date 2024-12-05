@@ -30,6 +30,6 @@ function filterLinesWithDiacritics(filePath: string, outputFilePath: string): vo
   console.log(`Linhas com diacríticos foram salvas em: ${outputFilePath}`);
 }
 
-const filePath = './public/words.txt';  
+const filePath = './public/pt_BR.txt';  
 const outputFilePath = './lists/output.txt'; 
 filterLinesWithDiacritics(filePath, outputFilePath);
