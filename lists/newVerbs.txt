@@ -578,6 +578,7 @@ apastorar
 apatanhar
 apatetar
 apatrizar
+apaular
 apaulistanizar
 apausar
 apautar
@@ -968,13 +969,43 @@ cooperar
 cooptar
 coorganizar
 coparticipar
+copejar
+copelar
+copolimerizar
+coproduzir
+coriscar
+cosmetizar
+cousar
+couvear
+criptar
+crocodilar
+cromatografar
+crujar
+cruzetar
+cufitucar
+cumungunar
+cungungutar
+curatear
+curimar
+curimbar
+cuxingar
+cuxir
+
+dalingar
+dançarilhar
+debaixar
+debastar
+debolar
+decapsular
+deceder
+decelerar
 
 
-inundar
 desmaiar
 desabar
+
+inundar
 reiniciar
-apaular
 sublimar
 
 rer
