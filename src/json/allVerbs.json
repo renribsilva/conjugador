@@ -13346,9 +13346,6 @@
   "cianizar": [
     "cianizar"
   ],
-  "cianogenar": [
-    "cianogenar"
-  ],
   "cianosar": [
     "cianosar"
   ],
@@ -13366,9 +13363,6 @@
   ],
   "cicatricular": [
     "cicatricular"
-  ],
-  "cicatrizar": [
-    "cicatrizar"
   ],
   "cicerar": [
     "cicerar"
@@ -13388,11 +13382,11 @@
   "ciclizar": [
     "ciclizar"
   ],
-  "cidofovir": [
-    "cidofovir"
-  ],
   "cientificar": [
     "cientificar"
+  ],
+  "cientizar": [
+    "cientizar"
   ],
   "cifar": [
     "cifar"
@@ -13418,17 +13412,11 @@
   "cilhar": [
     "cilhar"
   ],
-  "ciliar": [
-    "ciliar"
-  ],
   "ciliciar": [
     "ciliciar"
   ],
   "cilindrar": [
     "cilindrar"
-  ],
-  "cilindrocelular": [
-    "cilindrocelular"
   ],
   "cimbrar": [
     "cimbrar"
@@ -13444,12 +13432,6 @@
   ],
   "cinchonizar": [
     "cinchonizar"
-  ],
-  "cincunscrever": [
-    "cincunscrever"
-  ],
-  "cincunvalar": [
-    "cincunvalar"
   ],
   "cindir": [
     "cindir"
@@ -13490,6 +13472,9 @@
   "cintar": [
     "cintar"
   ],
+  "cintear": [
+    "cintear"
+  ],
   "cintilar": [
     "cintilar"
   ],
@@ -13529,15 +13514,6 @@
   "circumpercorrer": [
     "circumpercorrer"
   ],
-  "circumpolar": [
-    "circumpolar"
-  ],
-  "circumpor": [
-    "circumpor"
-  ],
-  "circunavegar": [
-    "circunavegar"
-  ],
   "circuncentrar": [
     "circuncentrar"
   ],
@@ -13568,17 +13544,11 @@
   "circunjazer": [
     "circunjazer"
   ],
-  "circunlunar": [
-    "circunlunar"
-  ],
   "circunrodar": [
     "circunrodar"
   ],
   "circunscrever": [
     "circunscrever"
-  ],
-  "circunsolar": [
-    "circunsolar"
   ],
   "circunsonar": [
     "circunsonar"
@@ -13601,9 +13571,6 @@
   "circunstar": [
     "circunstar"
   ],
-  "circunstelar": [
-    "circunstelar"
-  ],
   "circuntornar": [
     "circuntornar"
   ],
@@ -13615,9 +13582,6 @@
   ],
   "circunver": [
     "circunver"
-  ],
-  "circunvir": [
-    "circunvir"
   ],
   "circunvizinhar": [
     "circunvizinhar"
@@ -13631,17 +13595,11 @@
   "circunvolver": [
     "circunvolver"
   ],
-  "circunvolvir": [
-    "circunvolvir"
-  ],
   "cirilizar": [
     "cirilizar"
   ],
   "cisalhar": [
     "cisalhar"
-  ],
-  "cisar": [
-    "cisar"
   ],
   "ciscar": [
     "ciscar"
@@ -13654,9 +13612,6 @@
   ],
   "cispar": [
     "cispar"
-  ],
-  "cispolar": [
-    "cispolar"
   ],
   "cistorradiografar": [
     "cistorradiografar"
@@ -13675,9 +13630,6 @@
   ],
   "citolisar": [
     "citolisar"
-  ],
-  "citrobacter": [
-    "citrobacter"
   ],
   "ciumar": [
     "ciumar"
@@ -13757,20 +13709,8 @@
   "clavelizar": [
     "clavelizar"
   ],
-  "clavicular": [
-    "clavicular"
-  ],
-  "clear": [
-    "clear"
-  ],
   "clemenciar": [
     "clemenciar"
-  ],
-  "cleomar": [
-    "cleomar"
-  ],
-  "cleonir": [
-    "cleonir"
   ],
   "cleopatrizar": [
     "cleopatrizar"
@@ -13780,12 +13720,6 @@
   ],
   "clicar": [
     "clicar"
-  ],
-  "clidoscapular": [
-    "clidoscapular"
-  ],
-  "clientelar": [
-    "clientelar"
   ],
   "climatizar": [
     "climatizar"
@@ -13802,9 +13736,6 @@
   "clisar": [
     "clisar"
   ],
-  "clister": [
-    "clister"
-  ],
   "clisterizar": [
     "clisterizar"
   ],
@@ -13813,9 +13744,6 @@
   ],
   "clocar": [
     "clocar"
-  ],
-  "clomoxir": [
-    "clomoxir"
   ],
   "clonar": [
     "clonar"
@@ -13828,6 +13756,9 @@
   ],
   "cloretilizar": [
     "cloretilizar"
+  ],
+  "clorinar": [
+    "clorinar"
   ],
   "cloritizar": [
     "cloritizar"
@@ -13856,11 +13787,26 @@
   "coabitar": [
     "coabitar"
   ],
+  "coacervar": [
+    "coacervar"
+  ],
   "coactar": [
     "coactar"
   ],
-  "coadatar": [
-    "coadatar"
+  "coadjuvar": [
+    "coadjuvar"
+  ],
+  "coadministrar": [
+    "coadministrar"
+  ],
+  "coadquirir": [
+    "coadquirir"
+  ],
+  "coadunar": [
+    "coadunar"
+  ],
+  "coagir": [
+    "coagir"
   ],
   "coaglutinar": [
     "coaglutinar"
@@ -13880,6 +13826,9 @@
   "coalizar": [
     "coalizar"
   ],
+  "coaltarizar": [
+    "coaltarizar"
+  ],
   "coangustar": [
     "coangustar"
   ],
@@ -13889,8 +13838,17 @@
   "coar": [
     "coar"
   ],
+  "coarctar": [
+    "coarctar"
+  ],
+  "coarrendar": [
+    "coarrendar"
+  ],
   "coartar": [
     "coartar"
+  ],
+  "coatar": [
+    "coatar"
   ],
   "coaxar": [
     "coaxar"
@@ -13925,6 +13883,9 @@
   "coçar": [
     "coçar"
   ],
+  "cocegar": [
+    "cocegar"
+  ],
   "cochar": [
     "cochar"
   ],
@@ -13934,14 +13895,14 @@
   "cochilar": [
     "cochilar"
   ],
+  "cochinar": [
+    "cochinar"
+  ],
   "cochir": [
     "cochir"
   ],
   "cocientar": [
     "cocientar"
-  ],
-  "coclear": [
-    "coclear"
   ],
   "cocobacilar": [
     "cocobacilar"
@@ -14474,17 +14435,11 @@
   "computatorizar": [
     "computatorizar"
   ],
-  "computorizar": [
-    "computorizar"
-  ],
   "comungar": [
     "comungar"
   ],
   "comunicar": [
     "comunicar"
-  ],
-  "comunitarizar": [
-    "comunitarizar"
   ],
   "comunizar": [
     "comunizar"
@@ -14533,9 +14488,6 @@
   ],
   "concentrar": [
     "concentrar"
-  ],
-  "conceptapular": [
-    "conceptapular"
   ],
   "conceptualizar": [
     "conceptualizar"
@@ -14642,12 +14594,6 @@
   "condicionar": [
     "condicionar"
   ],
-  "condignar": [
-    "condignar"
-  ],
-  "condilar": [
-    "condilar"
-  ],
   "condimentar": [
     "condimentar"
   ],
@@ -14659,9 +14605,6 @@
   ],
   "condizer": [
     "condizer"
-  ],
-  "condoar": [
-    "condoar"
   ],
   "condoer": [
     "condoer"
@@ -14680,12 +14623,6 @@
   ],
   "conectar": [
     "conectar"
-  ],
-  "conectorizar": [
-    "conectorizar"
-  ],
-  "conetar": [
-    "conetar"
   ],
   "conexionar": [
     "conexionar"
@@ -14713,9 +14650,6 @@
   ],
   "confessar": [
     "confessar"
-  ],
-  "confetear": [
-    "confetear"
   ],
   "confiar": [
     "confiar"
@@ -14746,9 +14680,6 @@
   ],
   "conflitar": [
     "conflitar"
-  ],
-  "conflituar": [
-    "conflituar"
   ],
   "confluir": [
     "confluir"
@@ -14837,9 +14768,6 @@
   "conhecer": [
     "conhecer"
   ],
-  "coniocelular": [
-    "coniocelular"
-  ],
   "conjecturar": [
     "conjecturar"
   ],
@@ -14873,8 +14801,8 @@
   "conluiar": [
     "conluiar"
   ],
-  "conquir": [
-    "conquir"
+  "conotar": [
+    "conotar"
   ],
   "conquistar": [
     "conquistar"
@@ -14906,9 +14834,6 @@
   "conselheirar": [
     "conselheirar"
   ],
-  "consensualizar": [
-    "consensualizar"
-  ],
   "consentir": [
     "consentir"
   ],
@@ -14927,9 +14852,6 @@
   "consignificar": [
     "consignificar"
   ],
-  "consimilar": [
-    "consimilar"
-  ],
   "consistir": [
     "consistir"
   ],
@@ -14947,6 +14869,9 @@
   ],
   "consolar": [
     "consolar"
+  ],
+  "consoldar": [
+    "consoldar"
   ],
   "consolidar": [
     "consolidar"
@@ -14996,20 +14921,20 @@
   "construir": [
     "construir"
   ],
+  "consubstancializar": [
+    "consubstancializar"
+  ],
   "consubstanciar": [
     "consubstanciar"
   ],
-  "consular": [
-    "consular"
+  "consularizar": [
+    "consularizar"
   ],
   "consultar": [
     "consultar"
   ],
   "consumar": [
     "consumar"
-  ],
-  "consumerizar": [
-    "consumerizar"
   ],
   "consumir": [
     "consumir"
@@ -15071,6 +14996,9 @@
   "contingenciar": [
     "contingenciar"
   ],
+  "contingentar": [
+    "contingentar"
+  ],
   "continuar": [
     "continuar"
   ],
@@ -15086,9 +15014,6 @@
   "contornear": [
     "contornear"
   ],
-  "contorvar": [
-    "contorvar"
-  ],
   "contra-acusar": [
     "contra-acusar"
   ],
@@ -15100,6 +15025,9 @@
   ],
   "contra-apelar": [
     "contra-apelar"
+  ],
+  "contra-argumentar": [
+    "contra-argumentar"
   ],
   "contra-arrazoar": [
     "contra-arrazoar"
@@ -15116,29 +15044,128 @@
   "contra-avisar": [
     "contra-avisar"
   ],
+  "contrabalançar": [
+    "contrabalançar"
+  ],
+  "contrabandear": [
+    "contrabandear"
+  ],
+  "contrabater": [
+    "contrabater"
+  ],
+  "contracambiar": [
+    "contracambiar"
+  ],
   "contracenar": [
     "contracenar"
+  ],
+  "contracolar": [
+    "contracolar"
+  ],
+  "contracunhar": [
+    "contracunhar"
+  ],
+  "contradançar": [
+    "contradançar"
+  ],
+  "contradeclarar": [
+    "contradeclarar"
+  ],
+  "contraditar": [
+    "contraditar"
   ],
   "contradizer": [
     "contradizer"
   ],
+  "contraespionar": [
+    "contraespionar"
+  ],
+  "contraestimular": [
+    "contraestimular"
+  ],
   "contrafazer": [
     "contrafazer"
+  ],
+  "contrafolhar": [
+    "contrafolhar"
   ],
   "contrafortar": [
     "contrafortar"
   ],
+  "contraimpelir": [
+    "contraimpelir"
+  ],
+  "contraindicar": [
+    "contraindicar"
+  ],
+  "contrainformar": [
+    "contrainformar"
+  ],
   "contrair": [
     "contrair"
+  ],
+  "contramalhar": [
+    "contramalhar"
+  ],
+  "contramandar": [
+    "contramandar"
+  ],
+  "contramarcar": [
+    "contramarcar"
+  ],
+  "contramarchar": [
+    "contramarchar"
+  ],
+  "contraminar": [
+    "contraminar"
+  ],
+  "contraminutar": [
+    "contraminutar"
+  ],
+  "contramoldar": [
+    "contramoldar"
+  ],
+  "contramurar": [
+    "contramurar"
+  ],
+  "contranivelar": [
+    "contranivelar"
+  ],
+  "contraofertar": [
+    "contraofertar"
+  ],
+  "contraordenar": [
+    "contraordenar"
+  ],
+  "contrapedalar": [
+    "contrapedalar"
+  ],
+  "contrapesar": [
+    "contrapesar"
+  ],
+  "contraplacar": [
+    "contraplacar"
   ],
   "contrapoder": [
     "contrapoder"
   ],
+  "contrapontar": [
+    "contrapontar"
+  ],
+  "contrapontear": [
+    "contrapontear"
+  ],
   "contrapor": [
     "contrapor"
   ],
+  "contraproduzir": [
+    "contraproduzir"
+  ],
   "contrapropor": [
     "contrapropor"
+  ],
+  "contraprovar": [
+    "contraprovar"
   ],
   "contrariar": [
     "contrariar"
@@ -15200,8 +15227,26 @@
   "contratar": [
     "contratar"
   ],
+  "contratelar": [
+    "contratelar"
+  ],
+  "contratipar": [
+    "contratipar"
+  ],
+  "contratirar": [
+    "contratirar"
+  ],
   "contratualizar": [
     "contratualizar"
+  ],
+  "contravalar": [
+    "contravalar"
+  ],
+  "contraventar": [
+    "contraventar"
+  ],
+  "contraverter": [
+    "contraverter"
   ],
   "contravir": [
     "contravir"
@@ -15251,14 +15296,8 @@
   "conveniar": [
     "conveniar"
   ],
-  "conventicular": [
-    "conventicular"
-  ],
   "convergir": [
     "convergir"
-  ],
-  "conversalhar": [
-    "conversalhar"
   ],
   "conversar": [
     "conversar"
@@ -15302,14 +15341,38 @@
   "coobar": [
     "coobar"
   ],
+  "coocorrer": [
+    "coocorrer"
+  ],
+  "coocupar": [
+    "coocupar"
+  ],
+  "cooferecer": [
+    "cooferecer"
+  ],
+  "cooficiar": [
+    "cooficiar"
+  ],
   "coonestar": [
     "coonestar"
+  ],
+  "cooperar": [
+    "cooperar"
+  ],
+  "cooptar": [
+    "cooptar"
   ],
   "coordenar": [
     "coordenar"
   ],
+  "coorganizar": [
+    "coorganizar"
+  ],
   "copar": [
     "copar"
+  ],
+  "coparticipar": [
+    "coparticipar"
   ],
   "copeirar": [
     "copeirar"
