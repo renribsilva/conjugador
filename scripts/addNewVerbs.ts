@@ -6,24 +6,23 @@ const listsDir = path.join(process.cwd(), 'lists');
 
 export default async function addNewVerbs(words: string[]): Promise<string[]> {
   try {
-
     const newWordPath = path.join(listsDir, 'newVerbs.txt');
     const newWords = await readTxtLines(newWordPath);
-    const normnewWords = newWords.map(verb => nw(verb));
-    return [...words, ...normnewWords];
+    const normNewWords = newWords.map(verb => nw(verb)).filter(verb => verb !== '');
+    const existingWordsSet = new Set(words.map(verb => nw(verb)));
+    const filteredNewWords = normNewWords.filter(verb => !existingWordsSet.has(verb));
+    const notAddedWords = normNewWords.filter(verb => existingWordsSet.has(verb));
 
+    console.log('Verbos que NÃO serão adicionados:', notAddedWords);
+
+    return [...words, ...filteredNewWords];
+    
   } catch (err) {
-
     if (err.code === 'ENOENT') {
-
       console.warn('Arquivo newVerbs.txt não encontrado.');
-
     } else {
-
       throw err;
-
     }
-
     return words;
   }
 }
