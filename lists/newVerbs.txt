@@ -1393,12 +1393,14 @@ descabeçar
 descabrear
 descachar
 descafeinar
+desçair
 descalar
 descalcificar
 descalvar
 descalçar
 descambar
 descaminhar
+descampar
 descancelar
 descanelar
 descangar
@@ -1529,6 +1531,7 @@ desconvir
 descoordenar
 descorajar
 descorar
+
 descrer
 desdar
 desdizer
@@ -1547,7 +1550,6 @@ desquerer
 dessaber
 desvaler
 desver
-desçair
 
 extrapor
 

@@ -42,6 +42,19 @@ async function processVerbsFile(): Promise<void> {
 
     allVerbs.sort((a, b) => a.localeCompare(b));
 
+    const duplicateVerbs: string[] = [];
+    allVerbs.forEach((verb, index) => {
+      if (allVerbs.indexOf(verb) !== index && !duplicateVerbs.includes(verb)) {
+        duplicateVerbs.push(verb);
+      }
+    });
+
+    if (duplicateVerbs.length > 0) {
+      console.log('Verbos duplicados encontrados:', duplicateVerbs);
+    } else {
+      console.log('Nenhum verbo duplicado encontrado.');
+    }
+
     const normalizedVerbs = allVerbs.map(verb => String(ni(verb)).toLowerCase());
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs.map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)]);

@@ -771,3 +771,5 @@ torpor
 vapor
 zipor
 prossupor
+
+ufir
