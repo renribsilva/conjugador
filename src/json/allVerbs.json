@@ -16466,11 +16466,11 @@
   "decimar": [
     "decimar"
   ],
-  "decissecular": [
-    "decissecular"
-  ],
   "declamar": [
     "declamar"
+  ],
+  "declanchar": [
+    "declanchar"
   ],
   "declarar": [
     "declarar"
@@ -16481,14 +16481,26 @@
   "declivar": [
     "declivar"
   ],
+  "decloretar": [
+    "decloretar"
+  ],
   "decoar": [
     "decoar"
   ],
   "decodificar": [
     "decodificar"
   ],
+  "decodizar": [
+    "decodizar"
+  ],
   "decolar": [
     "decolar"
+  ],
+  "decolgar": [
+    "decolgar"
+  ],
+  "decolorar": [
+    "decolorar"
   ],
   "decompor": [
     "decompor"
@@ -16505,9 +16517,6 @@
   "decotar": [
     "decotar"
   ],
-  "decrementar": [
-    "decrementar"
-  ],
   "decrepitar": [
     "decrepitar"
   ],
@@ -16520,6 +16529,9 @@
   "decriptar": [
     "decriptar"
   ],
+  "decroar": [
+    "decroar"
+  ],
   "decruar": [
     "decruar"
   ],
@@ -16531,15 +16543,6 @@
   ],
   "decuplicar": [
     "decuplicar"
-  ],
-  "decuriar": [
-    "decuriar"
-  ],
-  "decursar": [
-    "decursar"
-  ],
-  "decussar": [
-    "decussar"
   ],
   "dedar": [
     "dedar"
@@ -16559,11 +16562,17 @@
   "dedilhar": [
     "dedilhar"
   ],
+  "dedo-durar": [
+    "dedo-durar"
+  ],
   "dedurar": [
     "dedurar"
   ],
   "deduzir": [
     "deduzir"
+  ],
+  "defamar": [
+    "defamar"
   ],
   "defasar": [
     "defasar"
@@ -16586,8 +16595,17 @@
   "deferir": [
     "deferir"
   ],
+  "defervescer": [
+    "defervescer"
+  ],
+  "defesar": [
+    "defesar"
+  ],
   "defibrilar": [
     "defibrilar"
+  ],
+  "defibrinar": [
+    "defibrinar"
   ],
   "definhar": [
     "definhar"
@@ -16597,9 +16615,6 @@
   ],
   "deflacionar": [
     "deflacionar"
-  ],
-  "deflagar": [
-    "deflagar"
   ],
   "deflagrar": [
     "deflagrar"
@@ -16615,6 +16630,12 @@
   ],
   "deflexionar": [
     "deflexionar"
+  ],
+  "deflocular": [
+    "deflocular"
+  ],
+  "deflogisticar": [
+    "deflogisticar"
   ],
   "deflorar": [
     "deflorar"
@@ -16703,9 +16724,6 @@
   "dejungir": [
     "dejungir"
   ],
-  "delagrimejar": [
-    "delagrimejar"
-  ],
   "delamber": [
     "delamber"
   ],
@@ -16720,6 +16738,9 @@
   ],
   "deleitar": [
     "deleitar"
+  ],
+  "deleixar": [
+    "deleixar"
   ],
   "deletar": [
     "deletar"
@@ -16769,9 +16790,6 @@
   "delivrar": [
     "delivrar"
   ],
-  "delmar": [
-    "delmar"
-  ],
   "delongar": [
     "delongar"
   ],
@@ -16784,20 +16802,20 @@
   "demandar": [
     "demandar"
   ],
-  "demar": [
-    "demar"
-  ],
   "demarcar": [
     "demarcar"
   ],
   "demasiar": [
     "demasiar"
   ],
-  "demear": [
-    "demear"
-  ],
   "dementar": [
     "dementar"
+  ],
+  "demerger": [
+    "demerger"
+  ],
+  "demissionar": [
+    "demissionar"
   ],
   "demitir": [
     "demitir"
@@ -16805,14 +16823,17 @@
   "demitizar": [
     "demitizar"
   ],
+  "demitologizar": [
+    "demitologizar"
+  ],
   "democratizar": [
     "democratizar"
   ],
   "demodular": [
     "demodular"
   ],
-  "demografar": [
-    "demografar"
+  "demografizar": [
+    "demografizar"
   ],
   "demolhar": [
     "demolhar"
@@ -16838,17 +16859,11 @@
   "demover": [
     "demover"
   ],
-  "demovir": [
-    "demovir"
-  ],
   "demudar": [
     "demudar"
   ],
   "demulcir": [
     "demulcir"
-  ],
-  "denair": [
-    "denair"
   ],
   "denegar": [
     "denegar"
@@ -16861,6 +16876,12 @@
   ],
   "denervar": [
     "denervar"
+  ],
+  "denigrar": [
+    "denigrar"
+  ],
+  "denigrescer": [
+    "denigrescer"
   ],
   "denigrir": [
     "denigrir"
@@ -16934,9 +16955,6 @@
   "depilar": [
     "depilar"
   ],
-  "depletar": [
-    "depletar"
-  ],
   "deplorar": [
     "deplorar"
   ],
@@ -16946,11 +16964,17 @@
   "depolarizar": [
     "depolarizar"
   ],
+  "depolir": [
+    "depolir"
+  ],
   "depolmar": [
     "depolmar"
   ],
   "depopular": [
     "depopular"
+  ],
+  "depopularizar": [
+    "depopularizar"
   ],
   "depor": [
     "depor"
@@ -16976,9 +17000,6 @@
   "depreender": [
     "depreender"
   ],
-  "depressar": [
-    "depressar"
-  ],
   "deprimir": [
     "deprimir"
   ],
@@ -16993,6 +17014,9 @@
   ],
   "derivar": [
     "derivar"
+  ],
+  "dermatosar": [
+    "dermatosar"
   ],
   "derogar": [
     "derogar"
@@ -17027,9 +17051,6 @@
   "derrelhar": [
     "derrelhar"
   ],
-  "derrelinquir": [
-    "derrelinquir"
-  ],
   "derrengar": [
     "derrengar"
   ],
@@ -17047,9 +17068,6 @@
   ],
   "derriçar": [
     "derriçar"
-  ],
-  "derrilinquir": [
-    "derrilinquir"
   ],
   "derriscar": [
     "derriscar"
@@ -17078,11 +17096,23 @@
   "derruir": [
     "derruir"
   ],
-  "dervirgar": [
-    "dervirgar"
+  "desabafar": [
+    "desabafar"
+  ],
+  "desabalar": [
+    "desabalar"
   ],
   "desabar": [
     "desabar"
+  ],
+  "desabastecer": [
+    "desabastecer"
+  ],
+  "desabeirar": [
+    "desabeirar"
+  ],
+  "desabelhar": [
+    "desabelhar"
   ],
   "desabezar": [
     "desabezar"
@@ -17096,32 +17126,317 @@
   "desabituar": [
     "desabituar"
   ],
+  "desabocar": [
+    "desabocar"
+  ],
+  "desaboçar": [
+    "desaboçar"
+  ],
+  "desabonar": [
+    "desabonar"
+  ],
+  "desaborcar": [
+    "desaborcar"
+  ],
+  "desabordar": [
+    "desabordar"
+  ],
+  "desaborrecer": [
+    "desaborrecer"
+  ],
+  "desaborrir": [
+    "desaborrir"
+  ],
+  "desabotoar": [
+    "desabotoar"
+  ],
+  "desabraçar": [
+    "desabraçar"
+  ],
   "desabragalar": [
     "desabragalar"
+  ],
+  "desabrasileirar": [
+    "desabrasileirar"
+  ],
+  "desabrigar": [
+    "desabrigar"
   ],
   "desabrir": [
     "desabrir"
   ],
+  "desabrochar": [
+    "desabrochar"
+  ],
+  "desabrolhar": [
+    "desabrolhar"
+  ],
+  "desabusar": [
+    "desabusar"
+  ],
   "desacadelar": [
     "desacadelar"
+  ],
+  "desaçaimar": [
+    "desaçaimar"
+  ],
+  "desacamar": [
+    "desacamar"
+  ],
+  "desaçamar": [
+    "desaçamar"
+  ],
+  "desacampar": [
+    "desacampar"
+  ],
+  "desacanhar": [
+    "desacanhar"
+  ],
+  "desacaravelhar": [
+    "desacaravelhar"
+  ],
+  "desacasalar": [
+    "desacasalar"
+  ],
+  "desacatar": [
+    "desacatar"
+  ],
+  "desacaudilhar": [
+    "desacaudilhar"
+  ],
+  "desacautelar": [
+    "desacautelar"
+  ],
+  "desacavalar": [
+    "desacavalar"
+  ],
+  "desaceitar": [
+    "desaceitar"
+  ],
+  "desacelerar": [
+    "desacelerar"
+  ],
+  "desacentuar": [
+    "desacentuar"
+  ],
+  "desacerbar": [
+    "desacerbar"
+  ],
+  "desacertar": [
+    "desacertar"
+  ],
+  "desachegar": [
+    "desachegar"
   ],
   "desachorumar": [
     "desachorumar"
   ],
+  "desacidentar": [
+    "desacidentar"
+  ],
+  "desacidificar": [
+    "desacidificar"
+  ],
   "desacismar": [
     "desacismar"
   ],
-  "desacortinar": [
-    "desacortinar"
+  "desaclimar": [
+    "desaclimar"
+  ],
+  "desaclimatar": [
+    "desaclimatar"
+  ],
+  "desacobardar": [
+    "desacobardar"
+  ],
+  "desacochar": [
+    "desacochar"
+  ],
+  "desacoimar": [
+    "desacoimar"
+  ],
+  "desacoitar": [
+    "desacoitar"
+  ],
+  "desacolchetar": [
+    "desacolchetar"
+  ],
+  "desacolchoar": [
+    "desacolchoar"
+  ],
+  "desacolher": [
+    "desacolher"
+  ],
+  "desacolherar": [
+    "desacolherar"
+  ],
+  "desacomodar": [
+    "desacomodar"
+  ],
+  "desacompanhar": [
+    "desacompanhar"
+  ],
+  "desacompassar": [
+    "desacompassar"
+  ],
+  "desaconchegar": [
+    "desaconchegar"
+  ],
+  "desaconselhar": [
+    "desaconselhar"
+  ],
+  "desacoplar": [
+    "desacoplar"
+  ],
+  "desacorçoar": [
+    "desacorçoar"
+  ],
+  "desacordar": [
+    "desacordar"
+  ],
+  "desacoroçoar": [
+    "desacoroçoar"
+  ],
+  "desacorrentar": [
+    "desacorrentar"
+  ],
+  "desacostar": [
+    "desacostar"
+  ],
+  "desacostumar": [
+    "desacostumar"
+  ],
+  "desacoutar": [
+    "desacoutar"
+  ],
+  "desacovardar": [
+    "desacovardar"
+  ],
+  "desacravar": [
+    "desacravar"
+  ],
+  "desacravelhar": [
+    "desacravelhar"
+  ],
+  "desacreditar": [
+    "desacreditar"
+  ],
+  "desacuar": [
+    "desacuar"
+  ],
+  "desacumular": [
+    "desacumular"
+  ],
+  "desacunhar": [
+    "desacunhar"
+  ],
+  "desadaptar": [
+    "desadaptar"
+  ],
+  "desadensar": [
+    "desadensar"
+  ],
+  "desadereçar": [
+    "desadereçar"
+  ],
+  "desadjetivar": [
+    "desadjetivar"
+  ],
+  "desadministrar": [
+    "desadministrar"
+  ],
+  "desadmoestar": [
+    "desadmoestar"
+  ],
+  "desadorar": [
+    "desadorar"
+  ],
+  "desadormecer": [
+    "desadormecer"
+  ],
+  "desadornar": [
+    "desadornar"
+  ],
+  "desadunar": [
+    "desadunar"
   ],
   "desaerar": [
     "desaerar"
   ],
+  "desafaimar": [
+    "desafaimar"
+  ],
+  "desafamar": [
+    "desafamar"
+  ],
+  "desafastar": [
+    "desafastar"
+  ],
   "desafazer": [
     "desafazer"
   ],
+  "desafear": [
+    "desafear"
+  ],
+  "desafeiçoar": [
+    "desafeiçoar"
+  ],
+  "desafeitar": [
+    "desafeitar"
+  ],
+  "desaferrar": [
+    "desaferrar"
+  ],
+  "desaferroar": [
+    "desaferroar"
+  ],
   "desaferrolhoar": [
     "desaferrolhoar"
+  ],
+  "desafervorar": [
+    "desafervorar"
+  ],
+  "desafiar": [
+    "desafiar"
+  ],
+  "desafigurar": [
+    "desafigurar"
+  ],
+  "desafilhar": [
+    "desafilhar"
+  ],
+  "desafinar": [
+    "desafinar"
+  ],
+  "desafivelar": [
+    "desafivelar"
+  ],
+  "desafixar": [
+    "desafixar"
+  ],
+  "desafogar": [
+    "desafogar"
+  ],
+  "desafoguear": [
+    "desafoguear"
+  ],
+  "desaforar": [
+    "desaforar"
+  ],
+  "desafrancesar": [
+    "desafrancesar"
+  ],
+  "desafreguesar": [
+    "desafreguesar"
+  ],
+  "desafreimar": [
+    "desafreimar"
+  ],
+  "desafrontar": [
+    "desafrontar"
+  ],
+  "desafrouxar": [
+    "desafrouxar"
   ],
   "desafuar": [
     "desafuar"
@@ -17129,17 +17444,143 @@
   "desafueirar": [
     "desafueirar"
   ],
+  "desafundar": [
+    "desafundar"
+  ],
   "desafuscar": [
     "desafuscar"
+  ],
+  "desagaloar": [
+    "desagaloar"
   ],
   "desagalonar": [
     "desagalonar"
   ],
+  "desagarrar": [
+    "desagarrar"
+  ],
+  "desagasalhar": [
+    "desagasalhar"
+  ],
+  "desagastar": [
+    "desagastar"
+  ],
+  "desaglomerar": [
+    "desaglomerar"
+  ],
+  "desagoniar": [
+    "desagoniar"
+  ],
+  "desagradar": [
+    "desagradar"
+  ],
+  "desagradecer": [
+    "desagradecer"
+  ],
+  "desagravar": [
+    "desagravar"
+  ],
+  "desagregar": [
+    "desagregar"
+  ],
+  "desagrilhoar": [
+    "desagrilhoar"
+  ],
+  "desagrupar": [
+    "desagrupar"
+  ],
+  "desaguachar": [
+    "desaguachar"
+  ],
   "desaguar": [
     "desaguar"
   ],
+  "desaguaxar": [
+    "desaguaxar"
+  ],
+  "desaguisar": [
+    "desaguisar"
+  ],
   "desainar": [
     "desainar"
+  ],
+  "desajeitar": [
+    "desajeitar"
+  ],
+  "desajoujar": [
+    "desajoujar"
+  ],
+  "desajudar": [
+    "desajudar"
+  ],
+  "desajuizar": [
+    "desajuizar"
+  ],
+  "desajuntar": [
+    "desajuntar"
+  ],
+  "desajustar": [
+    "desajustar"
+  ],
+  "desalagar": [
+    "desalagar"
+  ],
+  "desalarmar": [
+    "desalarmar"
+  ],
+  "desalastrar": [
+    "desalastrar"
+  ],
+  "desalbardar": [
+    "desalbardar"
+  ],
+  "desalboroar": [
+    "desalboroar"
+  ],
+  "desalcançar": [
+    "desalcançar"
+  ],
+  "desalcoilar": [
+    "desalcoilar"
+  ],
+  "desalealdar": [
+    "desalealdar"
+  ],
+  "desalegrar": [
+    "desalegrar"
+  ],
+  "desaleitar": [
+    "desaleitar"
+  ],
+  "desalentar": [
+    "desalentar"
+  ],
+  "desalforjar": [
+    "desalforjar"
+  ],
+  "desalgemar": [
+    "desalgemar"
+  ],
+  "desalhear": [
+    "desalhear"
+  ],
+  "desaliar": [
+    "desaliar"
+  ],
+  "desalijar": [
+    "desalijar"
+  ],
+  "desalinhar": [
+    "desalinhar"
+  ],
+  "desalinhavar": [
+    "desalinhavar"
+  ],
+  "desalistar": [
+    "desalistar"
+  ],
+  "desaliviar": [
+    "desaliviar"
   ],
   "desalmar": [
     "desalmar"
@@ -17147,17 +17588,107 @@
   "desalogenar": [
     "desalogenar"
   ],
+  "desalojar": [
+    "desalojar"
+  ],
+  "desalquilar": [
+    "desalquilar"
+  ],
+  "desalterar": [
+    "desalterar"
+  ],
+  "desalugar": [
+    "desalugar"
+  ],
+  "desamachucar": [
+    "desamachucar"
+  ],
+  "desamagoar": [
+    "desamagoar"
+  ],
+  "desamalgamar": [
+    "desamalgamar"
+  ],
+  "desamamentar": [
+    "desamamentar"
+  ],
+  "desamanhar": [
+    "desamanhar"
+  ],
+  "desamantilhar": [
+    "desamantilhar"
+  ],
+  "desamar": [
+    "desamar"
+  ],
+  "desamarrar": [
+    "desamarrar"
+  ],
+  "desamarrotar": [
+    "desamarrotar"
+  ],
+  "desamassar": [
+    "desamassar"
+  ],
+  "desambientar": [
+    "desambientar"
+  ],
   "desambiguar": [
     "desambiguar"
   ],
   "desambiguizar": [
     "desambiguizar"
   ],
+  "desamigar": [
+    "desamigar"
+  ],
+  "desamimar": [
+    "desamimar"
+  ],
+  "desaminar": [
+    "desaminar"
+  ],
   "desaminizar": [
     "desaminizar"
   ],
+  "desamistar": [
+    "desamistar"
+  ],
+  "desamnistiar": [
+    "desamnistiar"
+  ],
+  "desamodorrar": [
+    "desamodorrar"
+  ],
+  "desamoedar": [
+    "desamoedar"
+  ],
   "desamoestar": [
     "desamoestar"
+  ],
+  "desamofinar": [
+    "desamofinar"
+  ],
+  "desamolgar": [
+    "desamolgar"
+  ],
+  "desamontoar": [
+    "desamontoar"
+  ],
+  "desamortalhar": [
+    "desamortalhar"
+  ],
+  "desamortizar": [
+    "desamortizar"
+  ],
+  "desamotinar": [
+    "desamotinar"
+  ],
+  "desamparar": [
+    "desamparar"
+  ],
+  "desamuar": [
+    "desamuar"
   ],
   "desamurizar": [
     "desamurizar"
@@ -17168,38 +17699,425 @@
   "desancar": [
     "desancar"
   ],
+  "desancorar": [
+    "desancorar"
+  ],
+  "desandar": [
+    "desandar"
+  ],
+  "desanelar": [
+    "desanelar"
+  ],
+  "desanexar": [
+    "desanexar"
+  ],
+  "desanichar": [
+    "desanichar"
+  ],
+  "desanilar": [
+    "desanilar"
+  ],
+  "desanimar": [
+    "desanimar"
+  ],
+  "desaninhar": [
+    "desaninhar"
+  ],
+  "desanistiar": [
+    "desanistiar"
+  ],
+  "desanojar": [
+    "desanojar"
+  ],
+  "desanuviar": [
+    "desanuviar"
+  ],
   "desapacientar": [
     "desapacientar"
+  ],
+  "desapadrinhar": [
+    "desapadrinhar"
+  ],
+  "desapagar": [
+    "desapagar"
+  ],
+  "desapaixonar": [
+    "desapaixonar"
+  ],
+  "desaparafusar": [
+    "desaparafusar"
+  ],
+  "desaparecer": [
+    "desaparecer"
+  ],
+  "desaparelhar": [
+    "desaparelhar"
+  ],
+  "desapartar": [
+    "desapartar"
+  ],
+  "desapavorar": [
+    "desapavorar"
+  ],
+  "desapaziguar": [
+    "desapaziguar"
+  ],
+  "desapear": [
+    "desapear"
+  ],
+  "desapeirar": [
+    "desapeirar"
+  ],
+  "desapensar": [
+    "desapensar"
+  ],
+  "desaperceber": [
+    "desaperceber"
+  ],
+  "desaperrar": [
+    "desaperrar"
+  ],
+  "desapertar": [
+    "desapertar"
+  ],
+  "desapiedar": [
+    "desapiedar"
+  ],
+  "desaplaudir": [
+    "desaplaudir"
+  ],
+  "desaplicar": [
+    "desaplicar"
+  ],
+  "desapoderar": [
+    "desapoderar"
+  ],
+  "desapoiar": [
+    "desapoiar"
+  ],
+  "desapolvilhar": [
+    "desapolvilhar"
+  ],
+  "desapontar": [
+    "desapontar"
+  ],
+  "desapoquentar": [
+    "desapoquentar"
   ],
   "desapor": [
     "desapor"
   ],
+  "desaportuguesar": [
+    "desaportuguesar"
+  ],
+  "desaposentar": [
+    "desaposentar"
+  ],
+  "desapossar": [
+    "desapossar"
+  ],
   "desaprazer": [
     "desaprazer"
   ],
-  "desar": [
-    "desar"
+  "desapreçar": [
+    "desapreçar"
+  ],
+  "desapreciar": [
+    "desapreciar"
+  ],
+  "desaprender": [
+    "desaprender"
+  ],
+  "desapresilhar": [
+    "desapresilhar"
+  ],
+  "desapressar": [
+    "desapressar"
+  ],
+  "desaprestar": [
+    "desaprestar"
+  ],
+  "desapropriar": [
+    "desapropriar"
+  ],
+  "desaprovar": [
+    "desaprovar"
+  ],
+  "desaproveitar": [
+    "desaproveitar"
+  ],
+  "desaproximar": [
+    "desaproximar"
+  ],
+  "desaprumar": [
+    "desaprumar"
+  ],
+  "desaquartelar": [
+    "desaquartelar"
+  ],
+  "desaquecer": [
+    "desaquecer"
+  ],
+  "desaquinhoar": [
+    "desaquinhoar"
+  ],
+  "desaranhar": [
+    "desaranhar"
+  ],
+  "desarar": [
+    "desarar"
+  ],
+  "desarborizar": [
+    "desarborizar"
+  ],
+  "desarcar": [
+    "desarcar"
+  ],
+  "desarear": [
+    "desarear"
   ],
   "desarestar": [
     "desarestar"
   ],
-  "desargentizar": [
-    "desargentizar"
-  ],
   "desaristar": [
     "desaristar"
+  ],
+  "desarmar": [
+    "desarmar"
   ],
   "desarmonizar": [
     "desarmonizar"
   ],
+  "desarquear": [
+    "desarquear"
+  ],
+  "desarquitetar": [
+    "desarquitetar"
+  ],
+  "desarquivar": [
+    "desarquivar"
+  ],
+  "desarraigar": [
+    "desarraigar"
+  ],
+  "desarrancar": [
+    "desarrancar"
+  ],
+  "desarranchar": [
+    "desarranchar"
+  ],
+  "desarranjar": [
+    "desarranjar"
+  ],
+  "desarrazoar": [
+    "desarrazoar"
+  ],
+  "desarrear": [
+    "desarrear"
+  ],
+  "desarrebitar": [
+    "desarrebitar"
+  ],
+  "desarredar": [
+    "desarredar"
+  ],
+  "desarredondar": [
+    "desarredondar"
+  ],
+  "desarregaçar": [
+    "desarregaçar"
+  ],
+  "desarreigar": [
+    "desarreigar"
+  ],
   "desarremediar": [
     "desarremediar"
+  ],
+  "desarrestar": [
+    "desarrestar"
+  ],
+  "desarrimar": [
+    "desarrimar"
+  ],
+  "desarriscar": [
+    "desarriscar"
+  ],
+  "desarrochar": [
+    "desarrochar"
+  ],
+  "desarrolhar": [
+    "desarrolhar"
+  ],
+  "desarruar": [
+    "desarruar"
+  ],
+  "desarrufar": [
+    "desarrufar"
+  ],
+  "desarrugar": [
+    "desarrugar"
+  ],
+  "desarrumar": [
+    "desarrumar"
+  ],
+  "desarticular": [
+    "desarticular"
+  ],
+  "desartilhar": [
+    "desartilhar"
+  ],
+  "desarvorar": [
+    "desarvorar"
+  ],
+  "desasar": [
+    "desasar"
+  ],
+  "desasir": [
+    "desasir"
+  ],
+  "desasnar": [
+    "desasnar"
+  ],
+  "desassanhar": [
+    "desassanhar"
+  ],
+  "desassear": [
+    "desassear"
+  ],
+  "desasselar": [
+    "desasselar"
+  ],
+  "desasselvajar": [
+    "desasselvajar"
+  ],
+  "desassemelhar": [
+    "desassemelhar"
+  ],
+  "desassenhorear": [
+    "desassenhorear"
+  ],
+  "desassestar": [
+    "desassestar"
+  ],
+  "desassimilar": [
+    "desassimilar"
+  ],
+  "desassisar": [
+    "desassisar"
+  ],
+  "desassistir": [
+    "desassistir"
+  ],
+  "desassociar": [
+    "desassociar"
   ],
   "desassolvar": [
     "desassolvar"
   ],
-  "desastrar": [
-    "desastrar"
+  "desassomar": [
+    "desassomar"
+  ],
+  "desassombrar": [
+    "desassombrar"
+  ],
+  "desassorear": [
+    "desassorear"
+  ],
+  "desassossegar": [
+    "desassossegar"
+  ],
+  "desassustar": [
+    "desassustar"
+  ],
+  "desatabafar": [
+    "desatabafar"
+  ],
+  "desatacar": [
+    "desatacar"
+  ],
+  "desatafulhar": [
+    "desatafulhar"
+  ],
+  "desatapetar": [
+    "desatapetar"
+  ],
+  "desatapulhar": [
+    "desatapulhar"
+  ],
+  "desatar": [
+    "desatar"
+  ],
+  "desatarraxar": [
+    "desatarraxar"
+  ],
+  "desatascar": [
+    "desatascar"
+  ],
+  "desataviar": [
+    "desataviar"
+  ],
+  "desatediar": [
+    "desatediar"
+  ],
+  "desatemorizar": [
+    "desatemorizar"
+  ],
+  "desatender": [
+    "desatender"
+  ],
+  "desaterrar": [
+    "desaterrar"
+  ],
+  "desatestar": [
+    "desatestar"
+  ],
+  "desatilhar": [
+    "desatilhar"
+  ],
+  "desatinar": [
+    "desatinar"
+  ],
+  "desativar": [
+    "desativar"
+  ],
+  "desatolar": [
+    "desatolar"
+  ],
+  "desatordoar": [
+    "desatordoar"
+  ],
+  "desatracar": [
+    "desatracar"
+  ],
+  "desatrancar": [
+    "desatrancar"
+  ],
+  "desatravancar": [
+    "desatravancar"
+  ],
+  "desatravessar": [
+    "desatravessar"
+  ],
+  "desatrelar": [
+    "desatrelar"
+  ],
+  "desatremar": [
+    "desatremar"
+  ],
+  "desatribular": [
+    "desatribular"
+  ],
+  "desatualizar": [
+    "desatualizar"
+  ],
+  "desatupir": [
+    "desatupir"
+  ],
+  "desaturdir": [
+    "desaturdir"
+  ],
+  "desaurir": [
+    "desaurir"
   ],
   "desautorar": [
     "desautorar"
