@@ -4,7 +4,7 @@ import { nw } from '../src/lib/normalizeVerb';
 
 function createAfixosJson() {
 
-  const caminhoTxt = path.join(process.cwd(), 'public', 'afixos.txt');
+  const caminhoTxt = path.join(process.cwd(), 'lists', 'afixos.txt');
   const caminhoJson = path.join(process.cwd(), 'src', 'json', 'afixos.json');
 
   try {

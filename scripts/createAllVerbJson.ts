@@ -2,16 +2,16 @@ import fs from 'fs';
 import path from 'path';
 import pullLibreOfficeWords from './pullLibreOfficeWords';
 import readTxtLines from './readTxtLines';
-import addNewVerbs from './addNewVerbs';
 import { ni } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
+import addNewVerbs from './addNewVerbs';
 
 const srcDir = path.join(process.cwd(), 'src');
-const publicDir = path.join(process.cwd(), 'public');
+const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
 
 async function processVerbsFile(): Promise<void> {
 
-  const filePath = path.join(publicDir, 'pt_BR.txt');
+  const filePath = path.join(libreOfficeSourceDir, 'pt_BR.txt');
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
   
   try {
