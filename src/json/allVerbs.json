@@ -25604,9 +25604,6 @@
   "encabular": [
     "encabular"
   ],
-  "encabulhar": [
-    "encabulhar"
-  ],
   "encaçapar": [
     "encaçapar"
   ],
@@ -25657,6 +25654,9 @@
   ],
   "encaieirar": [
     "encaieirar"
+  ],
+  "encaipirar": [
+    "encaipirar"
   ],
   "encaiporar": [
     "encaiporar"
@@ -25838,9 +25838,6 @@
   "encandear": [
     "encandear"
   ],
-  "encandecer": [
-    "encandecer"
-  ],
   "encandilar": [
     "encandilar"
   ],
@@ -25876,9 +25873,6 @@
   ],
   "encanitar": [
     "encanitar"
-  ],
-  "encanizar": [
-    "encanizar"
   ],
   "encanoar": [
     "encanoar"
@@ -26096,9 +26090,6 @@
   "encartazar": [
     "encartazar"
   ],
-  "encarteirar": [
-    "encarteirar"
-  ],
   "encartolar": [
     "encartolar"
   ],
@@ -26222,9 +26213,6 @@
   "encedrar": [
     "encedrar"
   ],
-  "encefalomedular": [
-    "encefalomedular"
-  ],
   "enceguecer": [
     "enceguecer"
   ],
@@ -26332,9 +26320,6 @@
   ],
   "encher": [
     "encher"
-  ],
-  "enchevelar": [
-    "enchevelar"
   ],
   "enchiçarar": [
     "enchiçarar"
@@ -26464,6 +26449,9 @@
   ],
   "encodear": [
     "encodear"
+  ],
+  "encodizar": [
+    "encodizar"
   ],
   "encodoar": [
     "encodoar"
@@ -26744,9 +26732,6 @@
   "encristinar": [
     "encristinar"
   ],
-  "encrocar": [
-    "encrocar"
-  ],
   "encrostar": [
     "encrostar"
   ],
@@ -26876,38 +26861,14 @@
   "endividar": [
     "endividar"
   ],
-  "endobacilar": [
-    "endobacilar"
-  ],
-  "endocardiografar": [
-    "endocardiografar"
-  ],
-  "endocelular": [
-    "endocelular"
-  ],
-  "endocitar": [
-    "endocitar"
-  ],
-  "endocitular": [
-    "endocitular"
-  ],
-  "endocorpuscular": [
-    "endocorpuscular"
-  ],
   "endocruzar": [
     "endocruzar"
-  ],
-  "endoglobular": [
-    "endoglobular"
   ],
   "endoidar": [
     "endoidar"
   ],
   "endoidecer": [
     "endoidecer"
-  ],
-  "endolacunar": [
-    "endolacunar"
   ],
   "endolorecer": [
     "endolorecer"
@@ -26917,9 +26878,6 @@
   ],
   "endondecer": [
     "endondecer"
-  ],
-  "endonuclear": [
-    "endonuclear"
   ],
   "endorsar": [
     "endorsar"
@@ -26935,9 +26893,6 @@
   ],
   "endoutrinar": [
     "endoutrinar"
-  ],
-  "endovascular": [
-    "endovascular"
   ],
   "endragar": [
     "endragar"
@@ -27044,9 +26999,6 @@
   "enfartar": [
     "enfartar"
   ],
-  "enfasar": [
-    "enfasar"
-  ],
   "enfascalar": [
     "enfascalar"
   ],
@@ -27076,9 +27028,6 @@
   ],
   "enfedilhar": [
     "enfedilhar"
-  ],
-  "enfeiar": [
-    "enfeiar"
   ],
   "enfeirar": [
     "enfeirar"
@@ -27536,14 +27485,8 @@
   "engarguelar": [
     "engarguelar"
   ],
-  "engarnachar": [
-    "engarnachar"
-  ],
   "engarrafar": [
     "engarrafar"
-  ],
-  "engarrafonar": [
-    "engarrafonar"
   ],
   "engarrar": [
     "engarrar"
@@ -27635,14 +27578,17 @@
   "englobular": [
     "englobular"
   ],
-  "engobar": [
-    "engobar"
-  ],
   "engodar": [
     "engodar"
   ],
   "engodilhar": [
     "engodilhar"
+  ],
+  "engofar": [
+    "engofar"
+  ],
+  "engogar": [
+    "engogar"
   ],
   "engoiar": [
     "engoiar"
@@ -27659,14 +27605,17 @@
   "engomar": [
     "engomar"
   ],
+  "engonar": [
+    "engonar"
+  ],
   "engonçar": [
     "engonçar"
   ],
+  "engonear": [
+    "engonear"
+  ],
   "engonhar": [
     "engonhar"
-  ],
-  "engoniar": [
-    "engoniar"
   ],
   "engordar": [
     "engordar"
@@ -27677,8 +27626,17 @@
   "engorgitar": [
     "engorgitar"
   ],
+  "engorolar": [
+    "engorolar"
+  ],
+  "engorovinhar": [
+    "engorovinhar"
+  ],
   "engorrar": [
     "engorrar"
+  ],
+  "engorvinhar": [
+    "engorvinhar"
   ],
   "engraçar": [
     "engraçar"
@@ -27694,6 +27652,9 @@
   ],
   "engraecer": [
     "engraecer"
+  ],
+  "engralhar": [
+    "engralhar"
   ],
   "engrambelar": [
     "engrambelar"
@@ -27712,6 +27673,12 @@
   ],
   "engravatar": [
     "engravatar"
+  ],
+  "engravatizar": [
+    "engravatizar"
+  ],
+  "engravecer": [
+    "engravecer"
   ],
   "engravescer": [
     "engravescer"
@@ -27733,6 +27700,9 @@
   ],
   "engrazular": [
     "engrazular"
+  ],
+  "engrecer": [
+    "engrecer"
   ],
   "engrelar": [
     "engrelar"
@@ -27767,14 +27737,14 @@
   "engripar": [
     "engripar"
   ],
-  "engriquilhar": [
-    "engriquilhar"
-  ],
   "engrolar": [
     "engrolar"
   ],
   "engrossar": [
     "engrossar"
+  ],
+  "engrujar": [
+    "engrujar"
   ],
   "engrumar": [
     "engrumar"
