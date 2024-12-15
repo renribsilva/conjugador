@@ -163,7 +163,7 @@ export const flowOfReact = () => {
 
       }));
 
-      if (normalizedInputValue === "" || normalizedInputValue.match(/^\s+$/)) {
+      if (normalizedInputValue.trim() === "") {
 
         setState(prev => ({
           ...prev,
