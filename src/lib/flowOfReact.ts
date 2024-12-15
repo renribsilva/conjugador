@@ -115,16 +115,6 @@ export const flowOfReact = () => {
       const suggestions = getSimilarVerbs(state.inputValue);
       (event.target as HTMLInputElement).blur();
 
-      if (normalizedInputValue.trim() === "") {
-
-        setState(prev => ({
-          ...prev,
-        }));
-
-        return
-
-      }
-
       setState(prev => ({
         ...prev,
         conjugations: null,
@@ -172,6 +162,17 @@ export const flowOfReact = () => {
         varOriginalInput: null,
 
       }));
+
+      if (normalizedInputValue.trim() === "") {
+
+        setState(prev => ({
+          ...prev,
+          showHome:true
+        }));
+
+        return
+
+      }
 
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
       const originalVerb = apiResponse.originalVerb;
