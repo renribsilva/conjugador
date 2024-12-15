@@ -190,7 +190,7 @@ const Index = () => {
                 className={styles.button_title}
                 onClick={handleHome}
               >
-                conjugador-gules
+                conjugador-pt-br
               </button>
             </div>
             <div className={styles.button_inf}>
