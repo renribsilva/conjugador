@@ -167,7 +167,8 @@ export const flowOfReact = () => {
 
         setState(prev => ({
           ...prev,
-          showHome:true
+          showHome: true,
+          loading: false
         }));
 
         return
