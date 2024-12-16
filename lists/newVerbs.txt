@@ -2621,6 +2621,9 @@ escarar
 escucir
 esperancear
 estabacar
+estalinizar
+estartar
+estricar
 
 extrapor
 
