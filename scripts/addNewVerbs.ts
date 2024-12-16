@@ -5,7 +5,9 @@ import { nw } from '../src/lib/normalizeVerb';
 const listsDir = path.join(process.cwd(), 'lists');
 
 export default async function addNewVerbs(words: string[]): Promise<string[]> {
+  
   try {
+
     const newWordPath = path.join(listsDir, 'newVerbs.txt');
     const newWords = await readTxtLines(newWordPath);
     const normNewWords = newWords.map(verb => nw(verb)).filter(verb => verb !== '');

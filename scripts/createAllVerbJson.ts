@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import pullLibreOfficeWords from './pullLibreOfficeWords';
 import readTxtLines from './readTxtLines';
-import { ni } from '../src/lib/normalizeVerb';
+import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 import addNewVerbs from './addNewVerbs';
 
@@ -15,6 +15,7 @@ async function processVerbsFile(): Promise<void> {
   const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
   
   try {
+
     if (!fs.existsSync(filePath)) {
       console.log('Arquivo não encontrado. Baixando...');
       await pullLibreOfficeWords('https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic', filePath);
@@ -35,7 +36,7 @@ async function processVerbsFile(): Promise<void> {
     );
 
     let allVerbs = Array.from(allVerbsSet);
-
+    
     allVerbs = await filterNonVerbs(allVerbs, 'nonVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonCompoundVerb.txt');
     allVerbs = await filterNonVerbs(allVerbs, 'nonDiacriticVerb.txt');
@@ -55,7 +56,7 @@ async function processVerbsFile(): Promise<void> {
       console.log('Nenhum verbo duplicado encontrado.');
     }
 
-    const normalizedVerbs = allVerbs.map(verb => String(ni(verb)).toLowerCase());
+    const normalizedVerbs = allVerbs.map(verb => String(nw(verb)));
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs.map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)]);
 

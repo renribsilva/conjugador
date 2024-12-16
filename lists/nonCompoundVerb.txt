@@ -221,7 +221,6 @@ extra-articular
 extra-axilar
 extra-hospitalar
 
-fac-similar
 fava-de-calabar
 fava-do-calabar
 favária-vulgar
