@@ -55,7 +55,7 @@
   font-size: 18px;
   color: var(--foreground);
   outline: none; 
-  box-shadow: var(--largeshadow);
+  background-color: var(--button);
   width: 300px;
   z-index: 999;
 }
