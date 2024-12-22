@@ -190,7 +190,7 @@ const Index = () => {
                 className={styles.button_title}
                 onClick={handleHome}
               >
-                conjugador-pt-br
+                conjugador-gules
               </button>
             </div>
             <div className={styles.button_inf}>
@@ -198,7 +198,7 @@ const Index = () => {
                 <button onClick={handleHome} className={styles.button_nav}>início</button>
               </div>
               <div>
-                <button onClick={handleStatistic} className={styles.button_nav}>estatística</button>
+                <button onClick={handleStatistic} className={styles.button_nav}>dados</button>
               </div>
               <div>
                 <button onClick={handleSobre} className={styles.button_nav}>sobre</button>
@@ -220,7 +220,6 @@ const Index = () => {
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
-                  <p><strong>Aviso importante:</strong> a base de verbos deste conjugador ainda está sendo trabalhada.</p>
                   <Home />
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>

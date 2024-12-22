@@ -15,7 +15,8 @@ export default async function addNewVerbs(words: string[]): Promise<string[]> {
     const filteredNewWords = normNewWords.filter(verb => !existingWordsSet.has(verb));
     const notAddedWords = normNewWords.filter(verb => existingWordsSet.has(verb));
 
-    console.log('Verbos que NÃO serão adicionados:', notAddedWords);
+    console.log('- verbos que NÃO serão adicionados:', notAddedWords);
+    console.log(`- quantidade de novos verbos a serem adicionados: ${newWords.filter(Boolean).length}`);
 
     return [...words, ...filteredNewWords];
     

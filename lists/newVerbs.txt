@@ -410,7 +410,6 @@ alonginquar
 alotar
 alourar
 alousar
-altinar
 altruizar
 alustrar
 alutar
@@ -2919,7 +2918,6 @@ propender
 propinar
 propugnar
 propulsar
-prossupor
 protelar
 protender
 protocolar

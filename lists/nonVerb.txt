@@ -147,7 +147,6 @@ altair
 altamir
 altar
 alter
-altinar
 altivir
 aluguer
 aluvionar
