@@ -82,6 +82,7 @@ async function processVerbsFile(): Promise<void> {
     const updatedWords = await addNewVerbs(cleanedWords);
     
     console.log(`- quantidade de verbos efetivamente acrescidos: ${updatedWords.length-cleanedWords.length}`);
+    console.log(`- nova quantidade de vocábulos após complementação: ${updatedWords.length}`);
     console.log("Fitrando os vacábulos terminados em 'ar', 'er', 'ir' e 'por'...");
 
     const exceptions = new Set(["dar", "ir", "ler", "pôr", "rer", "rir", "ser", "ter", "ver", "vir"]);
