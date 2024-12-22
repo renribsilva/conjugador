@@ -153,7 +153,7 @@
 .panel {
   /* background-color: rgb(180, 206, 197); */
   width:800px;
-  min-height: 300px;
+  min-height: 280px;
   padding: 20px;
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
