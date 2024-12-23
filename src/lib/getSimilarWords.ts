@@ -1,11 +1,8 @@
 import jsonData from "../json/allVerbs.json";
+import { AllVerbsEntry } from "../types";
 import { ni } from "./normalizeVerb";
 
-type VerbsData = {
-  [key: string]: string[];
-};
-
-const data: VerbsData = jsonData;
+const data: AllVerbsEntry = jsonData;
 
 function levenshtein(a: string, b: string): number {
   const tmp: number[][] = [];
@@ -43,12 +40,13 @@ function combinedSimilarity(a: string, b: string): number {
 export default function getSimilarVerbs(verb: string): string[] {
   const similarVerbs: { key: string; score: number }[] = [];
 
-  for (const values of Object.values(data)) {
-    for (const value of values) {
+  for (const [key, values] of Object.entries(data)) {
+    // Iterar sobre cada array dentro de values (verb, model, ending, prefix)
+    for (const value of values.verb) {
       if (value !== verb) {
-        const similarityScore = combinedSimilarity(ni(verb), (ni(value)));
+        const similarityScore = combinedSimilarity(ni(verb), ni(value));
         if (similarityScore > 0.5) {
-          similarVerbs.push({ key: value, score: similarityScore });
+          similarVerbs.push({ key, score: similarityScore });
         }
       }
     }
@@ -60,6 +58,6 @@ export default function getSimilarVerbs(verb: string): string[] {
     .map(({ key }) => key);
 }
 
-// const word = "siber";
-// const result = getSimilarVerbs(word);
-// console.log(result);
+const word = "caber";
+const result = getSimilarVerbs(word);
+console.log(result);

@@ -38,3 +38,14 @@ export type InputTypes = {
   E: (e: React.KeyboardEvent) => void;
   children?: React.ReactNode; 
 }
+
+export type VerbEntry = {
+  verb: string[];
+  model: (string | number)[];
+  ending: string[];
+  prefix: string[];
+};
+
+export type AllVerbsEntry = {
+  [key: string]: VerbEntry
+}

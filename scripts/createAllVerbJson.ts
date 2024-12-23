@@ -4,6 +4,7 @@ import pullLibreOfficeWords from './pullLibreOfficeWords';
 import readTxtLines from './readTxtLines';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
+import { VerbEntry } from '../src/types';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -134,14 +135,57 @@ async function processVerbsFile(): Promise<void> {
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs.map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)]);
 
-    const J = finalVerbs.reduce((acc, verb) => {
-      const normalized = String(ni(verb));
-      acc[normalized] = acc[normalized] || [];
-      acc[normalized].push(verb);
-      return acc;
-    }, {} as Record<string, string[]>);
+    let currentVerbs: Record<string, VerbEntry> = {};
 
-    await fs.promises.writeFile(outputFilePath, JSON.stringify(J, null, 2));
+    if (fs.existsSync(outputFilePath)) {
+      const rawData = await fs.promises.readFile(outputFilePath, 'utf8');
+      currentVerbs = JSON.parse(rawData);
+    }
+
+    // console.log(currentVerbs)
+    console.log("Aplicando as alterações em allVerbs.json...")
+
+    const J = finalVerbs.reduce((acc, verb) => {
+      const normalized = ni(verb);
+    
+      if (!acc[normalized]) {
+        acc[normalized] = { verb: [], model: [], ending: [], prefix: [] };
+      }
+      if (!acc[normalized].verb.includes(verb)) {
+        acc[normalized].verb.push(verb);
+      }
+      return acc;
+    }, { ...currentVerbs });
+    
+    const removedVerbs = Object.keys(currentVerbs).filter(
+      normalized => !finalVerbs.some(verb => ni(verb) === normalized)
+    );
+    
+    removedVerbs.forEach(normalized => {
+      delete J[normalized];
+    });
+    
+    // Object.keys(J).forEach(normalized => {
+    //   if (!J[normalized].ending) {
+    //     J[normalized].ending = [];
+    //   }
+    //   if (!J[normalized].prefix) {
+    //     J[normalized].prefix = [];
+    //   }
+    // });
+    
+    const sortedJ = Object.keys(J)
+      .sort()
+      .reduce((acc, key) => {
+        acc[key] = J[key];
+        return acc;
+      }, {});
+    
+    await fs.promises.writeFile(
+      outputFilePath,
+      JSON.stringify(sortedJ, null, 2)
+        .replace(/\[\n\s+("(.*?)"|\d+)\n\s+\]/g, '[$1]')
+    );
 
     console.log(`Atualizando a quantidade de verbos...`);
     console.log(`- quantidade final de verbos: ${finalVerbs.length}`);
