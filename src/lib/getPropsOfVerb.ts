@@ -141,5 +141,5 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 }
 
-// const test = getPropsOfVerb("sobrexceler", true, "sobresceler")
+// const test = getPropsOfVerb("abduzir", true, "abduzir")
 // console.log(test)

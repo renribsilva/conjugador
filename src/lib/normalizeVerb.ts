@@ -1,5 +1,9 @@
 export function ni(input: string): string {
   
+  if (input == null) {
+    return '';
+  }
+  
   const normalizedInput = input.normalize("NFD");
 
   if (typeof normalizedInput !== 'string') {
@@ -24,16 +28,20 @@ export function ni(input: string): string {
 
 export const nw = (word: string | any): string => {
   
+  if (word == null) {
+    return '';
+  }
+
   if (typeof word !== 'string') {
     console.error('Erro: nw failed -> word não é uma string:', word);
     return '';
   }
 
   return word
-    .toLowerCase()
-    .replace(/\s+/g, '')
-    .trim()
-    .normalize('NFC');
+    .toLowerCase()           // Converte para minúsculas
+    .replace(/\s+/g, '')      // Remove espaços em branco extras
+    .trim()                   // Remove espaços no início e no final
+    .normalize('NFC');        // Normaliza para NFC
 };
 
 // console.log(ni("pôr"));      

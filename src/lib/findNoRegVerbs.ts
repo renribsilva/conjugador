@@ -12,6 +12,7 @@ function getVerbKeys(verb: string, terminations: string[]): any {
 
   const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
   const rules = termination ? irregularidades[termination] : null;
+  // console.log(rules)
 
   if (rules) {
     const normalizedRules = Object.keys(rules).reduce((acc, key) => {
@@ -61,7 +62,7 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
-  // console.log(termination)
+  // console.log(termEntries, termination)
   
   if (!termEntries) {
     return getDefaultResponse();
@@ -196,4 +197,4 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 }
 
 const res = findNoRegRule('amar', 'p1','pr_ind',"VT")
-console.log(res)
+// console.log(res)

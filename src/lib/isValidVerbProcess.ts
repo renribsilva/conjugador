@@ -28,25 +28,23 @@ export async function processVerb (verb: string) {
 
   const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
   const originalVerb = findOriginalVerb(normalizedJsonObject, cleanedVerb);
-  const variations = findVariations(cleanedVerb)
+  const variations = findVariations(cleanedVerb);
 
   if (originalVerb && originalVerb in normalizedJsonObject) {
-  
+
     const similarWords = findSimilarWords(normalizedJsonObject, cleanedVerb);
     const originalValue = jsonObject[originalVerb];
-    const findedWord = originalValue[0];
-
+    const findedWord = originalValue.verb[0];
+    
     return {
-
       originalVerb: {
         result: true,
         findedWord,
         similar: similarWords.length > 0 ? [originalVerb, ...similarWords] : null,
-        punct,
-        variations: variations
+        punct,  
+        variations
       },
-      variationVerb: null
-
+      variationVerb: null 
     };
   }
   
@@ -54,11 +52,9 @@ export async function processVerb (verb: string) {
     
     const similarWords = findSimilarWords(normalizedJsonObject, variations.processedInput);
     const originalValue = jsonObject[variations.processedInput];
-    const findedWord = originalValue[0];
-    // console.log(findedWord)
-
+    const findedWord = originalValue.verb[0];
+  
     return {
-
       originalVerb: null,
       variationVerb: {
         result: true,
@@ -68,15 +64,11 @@ export async function processVerb (verb: string) {
         variations
       },
     };
-
+  
   } else {
-    
     return {
-
       originalVerb: null,
       variationVerb: null,
-
     };
-
-  }
+  }  
 }

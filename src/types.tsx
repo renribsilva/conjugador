@@ -43,7 +43,6 @@ export type VerbEntry = {
   verb: string[];
   model: (string | number)[];
   ending: string[];
-  prefix: string[];
 };
 
 export type AllVerbsEntry = {
