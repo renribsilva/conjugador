@@ -186,12 +186,19 @@ async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    const removedVerbs = Object.keys(currentVerbs).filter(
-      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    );
+    // const removedVerbs = Object.keys(currentVerbs).filter(
+    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    // );
 
-    removedVerbs.forEach((normalized) => {
-      delete J[normalized];
+    // removedVerbs.forEach((normalized) => {
+    //   delete J[normalized];
+    // });
+
+    // Inserir novas propriedades
+    Object.keys(J).forEach(normalized => {
+      if (!J[normalized].pronominal) {
+        J[normalized].pronominal = [false];
+      }
     });
 
     const sortedJ = Object.keys(J)
