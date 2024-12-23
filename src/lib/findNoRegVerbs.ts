@@ -4,7 +4,7 @@ import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';
 
 const terminations = Object.keys(irregularidades);
-console.log(terminations)
+// console.log(terminations)
 
 function getVerbKeys(verb: string, terminations: string[]): any {
 
@@ -195,5 +195,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('bem-dizer', 'p1','pr_ind',"VT")
-// console.log(res)
+const res = findNoRegRule('amar', 'p1','pr_ind',"VT")
+console.log(res)

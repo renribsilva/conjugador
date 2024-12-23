@@ -6,6 +6,7 @@ import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 import { VerbEntry } from '../src/types';
 import irregularidades from '../src/json/rulesByTerm.json';
+import { processVerb } from '../src/lib/isValidVerbProcess';
 
 const terminations = Object.keys(irregularidades);
 // console.log(terminations)
@@ -149,33 +150,65 @@ async function processVerbsFile(): Promise<void> {
     // console.log(currentVerbs)
     console.log("Aplicando as alterações em allVerbs.json...")
 
-    const J = finalVerbs.reduce((acc, verb) => {
-      const normalized = ni(verb);
+    const processVerbsAsync = async (finalVerbs: string[], currentVerbs: object) => {
+      const acc = { ...currentVerbs };
     
-      if (!acc[normalized]) {
-        acc[normalized] = { verb: [], model: [], ending: [], prefix: [] };
-      }
-      if (!acc[normalized].verb.includes(verb)) {
-        acc[normalized].verb.push(verb);
-      }
+      // Defina o tamanho do lote de verbos a serem processados simultaneamente
+      const BATCH_SIZE = 10; // Tamanho do lote, pode ser ajustado conforme necessário
+    
+      // Função auxiliar para processar os verbos em lotes
+      const processBatch = async (batch: string[]) => {
+        const batchPromises = batch.map(async (verb) => {
+          const normalized = ni(verb);
+    
+          if (!acc[normalized]) {
+            acc[normalized] = { verb: [], model: [], ending: [], prefix: [] };
+          }
+    
+          if (!acc[normalized].verb.includes(verb)) {
+            acc[normalized].verb.push(verb);
+          }
+    
+          const matchedTerminations = terminations.filter(termination => verb.endsWith(termination));
+          if (matchedTerminations.length > 0 && acc[normalized].ending.length === 0) {
+            const longestTermination = matchedTerminations.sort((a, b) => b.length - a.length)[0];
+            acc[normalized].ending = [longestTermination];
+          }
 
-      const matchedTerminations = terminations.filter(termination => verb.endsWith(termination));
-      if (matchedTerminations.length > 0) {
-        const longestTermination = matchedTerminations.sort((a, b) => b.length - a.length)[0];
-        acc[normalized].ending = [longestTermination];
+          const result = await processVerb(verb);
+          const originalVerb = result.originalVerb;
+          if (originalVerb && originalVerb.variations && originalVerb.variations.matchingAfixo) {
+            if (acc[normalized].prefix.length === 0) {
+              acc[normalized].prefix.push(originalVerb.variations.matchingAfixo);
+            }
+          }
+        });
+    
+        await Promise.all(batchPromises); // Processa o lote simultaneamente
+      };
+    
+      // Dividir os verbos em lotes e processar cada lote
+      for (let i = 0; i < finalVerbs.length; i += BATCH_SIZE) {
+        const batch = finalVerbs.slice(i, i + BATCH_SIZE);
+        await processBatch(batch); // Processa o lote de verbos
       }
-
+    
       return acc;
-    }, { ...currentVerbs });
+    };
     
+    // Chama a função assíncrona e aguarda o resultado
+    const J = await processVerbsAsync(finalVerbs, currentVerbs);
+    
+    // Remover verbos que não estão mais presentes
     const removedVerbs = Object.keys(currentVerbs).filter(
-      normalized => !finalVerbs.some(verb => ni(verb) === normalized)
+      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
     );
     
-    removedVerbs.forEach(normalized => {
+    removedVerbs.forEach((normalized) => {
       delete J[normalized];
     });
     
+    // Garantir que "ending" e "prefix" existam
     // Object.keys(J).forEach(normalized => {
     //   if (!J[normalized].ending) {
     //     J[normalized].ending = [];
@@ -185,6 +218,7 @@ async function processVerbsFile(): Promise<void> {
     //   }
     // });
     
+    // Ordenação dos resultados
     const sortedJ = Object.keys(J)
       .sort()
       .reduce((acc, key) => {
@@ -192,10 +226,10 @@ async function processVerbsFile(): Promise<void> {
         return acc;
       }, {});
     
+    // Escreve os dados ordenados no arquivo
     await fs.promises.writeFile(
       outputFilePath,
-      JSON.stringify(sortedJ, null, 2)
-        .replace(/\[\n\s+("(.*?)"|\d+)\n\s+\]/g, '[$1]')
+      JSON.stringify(sortedJ, null, 2).replace(/\[\n\s+("(.*?)"|\d+)\n\s+\]/g, '[$1]')
     );
 
     console.log(`Atualizando a quantidade de verbos...`);

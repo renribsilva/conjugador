@@ -107,22 +107,47 @@ export default function findVariations(input: string): ValidPrefixResult {
         return result;
       }
 
-      if (/^([rs])\1/.test(restOfVerb)) {
+      let restOfVerbTest
+
+      if (/^([rs])\1/.test(restOfVerb)) { //ressaber
         conector = restOfVerb[0];
-        restOfVerb = restOfVerb.slice(1);
+        restOfVerbTest = restOfVerb.slice(1);
+        if (allVerbsSet.has(restOfVerbTest)) {
+          restOfVerb = restOfVerbTest
+        }
+        // console.log(1)
       } else if (/^n[cdfghjklmnqrstvwxyz]/.test(restOfVerb)) { //manter
         conector = 'n';
-        restOfVerb = restOfVerb.slice(1);
+        restOfVerbTest = restOfVerb.slice(1);
+        if (allVerbsSet.has(restOfVerbTest)) {
+          restOfVerb = restOfVerbTest
+        }
+        // console.log(2)
       } else if (/^m[pb]/.test(restOfVerb)) { //comprazer
         conector = 'm';
-        restOfVerb = restOfVerb.slice(1);
+        restOfVerbTest = restOfVerb.slice(1);
+        if (allVerbsSet.has(restOfVerbTest)) {
+          restOfVerb = restOfVerbTest
+        }
+        // console.log(3)
       } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) { //enxaguar
         conector = 'x';
-        restOfVerb = restOfVerb.slice(1);
+        restOfVerbTest = restOfVerb.slice(1);
+        if (allVerbsSet.has(restOfVerbTest)) {
+          restOfVerb = restOfVerbTest
+        }
+        // console.log(4)
       } else if (/[aeiou]$/.test(matchingAfixo) && /^[bcdfghjklmnpqrstvwxyz]/.test(restOfVerb)) { //sobrexceler
         const vogalFinal = matchingAfixo.slice(-1); 
-        restOfVerb = vogalFinal + restOfVerb; 
+        restOfVerbTest = vogalFinal + restOfVerb; 
+        if (allVerbsSet.has(restOfVerbTest) && restOfVerbTest !== verb) {
+          restOfVerb = restOfVerbTest
+        }
+        // console.log(5)
+        // console.log(restOfVerbTest)
       }
+
+      // console.log(restOfVerb)
 
       if (allVerbsSet.has(restOfVerb)) {
         const result = {
@@ -133,7 +158,7 @@ export default function findVariations(input: string): ValidPrefixResult {
           prefixFounded: true,
           matchingAfixo,
           conector,
-          status: "3: PREFIX = YES, FORCED = NO",
+          status: "5: PREFIX = YES, FORCED = NO",
         };
         cache.set(input, result);
         return result;
@@ -150,7 +175,7 @@ export default function findVariations(input: string): ValidPrefixResult {
           prefixFounded: true,
           matchingAfixo,
           conector,
-          status: "4: PREFIX = YES, FORCED = YES",
+          status: "6: PREFIX = YES, FORCED = YES",
         };
         cache.set(input, result);
         return result;
@@ -167,7 +192,7 @@ export default function findVariations(input: string): ValidPrefixResult {
       prefixFounded: false,
       matchingAfixo: null,
       conector: null,
-      status: "5: PREFIX = NO, FORCED = NO",
+      status: "7: PREFIX = NO, FORCED = NO",
     };
     cache.set(input, result);
     return result;
@@ -183,7 +208,7 @@ export default function findVariations(input: string): ValidPrefixResult {
       prefixFounded: false,
       matchingAfixo: null,
       conector: null,
-      status: "6: PREFIX = NO, VARIATION = YES",
+      status: "8: PREFIX = NO, VARIATION = YES",
     };
     cache.set(input, result);
     return result;
