@@ -4,7 +4,7 @@ import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';
 
 const terminations = Object.keys(irregularidades);
-// console.log(terminations)
+console.log(terminations)
 
 function getVerbKeys(verb: string, terminations: string[]): any {
 

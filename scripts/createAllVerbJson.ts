@@ -5,6 +5,10 @@ import readTxtLines from './readTxtLines';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 import { VerbEntry } from '../src/types';
+import irregularidades from '../src/json/rulesByTerm.json';
+
+const terminations = Object.keys(irregularidades);
+// console.log(terminations)
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -154,6 +158,13 @@ async function processVerbsFile(): Promise<void> {
       if (!acc[normalized].verb.includes(verb)) {
         acc[normalized].verb.push(verb);
       }
+
+      const matchedTerminations = terminations.filter(termination => verb.endsWith(termination));
+      if (matchedTerminations.length > 0) {
+        const longestTermination = matchedTerminations.sort((a, b) => b.length - a.length)[0];
+        acc[normalized].ending = [longestTermination];
+      }
+
       return acc;
     }, { ...currentVerbs });
     
