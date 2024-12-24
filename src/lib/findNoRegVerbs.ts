@@ -63,8 +63,6 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
   const keysTermEntrie = Object.keys(termEntries)
-  const normalizedKeys = keysTermEntrie.map(eachkey => ni(eachkey));
-  // console.log(keysTermEntrie)
 
   let key = '';
 
