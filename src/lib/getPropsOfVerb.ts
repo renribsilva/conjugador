@@ -141,5 +141,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 }
 
-// const test = getPropsOfVerb("abduzir", true, "abduzir")
-// console.log(test)
+// getPropsOfVerb("crer", true, "crer").then(test => {
+//   console.log(test);
+// });

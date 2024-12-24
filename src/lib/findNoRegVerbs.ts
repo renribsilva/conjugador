@@ -16,7 +16,7 @@ function getVerbKeys(verb: string, terminations: string[]): any {
 
   if (rules) {
     const normalizedRules = Object.keys(rules).reduce((acc, key) => {
-      acc[ni(key)] = rules[key];
+      acc[nw(key)] = rules[key];
       return acc;
     }, {});
 
@@ -62,7 +62,21 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
-  // console.log(termEntries, termination)
+  const keysTermEntrie = Object.keys(termEntries)
+  const normalizedKeys = keysTermEntrie.map(eachkey => ni(eachkey));
+  // console.log(keysTermEntrie)
+
+  let key = '';
+
+  for (const eachkey of keysTermEntrie) {
+    const normalizedKey = ni(eachkey);
+    if (normalizedKey === verb) {
+      key = eachkey;
+      break;
+    }
+  }
+
+  // console.log(key)
   
   if (!termEntries) {
     return getDefaultResponse();
@@ -72,9 +86,9 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     return getDefaultResponse();
   }
 
-  if (termEntries[verb]) {
+  if (termEntries[key]) {
 
-    const termEntrieObject = termEntries[verb];
+    const termEntrieObject = termEntries[key];
 
     if (termEntrieObject?.rules) {
 
@@ -89,7 +103,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
           abundance2: {...abundance2}
         },
         termination,
-        termEntrie: verb,
+        termEntrie: key,
         verb,
         types: termEntrieObject.type,
         note_plain: termEntrieObject.note.plain,
@@ -196,5 +210,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-const res = findNoRegRule('amar', 'p1','pr_ind',"VT")
+// const res = findNoRegRule('amar', 'p1','pr_ind',"VT")
 // console.log(res)

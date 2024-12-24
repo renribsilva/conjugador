@@ -1,98 +1,123 @@
-import fs from "fs/promises";
-import path from "path";
+import fs from 'fs';
+import path from 'path'; 
+import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
+import { ni } from '../src/lib/normalizeVerb';
 
-// Definindo o tipo para cada verbo
-interface Verb {
+interface VerbData {
   verb: string[];
   model: number[];
-  ending: string[];
+  ending: string[]; 
   pronominal: boolean[];
 }
 
-// Definindo o tipo para a estrutura de cada regra
-interface RuleData {
-  verb: string[];
-  model: number[];
-  ending: string[];
-  pronominal: boolean[];
-  verbs?: Record<string, string[]>; // Verbs serão adicionados com chave ending
-  test?: Record<string, number[]>;
-  note?: {
-    plain: string[];
-    ref: Record<string, string[]>;
+interface RulesByTermData {
+  [key: string]: {
+    [subKey: string]: {
+      verbs?: { [verb: string]: number[] }; 
+      [key: string]: any;
+    };
   };
-  type?: number[];
-  abundance1?: Record<string, unknown>;
-  rules?: Record<string, unknown>;
 }
 
-// Função para listar as regras a partir do arquivo JSON
-async function listRulesByTerm() {
-  const filePath = path.join(process.cwd(), "src", "json", "rulesByTerm.json");
-  const data = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(data);
-}
+const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
+const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
 
-// Função para listar os verbos que terminam com o sufixo especificado
-async function listVerbsByEnding(ending: string) {
+async function addVerbsToJson() {
   try {
-    const basePath = path.join(process.cwd(), "src", "json");
-    const verbsFilePath = path.join(basePath, "allVerbs.json");
+    const [allVerbsDataStr, rulesByTermDataStr] = await Promise.all([
+      fs.promises.readFile(allVerbsPath, 'utf8'),
+      fs.promises.readFile(rulesByTermPath, 'utf8')
+    ]);
 
-    const verbsData = await fs.readFile(verbsFilePath, "utf-8");
-    const verbs: Record<string, Verb> = JSON.parse(verbsData);
+    const allVerbsData: { [key: string]: VerbData } = JSON.parse(allVerbsDataStr);
+    const rulesByTermData: RulesByTermData = JSON.parse(rulesByTermDataStr);
 
-    // Filtra os verbos que terminam com o sufixo desejado
-    const filteredVerbs = Object.entries(verbs)
-      .filter(([key, value]) => value.ending.includes(ending))
-      .map(([key, value]) => value.verb);
+    const mainKeys = Object.keys(rulesByTermData);
+    const totalKeys = mainKeys.length;
 
-    return filteredVerbs.flat(); // Retorna todos os verbos em um único array
-  } catch (error) {
-    console.error("Erro ao processar os arquivos JSON:", error);
-    throw error;
-  }
-}
+    const verbFilter = (verbData: VerbData, mainKey: string) => 
+      Array.isArray(verbData.ending) && verbData.ending.includes(mainKey);
 
-// Função para adicionar os verbos ao arquivo rulesByTerm.json
-async function addVerbsToRules() {
-  try {
-    const rulesFilePath = path.join(process.cwd(), "src", "json", "rulesByTerm.json");
-    const rulesData = await fs.readFile(rulesFilePath, "utf-8");
-    const rules: Record<string, RuleData> = JSON.parse(rulesData); // Define o tipo das regras
+    console.log("Iniciando a busca por verbos correspondentes a cada terminação...");
 
-    // Iterar sobre cada entrada em rulesByTerm
-    for (const [term, ruleData] of Object.entries(rules)) {
-      const endings = ruleData.ending || [];
+    let dataChanged = false; 
 
-      // Para cada ending, buscar os verbos correspondentes
-      for (const ending of endings) {
-        const verbsWithEnding = await listVerbsByEnding(ending);
-        
-        // Adicionar os verbos encontrados à chave "verbs" na regra
-        if (verbsWithEnding.length > 0) {
-          if (!ruleData.verbs) {
-            ruleData.verbs = {}; // Cria a chave "verbs" se não existir
+    for (let index = 0; index < totalKeys; index++) {
+
+      // const mainKey = "por";
+      const mainKey = mainKeys[index];
+      const progress = Math.floor(((index + 1) / totalKeys) * 100);
+      process.stdout.write(`- progresso: ${progress}%\r`);
+
+      if (rulesByTermData[mainKey]) {
+        const subKeys = Object.keys(rulesByTermData[mainKey]);
+
+        for (const subKey of subKeys) {
+
+          const result: { [termEntrie: string]: { [verb: string]: number[] } } = {};
+
+          let filteredVerbs = Object.entries(allVerbsData)
+            .filter(([key, value]) => verbFilter(value, mainKey))
+            .map(([key, value]) => value.verb[0]);
+
+          const verbPropsPromises = filteredVerbs.map(verb =>
+            getPropsOfVerb(ni(verb), true, verb)
+              .then(props => {
+                if (props && props.length > 0) {
+                  const termEntrie = props[0].termEntrie ?? '';
+
+                  if (!result[termEntrie]) {
+                    result[termEntrie] = {};
+                  }
+
+                  const models = allVerbsData[verb]?.model || [];
+                  result[termEntrie][verb] = models;
+
+                }
+              })
+          );
+
+          await Promise.all(verbPropsPromises);
+
+          if (typeof rulesByTermData[mainKey][subKey] === 'object' 
+                && rulesByTermData[mainKey][subKey] !== null) {
+            // Verifica se a alteração vai acontecer
+            const previousVerbs = rulesByTermData[mainKey][subKey].verbs || [];
+            const newVerbs = result[subKey] || [];
+            // rulesByTermData[mainKey][subKey].test = [false];
+            // delete rulesByTermData[mainKey][subKey].test;
+
+            if (JSON.stringify(previousVerbs) !== JSON.stringify(newVerbs)) {
+              dataChanged = true;  // Marcar que houve alteração
+            }
+
+            // Atualiza os dados
+            rulesByTermData[mainKey][subKey].verbs = newVerbs;
           }
-          ruleData.verbs[ending] = verbsWithEnding;
         }
       }
     }
 
-    // Salvar o arquivo JSON atualizado
-    await fs.writeFile(rulesFilePath, JSON.stringify(rules, null, 2), "utf-8");
-    console.log("Arquivo rulesByTerm.json atualizado com os verbos.");
+    process.stdout.write('Progresso: 100%\n');
+    console.log("Editando o arquivo rulesByTerm.json...");
+
+    // Só reescreve o arquivo se houve alterações
+    if (dataChanged) {
+      await fs.promises.writeFile(
+        rulesByTermPath,
+        JSON.stringify(rulesByTermData, null, 2)
+          .replace(/\[\s*([\s\S]*?)\s*\]/g, (match, p1) => 
+            `[${p1.replace(/\s*,\s*/g, ',').replace(/\n\s*/g, '')}]`),
+        'utf8'
+      );
+
+      console.log('A edição terminou com sucesso!');
+    } else {
+      console.log('Nenhuma alteração detectada. Nenhum arquivo foi escrito.');
+    }
   } catch (error) {
-    console.error("Erro ao processar e salvar o arquivo:", error);
-    throw error;
+    console.error('Erro ao processar o arquivo:', error);
   }
 }
 
-// Exemplo de uso
-(async () => {
-  try {
-    await addVerbsToRules();
-  } catch (error) {
-    console.error("Erro:", error);
-  }
-})();
+addVerbsToJson();

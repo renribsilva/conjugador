@@ -139,25 +139,25 @@ async function processVerbsFile(): Promise<void> {
             acc[normalized].verb.push(verb);
           }
     
-          // try {
-          //   let verbPropsArray = cache.get(normalized);
-          //   if (!verbPropsArray) {
-          //     verbPropsArray = await getPropsOfVerb(normalized, true, normalized);
-          //     cache.set(normalized, verbPropsArray);
-          //   }
+          try {
+            let verbPropsArray = cache.get(normalized);
+            if (!verbPropsArray) {
+              verbPropsArray = await getPropsOfVerb(normalized, true, normalized);
+              cache.set(normalized, verbPropsArray);
+            }
     
-          //   if (verbPropsArray.length > 0) {
-          //     const matchedTermination = verbPropsArray[0]?.termination;
+            if (verbPropsArray.length > 0) {
+              const matchedTermination = verbPropsArray[0]?.termination;
     
-          //     if (matchedTermination && normalized.endsWith(matchedTermination)) {
-          //       if (!acc[normalized].ending.includes(matchedTermination)) {
-          //         acc[normalized].ending.push(matchedTermination);
-          //       }
-          //     }
-          //   }
-          // } catch (error) {
-          //   console.error(`Erro ao processar o verbo ${verb}:`, error);
-          // }
+              if (matchedTermination && normalized.endsWith(matchedTermination)) {
+                if (!acc[normalized].ending.includes(matchedTermination)) {
+                  acc[normalized].ending.push(matchedTermination);
+                }
+              }
+            }
+          } catch (error) {
+            console.error(`Erro ao processar o verbo ${verb}:`, error);
+          }
 
         });
     
@@ -186,13 +186,13 @@ async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    // const removedVerbs = Object.keys(currentVerbs).filter(
-    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    // );
+    const removedVerbs = Object.keys(currentVerbs).filter(
+      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    );
 
-    // removedVerbs.forEach((normalized) => {
-    //   delete J[normalized];
-    // });
+    removedVerbs.forEach((normalized) => {
+      delete J[normalized];
+    });
 
     // Inserir novas propriedades
     Object.keys(J).forEach(normalized => {
@@ -211,7 +211,8 @@ async function processVerbsFile(): Promise<void> {
       await fs.promises.writeFile(
         outputFilePath,
         JSON.stringify(sortedJ, null, 2)
-          .replace(/\[\s*([\s\S]*?)\s*\]/g, (match, p1) => `[${p1.replace(/\s*,\s*/g, ',').replace(/\n\s*/g, '')}]`)
+          .replace(/\[\s*([\s\S]*?)\s*\]/g, (match, p1) => 
+            `[${p1.replace(/\s*,\s*/g, ',').replace(/\n\s*/g, '')}]`)
       );
 
     console.log(`Atualizando a quantidade de verbos...`);

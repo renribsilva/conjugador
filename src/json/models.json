@@ -3,18 +3,39 @@
     "1": ["passar"],
     "2": ["bater"],
     "3": ["partir"],
+    "4": ["afastar-se"],
+    "5": ["abater-se"],
+    "6": ["demitir-se"],
+    "7": ["conduzir"],
+    "8": ["viajar"],
+    "9": ["enviar"],
+    "10": ["atuar"],
     "11": ["apelar"],
+    "12": ["anotar"],
     "13": ["optar"],
+    "14": ["povoar"],
     "15": ["atrair"],
-    "21": ["enfeitar"]
+    "16": ["atribuir"],
+    "17": ["arguir"],
+    "18": ["pernoitar"],
+    "19": ["endeusar"],
+    "20": ["apoiar"],
+    "21": ["enfeitar"],
+    "22": ["poupar"]
   },
   "B":{
     "23": ["enraizar"],
-    "24": ["saudar"]
+    "24": ["saudar"],
+    "25": ["proibir"],
+    "26": ["reunir"]
   },
   "C":{
     "27": ["mexer"],
-    "29": ["ferir"]
+    "28": ["colher"],
+    "29": ["ferir"],
+    "30": ["dormir"],
+    "31": ["sentir"],
+    "32": ["coerir"]
   },
   "D":{
     "33": ["atacar"],
@@ -24,30 +45,53 @@
     "37": ["ressarcir"],
     "38": ["abranger"],
     "39": ["atingir"],
+    "40": ["erguer"],
     "41": ["distinguir"]
   },
   "E":{
     "42": ["desejar"],
     "43": ["chegar"],
-    "45": ["agredir"]
+    "45": ["agredir"],
+    "46": ["emergir"],
+    "47": ["explodir"],
+    "48": ["polir"],
+    "49": ["moscar"],
+    "50": ["frigir"],
+    "51": ["construir"],
+    "52": ["sacudir"],
+    "53": ["sumir"]
   },
   "F":{
-    "54": ["passear"]  
+    "54": ["passear"],
+    "55": ["ansiar"],
+    "56": ["estrear"]
   },
   "G":{
     "57": ["averiguar"],
-    "58": ["enxaguar"]
+    "58": ["enxaguar"],
+    "59": ["resfolegar"],
+    "60": ["mobiliar"],
+    "61": ["desmilinguir"],
+    "62": ["delinquir"]
   },
   "H":{
     "63": ["medir"],
+    "62": ["ouvir"],
     "65": ["parir"],
+    "66": ["perder"],
+    "67": ["prover"],
+    "68": ["requerer"],
     "69": ["valer"]
   },
   "I":{
     "70": ["caber"],
     "71": ["comprazer"],
+    "72": ["dizer"],
+    "73": ["estar"],
     "74": ["fazer"],
     "75": ["haver"],
+    "76": ["poder"],
+    "77": ["querer"],
     "78": ["saber"],
     "79": ["trazer"]
   },
@@ -69,6 +113,8 @@
     "92": ["abolir"],
     "93": ["excelir"],
     "94": ["fremir"],
+    "95": ["puir"],
+    "96": ["retorquir"],
     "97": ["soer"]
   },
   "L":{
@@ -78,6 +124,11 @@
     "101": ["falir"]
   },
   "M":{
-    "102": ["aprazer"]
+    "102": ["aprazer"],
+    "103": ["concernir"],
+    "104": ["doer"],
+    "105": ["grassar"],
+    "106": ["later"],
+    "107": ["precluir"]
   }
 }
