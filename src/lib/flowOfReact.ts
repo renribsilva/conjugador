@@ -111,12 +111,12 @@ export const flowOfReact = () => {
 
     if (event.key === "Enter" && state.inputValue !== "") {
 
-      const normalizedInputValue = ni(state.inputValue);
-      const suggestions = getSimilarVerbs(state.inputValue);
-
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
+
+      const normalizedInputValue = ni(state.inputValue);
+      const suggestions = getSimilarVerbs(state.inputValue);
 
       setState(prev => ({
         ...prev,

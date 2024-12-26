@@ -117,16 +117,22 @@ const Index = () => {
     if (state.focus && inputRef.current) {
       const input = inputRef.current;
   
-      // Define o input como somente leitura temporariamente
-      input.setAttribute("readonly", "true");
-      input.focus({ preventScroll: true }); // Aplica o foco sem deslocar a página
+      // Cria um elemento invisível para receber o foco
+      const fakeInput = document.createElement("input");
+      fakeInput.setAttribute("type", "text");
+      fakeInput.style.position = "absolute";
+      fakeInput.style.opacity = "0";
+      fakeInput.style.height = "0";
+      fakeInput.style.width = "0";
+      fakeInput.style.zIndex = "-1";
   
-      // Remove o readonly após uma pequena pausa
-      setTimeout(() => {
-        if (input) {
-          input.removeAttribute("readonly");
-        }
-      }, 100); // Ajuste o tempo conforme necessário
+      // Adiciona o elemento ao DOM, foca nele e remove-o
+      document.body.appendChild(fakeInput);
+      fakeInput.focus();
+      document.body.removeChild(fakeInput);
+  
+      // Finalmente, foca no input real sem abrir o teclado
+      input.focus({ preventScroll: true });
     }
   }, [state.focus]);
 
