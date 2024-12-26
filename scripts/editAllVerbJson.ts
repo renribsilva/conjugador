@@ -200,9 +200,17 @@ async function processVerbsFile(): Promise<void> {
       delete J[normalized];
     });
 
+    // Deletar propriedades
+    // Object.keys(J).forEach(normalized => {
+    //   if (J[normalized].pronominal) {
+    //     delete J[normalized].pronominal;
+    //   }
+    // });
+
+    // Inserir novas propriedades
     Object.keys(J).forEach(normalized => {
-      if (J[normalized].pronominal) {
-        delete J[normalized].pronominal;
+      if (!J[normalized].pronominal) {
+        J[normalized].pronominal = [false];
       }
     });
 
@@ -240,3 +248,5 @@ async function processVerbsFile(): Promise<void> {
 }
 
 processVerbsFile();
+
+   
