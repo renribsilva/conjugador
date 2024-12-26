@@ -113,7 +113,9 @@ export const flowOfReact = () => {
 
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
-      (event.target as HTMLInputElement).blur();
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 50);
 
       setState(prev => ({
         ...prev,
