@@ -116,8 +116,8 @@ const Index = () => {
   useEffect(() => {    
     if (inputRef.current) {
       inputRef.current.focus();
+      inputRef.current.blur();
     }
-    inputRef.current?.blur();
   }, [state.focus]);
 
   function NoteRefList({ noteRef }) {
