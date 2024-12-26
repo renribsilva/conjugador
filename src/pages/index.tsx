@@ -115,7 +115,6 @@ const Index = () => {
 
   useEffect(() => {    
     if (inputRef.current) {
-      Keyboard.dismiss();
       inputRef.current.focus();
     }
   }, [state.focus]);
