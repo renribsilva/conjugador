@@ -16,6 +16,7 @@ import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
 // import {Tooltip} from "@nextui-org/tooltip";
+import { Keyboard } from "react-native";
 
 const Index = () => {
 
@@ -113,7 +114,7 @@ const Index = () => {
 
   // console.log(inputRef)
 
-  useEffect(() => {    
+  useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
