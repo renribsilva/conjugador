@@ -339,18 +339,18 @@ export const flowOfReact = () => {
 
       }
 
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 50);
+
     }
 
     setState(prev => ({
 
       ...prev,
-      focus: true
+      focus: false
   
     }));
-
-    setTimeout(() => {
-      (event.target as HTMLInputElement).blur();
-    }, 50);
 
   };
 
