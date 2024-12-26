@@ -113,27 +113,11 @@ const Index = () => {
 
   // console.log(inputRef)
 
-  useEffect(() => {
-    if (state.focus && inputRef.current) {
-      const input = inputRef.current;
-  
-      // Cria um elemento invisível para receber o foco
-      const fakeInput = document.createElement("input");
-      fakeInput.setAttribute("type", "text");
-      fakeInput.style.position = "absolute";
-      fakeInput.style.opacity = "0";
-      fakeInput.style.height = "0";
-      fakeInput.style.width = "0";
-      fakeInput.style.zIndex = "-1";
-  
-      // Adiciona o elemento ao DOM, foca nele e remove-o
-      document.body.appendChild(fakeInput);
-      fakeInput.focus();
-      document.body.removeChild(fakeInput);
-  
-      // Finalmente, foca no input real sem abrir o teclado
-      input.focus({ preventScroll: true });
+  useEffect(() => {    
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
+    inputRef.current?.blur();
   }, [state.focus]);
 
   function NoteRefList({ noteRef }) {
