@@ -115,15 +115,15 @@ const Index = () => {
 
   useEffect(() => {
     if (state.focus && inputRef.current) {
-      inputRef.current.setAttribute("readonly", "readonly"); 
+      inputRef.current.setAttribute("readonly", "readonly");
       inputRef.current.focus();
       setTimeout(() => {
         if (inputRef.current) {
-          inputRef.current.removeAttribute("readonly"); 
+          inputRef.current.removeAttribute("readonly");
         }
-      }, 100); 
+      }, 0); // Executa no próximo ciclo de eventos
     }
-  }, [state.focus]);  
+  }, [state.focus]); 
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
