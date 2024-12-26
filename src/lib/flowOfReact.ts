@@ -348,7 +348,7 @@ export const flowOfReact = () => {
     setState(prev => ({
 
       ...prev,
-      focus: false
+      focus: true
   
     }));
 
