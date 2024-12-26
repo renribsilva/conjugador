@@ -115,8 +115,8 @@ const Index = () => {
 
   useEffect(() => {    
     if (inputRef.current) {
+      Keyboard.dismiss();
       inputRef.current.focus();
-      // inputRef.current.blur();
     }
   }, [state.focus]);
 

@@ -146,7 +146,7 @@ export const flowOfReact = () => {
 
         goThrough: false,
         enter: false,
-        focus: false,
+        focus: true,
 
         originalVerb: null,
         variationVerb: null,
@@ -348,7 +348,7 @@ export const flowOfReact = () => {
     setState(prev => ({
 
       ...prev,
-      focus: true
+      focus: false
   
     }));
 
