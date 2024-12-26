@@ -114,6 +114,10 @@ export const flowOfReact = () => {
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
 
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 0);
+
       setState(prev => ({
         ...prev,
         conjugations: null,
@@ -338,10 +342,6 @@ export const flowOfReact = () => {
         }));
 
       }
-
-      setTimeout(() => {
-        (event.target as HTMLInputElement).blur();
-      }, 50);
 
     }
 
