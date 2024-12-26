@@ -58,6 +58,6 @@ export default function getSimilarVerbs(verb: string): string[] {
     .map(({ key }) => key);
 }
 
-// const word = "caber";
-// const result = getSimilarVerbs(word);
-// console.log(result);
+const word = "caber";
+const result = getSimilarVerbs(word);
+console.log(result);

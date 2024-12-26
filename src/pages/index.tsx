@@ -296,6 +296,17 @@ const Index = () => {
                               solicitar
                             </Button>
                           </div>
+                          <div>
+                            {state.suggestions?.map((verb, index) => (
+                              <Button 
+                              key={index}
+                              ref={buttonRef}
+                              onClick={() => { handleVerbClick(verb) }}
+                            >
+                              {verb}
+                            </Button>
+                            ))}
+                          </div>
                           <div className={styles.lascou_foot}>
                             <Button onClick={handleHome}>voltar para o início</Button>
                           </div>

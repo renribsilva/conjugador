@@ -62,6 +62,15 @@ function getDefaultResponse() {
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
+  
+  if (!termEntries) {
+    return getDefaultResponse();
+  }
+
+  if (verb.startsWith("...")) {
+    return getDefaultResponse();
+  }
+
   const keysTermEntrie = Object.keys(termEntries)
 
   let key = '';
@@ -74,17 +83,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     }
   }
 
-  // console.log(key)
-  
-  if (!termEntries) {
-    return getDefaultResponse();
-  }
-
-  if (verb.startsWith("...")) {
-    return getDefaultResponse();
-  }
-
-  if (termEntries[key]) {
+  if (key !== '' && termEntries[key]) {
 
     const termEntrieObject = termEntries[key];
 

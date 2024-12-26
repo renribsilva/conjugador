@@ -77,6 +77,8 @@ async function addVerbsToJson() {
               })
           );
 
+          console.log(result)
+
           await Promise.all(verbPropsPromises);
 
           if (typeof rulesByTermData[mainKey][subKey] === 'object' 
@@ -85,7 +87,7 @@ async function addVerbsToJson() {
             const previousVerbs = rulesByTermData[mainKey][subKey].verbs || [];
             const newVerbs = result[subKey] || [];
             // rulesByTermData[mainKey][subKey].test = [false];
-            // delete rulesByTermData[mainKey][subKey].test;
+            delete rulesByTermData[mainKey][subKey].type;
 
             if (JSON.stringify(previousVerbs) !== JSON.stringify(newVerbs)) {
               dataChanged = true;  // Marcar que houve alteração

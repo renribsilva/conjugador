@@ -138,25 +138,31 @@ async function processVerbsFile(): Promise<void> {
           if (!acc[normalized].verb.includes(verb)) {
             acc[normalized].verb.push(verb);
           }
+
+          const go = true
+
+          if (go) {
     
-          try {
-            let verbPropsArray = cache.get(normalized);
-            if (!verbPropsArray) {
-              verbPropsArray = await getPropsOfVerb(normalized, true, normalized);
-              cache.set(normalized, verbPropsArray);
-            }
-    
-            if (verbPropsArray.length > 0) {
-              const matchedTermination = verbPropsArray[0]?.termination;
-    
-              if (matchedTermination && normalized.endsWith(matchedTermination)) {
-                if (!acc[normalized].ending.includes(matchedTermination)) {
-                  acc[normalized].ending.push(matchedTermination);
+            try {
+              let verbPropsArray = cache.get(normalized);
+              if (!verbPropsArray) {
+                verbPropsArray = await getPropsOfVerb(normalized, true, normalized);
+                cache.set(normalized, verbPropsArray);
+              }
+      
+              if (verbPropsArray.length > 0) {
+                const matchedTermination = verbPropsArray[0]?.termination;
+      
+                if (matchedTermination && normalized.endsWith(matchedTermination)) {
+                  if (!acc[normalized].ending.includes(matchedTermination)) {
+                    acc[normalized].ending.push(matchedTermination);
+                  }
                 }
               }
+            } catch (error) {
+              console.error(`Erro ao processar o verbo ${verb}:`, error);
             }
-          } catch (error) {
-            console.error(`Erro ao processar o verbo ${verb}:`, error);
+
           }
 
         });
@@ -194,10 +200,9 @@ async function processVerbsFile(): Promise<void> {
       delete J[normalized];
     });
 
-    // Inserir novas propriedades
     Object.keys(J).forEach(normalized => {
-      if (!J[normalized].pronominal) {
-        J[normalized].pronominal = [false];
+      if (J[normalized].pronominal) {
+        delete J[normalized].pronominal;
       }
     });
 
