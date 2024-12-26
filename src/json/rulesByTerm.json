@@ -426,7 +426,7 @@
   "por": {
     "...por": {
       "note": {
-        "plain": ["Os verbos terminados em 'or',tal como 'pôr' e seus derivados (compor,dispor,repor,supor,etc.),pertencem por motivos históricos à 2ª conjugação,isto é,à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso,'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal,ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor,dispor,repor,supor,etc.),pertencem por motivos históricos à 2ª conjugação,isto é,à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso,'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal,ao passo que seus devivados não¹"],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -546,7 +546,7 @@
     },
     "pôr": {
       "note": {
-        "plain": ["Os verbos terminados em 'or',tal como 'pôr' e seus derivados (compor,dispor,repor,supor,etc.),pertencem por motivos históricos à 2ª conjugação,isto é,à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso,'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal,ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor,dispor,repor,supor,etc.),pertencem por motivos históricos à 2ª conjugação,isto é,à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso,'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal,ao passo que seus devivados não¹"],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -15850,6 +15850,381 @@
         "ventar": [],
         "violentar": [],
         "viventar": []
+      },
+      "test": [false]
+    }
+  },
+  "entir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'entir' fazem a 1ª pessoa do Presente do Indicativo 'into', ao passo que as demais flexões são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "int3":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "entrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'entrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "enzer": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'enzer' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    },
+    "benzer": {
+      "note": {
+        "plain": ["O verbo 'benzer' é regular, observando apenas a abundância no seu particípio¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {
+        "RAD":{
+          "bent":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "o":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "":{
+            "pa":["n"]
+          }
+        }
+      },
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "epar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'epar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "eptar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'eptar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "equar": {
+    "...": {
+      "note": {
+        "plain": ["Antigamente conjugáveis apenas nas formas arrizotônicas, os poucos verbos terminados em 'equar' são hoje conjugados tem todas as formas, rizotônicas e arrizotônicas, observando ainda que nas formas rizotônicas as flexões sofrem acomodação gráfica.¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "équ3":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "equir": {
+    "ressequir": {
+      "note": {
+        "plain": ["'Ressequir', o único verbo terminado em 'equir', é conjugado apenas nas formas arrizotônicas, isto é, naquelas cuja vogal tônica se encontra fora do radical¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "VT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "MT":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        },
+        "NP":{
+          "":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im1":["p2","p3","p4","p6"],
+            "im2":["p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "erar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'erar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "erbar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'erbar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "ercar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ercar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1","p2","p3","p4","p5","p6"],
+            "im1": ["p3","p4","p6"],
+            "im2": ["p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "erçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'erçar' são regulares,mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1","p2","p3","p4","p5","p6"],
+            "im1": ["p3","p4","p6"],
+            "im2": ["p2","p3","p4","p5","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ercer": {
+    "exercer": {
+      "note": {
+        "plain": ["O verbo 'exercer' é regular, observando acomodações gráficas em algumas flexões¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "exerç":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "erdar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'erdar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false]
+    }
+  },
+  "erder": {
+    "...": {
+      "note": {
+        "plain": ["Os verbos terminados em 'erder' fazem na 1ª pessoa do Presente do Indicativo 'erco'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "c1":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "erer": {
+    "...querer": {
+      "note": {
+        "plain": ["O verbo querer e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo, exceto o verbo 'requerer' que faz 'requeiro'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "VT":{
+          "":{
+            "pr_ind":["p3"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "querer": {
+      "note": {
+        "plain": ["O verbo querer e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo, exceto o verbo 'requerer' que faz 'requeiro'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "requerer": {
+      "note": {
+        "plain": ["O verbo querer e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo, exceto o verbo 'requerer' que faz 'requeiro'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
       },
       "test": [false]
     }

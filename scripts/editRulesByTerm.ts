@@ -103,11 +103,12 @@ async function addVerbsToJson() {
 
     // Só reescreve o arquivo se houve alterações
     if (dataChanged) {
+      
       await fs.promises.writeFile(
         rulesByTermPath,
         JSON.stringify(rulesByTermData, null, 2)
           .replace(/\[\s*([\s\S]*?)\s*\]/g, (match, p1) => 
-            `[${p1.replace(/\s*,\s*/g, ',').replace(/\n\s*/g, '')}]`),
+            `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`),
         'utf8'
       );
 
