@@ -345,14 +345,14 @@ export const flowOfReact = () => {
 
     }
 
-    setState(prev => ({
-
-      ...prev,
-      focus: true
-  
-    }));
-
   };
+
+  setState(prev => ({
+
+    ...prev,
+    focus: true
+
+  }));
 
   const dependencies = [
     state.conjugations,

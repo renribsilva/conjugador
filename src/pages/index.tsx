@@ -116,15 +116,15 @@ const Index = () => {
   useEffect(() => {    
     if (inputRef.current) {
       inputRef.current.focus();
+      inputRef.current.blur();
     }
-  }, []);
+  }, [state.focus]);
 
   useEffect(() => {    
     if (inputRef.current) {
       inputRef.current.focus();
-      inputRef.current.blur();
     }
-  }, [state.focus]);
+  }, []);
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
