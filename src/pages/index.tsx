@@ -116,6 +116,12 @@ const Index = () => {
   useEffect(() => {    
     if (inputRef.current) {
       inputRef.current.focus();
+    }
+  }, []);
+
+  useEffect(() => {    
+    if (inputRef.current) {
+      inputRef.current.focus();
       inputRef.current.blur();
     }
   }, [state.focus]);
