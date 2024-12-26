@@ -18371,5 +18371,85 @@
       },
       "test": [false]
     }
+  },
+  "etrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'etrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eudar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'eudar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eumar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'eumar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eusar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'eusar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "evar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'evar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
   }
 }
