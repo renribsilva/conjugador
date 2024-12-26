@@ -115,15 +115,22 @@ const Index = () => {
 
   useEffect(() => {
     if (state.focus && inputRef.current) {
-      inputRef.current.setAttribute("readonly", "readonly");
-      inputRef.current.focus();
+      const input = inputRef.current;
+  
+      input.setAttribute("readonly", "true"); // Torna o campo não editável
+      input.focus(); // Aplica o foco sem disparar o teclado
+      input.addEventListener("touchstart", preventKeyboard);
+  
       setTimeout(() => {
-        if (inputRef.current) {
-          inputRef.current.removeAttribute("readonly");
-        }
-      }, 0); // Executa no próximo ciclo de eventos
+        input.removeAttribute("readonly"); // Retorna a editabilidade do campo
+        input.removeEventListener("touchstart", preventKeyboard);
+      }, 100);
     }
-  }, [state.focus]); 
+  
+    function preventKeyboard(event: Event) {
+      event.preventDefault(); // Evita que o teclado apareça
+    }
+  }, [state.focus]);
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
