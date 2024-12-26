@@ -113,11 +113,17 @@ const Index = () => {
 
   // console.log(inputRef)
 
-  useEffect(() => {    
-    if (inputRef.current) {
+  useEffect(() => {
+    if (state.focus && inputRef.current) {
+      inputRef.current.setAttribute("readonly", "readonly"); 
       inputRef.current.focus();
+      setTimeout(() => {
+        if (inputRef.current) {
+          inputRef.current.removeAttribute("readonly"); 
+        }
+      }, 100); 
     }
-  }, [state.focus]);
+  }, [state.focus]);  
 
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
