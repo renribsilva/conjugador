@@ -117,18 +117,16 @@ const Index = () => {
     if (state.focus && inputRef.current) {
       const input = inputRef.current;
   
-      input.setAttribute("readonly", "true"); // Torna o campo não editável
-      input.focus(); // Aplica o foco sem disparar o teclado
-      input.addEventListener("touchstart", preventKeyboard);
+      // Define o input como somente leitura temporariamente
+      input.setAttribute("readonly", "true");
+      input.focus({ preventScroll: true }); // Aplica o foco sem deslocar a página
   
+      // Remove o readonly após uma pequena pausa
       setTimeout(() => {
-        input.removeAttribute("readonly"); // Retorna a editabilidade do campo
-        input.removeEventListener("touchstart", preventKeyboard);
-      }, 100);
-    }
-  
-    function preventKeyboard(event: Event) {
-      event.preventDefault(); // Evita que o teclado apareça
+        if (input) {
+          input.removeAttribute("readonly");
+        }
+      }, 100); // Ajuste o tempo conforme necessário
     }
   }, [state.focus]);
 
