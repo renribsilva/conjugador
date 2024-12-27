@@ -20800,15 +20800,895 @@
       "test": [false]
     }
   },
-
-
-
-
-
-
-
-
-
+  "oar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "obar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'obar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "obrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'obrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "obrir": {
+    "cobrir": {
+      "note": {
+        "plain": ["O verbo cobrir e seus derivados fazem '-ubro' na 1ª pessoa do Presente do Indicativo e flexões correlatas, além de apresentar irregularidade no particípio¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ubr3":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          },
+          "b2":{
+            "pa":["n"]
+          }
+        },
+        "VT":{
+          "e":{
+            "pa":["n"]
+          }
+        },
+        "MT":{
+          "rto":{
+            "pa":["n"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "obstar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'obstar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "obter": {
+    "obter": {
+      "note": {
+        "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "rules": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          },
+          "i": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "é": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "ve": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "vera": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "véra": {
+            "pt3_ind": ["p4"]
+          },
+          "vére": {
+            "pt3_ind": ["p5"]
+          },
+          "vesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "vésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ver": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "verbs": {
+        "abster": [],
+        "conter": [],
+        "deter": [],
+        "entreter": [],
+        "obter": [],
+        "reter": []
+      },
+      "test": [false]
+    }
+  },
+  "obvir": {
+    "obvir": {
+      "note": {
+        "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "rules": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pt1_ind": ["p3"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pr_ind": ["p5"],
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"],
+            "im1": ["p5"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          },
+          "é": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "ndo": {
+            "pa": ["n"]
+          },
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "e": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pt1_ind": ["p3"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "era": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "éra": {
+            "pt3_ind": ["p4"]
+          },
+          "ére": {
+            "pt3_ind": ["p5"]
+          },
+          "esse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "ésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "er": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "im": {
+            "pt1_ind": ["p1"]
+          },
+          "o": {
+            "pt1_ind": ["p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "verbs": {
+        "advir": [],
+        "convir": [],
+        "devir": [],
+        "entrevir": [],
+        "intervir": [],
+        "obvir": [],
+        "provir": [],
+        "revir": [],
+        "sobrevir": []
+      },
+      "test": [false]
+    }
+  },
+  "ocar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ocar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "oçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ochar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ochar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oclar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oclar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "odar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'odar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oder": {
+    "poder": {
+      "note": {
+        "plain": ["O verbo 'poder' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "poss":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          },
+          "pud":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "pôd":{
+            "pt1_ind":["p3"]
+          }
+        },
+        "VT":{
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "...poder": {
+      "note": {
+        "plain": ["O verbo 'poder' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "poss":{
+            "pr_ind":["p1"],
+            "pr_sub":["p1","p2","p3","p4","p5","p6"],
+            "im2":["p2","p3","p4","p5","p6"],
+            "im1":["p3","p4","p6"]
+          },
+          "pud":{
+            "pt1_ind":["p1","p2","p4","p5","p6"],
+            "pt3_ind":["p1","p2","p3","p4","p5","p6"],
+            "pt_sub":["p1","p2","p3","p4","p5","p6"],
+            "fut_sub":["p1","p2","p3","p4","p5","p6"]
+          },
+          "pôd":{
+            "pt1_ind":["p3"]
+          }
+        },
+        "VT":{
+          "é":{
+            "pt3_ind":["p4","p5"],
+            "pt_sub":["p4","p5"]
+          }
+        },
+        "NP":{
+          "e":{
+            "pt1_ind":["p1"]
+          },
+          "":{
+            "pt1_ind":["p3"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "odir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'odir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "odrir": {
+    "apodrir": {
+      "note": {
+        "plain": ["O verbo 'apodrir' é defectivo¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    }
+  },
+  "oer": {
+    "...": {
+      "note": {
+        "plain": ["Os verbos termindos em 'oer' são regulares e possuem acomodações gráficas. O paradigma de conjugação deste grupo de verbos é a conjugação de 'moer'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "mó2":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          }
+        },
+        "VT":{
+          "i":{
+            "pr_ind":["p2","p3"],
+            "im1":["p2"]
+          },
+          "í":{
+            "pt2_ind":["p1","p2","p3","p6"]
+          }
+        },
+        "NP":{
+          "í":{
+            "pt1_ind":["p1"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ofar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ofar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ofrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ofrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ofrer": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ofrer' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ogar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ogar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ograr": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ograr' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oiar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oiar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oiçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oiçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "oidar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oidar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oifar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oifar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oilar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oilar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oimar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oimar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oinar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oinar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oirar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oirar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oisar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oisar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oitar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oitar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oivar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oivar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oixar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oixar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
   "oizar": {
     "...": {
       "note": {
@@ -20830,19 +21710,514 @@
           }
         }
       },
-      "verbs": {
-        "arameizar": [],
-        "ateizar": [],
-        "epopeizar": [],
-        "europeizar": [],
-        "heterogeneizar": [],
-        "homogeneizar": [],
-        "hulheizar": [],
-        "plebeizar": []
+      "test": [false]
+    }
+  },
+  "ojar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ojar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
       },
       "test": [false]
     }
   },
+  "olar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olcar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olcar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "olçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "oldar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'oldar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olfar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olfar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olgar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "olhar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olhar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olher": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olher' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olir": {
+    "abolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    },
+    "demolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    },
+    "emolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    },
+    "rebolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    },
+    "engolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'engolir' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "engul": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "...engolir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'engolir' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "ul2": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "polir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'polir' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "ul2": {
+            "pr_ind": ["p1","p2","p3","p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2","p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "...polir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'olir', 'polir' e seus derivados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "ul2": {
+            "pr_ind": ["p1","p2","p3","p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2","p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "olmar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olmar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olpar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olpar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olsar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olsar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  
+  
+
   "uizar": {
     "...": {
       "note": {
