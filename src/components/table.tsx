@@ -1,5 +1,5 @@
 // components/ConjugationSection.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/components.module.css";
 import { nw } from "../lib/normalizeVerb";
 import { Conjugation } from "../types";
@@ -7,13 +7,26 @@ import { Conjugation } from "../types";
 const pronouns = {
   eu: "eu",
   tu: "tu",
-  ele: "ela",
+  ele: "ele",
+  ela: "ela",
+  elu: "elu",
   nós: "nós",
   vós: "vós",
-  eles: "elas"
+  eles: "eles",
+  elas: "elas",
+  elus: "elus"
 };
 
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
+
+  const [activePronoun, setActiveButton] = useState<string | null>("ela");
+
+  const handleButtonClick = (pronoun: string) => {
+    setActiveButton(pronoun);
+  };
+
+  useEffect(() => {
+  }, [activePronoun]);
 
   const block = ({ adv, ten, conj, mod }) => {
 
@@ -52,28 +65,28 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
           <>
             <div>{nw(X.p1[0])}</div>
             <div><C1 p="p2" /> <C2 p="p2" /> <C3 p="p2" q="tu" /></div>
-            <div><C1 p="p3" /> <C2 p="p3" /> <C3 p="p3" q="ele" /></div>
+            <div><C1 p="p3" /> <C2 p="p3" /> <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"}/></div>
             <div><C1 p="p4" /> <C2 p="p4" /> <C3 p="p4" q="nós" /></div>
             <div><C1 p="p5" /> <C2 p="p5" /> <C3 p="p5" q="vós" /></div>
-            <div><C1 p="p6" /> <C2 p="p6" /> <C3 p="p6" q="eles" /></div>
+            <div><C1 p="p6" /> <C2 p="p6" /> <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} /></div>
           </>
         ) : isInfinitive ? (
           <>
             <div><C1 p="p1" /> <C2 p="p1" /> <C3 p="p1" q="eu" /></div>
             <div><C1 p="p2" /> <C2 p="p2" /> <C3 p="p2" q="tu" /></div>
-            <div><C1 p="p3" /> <C2 p="p3" /> <C3 p="p3" q="ele" /></div>
+            <div><C1 p="p3" /> <C2 p="p3" /> <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"} /></div>
             <div><C1 p="p4" /> <C2 p="p4" /> <C3 p="p4" q="nós" /></div>
             <div><C1 p="p5" /> <C2 p="p5" /> <C3 p="p5" q="vós" /></div>
-            <div><C1 p="p6" /> <C2 p="p6" /> <C3 p="p6" q="eles" /></div>
+            <div><C1 p="p6" /> <C2 p="p6" /> <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} /></div>
           </>
         ) : (
           <>
             <div><C1 p="p1" /> <C3 p="p1" q="eu" /> <C2 p="p1" /></div>
             <div><C1 p="p2" /> <C3 p="p2" q="tu" /> <C2 p="p2" /></div>
-            <div><C1 p="p3" /> <C3 p="p3" q="ele" /> <C2 p="p3" /></div>
+            <div><C1 p="p3" /> <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"} /> <C2 p="p3" /></div>
             <div><C1 p="p4" /> <C3 p="p4" q="nós" /> <C2 p="p4" /></div>
             <div><C1 p="p5" /> <C3 p="p5" q="vós" /> <C2 p="p5" /></div>
-            <div><C1 p="p6" /> <C3 p="p6" q="eles" /> <C2 p="p6" /></div>
+            <div><C1 p="p6" /> <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} /> <C2 p="p6" /></div>
           </>
         )}
       </div>
@@ -116,6 +129,19 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
                 : nw(conjugations.pa.n[0])}
             </span>
           </div>
+        </div>
+        <div className={styles.pronouns_container}>
+          {["ele", "ela", "elu"].map((pronoun) => (
+            <button
+              key={pronoun}
+              className={`${styles.pronouns_button} ${
+                activePronoun === pronoun ? styles.active : ""
+              }`}
+              onClick={() => handleButtonClick(pronoun)}
+            >
+              {pronoun}
+            </button>
+          ))}
         </div>
         <div className={styles.table}>
           {/* Indicativo */}
