@@ -53,14 +53,25 @@ async function addVerbsToJson() {
 
     console.log("Iniciando a busca por verbos correspondentes a cada terminação...");
 
-    let dataChanged = false; 
+    let dataChanged = false;
+    const startTime = Date.now();
 
     for (let index = 0; index < totalKeys; index++) {
 
       // const mainKey = "crer";
       const mainKey = mainKeys[index];
       const progress = Math.floor(((index + 1) / totalKeys) * 100);
-      process.stdout.write(`- progresso: ${progress}%\r`);
+
+      const elapsedTime = Date.now() - startTime;
+      const estimatedTotalTime = (elapsedTime / (index + 1)) * totalKeys;
+      const remainingTime = estimatedTotalTime - elapsedTime;
+
+      const remainingHours = Math.floor(remainingTime / (1000 * 60 * 60));
+      const remainingMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+
+      process.stdout.write(
+        `- Progresso: ${progress}% | Tempo restante: ${remainingHours}h ${remainingMinutes}min\r`
+      );
 
       if (rulesByTermData[mainKey]) {
         const subKeys = Object.keys(rulesByTermData[mainKey]);
