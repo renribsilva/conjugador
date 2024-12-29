@@ -425,6 +425,7 @@ alousar
 altruizar
 alustrar
 alutar
+aluxar
 aluzir
 alvitrajar
 amacacar
@@ -467,6 +468,7 @@ ambiciar
 ambiguizar
 amechar
 amedalhar
+ameigar
 amelindrar
 amendoar
 amentar
@@ -530,6 +532,7 @@ anhadir
 aninar
 aniquilar
 anivelar
+anoitecer
 anortear
 anotar
 anoutecer
@@ -539,6 +542,7 @@ antedar
 antedatar
 antedizer
 anteferir
+antefruir
 antegostar
 antegozar
 antejulgar
@@ -549,6 +553,7 @@ antepagar
 anteparar
 antepassar
 antepor
+anteprovar
 antever
 anteverter
 anunciar
@@ -567,6 +572,7 @@ apandilhar
 apaparicar
 apapoilar
 apapoular
+aparamentar
 aparar
 aparcelar
 aparoquiar
@@ -605,6 +611,7 @@ aperfilhar
 apergaminhar
 apermear
 aperolar
+aperrear
 aperuar
 apetitar
 apetrechar
