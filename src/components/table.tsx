@@ -20,13 +20,18 @@ const pronouns = {
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
 
   const [activePronoun, setActiveButton] = useState<string | null>("ela");
+  const [isSeActive, setSeActive] = useState(false);
 
-  const handleButtonClick = (pronoun: string) => {
+  const handlePronounClick = (pronoun: string) => {
     setActiveButton(pronoun);
   };
 
+  const handleSeClick = () => {
+    setSeActive(!isSeActive);
+  };
+
   useEffect(() => {
-  }, [activePronoun]);
+  }, [activePronoun, isSeActive]);
 
   const block = ({ adv, ten, conj, mod }) => {
 
@@ -130,18 +135,30 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
             </span>
           </div>
         </div>
-        <div className={styles.pronouns_container}>
-          {["ele", "ela", "elu"].map((pronoun) => (
+        <div className={styles.table_tabs}>
+          <div className={styles.table_tabs_pronouns_container}>
+            {["ele", "ela", "elu"].map((pronoun) => (
+              <button
+                key={pronoun}
+                className={`${styles.table_tabs_pronouns_button} ${
+                  activePronoun === pronoun ? styles.active : ""
+                }`}
+                onClick={() => handlePronounClick(pronoun)}
+              >
+                {pronoun}
+              </button>
+            ))}
+          </div>
+          <div className={styles.table_tabs_se_container}>
             <button
-              key={pronoun}
-              className={`${styles.pronouns_button} ${
-                activePronoun === pronoun ? styles.active : ""
+              className={`${styles.table_tabs_se_button} ${
+                isSeActive ? styles.active : ""
               }`}
-              onClick={() => handleButtonClick(pronoun)}
+              onClick={handleSeClick}
             >
-              {pronoun}
+              -se
             </button>
-          ))}
+          </div>
         </div>
         <div className={styles.table}>
           {/* Indicativo */}

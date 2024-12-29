@@ -97,7 +97,15 @@
   color: rgb(152, 153, 153);
 }
 
-.pronouns_container {
+/*TABS*/
+
+.table_tabs {
+  display: flex;
+  gap: 20px;
+  /* background-color: aqua; */
+}
+
+.table_tabs_pronouns_container {
   background-color: var(--button);
   margin-top: 30px;
   padding: 3px;
@@ -108,7 +116,7 @@
   border-radius: 5px;
 }
 
-.pronouns_button {
+.table_tabs_pronouns_button {
   /* background-color: bisque; */
   border: 0px;
   height: 30px;
@@ -117,12 +125,42 @@
   width: 50px;
 }
 
-.pronouns_container :hover {
+.table_tabs_pronouns_container :hover {
   background-color: var(--foreground);
   color: var(--background);
 }
 
-.pronouns_button.active {
+.table_tabs_pronouns_button.active {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.table_tabs_se_container {
+  background-color: var(--button);
+  margin-top: 30px;
+  padding: 3px;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.table_tabs_se_button {
+  /* background-color: bisque; */
+  border: 0px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50px;
+}
+
+.table_tabs_se_container :hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.table_tabs_se_button.active {
   background-color: var(--foreground);
   color: var(--background);
 }
