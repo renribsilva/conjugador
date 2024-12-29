@@ -151,6 +151,7 @@ acarançar
 acarear
 acariciar
 acarminar
+acarneirar
 acarpetar
 acarrapatar
 acarrar
@@ -238,6 +239,7 @@ acourelar
 acrescer
 acriminar
 acrisolar
+acrivar
 acromatizar
 acucular
 acuitar
@@ -248,11 +250,15 @@ acurvar
 acuspinhar
 acutilar
 adelgaçar
+adentar
 adicar
 adinamizar
+aditar
+adivertir
 adobar
 adoestar
 adoidejar
+adomar
 adomingar
 adormir
 adoudejar
@@ -277,6 +283,7 @@ afanfar
 afaquear
 afarar
 afarfalhar
+afatiar
 afaxinar
 aferir
 afermentar
@@ -329,8 +336,10 @@ afuzilar
 agabar
 agadanhar
 agaiatar
+agaitar
 agajar
 agalanar
+agalgar
 agalimar
 agalopar
 agarotar
@@ -353,7 +362,7 @@ agomar
 agomitar
 agongorar
 agostar
-agradurar
+agraduar
 agrafar
 agranar
 agranizar
@@ -368,11 +377,12 @@ aguerrilhar
 aguizalhar
 ajaezar
 ajanotar
+ajardinar
 ajoeirar
 ajoelhar
 ajuramentar
 ajustiçar
-alabarintar
+alabirintar
 alacar
 alacranar
 alacrar
@@ -390,6 +400,7 @@ alaquear
 alardear
 alarpar
 alassar
+alatinar
 alatinizar
 alegar
 aleiloar

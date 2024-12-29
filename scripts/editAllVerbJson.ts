@@ -146,8 +146,8 @@ async function processVerbsFile(): Promise<void> {
     
             try {
               
-              const input = normalized
-              // const input = "sepulcrar"
+              // const input = normalized
+              const input = "alatinar"
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
                 verbPropsArray = await getPropsOfVerb(input, true, input);
