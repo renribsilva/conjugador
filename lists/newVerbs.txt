@@ -792,6 +792,7 @@ atucanar
 atufar
 atumultuar
 aturar
+aunar
 autoadministrar
 autoafirmar
 autoagredir

@@ -10,9 +10,10 @@ import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
 const listsDir = path.join(process.cwd(), 'lists');
-const filePath = path.join(libreOfficeSourceDir, 'pt_BR.txt');
-const outputFilePath = path.join(srcDir, 'json', 'allVerbs.json');
+const ptBRPath = path.join(libreOfficeSourceDir, 'pt_BR.txt');
+const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
+const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
 
 async function processVerbsFile(): Promise<void> {
 
@@ -20,33 +21,32 @@ async function processVerbsFile(): Promise<void> {
 
     console.log('Verificando existência de allVerbs.json...');
 
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(ptBRPath)) {
       console.log('- arquivo não encontrado. Baixando...');
-      await pullLibreOfficeWords('https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic', filePath);
+      await pullLibreOfficeWords('https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic', ptBRPath);
     } else {
       console.log('- allVerbs.json já existe.');
     }
 
     console.log('Iniciando o processamento...');
 
-    const cleanedWords = await readTxtLines(filePath);
+    const prBRWords = await readTxtLines(ptBRPath);
     
-    console.log(`- quantidade de vocábulos encontrados: ${cleanedWords.length}`);
+    console.log(`- quantidade de vocábulos encontrados: ${prBRWords.length}`);
     console.log('Adicionando novos verbos à lista do libreOffice...');
 
-    const newWordPath = path.join(listsDir, 'newVerbs.txt');
-    const newWords = await readTxtLines(newWordPath);
+    const newWords = await readTxtLines(newVerbsPath);
     const normNewWords = newWords.map(verb => nw(verb)).filter(verb => verb !== '');
-    const existingWordsSet = new Set(cleanedWords.map(verb => nw(verb)));
+    const existingWordsSet = new Set(prBRWords.map(verb => nw(verb)));
     const filteredNewWords = normNewWords.filter(verb => !existingWordsSet.has(verb));
     const notAddedWords = normNewWords.filter(verb => existingWordsSet.has(verb));
 
     console.log('- verbos que NÃO serão adicionados:', notAddedWords);
     console.log(`- quantidade de novos verbos a serem adicionados: ${newWords.filter(Boolean).length}`);
     
-    const updatedWords = [...cleanedWords, ...filteredNewWords];
+    const updatedWords = [...prBRWords, ...filteredNewWords];
 
-    console.log(`- quantidade de verbos efetivamente acrescidos: ${updatedWords.length - cleanedWords.length}`);
+    console.log(`- quantidade de verbos efetivamente acrescidos: ${updatedWords.length - prBRWords.length}`);
     console.log(`- nova quantidade de vocábulos após complementação: ${updatedWords.length}`);
 
     console.log("Filtrando os vocábulos terminados em 'ar', 'er', 'ir' e 'por'...");
@@ -111,8 +111,8 @@ async function processVerbsFile(): Promise<void> {
 
     let currentVerbs: Record<string, VerbEntry> = {};
 
-    if (fs.existsSync(outputFilePath)) {
-      const rawData = await fs.promises.readFile(outputFilePath, 'utf8');
+    if (fs.existsSync(allVerbsPath)) {
+      const rawData = await fs.promises.readFile(allVerbsPath, 'utf8');
       currentVerbs = JSON.parse(rawData);
     }
 
@@ -121,6 +121,7 @@ async function processVerbsFile(): Promise<void> {
     const processVerbsAsync = async (finalVerbs: string[], currentVerbs: object) => {
 
       const acc = { ...currentVerbs };
+
       const BATCH_SIZE = 10;
       const startTime = Date.now(); 
       const cache = new Map(); 
@@ -144,20 +145,24 @@ async function processVerbsFile(): Promise<void> {
           if (go) {
     
             try {
-              let verbPropsArray = cache.get(normalized);
+              
+              const input = normalized
+              // const input = "sepulcrar"
+              let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
-                verbPropsArray = await getPropsOfVerb(normalized, true, normalized);
-                cache.set(normalized, verbPropsArray);
+                verbPropsArray = await getPropsOfVerb(input, true, input);
+                cache.set(input, verbPropsArray);
               }
       
               if (verbPropsArray.length > 0) {
                 const matchedTermination = verbPropsArray[0]?.termination;
       
-                if (matchedTermination && normalized.endsWith(matchedTermination)) {
-                  if (!acc[normalized].ending.includes(matchedTermination)) {
-                    acc[normalized].ending.push(matchedTermination);
+                if (matchedTermination && input.endsWith(matchedTermination)) {
+                  if (!acc[input].ending.includes(matchedTermination)) {
+                    acc[input].ending.push(matchedTermination);
                   }
                 }
+                
               }
             } catch (error) {
               console.error(`Erro ao processar o verbo ${verb}:`, error);
@@ -185,20 +190,19 @@ async function processVerbsFile(): Promise<void> {
         
       }
 
-      console.log();
       return acc;
 
     };         
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    const removedVerbs = Object.keys(currentVerbs).filter(
-      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    );
+    // const removedVerbs = Object.keys(currentVerbs).filter(
+    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    // );
 
-    removedVerbs.forEach((normalized) => {
-      delete J[normalized];
-    });
+    // removedVerbs.forEach((normalized) => {
+    //   delete J[normalized];
+    // });
 
     // Deletar propriedades
     // Object.keys(J).forEach(normalized => {
@@ -222,7 +226,7 @@ async function processVerbsFile(): Promise<void> {
       }, {});
 
       await fs.promises.writeFile(
-        outputFilePath,
+        allVerbsPath,
         JSON.stringify(sortedJ, null, 2)
           .replace(/\[\s*([\s\S]*?)\s*\]/g, (match, p1) => 
             `[${p1.replace(/\s*,\s*/g, ',').replace(/\n\s*/g, '')}]`)

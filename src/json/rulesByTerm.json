@@ -2,7 +2,7 @@
   "crer": {
     "crer": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -51,7 +51,7 @@
   "dar": {
     "dar": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -211,7 +211,7 @@
   "ler": {
     "ler": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -532,7 +532,7 @@
   "rir": {
     "...rir": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -572,7 +572,7 @@
     },
     "rir": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -613,7 +613,7 @@
   "ser": {
     "ser": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2, 5],
@@ -796,7 +796,7 @@
     },
     "ter": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -883,7 +883,7 @@
   "ver": {
     "...ver": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -954,7 +954,7 @@
     },
     "ver": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -1125,7 +1125,7 @@
     },
     "vir": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -1477,6 +1477,17 @@
     }
   },
   "abrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...abrir": {
       "note": {
         "plain": ["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
@@ -2607,6 +2618,17 @@
     }
   },
   "aguar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...aguar": {
       "note": {
         "plain": ["Nos verbos terminados em 'aguar', é comum e gramaticalmente correto ocorrer acentuação nas formas rizotônicas, isto é, nas formas que apresentam a vogal tônica no radical¹"],
@@ -3495,6 +3517,17 @@
     }
   },
   "aldir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "gualdir": {
       "note": {
         "plain": ["'Gualdir' (comer apressadamente; engolir) é conjugado de preferência somente nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não se encontra no radical¹."],
@@ -3546,9 +3579,20 @@
     }
   },
   "aler": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "valer": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -3880,6 +3924,17 @@
     }
   },
   "alir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "encalir": {
       "note": {
         "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' sim, e apresentam defectividade distintas¹"],
@@ -5750,6 +5805,17 @@
     }
   },
   "ansir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...transir": {
       "note": {
         "plain": ["O verbo 'transir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
@@ -7115,6 +7181,17 @@
     }
   },
   "arrer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "barrer": {
       "note": {
         "plain": ["O verbo 'barrer' (mesmo que 'varrer'¹) é regular²"],
@@ -7342,6 +7419,17 @@
     }
   },
   "artir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...partir": {
       "note": {
         "plain": ["O verbo 'partir' e seus derivados são regulares¹"],
@@ -7594,6 +7682,17 @@
     }
   },
   "asir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...asir": {
       "note": {
         "plain": ["O verbo 'asir' e seus derivados só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical. Logo, são todos defectivos¹."],
@@ -8761,7 +8860,7 @@
   "aver": {
     "haver": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -9230,9 +9329,20 @@
     }
   },
   "azer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...fazer": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2, 4],
@@ -9327,7 +9437,7 @@
     },
     "fazer": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2, 4],
@@ -14928,6 +15038,17 @@
     }
   },
   "ençar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "diferençar": {
       "note": {
         "plain": ["Algumas flexões do verbo 'diferençar' têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
@@ -15261,6 +15382,17 @@
     }
   },
   "enhir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "renhir": {
       "note": {
         "plain": ["O verbo 'renhir' é defectivo; a conjugação ocorre apenas nas formas arrizotônicas, isto é, naquelas cuja vogal tônica se encontra fora do radical¹."],
@@ -16379,6 +16511,17 @@
     }
   },
   "erer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...querer": {
       "note": {
         "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo, exceto o verbo 'requerer' que faz 'requeiro'¹."],
@@ -17300,6 +17443,17 @@
     }
   },
   "ertir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "advertir": {
       "note": {
         "plain": ["'Advertir' e 'divertir' são regulares, observando algumas acomodações gráficas¹."],
@@ -20893,9 +21047,20 @@
     }
   },
   "izer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "dizer": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [1],
@@ -21004,6 +21169,17 @@
     }
   },
   "obrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "cobrir": {
       "note": {
         "plain": ["O verbo cobrir e seus derivados fazem '-ubro' na 1ª pessoa do Presente do Indicativo e flexões correlatas, além de apresentar irregularidade no particípio¹."],
@@ -21057,6 +21233,17 @@
     }
   },
   "obter": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "obter": {
       "note": {
         "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
@@ -21362,6 +21549,17 @@
     }
   },
   "oder": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "poder": {
       "note": {
         "plain": ["O verbo 'poder' e seus derivados são irregulares¹."],
@@ -22037,6 +22235,17 @@
     }
   },
   "olir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "abolir": {
       "note": {
         "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
@@ -22734,6 +22943,17 @@
     }
   },
   "onir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "monir": {
       "note": {
         "plain": ["O verbo 'monir', raro', é defectivo¹."],
@@ -22780,241 +23000,6 @@
       },
       "verbs": {
         "vagir": []
-      },
-      "test": [false]
-    },
-    "demolir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "verbs": {
-        "vagir": []
-      },
-      "test": [false]
-    },
-    "emolir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "verbs": {
-        "vagir": []
-      },
-      "test": [false]
-    },
-    "rebolir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'abolir', 'demolir', 'emolir', 'rebolir' são defectivos¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "verbs": {
-        "vagir": []
-      },
-      "test": [false]
-    },
-    "engolir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'engolir' e seus derivados são irregulares¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "engul": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false]
-    },
-    "...engolir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'engolir' e seus derivados são irregulares¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "ul2": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false]
-    },
-    "polir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'polir' e seus derivados são irregulares¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "ul2": {
-            "pr_ind": ["p1","p2","p3","p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2","p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false]
-    },
-    "...polir": {
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'olir', 'polir' e seus derivados são irregulares¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "type": [1, 3],
-      "abundance1": {},
-      "rules": {
-        "RAD": {
-          "ul2": {
-            "pr_ind": ["p1","p2","p3","p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2","p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
       },
       "test": [false]
     }
@@ -23584,6 +23569,17 @@
     }
   },
   "orir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "...colorir": {
       "note": {
         "plain": ["Dentre os verbos terminados em 'orir', 'colorir' e seus derivados são defectivos¹."],
@@ -24167,9 +24163,20 @@
     }
   },
   "orrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "sorrir": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -24842,6 +24849,17 @@
     }
   },
   "ouvir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "ouvir": {
       "note": {
         "plain": ["O verbo 'ouvir' e seus derivados fazem na 1ª pessoa do Presente do Indicativo e flexões correlacionadas 'ç'¹."],
@@ -24936,7 +24954,7 @@
     },
     "prover": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [2],
@@ -25412,6 +25430,17 @@
     }
   },
   "ucir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "aducir": {
       "note": {
         "plain": ["O verbo 'aducir' é defectivo nas formas rizotônicas."],
@@ -25749,6 +25778,17 @@
     }
   },
   "uidar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
     "ruidar": {
       "note": {
         "plain": ["Todos os verbos terminados em 'idar' são regulares, observando que o verbo 'ruidar' é acentuado nas formas rizotônicas¹."],
@@ -25775,7 +25815,7 @@
   "uir": {
     "...": {
       "note": {
-        "plain": [],
+        "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
       "type": [1],
@@ -26215,6 +26255,3628 @@
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
         }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "ebulir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ulir', 'ebulir' é defectivo para as formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "falir": []
+      },
+      "test": [false]
+    },
+    "bulir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ulir', 'bulir', 'escapulir e 'rebulir' trocam o 'u' por 'o' em algumas flexões¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ol2":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "escapulir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ulir', 'bulir', 'escapulir e 'rebulir' trocam o 'u' por 'o' em algumas flexões¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ol2":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "rebulir": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ulir', 'bulir', 'escapulir e 'rebulir' trocam o 'u' por 'o' em algumas flexões¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ol2":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ulpar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'ulpar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulpir": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'ulpir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulsar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'ulsar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ultar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'ultar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "umar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "ciumar": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "úm2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "aziumar": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "úm2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "umbar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umbar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "umbir": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umbir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "umbrar": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umbrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "umir": {
+    "...": {
+      "note": {
+        "plain": ["Com exceção de 'sumir' e 'consumir', todos os verbos terminados em 'umir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "sumir": {
+      "note": {
+        "plain": ["Com exceção de 'sumir' e 'consumir', todos os verbos terminados em 'umir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "som":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "consumir": {
+      "note": {
+        "plain": ["Com exceção de 'sumir' e 'consumir', todos os verbos terminados em 'umir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "consom":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "umprir": {
+    "...": {
+      "note": {
+        "plain": ["Muitos verbos terminados em 'umprir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unar' são regulares, observando que 'aunar' tem o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "aunar": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unar' são regulares, observando que 'aunar' tem o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ún2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "uncar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uncar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "unçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "unchar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unchar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "undar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'undar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "undir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'undir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unfar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unfar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ungar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ungar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ungir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ungir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "ab-reagir": [39],
+        "agir": [],
+        "coagir": [],
+        "contrarreagir": [],
+        "foragir": [],
+        "interagir": [],
+        "reagir": [],
+        "retroagir": []
+      },
+      "test": [false]
+    },
+    "vagir": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'agir' são regulares e sofrem alterações em algumas flexões, quais sejam, a substituição do  'g' por 'j' antes do 'o' e do 'a' desinenciais. Todavia, o verbo 'vagir' é uma exceção a essa regra: nas formas que seriam com 'j' ele é defectivo¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    }
+  },
+  "unhar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unhar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unhir": {
+    "...": {
+      "note": {
+        "plain": ["Em sentido figurado, todos os verbos terminados em 'unhir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unir": {
+    "...": {
+      "note": {
+        "plain": ["Em sentido figurado, todos os verbos terminados em 'unhir' são regulares, observando que 'reunir' tem o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "reunir": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unar' são regulares, observando que 'aunar' tem o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ún2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "untar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'untar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unver": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [2],
+      "abundance1": {},
+      "rules": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "i": {
+            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "í": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "sto": {
+            "pa": ["n"]
+          },
+          "j": {
+            "pr_ind": ["p1"]
+          },
+          "ja": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "em": {
+            "pr_ind": ["p6"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "verbs": {
+        "antever": [],
+        "circunver": [],
+        "demover": [],
+        "desver": [],
+        "dever": [],
+        "entrever": [],
+        "interver": [],
+        "prever": [],
+        "prover": [],
+        "rever": [],
+        "telever": [],
+        "tresver": []
+      },
+      "test": [false]
+    }
+  },
+  "unzar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'unzar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "upar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'upar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "upir": {
+    "...": {
+      "note": {
+        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "entupir": {
+      "note": {
+        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "op2":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "...entupir": {
+      "note": {
+        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "op2":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "uprar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uprar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uprir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uprir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urbar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urbar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urcar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urcar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "urçar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urçar' são regulares, mas algumas flexões têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "urchar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urchar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urdar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urdar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urdir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urdir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urgar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "urgir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urgir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "ab-reagir": [39],
+        "agir": [],
+        "coagir": [],
+        "contrarreagir": [],
+        "foragir": [],
+        "interagir": [],
+        "reagir": [],
+        "retroagir": []
+      },
+      "test": [false]
+    }
+  },
+  "urir": {
+    "...": {
+      "note": {
+        "plain": ["Os verbos terminados em 'urir' não são conjugados na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1, 3],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "verbs": {
+        "vagir": []
+      },
+      "test": [false]
+    }
+  },
+  "urlar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urlar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urmar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urmar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urnar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urnar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urnir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urnir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urpar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urpar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urrar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ursar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ursar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urtar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urtar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urtir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urtir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urvar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urvar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urzir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urzir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "usar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'usar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uscar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uscar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "qu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "usgar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'usgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "usmar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'usmar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uspir": {
+    "...": {
+      "note": {
+        "plain": ["O verbo 'cupir' e seus deriados são irregulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "osp3":{
+            "pr_ind":["p2","p3","p6"],
+            "im1":["p2"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ustar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uster": {
+    "...": {
+      "note": {
+        "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "rules": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          },
+          "i": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "é": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "ve": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "vera": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "véra": {
+            "pt3_ind": ["p4"]
+          },
+          "vére": {
+            "pt3_ind": ["p5"]
+          },
+          "vesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "vésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ver": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "verbs": {
+        "abster": [],
+        "conter": [],
+        "deter": [],
+        "entreter": [],
+        "obter": [],
+        "reter": []
+      },
+      "test": [false]
+    }
+  },
+  "ustir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ustrar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "utar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'utar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "utir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'utir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "utrir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'utrir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uvar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uvar' são regulares, observando que 'enviuvar' e 'viuvar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "enviuvar": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "úv2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "viuvar": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "úv2":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "uxar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uxar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uzar": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uzar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uzir": {
+    "...": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uzar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ablar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "abrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aflar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "afrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "albar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ampir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "anfar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "anfrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "antrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "arsar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "astir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eiar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "embar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "emblar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "enrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ibrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "igrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "imbrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "iplar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "irtar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "isdar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "udrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ufir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "umbrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "usir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unstar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uplar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "urfar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aibar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aislar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "arctar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "augir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aunar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "austrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    },
+    "abalaustrar": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ústr4":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    },
+    "balaustrar": {
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+        "RAD":{
+          "ústr4":{
+            "pr_ind":["p1","p2","p3","p6"],
+            "pr_sub":["p1","p2","p3","p6"],
+            "im1":["p2","p3","p6"],
+            "im2":["p2","p3","p6"]
+          }
+        }
+      },
+      "test": [false]
+    }
+  },
+  "ãzar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eclar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eflar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "egnar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "egrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eidar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eldar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "elgar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "elpar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eltar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "emptar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ilgar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "iptar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "irgar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oldrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "orber": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "orfar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oslar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "otrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uctar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "udlar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uivar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "abster": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "advir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "anspor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "apor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "epor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "erpor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "expor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "impor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ispor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "obpor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ompor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "opor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ospor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ubpor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "upor": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "arguir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "inquir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oquir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "osquir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uquir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "usquir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ager": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "exir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ipir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oler": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulcir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ocer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uxir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "intar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ugrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulvar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "iscrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ussar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ubrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eber": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "arxar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "assir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "evrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aldrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "infrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ochir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oger": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oscer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "apsar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "oner": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "agmar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulçar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "enxar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "elhir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "algir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "aldrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "elmar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "odrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "orzar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ildrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ander": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "onjir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "esir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "onfar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "elsar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "exstar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "engir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "erpar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "esprar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "usmir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ictar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "onger": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "unger": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "utrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ifrir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ocir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "enclar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "erchar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "implar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "anhir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "usnar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "abdar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "egir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "amprar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "iflar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "uisir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "iscer": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "eir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "olvir": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "onflar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {
+      },
+      "test": [false]
+    }
+  },
+  "ulcrar": {
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
       },
       "type": [1],
       "abundance1": {},

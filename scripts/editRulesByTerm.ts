@@ -23,6 +23,7 @@ const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
 
 async function addVerbsToJson() {
+
   try {
     const [allVerbsDataStr, rulesByTermDataStr] = await Promise.all([
       fs.promises.readFile(allVerbsPath, 'utf8'),
@@ -38,13 +39,25 @@ async function addVerbsToJson() {
     const verbFilter = (verbData: VerbData, mainKey: string) => 
       Array.isArray(verbData.ending) && verbData.ending.includes(mainKey);
 
+    console.log("Verificando verbos sem terminação estabelecida...")
+
+    const result = Object.entries(allVerbsData)
+      .filter(([_, value]) => value.ending.length === 0)
+      .map(([key]) => key);
+    
+    if (result.length === 0) {
+      console.log(`- todos os verbos possuem valor na propriedade ending`);
+    } else {
+      console.log(`- verbos: ${result.join(", ")}`);
+    }
+
     console.log("Iniciando a busca por verbos correspondentes a cada terminação...");
 
     let dataChanged = false; 
 
     for (let index = 0; index < totalKeys; index++) {
 
-      // const mainKey = "por";
+      // const mainKey = "crer";
       const mainKey = mainKeys[index];
       const progress = Math.floor(((index + 1) / totalKeys) * 100);
       process.stdout.write(`- progresso: ${progress}%\r`);
@@ -76,8 +89,6 @@ async function addVerbsToJson() {
                 }
               })
           );
-
-          console.log(result)
 
           await Promise.all(verbPropsPromises);
 
