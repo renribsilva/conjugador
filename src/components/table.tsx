@@ -313,7 +313,6 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
                 isSeActive ? styles.active : styles.inactive
               }`}
               onClick={() => {handleSeClick()}}
-              // disabled={!!isOnlyReflexive}
             >
               -se
             </button>
