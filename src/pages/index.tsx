@@ -619,7 +619,7 @@ const Index = () => {
       </section>
       {/* foot */}
       <section className={styles.foot_info}>
-        <Socials />
+        {mounted && <Socials />}
         <Footer />
       </section>
     </div>
