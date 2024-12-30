@@ -675,6 +675,7 @@ aquedar
 aquelar
 aquentar
 aquietar
+aquilatar
 aquilhar
 aquilotar
 aquiltar
@@ -754,6 +755,7 @@ assonar
 assovelar
 assovinar
 assuar
+assubstantivar
 assucar
 assujeitar
 assumagrar
@@ -792,6 +794,7 @@ atoar
 atocaiar
 atombar
 atonizar
+atorar
 atormentar
 atorrear
 atossicar
@@ -838,8 +841,10 @@ autonomear
 autoproclamar
 autopromover
 autoproteger
-autorregenar
+autorregenerar
+autossugestionar
 avampirar
+avariar
 avaridar
 avassalar
 aveadar
@@ -859,6 +864,7 @@ avoejar
 avozear
 avozeirar
 axadrezar
+azabumbar
 azagaiar
 azangar
 azaranzar
@@ -892,12 +898,15 @@ bisturizar
 boloirar
 bolotar
 bowdlerizar
+brinquetar
 burrear
 
 cabimentar
 cabralizar
 cafrealizar
 calamoçar
+cançonetear
+canjar
 canjicar
 carcarejar
 catectizar

@@ -192,9 +192,18 @@
 /**************************************************/
 
 .theme_button {
-  /* background-color:var(--background); */
+  background-color:var(--button);
   border: none;
-  height: 25px;
+  height: 30px;
+  border-radius: 5px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme_button *{
+  background-color:var(--button);
 }
 
 /***************************************************/

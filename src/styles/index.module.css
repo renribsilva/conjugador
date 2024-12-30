@@ -113,30 +113,52 @@
   }
 }
 
-.button_inf {
+.index_tabs {
   /* background-color: aquamarine; */
-  height: 45%;
-  padding-top: 8px;
+  padding: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
   display: flex;
   justify-content: right;
-  gap: 10px;
 }
 
-@media (max-width: 800px) {
-  .button_inf {
-    justify-content: center;
-    gap: 20px;
-  }
+.index_tabs_container {
+  background-color: var(--button);
+  width: 290px;
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
+  border-radius: 5px;
+  /* width: 200px; */
 }
 
-.button_nav {
-  background-color: var(--background);
+.index_tabs .index_tabs_container .index_tabs_button:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.index_tabs_button.active {
+  background-color: var(--foreground);
+  color:var(--background);
+}
+
+.index_tabs_button {
+  background-color: var(--button);
   border: none;
-  height: 25px;
+  border-radius: 2px;
+  height: 30px;
+  width: 70px;
   cursor: pointer;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .index_tabs {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 /*************************************************/
@@ -197,11 +219,6 @@
     display: flex;
     justify-content: center;
   }
-}
-
-.buttonTheme {
-  width: 30px;
-  height: 30px;
 }
 
 .similarButton {

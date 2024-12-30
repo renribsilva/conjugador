@@ -20,6 +20,7 @@ import postReqConjByAPI from "../lib/postReqConjByAPI";
 const Index = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
+  const [activeTab, setActiveTab] = useState('home');
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq);
@@ -61,7 +62,8 @@ const Index = () => {
       showSuggestions: false,
       showButton: false,
       isButtonDisabled: false,
-    });    
+    });
+    setActiveTab('sobre'); 
   };
 
   const handleHome = () => {
@@ -77,6 +79,7 @@ const Index = () => {
       punct: null,
       isButtonDisabled: false,
     });
+    setActiveTab('home');
   };
 
   const handleStatistic = () => {
@@ -92,6 +95,7 @@ const Index = () => {
       punct: null,
       isButtonDisabled: false,
     });
+    setActiveTab('statistic');
   };
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -193,17 +197,32 @@ const Index = () => {
                 conjugador-gules
               </button>
             </div>
-            <div className={styles.button_inf}>
-              <div>
-                <button onClick={handleHome} className={styles.button_nav}>início</button>
-              </div>
-              <div>
-                <button onClick={handleStatistic} className={styles.button_nav}>dados</button>
-              </div>
-              <div>
-                <button onClick={handleSobre} className={styles.button_nav}>sobre</button>
-              </div>
-              <div className={styles.buttonTheme}>
+            <div className={styles.index_tabs}>
+              <div className={styles.index_tabs_container}>
+                <button
+                  onClick={handleHome}
+                  className={`${styles.index_tabs_button} ${
+                    activeTab === 'home' && state.conjugations === null ? styles.active : ''
+                  }`}
+                >
+                  início
+                </button>
+                <button
+                  onClick={handleStatistic}
+                  className={`${styles.index_tabs_button} ${
+                    activeTab === 'statistic' && state.conjugations === null ? styles.active : ''
+                  }`}
+                >
+                  dados
+                </button>
+                <button
+                  onClick={handleSobre}
+                  className={`${styles.index_tabs_button} ${
+                    activeTab === 'sobre' && state.conjugations === null ? styles.active : ''
+                  }`}
+                >
+                  sobre
+                </button>
                 <Theme />
               </div>
             </div>
