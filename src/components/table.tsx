@@ -31,9 +31,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
   };
 
   const handleSeClick = () => {
-    if (!isOnlyReflexive) {
-      setSeActive((prev) => !prev);
-    }
+    setSeActive((prev) => !prev);
   };
 
   useEffect(() => {
