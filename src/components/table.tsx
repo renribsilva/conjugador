@@ -298,7 +298,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               <button
                 key={pronoun}
                 className={`${styles.table_tabs_pronouns_button} ${
-                  activePronoun === pronoun ? styles.active : ""
+                  activePronoun === pronoun ? styles.active : styles.inactive
                 }`}
                 onClick={() => handlePronounClick(pronoun)}
               >

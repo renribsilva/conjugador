@@ -132,14 +132,9 @@
   /* width: 200px; */
 }
 
-.index_tabs .index_tabs_container .index_tabs_button:hover {
+.index_tabs_container .index_tabs_button:hover {
   background-color: var(--foreground);
   color: var(--background);
-}
-
-.index_tabs_button.active {
-  background-color: var(--foreground);
-  color:var(--background);
 }
 
 .index_tabs_button {
@@ -152,6 +147,16 @@
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 300;
+}
+
+.index_tabs_button.active {
+  background-color: var(--foreground);
+  color:var(--background);
+}
+
+.index_tabs_button.inactive {
+  background-color: var(--button);
+  color:var(--foreground);
 }
 
 @media (max-width: 800px) {

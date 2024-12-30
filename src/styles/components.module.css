@@ -125,7 +125,7 @@
   width: 50px;
 }
 
-.table_tabs_pronouns_container :hover {
+.table_tabs_pronouns_container .table_tabs_pronouns_button:hover {
   background-color: var(--foreground);
   color: var(--background);
 }
@@ -133,6 +133,11 @@
 .table_tabs_pronouns_button.active {
   background-color: var(--foreground);
   color: var(--background);
+}
+
+.table_tabs_pronouns_button.inactive {
+  background-color: var(--button);
+  color: var(--foreground);
 }
 
 .table_tabs_se_container {
@@ -155,7 +160,7 @@
   width: 50px;
 }
 
-.table_tabs_se_container :hover {
+.table_tabs_se_container .table_tabs_se_button:hover {
   background-color: var(--foreground);
   color: var(--background);
 }

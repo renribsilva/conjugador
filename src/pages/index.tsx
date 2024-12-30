@@ -211,7 +211,9 @@ const Index = () => {
                 <button
                   onClick={handleHome}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'home' && state.conjugations === null ? styles.active : ''
+                    activeTab === 'home' && state.conjugations === null 
+                    ? styles.active 
+                    : styles.inactive
                   }`}
                 >
                   início
@@ -219,7 +221,9 @@ const Index = () => {
                 <button
                   onClick={handleStatistic}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'statistic' && state.conjugations === null ? styles.active : ''
+                    activeTab === 'statistic' && state.conjugations === null 
+                    ? styles.active 
+                    : styles.inactive
                   }`}
                 >
                   dados
@@ -227,7 +231,9 @@ const Index = () => {
                 <button
                   onClick={handleSobre}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'sobre' && state.conjugations === null ? styles.active : ''
+                    activeTab === 'sobre' && state.conjugations === null 
+                    ? styles.active 
+                    : styles.inactive
                   }`}
                 >
                   sobre
