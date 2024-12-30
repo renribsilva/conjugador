@@ -26,9 +26,9 @@ function Theme() {
       style={{ cursor: "pointer" }}
       className={styles.theme_button}
     >
-      <span className="material-symbols-outlined" aria-hidden="true">
+      {<span className="material-symbols-outlined" aria-hidden="true">
         {resolvedTheme === "light" ? "dark_mode" : "sunny"}
-      </span>
+      </span>}
     </button>
   );
 }

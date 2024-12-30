@@ -21,6 +21,7 @@ const Index = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
+  const [mounted, setMounted] = useState(false);
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq);
@@ -171,6 +172,14 @@ const Index = () => {
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
+  useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className={styles.index}>
       {/* header */}
@@ -223,7 +232,7 @@ const Index = () => {
                 >
                   sobre
                 </button>
-                <Theme />
+                {mounted && <Theme />}
               </div>
             </div>
           </div>
