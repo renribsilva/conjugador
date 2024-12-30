@@ -38,7 +38,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
     if (isOnlyReflexive) {
       setSeActive(true);
     }
-  }, [isOnlyReflexive]);
+  }, []);
 
   useEffect(() => {
   }, [activePronoun, isSeActive]);
