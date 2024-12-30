@@ -34,15 +34,6 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
     }
   };
 
-  useEffect(() => {
-    if (isOnlyReflexive) {
-      setSeActive(true);
-    }
-  }, []);
-
-  useEffect(() => {
-  }, [activePronoun, isSeActive]);
-
   const block = ({ adv, ten, conj, mod, modext }) => {
 
     const X = conj[mod];
@@ -125,6 +116,15 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
         </span>
       );
     };
+
+    useEffect(() => {
+      if (isOnlyReflexive) {
+        setSeActive(true);
+      }
+    }, []);
+  
+    useEffect(() => {
+    }, [activePronoun, isSeActive]);
   
     return (
       <div className={styles.col}>
