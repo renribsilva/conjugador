@@ -312,10 +312,8 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               className={`${styles.table_tabs_se_button} ${
                 isSeActive ? styles.active : styles.inactive
               }`}
-              onClick={() => {
-                handleSeClick();
-              }}
-              disabled={!!isOnlyReflexive}
+              onClick={() => {handleSeClick()}}
+              // disabled={!!isOnlyReflexive}
             >
               -se
             </button>
