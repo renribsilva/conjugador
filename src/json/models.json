@@ -1,5 +1,5 @@
 {
-  "A":{
+  "Regular":{
     "1": ["passar"],
     "2": ["bater"],
     "3": ["partir"],
@@ -23,13 +23,13 @@
     "21": ["enfeitar"],
     "22": ["poupar"]
   },
-  "B":{
+  "Regular (com hiato no radical)":{
     "23": ["enraizar"],
     "24": ["saudar"],
     "25": ["proibir"],
     "26": ["reunir"]
   },
-  "C":{
+  "Regular (com alternância vocálica)":{
     "27": ["mexer"],
     "28": ["colher"],
     "29": ["ferir"],
@@ -37,7 +37,7 @@
     "31": ["sentir"],
     "32": ["coerir"]
   },
-  "D":{
+  "Regular (com acomodações gráficas)":{
     "33": ["atacar"],
     "34": ["afagar"],
     "35": ["dançar"],
@@ -48,25 +48,31 @@
     "40": ["erguer"],
     "41": ["distinguir"]
   },
-  "E":{
-    "42": ["desejar"],
+
+  "Regular (com particularidade vocálica)":{
+    "42": ["desejar"]
+  },
+  "Irregular (nas formas rizotônicas)":{
     "43": ["chegar"],
+    "44": ["moer"],
     "45": ["agredir"],
     "46": ["emergir"],
     "47": ["explodir"],
     "48": ["polir"],
-    "49": ["moscar"],
     "50": ["frigir"],
     "51": ["construir"],
     "52": ["sacudir"],
     "53": ["sumir"]
   },
-  "F":{
-    "54": ["passear"],
+  "Regular (com modificações)": {
+    "49": ["moscar"],
+    "54": ["passear"]
+  },
+  "Irregular":{
     "55": ["ansiar"],
     "56": ["estrear"]
   },
-  "G":{
+  "Regular (com prosódia variável)":{
     "57": ["averiguar"],
     "58": ["enxaguar"],
     "59": ["resfolegar"],
@@ -74,7 +80,7 @@
     "61": ["desmilinguir"],
     "62": ["delinquir"]
   },
-  "H":{
+  "Irregular (fraco)":{
     "63": ["medir"],
     "62": ["ouvir"],
     "65": ["parir"],
@@ -83,7 +89,7 @@
     "68": ["requerer"],
     "69": ["valer"]
   },
-  "I":{
+  "Irregular (forte)":{
     "70": ["caber"],
     "71": ["comprazer"],
     "72": ["dizer"],
@@ -95,7 +101,7 @@
     "78": ["saber"],
     "79": ["trazer"]
   },
-  "J":{
+  "Irregular (monossilábico)":{
     "80": ["dar"],
     "81": ["ir"],
     "82": ["ler", "crer"],
@@ -109,7 +115,7 @@
     "90": ["vir"],
     "91": ["provir"]
   },
-  "K":{
+  "Defectivo (abolir)":{
     "92": ["abolir"],
     "93": ["excelir"],
     "94": ["fremir"],
@@ -117,13 +123,13 @@
     "96": ["retorquir"],
     "97": ["soer"]
   },
-  "L":{
+  "Defectivo (falir)":{
     "98": ["precaver"],
     "99": ["reaver"],
     "100": ["embair"],
     "101": ["falir"]
   },
-  "M":{
+  "Defectivo (aprazer)":{
     "102": ["aprazer"],
     "103": ["concernir"],
     "104": ["doer"],
