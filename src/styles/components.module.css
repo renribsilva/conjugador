@@ -165,9 +165,13 @@
   color: var(--background);
 }
 
-.table_tabs_se_button.active:disabled {
-  background-color: var(--background);
-  color: var(--foreground);
+.table_tabs_se_button:disabled {
+  background-color: var(--button-disabled);
+  color: var(--foreground-disabled);
+}
+
+.table_tabs_se_button:focus {
+  outline: none;
 }
 
 /***************************************************/
