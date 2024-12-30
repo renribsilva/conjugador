@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/components.module.css";
 import { nw } from "../lib/normalizeVerb";
-import { Conjugation, VerbEntry } from "../types";
+import { Conjugation } from "../types";
 
 const pronouns = {
   eu: "eu",
@@ -20,8 +20,6 @@ const pronouns = {
 export default function Table ({ conjugations }: { conjugations: Conjugation }) {
 
   const isOnlyReflexive = conjugations.pronoun[0]
-  // const isRegularVerb = conjugations.model
-  // console.log(isRegularVerb)
 
   const [activePronoun, setActiveButton] = useState<string | null>("ela");
   const [isSeActive, setSeActive] = useState(false);
@@ -179,7 +177,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
           <>
             <div>
               <C1 p="p1" />{" "}
-              <C2 p="p1" />{isSeActive? "-se" : ''}{" "}
+              <C2 p="p1" />{isSeActive? "-me" : ''}{" "}
               <C3 p="p1" q="eu" />
             </div>
             <div>
@@ -267,6 +265,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
                     .map(nw)
                     .join(' / ')
                 : nw(conjugations.inf.p3[0])}
+                {isSeActive && "-se"}
             </span>
           </div>
           <div>
@@ -278,11 +277,13 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
                     .map(nw)
                     .join(' / ')
                 : nw(conjugations.gd.n[0])}
+                {isSeActive && "-se"}
             </span>
           </div>
           <div>
             <strong>Particípio: </strong>
             <span>
+              {isSeActive && "se "}
               {Array.isArray(conjugations.pa.n)
                 ? conjugations.pa.n
                     .filter((item) => item !== null)
