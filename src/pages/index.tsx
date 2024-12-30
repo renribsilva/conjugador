@@ -212,7 +212,7 @@ const Index = () => {
                 <button
                   onClick={handleHome}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'home' && state.conjugations === null 
+                    activeTab === 'home' && state.conjugations === null && !state.showButton
                     ? styles.active 
                     : styles.inactive
                   }`}
@@ -222,7 +222,7 @@ const Index = () => {
                 <button
                   onClick={handleStatistic}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'statistic' && state.conjugations === null 
+                    activeTab === 'statistic' && state.conjugations === null && !state.showButton
                     ? styles.active 
                     : styles.inactive
                   }`}
@@ -232,7 +232,7 @@ const Index = () => {
                 <button
                   onClick={handleSobre}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'sobre' && state.conjugations === null 
+                    activeTab === 'sobre' && state.conjugations === null && !state.showButton
                     ? styles.active 
                     : styles.inactive
                   }`}
