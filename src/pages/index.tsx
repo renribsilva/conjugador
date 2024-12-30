@@ -11,6 +11,7 @@ import About from "../mdx/About.mdx";
 import Statistic from "../mdx/Statistic.mdx";
 import Warning from "../mdx/Warning.mdx";
 import Emphasis from "../mdx/Emphasis.mdx";
+import Reflexive from "../mdx/Reflexive.mdx";
 import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
@@ -594,6 +595,10 @@ const Index = () => {
                   <div className={styles.warning}>
                     <strong>Destaques:</strong>
                     <ul><Emphasis /></ul>
+                  </div>
+                  <div className={styles.warning}>
+                    <strong>Conjugação reflexiva:</strong>
+                    <ul><Reflexive /></ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Sobre erros:</strong>
