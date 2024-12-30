@@ -313,9 +313,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
                 isSeActive ? styles.active : styles.inactive
               }`}
               onClick={() => {
-                if (!isOnlyReflexive) {
-                  handleSeClick(); 
-                }
+                handleSeClick();
               }}
               disabled={!!isOnlyReflexive}
             >
