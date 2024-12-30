@@ -165,9 +165,9 @@
   color: var(--background);
 }
 
-.table_tabs_se_button:disabled {
-  background-color: var(--button-disabled);
-  color: var(--foreground-disabled);
+.table_tabs_se_button.inactive {
+  background-color: var(--button);
+  color: var(--foreground);
 }
 
 /***************************************************/

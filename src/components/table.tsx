@@ -31,7 +31,9 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
   };
 
   const handleSeClick = () => {
-    setSeActive((prev) => !prev);
+    if (!isOnlyReflexive) {
+      setSeActive((prev) => !prev);
+    }
   };
 
   useEffect(() => {
@@ -307,7 +309,7 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
           <div className={styles.table_tabs_se_container}>
             <button
               className={`${styles.table_tabs_se_button} ${
-                isSeActive ? styles.active : ""
+                isSeActive ? styles.active : styles.inactive
               }`}
               onClick={() => {
                 if (!isOnlyReflexive) {
