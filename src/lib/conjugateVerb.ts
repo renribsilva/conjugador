@@ -2,6 +2,8 @@ import reg from '../json/rulesForReg.json';
 import { findNoRegRule } from './findNoRegVerbs';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
+import allVerbsData from "../json/allVerbs.json"
+import { getPropsOfVerb } from './getPropsOfVerb';
 
 export const conjugateVerb = (verb: string) => {
 
@@ -163,6 +165,8 @@ export const conjugateVerb = (verb: string) => {
   };
 
   const conj = {
+    model: allVerbsData[verb].model,
+    pronoun: allVerbsData[verb].pronominal,
     gd: N("gd"),
     pa: N("pa"),  
     pr_ind: W("pr_ind"),

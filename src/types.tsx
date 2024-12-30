@@ -10,6 +10,8 @@ type Person = {
 };
 
 export type Conjugation = {
+  model: string[],
+  pronoun: boolean[],
   gd: {
     n: string[];
   };

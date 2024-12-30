@@ -117,7 +117,7 @@
 }
 
 .table_tabs_pronouns_button {
-  /* background-color: bisque; */
+  background-color: var(--button);
   border: 0px;
   height: 30px;
   cursor: pointer;
@@ -147,7 +147,7 @@
 }
 
 .table_tabs_se_button {
-  /* background-color: bisque; */
+  background-color: var(--button);
   border: 0px;
   height: 30px;
   cursor: pointer;

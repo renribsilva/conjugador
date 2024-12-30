@@ -147,7 +147,7 @@
     "verb": ["abagualar"],
     "model": [4],
     "ending": ["alar"],
-    "pronominal": [false]
+    "pronominal": [true]
   },
   "abagunçar": {
     "verb": ["abagunçar"],
