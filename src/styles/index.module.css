@@ -174,8 +174,7 @@
 .main {
   /* background-color: aquamarine; */
   display: flex;
-  justify-content: center;
-  
+  justify-content: center;  
 }
 
 .panel {
@@ -189,7 +188,7 @@
 
 @media (max-width: 800px) {
   .panel {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 
