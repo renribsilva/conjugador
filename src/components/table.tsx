@@ -43,73 +43,97 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
     const isFutPres = ten === "Futuro do Presente";
     const isFutPret = ten === "Futuro do Pretérito";
     const isIndicativo = modext === "Indicativo";
+    const isSubjuntivo = modext === "Subjuntivo";
 
-    const C1 = ({ p }: { p: string }) => {
-      return (
-        <span className={styles.adv}>
-          {Array.isArray(X[p]) && X[p][0] !== "---" ? adv : ""}
-        </span>
-      );
-    };
+    const isValid = (p: string) => X[p][0] !== "---"
 
-    const C2 = ({ p, removeS, isFut }: { p: string, removeS?: boolean, isFut?: boolean }) => {
+    const C2util = ({ 
+      p, 
+      removeS, 
+      isFut, 
+      suffix = '', 
+      order 
+    } : { 
+      p: string, 
+      removeS?: boolean, 
+      isFut?: boolean, 
+      suffix?: string, 
+      order?: string }) => {
 
       const value = Array.isArray(X[p]) 
-        ? X[p].filter((item) => item !== null).map(nw).join(' / ') 
-        : nw(X[p]);
-      
-      const lengthX = X[p][0].length
-      const lengthW = (X["p1"][0].length - 2)
+        ? X[p].filter((item) => item !== null).map(nw) 
+        : [nw(X[p])];
     
-      const adjustedValue = removeS && typeof value === 'string' && value.endsWith('s')
-        ? value.slice(0, -1)
-        : isFut && typeof value === 'string' 
-        ? value.slice(0, (lengthW-lengthX))
-        : value;
+      const lengthX = (p: string, i: number) => (X[p][i].replace("*", "").length);
+      const lengthW = conj["inf"].p3[0].length
+    
+      let adjustedValue: string[] | string = value.map((item, index) => {
+
+        const originalItem = item
+        
+        if (removeS && typeof item === 'string' && (item.endsWith('s') || item.endsWith('s*'))) {
+          item = item.endsWith('s*')
+            ? `${item.replace("*", "").slice(0, -1)}*`
+            : item.slice(0, -1);
+        }
+        
+        if (suffix && item !== '') {
+          isFut
+          ? item = `${item.slice(0, lengthW)}-${suffix}-${originalItem.replace("*","").slice(lengthW-lengthX(p, index))}`
+          : order === "ênclise" ? item = `${item}-${suffix}` : item = `${suffix} ${item}`;
+        }
+
+        return item;
+
+      });
+    
+      if (Array.isArray(adjustedValue)) {
+        adjustedValue = adjustedValue.join(' / ');
+      }
     
       return (
         <span>{adjustedValue}</span>
       );
     };
 
-    const C2GetLastTwoLetters = ({ p }: { p: string }) => {
-
-      const value = Array.isArray(X[p])
-        ? X[p].filter((item) => item !== null).map(nw).join(' / ')
-        : nw(X[p]);
-
-      const lengthX = X[p][0].length
-      const lengthW = (X["p1"][0].length - 2)
-      return typeof value === 'string' && value.length > 2
-        ? value.slice(lengthW-lengthX)
-        : value;
+    const C1Wrapper = ({ p }: { p: string }) => {
+      return (
+        <span className={styles.adv}>
+          {Array.isArray(X[p]) && X[p][0] !== "---" ? adv : ""}
+        </span>
+      );
     };
     
-    const C2Wrapper = ({ p, suffix, removeS }: { p: string; suffix: string, removeS?: boolean }) => {
+    const C2Wrapper = (
+      { p, 
+        removeS, 
+        suffix = '',
+      }: 
+      { p: string, 
+        removeS?: boolean, 
+        suffix?: string
+      }) => {
+
       return (
         <>
-          {isSeActive ? (
-            isIndicativo && (isFutPres || isFutPret) ? (
-              <>
-                <C2 p={p} isFut={true} />-{suffix}-<C2GetLastTwoLetters p={p} />
-              </>
-            ) : isIndicativo ? (
-              <>
-                <C2 p={p} removeS={removeS}/>-{suffix}
-              </>
-            ) : (
-              <>
-                {suffix.trim()} <C2 p={p} />
-              </>
-            )
-          ) : (
-            <C2 p={p} />
+          {isSeActive && isValid(p) 
+          ?
+          isIndicativo && (isFutPres || isFutPret) 
+            ? <C2util p={p} isFut={true} suffix={suffix} removeS={removeS}/> 
+            : isSubjuntivo 
+              ? <C2util p={p} suffix={suffix} /> 
+              : isNegative 
+                ? <C2util p={p} suffix={suffix} removeS={removeS}/> 
+                : <C2util p={p} suffix={suffix} order="ênclise" removeS={removeS}/> 
+          : 
+          (
+            <C2util p={p} />
           )}
         </>
-      );
+      ); 
     };      
 
-    const C3 = ({ p, q }: { p: string , q: string}) => {
+    const C3Wrapper = ({ p, q }: { p: string , q: string}) => {
       return (
         <span className={styles.pronouns}>
           {Array.isArray(X[p]) && X[p][0] !== "---" ? pronouns[q] : ""}
@@ -129,122 +153,131 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
     return (
       <div className={styles.col}>
         <div className={styles.ten}>{ten}</div>
-        {(isAfirmative || isNegative) ? (
+        {(isNegative) ? (
           <>
             <div>{nw(X.p1[0])}</div>
             <div>
-              <C1 p="p2" />{(isSeActive && isNegative)? " te" : ''}{" "}
-              <C2 p="p2" />{(isSeActive && isAfirmative)? "-te" : ''}{" "}
-              <C3 p="p2" q="tu" />
+              <C1Wrapper p="p2" />{" "}
+              <C2Wrapper p="p2" suffix="te"/>{" "}
+              <C3Wrapper p="p2" q="tu" />
             </div>
             <div>
-              <C1 p="p3" />{(isSeActive && isNegative)? " se" : ''}{" "}
-              <C2 p="p3" />{(isSeActive && isAfirmative)? "-se" : ''}{" "}
-              <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"}/>
+              <C1Wrapper p="p3" />{" "}
+              <C2Wrapper p="p3" suffix="se"/>{" "}
+              <C3Wrapper p="p3" q={activePronoun? `${activePronoun}` : "ela"}/>
             </div>
             <div>
-              <C1 p="p4" />{(isSeActive && isNegative)? " nos" : ''}{" "}
-              {isSeActive && isNegative ? (
-                <>
-                  <C2 p="p4" removeS={false} />
-                  {(isSeActive && isAfirmative) ? "-nos" : ''}{" "}
-                </>
-              ) : 
-              isSeActive && isAfirmative ? (
-                <>
-                  <C2 p="p4" removeS={true} />
-                  {(isSeActive && isAfirmative) ? "-nos" : ''}{" "}
-                </>
-              ) : (
-                <>
-                  <C2 p="p4" />{" "}
-                </>
-              )}
-              <C3 p="p4" q="nós" />
+              <C1Wrapper p="p4" />{" "}
+              <C2Wrapper p="p4" suffix="nos"/>{" "}
+              <C3Wrapper p="p4" q="nós" />
             </div>
             <div>
-              <C1 p="p5" />{(isSeActive && isNegative)? " vos" : ''}{" "}
-              <C2 p="p5" />{(isSeActive && isAfirmative)? "-vos" : ''}{" "}
-              <C3 p="p5" q="vós" />
+              <C1Wrapper p="p5" />{" "}
+              <C2Wrapper p="p5" suffix="vos"/>{" "}
+              <C3Wrapper p="p5" q="vós" />
             </div>
             <div>
-              <C1 p="p6" />{(isSeActive && isNegative)? " se" : ''}{" "}
-              <C2 p="p6" />{(isSeActive && isAfirmative)? "-se" : ''}{" "}
-              <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />
+              <C1Wrapper p="p6" />{" "}
+              <C2Wrapper p="p6" suffix="se"/>{" "}
+              <C3Wrapper p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />
+            </div>
+          </>
+        ) : isAfirmative ? (
+          <>
+            <div>
+              <C1Wrapper p="p1" />{" "}
+              <C2Wrapper p="p1" />{" "}
+              <C3Wrapper p="p1" q="eu" />
+            </div>
+            <div>
+              <C1Wrapper p="p2" />{" "}
+              <C2Wrapper p="p2" suffix="te"/>{" "}
+              <C3Wrapper p="p2" q="tu" />
+            </div>
+            <div>
+              <C1Wrapper p="p3" />{" "}
+              <C2Wrapper p="p3" suffix="se"/>{" "}
+              <C3Wrapper p="p3" q={activePronoun? `${activePronoun}` : "ela"} />
+              </div>
+            <div>
+              <C1Wrapper p="p4" />{" "}
+              <C2Wrapper p="p4" suffix="nos" removeS={true}/>{" "}
+              <C3Wrapper p="p4" q="nós" />
+            </div>
+            <div>
+              <C1Wrapper p="p5" />{" "}
+              <C2Wrapper p="p5" suffix="vos"/>{" "}
+              <C3Wrapper p="p5" q="vós" />
+            </div>
+            <div>
+              <C1Wrapper p="p6" />{" "}
+              <C2Wrapper p="p6" suffix="se"/>{" "}
+              <C3Wrapper p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />
             </div>
           </>
         ) : isInfinitive ? (
           <>
             <div>
-              <C1 p="p1" />{" "}
-              <C2 p="p1" />{isSeActive? "-me" : ''}{" "}
-              <C3 p="p1" q="eu" />
+              <C1Wrapper p="p1" />{" "}
+              <C2Wrapper p="p1" suffix="me"/>{" "}
+              <C3Wrapper p="p1" q="eu" />
             </div>
             <div>
-              <C1 p="p2" />{" "}
-              <C2 p="p2" />{isSeActive? "-te" : ''}{" "}
-              <C3 p="p2" q="tu" />
+              <C1Wrapper p="p2" />{" "}
+              <C2Wrapper p="p2" suffix="te"/>{" "}
+              <C3Wrapper p="p2" q="tu" />
             </div>
             <div>
-              <C1 p="p3" />{" "}
-              <C2 p="p3" />{isSeActive? "-se" : ''}{" "}
-              <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"} />
+              <C1Wrapper p="p3" />{" "}
+              <C2Wrapper p="p3" suffix="se"/>{" "}
+              <C3Wrapper p="p3" q={activePronoun? `${activePronoun}` : "ela"} />
               </div>
             <div>
-              <C1 p="p4" />{" "}
-              {isSeActive ? (
-                <>
-                  <C2 p="p4" removeS={true} />
-                  {isSeActive ? "-nos" : ''}{" "}
-                </>
-              ) : (
-                <>
-                  <C2 p="p4" />{" "}
-                </>
-              )}
-              <C3 p="p4" q="nós" />
+              <C1Wrapper p="p4" />{" "}
+              <C2Wrapper p="p4" suffix="nos" removeS={true}/>{" "}
+              <C3Wrapper p="p4" q="nós" />
             </div>
             <div>
-              <C1 p="p5" />{" "}
-              <C2 p="p5" />{isSeActive? "-vos" : ''}{" "}
-              <C3 p="p5" q="vós" />
+              <C1Wrapper p="p5" />{" "}
+              <C2Wrapper p="p5" suffix="vos"/>{" "}
+              <C3Wrapper p="p5" q="vós" />
             </div>
             <div>
-              <C1 p="p6" />{" "}
-              <C2 p="p6" />{isSeActive? "-se" : ''}{" "}
-              <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />
+              <C1Wrapper p="p6" />{" "}
+              <C2Wrapper p="p6" suffix="se"/>{" "}
+              <C3Wrapper p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />
             </div>
           </>
         ) : (
           <>
             <div>
-              <C1 p="p1" />{" "}
-              <C3 p="p1" q="eu" />{" "}
+              <C1Wrapper p="p1" />{" "}
+              <C3Wrapper p="p1" q="eu" />{" "}
               <C2Wrapper p="p1" suffix="me" />
             </div>
             <div>
-              <C1 p="p2" />{" "}
-              <C3 p="p2" q="tu" />{" "}
+              <C1Wrapper p="p2" />{" "}
+              <C3Wrapper p="p2" q="tu" />{" "}
               <C2Wrapper p="p2" suffix="te" />
             </div>
             <div>
-              <C1 p="p3" />{" "}
-              <C3 p="p3" q={activePronoun? `${activePronoun}` : "ela"} />{" "}
+              <C1Wrapper p="p3" />{" "}
+              <C3Wrapper p="p3" q={activePronoun? `${activePronoun}` : "ela"} />{" "}
               <C2Wrapper p="p3" suffix="se" />
             </div>
             <div>
-              <C1 p="p4" />{" "}
-              <C3 p="p4" q="nós" />{" "}
+              <C1Wrapper p="p4" />{" "}
+              <C3Wrapper p="p4" q="nós" />{" "}
               <C2Wrapper p="p4" suffix="nos" removeS={true}/>
             </div>
             <div>
-              <C1 p="p5" />{" "}
-              <C3 p="p5" q="vós" />{" "}
+              <C1Wrapper p="p5" />{" "}
+              <C3Wrapper p="p5" q="vós" />{" "}
               <C2Wrapper p="p5" suffix="vos" />
             </div>
             <div>
-              <C1 p="p6" />{" "}
-              <C3 p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />{" "}
+              <C1Wrapper p="p6" />{" "}
+              <C3Wrapper p="p6" q={activePronoun? `${activePronoun}s` : "elas"} />{" "}
               <C2Wrapper p="p6" suffix="se" />
             </div>
           </>
@@ -262,10 +295,9 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               {Array.isArray(conjugations.inf.p3)
                 ? conjugations.inf.p3
                     .filter((item) => item !== null)
-                    .map(nw)
+                    .map((item) => (isSeActive ? `${nw(item)}-se` : nw(item)))
                     .join(' / ')
-                : nw(conjugations.inf.p3[0])}
-                {isSeActive && "-se"}
+                : nw(conjugations.inf.p3[0]) + (isSeActive ? "-se" : "")} 
             </span>
           </div>
           <div>
@@ -274,22 +306,20 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               {Array.isArray(conjugations.gd.n)
                 ? conjugations.gd.n
                     .filter((item) => item !== null)
-                    .map(nw)
+                    .map((item) => (isSeActive ? `${nw(item)}-se` : nw(item)))
                     .join(' / ')
-                : nw(conjugations.gd.n[0])}
-                {isSeActive && "-se"}
+                : nw(conjugations.gd.n[0]) + (isSeActive ? "-se" : "")}
             </span>
           </div>
           <div>
             <strong>Particípio: </strong>
             <span>
-              {isSeActive && "se "}
               {Array.isArray(conjugations.pa.n)
                 ? conjugations.pa.n
                     .filter((item) => item !== null)
-                    .map(nw)
+                    .map((item) => (isSeActive ? `se ${nw(item)}` : nw(item)))
                     .join(' / ')
-                : nw(conjugations.pa.n[0])}
+                : (isSeActive ? "se " : "") + nw(conjugations.pa.n[0])}
             </span>
           </div>
         </div>

@@ -203,6 +203,7 @@ const Index = () => {
               <button 
                 className={styles.button_title}
                 onClick={handleHome}
+                disabled={state.loading}
               >
                 conjugador-gules
               </button>
@@ -212,30 +213,42 @@ const Index = () => {
                 <button
                   onClick={handleHome}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'home' && state.conjugations === null && !state.showButton
+                    activeTab === 'home' 
+                    && state.conjugations === null 
+                    && !state.showButton
+                    && !state.loading
                     ? styles.active 
                     : styles.inactive
                   }`}
+                  disabled={state.loading}
                 >
                   início
                 </button>
                 <button
                   onClick={handleStatistic}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'statistic' && state.conjugations === null && !state.showButton
+                    activeTab === 'statistic' 
+                    && state.conjugations === null 
+                    && !state.showButton
+                    && !state.loading
                     ? styles.active 
                     : styles.inactive
                   }`}
+                  disabled={state.loading}
                 >
                   dados
                 </button>
                 <button
                   onClick={handleSobre}
                   className={`${styles.index_tabs_button} ${
-                    activeTab === 'sobre' && state.conjugations === null && !state.showButton
+                    activeTab === 'sobre' 
+                    && state.conjugations === null 
+                    && !state.showButton
+                    && !state.loading
                     ? styles.active 
                     : styles.inactive
                   }`}
+                  disabled={state.loading}
                 >
                   sobre
                 </button>
@@ -331,16 +344,24 @@ const Index = () => {
                               solicitar
                             </Button>
                           </div>
-                          <div>
-                            {state.suggestions?.map((verb, index) => (
-                              <Button 
-                              key={index}
-                              ref={buttonRef}
-                              onClick={() => { handleVerbClick(verb) }}
-                            >
-                              {verb}
-                            </Button>
-                            ))}
+                          <div className={styles.lascou_suggestion}>
+                            <div>
+                              <p>
+                                <span>{`Ou, se preferir, pode conjugar alguns verbos que semelham ao verbo`}</span>
+                                <strong>{` '${state.inputReq}'`}</strong>
+                              </p>
+                            </div>
+                            <div className={styles.suggestion_Button}>
+                              {state.suggestions?.map((verb, index) => (
+                                <Button 
+                                  key={index}
+                                  ref={buttonRef}
+                                  onClick={() => { handleVerbClick(verb) }}
+                                >
+                                  {verb}
+                                </Button>
+                              ))}
+                            </div>
                           </div>
                           <div className={styles.lascou_foot}>
                             <Button onClick={handleHome}>voltar para o início</Button>

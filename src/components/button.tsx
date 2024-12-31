@@ -4,13 +4,15 @@ import styles from "../styles/components.module.css";
 const Button = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
   ({ children, ...props }, ref) => {
     return (
-      <button 
-        ref={ref} 
-        className={styles.button}
-        {...props}
-      >
-        {children}
-      </button>
+      <div>
+        <button 
+          ref={ref} 
+          className={styles.button}
+          {...props}
+        >
+          {children}
+        </button>
+      </div>
     );
   }
 );

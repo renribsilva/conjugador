@@ -239,14 +239,22 @@
   flex-direction: column;
 }
 
-.lascou_main {
-  min-height: 260px;
+.lascou_suggestion {
+  margin-bottom: 30px;
 }
 
 .lascou_foot {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+.suggestion_Button > div {
+  display: inline-flex;
+}
+
+.suggestion_Button > div > button {
+  margin: 5px;
 }
 
 .tooltip {

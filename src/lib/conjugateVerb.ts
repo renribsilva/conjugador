@@ -53,7 +53,7 @@ export const conjugateVerb = (verb: string) => {
             ${F(P, M, "VT", "canonical") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", "canonical")}
             ${F(P, M, "MT", "canonical") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", "canonical")}
             ${F(P, M, "NP", "canonical") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", "canonical")}*`);
-          if (Rcontent !== null) {
+          if (Rcontent !== null && Rcontent !== '') {
             result = result.replace(Rcontent, R);
           }
           return result;
@@ -113,7 +113,6 @@ export const conjugateVerb = (verb: string) => {
     if (abundanceData === '') {
       return null
     }
-    
     return abundanceData;
 
   };
@@ -193,4 +192,4 @@ export const conjugateVerb = (verb: string) => {
   
 };
 
-// conjugateVerb("aceitar");
+// conjugateVerb("ser");
