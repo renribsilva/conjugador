@@ -89,7 +89,7 @@
 @media (max-width: 800px) {
   .button_sup {
     justify-content: center;
-    height: 60px;
+    height: 70px;
   }
 }
 
@@ -110,6 +110,7 @@
 @media (max-width: 800px) {
   .button_title {
     justify-content: center;
+    margin-bottom: 10px;
   }
 }
 
