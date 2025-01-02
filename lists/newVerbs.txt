@@ -935,6 +935,28 @@ coarrendar
 coatar
 cocegar
 cochinar
+coeditar
+coeducar
+coerentizar
+coexistir
+cogerir
+coinchar
+coincidir
+co-herdar
+colabar
+colaborar
+colimar
+colinear
+coloidalizar
+colquicinar
+comediar
+comemorar
+comensurar
+comichar
+cominar
+cominuir
+comisturar
+comunalizar
 conotar
 consoldar
 consubstancializar
@@ -978,6 +1000,7 @@ contrapor
 contraproduzir
 contrapropor
 contraprovar
+contrarrestar
 contratelar
 contratipar
 contratirar
@@ -1036,6 +1059,7 @@ defibrinar
 deflocular
 deflogisticar
 deleixar
+delombar
 demerger
 demissionar
 demitologizar
@@ -1047,6 +1071,7 @@ depopularizar
 dermatosar
 desabafar
 desabalar
+desabalroar
 desabar
 desabastecer
 desabeirar
@@ -1164,6 +1189,7 @@ desaguachar
 desaguar
 desaguaxar
 desaguisar
+desairar
 desajeitar
 desajoujar
 desajudar
@@ -1172,12 +1198,12 @@ desajuntar
 desajustar
 desalagar
 desalarmar
+desalealdar
 desalastrar
 desalbardar
 desalboroar
 desalcançar
 desalcoilar
-desalealdar
 desalegrar
 desaleitar
 desalentar
@@ -1233,6 +1259,7 @@ desanojar
 desanuviar
 desapadrinhar
 desapagar
+desapegar
 desapaixonar
 desaparafusar
 desaparecer
@@ -1279,6 +1306,8 @@ desarborizar
 desarcar
 desarear
 desarmar
+desaromar
+desaromatizar
 desarquear
 desarquitetar
 desarquivar
@@ -1336,6 +1365,7 @@ desataviar
 desatediar
 desatemorizar
 desatender
+desatentar
 desaterrar
 desatestar
 desatilhar
@@ -1368,6 +1398,7 @@ desavincar
 desavinhar
 desavir
 desavisar
+desavistar
 desavolumar
 desavultar
 desazar
@@ -1385,6 +1416,7 @@ desbancar
 desbandar
 desbandeirar
 desbaratar
+desbarbar
 desbarbarizar
 desbarrar
 desbarretar
@@ -1440,6 +1472,7 @@ descapitalizar
 descapotar
 descapsular
 descaracterizar
+descaraterizar
 descarbonar
 descarbonatar
 descarbonizar
@@ -1454,6 +1487,7 @@ descarrilhar
 descartar
 descartelizar
 descasalar
+descasar
 descascar
 descasquejar
 descatequizar
@@ -1468,6 +1502,7 @@ descementar
 descentralizar
 descentrar
 descercar
+descerrar
 deschancelar
 deschavear
 deschumbar
@@ -1533,6 +1568,7 @@ descongelar
 descongestionar
 desconhecer
 desconjuntar
+desconjurar
 desconsagrar
 desconseguir
 desconsentir
@@ -1559,6 +1595,7 @@ desconvir
 descoordenar
 descorajar
 descorar
+descornar
 descoroar
 descorporificar
 descorporizar
@@ -1621,7 +1658,7 @@ desembaçar
 desembaciar
 desembainhar
 desembalar
-desambalsar
+desembalsar
 desembandeirar
 desembaraçar
 desembaralhar
@@ -1726,7 +1763,7 @@ desemulsificar
 desenamorar
 desenastrar
 desenatar
-desencabrar
+desencabar
 desencabeçar
 desencabrestar
 desencabritar
@@ -1751,6 +1788,7 @@ desencanar
 desencanastrar
 desencangalhar
 desencangar
+desencantar
 desencantoar
 desencanudar
 desencapar
@@ -1784,6 +1822,7 @@ desencastoar
 desencatarrar
 desencatorroar
 desencavacar
+desencavar
 desencavernar
 desencavilhar
 desencepar
@@ -1889,9 +1928,9 @@ desengordar
 desengordurar
 desengraçar
 desengradar
-desengandecer
+desengrandecer
 desengranzar
-desengavatar
+desengravatar
 desengravescer
 desengraxar
 desengrazar
@@ -1968,6 +2007,7 @@ desentarraxar
 desentediar
 desentender
 desentenebrecer
+desenternecer
 desenterrar
 desenterroar
 desentesar
@@ -2015,6 +2055,7 @@ desenxamear
 desenxarciar
 desenxofrar
 desenxovalhar
+desenxovar
 desequilibrar
 desequipar
 desequivocar
@@ -2141,6 +2182,7 @@ desinfamar
 desinfeccionar
 desinfecionar
 desinfectar
+desinfetar
 desinfernar
 desinfestar
 desinficionar
@@ -2230,7 +2272,7 @@ desmarcializar
 desmarear
 desmarginar
 desmascarar
-desmatrear
+desmastrear
 desmatar
 desmaterializar
 desmazelar
