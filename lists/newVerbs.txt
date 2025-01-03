@@ -2661,6 +2661,7 @@ drunfar
 embagulhar
 empratar
 encaipirar
+encarrapichar
 encodizar
 engofar
 engogar
