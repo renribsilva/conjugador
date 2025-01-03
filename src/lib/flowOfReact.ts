@@ -33,7 +33,6 @@ export const flowOfReact = () => {
     showReviewButton: boolean;
     goThrough: boolean;
     enter: boolean;
-    focus: boolean;
     progress: number;
 
     originalVerb: object | null;
@@ -78,7 +77,6 @@ export const flowOfReact = () => {
     showReviewButton: false,
     goThrough: false,
     enter: false,
-    focus: false,
     progress: 0,
 
     originalVerb: null,
@@ -158,7 +156,6 @@ export const flowOfReact = () => {
 
         goThrough: false,
         enter: false,
-        focus: true,
 
         originalVerb: null,
         variationVerb: null,
@@ -459,7 +456,6 @@ export const flowOfReact = () => {
     state.varConector,
     state.varOriginalInput,
     state.showStatistic,
-    state.focus
   ];
   
   useEffect(() => {
@@ -504,7 +500,6 @@ export const flowOfReact = () => {
       showReviewButton: state.showReviewButton,
       goThrough: state.goThrough,
       enter: state.enter,
-      focus: state.focus
     };
   
     console.log(data);

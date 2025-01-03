@@ -119,12 +119,6 @@ const Index = () => {
 
   // console.log(inputRef)
 
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [state.focus]);
-
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
       return null; 
