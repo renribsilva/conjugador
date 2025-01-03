@@ -127,18 +127,8 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
 
-      setState(prev => ({ 
-        ...prev, 
-        progress: 1 
-      }))
-
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
-
-      setState(prev => ({ 
-        ...prev, 
-        progress: 2 
-      }))
 
       setState(prev => ({
         ...prev,
@@ -187,11 +177,6 @@ export const flowOfReact = () => {
         varOriginalInput: null,
 
       }));
-
-      setState(prev => ({ 
-        ...prev, 
-        progress: 3 
-      }))
 
       if (normalizedInputValue.trim() === "") {
 
