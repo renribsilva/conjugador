@@ -236,9 +236,10 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               {Array.isArray(conjugations.gd.n)
                 ? conjugations.gd.n
                     .filter((item) => item !== null)
-                    .map((item) => (isSeActive ? `${nw(item)}-se` : nw(item)))
+                    .map((item) => (isSeActive && item !== "---" ? `${nw(item)}-se` : nw(item)))
                     .join(' / ')
-                : nw(conjugations.gd.n[0]) + (isSeActive ? "-se" : "")}
+                : nw(conjugations.gd.n[0]) 
+                  + (isSeActive && conjugations.inf.p3[0] !== "---" ? "-se" : "")}
             </span>
           </div>
           <div>
@@ -247,9 +248,10 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               {Array.isArray(conjugations.pa.n)
                 ? conjugations.pa.n
                     .filter((item) => item !== null)
-                    .map((item) => (isSeActive ? `se ${nw(item)}` : nw(item)))
+                    .map((item) => (isSeActive && item !== "---" ? `se ${nw(item)}` : nw(item)))
                     .join(' / ')
-                : (isSeActive ? "se " : "") + nw(conjugations.pa.n[0])}
+                : (isSeActive && conjugations.inf.p3[0] !== "---" ? "se " : "") 
+                  + nw(conjugations.pa.n[0])}
             </span>
           </div>
         </div>
