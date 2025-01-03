@@ -173,6 +173,18 @@ const Index = () => {
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
+  const ProgressBar = ({ progress }: { progress: number }) => (
+    <div className={styles.progress_bar}>
+      <div
+        style={{
+          width: `${progress}%`,
+          background: '#3d3d3d',
+          height: '5px',
+        }}
+      />
+    </div>
+  );
+
   useEffect(() => {
       setMounted(true);
     }, []);
@@ -263,7 +275,12 @@ const Index = () => {
         <div className={styles.panel}>
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && "buscando..."}
+              {state.loading && (
+                <>
+                  <p>buscando...</p>
+                  <ProgressBar progress={state.progress}/>
+                </>
+              )}
             </div>
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&

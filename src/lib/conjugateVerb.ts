@@ -3,7 +3,6 @@ import { findNoRegRule } from './findNoRegVerbs';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import allVerbsData from "../json/allVerbs.json"
-import { getPropsOfVerb } from './getPropsOfVerb';
 
 export const conjugateVerb = (verb: string) => {
 

@@ -34,6 +34,7 @@ export const flowOfReact = () => {
     goThrough: boolean;
     enter: boolean;
     focus: boolean;
+    progress: number;
 
     originalVerb: object | null;
     variationVerb: object| null,
@@ -78,6 +79,7 @@ export const flowOfReact = () => {
     goThrough: false,
     enter: false,
     focus: false,
+    progress: 0,
 
     originalVerb: null,
     variationVerb: null,
@@ -98,13 +100,23 @@ export const flowOfReact = () => {
   });
 
   const fetchConjugations = async () => {
+
     const response = await fetch("/api/queryVerb");
+
+    setState(prev => ({ 
+      ...prev, 
+      progress: 65 
+    }))
+
     if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
     const data: Conjugation = await response.json();
+    
     setState(prev => ({
       ...prev,
       conjugations: data,
+      progress: 70
     }));
+
   };
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -115,8 +127,18 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 1 
+      }))
+
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
+
+      setState(prev => ({ 
+        ...prev, 
+        progress: 2 
+      }))
 
       setState(prev => ({
         ...prev,
@@ -166,6 +188,11 @@ export const flowOfReact = () => {
 
       }));
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 3 
+      }))
+
       if (normalizedInputValue.trim() === "") {
 
         setState(prev => ({
@@ -178,9 +205,19 @@ export const flowOfReact = () => {
 
       }
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 5 
+      }))
+
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
       const originalVerb = apiResponse.originalVerb;
       const variationVerb = apiResponse.variationVerb;
+
+      setState(prev => ({ 
+        ...prev, 
+        progress: 7 
+      }))
 
       if (normalizedInputValue !== "") {
         
@@ -191,6 +228,11 @@ export const flowOfReact = () => {
         }))
 
       }
+
+      setState(prev => ({ 
+        ...prev, 
+        progress: 10 
+      }))
 
       if (originalVerb === null && variationVerb === null ) {
 
@@ -206,6 +248,11 @@ export const flowOfReact = () => {
 
       }
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 15 
+      }))
+
       let puncts = null
       puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
 
@@ -218,6 +265,11 @@ export const flowOfReact = () => {
         }))
 
       }
+
+      setState(prev => ({ 
+        ...prev, 
+        progress: 18 
+      }))
 
       if (puncts !== null) {
 
@@ -234,6 +286,11 @@ export const flowOfReact = () => {
         return
       }
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 20 
+      }))
+
       let result = false;
       let findedWord = ''
       let similar = null
@@ -246,6 +303,11 @@ export const flowOfReact = () => {
       let varPrefixFounded = false 
       let varMatchingAfixo = null
       let varConector = null
+
+      setState(prev => ({ 
+        ...prev, 
+        progress: 25 
+      }))
 
       if (variationVerb !== null && originalVerb === null) {
 
@@ -286,12 +348,22 @@ export const flowOfReact = () => {
 
       }
 
+      setState(prev => ({ 
+        ...prev, 
+        progress: 30 
+      }))
+
       if (originalVerb !== null && variationVerb === null) {
 
         result = apiResponse.originalVerb.result;
         findedWord = apiResponse.originalVerb.findedWord;
         similar = apiResponse.originalVerb.similar;
         variations = apiResponse.originalVerb.variations;
+
+        setState(prev => ({ 
+          ...prev, 
+          progress: 35  
+        }))
 
         if  (similar !== null && !state.goThrough) {
 
@@ -309,6 +381,11 @@ export const flowOfReact = () => {
 
           return
         }
+
+        setState(prev => ({ 
+          ...prev, 
+          progress: 40  
+        }))
         
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
         
@@ -332,7 +409,18 @@ export const flowOfReact = () => {
           
         }));
 
+        setState(prev => ({ 
+          ...prev, 
+          progress: 50  
+        }))
+
         await conjVerbByAPI(ni(findedWord));
+
+        setState(prev => ({ 
+          ...prev, 
+          progress: 99 
+        }))
+
         await fetchConjugations();
 
         setState(prev => ({
@@ -344,13 +432,6 @@ export const flowOfReact = () => {
       }
 
     }
-
-    setState(prev => ({
-
-      ...prev,
-      focus: false
-  
-    }));
 
   };
 

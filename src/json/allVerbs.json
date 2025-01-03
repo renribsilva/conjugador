@@ -55909,19 +55909,19 @@
   },
   "engurujar": {
     "verb": ["engurujar"],
-    "model": [],
+    "model": [1],
     "ending": ["ujar"],
     "pronominal": [false]
   },
   "engurunhir": {
     "verb": ["engurunhir"],
-    "model": [],
+    "model": [3],
     "ending": ["unhir"],
     "pronominal": [false]
   },
   "enigmar": {
     "verb": ["enigmar"],
-    "model": [],
+    "model": [13],
     "ending": ["igmar"],
     "pronominal": [false]
   },
@@ -55945,13 +55945,13 @@
   },
   "enjambrar": {
     "verb": ["enjambrar"],
-    "model": [],
+    "model": [1],
     "ending": ["ambrar"],
     "pronominal": [false]
   },
   "enjangar": {
     "verb": ["enjangar"],
-    "model": [],
+    "model": [34],
     "ending": ["angar"],
     "pronominal": [false]
   },
@@ -55963,7 +55963,7 @@
   },
   "enjaular": {
     "verb": ["enjaular"],
-    "model": [],
+    "model": [1],
     "ending": ["aular"],
     "pronominal": [false]
   },
@@ -55975,13 +55975,13 @@
   },
   "enjeitar": {
     "verb": ["enjeitar"],
-    "model": [],
+    "model": [21],
     "ending": ["eitar"],
     "pronominal": [false]
   },
   "enjerir": {
     "verb": ["enjerir"],
-    "model": [],
+    "model": [29],
     "ending": ["erir"],
     "pronominal": [false]
   },
@@ -55993,19 +55993,19 @@
   },
   "enjicar": {
     "verb": ["enjicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "enjoar": {
     "verb": ["enjoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "enjoiar": {
     "verb": ["enjoiar"],
-    "model": [],
+    "model": [20],
     "ending": ["oiar"],
     "pronominal": [false]
   },
@@ -56047,7 +56047,7 @@
   },
   "enjugar": {
     "verb": ["enjugar"],
-    "model": [],
+    "model": [34],
     "ending": ["ugar"],
     "pronominal": [false]
   },
@@ -56065,13 +56065,13 @@
   },
   "enlabiar": {
     "verb": ["enlabiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "enlabirintar": {
     "verb": ["enlabirintar"],
-    "model": [],
+    "model": [1],
     "ending": ["intar"],
     "pronominal": [false]
   },
@@ -56161,13 +56161,13 @@
   },
   "enlaçar": {
     "verb": ["enlaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
   "enlaçarotar": {
     "verb": ["enlaçarotar"],
-    "model": [],
+    "model": [10],
     "ending": ["otar"],
     "pronominal": [false]
   },
