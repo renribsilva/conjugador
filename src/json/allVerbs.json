@@ -43243,7 +43243,7 @@
   },
   "desmontar": {
     "verb": ["desmontar"],
-    "model": [],
+    "model": [1],
     "ending": ["ontar"],
     "pronominal": [false]
   },
@@ -43255,7 +43255,7 @@
   },
   "desmoralizar": {
     "verb": ["desmoralizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -43267,31 +43267,31 @@
   },
   "desmoronar": {
     "verb": ["desmoronar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "desmorrer": {
     "verb": ["desmorrer"],
-    "model": [],
+    "model": [28],
     "ending": ["orrer"],
     "pronominal": [false]
   },
   "desmortificar": {
     "verb": ["desmortificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "desmotivar": {
     "verb": ["desmotivar"],
-    "model": [],
+    "model": [1],
     "ending": ["ivar"],
     "pronominal": [false]
   },
   "desmoutar": {
     "verb": ["desmoutar"],
-    "model": [],
+    "model": [22],
     "ending": ["outar"],
     "pronominal": [false]
   },
@@ -43303,535 +43303,535 @@
   },
   "desmunhecar": {
     "verb": ["desmunhecar"],
-    "model": [],
+    "model": [11,33],
     "ending": ["ecar"],
     "pronominal": [false]
   },
   "desmuniciar": {
     "verb": ["desmuniciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "desmunicionar": {
     "verb": ["desmunicionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "desmunir": {
     "verb": ["desmunir"],
-    "model": [],
+    "model": [3],
     "ending": ["unir"],
     "pronominal": [false]
   },
   "desmurar": {
     "verb": ["desmurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "desmuscular": {
     "verb": ["desmuscular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "desnacionalizar": {
     "verb": ["desnacionalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desnalgar": {
     "verb": ["desnalgar"],
-    "model": [],
+    "model": [34],
     "ending": ["algar"],
     "pronominal": [false]
   },
   "desnamorar": {
     "verb": ["desnamorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "desnarigar": {
     "verb": ["desnarigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
   "desnasalar": {
     "verb": ["desnasalar"],
-    "model": [],
+    "model": [1],
     "ending": ["alar"],
     "pronominal": [false]
   },
   "desnasalizar": {
     "verb": ["desnasalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desnastrar": {
     "verb": ["desnastrar"],
-    "model": [],
+    "model": [1],
     "ending": ["astrar"],
     "pronominal": [false]
   },
   "desnatar": {
     "verb": ["desnatar"],
-    "model": [],
+    "model": [1],
     "ending": ["atar"],
     "pronominal": [false]
   },
   "desnaturalizar": {
     "verb": ["desnaturalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desnaturar": {
     "verb": ["desnaturar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "desnazificar": {
     "verb": ["desnazificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "desnecessitar": {
     "verb": ["desnecessitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "desnegar": {
     "verb": ["desnegar"],
-    "model": [],
+    "model": [11,34],
     "ending": ["egar"],
     "pronominal": [false]
   },
   "desnegociar": {
     "verb": ["desnegociar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "desneixar": {
     "verb": ["desneixar"],
-    "model": [],
+    "model": [21],
     "ending": ["eixar"],
     "pronominal": [false]
   },
   "desnervar": {
     "verb": ["desnervar"],
-    "model": [],
+    "model": [11],
     "ending": ["ervar"],
     "pronominal": [false]
   },
   "desnevar": {
     "verb": ["desnevar"],
-    "model": [],
+    "model": [11],
     "ending": ["evar"],
     "pronominal": [false]
   },
   "desnevoar": {
     "verb": ["desnevoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "desnicotinar": {
     "verb": ["desnicotinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "desnicotinizar": {
     "verb": ["desnicotinizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desnicotizar": {
     "verb": ["desnicotizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desninhar": {
     "verb": ["desninhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
   "desniquelar": {
     "verb": ["desniquelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
   "desnitrar": {
     "verb": ["desnitrar"],
-    "model": [],
+    "model": [1],
     "ending": ["itrar"],
     "pronominal": [false]
   },
   "desnitrificar": {
     "verb": ["desnitrificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "desnivelar": {
     "verb": ["desnivelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
   "desnobrecer": {
     "verb": ["desnobrecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "desnocar": {
     "verb": ["desnocar"],
-    "model": [],
+    "model": [12,33],
     "ending": ["ocar"],
     "pronominal": [false]
   },
   "desnodar": {
     "verb": ["desnodar"],
-    "model": [],
+    "model": [12],
     "ending": ["odar"],
     "pronominal": [false]
   },
   "desnodoar": {
     "verb": ["desnodoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "desnoitar": {
     "verb": ["desnoitar"],
-    "model": [],
+    "model": [18],
     "ending": ["oitar"],
     "pronominal": [false]
   },
   "desnoivar": {
     "verb": ["desnoivar"],
-    "model": [],
+    "model": [18],
     "ending": ["oivar"],
     "pronominal": [false]
   },
   "desnortear": {
     "verb": ["desnortear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "desnotar": {
     "verb": ["desnotar"],
-    "model": [],
+    "model": [12],
     "ending": ["otar"],
     "pronominal": [false]
   },
   "desnovelar": {
     "verb": ["desnovelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
   "desnuar": {
     "verb": ["desnuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "desnublar": {
     "verb": ["desnublar"],
-    "model": [],
+    "model": [1],
     "ending": ["ublar"],
     "pronominal": [false]
   },
   "desnucar": {
     "verb": ["desnucar"],
-    "model": [],
+    "model": [33],
     "ending": ["ucar"],
     "pronominal": [false]
   },
   "desnuclearizar": {
     "verb": ["desnuclearizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desnudar": {
     "verb": ["desnudar"],
-    "model": [],
+    "model": [1],
     "ending": ["udar"],
     "pronominal": [false]
   },
   "desnutrir": {
     "verb": ["desnutrir"],
-    "model": [],
+    "model": [3],
     "ending": ["utrir"],
     "pronominal": [false]
   },
   "desnuviar": {
     "verb": ["desnuviar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "desobedecer": {
     "verb": ["desobedecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "desobjetivar": {
     "verb": ["desobjetivar"],
-    "model": [],
+    "model": [1],
     "ending": ["ivar"],
     "pronominal": [false]
   },
   "desobrigar": {
     "verb": ["desobrigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
   "desobscurecer": {
     "verb": ["desobscurecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "desobstacularizar": {
     "verb": ["desobstacularizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desobstruir": {
     "verb": ["desobstruir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
   "desobumbrar": {
     "verb": ["desobumbrar"],
-    "model": [],
+    "model": [1],
     "ending": ["umbrar"],
     "pronominal": [false]
   },
   "desocupar": {
     "verb": ["desocupar"],
-    "model": [],
+    "model": [1],
     "ending": ["upar"],
     "pronominal": [false]
   },
   "desodorar": {
     "verb": ["desodorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "desodorizar": {
     "verb": ["desodorizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desoficializar": {
     "verb": ["desoficializar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desofuscar": {
     "verb": ["desofuscar"],
-    "model": [],
+    "model": [33],
     "ending": ["uscar"],
     "pronominal": [false]
   },
   "desolar": {
     "verb": ["desolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
   "desoleificar": {
     "verb": ["desoleificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "desolhar": {
     "verb": ["desolhar"],
-    "model": [],
+    "model": [12],
     "ending": ["olhar"],
     "pronominal": [false]
   },
   "desoligarquizar": {
     "verb": ["desoligarquizar"],
-    "model": [],
+    "model": [1],
     "ending": ["uizar"],
     "pronominal": [false]
   },
   "desonerar": {
     "verb": ["desonerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "desonestar": {
     "verb": ["desonestar"],
-    "model": [],
+    "model": [11],
     "ending": ["estar"],
     "pronominal": [false]
   },
   "desonrar": {
     "verb": ["desonrar"],
-    "model": [],
+    "model": [1],
     "ending": ["onrar"],
     "pronominal": [false]
   },
   "desopercular": {
     "verb": ["desopercular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "desopilar": {
     "verb": ["desopilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "desopressar": {
     "verb": ["desopressar"],
-    "model": [],
+    "model": [11],
     "ending": ["essar"],
     "pronominal": [false]
   },
   "desoprimir": {
     "verb": ["desoprimir"],
-    "model": [],
+    "model": [3],
     "ending": ["imir"],
     "pronominal": [false]
   },
   "desopulentar": {
     "verb": ["desopulentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "desorbitar": {
     "verb": ["desorbitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "desordear": {
     "verb": ["desordear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "desordenar": {
     "verb": ["desordenar"],
-    "model": [],
+    "model": [1],
     "ending": ["enar"],
     "pronominal": [false]
   },
   "desorelhar": {
     "verb": ["desorelhar"],
-    "model": [],
+    "model": [42],
     "ending": ["elhar"],
     "pronominal": [false]
   },
   "desorganizar": {
     "verb": ["desorganizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "desorientar": {
     "verb": ["desorientar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "desornamentar": {
     "verb": ["desornamentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "desornar": {
     "verb": ["desornar"],
-    "model": [],
+    "model": [12],
     "ending": ["ornar"],
     "pronominal": [false]
   },
   "desossar": {
     "verb": ["desossar"],
-    "model": [],
+    "model": [12],
     "ending": ["ossar"],
     "pronominal": [false]
   },
   "desossificar": {
     "verb": ["desossificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "desovar": {
     "verb": ["desovar"],
-    "model": [],
+    "model": [12],
     "ending": ["ovar"],
     "pronominal": [false]
   },
   "desoxidar": {
     "verb": ["desoxidar"],
-    "model": [],
+    "model": [1],
     "ending": ["idar"],
     "pronominal": [false]
   },
   "desoxigenar": {
     "verb": ["desoxigenar"],
-    "model": [],
+    "model": [1],
     "ending": ["enar"],
     "pronominal": [false]
   },
   "despachar": {
     "verb": ["despachar"],
-    "model": [],
+    "model": [1],
     "ending": ["achar"],
     "pronominal": [false]
   },
   "despadrar": {
     "verb": ["despadrar"],
-    "model": [],
+    "model": [1],
     "ending": ["adrar"],
     "pronominal": [false]
   },
   "despaganizar": {
     "verb": ["despaganizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "despaginar": {
     "verb": ["despaginar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
@@ -43843,55 +43843,55 @@
   },
   "despalatalizar": {
     "verb": ["despalatalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "despalatizar": {
     "verb": ["despalatizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "despaletar": {
     "verb": ["despaletar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "despaletear": {
     "verb": ["despaletear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "despalhar": {
     "verb": ["despalhar"],
-    "model": [],
+    "model": [1],
     "ending": ["alhar"],
     "pronominal": [false]
   },
   "despalmar": {
     "verb": ["despalmar"],
-    "model": [],
+    "model": [1],
     "ending": ["almar"],
     "pronominal": [false]
   },
   "despalmilhar": {
     "verb": ["despalmilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "despampanar": {
     "verb": ["despampanar"],
-    "model": [],
+    "model": [1],
     "ending": ["anar"],
     "pronominal": [false]
   },
   "despampar": {
     "verb": ["despampar"],
-    "model": [],
+    "model": [1],
     "ending": ["ampar"],
     "pronominal": [false]
   },
@@ -43903,61 +43903,61 @@
   },
   "despapar": {
     "verb": ["despapar"],
-    "model": [],
+    "model": [1],
     "ending": ["apar"],
     "pronominal": [false]
   },
   "desparafinar": {
     "verb": ["desparafinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "desparafusar": {
     "verb": ["desparafusar"],
-    "model": [],
+    "model": [1],
     "ending": ["usar"],
     "pronominal": [false]
   },
   "desparamentar": {
     "verb": ["desparamentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "desparceirar": {
     "verb": ["desparceirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
   "desparecer": {
     "verb": ["desparecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "despargir": {
     "verb": ["despargir"],
-    "model": [],
+    "model": [39],
     "ending": ["argir"],
     "pronominal": [false]
   },
   "desparramar": {
     "verb": ["desparramar"],
-    "model": [],
+    "model": [1],
     "ending": ["amar"],
     "pronominal": [false]
   },
   "desparrar": {
     "verb": ["desparrar"],
-    "model": [],
+    "model": [1],
     "ending": ["arrar"],
     "pronominal": [false]
   },
   "despartir": {
     "verb": ["despartir"],
-    "model": [],
+    "model": [3],
     "ending": ["artir"],
     "pronominal": [false]
   },
@@ -43969,19 +43969,19 @@
   },
   "desparzir": {
     "verb": ["desparzir"],
-    "model": [],
+    "model": [3],
     "ending": ["arzir"],
     "pronominal": [false]
   },
   "despassar": {
     "verb": ["despassar"],
-    "model": [],
+    "model": [1],
     "ending": ["assar"],
     "pronominal": [false]
   },
   "despastar": {
     "verb": ["despastar"],
-    "model": [],
+    "model": [1],
     "ending": ["astar"],
     "pronominal": [false]
   },
@@ -43993,67 +43993,67 @@
   },
   "despavorir": {
     "verb": ["despavorir"],
-    "model": [],
+    "model": [101],
     "ending": ["orir"],
     "pronominal": [false]
   },
   "despear": {
     "verb": ["despear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "despecuniar": {
     "verb": ["despecuniar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "despedaçar": {
     "verb": ["despedaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
   "despedir": {
     "verb": ["despedir"],
-    "model": [],
+    "model": [63],
     "ending": ["edir"],
     "pronominal": [false]
   },
   "despedrar": {
     "verb": ["despedrar"],
-    "model": [],
+    "model": [11],
     "ending": ["edrar"],
     "pronominal": [false]
   },
   "despegar": {
     "verb": ["despegar"],
-    "model": [],
+    "model": [11,34],
     "ending": ["egar"],
     "pronominal": [false]
   },
   "despeitar": {
     "verb": ["despeitar"],
-    "model": [],
+    "model": [21],
     "ending": ["eitar"],
     "pronominal": [false]
   },
   "despeitorar": {
     "verb": ["despeitorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "despejar": {
     "verb": ["despejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "despelar": {
     "verb": ["despelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
@@ -44065,31 +44065,31 @@
   },
   "despenar": {
     "verb": ["despenar"],
-    "model": [],
+    "model": [1],
     "ending": ["enar"],
     "pronominal": [false]
   },
   "despencar": {
     "verb": ["despencar"],
-    "model": [],
+    "model": [33],
     "ending": ["encar"],
     "pronominal": [false]
   },
   "despender": {
     "verb": ["despender"],
-    "model": [],
+    "model": [2],
     "ending": ["ender"],
     "pronominal": [false]
   },
   "despendurar": {
     "verb": ["despendurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "despenhar": {
     "verb": ["despenhar"],
-    "model": [],
+    "model": [1],
     "ending": ["enhar"],
     "pronominal": [false]
   },
@@ -44101,56 +44101,62 @@
   },
   "despentear": {
     "verb": ["despentear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "desperceber": {
     "verb": ["desperceber"],
-    "model": [],
+    "model": [27],
     "ending": ["eber"],
     "pronominal": [false]
   },
   "desperdiçar": {
     "verb": ["desperdiçar"],
-    "model": [],
+    "model": [35],
     "ending": ["içar"],
     "pronominal": [false]
   },
   "desperecer": {
     "verb": ["desperecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "desperfilar": {
     "verb": ["desperfilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "despersonalizar": {
     "verb": ["despersonalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "despersuadir": {
     "verb": ["despersuadir"],
-    "model": [],
+    "model": [3],
     "ending": ["adir"],
     "pronominal": [false]
   },
   "despertar": {
     "verb": ["despertar"],
-    "model": [],
+    "model": [11],
     "ending": ["ertar"],
     "pronominal": [false]
   },
   "despesar": {
     "verb": ["despesar"],
-    "model": [],
+    "model": [11],
     "ending": ["esar"],
+    "pronominal": [false]
+  },
+  "despescar": {
+    "verb": ["despescar"],
+    "model": [],
+    "ending": ["escar"],
     "pronominal": [false]
   },
   "despestanar": {

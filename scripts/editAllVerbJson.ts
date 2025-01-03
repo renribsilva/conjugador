@@ -146,8 +146,8 @@ async function processVerbsFile(): Promise<void> {
     
             try {
               
-              const input = normalized
-              // const input = "desmastear"
+              // const input = normalized
+              const input = "despescar"
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
                 verbPropsArray = await getPropsOfVerb(input, true, input);
@@ -196,13 +196,13 @@ async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    const removedVerbs = Object.keys(currentVerbs).filter(
-      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    );
+    // const removedVerbs = Object.keys(currentVerbs).filter(
+    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    // );
 
-    removedVerbs.forEach((normalized) => {
-      delete J[normalized];
-    });
+    // removedVerbs.forEach((normalized) => {
+    //   delete J[normalized];
+    // });
 
     // Deletar propriedades
     // Object.keys(J).forEach(normalized => {

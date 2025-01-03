@@ -224,9 +224,10 @@ export default function Table ({ conjugations }: { conjugations: Conjugation }) 
               {Array.isArray(conjugations.inf.p3)
                 ? conjugations.inf.p3
                     .filter((item) => item !== null)
-                    .map((item) => (isSeActive ? `${nw(item)}-se` : nw(item)))
+                    .map((item) => (isSeActive && item !== "---" ? `${nw(item)}-se` : nw(item)))
                     .join(' / ')
-                : nw(conjugations.inf.p3[0]) + (isSeActive ? "-se" : "")} 
+                : nw(conjugations.inf.p3[0]) 
+                  + (isSeActive && conjugations.inf.p3[0] !== "---" ? "-se" : "")} 
             </span>
           </div>
           <div>

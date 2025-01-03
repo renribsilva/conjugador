@@ -2417,6 +2417,7 @@ desperfilar
 despersonalizar
 despersuadir
 despesar
+despescar
 despicar
 despigmentar
 despilchar
