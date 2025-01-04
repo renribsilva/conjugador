@@ -168,27 +168,41 @@ const Index = () => {
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
-  let currentProgress: number = 0;
+  const [currentProgress, setCurrentProgress] = useState<number>(0);
+
+  useEffect(() => {
+
+    if (currentProgress === 100) {
+      setCurrentProgress(0)
+    }
+    if (currentProgress < state.progress) {
+      const interval = setInterval(() => {
+        setCurrentProgress(prev => Math.min(prev + 5, state.progress));
+      }, 10);
+      return () => clearInterval(interval);
+    }
+  }, [state.progress]);
 
   const ProgressBar = ({ progress }: { progress: number }) => {
-
-    currentProgress = progress;
-
     return (
       <div className={styles.progress_bar}>
-        <div
+        {currentProgress !== 100 && (<div
           style={{
-            width: `${currentProgress}%`,
+            width: `${progress}%`,
             background: '#3d3d3d',
             height: '5px',
+            transition: 'width 0.3s ease-in-out',
           }}
-        />
+        />)}
       </div>
     );
   };
 
+  // console.log(currentProgress)
+  console.log(state.progress)
+
   useEffect(() => {
-      setMounted(true);
+    setMounted(true);
   }, []);
   
   if (!mounted) {
@@ -280,8 +294,7 @@ const Index = () => {
               {state.loading && (
                 <>
                   <p>buscando...</p>
-                  <ProgressBar progress={state.progress} />
-                  {state.progress}%
+                  <ProgressBar progress={currentProgress} />
                 </>
               )}
             </div>
