@@ -353,7 +353,7 @@ export const flowOfReact = () => {
           
         }));
 
-        updateProgress(75);
+        updateProgress(70);
 
         await conjVerbByAPI(ni(findedWord));
 
