@@ -77,7 +77,7 @@ export const flowOfReact = () => {
     showReviewButton: false,
     goThrough: false,
     enter: false,
-    progress: 0,
+    progress: 100,
 
     originalVerb: null,
     variationVerb: null,
