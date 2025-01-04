@@ -192,8 +192,9 @@ const Index = () => {
             style={{
               width: `${progress}%`,
               background: 'var(--foreground)',
-              height: '5px',
+              height: '1.5px',
               transition: 'width 0.3s ease-in-out',
+              borderRadius: '2rem',
             }}
           />
         )}
@@ -292,12 +293,12 @@ const Index = () => {
       {/* main */}
       <section className={styles.main} role="main">
         <div className={styles.panel}>
+          {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
               {state.loading && (
                 <>
                   <p>buscando...</p>
-                  <ProgressBar progress={currentProgress} />
                 </>
               )}
             </div>

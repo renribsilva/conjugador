@@ -181,7 +181,8 @@
   /* background-color: rgb(180, 206, 197); */
   width:800px;
   min-height: 260px;
-  padding: 20px;
+  /* padding: 20px; */
+  padding-top: 0px;
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
 }
@@ -193,7 +194,8 @@
 }
 
 .subpanel {
-  width: 100%;
+  /* width: 100%; */
+  margin: 25px;
 }
 
 .references, .warning {
@@ -266,7 +268,8 @@
 }
 
 .progress_bar {
-  width: 100px;
+  /* width: 100%; */
+  margin-inline: 3px;
   background: var(--button);
 }
 
