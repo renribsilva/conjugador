@@ -16,7 +16,6 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
-import { stat } from "fs";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -24,6 +23,9 @@ const Index = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
   const [mounted, setMounted] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [currentProgress, setCurrentProgress] = useState<number>(0);
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq);
@@ -101,9 +103,6 @@ const Index = () => {
     setActiveTab('statistic');
   };
 
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const inputRef = useRef<HTMLInputElement | null>(null);
-
   useEffect(() => {
     if (inputRef.current) {
       const enterEvent = new KeyboardEvent("keydown", {
@@ -168,16 +167,18 @@ const Index = () => {
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
-  const [currentProgress, setCurrentProgress] = useState<number>(0);
-
   useEffect(() => {
 
     if (currentProgress === 100) {
       setCurrentProgress(0)
+      const interval = setInterval(() => {
+        setCurrentProgress(prev => Math.min(prev + 4, 25));
+      }, 10);
+      return () => clearInterval(interval);
     }
     if (currentProgress < state.progress) {
       const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 5, state.progress));
+        setCurrentProgress(prev => Math.min(prev + 4, state.progress));
       }, 10);
       return () => clearInterval(interval);
     }
@@ -199,7 +200,7 @@ const Index = () => {
   };
 
   // console.log(currentProgress)
-  console.log(state.progress)
+  // console.log(state.progress)
 
   useEffect(() => {
     setMounted(true);
@@ -342,14 +343,14 @@ const Index = () => {
                                 </span><strong>'{state.foundVerb}'</strong></span>
                                 <span>, que você pode conjugar clicando no botão abaixo:</span>
                               </>
-                              <p>
+                              <div className={styles.punctButton}>
                                 <Button 
                                   ref={buttonRef}
                                   onClick={() => { handleVerbClick((state.foundVerb as string)) }}
                                 >
                                   {state.foundVerb}
                                 </Button>
-                              </p>
+                              </div>
                             </>
                           )}
                         </div>
@@ -371,11 +372,13 @@ const Index = () => {
                               <span><strong>{`'${state.inputReq}'`}</strong></span>
                               <span> não foi encontrada na nossa lista de verbos válidos. Gostaria de solicitar sua inclusão?</span>
                             </p>
-                            <Button 
-                              onClick={() => handleSolicitar(state.inputReq)}
-                            >
-                              solicitar
-                            </Button>
+                            <div>
+                              <Button 
+                                onClick={() => handleSolicitar(state.inputReq)}
+                              >
+                                solicitar
+                              </Button>
+                            </div>
                           </div>
                           <div className={styles.lascou_suggestion}>
                             <div>
