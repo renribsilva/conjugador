@@ -16,6 +16,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import { stat } from "fs";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -167,21 +168,28 @@ const Index = () => {
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
 
-  const ProgressBar = ({ progress }: { progress: number }) => (
-    <div className={styles.progress_bar}>
-      <div
-        style={{
-          width: `${progress}%`,
-          background: '#3d3d3d',
-          height: '5px',
-        }}
-      />
-    </div>
-  );
+  let currentProgress: number = 0;
+
+  const ProgressBar = ({ progress }: { progress: number }) => {
+
+    currentProgress = progress;
+
+    return (
+      <div className={styles.progress_bar}>
+        <div
+          style={{
+            width: `${currentProgress}%`,
+            background: '#3d3d3d',
+            height: '5px',
+          }}
+        />
+      </div>
+    );
+  };
 
   useEffect(() => {
       setMounted(true);
-    }, []);
+  }, []);
   
   if (!mounted) {
     return null;
@@ -272,7 +280,7 @@ const Index = () => {
               {state.loading && (
                 <>
                   <p>buscando...</p>
-                  <ProgressBar progress={state.progress}/>
+                  <ProgressBar progress={state.progress} />
                 </>
               )}
             </div>
