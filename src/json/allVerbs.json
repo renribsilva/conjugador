@@ -65617,7 +65617,7 @@
   },
   "esporrar": {
     "verb": ["esporrar"],
-    "model": [],
+    "model": [12],
     "ending": ["orrar"],
     "pronominal": [false]
   },
@@ -65629,31 +65629,31 @@
   },
   "esportular": {
     "verb": ["esportular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "esporular": {
     "verb": ["esporular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "esposar": {
     "verb": ["esposar"],
-    "model": [],
+    "model": [12],
     "ending": ["osar"],
     "pronominal": [false]
   },
   "espostejar": {
     "verb": ["espostejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "espotar": {
     "verb": ["espotar"],
-    "model": [],
+    "model": [12],
     "ending": ["otar"],
     "pronominal": [false]
   },
@@ -65665,7 +65665,7 @@
   },
   "espotrejar": {
     "verb": ["espotrejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -65677,31 +65677,31 @@
   },
   "espoucar": {
     "verb": ["espoucar"],
-    "model": [],
+    "model": [22,33],
     "ending": ["oucar"],
     "pronominal": [false]
   },
   "espragatar": {
     "verb": ["espragatar"],
-    "model": [],
+    "model": [1],
     "ending": ["atar"],
     "pronominal": [false]
   },
   "espraiar": {
     "verb": ["espraiar"],
-    "model": [],
+    "model": [1],
     "ending": ["aiar"],
     "pronominal": [false]
   },
   "espreguiçar": {
     "verb": ["espreguiçar"],
-    "model": [],
+    "model": [35],
     "ending": ["içar"],
     "pronominal": [false]
   },
   "espreitar": {
     "verb": ["espreitar"],
-    "model": [],
+    "model": [21],
     "ending": ["eitar"],
     "pronominal": [false]
   },
@@ -65713,13 +65713,13 @@
   },
   "espremer": {
     "verb": ["espremer"],
-    "model": [],
+    "model": [2],
     "ending": ["emer"],
     "pronominal": [false]
   },
   "espritar": {
     "verb": ["espritar"],
-    "model": [],
+    "model": [4],
     "ending": ["itar"],
     "pronominal": [false]
   },
@@ -65731,19 +65731,19 @@
   },
   "espulgar": {
     "verb": ["espulgar"],
-    "model": [],
+    "model": [34],
     "ending": ["ulgar"],
     "pronominal": [false]
   },
   "espumar": {
     "verb": ["espumar"],
-    "model": [],
+    "model": [1],
     "ending": ["umar"],
     "pronominal": [false]
   },
   "espumarejar": {
     "verb": ["espumarejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -65773,13 +65773,13 @@
   },
   "esputar": {
     "verb": ["esputar"],
-    "model": [],
+    "model": [1],
     "ending": ["utar"],
     "pronominal": [false]
   },
   "esquadrar": {
     "verb": ["esquadrar"],
-    "model": [],
+    "model": [1],
     "ending": ["adrar"],
     "pronominal": [false]
   },
@@ -65791,25 +65791,25 @@
   },
   "esquadrejar": {
     "verb": ["esquadrejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "esquadriar": {
     "verb": ["esquadriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "esquadrilhar": {
     "verb": ["esquadrilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "esquadrinhar": {
     "verb": ["esquadrinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
@@ -65821,43 +65821,43 @@
   },
   "esquartejar": {
     "verb": ["esquartejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "esquartelar": {
     "verb": ["esquartelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
   "esquartilhar": {
     "verb": ["esquartilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "esquecer": {
     "verb": ["esquecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "esquematizar": {
     "verb": ["esquematizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "esquentar": {
     "verb": ["esquentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "esquerdear": {
     "verb": ["esquerdear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -65875,7 +65875,7 @@
   },
   "esquiar": {
     "verb": ["esquiar"],
-    "model": [],
+    "model": [9],
     "ending": ["uiar"],
     "pronominal": [false]
   },
@@ -65887,25 +65887,25 @@
   },
   "esquifar": {
     "verb": ["esquifar"],
-    "model": [],
+    "model": [1],
     "ending": ["ifar"],
     "pronominal": [false]
   },
   "esquilar": {
     "verb": ["esquilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "esquinar": {
     "verb": ["esquinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "esquipar": {
     "verb": ["esquipar"],
-    "model": [],
+    "model": [1],
     "ending": ["ipar"],
     "pronominal": [false]
   },
@@ -65935,7 +65935,7 @@
   },
   "esquivar": {
     "verb": ["esquivar"],
-    "model": [],
+    "model": [1],
     "ending": ["uivar"],
     "pronominal": [false]
   },
@@ -65947,7 +65947,7 @@
   },
   "estabacar": {
     "verb": ["estabacar"],
-    "model": [],
+    "model": [33],
     "ending": ["acar"],
     "pronominal": [false]
   },
@@ -65959,7 +65959,7 @@
   },
   "estabelecer": {
     "verb": ["estabelecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -65971,7 +65971,7 @@
   },
   "estabilizar": {
     "verb": ["estabilizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -65983,25 +65983,25 @@
   },
   "estabular": {
     "verb": ["estabular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "estacar": {
     "verb": ["estacar"],
-    "model": [],
+    "model": [33],
     "ending": ["acar"],
     "pronominal": [false]
   },
   "estacionar": {
     "verb": ["estacionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "estadear": {
     "verb": ["estadear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -66019,13 +66019,13 @@
   },
   "estadualizar": {
     "verb": ["estadualizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estafar": {
     "verb": ["estafar"],
-    "model": [],
+    "model": [1],
     "ending": ["afar"],
     "pronominal": [false]
   },
@@ -66043,7 +66043,7 @@
   },
   "estafetar": {
     "verb": ["estafetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
@@ -66061,55 +66061,55 @@
   },
   "estagiar": {
     "verb": ["estagiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estagnar": {
     "verb": ["estagnar"],
-    "model": [],
+    "model": [13],
     "ending": ["agnar"],
     "pronominal": [false]
   },
   "estaiar": {
     "verb": ["estaiar"],
-    "model": [],
+    "model": [1],
     "ending": ["aiar"],
     "pronominal": [false]
   },
   "estalar": {
     "verb": ["estalar"],
-    "model": [],
+    "model": [1],
     "ending": ["alar"],
     "pronominal": [false]
   },
   "estaleirar": {
     "verb": ["estaleirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
   "estalejar": {
     "verb": ["estalejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "estalicar": {
     "verb": ["estalicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estalidar": {
     "verb": ["estalidar"],
-    "model": [],
+    "model": [1],
     "ending": ["idar"],
     "pronominal": [false]
   },
   "estalinizar": {
     "verb": ["estalinizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -66127,79 +66127,79 @@
   },
   "estambrar": {
     "verb": ["estambrar"],
-    "model": [],
+    "model": [1],
     "ending": ["ambrar"],
     "pronominal": [false]
   },
   "estaminar": {
     "verb": ["estaminar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "estampar": {
     "verb": ["estampar"],
-    "model": [],
+    "model": [1],
     "ending": ["ampar"],
     "pronominal": [false]
   },
   "estampilhar": {
     "verb": ["estampilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "estancar": {
     "verb": ["estancar"],
-    "model": [],
+    "model": [33],
     "ending": ["ancar"],
     "pronominal": [false]
   },
   "estanciar": {
     "verb": ["estanciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estandardizar": {
     "verb": ["estandardizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estanhar": {
     "verb": ["estanhar"],
-    "model": [],
+    "model": [1],
     "ending": ["anhar"],
     "pronominal": [false]
   },
   "estapear": {
     "verb": ["estapear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "estaquear": {
     "verb": ["estaquear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "estar": {
     "verb": ["estar"],
-    "model": [],
+    "model": [73],
     "ending": ["estar"],
     "pronominal": [false]
   },
   "estardalhar": {
     "verb": ["estardalhar"],
-    "model": [],
+    "model": [1],
     "ending": ["alhar"],
     "pronominal": [false]
   },
   "estardalhaçar": {
     "verb": ["estardalhaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
@@ -66217,7 +66217,7 @@
   },
   "estarrecer": {
     "verb": ["estarrecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -66247,7 +66247,7 @@
   },
   "estartar": {
     "verb": ["estartar"],
-    "model": [],
+    "model": [1],
     "ending": ["artar"],
     "pronominal": [false]
   },
@@ -66265,7 +66265,7 @@
   },
   "estatelar": {
     "verb": ["estatelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
@@ -66277,31 +66277,31 @@
   },
   "estatizar": {
     "verb": ["estatizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estatuar": {
     "verb": ["estatuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "estatuificar": {
     "verb": ["estatuificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estatuir": {
     "verb": ["estatuir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
   "estazar": {
     "verb": ["estazar"],
-    "model": [],
+    "model": [1],
     "ending": ["azar"],
     "pronominal": [false]
   },
@@ -66319,7 +66319,7 @@
   },
   "estear": {
     "verb": ["estear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -66331,7 +66331,7 @@
   },
   "esteirar": {
     "verb": ["esteirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
@@ -66349,7 +66349,7 @@
   },
   "estender": {
     "verb": ["estender"],
-    "model": [],
+    "model": [2],
     "ending": ["ender"],
     "pronominal": [false]
   },
@@ -66373,31 +66373,31 @@
   },
   "estenografar": {
     "verb": ["estenografar"],
-    "model": [],
+    "model": [1],
     "ending": ["afar"],
     "pronominal": [false]
   },
   "estenosar": {
     "verb": ["estenosar"],
-    "model": [],
+    "model": [12],
     "ending": ["osar"],
     "pronominal": [false]
   },
   "estenotipar": {
     "verb": ["estenotipar"],
-    "model": [],
+    "model": [1],
     "ending": ["ipar"],
     "pronominal": [false]
   },
   "esterar": {
     "verb": ["esterar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "estercar": {
     "verb": ["estercar"],
-    "model": [],
+    "model": [11,33],
     "ending": ["ercar"],
     "pronominal": [false]
   },
@@ -66409,7 +66409,7 @@
   },
   "estereografar": {
     "verb": ["estereografar"],
-    "model": [],
+    "model": [1],
     "ending": ["afar"],
     "pronominal": [false]
   },
@@ -66421,7 +66421,7 @@
   },
   "estereotipar": {
     "verb": ["estereotipar"],
-    "model": [],
+    "model": [1],
     "ending": ["ipar"],
     "pronominal": [false]
   },
@@ -66433,25 +66433,25 @@
   },
   "esterificar": {
     "verb": ["esterificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "esterilecer": {
     "verb": ["esterilecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "esterilizar": {
     "verb": ["esterilizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "esterlicar": {
     "verb": ["esterlicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -66493,37 +66493,37 @@
   },
   "esterrecer": {
     "verb": ["esterrecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "esterroar": {
     "verb": ["esterroar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "estertorar": {
     "verb": ["estertorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "estertorizar": {
     "verb": ["estertorizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "esterçar": {
     "verb": ["esterçar"],
-    "model": [],
+    "model": [11,35],
     "ending": ["erçar"],
     "pronominal": [false]
   },
   "estesiar": {
     "verb": ["estesiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
@@ -66535,67 +66535,67 @@
   },
   "estesoirar": {
     "verb": ["estesoirar"],
-    "model": [],
+    "model": [18],
     "ending": ["oirar"],
     "pronominal": [false]
   },
   "estesourar": {
     "verb": ["estesourar"],
-    "model": [],
+    "model": [22],
     "ending": ["ourar"],
     "pronominal": [false]
   },
   "estetizar": {
     "verb": ["estetizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estevar": {
     "verb": ["estevar"],
-    "model": [],
+    "model": [11],
     "ending": ["evar"],
     "pronominal": [false]
   },
   "estiar": {
     "verb": ["estiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "esticar": {
     "verb": ["esticar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estigmar": {
     "verb": ["estigmar"],
-    "model": [],
+    "model": [13],
     "ending": ["igmar"],
     "pronominal": [false]
   },
   "estigmatizar": {
     "verb": ["estigmatizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estilar": {
     "verb": ["estilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "estiletar": {
     "verb": ["estiletar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "estiletear": {
     "verb": ["estiletear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -66607,91 +66607,91 @@
   },
   "estilhar": {
     "verb": ["estilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "estilhaçar": {
     "verb": ["estilhaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
   "estilicidar": {
     "verb": ["estilicidar"],
-    "model": [],
+    "model": [1],
     "ending": ["idar"],
     "pronominal": [false]
   },
   "estilizar": {
     "verb": ["estilizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estimar": {
     "verb": ["estimar"],
-    "model": [],
+    "model": [1],
     "ending": ["imar"],
     "pronominal": [false]
   },
   "estimular": {
     "verb": ["estimular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "estingar": {
     "verb": ["estingar"],
-    "model": [],
+    "model": [34],
     "ending": ["ingar"],
     "pronominal": [false]
   },
   "estinhar": {
     "verb": ["estinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
   "estiolar": {
     "verb": ["estiolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
   "estiomenar": {
     "verb": ["estiomenar"],
-    "model": [],
+    "model": [1],
     "ending": ["enar"],
     "pronominal": [false]
   },
   "estipendiar": {
     "verb": ["estipendiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estipular": {
     "verb": ["estipular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "estirar": {
     "verb": ["estirar"],
-    "model": [],
+    "model": [1],
     "ending": ["irar"],
     "pronominal": [false]
   },
   "estiraçar": {
     "verb": ["estiraçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
   "estivar": {
     "verb": ["estivar"],
-    "model": [],
+    "model": [1],
     "ending": ["ivar"],
     "pronominal": [false]
   },
@@ -66703,19 +66703,19 @@
   },
   "estocar": {
     "verb": ["estocar"],
-    "model": [],
+    "model": [33],
     "ending": ["ocar"],
     "pronominal": [false]
   },
   "estofar": {
     "verb": ["estofar"],
-    "model": [],
+    "model": [12],
     "ending": ["ofar"],
     "pronominal": [false]
   },
   "estoirar": {
     "verb": ["estoirar"],
-    "model": [],
+    "model": [18],
     "ending": ["oirar"],
     "pronominal": [false]
   },
@@ -66733,19 +66733,19 @@
   },
   "estojar": {
     "verb": ["estojar"],
-    "model": [],
+    "model": [12],
     "ending": ["ojar"],
     "pronominal": [false]
   },
   "estolar": {
     "verb": ["estolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
   "estomagar": {
     "verb": ["estomagar"],
-    "model": [],
+    "model": [34],
     "ending": ["agar"],
     "pronominal": [false]
   },
@@ -66757,13 +66757,13 @@
   },
   "estomentar": {
     "verb": ["estomentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "estonar": {
     "verb": ["estonar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
@@ -66781,31 +66781,31 @@
   },
   "estontear": {
     "verb": ["estontear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "estontecer": {
     "verb": ["estontecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "estopar": {
     "verb": ["estopar"],
-    "model": [],
+    "model": [12],
     "ending": ["opar"],
     "pronominal": [false]
   },
   "estopetar": {
     "verb": ["estopetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "estoquear": {
     "verb": ["estoquear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -66817,13 +66817,13 @@
   },
   "estorcegar": {
     "verb": ["estorcegar"],
-    "model": [],
+    "model": [11,34],
     "ending": ["egar"],
     "pronominal": [false]
   },
   "estorcer": {
     "verb": ["estorcer"],
-    "model": [],
+    "model": [28,36],
     "ending": ["orcer"],
     "pronominal": [false]
   },
@@ -66841,7 +66841,7 @@
   },
   "estornar": {
     "verb": ["estornar"],
-    "model": [],
+    "model": [12],
     "ending": ["ornar"],
     "pronominal": [false]
   },
@@ -66853,7 +66853,7 @@
   },
   "estornicar": {
     "verb": ["estornicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -66865,19 +66865,19 @@
   },
   "estorricar": {
     "verb": ["estorricar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estorroar": {
     "verb": ["estorroar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "estortegar": {
     "verb": ["estortegar"],
-    "model": [],
+    "model": [11,34],
     "ending": ["egar"],
     "pronominal": [false]
   },
@@ -66889,7 +66889,7 @@
   },
   "estorvar": {
     "verb": ["estorvar"],
-    "model": [],
+    "model": [12],
     "ending": ["orvar"],
     "pronominal": [false]
   },
@@ -66901,7 +66901,7 @@
   },
   "estourar": {
     "verb": ["estourar"],
-    "model": [],
+    "model": [22],
     "ending": ["ourar"],
     "pronominal": [false]
   },
@@ -66931,7 +66931,7 @@
   },
   "estrabar": {
     "verb": ["estrabar"],
-    "model": [],
+    "model": [1],
     "ending": ["abar"],
     "pronominal": [false]
   },
@@ -66949,13 +66949,13 @@
   },
   "estracinhar": {
     "verb": ["estracinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
   "estradar": {
     "verb": ["estradar"],
-    "model": [],
+    "model": [1],
     "ending": ["adar"],
     "pronominal": [false]
   },
@@ -66973,25 +66973,25 @@
   },
   "estrafegar": {
     "verb": ["estrafegar"],
-    "model": [],
+    "model": [11,34],
     "ending": ["egar"],
     "pronominal": [false]
   },
   "estragar": {
     "verb": ["estragar"],
-    "model": [],
+    "model": [34],
     "ending": ["agar"],
     "pronominal": [false]
   },
   "estralar": {
     "verb": ["estralar"],
-    "model": [],
+    "model": [1],
     "ending": ["alar"],
     "pronominal": [false]
   },
   "estralejar": {
     "verb": ["estralejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -67015,7 +67015,7 @@
   },
   "estramontar": {
     "verb": ["estramontar"],
-    "model": [],
+    "model": [1],
     "ending": ["ontar"],
     "pronominal": [false]
   },
@@ -67039,13 +67039,13 @@
   },
   "estrancilhar": {
     "verb": ["estrancilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "estrancinhar": {
     "verb": ["estrancinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
@@ -67081,7 +67081,7 @@
   },
   "estrangeirar": {
     "verb": ["estrangeirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
@@ -67093,19 +67093,19 @@
   },
   "estrangular": {
     "verb": ["estrangular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "estranhar": {
     "verb": ["estranhar"],
-    "model": [],
+    "model": [1],
     "ending": ["anhar"],
     "pronominal": [false]
   },
   "estransilhar": {
     "verb": ["estransilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
@@ -67129,13 +67129,13 @@
   },
   "estrapilhar": {
     "verb": ["estrapilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "estrapor": {
     "verb": ["estrapor"],
-    "model": [],
+    "model": [84],
     "ending": ["apor"],
     "pronominal": [false]
   },
@@ -67147,25 +67147,25 @@
   },
   "estrar": {
     "verb": ["estrar"],
-    "model": [],
+    "model": [11],
     "ending": ["estrar"],
     "pronominal": [false]
   },
   "estrategiar": {
     "verb": ["estrategiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estratificar": {
     "verb": ["estratificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estravar": {
     "verb": ["estravar"],
-    "model": [],
+    "model": [1],
     "ending": ["avar"],
     "pronominal": [false]
   },
@@ -67177,19 +67177,19 @@
   },
   "estraçalhar": {
     "verb": ["estraçalhar"],
-    "model": [],
+    "model": [1],
     "ending": ["alhar"],
     "pronominal": [false]
   },
   "estraçoar": {
     "verb": ["estraçoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "estrear": {
     "verb": ["estrear"],
-    "model": [],
+    "model": [56],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -67207,13 +67207,13 @@
   },
   "estrebuchar": {
     "verb": ["estrebuchar"],
-    "model": [],
+    "model": [1],
     "ending": ["uchar"],
     "pronominal": [false]
   },
   "estrecer": {
     "verb": ["estrecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -67231,7 +67231,7 @@
   },
   "estreitar": {
     "verb": ["estreitar"],
-    "model": [],
+    "model": [21],
     "ending": ["eitar"],
     "pronominal": [false]
   },
@@ -67243,7 +67243,7 @@
   },
   "estrelar": {
     "verb": ["estrelar"],
-    "model": [],
+    "model": [11],
     "ending": ["elar"],
     "pronominal": [false]
   },
@@ -67255,7 +67255,7 @@
   },
   "estrelejar": {
     "verb": ["estrelejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -67291,7 +67291,7 @@
   },
   "estremar": {
     "verb": ["estremar"],
-    "model": [],
+    "model": [1],
     "ending": ["emar"],
     "pronominal": [false]
   },
@@ -67303,7 +67303,7 @@
   },
   "estremecer": {
     "verb": ["estremecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -67327,13 +67327,13 @@
   },
   "estremunhar": {
     "verb": ["estremunhar"],
-    "model": [],
+    "model": [1],
     "ending": ["unhar"],
     "pronominal": [false]
   },
   "estrepar": {
     "verb": ["estrepar"],
-    "model": [],
+    "model": [11],
     "ending": ["epar"],
     "pronominal": [false]
   },
@@ -67345,7 +67345,7 @@
   },
   "estrepitar": {
     "verb": ["estrepitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
@@ -67357,7 +67357,7 @@
   },
   "estresir": {
     "verb": ["estresir"],
-    "model": [],
+    "model": [101],
     "ending": ["esir"],
     "pronominal": [false]
   },
@@ -67369,7 +67369,7 @@
   },
   "estressar": {
     "verb": ["estressar"],
-    "model": [],
+    "model": [11],
     "ending": ["essar"],
     "pronominal": [false]
   },
@@ -67381,25 +67381,25 @@
   },
   "estriar": {
     "verb": ["estriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estribar": {
     "verb": ["estribar"],
-    "model": [],
+    "model": [1],
     "ending": ["ibar"],
     "pronominal": [false]
   },
   "estribilhar": {
     "verb": ["estribilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "estricar": {
     "verb": ["estricar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -67423,25 +67423,25 @@
   },
   "estridular": {
     "verb": ["estridular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "estrigar": {
     "verb": ["estrigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
   "estrigir": {
     "verb": ["estrigir"],
-    "model": [],
+    "model": [39],
     "ending": ["igir"],
     "pronominal": [false]
   },
   "estrilar": {
     "verb": ["estrilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
@@ -67453,37 +67453,37 @@
   },
   "estrincar": {
     "verb": ["estrincar"],
-    "model": [],
+    "model": [33],
     "ending": ["incar"],
     "pronominal": [false]
   },
   "estrinchar": {
     "verb": ["estrinchar"],
-    "model": [],
+    "model": [1],
     "ending": ["inchar"],
     "pronominal": [false]
   },
   "estringir": {
     "verb": ["estringir"],
-    "model": [],
+    "model": [39],
     "ending": ["ingir"],
     "pronominal": [false]
   },
   "estrinçar": {
     "verb": ["estrinçar"],
-    "model": [],
+    "model": [35],
     "ending": ["inçar"],
     "pronominal": [false]
   },
   "estripar": {
     "verb": ["estripar"],
-    "model": [],
+    "model": [1],
     "ending": ["ipar"],
     "pronominal": [false]
   },
   "estriçar": {
     "verb": ["estriçar"],
-    "model": [],
+    "model": [35],
     "ending": ["içar"],
     "pronominal": [false]
   },
@@ -67501,7 +67501,7 @@
   },
   "estroinar": {
     "verb": ["estroinar"],
-    "model": [],
+    "model": [18],
     "ending": ["oinar"],
     "pronominal": [false]
   },
@@ -67525,25 +67525,25 @@
   },
   "estrompar": {
     "verb": ["estrompar"],
-    "model": [],
+    "model": [1],
     "ending": ["ompar"],
     "pronominal": [false]
   },
   "estroncar": {
     "verb": ["estroncar"],
-    "model": [],
+    "model": [33],
     "ending": ["oncar"],
     "pronominal": [false]
   },
   "estrondar": {
     "verb": ["estrondar"],
-    "model": [],
+    "model": [1],
     "ending": ["ondar"],
     "pronominal": [false]
   },
   "estrondear": {
     "verb": ["estrondear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -67573,7 +67573,7 @@
   },
   "estropear": {
     "verb": ["estropear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -67585,19 +67585,19 @@
   },
   "estropeliar": {
     "verb": ["estropeliar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estropiar": {
     "verb": ["estropiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "estrotejar": {
     "verb": ["estrotejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -67609,19 +67609,19 @@
   },
   "estrouxar": {
     "verb": ["estrouxar"],
-    "model": [],
+    "model": [22],
     "ending": ["ouxar"],
     "pronominal": [false]
   },
   "estrovinhar": {
     "verb": ["estrovinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
   "estroçar": {
     "verb": ["estroçar"],
-    "model": [],
+    "model": [12,35],
     "ending": ["oçar"],
     "pronominal": [false]
   },
@@ -67633,19 +67633,19 @@
   },
   "estrugir": {
     "verb": ["estrugir"],
-    "model": [],
+    "model": [39],
     "ending": ["ugir"],
     "pronominal": [false]
   },
   "estruir": {
     "verb": ["estruir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
   "estrumar": {
     "verb": ["estrumar"],
-    "model": [],
+    "model": [1],
     "ending": ["umar"],
     "pronominal": [false]
   },
@@ -67657,7 +67657,7 @@
   },
   "estrupidar": {
     "verb": ["estrupidar"],
-    "model": [],
+    "model": [1],
     "ending": ["idar"],
     "pronominal": [false]
   },
@@ -67669,49 +67669,49 @@
   },
   "estruturalizar": {
     "verb": ["estruturalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "estruturar": {
     "verb": ["estruturar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "estuar": {
     "verb": ["estuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "estucar": {
     "verb": ["estucar"],
-    "model": [],
+    "model": [33],
     "ending": ["ucar"],
     "pronominal": [false]
   },
   "estuchar": {
     "verb": ["estuchar"],
-    "model": [],
+    "model": [1],
     "ending": ["uchar"],
     "pronominal": [false]
   },
   "estudar": {
     "verb": ["estudar"],
-    "model": [],
+    "model": [1],
     "ending": ["udar"],
     "pronominal": [false]
   },
   "estufar": {
     "verb": ["estufar"],
-    "model": [],
+    "model": [1],
     "ending": ["ufar"],
     "pronominal": [false]
   },
   "estugar": {
     "verb": ["estugar"],
-    "model": [],
+    "model": [34],
     "ending": ["ugar"],
     "pronominal": [false]
   },
@@ -67723,25 +67723,25 @@
   },
   "estultificar": {
     "verb": ["estultificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "estumar": {
     "verb": ["estumar"],
-    "model": [],
+    "model": [1],
     "ending": ["umar"],
     "pronominal": [false]
   },
   "estupefazer": {
     "verb": ["estupefazer"],
-    "model": [],
+    "model": [74],
     "ending": ["azer"],
     "pronominal": [false]
   },
   "estupeficar": {
     "verb": ["estupeficar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -67759,7 +67759,7 @@
   },
   "estupidificar": {
     "verb": ["estupidificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -67771,13 +67771,13 @@
   },
   "estuporar": {
     "verb": ["estuporar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "estuprar": {
     "verb": ["estuprar"],
-    "model": [],
+    "model": [1],
     "ending": ["uprar"],
     "pronominal": [false]
   },
@@ -67789,19 +67789,19 @@
   },
   "esturdiar": {
     "verb": ["esturdiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "esturrar": {
     "verb": ["esturrar"],
-    "model": [],
+    "model": [1],
     "ending": ["urrar"],
     "pronominal": [false]
   },
   "esturricar": {
     "verb": ["esturricar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -67813,13 +67813,13 @@
   },
   "esvaecer": {
     "verb": ["esvaecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "esvair": {
     "verb": ["esvair"],
-    "model": [],
+    "model": [15],
     "ending": ["air"],
     "pronominal": [false]
   },
@@ -67837,13 +67837,13 @@
   },
   "esvanecer": {
     "verb": ["esvanecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "esvarar": {
     "verb": ["esvarar"],
-    "model": [],
+    "model": [1],
     "ending": ["arar"],
     "pronominal": [false]
   },
@@ -67855,31 +67855,31 @@
   },
   "esvazar": {
     "verb": ["esvazar"],
-    "model": [],
+    "model": [1],
     "ending": ["azar"],
     "pronominal": [false]
   },
   "esvaziar": {
     "verb": ["esvaziar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "esventar": {
     "verb": ["esventar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "esventrar": {
     "verb": ["esventrar"],
-    "model": [],
+    "model": [1],
     "ending": ["entrar"],
     "pronominal": [false]
   },
   "esverdear": {
     "verb": ["esverdear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -67891,19 +67891,19 @@
   },
   "esverdinhar": {
     "verb": ["esverdinhar"],
-    "model": [],
+    "model": [1],
     "ending": ["inhar"],
     "pronominal": [false]
   },
   "esvidar": {
     "verb": ["esvidar"],
-    "model": [],
+    "model": [1],
     "ending": ["idar"],
     "pronominal": [false]
   },
   "esvidigar": {
     "verb": ["esvidigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
@@ -67915,25 +67915,25 @@
   },
   "esviscerar": {
     "verb": ["esviscerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "esvoaçar": {
     "verb": ["esvoaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
   "esvoejar": {
     "verb": ["esvoejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "esvurmar": {
     "verb": ["esvurmar"],
-    "model": [],
+    "model": [1],
     "ending": ["urmar"],
     "pronominal": [false]
   },
@@ -67945,13 +67945,13 @@
   },
   "eterificar": {
     "verb": ["eterificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "eterizar": {
     "verb": ["eterizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -67963,7 +67963,7 @@
   },
   "eternizar": {
     "verb": ["eternizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -67987,13 +67987,13 @@
   },
   "etimologizar": {
     "verb": ["etimologizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "etiquetar": {
     "verb": ["etiquetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
@@ -68005,13 +68005,13 @@
   },
   "eufonizar": {
     "verb": ["eufonizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "euforizar": {
     "verb": ["euforizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -68023,49 +68023,49 @@
   },
   "europeizar": {
     "verb": ["europeizar"],
-    "model": [],
+    "model": [23],
     "ending": ["eizar"],
     "pronominal": [false]
   },
   "evacuar": {
     "verb": ["evacuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "evadir": {
     "verb": ["evadir"],
-    "model": [],
+    "model": [3],
     "ending": ["adir"],
     "pronominal": [false]
   },
   "evaginar": {
     "verb": ["evaginar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "evanescer": {
     "verb": ["evanescer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["escer"],
     "pronominal": [false]
   },
   "evangelizar": {
     "verb": ["evangelizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "evaporar": {
     "verb": ["evaporar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "evaporizar": {
     "verb": ["evaporizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -68089,31 +68089,31 @@
   },
   "evencer": {
     "verb": ["evencer"],
-    "model": [],
+    "model": [36],
     "ending": ["encer"],
     "pronominal": [false]
   },
   "eventrar": {
     "verb": ["eventrar"],
-    "model": [],
+    "model": [1],
     "ending": ["entrar"],
     "pronominal": [false]
   },
   "everminar": {
     "verb": ["everminar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "everter": {
     "verb": ["everter"],
-    "model": [],
+    "model": [27],
     "ending": ["erter"],
     "pronominal": [false]
   },
   "evidenciar": {
     "verb": ["evidenciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
@@ -68125,139 +68125,139 @@
   },
   "eviscerar": {
     "verb": ["eviscerar"],
-    "model": [],
+    "model": [9],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "evitar": {
     "verb": ["evitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "evocar": {
     "verb": ["evocar"],
-    "model": [],
+    "model": [12,33],
     "ending": ["ocar"],
     "pronominal": [false]
   },
   "evolar": {
     "verb": ["evolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
   "evolucionar": {
     "verb": ["evolucionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "evoluir": {
     "verb": ["evoluir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
   "evolver": {
     "verb": ["evolver"],
-    "model": [],
+    "model": [28],
     "ending": ["olver"],
     "pronominal": [false]
   },
   "exabundar": {
     "verb": ["exabundar"],
-    "model": [],
+    "model": [1],
     "ending": ["undar"],
     "pronominal": [false]
   },
   "exacerbar": {
     "verb": ["exacerbar"],
-    "model": [],
+    "model": [11],
     "ending": ["erbar"],
     "pronominal": [false]
   },
   "exagerar": {
     "verb": ["exagerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "exagitar": {
     "verb": ["exagitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "exalar": {
     "verb": ["exalar"],
-    "model": [],
+    "model": [1],
     "ending": ["alar"],
     "pronominal": [false]
   },
   "exaltar": {
     "verb": ["exaltar"],
-    "model": [],
+    "model": [1],
     "ending": ["altar"],
     "pronominal": [false]
   },
   "exalçar": {
     "verb": ["exalçar"],
-    "model": [],
+    "model": [35],
     "ending": ["alçar"],
     "pronominal": [false]
   },
   "examinar": {
     "verb": ["examinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "exarar": {
     "verb": ["exarar"],
-    "model": [],
+    "model": [1],
     "ending": ["arar"],
     "pronominal": [false]
   },
   "exarticular": {
     "verb": ["exarticular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "exasperar": {
     "verb": ["exasperar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "exatificar": {
     "verb": ["exatificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "exaurir": {
     "verb": ["exaurir"],
-    "model": [],
+    "model": [3],
     "ending": ["aurir"],
     "pronominal": [false]
   },
   "exaustar": {
     "verb": ["exaustar"],
-    "model": [],
+    "model": [1],
     "ending": ["ustar"],
     "pronominal": [false]
   },
   "exautorar": {
     "verb": ["exautorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "excarcerar": {
     "verb": ["excarcerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
@@ -68275,25 +68275,25 @@
   },
   "excecionar": {
     "verb": ["excecionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "exceder": {
     "verb": ["exceder"],
-    "model": [],
+    "model": [27],
     "ending": ["eder"],
     "pronominal": [false]
   },
   "exceler": {
     "verb": ["exceler"],
-    "model": [],
+    "model": [27],
     "ending": ["eler"],
     "pronominal": [false]
   },
   "excelir": {
     "verb": ["excelir"],
-    "model": [],
+    "model": [93],
     "ending": ["elir"],
     "pronominal": [false]
   },
@@ -68305,67 +68305,67 @@
   },
   "excepcionar": {
     "verb": ["excepcionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "exceptuar": {
     "verb": ["exceptuar"],
-    "model": [],
+    "model": [1],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "excetuar": {
     "verb": ["excetuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "excisar": {
     "verb": ["excisar"],
-    "model": [],
+    "model": [1],
     "ending": ["isar"],
     "pronominal": [false]
   },
   "excitar": {
     "verb": ["excitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "exclamar": {
     "verb": ["exclamar"],
-    "model": [],
+    "model": [1],
     "ending": ["amar"],
     "pronominal": [false]
   },
   "exclaustrar": {
     "verb": ["exclaustrar"],
-    "model": [],
+    "model": [1],
     "ending": ["austrar"],
     "pronominal": [false]
   },
   "exclausurar": {
     "verb": ["exclausurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "excluir": {
     "verb": ["excluir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
   "excogitar": {
     "verb": ["excogitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "excomungar": {
     "verb": ["excomungar"],
-    "model": [],
+    "model": [34],
     "ending": ["ungar"],
     "pronominal": [false]
   },
@@ -68383,25 +68383,25 @@
   },
   "excrescer": {
     "verb": ["excrescer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["escer"],
     "pronominal": [false]
   },
   "excretar": {
     "verb": ["excretar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "excruciar": {
     "verb": ["excruciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "exculpar": {
     "verb": ["exculpar"],
-    "model": [],
+    "model": [1],
     "ending": ["ulpar"],
     "pronominal": [false]
   },
@@ -68413,7 +68413,7 @@
   },
   "excursionar": {
     "verb": ["excursionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
@@ -68425,31 +68425,31 @@
   },
   "excutir": {
     "verb": ["excutir"],
-    "model": [],
+    "model": [3],
     "ending": ["utir"],
     "pronominal": [false]
   },
   "execrar": {
     "verb": ["execrar"],
-    "model": [],
+    "model": [11],
     "ending": ["ecrar"],
     "pronominal": [false]
   },
   "executar": {
     "verb": ["executar"],
-    "model": [],
+    "model": [1],
     "ending": ["utar"],
     "pronominal": [false]
   },
   "exemplar": {
     "verb": ["exemplar"],
-    "model": [],
+    "model": [1],
     "ending": ["emplar"],
     "pronominal": [false]
   },
   "exemplarizar": {
     "verb": ["exemplarizar"],
-    "model": [],
+    "model": [33],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -68461,31 +68461,31 @@
   },
   "exemptar": {
     "verb": ["exemptar"],
-    "model": [],
+    "model": [13],
     "ending": ["emptar"],
     "pronominal": [false]
   },
   "exercer": {
     "verb": ["exercer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ercer"],
     "pronominal": [false]
   },
   "exercitar": {
     "verb": ["exercitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "exerdar": {
     "verb": ["exerdar"],
-    "model": [],
+    "model": [11],
     "ending": ["erdar"],
     "pronominal": [false]
   },
   "exfoliar": {
     "verb": ["exfoliar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
@@ -68497,13 +68497,13 @@
   },
   "exibir": {
     "verb": ["exibir"],
-    "model": [],
+    "model": [3],
     "ending": ["ibir"],
     "pronominal": [false]
   },
   "exigir": {
     "verb": ["exigir"],
-    "model": [],
+    "model": [39],
     "ending": ["igir"],
     "pronominal": [false]
   },
@@ -68515,91 +68515,91 @@
   },
   "exilar": {
     "verb": ["exilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "exiliar": {
     "verb": ["exiliar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "eximir": {
     "verb": ["eximir"],
-    "model": [],
+    "model": [3],
     "ending": ["imir"],
     "pronominal": [false]
   },
   "exinanir": {
     "verb": ["exinanir"],
-    "model": [],
+    "model": [101],
     "ending": ["anir"],
     "pronominal": [false]
   },
   "exir": {
     "verb": ["exir"],
-    "model": [],
+    "model": [101],
     "ending": ["exir"],
     "pronominal": [false]
   },
   "existir": {
     "verb": ["existir"],
-    "model": [],
+    "model": [3],
     "ending": ["istir"],
     "pronominal": [false]
   },
   "exitar": {
     "verb": ["exitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "exonerar": {
     "verb": ["exonerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "exorar": {
     "verb": ["exorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "exorbitar": {
     "verb": ["exorbitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "exorcismar": {
     "verb": ["exorcismar"],
-    "model": [],
+    "model": [1],
     "ending": ["ismar"],
     "pronominal": [false]
   },
   "exorcizar": {
     "verb": ["exorcizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "exordiar": {
     "verb": ["exordiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "exornar": {
     "verb": ["exornar"],
-    "model": [],
+    "model": [12],
     "ending": ["ornar"],
     "pronominal": [false]
   },
   "exortar": {
     "verb": ["exortar"],
-    "model": [],
+    "model": [12],
     "ending": ["ortar"],
     "pronominal": [false]
   },
@@ -68617,37 +68617,37 @@
   },
   "expandir": {
     "verb": ["expandir"],
-    "model": [],
+    "model": [3],
     "ending": ["andir"],
     "pronominal": [false]
   },
   "expatriar": {
     "verb": ["expatriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "expectar": {
     "verb": ["expectar"],
-    "model": [],
+    "model": [13],
     "ending": ["ectar"],
     "pronominal": [false]
   },
   "expectorar": {
     "verb": ["expectorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "expedir": {
     "verb": ["expedir"],
-    "model": [],
+    "model": [63],
     "ending": ["edir"],
     "pronominal": [false]
   },
   "expedrar": {
     "verb": ["expedrar"],
-    "model": [],
+    "model": [11],
     "ending": ["edrar"],
     "pronominal": [false]
   },
@@ -68659,103 +68659,103 @@
   },
   "expelir": {
     "verb": ["expelir"],
-    "model": [],
+    "model": [29],
     "ending": ["elir"],
     "pronominal": [false]
   },
   "expender": {
     "verb": ["expender"],
-    "model": [],
+    "model": [2],
     "ending": ["ender"],
     "pronominal": [false]
   },
   "experienciar": {
     "verb": ["experienciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "experimentar": {
     "verb": ["experimentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "expetar": {
     "verb": ["expetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "expetorar": {
     "verb": ["expetorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "expiar": {
     "verb": ["expiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "expilar": {
     "verb": ["expilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "expirar": {
     "verb": ["expirar"],
-    "model": [],
+    "model": [1],
     "ending": ["irar"],
     "pronominal": [false]
   },
   "explanar": {
     "verb": ["explanar"],
-    "model": [],
+    "model": [1],
     "ending": ["anar"],
     "pronominal": [false]
   },
   "explantar": {
     "verb": ["explantar"],
-    "model": [],
+    "model": [1],
     "ending": ["antar"],
     "pronominal": [false]
   },
   "explicar": {
     "verb": ["explicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "explicitar": {
     "verb": ["explicitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "explodir": {
     "verb": ["explodir"],
-    "model": [],
+    "model": [47],
     "ending": ["odir"],
     "pronominal": [false]
   },
   "explorar": {
     "verb": ["explorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "explotar": {
     "verb": ["explotar"],
-    "model": [],
+    "model": [12],
     "ending": ["otar"],
     "pronominal": [false]
   },
   "expluir": {
     "verb": ["expluir"],
-    "model": [],
+    "model": [16],
     "ending": ["uir"],
     "pronominal": [false]
   },
@@ -68767,13 +68767,13 @@
   },
   "expor": {
     "verb": ["expor"],
-    "model": [],
+    "model": [84],
     "ending": ["por","expor"],
     "pronominal": [false]
   },
   "exportar": {
     "verb": ["exportar"],
-    "model": [],
+    "model": [12],
     "ending": ["ortar"],
     "pronominal": [false]
   },
@@ -68785,67 +68785,67 @@
   },
   "expressar": {
     "verb": ["expressar"],
-    "model": [],
+    "model": [11],
     "ending": ["essar"],
     "pronominal": [false]
   },
   "exprimir": {
     "verb": ["exprimir"],
-    "model": [],
+    "model": [3],
     "ending": ["imir"],
     "pronominal": [false]
   },
   "exprobar": {
     "verb": ["exprobar"],
-    "model": [],
+    "model": [12],
     "ending": ["obar"],
     "pronominal": [false]
   },
   "exprobrar": {
     "verb": ["exprobrar"],
-    "model": [],
+    "model": [12],
     "ending": ["obrar"],
     "pronominal": [false]
   },
   "expropriar": {
     "verb": ["expropriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "expugnar": {
     "verb": ["expugnar"],
-    "model": [],
+    "model": [13],
     "ending": ["ugnar"],
     "pronominal": [false]
   },
   "expulsar": {
     "verb": ["expulsar"],
-    "model": [],
+    "model": [1],
     "ending": ["ulsar"],
     "pronominal": [false]
   },
   "expungir": {
     "verb": ["expungir"],
-    "model": [],
+    "model": [39],
     "ending": ["ungir"],
     "pronominal": [false]
   },
   "expurgar": {
     "verb": ["expurgar"],
-    "model": [],
+    "model": [34],
     "ending": ["urgar"],
     "pronominal": [false]
   },
   "exsicar": {
     "verb": ["exsicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "exsolver": {
     "verb": ["exsolver"],
-    "model": [],
+    "model": [28],
     "ending": ["olver"],
     "pronominal": [false]
   },
@@ -68857,13 +68857,13 @@
   },
   "exsuar": {
     "verb": ["exsuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "exsudar": {
     "verb": ["exsudar"],
-    "model": [],
+    "model": [1],
     "ending": ["udar"],
     "pronominal": [false]
   },
@@ -68875,31 +68875,31 @@
   },
   "exsurgir": {
     "verb": ["exsurgir"],
-    "model": [],
+    "model": [39],
     "ending": ["urgir"],
     "pronominal": [false]
   },
   "extasiar": {
     "verb": ["extasiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "extenuar": {
     "verb": ["extenuar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
   "exteriorizar": {
     "verb": ["exteriorizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "exterminar": {
     "verb": ["exterminar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
@@ -68911,7 +68911,7 @@
   },
   "externar": {
     "verb": ["externar"],
-    "model": [],
+    "model": [11],
     "ending": ["ernar"],
     "pronominal": [false]
   },
@@ -68923,19 +68923,19 @@
   },
   "extinguir": {
     "verb": ["extinguir"],
-    "model": [],
+    "model": [41],
     "ending": ["inguir"],
     "pronominal": [false]
   },
   "extirpar": {
     "verb": ["extirpar"],
-    "model": [],
+    "model": [1],
     "ending": ["irpar"],
     "pronominal": [false]
   },
   "extorquir": {
     "verb": ["extorquir"],
-    "model": [],
+    "model": [92],
     "ending": ["orquir"],
     "pronominal": [false]
   },
@@ -68953,73 +68953,73 @@
   },
   "extraditar": {
     "verb": ["extraditar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "extrair": {
     "verb": ["extrair"],
-    "model": [],
+    "model": [15],
     "ending": ["air"],
     "pronominal": [false]
   },
   "extrapassar": {
     "verb": ["extrapassar"],
-    "model": [],
+    "model": [1],
     "ending": ["assar"],
     "pronominal": [false]
   },
   "extrapolar": {
     "verb": ["extrapolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
   "extrapor": {
     "verb": ["extrapor"],
-    "model": [],
+    "model": [84],
     "ending": ["por","apor"],
     "pronominal": [false]
   },
   "extratar": {
     "verb": ["extratar"],
-    "model": [],
+    "model": [1],
     "ending": ["atar"],
     "pronominal": [false]
   },
   "extravaganciar": {
     "verb": ["extravaganciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "extravagar": {
     "verb": ["extravagar"],
-    "model": [],
+    "model": [34],
     "ending": ["agar"],
     "pronominal": [false]
   },
   "extravasar": {
     "verb": ["extravasar"],
-    "model": [],
+    "model": [1],
     "ending": ["asar"],
     "pronominal": [false]
   },
   "extraviar": {
     "verb": ["extraviar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "extremar": {
     "verb": ["extremar"],
-    "model": [],
+    "model": [1],
     "ending": ["emar"],
     "pronominal": [false]
   },
   "extricar": {
     "verb": ["extricar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -69031,43 +69031,43 @@
   },
   "extroverter": {
     "verb": ["extroverter"],
-    "model": [],
+    "model": [27],
     "ending": ["erter"],
     "pronominal": [false]
   },
   "extubar": {
     "verb": ["extubar"],
-    "model": [],
+    "model": [1],
     "ending": ["ubar"],
     "pronominal": [false]
   },
   "exuberar": {
     "verb": ["exuberar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "exular": {
     "verb": ["exular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "exulcerar": {
     "verb": ["exulcerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "exultar": {
     "verb": ["exultar"],
-    "model": [],
+    "model": [1],
     "ending": ["ultar"],
     "pronominal": [false]
   },
   "exumar": {
     "verb": ["exumar"],
-    "model": [],
+    "model": [1],
     "ending": ["umar"],
     "pronominal": [false]
   },
@@ -69079,7 +69079,7 @@
   },
   "exurbanizar": {
     "verb": ["exurbanizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -69091,121 +69091,121 @@
   },
   "fabricar": {
     "verb": ["fabricar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "fabular": {
     "verb": ["fabular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "fabulizar": {
     "verb": ["fabulizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fac-similar": {
     "verb": ["fac-similar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "faccionar": {
     "verb": ["faccionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "facear": {
     "verb": ["facear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "faceciar": {
     "verb": ["faceciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "faceirar": {
     "verb": ["faceirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
   "facejar": {
     "verb": ["facejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "facetar": {
     "verb": ["facetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "facetear": {
     "verb": ["facetear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fachar": {
     "verb": ["fachar"],
-    "model": [],
+    "model": [1],
     "ending": ["achar"],
     "pronominal": [false]
   },
   "fachear": {
     "verb": ["fachear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "facilitar": {
     "verb": ["facilitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "facionar": {
     "verb": ["facionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "facultar": {
     "verb": ["facultar"],
-    "model": [],
+    "model": [1],
     "ending": ["ultar"],
     "pronominal": [false]
   },
   "facundiar": {
     "verb": ["facundiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "fadar": {
     "verb": ["fadar"],
-    "model": [],
+    "model": [1],
     "ending": ["adar"],
     "pronominal": [false]
   },
   "fadejar": {
     "verb": ["fadejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "fadigar": {
     "verb": ["fadigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
@@ -69229,19 +69229,19 @@
   },
   "fagocitar": {
     "verb": ["fagocitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "fagulhar": {
     "verb": ["fagulhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ulhar"],
     "pronominal": [false]
   },
   "faiar": {
     "verb": ["faiar"],
-    "model": [],
+    "model": [1],
     "ending": ["aiar"],
     "pronominal": [false]
   },
@@ -69259,31 +69259,31 @@
   },
   "faiscar": {
     "verb": ["faiscar"],
-    "model": [],
+    "model": [23,33],
     "ending": ["iscar"],
     "pronominal": [false]
   },
   "faixar": {
     "verb": ["faixar"],
-    "model": [],
+    "model": [1],
     "ending": ["aixar"],
     "pronominal": [false]
   },
   "faixear": {
     "verb": ["faixear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fajutar": {
     "verb": ["fajutar"],
-    "model": [],
+    "model": [1],
     "ending": ["utar"],
     "pronominal": [false]
   },
   "falaciar": {
     "verb": ["falaciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
@@ -69301,7 +69301,7 @@
   },
   "falar": {
     "verb": ["falar"],
-    "model": [],
+    "model": [1],
     "ending": ["alar"],
     "pronominal": [false]
   },
@@ -69313,7 +69313,7 @@
   },
   "falaçar": {
     "verb": ["falaçar"],
-    "model": [],
+    "model": [35],
     "ending": ["açar"],
     "pronominal": [false]
   },
@@ -69325,13 +69325,13 @@
   },
   "falcassar": {
     "verb": ["falcassar"],
-    "model": [],
+    "model": [1],
     "ending": ["assar"],
     "pronominal": [false]
   },
   "falcatruar": {
     "verb": ["falcatruar"],
-    "model": [],
+    "model": [10],
     "ending": ["uar"],
     "pronominal": [false]
   },
@@ -69343,13 +69343,13 @@
   },
   "falcoar": {
     "verb": ["falcoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "falecer": {
     "verb": ["falecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -69367,7 +69367,7 @@
   },
   "falhar": {
     "verb": ["falhar"],
-    "model": [],
+    "model": [1],
     "ending": ["alhar"],
     "pronominal": [false]
   },
@@ -69379,7 +69379,7 @@
   },
   "falir": {
     "verb": ["falir"],
-    "model": [],
+    "model": [101],
     "ending": ["alir"],
     "pronominal": [false]
   },
@@ -69397,43 +69397,43 @@
   },
   "falquear": {
     "verb": ["falquear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "falquejar": {
     "verb": ["falquejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "falsar": {
     "verb": ["falsar"],
-    "model": [],
+    "model": [1],
     "ending": ["alsar"],
     "pronominal": [false]
   },
   "falsear": {
     "verb": ["falsear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "falsetear": {
     "verb": ["falsetear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "falsificar": {
     "verb": ["falsificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "faltar": {
     "verb": ["faltar"],
-    "model": [],
+    "model": [1],
     "ending": ["altar"],
     "pronominal": [false]
   },
@@ -69445,7 +69445,7 @@
   },
   "familiarizar": {
     "verb": ["familiarizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -69457,31 +69457,31 @@
   },
   "famular": {
     "verb": ["famular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },
   "fanar": {
     "verb": ["fanar"],
-    "model": [],
+    "model": [1],
     "ending": ["anar"],
     "pronominal": [false]
   },
   "fanatizar": {
     "verb": ["fanatizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fandangar": {
     "verb": ["fandangar"],
-    "model": [],
+    "model": [34],
     "ending": ["angar"],
     "pronominal": [false]
   },
   "fandanguear": {
     "verb": ["fandanguear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -69505,13 +69505,13 @@
   },
   "fanfarrear": {
     "verb": ["fanfarrear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fanfarronar": {
     "verb": ["fanfarronar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
@@ -69541,13 +69541,13 @@
   },
   "fanhosear": {
     "verb": ["fanhosear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fanicar": {
     "verb": ["fanicar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
@@ -69559,7 +69559,7 @@
   },
   "fantasiar": {
     "verb": ["fantasiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
@@ -69601,7 +69601,7 @@
   },
   "faquear": {
     "verb": ["faquear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -69613,13 +69613,13 @@
   },
   "faradizar": {
     "verb": ["faradizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "farandolar": {
     "verb": ["farandolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
@@ -69631,13 +69631,13 @@
   },
   "fardar": {
     "verb": ["fardar"],
-    "model": [],
+    "model": [1],
     "ending": ["ardar"],
     "pronominal": [false]
   },
   "farejar": {
     "verb": ["farejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -69655,13 +69655,13 @@
   },
   "farfalhar": {
     "verb": ["farfalhar"],
-    "model": [],
+    "model": [1],
     "ending": ["alhar"],
     "pronominal": [false]
   },
   "farfalhejar": {
     "verb": ["farfalhejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
@@ -69673,13 +69673,13 @@
   },
   "farinar": {
     "verb": ["farinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "faringalizar": {
     "verb": ["faringalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -69691,7 +69691,7 @@
   },
   "fariscar": {
     "verb": ["fariscar"],
-    "model": [],
+    "model": [33],
     "ending": ["iscar"],
     "pronominal": [false]
   },
@@ -69715,13 +69715,13 @@
   },
   "farpar": {
     "verb": ["farpar"],
-    "model": [],
+    "model": [1],
     "ending": ["arpar"],
     "pronominal": [false]
   },
   "farpear": {
     "verb": ["farpear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -69733,7 +69733,7 @@
   },
   "farrapar": {
     "verb": ["farrapar"],
-    "model": [],
+    "model": [1],
     "ending": ["apar"],
     "pronominal": [false]
   },
@@ -69745,13 +69745,13 @@
   },
   "farrear": {
     "verb": ["farrear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "farromear": {
     "verb": ["farromear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
@@ -69781,13 +69781,13 @@
   },
   "farsantear": {
     "verb": ["farsantear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "farsolar": {
     "verb": ["farsolar"],
-    "model": [],
+    "model": [12],
     "ending": ["olar"],
     "pronominal": [false]
   },
@@ -69799,7 +69799,7 @@
   },
   "fartar": {
     "verb": ["fartar"],
-    "model": [],
+    "model": [1],
     "ending": ["artar"],
     "pronominal": [false]
   },
@@ -69817,25 +69817,25 @@
   },
   "fascinar": {
     "verb": ["fascinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "fascistizar": {
     "verb": ["fascistizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fasquiar": {
     "verb": ["fasquiar"],
-    "model": [],
+    "model": [9],
     "ending": ["uiar"],
     "pronominal": [false]
   },
   "fastar": {
     "verb": ["fastar"],
-    "model": [],
+    "model": [1],
     "ending": ["astar"],
     "pronominal": [false]
   },
@@ -69847,13 +69847,13 @@
   },
   "fatagear": {
     "verb": ["fatagear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fatalizar": {
     "verb": ["fatalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -69871,25 +69871,25 @@
   },
   "fatejar": {
     "verb": ["fatejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "fatiar": {
     "verb": ["fatiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "fatigar": {
     "verb": ["fatigar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
   "fatorar": {
     "verb": ["fatorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
@@ -69901,55 +69901,55 @@
   },
   "faturar": {
     "verb": ["faturar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "faular": {
     "verb": ["faular"],
-    "model": [],
+    "model": [24],
     "ending": ["aular"],
     "pronominal": [false]
   },
   "faulhar": {
     "verb": ["faulhar"],
-    "model": [],
+    "model": [24],
     "ending": ["ulhar"],
     "pronominal": [false]
   },
   "fautorizar": {
     "verb": ["fautorizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "favar": {
     "verb": ["favar"],
-    "model": [],
+    "model": [1],
     "ending": ["avar"],
     "pronominal": [false]
   },
   "favelizar": {
     "verb": ["favelizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "favonear": {
     "verb": ["favonear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "favoniar": {
     "verb": ["favoniar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "favorecer": {
     "verb": ["favorecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
@@ -69961,25 +69961,25 @@
   },
   "faxear": {
     "verb": ["faxear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "faxinar": {
     "verb": ["faxinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "fazer": {
     "verb": ["fazer"],
-    "model": [],
+    "model": [74],
     "ending": ["azer"],
     "pronominal": [false]
   },
   "febricitar": {
     "verb": ["febricitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
@@ -69991,13 +69991,13 @@
   },
   "fechar": {
     "verb": ["fechar"],
-    "model": [],
+    "model": [42],
     "ending": ["echar"],
     "pronominal": [false]
   },
   "fecundar": {
     "verb": ["fecundar"],
-    "model": [],
+    "model": [1],
     "ending": ["undar"],
     "pronominal": [false]
   },
@@ -70015,25 +70015,25 @@
   },
   "fedelhar": {
     "verb": ["fedelhar"],
-    "model": [],
+    "model": [42],
     "ending": ["elhar"],
     "pronominal": [false]
   },
   "feder": {
     "verb": ["feder"],
-    "model": [],
+    "model": [27],
     "ending": ["eder"],
     "pronominal": [false]
   },
   "federalizar": {
     "verb": ["federalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "federar": {
     "verb": ["federar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
@@ -70051,37 +70051,37 @@
   },
   "feirar": {
     "verb": ["feirar"],
-    "model": [],
+    "model": [21],
     "ending": ["eirar"],
     "pronominal": [false]
   },
   "feitar": {
     "verb": ["feitar"],
-    "model": [],
+    "model": [21],
     "ending": ["eitar"],
     "pronominal": [false]
   },
   "feitiar": {
     "verb": ["feitiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "feitorar": {
     "verb": ["feitorar"],
-    "model": [],
+    "model": [12],
     "ending": ["orar"],
     "pronominal": [false]
   },
   "feitoriar": {
     "verb": ["feitoriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "feitorizar": {
     "verb": ["feitorizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -70093,79 +70093,79 @@
   },
   "felicitar": {
     "verb": ["felicitar"],
-    "model": [],
+    "model": [1],
     "ending": ["itar"],
     "pronominal": [false]
   },
   "feloniar": {
     "verb": ["feloniar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "felpar": {
     "verb": ["felpar"],
-    "model": [],
+    "model": [11],
     "ending": ["elpar"],
     "pronominal": [false]
   },
   "feltrar": {
     "verb": ["feltrar"],
-    "model": [],
+    "model": [11],
     "ending": ["eltrar"],
     "pronominal": [false]
   },
   "fembar": {
     "verb": ["fembar"],
-    "model": [],
+    "model": [1],
     "ending": ["embar"],
     "pronominal": [false]
   },
   "femear": {
     "verb": ["femear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fementir": {
     "verb": ["fementir"],
-    "model": [],
+    "model": [31],
     "ending": ["entir"],
     "pronominal": [false]
   },
   "femençar": {
     "verb": ["femençar"],
-    "model": [],
+    "model": [35],
     "ending": ["ençar"],
     "pronominal": [false]
   },
   "feminilizar": {
     "verb": ["feminilizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "feminizar": {
     "verb": ["feminizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fenar": {
     "verb": ["fenar"],
-    "model": [],
+    "model": [1],
     "ending": ["enar"],
     "pronominal": [false]
   },
   "fender": {
     "verb": ["fender"],
-    "model": [],
+    "model": [2],
     "ending": ["ender"],
     "pronominal": [false]
   },
   "fendilhar": {
     "verb": ["fendilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
@@ -70183,13 +70183,13 @@
   },
   "fenecer": {
     "verb": ["fenecer"],
-    "model": [],
+    "model": [27,36],
     "ending": ["ecer"],
     "pronominal": [false]
   },
   "fenestrar": {
     "verb": ["fenestrar"],
-    "model": [],
+    "model": [11],
     "ending": ["estrar"],
     "pronominal": [false]
   },
@@ -70207,31 +70207,31 @@
   },
   "fenomenalizar": {
     "verb": ["fenomenalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fenomenizar": {
     "verb": ["fenomenizar"],
-    "model": [],
+    "model": [4],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "feriar": {
     "verb": ["feriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "ferir": {
     "verb": ["ferir"],
-    "model": [],
+    "model": [29],
     "ending": ["erir"],
     "pronominal": [false]
   },
   "fermentar": {
     "verb": ["fermentar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
@@ -70243,7 +70243,7 @@
   },
   "ferrar": {
     "verb": ["ferrar"],
-    "model": [],
+    "model": [11],
     "ending": ["errar"],
     "pronominal": [false]
   },
@@ -70255,25 +70255,25 @@
   },
   "ferretar": {
     "verb": ["ferretar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
   "ferretear": {
     "verb": ["ferretear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "ferretoar": {
     "verb": ["ferretoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "ferroar": {
     "verb": ["ferroar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
@@ -70285,43 +70285,43 @@
   },
   "ferrolhar": {
     "verb": ["ferrolhar"],
-    "model": [],
+    "model": [12],
     "ending": ["olhar"],
     "pronominal": [false]
   },
   "ferropear": {
     "verb": ["ferropear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "fertilizar": {
     "verb": ["fertilizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "fervelhar": {
     "verb": ["fervelhar"],
-    "model": [],
+    "model": [42],
     "ending": ["elhar"],
     "pronominal": [false]
   },
   "ferventar": {
     "verb": ["ferventar"],
-    "model": [],
+    "model": [1],
     "ending": ["entar"],
     "pronominal": [false]
   },
   "ferver": {
     "verb": ["ferver"],
-    "model": [],
+    "model": [27],
     "ending": ["erver"],
     "pronominal": [false]
   },
   "fervilhar": {
     "verb": ["fervilhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
@@ -70339,37 +70339,37 @@
   },
   "festar": {
     "verb": ["festar"],
-    "model": [],
+    "model": [11],
     "ending": ["estar"],
     "pronominal": [false]
   },
   "festejar": {
     "verb": ["festejar"],
-    "model": [],
+    "model": [42],
     "ending": ["ejar"],
     "pronominal": [false]
   },
   "festinar": {
     "verb": ["festinar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "festoar": {
     "verb": ["festoar"],
-    "model": [],
+    "model": [14],
     "ending": ["oar"],
     "pronominal": [false]
   },
   "festonar": {
     "verb": ["festonar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "feudalizar": {
     "verb": ["feudalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -70381,49 +70381,49 @@
   },
   "fiar": {
     "verb": ["fiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "fibrilar": {
     "verb": ["fibrilar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "ficar": {
     "verb": ["ficar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "pronominal": [false]
   },
   "ficcionar": {
     "verb": ["ficcionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "fichar": {
     "verb": ["fichar"],
-    "model": [],
+    "model": [1],
     "ending": ["ichar"],
     "pronominal": [false]
   },
   "fidelizar": {
     "verb": ["fidelizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "figar": {
     "verb": ["figar"],
-    "model": [],
+    "model": [34],
     "ending": ["igar"],
     "pronominal": [false]
   },
   "figurar": {
     "verb": ["figurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
@@ -70435,13 +70435,13 @@
   },
   "filar": {
     "verb": ["filar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilar"],
     "pronominal": [false]
   },
   "filetar": {
     "verb": ["filetar"],
-    "model": [],
+    "model": [11],
     "ending": ["etar"],
     "pronominal": [false]
   },
@@ -70453,13 +70453,13 @@
   },
   "filhar": {
     "verb": ["filhar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilhar"],
     "pronominal": [false]
   },
   "filharar": {
     "verb": ["filharar"],
-    "model": [],
+    "model": [1],
     "ending": ["arar"],
     "pronominal": [false]
   },
@@ -70471,13 +70471,13 @@
   },
   "filiar": {
     "verb": ["filiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "filigranar": {
     "verb": ["filigranar"],
-    "model": [],
+    "model": [1],
     "ending": ["anar"],
     "pronominal": [false]
   },
@@ -70495,7 +70495,7 @@
   },
   "filmar": {
     "verb": ["filmar"],
-    "model": [],
+    "model": [1],
     "ending": ["ilmar"],
     "pronominal": [false]
   },
@@ -70513,55 +70513,55 @@
   },
   "filosofar": {
     "verb": ["filosofar"],
-    "model": [],
+    "model": [12],
     "ending": ["ofar"],
     "pronominal": [false]
   },
   "filosofear": {
     "verb": ["filosofear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "pronominal": [false]
   },
   "filoxerar": {
     "verb": ["filoxerar"],
-    "model": [],
+    "model": [11],
     "ending": ["erar"],
     "pronominal": [false]
   },
   "filtrar": {
     "verb": ["filtrar"],
-    "model": [],
+    "model": [1],
     "ending": ["iltrar"],
     "pronominal": [false]
   },
   "fimbriar": {
     "verb": ["fimbriar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "finalizar": {
     "verb": ["finalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
   "financiar": {
     "verb": ["financiar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "pronominal": [false]
   },
   "finar": {
     "verb": ["finar"],
-    "model": [],
+    "model": [1],
     "ending": ["inar"],
     "pronominal": [false]
   },
   "fincar": {
     "verb": ["fincar"],
-    "model": [],
+    "model": [33],
     "ending": ["incar"],
     "pronominal": [false]
   },
@@ -70573,7 +70573,7 @@
   },
   "findar": {
     "verb": ["findar"],
-    "model": [],
+    "model": [1],
     "ending": ["indar"],
     "pronominal": [false]
   },
@@ -70585,19 +70585,19 @@
   },
   "fingir": {
     "verb": ["fingir"],
-    "model": [],
+    "model": [39],
     "ending": ["ingir"],
     "pronominal": [false]
   },
   "fintar": {
     "verb": ["fintar"],
-    "model": [],
+    "model": [1],
     "ending": ["intar"],
     "pronominal": [false]
   },
   "firmar": {
     "verb": ["firmar"],
-    "model": [],
+    "model": [1],
     "ending": ["irmar"],
     "pronominal": [false]
   },
@@ -70609,7 +70609,7 @@
   },
   "fiscalizar": {
     "verb": ["fiscalizar"],
-    "model": [],
+    "model": [1],
     "ending": ["izar"],
     "pronominal": [false]
   },
@@ -70621,7 +70621,7 @@
   },
   "fisgar": {
     "verb": ["fisgar"],
-    "model": [],
+    "model": [34],
     "ending": ["isgar"],
     "pronominal": [false]
   },
@@ -70639,19 +70639,19 @@
   },
   "fissionar": {
     "verb": ["fissionar"],
-    "model": [],
+    "model": [1],
     "ending": ["onar"],
     "pronominal": [false]
   },
   "fissurar": {
     "verb": ["fissurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "pronominal": [false]
   },
   "fistular": {
     "verb": ["fistular"],
-    "model": [],
+    "model": [1],
     "ending": ["ular"],
     "pronominal": [false]
   },

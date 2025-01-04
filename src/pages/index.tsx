@@ -187,14 +187,16 @@ const Index = () => {
   const ProgressBar = ({ progress }: { progress: number }) => {
     return (
       <div className={styles.progress_bar}>
-        {currentProgress !== 100 && (<div
-          style={{
-            width: `${progress}%`,
-            background: '#3d3d3d',
-            height: '5px',
-            transition: 'width 0.3s ease-in-out',
-          }}
-        />)}
+        {currentProgress !== 100 && (
+          <div
+            style={{
+              width: `${progress}%`,
+              background: 'var(--foreground)',
+              height: '5px',
+              transition: 'width 0.3s ease-in-out',
+            }}
+          />
+        )}
       </div>
     );
   };
