@@ -134,8 +134,8 @@
 }
 
 .index_tabs_container .index_tabs_button:hover {
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--foreground)!important;
+  color: var(--background)!important;
 }
 
 .index_tabs_button {
