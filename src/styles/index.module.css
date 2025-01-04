@@ -179,10 +179,8 @@
 
 .panel {
   /* background-color: rgb(180, 206, 197); */
-  width:800px;
+  width:840px;
   min-height: 260px;
-  /* padding: 20px; */
-  padding-top: 0px;
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
 }
@@ -194,8 +192,8 @@
 }
 
 .subpanel {
-  /* width: 100%; */
-  margin: 25px;
+  margin: 20px;
+  margin-top: 25px;
 }
 
 .references, .warning {
@@ -269,7 +267,6 @@
 
 .progress_bar {
   margin-inline: 3px;
-  background: var(--button);
 }
 
 .punctButton {
