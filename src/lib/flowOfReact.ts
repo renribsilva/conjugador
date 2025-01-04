@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
 import { ni } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
@@ -115,8 +115,18 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
 
+      setState(prev => ({
+        ...prev,
+        progress: 1
+      }));
+
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
+
+      setState(prev => ({
+        ...prev,
+        progress: 2
+      }));
 
       setState(prev => ({
         ...prev,
@@ -166,6 +176,11 @@ export const flowOfReact = () => {
 
       }));
 
+      setState(prev => ({
+        ...prev,
+        progress: 5
+      }));
+
       if (normalizedInputValue.trim() === "") {
 
         setState(prev => ({
@@ -180,7 +195,7 @@ export const flowOfReact = () => {
 
       setState(prev => ({
         ...prev,
-        progress: 10
+        progress: 7
       }));
 
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
@@ -197,6 +212,11 @@ export const flowOfReact = () => {
 
       }
 
+      setState(prev => ({
+        ...prev,
+        progress: 9
+      }));
+
       if (originalVerb === null && variationVerb === null ) {
 
         setState(prev => ({
@@ -211,6 +231,11 @@ export const flowOfReact = () => {
 
       }
 
+      setState(prev => ({
+        ...prev,
+        progress: 15
+      }));
+
       let puncts = null
       puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
 
@@ -223,6 +248,11 @@ export const flowOfReact = () => {
         }))
 
       }
+
+      setState(prev => ({
+        ...prev,
+        progress: 20
+      }));
 
       if (puncts !== null) {
 
@@ -303,6 +333,11 @@ export const flowOfReact = () => {
         similar = apiResponse.originalVerb.similar;
         variations = apiResponse.originalVerb.variations;
 
+        setState(prev => ({
+          ...prev,
+          progress: 30
+        }));
+
         if  (similar !== null && !state.goThrough) {
 
           setState(prev => ({
@@ -319,6 +354,11 @@ export const flowOfReact = () => {
 
           return
         }
+
+        setState(prev => ({
+          ...prev,
+          progress: 35
+        }));
         
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
         
@@ -351,7 +391,7 @@ export const flowOfReact = () => {
 
         setState(prev => ({
           ...prev,
-          progress: 99
+          progress: 100
         }));
 
         await fetchConjugations();

@@ -281,6 +281,7 @@ const Index = () => {
                 <>
                   <p>buscando...</p>
                   <ProgressBar progress={state.progress} />
+                  {state.progress}%
                 </>
               )}
             </div>
