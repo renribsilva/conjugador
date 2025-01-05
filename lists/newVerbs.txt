@@ -2713,6 +2713,7 @@ forneziar
 gazetar
 glotalizar
 grugrujar
+grugulhar
 grugrurejar
 grugurejar
 guaribar
@@ -2753,6 +2754,7 @@ impontar
 impopularizar
 impostar
 imposturar
+imprimar
 impronunciar
 improvar
 impugnar
@@ -2778,6 +2780,7 @@ inconfortar
 inconsolidar
 inconstitucionalizar
 incorrer
+incriminar
 incruentar
 inculcar
 inculpar
@@ -2789,6 +2792,7 @@ indigitar
 indignar
 indisciplinar
 indispor
+indocilizar
 induzir
 inexistir
 infartar
@@ -2803,7 +2807,7 @@ infirmar
 inflectir
 infletir
 infortunar
-infuscar
+infusar
 ingerir
 injungir
 injustiçar
@@ -2830,6 +2834,7 @@ intercambiar
 interceder
 intercomunicar
 interconectar
+intercorrer
 interdepender
 interdizer
 interespacejar
@@ -2858,6 +2863,7 @@ intrincar
 intubar
 inturgescer
 inundar
+inutilizar
 invalidar
 inverter
 inviabilizar
