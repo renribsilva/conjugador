@@ -165,12 +165,12 @@
   color: var(--background)!important;
 }
 
-.table_tabs_se_container .table_tabs_se_button.active {
+.table_tabs_se_button.active {
   background-color: var(--foreground)!important;
   color: var(--background)!important;
 }
 
-.table_tabs_se_container .table_tabs_se_button.inactive {
+.table_tabs_se_button.inactive {
   background-color: var(--button)!important;
   color: var(--foreground)!important;
 }
