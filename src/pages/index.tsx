@@ -235,7 +235,7 @@ const Index = () => {
               <button 
                 className={styles.button_title}
                 onClick={handleHome}
-                disabled={state.loading}
+                disabled={state.loading === true}
               >
                 conjugador-gules
               </button>
@@ -252,7 +252,7 @@ const Index = () => {
                     ? styles.active 
                     : styles.inactive
                   }`}
-                  disabled={state.loading}
+                  disabled={state.loading === true}
                 >
                   início
                 </button>
@@ -266,7 +266,7 @@ const Index = () => {
                     ? styles.active 
                     : styles.inactive
                   }`}
-                  disabled={state.loading}
+                  disabled={state.loading === true}
                 >
                   dados
                 </button>
@@ -280,7 +280,7 @@ const Index = () => {
                     ? styles.active 
                     : styles.inactive
                   }`}
-                  disabled={state.loading}
+                  disabled={state.loading === true}
                 >
                   sobre
                 </button>
