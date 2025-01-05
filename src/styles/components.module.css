@@ -131,13 +131,13 @@
 }
 
 .table_tabs_pronouns_button.active {
-  background-color: var(--foreground)!important;
-  color: var(--background)!important;
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .table_tabs_pronouns_button.inactive {
-  background-color: var(--button)!important;
-  color: var(--foreground)!important;
+  background-color: var(--button);
+  color: var(--foreground);
 }
 
 .table_tabs_se_container {
@@ -166,13 +166,13 @@
 }
 
 .table_tabs_se_button.active {
-  background-color: var(--foreground)!important;
-  color: var(--background)!important;
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .table_tabs_se_button.inactive {
-  background-color: var(--button)!important;
-  color: var(--foreground)!important;
+  background-color: var(--button);
+  color: var(--foreground);
 }
 
 /***************************************************/
