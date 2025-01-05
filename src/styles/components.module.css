@@ -126,8 +126,8 @@
 }
 
 .table_tabs_pronouns_container .table_tabs_pronouns_button:hover {
-  background-color: var(--foreground)!important;
-  color: var(--background)!important;
+  background-color: var(--foreground);
+  color: var(--background);
 }
 
 .table_tabs_pronouns_button.active {
