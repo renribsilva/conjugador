@@ -118,8 +118,6 @@ export const flowOfReact = () => {
 
     if (event.key === "Enter" && state.inputValue !== "") {
 
-      updateProgress(15);
-
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
@@ -189,11 +187,11 @@ export const flowOfReact = () => {
 
       }
 
-      updateProgress(25);
-
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
       const originalVerb = apiResponse.originalVerb;
       const variationVerb = apiResponse.variationVerb;
+
+      updateProgress(50);
 
       if (normalizedInputValue !== "") {
         
@@ -330,6 +328,8 @@ export const flowOfReact = () => {
 
           return
         }
+
+        updateProgress(60);
         
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
         
