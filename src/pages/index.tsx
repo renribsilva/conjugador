@@ -386,7 +386,7 @@ const Index = () => {
                           <div className={styles.lascou_suggestion}>
                             <div>
                               <p>
-                                <span>{`Ou, se preferir, pode conjugar alguns verbos que semelham ao verbo`}</span>
+                                <span>{`Ou, se preferir, pode conjugar alguns verbos que semelham a`}</span>
                                 <strong>{` '${state.inputReq}'`}</strong>
                               </p>
                             </div>
