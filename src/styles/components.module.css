@@ -39,7 +39,8 @@
   height: 45px;
   border-radius: 0.3rem;
   margin: 5px;
-  margin-inline: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
   margin-top: 30px;
 }
 
