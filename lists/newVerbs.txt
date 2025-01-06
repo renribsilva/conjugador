@@ -3146,6 +3146,7 @@ rebulir
 rebuscar
 rebutar
 recabdar
+recabedar
 recachar
 recadastrar
 recair
@@ -3298,6 +3299,7 @@ reembarcar
 reembolsar
 reemendar
 reemergir
+reemigrar
 reemitir
 reempalhar
 reempossar
@@ -3351,6 +3353,7 @@ refilhar
 refilmar
 refinanciar
 refinar
+refincar
 refitar
 refletir
 reflexionar
@@ -3562,11 +3565,13 @@ repovoar
 repregar
 represar
 representar
+representear
 repristinar
 reprocessar
 reproduzir
 reprofundar
 reprogramar
+reprometer
 repropor
 reprovar
 repruir
@@ -3628,6 +3633,7 @@ retelhar
 retemperar
 retesar
 retingir
+retinir
 retintinir
 retirar
 retocar
@@ -3660,6 +3666,7 @@ reurbanizar
 reusar
 reutilizar
 revacinar
+revalidar
 revalorizar
 revascularizar
 revegetar
@@ -3689,6 +3696,7 @@ revirar
 reviravoltear
 revisar
 revisitar
+revistar
 revitalizar
 reviver
 revivificar
@@ -3706,6 +3714,7 @@ rezumbir
 roteirar
 
 sal-pimentar
+samear
 savanizar
 semicerrar
 semidomesticar
