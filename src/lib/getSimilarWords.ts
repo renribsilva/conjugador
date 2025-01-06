@@ -49,10 +49,8 @@ export default function getSimilarVerbs(verb: string): string[] {
     }
   }
 
-  // Ordena por similaridade
   similarVerbs.sort((a, b) => b.score - a.score);
 
-  // Seleciona os 5 mais similares ou preenche com os menos similares
   const topSimilar = similarVerbs.slice(0, 5);
   while (topSimilar.length < 5 && similarVerbs.length > topSimilar.length) {
     topSimilar.push(similarVerbs[topSimilar.length]);
@@ -62,6 +60,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-const word = "encontro";
+const word = "cohecer";
 const result = getSimilarVerbs(word);
 console.log(result);
