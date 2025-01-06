@@ -2869,6 +2869,7 @@ inverter
 inviabilizar
 invisibilizar
 inzonar
+irracionalizar
 irradiar
 irresponsabilizar
 irrigar
@@ -2888,6 +2889,7 @@ kuxir
 
 labreguejar
 latonizar
+literalizar
 lubrinar
 luitar
 
