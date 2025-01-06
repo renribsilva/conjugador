@@ -8,7 +8,7 @@ no rodapé desta página.
 ### foda-se a Academia Brasileira de Letras (ABL)
 
 em primeiro lugar, é preciso dizer: foda-se a ABL. foda-se o seu elitismo 
-e os seus direitos autorais, que, de "direito", não têm nada. digo isso porque, 
+e os seus direitos autorais que, de "direito", não têm nada. digo isso porque, 
 apesar de receber recursos públicos e usufruir de inúmeros benefícios fiscais, 
 a ABL mantém o registro da nossa língua extremamente restritivo ao acesso.
 alguém poderia pensar que o registro da língua portuguesa brasileira pertence
@@ -40,18 +40,20 @@ de verbos ou outros recursos linguísticos.
 
 ### pré-processamento de dados
 
-mas então como construir a porra de um conjugador de verbos utilizando 
-apenas uma lista de palavras? o primeiro passo é processar essa lista, 
-filtrando as palavras mais relevantes para o conjugador: 
-aquelas que terminam em "ar", "er", "ir" e "or". nessa etapa inicial 
-foram identificados aproximadamente 23 mil vocábulos, verbos e não verbos.
-por essa razão, foi necessário
-verificar, um a um, quais eram verbos e quais não eram, usando para isso
-duas referências ortográficas: Dicionário Houiass de Conjugação
-de Verbos[^1] e o já mencionado VOLP[^2] — para saber mais, veja **dados**.
-vale dizer que esse processo foi extremamente
-trabalhoso porém necessário, dado que este conjugador
-busca subsistir por si mesmo.
+Mas então, como construir a porra de conjugador de verbos utilizando 
+apenas uma lista de palavras? O primeiro passo é processar essa lista, 
+filtrando as palavras mais relevantes para o conjugador: aquelas que 
+terminam em "ar", "er", "ir" e "or". Na etapa inicial, foram identificados 
+aproximadamente 23 mil vocábulos, verbos e não verbos.
+Entre essas palavras, estavam termos como "celular" e "irregular",
+que claramente não são verbos. Isso tornou necessário um trabalho de 
+filtragem manual. Foi preciso revisar uma a uma as palavras, verificando 
+quais eram de fato verbos e quais não eram, utilizando duas referências
+ortográficas: o Dicionário Houiass de Conjugação de Verbos e o já 
+mencionado VOLP (Vocabulário Ortográfico da Língua Portuguesa).
+Esse processo foi demorado e não podia ser ignorado, já que a intenção 
+era tornar o conjugador o mais confiável possível. Como resultado, 
+pode-se reduzir a lista para pouco mais de 19 mil verbos no total.
 
 ### combinação das partes do verbo 
 
