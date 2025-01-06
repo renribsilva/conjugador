@@ -60,6 +60,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-const word = "cohecer";
-const result = getSimilarVerbs(word);
-console.log(result);
+// const word = "cohecer";
+// const result = getSimilarVerbs(word);
+// console.log(result);
