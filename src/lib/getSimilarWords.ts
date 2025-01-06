@@ -53,7 +53,7 @@ export default function getSimilarVerbs(verb: string): string[] {
 
   similarVerbs.sort((a, b) => b.score - a.score);
 
-  if (similarVerbs.length === 0) return [];
+  if (similarVerbs.length === 0) return []; 
 
   const mostSimilar = similarVerbs[0];
   const remainingVerbs = similarVerbs.slice(1);
