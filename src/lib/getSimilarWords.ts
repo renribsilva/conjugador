@@ -41,7 +41,6 @@ export default function getSimilarVerbs(verb: string): string[] {
   const similarVerbs: { key: string; score: number }[] = [];
 
   for (const [key, values] of Object.entries(data)) {
-    // Iterar sobre cada array dentro de values (verb, model, ending, prefix)
     for (const value of values.verb) {
       if (value !== verb) {
         const similarityScore = combinedSimilarity(ni(verb), ni(value));
@@ -52,12 +51,20 @@ export default function getSimilarVerbs(verb: string): string[] {
     }
   }
 
-  return similarVerbs
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 5)
-    .map(({ key }) => key);
+  similarVerbs.sort((a, b) => b.score - a.score);
+
+  if (similarVerbs.length === 0) return [];
+
+  const mostSimilar = similarVerbs[0];
+  const remainingVerbs = similarVerbs.slice(1);
+
+  const shuffled = remainingVerbs.sort(() => Math.random() - 0.5);
+  const finalSelection = [mostSimilar, ...shuffled.slice(0, 4)];
+
+  return finalSelection.map(({ key }) => key);
 }
 
+// Exemplo de uso
 // const word = "EXTAR";
 // const result = getSimilarVerbs(word);
 // console.log(result);
