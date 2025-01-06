@@ -2917,6 +2917,7 @@ oleificar
 
 perpeniquear
 persianizar
+pirulitar
 policromar
 policromizar
 poligrafar
@@ -3042,6 +3043,7 @@ reagir
 reagradecer
 reagravar
 reagrupar
+reajuntar
 reajustar
 realargar
 realçar

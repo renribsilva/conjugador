@@ -1,3 +1,4 @@
+import { addHookAliases } from "next/dist/server/require-hook";
 import jsonData from "../json/allVerbs.json";
 import { AllVerbsEntry } from "../types";
 import { ni } from "./normalizeVerb";
