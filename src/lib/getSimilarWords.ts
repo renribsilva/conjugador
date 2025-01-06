@@ -44,27 +44,24 @@ export default function getSimilarVerbs(verb: string): string[] {
     for (const value of values.verb) {
       if (value !== verb) {
         const similarityScore = combinedSimilarity(ni(verb), ni(value));
-        if (similarityScore > 0.5) {
-          similarVerbs.push({ key, score: similarityScore });
-        }
+        similarVerbs.push({ key, score: similarityScore });
       }
     }
   }
 
+  // Ordena por similaridade
   similarVerbs.sort((a, b) => b.score - a.score);
 
-  if (similarVerbs.length === 0) return []; 
+  // Seleciona os 5 mais similares ou preenche com os menos similares
+  const topSimilar = similarVerbs.slice(0, 5);
+  while (topSimilar.length < 5 && similarVerbs.length > topSimilar.length) {
+    topSimilar.push(similarVerbs[topSimilar.length]);
+  }
 
-  const mostSimilar = similarVerbs[0];
-  const remainingVerbs = similarVerbs.slice(1);
-
-  const shuffled = remainingVerbs.sort(() => Math.random() - 0.5);
-  const finalSelection = [mostSimilar, ...shuffled.slice(0, 4)];
-
-  return finalSelection.map(({ key }) => key);
+  return topSimilar.map(({ key }) => key);
 }
 
 // Exemplo de uso
-// const word = "EXTAR";
-// const result = getSimilarVerbs(word);
-// console.log(result);
+const word = "encontro";
+const result = getSimilarVerbs(word);
+console.log(result);
