@@ -146,8 +146,8 @@ async function processVerbsFile(): Promise<void> {
     
             try {
               
-              // const input = normalized
-              const input = "samear"
+              const input = normalized
+              // const input = "acaridar"
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
                 verbPropsArray = await getPropsOfVerb(input, true, input);
@@ -158,9 +158,7 @@ async function processVerbsFile(): Promise<void> {
                 const matchedTermination = verbPropsArray[0]?.termination;
       
                 if (matchedTermination && input.endsWith(matchedTermination)) {
-                  if (!acc[input].ending.includes(matchedTermination)) {
-                    acc[input].ending.push(matchedTermination);
-                  }
+                  acc[input].ending = [matchedTermination];
                 }
                 
               }
@@ -196,13 +194,13 @@ async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    // const removedVerbs = Object.keys(currentVerbs).filter(
-    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    // );
+    const removedVerbs = Object.keys(currentVerbs).filter(
+      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    );
 
-    // removedVerbs.forEach((normalized) => {
-    //   delete J[normalized];
-    // });
+    removedVerbs.forEach((normalized) => {
+      delete J[normalized];
+    });
 
     // Deletar propriedades
     // Object.keys(J).forEach(normalized => {

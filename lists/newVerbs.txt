@@ -3715,12 +3715,13 @@ roteirar
 
 sal-pimentar
 samear
+sassaricar
 savanizar
 semicerrar
 semidomesticar
 semierguer
 semilevantar
-semitontar
+semitonar
 sobreabundar
 sobreafligir
 sobreaquecer
@@ -3778,6 +3779,7 @@ solfear
 solvatar
 sonecar
 sotopor
+stalinizar
 subalimentar
 subalternar
 subalugar
@@ -3835,6 +3837,7 @@ superexcitar
 superexpor
 superfaturar
 superimpor
+superlotar
 supernaturalizar
 superoxidar
 superpor
@@ -3852,8 +3855,10 @@ talarear
 talipedar
 tantanar
 tassear
+telematizar
 termalizar
 termoformar
+teutonizar
 timbungar
 transacionar
 transbordar
@@ -3905,4 +3910,5 @@ zangonar
 zanguizarrar
 zarolhar
 ziguezaguear
+zoografar
 zumbificar
