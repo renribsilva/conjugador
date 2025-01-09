@@ -51,6 +51,8 @@ export const flowOfReact = () => {
     varMatchingAfixo: string | null,
     varConector: string | null,
     varOriginalInput: string | null,
+    
+    canonical: string
 
   }>({
 
@@ -96,6 +98,8 @@ export const flowOfReact = () => {
     varMatchingAfixo: null,
     varConector: null,
     varOriginalInput: null,
+
+    canonical: "canonical1"
 
   });
 
@@ -172,6 +176,8 @@ export const flowOfReact = () => {
         varMatchingAfixo: null,
         varConector: null,
         varOriginalInput: null,
+
+        canonical: "canonical1"
 
       }));
 
@@ -420,7 +426,8 @@ export const flowOfReact = () => {
     state.varConector,
     state.varOriginalInput,
     state.showStatistic,
-    state.progress
+    state.progress,
+    state.canonical
   ];
   
   useEffect(() => {
@@ -430,6 +437,7 @@ export const flowOfReact = () => {
       conjugations: state.conjugations,
       showConjugations: state.showConjugations,
       foundVerb: state.foundVerb,
+      canonical: state.canonical,
       isValidVerbByAPI: {
         result: state.result,
         findedWord: state.findedWord,

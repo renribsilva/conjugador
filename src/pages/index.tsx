@@ -647,7 +647,10 @@ const Index = () => {
                       <span>{formatTypes(state.types)}</span>
                     </p>
                   )}
-                  <Table conj={state.conjugations} />
+                  <Table 
+                    conj={state.conjugations}
+                    canonical={state.canonical}
+                  />
                   <div className={styles.warning}>
                     <strong>Aviso:</strong>
                     <ul><Warning /></ul>

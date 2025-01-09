@@ -17,18 +17,20 @@ const pronouns = {
   elus: "elus"
 };
 
-export default function Table ({ conj, isMultiple }: { conj: Conjugation, isMultiple?: boolean }) {
-
-  const conjugations = conj.canonical1
-  
-  let isOnlyReflexive = conj.only_reflexive[0]
-
-  if (conjugations.inf.p3.includes("doer")) {
-    isOnlyReflexive = true;
-  }
+export default function Table ({ conj, canonical }: { conj: Conjugation, canonical: string }) {
 
   const [activePronoun, setActiveButton] = useState<string | null>("ela");
   const [isSeActive, setSeActive] = useState(false);
+  const [canonicalType, setCanonicalType] = useState(canonical)
+  
+  const conjugations = conj[canonicalType]
+  
+  let isOnlyReflexive = conj.only_reflexive[0]
+  const isMultiple = conj.multiple[0]
+
+  if (conjugations.inf.p3.includes("doer") && canonicalType === "canonical2") {
+    isOnlyReflexive = true;
+  }
 
   const handlePronounClick = (pronoun: string) => {
     setActiveButton(pronoun);
@@ -38,6 +40,10 @@ export default function Table ({ conj, isMultiple }: { conj: Conjugation, isMult
     if (!isOnlyReflexive) {
       setSeActive((prev) => !prev);
     }
+  };
+
+  const handleCanonicalClick = () => {
+    setCanonicalType(canonicalType === "canonical1" ? "canonical2" : "canonical1");
   };
 
   const block = ({ adv, ten, conj, mod, modext }) => {
@@ -154,7 +160,7 @@ export default function Table ({ conj, isMultiple }: { conj: Conjugation, isMult
     }, []);
   
     useEffect(() => {
-    }, [activePronoun, isSeActive]);
+    }, [activePronoun, isSeActive, canonicalType]);
 
     const Line = ({p, q, suffix, removeS, order}: {p:string, q: string, suffix?: string, removeS?: boolean, order: number}) => {
       
@@ -285,6 +291,26 @@ export default function Table ({ conj, isMultiple }: { conj: Conjugation, isMult
               -se
             </button>
           </div>
+          {isMultiple && (
+            <div className={styles.table_tabs_se_container}>
+              <button
+                className={`${styles.table_tabs_se_button} ${
+                  isSeActive ? styles.active : styles.inactive
+                }`}
+                onClick={() => {handleCanonicalClick()}}
+              >
+                conj 1
+              </button>
+              <button
+                className={`${styles.table_tabs_se_button} ${
+                  isSeActive ? styles.active : styles.inactive
+                }`}
+                onClick={() => {handleCanonicalClick()}}
+              >
+                conj 2
+              </button>
+            </div>
+            )}
         </div>
         <div className={styles.table}>
           {/* Indicativo */}
