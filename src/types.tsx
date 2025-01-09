@@ -9,9 +9,7 @@ type Person = {
   p6: string[];
 };
 
-export type Conjugation = {
-  model: string[],
-  pronoun: boolean[],
+type CanonicalForms = {
   gd: {
     n: string[];
   };
@@ -31,6 +29,13 @@ export type Conjugation = {
   pt2_ind: Person;
   pt3_ind: Person;
 }
+
+export type Conjugation = {
+  model: string[],
+  only_reflexive: boolean[],
+  canonical1: CanonicalForms;
+  canonical2: CanonicalForms;
+};
 
 export type InputTypes = {
   A: React.RefObject<HTMLInputElement>;

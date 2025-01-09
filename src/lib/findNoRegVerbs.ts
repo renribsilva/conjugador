@@ -11,26 +11,32 @@ function getVerbKeys(verb: string, terminations: string[]): any {
   terminations.sort((a, b) => b.length - a.length);
 
   const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
-  const rules = termination ? irregularidades[termination] : null;
-  // console.log(rules)
+  const terminationData = termination ? irregularidades[termination] : null;
+  // console.log(terminationData)
 
-  if (rules) {
-    const normalizedRules = Object.keys(rules).reduce((acc, key) => {
-      acc[nw(key)] = rules[key];
+  if (terminationData) {
+    const normalizedCanonical = Object.keys(terminationData).reduce((acc, key) => {
+      acc[nw(key)] = terminationData[key];
       return acc;
     }, {});
 
     //  console.log(termination)
-    return { rules: normalizedRules, termination };
+    return { terminationData: normalizedCanonical, termination };
   }
 
-  return { rules: null, termination };
+  return { terminationData: null, termination };
 }
 
 function getDefaultResponse() {
   return {
     results: {
-      canonical: {
+      canonical1: {
+        hasTarget: false,
+        rule: null,
+        P: null,
+        M: null,
+      },
+      canonical2: {
         hasTarget: false,
         rule: null,
         P: null,
@@ -61,9 +67,9 @@ function getDefaultResponse() {
 
 export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
-  const { rules: termEntries, termination } = getVerbKeys(verb, terminations);
-  
-  if (!termEntries) {
+  const { terminationData: terminationData, termination } = getVerbKeys(verb, terminations);
+  // console.log(termination)
+  if (!terminationData) {
     return getDefaultResponse();
   }
 
@@ -71,11 +77,11 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     return getDefaultResponse();
   }
 
-  const keysTermEntrie = Object.keys(termEntries)
+  const keysTermData = Object.keys(terminationData)
 
   let key = '';
 
-  for (const eachkey of keysTermEntrie) {
+  for (const eachkey of keysTermData) {
     const normalizedKey = ni(eachkey);
     if (normalizedKey === verb) {
       key = eachkey;
@@ -83,19 +89,21 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
     }
   }
 
-  if (key !== '' && termEntries[key]) {
+  if (key !== '' && terminationData[key]) {
 
-    const termEntrieObject = termEntries[key];
+    const termEntrieObject = terminationData[key];
 
-    if (termEntrieObject?.rules) {
+    if (termEntrieObject?.canonical1) {
 
-      const canonical = innerSearchOfRules(termEntrieObject.rules, P, M, D);
+      const canonical1 = innerSearchOfRules(termEntrieObject.canonical1, P, M, D);
+      const canonical2 = innerSearchOfRules(termEntrieObject.canonical2, P, M, D);
       const abundance1 = innerSearchOfRules(termEntrieObject.abundance1, P, M, D);
       const abundance2 = innerSearchOfRules(termEntrieObject.abundance2, P, M, D);
 
       return {
         results: {
-          canonical: {...canonical},
+          canonical1: {...canonical1},
+          canonical2: {...canonical2},
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },
@@ -111,7 +119,7 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
   }
 
   const variationsProps = findVariations(verb);
-  const terminationsThatStartWith = Object.keys(termEntries).filter(key => key.startsWith("..."));
+  const terminationsThatStartWith = Object.keys(terminationData).filter(key => key.startsWith("..."));
   // console.log(terminationsThatStartWith)
 
   let terminationwithoutpunct = ''
@@ -148,47 +156,51 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
   }
 
-  if ((termEntries[`...${terminationwithoutpunct}`] && nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
+  if ((terminationData[`...${terminationwithoutpunct}`] && nw(terminationwithoutpunct) === nw(verbwithoutprefix))) {
 
-    const basetermEntries = termEntries[`...${verbwithoutprefix}`];
+    const baseterminationData = terminationData[`...${verbwithoutprefix}`];
 
-    if (basetermEntries?.rules) {
+    if (baseterminationData?.canonical1) {
 
-      const canonical = innerSearchOfRules(basetermEntries.rules, P, M, D);
-      const abundance1 = innerSearchOfRules(basetermEntries.abundance1, P, M, D);
-      const abundance2 = innerSearchOfRules(basetermEntries.abundance2, P, M, D);
+      const canonical1 = innerSearchOfRules(baseterminationData.canonical1, P, M, D);
+      const canonical2 = innerSearchOfRules(baseterminationData.canonical2, P, M, D);
+      const abundance1 = innerSearchOfRules(baseterminationData.abundance1, P, M, D);
+      const abundance2 = innerSearchOfRules(baseterminationData.abundance2, P, M, D);
       const foundedAfixo = variationsProps.matchingAfixo;
 
       return {
         results: {
-          canonical: {...canonical},
+          canonical1: {...canonical1},
+          canonical2: {...canonical2},
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },
         termination,
         termEntrie: `...${terminationwithoutpunct}`,
         verb,
-        types: basetermEntries.type,
-        note_plain: basetermEntries.note.plain,
-        note_ref: basetermEntries.note.ref,
+        types: baseterminationData.type,
+        note_plain: baseterminationData.note.plain,
+        note_ref: baseterminationData.note.ref,
         afixo: foundedAfixo  
       };
     }
   }
 
-  if (termEntries["..."]) {
+  if (terminationData["..."]) {
 
-    const termEntrie = termEntries["..."];
+    const termEntrie = terminationData["..."];
     
-    if (termEntrie?.rules) {
+    if (termEntrie?.canonical1) {
 
-      const canonical = innerSearchOfRules(termEntrie.rules, P, M, D);
+      const canonical1 = innerSearchOfRules(termEntrie.canonical1, P, M, D);
+      const canonical2 = innerSearchOfRules(termEntrie.canonical2, P, M, D);
       const abundance1 = innerSearchOfRules(termEntrie.abundance1, P, M, D);
       const abundance2 = innerSearchOfRules(termEntrie.abundance2, P, M, D);
       
       return {
         results: {
-          canonical: {...canonical},
+          canonical1: {...canonical1},
+          canonical2: {...canonical2},
           abundance1: {...abundance1},
           abundance2: {...abundance2}
         },

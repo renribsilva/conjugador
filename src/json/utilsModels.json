@@ -1,0 +1,15 @@
+{
+  "A": ["verbo regular"],
+  "B": ["verbo regular com hiato no radical"],
+  "C": ["verbo regular com alternância vocálica na posição tônica"],
+  "D": ["verbo que apresenta acomodação gráfica"],
+  "E": ["verbo que apresenta alguma particularidade ou irregularidade vocálica nas formas rizotônicas"],
+  "F": ["verbo de ditongração condicionada pelo acento tônico"],
+  "G": ["verbo com prosódia variável ou acentuação na penúltima vogal do radical"],
+  "H": ["verbo irregular fraco"],
+  "I": ["verbo irregular forte"],
+  "J": ["verbo de infinitivo monossilábico ou seu derivado"],
+  "L": ["verbo defectivo (abolir)"],
+  "M": ["verbo defectivo (falir)"],
+  "N": ["verbo defectivo (prazer)"]
+}

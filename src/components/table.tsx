@@ -17,9 +17,15 @@ const pronouns = {
   elus: "elus"
 };
 
-export default function Table ({ conjugations }: { conjugations: Conjugation }) {
+export default function Table ({ conj, isMultiple }: { conj: Conjugation, isMultiple?: boolean }) {
 
-  const isOnlyReflexive = conjugations.pronoun[0]
+  const conjugations = conj.canonical1
+  
+  let isOnlyReflexive = conj.only_reflexive[0]
+
+  if (conjugations.inf.p3.includes("doer")) {
+    isOnlyReflexive = true;
+  }
 
   const [activePronoun, setActiveButton] = useState<string | null>("ela");
   const [isSeActive, setSeActive] = useState(false);

@@ -142,31 +142,31 @@ async function processVerbsFile(): Promise<void> {
 
           const go = true
 
-          if (go) {
+          // if (go) {
     
-            try {
+          //   try {
               
-              const input = normalized
-              // const input = "acaridar"
-              let verbPropsArray = cache.get(input);
-              if (!verbPropsArray) {
-                verbPropsArray = await getPropsOfVerb(input, true, input);
-                cache.set(input, verbPropsArray);
-              }
+          //     const input = normalized
+          //     // const input = "acaridar"
+          //     let verbPropsArray = cache.get(input);
+          //     if (!verbPropsArray) {
+          //       verbPropsArray = await getPropsOfVerb(input, true, input);
+          //       cache.set(input, verbPropsArray);
+          //     }
       
-              if (verbPropsArray.length > 0) {
-                const matchedTermination = verbPropsArray[0]?.termination;
+          //     if (verbPropsArray.length > 0) {
+          //       const matchedTermination = verbPropsArray[0]?.termination;
       
-                if (matchedTermination && input.endsWith(matchedTermination)) {
-                  acc[input].ending = [matchedTermination];
-                }
+          //       if (matchedTermination && input.endsWith(matchedTermination)) {
+          //         acc[input].ending = [matchedTermination];
+          //       }
                 
-              }
-            } catch (error) {
-              console.error(`Erro ao processar o verbo ${verb}:`, error);
-            }
+          //     }
+          //   } catch (error) {
+          //     console.error(`Erro ao processar o verbo ${verb}:`, error);
+          //   }
 
-          }
+          // }
 
         });
     
@@ -194,27 +194,27 @@ async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    const removedVerbs = Object.keys(currentVerbs).filter(
-      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    );
+    // const removedVerbs = Object.keys(currentVerbs).filter(
+    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    // );
 
-    removedVerbs.forEach((normalized) => {
-      delete J[normalized];
-    });
-
-    // Deletar propriedades
-    // Object.keys(J).forEach(normalized => {
-    //   if (J[normalized].pronominal) {
-    //     delete J[normalized].pronominal;
-    //   }
+    // removedVerbs.forEach((normalized) => {
+    //   delete J[normalized];
     // });
 
-    // Inserir novas propriedades
     Object.keys(J).forEach(normalized => {
-      if (!J[normalized].pronominal) {
-        J[normalized].pronominal = [false];
+      if (J[normalized].multiple) {
+        delete J[normalized].multiple;
       }
     });
+
+    Object.keys(J).forEach(normalized => {
+      J[normalized].only_reflexive = [false]
+    });
+
+    // Object.keys(J).forEach(normalized => {
+    //   J[normalized].multiple = [false];
+    // });
 
     const sortedJ = Object.keys(J)
       .sort()

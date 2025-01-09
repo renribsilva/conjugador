@@ -1,7 +1,8 @@
 import { findNoRegRule } from "./findNoRegVerbs";
 
 interface VerbProps {
-  hasTargetCanonical: boolean | null;
+  hasTargetCanonical1: boolean | null;
+  hasTargetCanonical2: boolean | null;
   hasTargetAbundance1: boolean | null;
   hasTargetAbundance2: boolean | null;
   termination: string | null;
@@ -55,7 +56,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
               const verbProps: VerbProps = {
 
-                hasTargetCanonical: result.results.canonical.hasTarget,
+                hasTargetCanonical1: result.results.canonical1.hasTarget,
+                hasTargetCanonical2: result.results.canonical2.hasTarget,
                 hasTargetAbundance1: result.results.abundance1.hasTarget, 
                 hasTargetAbundance2: result.results.abundance2.hasTarget,                
                 termination: result.termination,
@@ -81,7 +83,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
           } else if (result.types === null && isValidVerb) {
             
             const verbProps: VerbProps = {
-              hasTargetCanonical: result.results.canonical.hasTarget,
+              hasTargetCanonical1: result.results.canonical1.hasTarget,
+              hasTargetCanonical2: result.results.canonical2.hasTarget,
               hasTargetAbundance1: result.results.abundance1.hasTarget,
               hasTargetAbundance2: result.results.abundance2.hasTarget,
               termination: result.termination,
@@ -111,7 +114,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
   const accumulatedResult: VerbProps = uniqueResults.reduce(
     (acc, curr) => ({
-      hasTargetCanonical: acc.hasTargetCanonical || curr.hasTargetCanonical,
+      hasTargetCanonical1: acc.hasTargetCanonical1 || curr.hasTargetCanonical1,
+      hasTargetCanonical2: acc.hasTargetCanonical2 || curr.hasTargetCanonical2,
       hasTargetAbundance1: acc.hasTargetAbundance1 || curr.hasTargetAbundance1,
       hasTargetAbundance2: acc.hasTargetAbundance2 || curr.hasTargetAbundance2,
       termination: curr.termination || acc.termination,
@@ -123,7 +127,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
       afixo: curr.afixo || acc.afixo,
     }),
     {
-      hasTargetCanonical: null,
+      hasTargetCanonical1: null,
+      hasTargetCanonical2: null,
       hasTargetAbundance1: null,
       hasTargetAbundance2: null,
       termination: null,
@@ -141,6 +146,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 }
 
-// getPropsOfVerb("acaridar", true, "acaridar").then(test => {
+// getPropsOfVerb("doer", true, "doer").then(test => {
 //   console.log(test);
 // });

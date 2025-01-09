@@ -28,7 +28,7 @@
 
   async function addVerbsToJson() {
     try {
-      // Carregar arquivos JSON
+      
       const [allVerbsDataStr, rulesByTermDataStr] = await Promise.all([
         fs.promises.readFile(allVerbsPath, 'utf8'),
         fs.promises.readFile(rulesByTermPath, 'utf8')
@@ -40,6 +40,8 @@
       const mainKeys = Object.keys(rulesByTermData);
       const totalKeys = mainKeys.length;
 
+      console.log("Iniciando verificação de terminações em allVerbs.json...")
+
       // Validar verbos sem terminação
       const invalidVerbs = Object.entries(allVerbsData)
         .filter(([_, value]) => value.ending.length === 0)
@@ -47,8 +49,8 @@
 
       console.log(
         invalidVerbs.length === 0
-          ? '- Todos os verbos possuem valor na propriedade ending'
-          : `- Verbos sem terminação: ${invalidVerbs.join(', ')}`
+          ? '- todos os verbos possuem valor na propriedade ending'
+          : `- verbos sem terminação: ${invalidVerbs.join(', ')}`
       );
 
       console.log('Iniciando a busca por verbos correspondentes a cada terminação...');
@@ -57,12 +59,20 @@
       let dataChanged = false;
       const startTime = Date.now();
 
-      const specificMainKey: string | null = null;
+      let specificMainKey: string | string[] | null = null;
+      if (Array.isArray(specificMainKey)) {
+        specificMainKey = Array.from(new Set(specificMainKey));
+      }
 
       for (let index = 0; index < totalKeys; index++) {
-
         const mainKey = mainKeys[index];
-        if (specificMainKey && mainKey !== specificMainKey) {
+        
+        // Verifica se specificMainKey é um array e não contém mainKey, ou se é uma string que não é igual a mainKey
+        if (
+          specificMainKey &&
+          ((Array.isArray(specificMainKey) && !specificMainKey.includes(mainKey)) ||
+          (!Array.isArray(specificMainKey) && mainKey !== specificMainKey))
+        ) {
           continue;
         }
 
@@ -72,7 +82,7 @@
         const remainingTime = estimatedTotalTime - elapsedTime;
 
         process.stdout.write(
-          `- Progresso: ${progress}% | Tempo restante: ${Math.floor(remainingTime / 60000)}min\r`
+          `- progresso: ${progress}% | Tempo restante: ${Math.floor(remainingTime / 60000)}min\r`
         );
 
         if (!rulesByTermData[mainKey]) continue;
@@ -100,6 +110,19 @@
         const subKeys = Object.keys(rulesByTermData[mainKey]).sort();
 
         for (const subKey of subKeys) {
+
+          if (!rulesByTermData[mainKey][subKey].note.multiple) {
+            rulesByTermData[mainKey][subKey].note.multiple = {
+              multiple: {
+                isMultiple: [false],
+                canonical1: [],
+                canonical2: [],
+              }
+            }
+
+            dataChanged = true;
+
+          }
 
           const subKeyData = rulesByTermData[mainKey][subKey];
           // console.log(subKeys)
@@ -153,6 +176,8 @@
         await saveToFile(rulesByTermData, rulesByTermPath);
       }
 
+      console.log('- progresso: 100%');
+
       console.log(`Calculando o total de verbos encontrados...`);
 
       const totalVerbs = Object.values(rulesByTermData)
@@ -164,13 +189,15 @@
 
       console.log(`- total: ${totalVerbs}`);
 
+      console.log("Verificando a ocorrência de verbos em mais de uma terminação...")
+
       const seenVerbs = new Set();
       Object.entries(rulesByTermData).forEach(([_, mainKeyData]) => {
         Object.entries(mainKeyData).forEach(([_, subKeyData]) => {
           if (subKeyData.verbs?.entries) {
             Object.entries(subKeyData.verbs.entries).forEach(([verb, _]) => {
               if (seenVerbs.has(verb)) {
-                console.log(`Duplicado encontrado: ${verb}`);
+                console.log(`- ${verb}`);
               } else {
                 seenVerbs.add(verb);
               }
@@ -179,7 +206,24 @@
         });
       });
 
-      console.log('\nProgresso: 100%');
+      let maxMainKey = '';
+      let maxTotal = 0;
+
+      console.log(`Verificando terminação com maior quantidade de verbos...`)
+
+      Object.entries(rulesByTermData).forEach(([mainKey, mainKeyData]) => {
+        Object.entries(mainKeyData).forEach(([subKey, subKeyData]) => {
+          const total = subKeyData.verbs?.total || 0;
+          if (total > maxTotal) {
+            maxTotal = total;
+            maxMainKey = mainKey;
+          }
+        });
+      });
+
+      console.log(`- mainKey com mais verbos: ${maxMainKey}`);
+      console.log(`- total: ${maxTotal}`);
+
       console.log(dataChanged ? 'Dados atualizados com sucesso!' : 'Nenhuma alteração detectada.');
     } catch (error) {
       console.error('Erro ao processar o arquivo:', error);

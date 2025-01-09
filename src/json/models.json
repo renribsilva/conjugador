@@ -1,140 +1,537 @@
 {
-  "Regular":{
-    "1": ["passar"],
-    "2": ["bater"],
-    "3": ["partir"],
-    "4": ["afastar-se"],
-    "5": ["abater-se"],
-    "6": ["demitir-se"],
-    "7": ["conduzir"],
-    "8": ["viajar"],
-    "9": ["enviar"],
-    "10": ["atuar"],
-    "11": ["apelar"],
-    "12": ["anotar"],
-    "13": ["optar"],
-    "14": ["povoar"],
-    "15": ["atrair"],
-    "16": ["atribuir"],
-    "17": ["arguir"],
-    "18": ["pernoitar"],
-    "19": ["endeusar"],
-    "20": ["apoiar"],
-    "21": ["enfeitar"],
-    "22": ["poupar"]
+  "1": {
+    "ref": ["passar"],
+    "class": [1],
+    "entrie": []
   },
-  "Regular (com hiato no radical)":{
-    "23": ["enraizar"],
-    "24": ["saudar"],
-    "25": ["proibir"],
-    "26": ["reunir"]
+  "2": {
+    "ref": ["bater"],
+    "class": [1],
+    "entrie": []
   },
-  "Regular (com alternância vocálica)":{
-    "27": ["mexer"],
-    "28": ["colher"],
-    "29": ["ferir"],
-    "30": ["dormir"],
-    "31": ["sentir"],
-    "32": ["coerir"]
+  "3": {
+    "ref": ["partir"],
+    "class": [1],
+    "entrie": []
   },
-  "Regular (com acomodações gráficas)":{
-    "33": ["atacar"],
-    "34": ["afagar"],
-    "35": ["dançar"],
-    "36": ["vencer"],
-    "37": ["ressarcir"],
-    "38": ["abranger"],
-    "39": ["atingir"],
-    "40": ["erguer"],
-    "41": ["distinguir"]
+  "4": {
+    "ref": ["afastar-se"],
+    "class": [1],
+    "entrie": []
   },
-
-  "Regular (com particularidade vocálica)":{
-    "42": ["desejar"]
+  "5": {
+    "ref": ["abater-se"],
+    "class": [1],
+    "entrie": []
   },
-  "Irregular (nas formas rizotônicas)":{
-    "43": ["chegar"],
-    "44": ["moer"],
-    "45": ["agredir"],
-    "46": ["emergir"],
-    "47": ["explodir"],
-    "48": ["polir"],
-    "50": ["frigir"],
-    "51": ["construir"],
-    "52": ["sacudir"],
-    "53": ["sumir"]
+  "6": {
+    "ref": ["demitir-se"],
+    "class": [1],
+    "entrie": []
   },
-  "Regular (com modificações)": {
-    "49": ["moscar"],
-    "54": ["passear"]
+  "7": {
+    "ref": ["conduzir"],
+    "class": [1],
+    "entrie": []
   },
-  "Irregular":{
-    "55": ["ansiar"],
-    "56": ["estrear"]
+  "8": {
+    "ref": ["viajar"],
+    "class": [1],
+    "entrie": []
   },
-  "Regular (com prosódia variável)":{
-    "57": ["averiguar"],
-    "58": ["enxaguar"],
-    "59": ["resfolegar"],
-    "60": ["mobiliar"],
-    "61": ["desmilinguir"],
-    "62": ["delinquir"]
+  "9": {
+    "ref": ["enviar"],
+    "class": [1],
+    "entrie": []
   },
-  "Irregular (fraco)":{
-    "63": ["medir"],
-    "62": ["ouvir"],
-    "65": ["parir"],
-    "66": ["perder"],
-    "67": ["prover"],
-    "68": ["requerer"],
-    "69": ["valer"]
+  "10": {
+    "ref": ["atuar"],
+    "class": [1],
+    "entrie": []
   },
-  "Irregular (forte)":{
-    "70": ["caber"],
-    "71": ["comprazer"],
-    "72": ["dizer"],
-    "73": ["estar"],
-    "74": ["fazer"],
-    "75": ["haver"],
-    "76": ["poder"],
-    "77": ["querer"],
-    "78": ["saber"],
-    "79": ["trazer"]
+  "11": {
+    "ref": ["apelar"],
+    "class": [1],
+    "entrie": []
   },
-  "Irregular (monossilábico)":{
-    "80": ["dar"],
-    "81": ["ir"],
-    "82": ["ler", "crer"],
-    "83": ["pôr"],
-    "84": ["propor"],
-    "85": ["rir"],
-    "86": ["ser"],
-    "87": ["ter"],
-    "88": ["manter"],
-    "89": ["ver"],
-    "90": ["vir"],
-    "91": ["provir"]
+  "12": {
+    "ref": ["anotar"],
+    "class": [1],
+    "entrie": []
   },
-  "Defectivo (abolir)":{
-    "92": ["abolir"],
-    "93": ["excelir"],
-    "94": ["fremir"],
-    "95": ["puir"],
-    "96": ["retorquir"],
-    "97": ["soer"]
+  "13": {
+    "ref": ["optar"],
+    "class": [1],
+    "entrie": []
   },
-  "Defectivo (falir)":{
-    "98": ["precaver"],
-    "99": ["reaver"],
-    "100": ["embair"],
-    "101": ["falir"]
+  "14": {
+    "ref": ["povoar"],
+    "class": [1],
+    "entrie": []
   },
-  "Defectivo (aprazer)":{
-    "102": ["aprazer"],
-    "103": ["concernir"],
-    "104": ["doer"],
-    "105": ["grassar"],
-    "106": ["later"],
-    "107": ["precluir"]
+  "15": {
+    "ref": ["atrair"],
+    "class": [1],
+    "entrie": []
+  },
+  "16": {
+    "ref": ["atribuir"],
+    "class": [1],
+    "entrie": []
+  },
+  "17": {
+    "ref": ["arguir"],
+    "class": [1],
+    "entrie": []
+  },
+  "18": {
+    "ref": ["pernoitar"],
+    "class": [1],
+    "entrie": []
+  },
+  "19": {
+    "ref": ["endeusar"],
+    "class": [1],
+    "entrie": []
+  },
+  "20": {
+    "ref": ["apoiar"],
+    "class": [1],
+    "entrie": []
+  },
+  "21": {
+    "ref": ["enfeitar"],
+    "class": [1],
+    "entrie": []
+  },
+  "22": {
+    "ref": ["poupar"],
+    "class": [1],
+    "entrie": []
+  },
+  "23": {
+    "ref": ["enraizar"],
+    "class": [1],
+    "entrie": []
+  },
+  "24": {
+    "ref": ["saudar"],
+    "class": [1],
+    "entrie": []
+  },
+  "25": {
+    "ref": ["proibir"],
+    "class": [1],
+    "entrie": []
+  },
+  "26": {
+    "ref": ["reunir"],
+    "class": [1],
+    "entrie": []
+  },
+  "27": {
+    "ref": ["mexer"],
+    "class": [1],
+    "entrie": []
+  },
+  "28": {
+    "ref": ["colher"],
+    "class": [1],
+    "entrie": []
+  },
+  "29": {
+    "ref": ["ferir"],
+    "class": [1],
+    "entrie": []
+  },
+  "30": {
+    "ref": ["dormir"],
+    "class": [1],
+    "entrie": []
+  },
+  "31": {
+    "ref": ["sentir"],
+    "class": [1],
+    "entrie": []
+  },
+  "32": {
+    "ref": ["coerir"],
+    "class": [1],
+    "entrie": []
+  },
+  "33": {
+    "ref": ["atacar"],
+    "class": [1],
+    "entrie": []
+  },
+  "34": {
+    "ref": ["afagar"],
+    "class": [1],
+    "entrie": []
+  },
+  "35": {
+    "ref": ["dançar"],
+    "class": [1],
+    "entrie": []
+  },
+  "36": {
+    "ref": ["vencer"],
+    "class": [1],
+    "entrie": []
+  },
+  "37": {
+    "ref": ["ressarcir"],
+    "class": [1],
+    "entrie": []
+  },
+  "38": {
+    "ref": ["abranger"],
+    "class": [1],
+    "entrie": []
+  },
+  "39": {
+    "ref": ["atingir"],
+    "class": [1],
+    "entrie": []
+  },
+  "40": {
+    "ref": ["erguer"],
+    "class": [1],
+    "entrie": []
+  },
+  "41": {
+    "ref": ["distinguir"],
+    "class": [1],
+    "entrie": []
+  },
+  "42": {
+    "ref": ["desejar"],
+    "class": [1],
+    "entrie": []
+  },
+  "43": {
+    "ref": ["chegar"],
+    "class": [1],
+    "entrie": []
+  },
+  "44": {
+    "ref": ["moer"],
+    "class": [1],
+    "entrie": []
+  },
+  "45": {
+    "ref": ["agredir"],
+    "class": [],
+    "entrie": []
+  },
+  "46": {
+    "ref": ["emergir"],
+    "class": [],
+    "entrie": []
+  },
+  "47": {
+    "ref": ["explodir"],
+    "class": [],
+    "entrie": []
+  },
+  "48": {
+    "ref": ["polir"],
+    "class": [],
+    "entrie": []
+  },
+  "49": {
+    "ref": ["moscar"],
+    "class": [],
+    "entrie": []
+  },
+  "50": {
+    "ref": ["frigir"],
+    "class": [],
+    "entrie": []
+  },
+  "51": {
+    "ref": ["construir"],
+    "class": [],
+    "entrie": []
+  },
+  "52": {
+    "ref": ["sacudir"],
+    "class": [],
+    "entrie": []
+  },
+  "53": {
+    "ref": ["sumir"],
+    "class": [],
+    "entrie": []
+  },
+  "54": {
+    "ref": ["passear"],
+    "class": [],
+    "entrie": []
+  },
+  "55": {
+    "ref": ["ansiar"],
+    "class": [],
+    "entrie": []
+  },
+  "56": {
+    "ref": ["estrear"],
+    "class": [],
+    "entrie": []
+  },
+  "57": {
+    "ref": ["averiguar"],
+    "class": [],
+    "entrie": []
+  },
+  "58": {
+    "ref": ["enxaguar"],
+    "class": [],
+    "entrie": []
+  },
+  "59": {
+    "ref": ["resfolegar"],
+    "class": [],
+    "entrie": []
+  },
+  "60": {
+    "ref": ["mobiliar"],
+    "class": [],
+    "entrie": []
+  },
+  "61": {
+    "ref": ["desmilinguir"],
+    "class": [],
+    "entrie": []
+  },
+  "62": {
+    "ref": ["delinquir"],
+    "class": [],
+    "entrie": []
+  },
+  "63": {
+    "ref": ["medir"],
+    "class": [],
+    "entrie": []
+  },
+  "64": {
+    "ref": ["ouvir"],
+    "class": [],
+    "entrie": []
+  },
+  "65": {
+    "ref": ["parir"],
+    "class": [],
+    "entrie": []
+  },
+  "66": {
+    "ref": ["perder"],
+    "class": [],
+    "entrie": []
+  },
+  "67": {
+    "ref": ["prover"],
+    "class": [],
+    "entrie": []
+  },
+  "68": {
+    "ref": ["requerer"],
+    "class": [],
+    "entrie": []
+  },
+  "69": {
+    "ref": ["valer"],
+    "class": [],
+    "entrie": []
+  },
+  "70": {
+    "ref": ["caber"],
+    "class": [],
+    "entrie": []
+  },
+  "71": {
+    "ref": ["comprazer"],
+    "class": [],
+    "entrie": []
+  },
+  "72": {
+    "ref": ["dizer"],
+    "class": [],
+    "entrie": []
+  },
+  "73": {
+    "ref": ["estar"],
+    "class": [],
+    "entrie": []
+  },
+  "74": {
+    "ref": ["fazer"],
+    "class": [],
+    "entrie": []
+  },
+  "75": {
+    "ref": ["haver"],
+    "class": [],
+    "entrie": []
+  },
+  "76": {
+    "ref": ["poder"],
+    "class": [],
+    "entrie": []
+  },
+  "77": {
+    "ref": ["querer"],
+    "class": [],
+    "entrie": []
+  },
+  "78": {
+    "ref": ["saber"],
+    "class": [],
+    "entrie": []
+  },
+  "79": {
+    "ref": ["trazer"],
+    "class": [],
+    "entrie": []
+  },
+  "80": {
+    "ref": ["dar"],
+    "class": [],
+    "entrie": []
+  },
+  "81": {
+    "ref": ["ir"],
+    "class": [],
+    "entrie": []
+  },
+  "82": {
+    "ref": ["ler", "crer"],
+    "class": [],
+    "entrie": []
+  },
+  "83": {
+    "ref": ["pôr"],
+    "class": [],
+    "entrie": []
+  },
+  "84": {
+    "ref": ["propor"],
+    "class": [],
+    "entrie": []
+  },
+  "85": {
+    "ref": ["rir"],
+    "class": [],
+    "entrie": []
+  },
+  "86": {
+    "ref": ["ser"],
+    "class": [],
+    "entrie": []
+  },
+  "87": {
+    "ref": ["ter"],
+    "class": [],
+    "entrie": []
+  },
+  "88": {
+    "ref": ["manter"],
+    "class": [],
+    "entrie": []
+  },
+  "89": {
+    "ref": ["ver"],
+    "class": [],
+    "entrie": []
+  },
+  "90": {
+    "ref": ["vir"],
+    "class": [],
+    "entrie": []
+  },
+  "91": {
+    "ref": ["provir"],
+    "class": [],
+    "entrie": []
+  },
+  "92": {
+    "ref": ["abolir"],
+    "class": [],
+    "entrie": []
+  },
+  "93": {
+    "ref": ["excelir"],
+    "class": [],
+    "entrie": []
+  },
+  "94": {
+    "ref": ["fremir"],
+    "class": [],
+    "entrie": []
+  },
+  "95": {
+    "ref": ["puir"],
+    "class": [],
+    "entrie": []
+  },
+  "96": {
+    "ref": ["retorquir"],
+    "class": [],
+    "entrie": []
+  },
+  "97": {
+    "ref": ["soer"],
+    "class": [],
+    "entrie": []
+  },
+  "98": {
+    "ref": ["precaver"],
+    "class": [],
+    "entrie": []
+  },
+  "99": {
+    "ref": ["reaver"],
+    "class": [],
+    "entrie": []
+  },
+  "100": {
+    "ref": ["embair"],
+    "class": [],
+    "entrie": []
+  },
+  "101": {
+    "ref": ["falir"],
+    "class": [],
+    "entrie": []
+  },
+  "102": {
+    "ref": ["aprazer"],
+    "class": [],
+    "entrie": []
+  },
+  "103": {
+    "ref": ["concernir"],
+    "class": [],
+    "entrie": []
+  },
+  "104": {
+    "ref": ["doer"],
+    "class": [],
+    "entrie": []
+  },
+  "105": {
+    "ref": ["grassar"],
+    "class": [],
+    "entrie": []
+  },
+  "106": {
+    "ref": ["later"],
+    "class": [],
+    "entrie": []
+  },
+  "107": {
+    "ref": ["precluir"],
+    "class": [],
+    "entrie": []
   }
 }

@@ -17,17 +17,17 @@ export const conjugateVerb = (verb: string) => {
     return rule ?? NOT_FOUND; 
   };
 
-  const getCanonical = (P: string, M: string, num: number): string => {
+  const getCanonical = (P: string, M: string, num: number, canonical: string): string => {
     
-    const forRrule = findNoRegRule(verb, P, M, "RAD").results.canonical.hasTarget;
-    const forVTrule = findNoRegRule(verb, P, M, "VT").results.canonical.hasTarget;
-    const forMTrule = findNoRegRule(verb, P, M, "MT").results.canonical.hasTarget;
-    const forNPrule = findNoRegRule(verb, P, M, "NP").results.canonical.hasTarget;
+    const forRrule = findNoRegRule(verb, P, M, "RAD").results[canonical].hasTarget;
+    const forVTrule = findNoRegRule(verb, P, M, "VT").results[canonical].hasTarget;
+    const forMTrule = findNoRegRule(verb, P, M, "MT").results[canonical].hasTarget;
+    const forNPrule = findNoRegRule(verb, P, M, "NP").results[canonical].hasTarget;
 
-    const Rcontent = findNoRegRule(verb, P, M, "RAD").results.canonical.rule;
-    const VTcontent = findNoRegRule(verb, P, M, "VT").results.canonical.rule;
-    const MTcontent = findNoRegRule(verb, P, M, "MT").results.canonical.rule;
-    const NPcontent = findNoRegRule(verb, P, M, "NP").results.canonical.rule;
+    const Rcontent = findNoRegRule(verb, P, M, "RAD").results[canonical].rule;
+    const VTcontent = findNoRegRule(verb, P, M, "VT").results[canonical].rule;
+    const MTcontent = findNoRegRule(verb, P, M, "MT").results[canonical].rule;
+    const NPcontent = findNoRegRule(verb, P, M, "NP").results[canonical].rule;
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -48,10 +48,10 @@ export const conjugateVerb = (verb: string) => {
       : (forRrule || forVTrule || forMTrule || forNPrule)
         ? (() => {
           let result = nw(`
-            ${F(P, M, "RAD", "canonical") === NOT_FOUND ? r : F(P, M, "RAD", "canonical")}
-            ${F(P, M, "VT", "canonical") === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", "canonical")}
-            ${F(P, M, "MT", "canonical") === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", "canonical")}
-            ${F(P, M, "NP", "canonical") === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", "canonical")}*`);
+            ${F(P, M, "RAD", canonical) === NOT_FOUND ? r : F(P, M, "RAD", canonical)}
+            ${F(P, M, "VT", canonical) === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", canonical)}
+            ${F(P, M, "MT", canonical) === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", canonical)}
+            ${F(P, M, "NP", canonical) === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", canonical)}*`);
           if (Rcontent !== null && Rcontent !== '') {
             result = result.replace(Rcontent, R);
           }
@@ -102,7 +102,7 @@ export const conjugateVerb = (verb: string) => {
             ${F(P, M, "VT", abundance) === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", abundance)}
             ${F(P, M, "MT", abundance) === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", abundance)}
             ${F(P, M, "NP", abundance) === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", abundance)}*`);
-          if (Rcontent !== null) {
+          if (Rcontent !== null && Rcontent !== '') {
             result = result.replace(Rcontent, R);
           }
           return result;
@@ -116,46 +116,46 @@ export const conjugateVerb = (verb: string) => {
 
   };
 
-  const W = (x: string, P1: string | null = null) => {
+  const W = (x: string, P1: string | null = null, canonical: string) => {
     return {
         p1: [
           P1 ?? 
-          getCanonical("p1", x, 0), 
+          getCanonical("p1", x, 0, canonical), 
           getAbundance("p1", x, 0, "abundance1"),
           getAbundance("p1", x, 0, "abundance2")
         ].filter(value => value !== null),
         p2: [
-          getCanonical("p2", x, 1), 
+          getCanonical("p2", x, 1, canonical), 
           getAbundance("p2", x, 1, "abundance1"),
           getAbundance("p2", x, 1, "abundance2")
         ].filter(value => value !== null),
         p3: [
-          getCanonical("p3", x, 2), 
+          getCanonical("p3", x, 2, canonical), 
           getAbundance("p3", x, 2, "abundance1"),
           getAbundance("p3", x, 2, "abundance2")
         ].filter(value => value !== null),
         p4: [
-          getCanonical("p4", x, 3), 
+          getCanonical("p4", x, 3, canonical), 
           getAbundance("p4", x, 3, "abundance1"),
           getAbundance("p4", x, 3, "abundance2")
         ].filter(value => value !== null),
         p5: [
-          getCanonical("p5", x, 4), 
+          getCanonical("p5", x, 4, canonical), 
           getAbundance("p5", x, 4, "abundance1"),
           getAbundance("p5", x, 4, "abundance2")
         ].filter(value => value !== null),
         p6: [
-          getCanonical("p6", x, 5), 
+          getCanonical("p6", x, 5, canonical), 
           getAbundance("p6", x, 5, "abundance1"),
           getAbundance("p6", x, 5, "abundance2")
         ].filter(value => value !== null),
     };
   };
 
-  const N = (x: string) => {
+  const N = (x: string, canonical: string) => {
     return {
         n: [
-          getCanonical("n", x, 0), 
+          getCanonical("n", x, 0, canonical), 
           getAbundance("n", x, 0, "abundance1"),
           getAbundance("n", x, 0, "abundance2")
         ].filter(value => value !== null)
@@ -164,21 +164,39 @@ export const conjugateVerb = (verb: string) => {
 
   const conj = {
     model: allVerbsData[verb].model,
-    pronoun: allVerbsData[verb].pronominal,
-    gd: N("gd"),
-    pa: N("pa"),  
-    pr_ind: W("pr_ind"),
-    pt1_ind: W("pt1_ind"),
-    pt2_ind: W("pt2_ind"),
-    pt3_ind: W("pt3_ind"),
-    ft1_ind: W("ft1_ind"),
-    ft2_ind: W("ft2_ind"),   
-    pr_sub: W("pr_sub"),
-    pt_sub: W("pt_sub"),
-    fut_sub: W("fut_sub"),
-    inf: W("inf"),
-    im1: W("im1", "---"),
-    im2: W("im2", "---"),         
+    only_reflexive: allVerbsData[verb].only_reflexive,
+    canonical1: {
+        gd: N("gd", "canonical1"),
+        pa: N("pa", "canonical1"),
+        pr_ind: W("pr_ind", null, "canonical1"),
+        pt1_ind: W("pt1_ind", null, "canonical1"),
+        pt2_ind: W("pt2_ind", null, "canonical1"),
+        pt3_ind: W("pt3_ind", null, "canonical1"),
+        ft1_ind: W("ft1_ind", null, "canonical1"),
+        ft2_ind: W("ft2_ind", null, "canonical1"),
+        pr_sub: W("pr_sub", null, "canonical1"),
+        pt_sub: W("pt_sub", null, "canonical1"),
+        fut_sub: W("fut_sub", null, "canonical1"),
+        inf: W("inf", null, "canonical1"),
+        im1: W("im1", "---", "canonical1"),
+        im2: W("im2", "---", "canonical1")
+    },
+    canonical2: {
+        gd: N("gd", "canonical2"),
+        pa: N("pa", "canonical2"),
+        pr_ind: W("pr_ind", null, "canonical2"),
+        pt1_ind: W("pt1_ind", null, "canonical2"),
+        pt2_ind: W("pt2_ind", null, "canonical2"),
+        pt3_ind: W("pt3_ind", null, "canonical2"),
+        ft1_ind: W("ft1_ind", null, "canonical2"),
+        ft2_ind: W("ft2_ind", null, "canonical2"),
+        pr_sub: W("pr_sub", null, "canonical2"),
+        pt_sub: W("pt_sub", null, "canonical2"),
+        fut_sub: W("fut_sub", null, "canonical2"),
+        inf: W("inf", null, "canonical2"),
+        im1: W("im1", "---", "canonical2"),
+        im2: W("im2", "---", "canonical2")
+    }
   };
 
   const conjugations: Record<string, any> = {};
@@ -186,9 +204,10 @@ export const conjugateVerb = (verb: string) => {
     conjugations[tense] = reg;
   }
 
-  // console.log(conjugations)
+  // console.log(JSON.stringify(conjugations, null, 2));
+
   return conjugations;
   
 };
 
-// conjugateVerb("ser");
+// conjugateVerb("doer");
