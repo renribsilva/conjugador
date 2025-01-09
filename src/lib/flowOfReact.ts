@@ -16,7 +16,8 @@ export const flowOfReact = () => {
     foundVerb: string | null;
     termination: string | null | undefined;
     termEntrie: string | null | undefined;
-    hasTargetCanonical: string | boolean | null ;
+    hasTargetCanonical1: string | boolean | null ;
+    hasTargetCanonical2: string | boolean | null ;
     hasTargetAbundance1: string | boolean | null ;
     hasTargetAbundance2: string | boolean | null ;
     note_plain: string[] | null | undefined;
@@ -60,7 +61,8 @@ export const flowOfReact = () => {
     foundVerb: null,
     termination: null,
     termEntrie: null,
-    hasTargetCanonical: null,
+    hasTargetCanonical1: null,
+    hasTargetCanonical2: null,
     hasTargetAbundance1: null,
     hasTargetAbundance2: null,
     note_plain: null,
@@ -338,7 +340,8 @@ export const flowOfReact = () => {
           ...prev,
           termination: propsOfWord[0].termination,
           termEntrie: propsOfWord[0].termEntrie,
-          hasTargetCanonical: propsOfWord[0].hasTargetCanonical,
+          hasTargetCanonical1: propsOfWord[0].hasTargetCanonical1,
+          hasTargetCanonical2: propsOfWord[0].hasTargetCanonical2,
           hasTargetAbundance1: propsOfWord[0].hasTargetAbundance1,
           hasTargetAbundance2: propsOfWord[0].hasTargetAbundance2,
           types: propsOfWord[0].types,
@@ -385,7 +388,8 @@ export const flowOfReact = () => {
     state.foundVerb,
     state.termination,
     state.termEntrie,
-    state.hasTargetCanonical,
+    state.hasTargetCanonical1,
+    state.hasTargetCanonical2,
     state.hasTargetAbundance1,
     state.hasTargetAbundance2,
     state.note_plain,
@@ -441,7 +445,8 @@ export const flowOfReact = () => {
         varOriginalInput: state.varOriginalInput,
       },
       propsOfVerb: {
-        hasTargetCanonical: state.hasTargetCanonical,
+        hasTargetCanonical1: state.hasTargetCanonical1,
+        hasTargetCanonical2: state.hasTargetCanonical2,
         hasTargetAbundance1: state.hasTargetAbundance1,
         hasTargetAbundance2: state.hasTargetAbundance2,
         termination: state.termination,
