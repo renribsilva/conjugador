@@ -221,77 +221,77 @@
   },
   "45": {
     "ref": ["agredir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "46": {
     "ref": ["emergir"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "47": {
     "ref": ["explodir"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "48": {
     "ref": ["polir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "49": {
     "ref": ["moscar"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "50": {
     "ref": ["frigir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "51": {
     "ref": ["construir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "52": {
     "ref": ["sacudir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "53": {
     "ref": ["sumir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "54": {
     "ref": ["passear"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "55": {
     "ref": ["ansiar"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "56": {
     "ref": ["estrear"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "57": {
     "ref": ["averiguar"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "58": {
     "ref": ["enxaguar"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "59": {
     "ref": ["resfolegar"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "60": {
@@ -361,7 +361,7 @@
   },
   "73": {
     "ref": ["estar"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "74": {
@@ -371,7 +371,7 @@
   },
   "75": {
     "ref": ["haver"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "76": {
@@ -401,7 +401,7 @@
   },
   "81": {
     "ref": ["ir"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "82": {
@@ -411,7 +411,7 @@
   },
   "83": {
     "ref": ["pôr"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "84": {
@@ -426,12 +426,12 @@
   },
   "86": {
     "ref": ["ser"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "87": {
     "ref": ["ter"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "88": {
@@ -446,7 +446,7 @@
   },
   "90": {
     "ref": ["vir"],
-    "class": [],
+    "class": [2,5],
     "entrie": []
   },
   "91": {

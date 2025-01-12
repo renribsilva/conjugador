@@ -165,8 +165,8 @@ export const conjugateVerb = (verb: string) => {
   const conj = {
     model: allVerbsData[verb].model,
     only_reflexive: allVerbsData[verb].only_reflexive,
-    multiple: allVerbsData[verb].multiple,
-    canonical1: {
+    multiple_conj: allVerbsData[verb].multiple_conj,
+    canonical1: { 
         gd: N("gd", "canonical1"),
         pa: N("pa", "canonical1"),
         pr_ind: W("pr_ind", null, "canonical1"),

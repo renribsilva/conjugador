@@ -33,7 +33,7 @@ type CanonicalForms = {
 export type Conjugation = {
   model: string[],
   only_reflexive: boolean[],
-  multiple: boolean[],
+  multiple_conj: boolean[],
   canonical1: CanonicalForms;
   canonical2: CanonicalForms;
 };

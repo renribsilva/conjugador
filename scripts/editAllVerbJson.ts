@@ -5,7 +5,6 @@ import readTxtLines from './readTxtLines';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 import { VerbEntry } from '../src/types';
-import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -202,18 +201,18 @@ async function processVerbsFile(): Promise<void> {
     //   delete J[normalized];
     // });
 
-    Object.keys(J).forEach(normalized => {
-      if (J[normalized].multiple) {
-        delete J[normalized].multiple;
-      }
-    });
-
-    Object.keys(J).forEach(normalized => {
-      J[normalized].only_reflexive = [false]
-    });
+    // Object.keys(J).forEach(normalized => {
+    //   if (J[normalized].multiple) {
+    //     delete J[normalized].multiple;
+    //   }
+    // });
 
     // Object.keys(J).forEach(normalized => {
-    //   J[normalized].multiple = [false];
+    //   J[normalized].only_reflexive = [false]
+    // });
+
+    // Object.keys(J).forEach(normalized => {
+    //   J[normalized].multiple_conj = [false];
     // });
 
     const sortedJ = Object.keys(J)

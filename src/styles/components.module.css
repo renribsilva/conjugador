@@ -143,6 +143,43 @@
   color: var(--foreground);
 }
 
+.table_tabs_mult_container {
+  background-color: var(--button);
+  margin-top: 30px;
+  padding: 3px;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.table_tabs_mult_button {
+  background-color: var(--button);
+  border: 0px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+}
+
+@media (min-width: 800px) {
+  .table_tabs_mult_container .table_tabs_mult_button:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+}
+
+.table_tabs_mult_button.active {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.table_tabs_mult_button.inactive {
+  background-color: var(--button);
+  color: var(--foreground);
+}
+
 .table_tabs_se_container {
   background-color: var(--button);
   margin-top: 30px;

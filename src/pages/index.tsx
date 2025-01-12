@@ -629,7 +629,9 @@ const Index = () => {
               )}
             </div>
             <div>
-              {state.conjugations !== null && (
+              {state.conjugations !== null 
+              && state.foundVerb
+              && String(state.conjugations.canonical1.inf.p3) === String(state.foundVerb) && (
                 <>
                   <h2>
                     <span>Verbo </span> 

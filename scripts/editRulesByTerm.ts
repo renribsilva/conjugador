@@ -111,18 +111,7 @@
 
         for (const subKey of subKeys) {
 
-          if (!rulesByTermData[mainKey][subKey].note.multiple) {
-            rulesByTermData[mainKey][subKey].note.multiple = {
-              multiple: {
-                isMultiple: [false],
-                canonical1: [],
-                canonical2: [],
-              }
-            }
-
-            dataChanged = true;
-
-          }
+          delete rulesByTermData[mainKey][subKey].note.multiple
 
           const subKeyData = rulesByTermData[mainKey][subKey];
           // console.log(subKeys)
