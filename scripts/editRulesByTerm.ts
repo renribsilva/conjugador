@@ -27,6 +27,7 @@
   const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
 
   async function addVerbsToJson() {
+    
     try {
       
       const [allVerbsDataStr, rulesByTermDataStr] = await Promise.all([
@@ -59,7 +60,7 @@
       let dataChanged = false;
       const startTime = Date.now();
 
-      let specificMainKey: string | string[] | null = null;
+      let specificMainKey: string | string[] | null = ["egar"];
       if (Array.isArray(specificMainKey)) {
         specificMainKey = Array.from(new Set(specificMainKey));
       }
@@ -111,12 +112,7 @@
 
         for (const subKey of subKeys) {
 
-          delete rulesByTermData[mainKey][subKey].note.multiple
-
           const subKeyData = rulesByTermData[mainKey][subKey];
-          // console.log(subKeys)
-
-          delete subKeyData.verbs
 
           if (!subKeyData.verbs) {
             subKeyData.verbs = { total: 0, models: [], entries: {} };

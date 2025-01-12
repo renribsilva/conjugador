@@ -33378,7 +33378,7 @@
   "comediar": {
     "verb": ["comediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -90071,7 +90071,7 @@
   "incendiar": {
     "verb": ["incendiar"],
     "model": [55],
-    "ending": ["iar"],
+    "ending": ["endiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -91723,7 +91723,7 @@
   "intermediar": {
     "verb": ["intermediar"],
     "model": [55],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -98023,7 +98023,7 @@
   "mediar": {
     "verb": ["mediar"],
     "model": [55],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -110784,7 +110784,7 @@
   "promediar": {
     "verb": ["promediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -117665,7 +117665,7 @@
   "remediar": {
     "verb": ["remediar"],
     "model": [55],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -119081,7 +119081,7 @@
     "model": [59],
     "ending": ["egar"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "resfolgar": {
     "verb": ["resfolgar"],

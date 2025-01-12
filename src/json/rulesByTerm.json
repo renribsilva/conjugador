@@ -15433,6 +15433,198 @@
         }
       }
     },
+    "esfolegar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'egar', 'esfolegar' e seus derivados apresentam dois tipos de acomodação gráfica: o 'g' substituído por 'gu' antes do 'e' desinencial e a acentuação rizotônica no 'o' em algumas flexões. Quanto ao último tipo, no uso falado corrente, há tendência para a conjugação regular desse verbo, razão pela qual este conjugador apresenta os dois tipos de conjugação, sendo a acentuada a variação canônica¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "óleg4": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "ólegu4": {
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          },
+          "olegu4": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p4", "p5"],
+            "im1": ["p4"],
+            "im2": ["p4", "p5"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [59],
+        "entries": {
+          "esfolegar": [59]
+        }
+      }
+    },
+    "resfolegar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'egar', 'esfolegar' e seus derivados apresentam dois tipos de acomodação gráfica: o 'g' substituído por 'gu' antes do 'e' desinencial e a acentuação rizotônica no 'o' em algumas flexões. Quanto ao último tipo, no uso falado corrente, há tendência para a conjugação regular desse verbo, razão pela qual este conjugador apresenta os dois tipos de conjugação, sendo a acentuada a variação canônica¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "óleg4": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "ólegu4": {
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          },
+          "olegu4": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p4", "p5"],
+            "im1": ["p4"],
+            "im2": ["p4", "p5"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [59],
+        "entries": {
+          "resfolegar": [59]
+        }
+      }
+    },
+    "desfolegar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'egar', 'esfolegar' e seus derivados apresentam dois tipos de acomodação gráfica: o 'g' substituído por 'gu' antes do 'e' desinencial e a acentuação rizotônica no 'o' em algumas flexões. Quanto ao último tipo, no uso falado corrente, há tendência para a conjugação regular desse verbo, razão pela qual este conjugador apresenta os dois tipos de conjugação, sendo a acentuada a variação canônica¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "óleg4": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "ólegu4": {
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          },
+          "olegu4": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p4", "p5"],
+            "im1": ["p4"],
+            "im2": ["p4", "p5"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [59],
+        "entries": {
+          "desfolegar": [59]
+        }
+      }
+    },
+    "tresfolegar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'egar', 'esfolegar' e seus derivados apresentam dois tipos de acomodação gráfica: o 'g' substituído por 'gu' antes do 'e' desinencial e a acentuação rizotônica no 'o' em algumas flexões. Quanto ao último tipo, no uso falado corrente, há tendência para a conjugação regular desse verbo, razão pela qual este conjugador apresenta os dois tipos de conjugação, sendo a acentuada a variação canônica¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "óleg4": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "ólegu4": {
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          },
+          "olegu4": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p4", "p5"],
+            "im1": ["p4"],
+            "im2": ["p4", "p5"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [59],
+        "entries": {
+          "tresfolegar": [59]
+        }
+      }
+    },
     "...": {
       "note": {
         "plain": ["Todos os verbos terminados em 'egar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
@@ -15455,8 +15647,8 @@
       },
       "test": [false],
       "verbs": {
-        "total": 167,
-        "models": [11, 34, 43, 59],
+        "total": 163,
+        "models": [11, 34, 43],
         "entries": {
           "abarregar": [11, 34],
           "aberregar": [11, 34],
@@ -15519,7 +15711,6 @@
           "desconchegar": [43],
           "desempegar": [11, 34],
           "desencarregar": [11, 34],
-          "desfolegar": [59],
           "desgregar": [11, 34],
           "desnegar": [11, 34],
           "despegar": [11, 34],
@@ -15538,7 +15729,6 @@
           "esborregar": [11, 34],
           "escorregar": [11, 34],
           "esfandegar": [],
-          "esfolegar": [59],
           "esfregar": [11, 34],
           "esmurregar": [11, 34],
           "esparregar": [11, 34],
@@ -15597,7 +15787,6 @@
           "renegar": [11, 34],
           "repolegar": [11, 34],
           "repregar": [11, 34],
-          "resfolegar": [59],
           "ressegar": [11, 34],
           "retrocarregar": [],
           "rocegar": [11, 34],
@@ -15619,7 +15808,6 @@
           "trasfegar": [11, 34],
           "trefegar": [11, 34],
           "tresfegar": [],
-          "tresfolegar": [59],
           "tropegar": [11, 34],
           "variegar": [11, 34],
           "verdegar": [],
@@ -25364,8 +25552,8 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 701,
-        "models": [9, 1, 55],
+        "total": 680,
+        "models": [9, 1],
         "entries": {
           "abaciar": [9],
           "abadiar": [9],
@@ -25428,7 +25616,6 @@
           "amumiar": [9],
           "amuniciar": [9],
           "anafiar": [],
-          "anediar": [9],
           "anemiar": [9],
           "anestesiar": [9],
           "angariar": [9],
@@ -25460,7 +25647,6 @@
           "artificiar": [9],
           "asfixiar": [9],
           "assalariar": [9],
-          "assediar": [9],
           "assepsiar": [9],
           "assobiar": [9],
           "associar": [9],
@@ -25468,7 +25654,6 @@
           "astuciar": [9],
           "atauxiar": [9],
           "ataviar": [9],
-          "atediar": [9],
           "atericiar": [],
           "atibiar": [],
           "atoniar": [9],
@@ -25525,9 +25710,7 @@
           "cofiar": [9],
           "cogiar": [],
           "colegiar": [],
-          "comediar": [9],
           "comerciar": [9],
-          "compendiar": [9],
           "compliciar": [],
           "conciliar": [9],
           "concriar": [9],
@@ -25574,10 +25757,8 @@
           "desanuviar": [9],
           "desapreciar": [9],
           "desapropriar": [9],
-          "desarremediar": [],
           "desassociar": [9],
           "desataviar": [9],
-          "desatediar": [9],
           "desauxiliar": [9],
           "desaviar": [9],
           "desbriar": [9],
@@ -25591,7 +25772,6 @@
           "desenfastiar": [9],
           "desenfiar": [9],
           "desengamiar": [],
-          "desentediar": [9],
           "desentibiar": [9],
           "desenxarciar": [9],
           "desessenciar": [],
@@ -25614,7 +25794,6 @@
           "despronunciar": [9],
           "despropriar": [],
           "desquiciar": [9],
-          "desremediar": [],
           "dessitiar": [9],
           "dessubstanciar": [9],
           "desvaliar": [9],
@@ -25667,8 +25846,6 @@
           "enlabiar": [9],
           "enrestiar": [],
           "enriar": [9],
-          "entediar": [9],
-          "entendiar": [],
           "entibiar": [9],
           "entrefiar": [9],
           "enunciar": [9],
@@ -25717,7 +25894,6 @@
           "estasiar": [],
           "estesiar": [9],
           "estiar": [9],
-          "estipendiar": [9],
           "estranfeniar": [],
           "estranfoliar": [],
           "estranfoniar": [],
@@ -25809,7 +25985,6 @@
           "impertinenciar": [],
           "impronunciar": [9],
           "impropriar": [9],
-          "incendiar": [55],
           "indiciar": [9],
           "indulgenciar": [9],
           "industriar": [9],
@@ -25824,7 +25999,6 @@
           "inteligenciar": [],
           "intercambiar": [9],
           "interfoliar": [9],
-          "intermediar": [55],
           "inventariar": [9],
           "invidiar": [],
           "iriar": [9],
@@ -25862,7 +26036,6 @@
           "mapiar": [9],
           "matriar": [],
           "matrimoniar": [9],
-          "mediar": [55],
           "melodiar": [9],
           "memoriar": [9],
           "menospreciar": [9],
@@ -25888,7 +26061,6 @@
           "nunciar": [9],
           "nupciar": [9],
           "obnunciar": [],
-          "obsediar": [9],
           "obsidiar": [9],
           "obviar": [9],
           "oficiar": [9],
@@ -25935,7 +26107,6 @@
           "privilegiar": [9],
           "procriar": [9],
           "proemiar": [9],
-          "promediar": [9],
           "prontuariar": [],
           "pronunciar": [9],
           "propiciar": [9],
@@ -25974,7 +26145,6 @@
           "regraciar": [],
           "reiniciar": [9],
           "relatoriar": [],
-          "remediar": [55],
           "remigiar": [],
           "reminiscenciar": [],
           "renegociar": [9],
@@ -26002,7 +26172,6 @@
           "sataniar": [],
           "seciar": [],
           "secretariar": [9],
-          "sediar": [9],
           "sentenciar": [9],
           "sequenciar": [9],
           "seriar": [9],
@@ -26031,7 +26200,6 @@
           "teimosiar": [],
           "tendenciar": [],
           "terciar": [],
-          "tragediar": [9],
           "trancafiar": [9],
           "tranquiberniar": [],
           "transubstanciar": [9],
@@ -26058,7 +26226,6 @@
           "viciar": [9],
           "vigiar": [9],
           "viliar": [],
-          "vilipendiar": [9],
           "vistoriar": [9],
           "vitaliciar": [],
           "vitoriar": [9],
@@ -26131,7 +26298,7 @@
     },
     "mobiliar": {
       "note": {
-        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e 'desmobiliar' apresentam acento agudo no 'i' nas formas rizotônicas¹."],
+        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e seus derivados apresentam acento agudo no 'i' nas formas rizotônicas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -54259,6 +54426,129 @@
         "entries": {
           "sepulcrar": []
         }
+      }
+    }
+  },
+  "endiar": {
+    "incendiar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'endiar', 'incendiar' é conjugado a partir do paradigma do verbo 'passear'¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ansei": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [55],
+        "entries": {
+          "incendiar": [55]
+        }
+      }
+    },
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false],
+      "verbs": {
+        "total": 0,
+        "models": [],
+        "entries": {}
+      }
+    }
+  },
+  "ediar": {
+    "mediar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ansei": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [55],
+        "entries": {
+          "mediar": [55]
+        }
+      }
+    },
+    "...mediar": {
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ansei": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 4,
+        "models": [9, 55],
+        "entries": {
+          "comediar": [9],
+          "intermediar": [55],
+          "promediar": [9],
+          "remediar": [55]
+        }
+      }
+    },
+    "...": {
+      "note": {
+        "plain": ["Terminação não estabelecida"],
+        "ref": {}
+      },
+      "type": [1],
+      "abundance1": {},
+      "rules": {},
+      "test": [false],
+      "verbs": {
+        "total": 0,
+        "models": [],
+        "entries": {}
       }
     }
   }

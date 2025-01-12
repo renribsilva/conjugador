@@ -5,6 +5,7 @@ import readTxtLines from './readTxtLines';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { filterNonVerbs } from './filterNonVerbs';
 import { VerbEntry } from '../src/types';
+import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -104,7 +105,9 @@ async function processVerbsFile(): Promise<void> {
 
     const normalizedVerbs = allVerbs.map(verb => String(nw(verb)));
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
-    const finalVerbs = uniqueVerbs.map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)]);
+    const finalVerbs = uniqueVerbs
+      .map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)])
+      // .filter(verb => /egar$/.test(verb));
 
     console.log(`- quantidade de verbos após remoção de duplicados: ${finalVerbs.length}`)
 
@@ -141,31 +144,31 @@ async function processVerbsFile(): Promise<void> {
 
           const go = true
 
-          // if (go) {
+          if (go) {
     
-          //   try {
+            try {
               
-          //     const input = normalized
-          //     // const input = "acaridar"
-          //     let verbPropsArray = cache.get(input);
-          //     if (!verbPropsArray) {
-          //       verbPropsArray = await getPropsOfVerb(input, true, input);
-          //       cache.set(input, verbPropsArray);
-          //     }
+              const input = normalized
+              // const input = "acaridar"
+              let verbPropsArray = cache.get(input);
+              if (!verbPropsArray) {
+                verbPropsArray = await getPropsOfVerb(input, true, input);
+                cache.set(input, verbPropsArray);
+              }
       
-          //     if (verbPropsArray.length > 0) {
-          //       const matchedTermination = verbPropsArray[0]?.termination;
+              if (verbPropsArray.length > 0) {
+                const matchedTermination = verbPropsArray[0]?.termination;
       
-          //       if (matchedTermination && input.endsWith(matchedTermination)) {
-          //         acc[input].ending = [matchedTermination];
-          //       }
+                if (matchedTermination && input.endsWith(matchedTermination)) {
+                  acc[input].ending = [matchedTermination];
+                }
                 
-          //     }
-          //   } catch (error) {
-          //     console.error(`Erro ao processar o verbo ${verb}:`, error);
-          //   }
+              }
+            } catch (error) {
+              console.error(`Erro ao processar o verbo ${verb}:`, error);
+            }
 
-          // }
+          }
 
         });
     
