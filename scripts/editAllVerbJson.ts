@@ -15,7 +15,7 @@ const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
 const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
 
-async function processVerbsFile(): Promise<void> {
+export default async function processVerbsFile(): Promise<void> {
 
   try {
 
