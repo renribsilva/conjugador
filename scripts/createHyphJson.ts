@@ -1,5 +1,5 @@
-import hyphPtBr from '../json/hyph_pt_BR.json';
-import { nw } from './normalizeVerb';
+import { nw } from "../src/lib/normalizeVerb";
+import hyphPtBr from "../src/json/hyph_pt_BR.json"
 
 // Esquema de Liang para associar pesos às divisões
 const liangWeight = {
