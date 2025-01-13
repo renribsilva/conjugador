@@ -225,5 +225,9 @@ async function saveToFile(data: any, filePath: string) {
   await fs.promises.writeFile(filePath, jsonString, 'utf8');
 }
 
-processVerbsFile();
-addVerbsToJson();
+async function executeInOrder() {
+  await processVerbsFile(); 
+  await addVerbsToJson();
+}
+
+executeInOrder();
