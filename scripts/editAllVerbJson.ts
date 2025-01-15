@@ -129,36 +129,40 @@ export default async function processVerbsFile(): Promise<void> {
       const cache = new Map(); 
     
       const processBatch = async (batch: string[], startIndex: number) => {
-
+        
+        const useCustomVerbs = true;
+        if (useCustomVerbs) {
+          batch = ["anediar", "assediar", "atediar", "desarremediar", "desatediar",
+             "desentediar", "desremediar", "entediar", "obsediar", "sediar", "tragediar"];
+        }
+        
         const batchPromises = batch.map(async (verb) => {
-
+      
           const normalized = ni(verb);
-    
+      
           if (!acc[normalized]) {
             acc[normalized] = { verb: [], model: [], ending: [] };
           }
-    
+      
           if (!acc[normalized].verb.includes(verb)) {
             acc[normalized].verb.push(verb);
           }
-
+      
           const go = true
-
+      
           if (go) {
-    
+        
             try {
-              
-              const input = normalized
-              // const input = "acaridar"
+              const input = normalized;
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
                 verbPropsArray = await getPropsOfVerb(input, true, input);
                 cache.set(input, verbPropsArray);
               }
-      
+        
               if (verbPropsArray.length > 0) {
                 const matchedTermination = verbPropsArray[0]?.termination;
-      
+        
                 if (matchedTermination && input.endsWith(matchedTermination)) {
                   acc[input].ending = [matchedTermination];
                 }
@@ -167,22 +171,19 @@ export default async function processVerbsFile(): Promise<void> {
             } catch (error) {
               console.error(`Erro ao processar o verbo ${verb}:`, error);
             }
-
           }
-
         });
-    
+      
         await Promise.all(batchPromises);
-    
+      
         const progress = Math.floor(((startIndex + batch.length) / finalVerbs.length) * 100);
         const elapsedTime = Date.now() - startTime;
         const remainingTime = ((elapsedTime / (startIndex + batch.length)) * (finalVerbs.length - (startIndex + batch.length))) / 1000;
         const hours = Math.floor(remainingTime / 3600); // Horas
         const minutes = Math.floor((remainingTime % 3600) / 60); // Minutos
-
+      
         process.stdout.write(`- progresso: ${progress}% | Tempo restante estimado: ${hours}h ${minutes}min\r`);
-
-      };
+      };      
 
       for (let i = 0; i < finalVerbs.length; i += BATCH_SIZE) {
         const batch = finalVerbs.slice(i, i + BATCH_SIZE);

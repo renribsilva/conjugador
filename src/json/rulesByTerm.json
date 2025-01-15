@@ -1548,7 +1548,7 @@
     },
     "...saber": {
       "note": {
-        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade apenas na 1ª pessoa do singular do Presente do Indicativo¹."],
+        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹. Por essa razão, este conjugador apresenta ambas as formas de conjugação."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1593,6 +1593,47 @@
           }
         }
       },
+      "canonical2": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"]
+          },
+          "soub3": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "saib3": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pt1_ind": ["p3"]
+          },
+          "e": {
+            "pt1_ind": ["p1"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 3,
@@ -1606,7 +1647,7 @@
     },
     "saber": {
       "note": {
-        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade apenas na 1ª pessoa do singular do Presente do Indicativo¹."],
+        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹. Por essa razão, este conjugador apresentas ambas as formas de conjugação."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1648,6 +1689,47 @@
           },
           "": {
             "pt1_ind": ["p3"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"]
+          },
+          "soub": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "saib": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pt1_ind": ["p3"]
+          },
+          "e": {
+            "pt1_ind": ["p1"]
           }
         }
       },
@@ -26298,10 +26380,11 @@
     },
     "mobiliar": {
       "note": {
-        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e seus derivados apresentam acento agudo no 'i' nas formas rizotônicas¹."],
+        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e seus derivados apresentam acento agudo no 'i' nas formas rizotônicas¹. No uso falado corrente, há tendência para a conjugação regular², razão pela qual este conjugador conjuga para as duas formas, sendo a forma acentuada a canônica"],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "type": [2],
@@ -26316,6 +26399,7 @@
           }
         }
       },
+      "canonical2": {},
       "test": [false],
       "verbs": {
         "total": 1,
@@ -26327,15 +26411,26 @@
     },
     "desmobiliar": {
       "note": {
-        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e 'desmobiliar' apresentam acento agudo no 'i' nas formas rizotônicas¹."],
+        "plain": ["Dentre os verbos terminados em 'iar', 'mobiliar' e seus derivados apresentam acento agudo no 'i' nas formas rizotônicas¹. No uso falado corrente, há tendência para a conjugação regular², razão pela qual este conjugador conjuga para as duas formas"],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "type": [2],
       "abundance1": {},
       "canonical1": {
+        "RAD": {
+          "íli3": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "canonical2": {
         "RAD": {
           "íli3": {
             "pr_ind": ["p1", "p2", "p3", "p6"],
@@ -30961,6 +31056,32 @@
         "entries": {
           "extinguir": [41]
         }
+      }
+    },
+    "desmilinguir": {
+      "note": {
+        "plain": ["O verbo 'desmilinguir' apresenta acentuação tônica na penúltima vogal do radical no presente do Indicativo e flexões correlacionadas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [1],
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "íngu4": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 0,
+        "models": [],
+        "entries": {}
       }
     },
     "...": {
@@ -43349,8 +43470,8 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 14,
-        "models": [28, 67],
+        "total": 13,
+        "models": [28],
         "entries": {
           "amover": [28],
           "autopromover": [28],
@@ -43359,7 +43480,6 @@
           "demover": [28],
           "descomover": [28],
           "despromover": [28],
-          "desprover": [67],
           "locomover": [28],
           "mover": [28],
           "promover": [28],
@@ -43371,8 +43491,10 @@
     },
     "prover": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Dentre os verbos terminados com 'over', 'prover' e derivados têm conjugações bastante singulares. O presente do Indicativo e do Subjuntivo, bem como os Imperativos, são conjugados pelo verbo 'ver', ao passo que o restante das flexões é conjugado pelo verbo 'bater'¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "type": [2],
       "abundance1": {},
@@ -43382,29 +43504,19 @@
             "pr_ind": ["p1"],
             "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
             "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"]
           },
           "ê": {
             "pr_ind": ["p2", "p3"],
             "im1": ["p2"]
-          },
-          "i": {
-            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "í": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
           }
         },
         "MT": {
-          "sto": {
-            "pa": ["n"]
-          },
           "j": {
             "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p6"]
           },
           "ja": {
             "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
@@ -43415,9 +43527,6 @@
         "NP": {
           "des": {
             "pr_ind": ["p5"]
-          },
-          "em": {
-            "pr_ind": ["p6"]
           },
           "de": {
             "im1": ["p5"]
@@ -43430,6 +43539,59 @@
         "models": [67],
         "entries": {
           "prover": [67]
+        }
+      }
+    },
+    "...prover": {
+      "note": {
+        "plain": ["Dentre os verbos terminados com 'over', 'prover' e derivados têm conjugações bastante singulares. O presente do Indicativo e flexões correlacionados são conjugados pelo verbo 'ver', ao passo que o restante das flexões é conjugado pelo verbo 'bater'¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "type": [2],
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "j": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p6"]
+          },
+          "ja": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [67],
+        "entries": {
+          "desprover": [67]
         }
       }
     }
@@ -52276,12 +52438,90 @@
   "abster": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          },
+          "i": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "é": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "ve": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "vera": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "véra": {
+            "pt3_ind": ["p4"]
+          },
+          "vére": {
+            "pt3_ind": ["p5"]
+          },
+          "vesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "vésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ver": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52295,12 +52535,100 @@
   "advir": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pt1_ind": ["p3"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pr_ind": ["p5"],
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"],
+            "im1": ["p5"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          },
+          "é": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          }
+        },
+        "MT": {
+          "ndo": {
+            "pa": ["n"]
+          },
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "e": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pt1_ind": ["p3"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "era": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "éra": {
+            "pt3_ind": ["p4"]
+          },
+          "ére": {
+            "pt3_ind": ["p5"]
+          },
+          "esse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "ésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "er": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "im": {
+            "pt1_ind": ["p1"]
+          },
+          "o": {
+            "pt1_ind": ["p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52314,12 +52642,93 @@
   "anspor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52333,12 +52742,93 @@
   "apor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 6,
@@ -52462,12 +52952,93 @@
   "erpor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 2,
@@ -52482,12 +53053,93 @@
   "expor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 4,
@@ -52504,12 +53156,93 @@
   "impor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 4,
@@ -52526,12 +53259,93 @@
   "ispor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 4,
@@ -52548,12 +53362,93 @@
   "obpor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52567,12 +53462,93 @@
   "ompor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 5,
@@ -52590,12 +53566,93 @@
   "opor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 5,
@@ -52613,12 +53670,93 @@
   "ospor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52632,12 +53770,93 @@
   "ubpor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -52651,12 +53870,93 @@
   "upor": {
     "...": {
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
       },
-      "type": [1],
+      "type": [2],
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 2,
@@ -54465,12 +55765,17 @@
       },
       "type": [1],
       "abundance1": {},
-      "rules": {},
+      "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
+        "total": 4,
+        "models": [9],
+        "entries": {
+          "compendiar": [9],
+          "entendiar": [],
+          "estipendiar": [9],
+          "vilipendiar": [9]
+        }
       }
     }
   },
@@ -54543,12 +55848,24 @@
       },
       "type": [1],
       "abundance1": {},
-      "rules": {},
+      "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
+        "total": 11,
+        "models": [9],
+        "entries": {
+          "anediar": [9],
+          "assediar": [9],
+          "atediar": [9],
+          "desarremediar": [],
+          "desatediar": [9],
+          "desentediar": [9],
+          "desremediar": [],
+          "entediar": [9],
+          "obsediar": [9],
+          "sediar": [9],
+          "tragediar": [9]
+        }
       }
     }
   }

@@ -13666,7 +13666,7 @@
   "anediar": {
     "verb": ["anediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -18783,7 +18783,7 @@
   "assediar": {
     "verb": ["assediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -19707,7 +19707,7 @@
   "atediar": {
     "verb": ["atediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -33651,7 +33651,7 @@
   "compendiar": {
     "verb": ["compendiar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["endiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -42114,7 +42114,7 @@
   "desarremediar": {
     "verb": ["desarremediar"],
     "model": [],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -42408,7 +42408,7 @@
   "desatediar": {
     "verb": ["desatediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -47693,7 +47693,7 @@
   "desentediar": {
     "verb": ["desentediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -52271,7 +52271,7 @@
   "desremediar": {
     "verb": ["desremediar"],
     "model": [],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -52357,7 +52357,7 @@
     "model": [78],
     "ending": ["aber"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "dessaborar": {
     "verb": ["dessaborar"],
@@ -67405,7 +67405,7 @@
   "entediar": {
     "verb": ["entediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -67468,7 +67468,7 @@
   "entendiar": {
     "verb": ["entendiar"],
     "model": [],
-    "ending": ["iar"],
+    "ending": ["endiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -77779,7 +77779,7 @@
   "estipendiar": {
     "verb": ["estipendiar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["endiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -99474,7 +99474,7 @@
     "model": [60],
     "ending": ["iar"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "mobilizar": {
     "verb": ["mobilizar"],
@@ -102265,7 +102265,7 @@
   "obsediar": {
     "verb": ["obsediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -109379,7 +109379,7 @@
     "model": [78],
     "ending": ["aber"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "pre-selecionar": {
     "verb": ["pré-selecionar"],
@@ -119424,7 +119424,7 @@
     "model": [78],
     "ending": ["aber"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "ressabiar": {
     "verb": ["ressabiar"],
@@ -122056,7 +122056,7 @@
     "model": [78],
     "ending": ["aber"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "saberecar": {
     "verb": ["saberecar"],
@@ -123412,7 +123412,7 @@
   "sediar": {
     "verb": ["sediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -130699,7 +130699,7 @@
   "tragediar": {
     "verb": ["tragediar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["ediar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -135312,7 +135312,7 @@
   "vilipendiar": {
     "verb": ["vilipendiar"],
     "model": [9],
-    "ending": ["iar"],
+    "ending": ["endiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },

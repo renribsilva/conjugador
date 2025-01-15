@@ -16,6 +16,7 @@ import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
 import postReqConjByAPI from "../lib/postReqConjByAPI";
+import { ni, nw } from "../lib/normalizeVerb";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -631,7 +632,8 @@ const Index = () => {
             <div>
               {state.conjugations !== null 
               && state.foundVerb
-              && String(state.conjugations.canonical1.inf.p3) === String(state.foundVerb) && (
+              && nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
+                === nw(String(state.foundVerb).replace("*","")) && (
                 <>
                   <h2>
                     <span>Verbo </span> 

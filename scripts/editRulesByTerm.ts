@@ -61,7 +61,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = null
+    let specificMainKey: string | string[] | null = ["upor"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -156,7 +156,7 @@ async function addVerbsToJson() {
         }
 
       }
-    }
+    } 
 
     if (dataChanged) {
       await saveToFile(rulesByTermData, rulesByTermPath);
@@ -174,7 +174,6 @@ async function addVerbsToJson() {
       .reduce((acc, curr) => acc + curr, 0);
 
     console.log(`- total: ${totalVerbs}`);
-
     console.log("Verificando a ocorrência de verbos em mais de uma terminação...")
 
     const seenVerbs = new Set();
@@ -210,13 +209,54 @@ async function addVerbsToJson() {
     console.log(`- mainKey com mais verbos: ${maxMainKey}`);
     console.log(`- total: ${maxTotal}`);
 
+    await compareAndLogMissingVerbs(allVerbsData, rulesByTermData);
+
     console.log(dataChanged ? 'Dados atualizados com sucesso!' : 'Nenhuma alteração detectada.');
   } catch (error) {
     console.error('Erro ao processar o arquivo:', error);
   }
 }
 
-// Função para salvar dados no arquivo
+async function compareAndLogMissingVerbs(
+  allVerbsData: { [key: string]: VerbData },
+  rulesByTermData: RulesByTermData
+) {
+  console.log('Comparando verbos de allVerbs.json com verbos em rulesByTerm.json...');
+  const entries = extractVerbsEntries(rulesByTermData);
+
+  const entryOfArray = Object.keys(entries);
+  const allVerbsArray = Object.keys(allVerbsData);
+  const missingVerbs = allVerbsArray.filter(verb => !entryOfArray.includes(verb));
+
+  if (missingVerbs.length > 0 && entryOfArray.length !== allVerbsArray.length) {
+    console.log(`- verbos ausentes: ${missingVerbs.join(', ')}`);
+  } else if (entryOfArray.length === allVerbsArray.length) {
+    console.log('- todos os verbos de allVerbsData estão presentes nos entries.');
+  } else {
+    console.log('- ocorreu algum problema na verificação.');
+  }
+}
+
+function extractVerbsEntries(rulesByTermData: RulesByTermData): { [key: string]: number[] } {
+  const allEntries: { [verb: string]: number[] } = {};
+
+  for (const mainKey in rulesByTermData) {
+    const mainKeyData = rulesByTermData[mainKey];
+    for (const subKey in mainKeyData) {
+      const subKeyData = mainKeyData[subKey];
+      if (subKeyData.verbs?.entries) {
+        Object.entries(subKeyData.verbs.entries).forEach(([verb, models]) => {
+          if (!allEntries[verb]) {
+            allEntries[verb] = [];
+          }
+          allEntries[verb] = Array.from(new Set([...allEntries[verb], ...models]));
+        });
+      }
+    }
+  }
+  return allEntries;
+}
+
 async function saveToFile(data: any, filePath: string) {
   const jsonString = JSON.stringify(data, null, 2).replace(
     /\[\s*([\s\S]*?)\s*\]/g,
@@ -226,7 +266,7 @@ async function saveToFile(data: any, filePath: string) {
 }
 
 async function executeInOrder() {
-  await processVerbsFile(); 
+  // await processVerbsFile(); 
   await addVerbsToJson();
 }
 

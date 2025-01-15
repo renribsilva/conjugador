@@ -296,67 +296,67 @@
   },
   "60": {
     "ref": ["mobiliar"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "61": {
     "ref": ["desmilinguir"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "62": {
     "ref": ["delinquir"],
-    "class": [],
+    "class": [1],
     "entrie": []
   },
   "63": {
     "ref": ["medir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "64": {
     "ref": ["ouvir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "65": {
     "ref": ["parir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "66": {
     "ref": ["perder"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "67": {
     "ref": ["prover"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "68": {
     "ref": ["requerer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "69": {
     "ref": ["valer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "70": {
     "ref": ["caber"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "71": {
     "ref": ["comprazer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "72": {
     "ref": ["dizer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "73": {
@@ -366,7 +366,7 @@
   },
   "74": {
     "ref": ["fazer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "75": {
@@ -376,27 +376,27 @@
   },
   "76": {
     "ref": ["poder"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "77": {
     "ref": ["querer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "78": {
     "ref": ["saber"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "79": {
     "ref": ["trazer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "80": {
     "ref": ["dar"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "81": {
@@ -406,7 +406,7 @@
   },
   "82": {
     "ref": ["ler", "crer"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "83": {
@@ -416,12 +416,12 @@
   },
   "84": {
     "ref": ["propor"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "85": {
     "ref": ["rir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "86": {
@@ -436,12 +436,12 @@
   },
   "88": {
     "ref": ["manter"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "89": {
     "ref": ["ver"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "90": {
@@ -451,87 +451,87 @@
   },
   "91": {
     "ref": ["provir"],
-    "class": [],
+    "class": [2],
     "entrie": []
   },
   "92": {
     "ref": ["abolir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "93": {
     "ref": ["excelir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "94": {
     "ref": ["fremir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "95": {
     "ref": ["puir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "96": {
     "ref": ["retorquir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "97": {
     "ref": ["soer"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "98": {
     "ref": ["precaver"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "99": {
     "ref": ["reaver"],
-    "class": [],
+    "class": [2,3],
     "entrie": []
   },
   "100": {
     "ref": ["embair"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "101": {
     "ref": ["falir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "102": {
     "ref": ["aprazer"],
-    "class": [],
+    "class": [2,3],
     "entrie": []
   },
   "103": {
     "ref": ["concernir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "104": {
     "ref": ["doer"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "105": {
     "ref": ["grassar"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "106": {
     "ref": ["later"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   },
   "107": {
     "ref": ["precluir"],
-    "class": [],
+    "class": [1,3],
     "entrie": []
   }
 }

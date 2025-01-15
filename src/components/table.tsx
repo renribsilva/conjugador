@@ -74,7 +74,9 @@ export default function Table ({ conj, canonical }: { conj: Conjugation, canonic
         : [nw(X[p])];
     
       const lengthX = (p: string, i: number) => (X[p][i].replace("*", "").length);
-      const lengthW = conj["ft1_ind"].p1[0].replace("*", "").length-2
+      const lengthW = conj["ft1_ind"].p1[0] !== "---" 
+        ? conj["ft1_ind"].p1[0].replace("*", "").length-2
+        : conj["ft1_ind"].p3[0].replace("*", "").length-1
     
       let adjustedValue: string[] | string = value.map((item, index) => {
 
