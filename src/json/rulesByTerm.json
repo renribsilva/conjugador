@@ -1,13 +1,13 @@
 {
   "crer": {
     "crer": {
+      "type": [2],
       "note": {
         "plain": ["Monossilábico e irregular, o verbo 'crer' é o único com a exata terminação 'crer'. O seu paradigma de conjugação é o mesmo do verbo 'ler'¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -54,11 +54,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -71,11 +71,11 @@
   },
   "dar": {
     "dar": {
+      "type": [2],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -133,11 +133,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -150,13 +150,13 @@
   },
   "ir": {
     "ir": {
+      "type": [2, 5],
       "note": {
         "plain": ["O verbo 'ir', além de irregular, é tido como anômalo, porque possui radicais de origem histórica diversa¹"],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
-      "type": [2, 5],
       "abundance1": {},
       "canonical1": {
         "RAD": {
@@ -252,11 +252,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -269,11 +269,11 @@
   },
   "ler": {
     "ler": {
+      "type": [2],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -320,11 +320,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -337,13 +337,13 @@
   },
   "por": {
     "...por": {
+      "type": [2],
       "note": {
         "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -438,13 +438,13 @@
       }
     },
     "pôr": {
+      "type": [2, 5],
       "note": {
         "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -537,11 +537,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -554,6 +554,7 @@
   },
   "rer": {
     "rer": {
+      "type": [1, 3],
       "note": {
         "plain": ["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'. Aqui, optou-se pela primeira forma."],
         "ref": {
@@ -564,7 +565,6 @@
           "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -611,11 +611,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -628,11 +628,11 @@
   },
   "rir": {
     "...rir": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -669,11 +669,11 @@
       }
     },
     "rir": {
+      "type": [2],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -712,11 +712,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -729,11 +729,11 @@
   },
   "ser": {
     "ser": {
+      "type": [2, 5],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2, 5],
       "abundance1": {},
       "canonical1": {
         "RAD": {
@@ -821,11 +821,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -838,13 +838,13 @@
   },
   "ter": {
     "...ter": {
+      "type": [1],
       "note": {
         "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -931,11 +931,11 @@
       }
     },
     "ter": {
+      "type": [2, 5],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -1020,11 +1020,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -1037,11 +1037,11 @@
   },
   "ver": {
     "...ver": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -1102,11 +1102,11 @@
       }
     },
     "ver": {
+      "type": [2],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [2],
       "abundance1": {},
       "canonical1": {
         "VT": {
@@ -1166,11 +1166,11 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Terminação não estabelecida"],
         "ref": {}
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {},
       "test": [false],
@@ -2925,6 +2925,7 @@
   },
   "agar": {
     "pagar": {
+      "type": [1, 4],
       "note": {
         "plain": ["Todos os verbos terminados em 'agar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
         "ref": {
@@ -2932,7 +2933,6 @@
           ]
         }
       },
-      "type": [1],
       "abundance1": {
         "VT": {
           "o": {
@@ -2965,6 +2965,7 @@
       }
     },
     "vagar": {
+      "type": [1, 4],
       "note": {
         "plain": ["Todos os verbos terminados em 'agar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
         "ref": {
@@ -2972,7 +2973,6 @@
           ]
         }
       },
-      "type": [1],
       "abundance1": {
         "VT": {
           "o": {
@@ -3005,6 +3005,7 @@
       }
     },
     "...": {
+      "type": [1],
       "note": {
         "plain": ["Todos os verbos terminados em 'agar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
         "ref": {
@@ -3012,7 +3013,6 @@
           ]
         }
       },
-      "type": [1],
       "abundance1": {},
       "canonical1": {
         "RAD": {

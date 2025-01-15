@@ -2,536 +2,536 @@
   "1": {
     "ref": ["passar"],
     "class": [1],
-    "entrie": []
+    "total": [6329]
   },
   "2": {
     "ref": ["bater"],
     "class": [1],
-    "entrie": []
+    "total": [122]
   },
   "3": {
     "ref": ["partir"],
     "class": [1],
-    "entrie": []
+    "total": [241]
   },
   "4": {
     "ref": ["afastar-se"],
     "class": [1],
-    "entrie": []
+    "total": [114]
   },
   "5": {
     "ref": ["abater-se"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "6": {
     "ref": ["demitir-se"],
     "class": [1],
-    "entrie": []
+    "total": [2]
   },
   "7": {
     "ref": ["conduzir"],
     "class": [1],
-    "entrie": []
+    "total": [32]
   },
   "8": {
     "ref": ["viajar"],
     "class": [1],
-    "entrie": []
+    "total": [18]
   },
   "9": {
     "ref": ["enviar"],
     "class": [1],
-    "entrie": []
+    "total": [554]
   },
   "10": {
     "ref": ["atuar"],
     "class": [1],
-    "entrie": []
+    "total": [101]
   },
   "11": {
     "ref": ["apelar"],
     "class": [1],
-    "entrie": []
+    "total": [1357]
   },
   "12": {
     "ref": ["anotar"],
     "class": [1],
-    "entrie": []
+    "total": [1152]
   },
   "13": {
     "ref": ["optar"],
     "class": [1],
-    "entrie": []
+    "total": [72]
   },
   "14": {
     "ref": ["povoar"],
     "class": [1],
-    "entrie": []
+    "total": [264]
   },
   "15": {
     "ref": ["atrair"],
     "class": [1],
-    "entrie": []
+    "total": [22]
   },
   "16": {
     "ref": ["atribuir"],
     "class": [1],
-    "entrie": []
+    "total": [67]
   },
   "17": {
     "ref": ["arguir"],
     "class": [1],
-    "entrie": []
+    "total": [2]
   },
   "18": {
     "ref": ["pernoitar"],
     "class": [1],
-    "entrie": []
+    "total": [93]
   },
   "19": {
     "ref": ["endeusar"],
     "class": [1],
-    "entrie": []
+    "total": [8]
   },
   "20": {
     "ref": ["apoiar"],
     "class": [1],
-    "entrie": []
+    "total": [11]
   },
   "21": {
     "ref": ["enfeitar"],
     "class": [1],
-    "entrie": []
+    "total": [282]
   },
   "22": {
     "ref": ["poupar"],
     "class": [1],
-    "entrie": []
+    "total": [110]
   },
   "23": {
     "ref": ["enraizar"],
     "class": [1],
-    "entrie": []
+    "total": [33]
   },
   "24": {
     "ref": ["saudar"],
     "class": [1],
-    "entrie": []
+    "total": [30]
   },
   "25": {
     "ref": ["proibir"],
     "class": [1],
-    "entrie": []
+    "total": [2]
   },
   "26": {
     "ref": ["reunir"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "27": {
     "ref": ["mexer"],
     "class": [1],
-    "entrie": []
+    "total": [454]
   },
   "28": {
     "ref": ["colher"],
     "class": [1],
-    "entrie": []
+    "total": [89]
   },
   "29": {
     "ref": ["ferir"],
     "class": [1],
-    "entrie": []
+    "total": [88]
   },
   "30": {
     "ref": ["dormir"],
     "class": [1],
-    "entrie": []
+    "total": [13]
   },
   "31": {
     "ref": ["sentir"],
     "class": [1],
-    "entrie": []
+    "total": [15]
   },
   "32": {
     "ref": ["coerir"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "33": {
     "ref": ["atacar"],
     "class": [1],
-    "entrie": []
+    "total": [1006]
   },
   "34": {
     "ref": ["afagar"],
     "class": [1],
-    "entrie": []
+    "total": [514]
   },
   "35": {
     "ref": ["dançar"],
     "class": [1],
-    "entrie": []
+    "total": [353]
   },
   "36": {
     "ref": ["vencer"],
     "class": [1],
-    "entrie": []
+    "total": [369]
   },
   "37": {
     "ref": ["ressarcir"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "38": {
     "ref": ["abranger"],
     "class": [1],
-    "entrie": []
+    "total": [25]
   },
   "39": {
     "ref": ["atingir"],
     "class": [1],
-    "entrie": []
+    "total": [89]
   },
   "40": {
     "ref": ["erguer"],
     "class": [1],
-    "entrie": []
+    "total": [5]
   },
   "41": {
     "ref": ["distinguir"],
     "class": [1],
-    "entrie": []
+    "total": [10]
   },
   "42": {
     "ref": ["desejar"],
     "class": [1],
-    "entrie": []
+    "total": [346]
   },
   "43": {
     "ref": ["chegar"],
     "class": [1],
-    "entrie": []
+    "total": [10]
   },
   "44": {
     "ref": ["moer"],
     "class": [1],
-    "entrie": []
+    "total": [6]
   },
   "45": {
     "ref": ["agredir"],
     "class": [2],
-    "entrie": []
+    "total": [12]
   },
   "46": {
     "ref": ["emergir"],
     "class": [1],
-    "entrie": []
+    "total": [6]
   },
   "47": {
     "ref": ["explodir"],
     "class": [1],
-    "entrie": []
+    "total": [4]
   },
   "48": {
     "ref": ["polir"],
     "class": [2],
-    "entrie": []
+    "total": [6]
   },
   "49": {
     "ref": ["moscar"],
     "class": [2],
-    "entrie": []
+    "total": [1]
   },
   "50": {
     "ref": ["frigir"],
     "class": [2],
-    "entrie": []
+    "total": [1]
   },
   "51": {
     "ref": ["construir"],
     "class": [2],
-    "entrie": []
+    "total": [5]
   },
   "52": {
     "ref": ["sacudir"],
     "class": [2],
-    "entrie": []
+    "total": [16]
   },
   "53": {
     "ref": ["sumir"],
     "class": [2],
-    "entrie": []
+    "total": [2]
   },
   "54": {
     "ref": ["passear"],
     "class": [1],
-    "entrie": []
+    "total": [1103]
   },
   "55": {
     "ref": ["ansiar"],
     "class": [2],
-    "entrie": []
+    "total": [6]
   },
   "56": {
     "ref": ["estrear"],
     "class": [1],
-    "entrie": []
+    "total": [2]
   },
   "57": {
     "ref": ["averiguar"],
     "class": [1],
-    "entrie": []
+    "total": [14]
   },
   "58": {
     "ref": ["enxaguar"],
     "class": [1],
-    "entrie": []
+    "total": [13]
   },
   "59": {
     "ref": ["resfolegar"],
     "class": [1],
-    "entrie": []
+    "total": [4]
   },
   "60": {
     "ref": ["mobiliar"],
     "class": [1],
-    "entrie": []
+    "total": [2]
   },
   "61": {
     "ref": ["desmilinguir"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "62": {
     "ref": ["delinquir"],
     "class": [1],
-    "entrie": []
+    "total": [1]
   },
   "63": {
     "ref": ["medir"],
     "class": [2],
-    "entrie": []
+    "total": [10]
   },
   "64": {
     "ref": ["ouvir"],
     "class": [2],
-    "entrie": []
+    "total": [3]
   },
   "65": {
     "ref": ["parir"],
     "class": [2],
-    "entrie": []
+    "total": [2]
   },
   "66": {
     "ref": ["perder"],
     "class": [2],
-    "entrie": []
+    "total": [2]
   },
   "67": {
     "ref": ["prover"],
     "class": [2],
-    "entrie": []
+    "total": [2]
   },
   "68": {
     "ref": ["requerer"],
     "class": [2],
-    "entrie": []
+    "total": [1]
   },
   "69": {
     "ref": ["valer"],
     "class": [2],
-    "entrie": []
+    "total": [3]
   },
   "70": {
     "ref": ["caber"],
     "class": [2],
-    "entrie": []
+    "total": [3]
   },
   "71": {
     "ref": ["comprazer"],
     "class": [2],
-    "entrie": []
+    "total": [2]
   },
   "72": {
     "ref": ["dizer"],
     "class": [2],
-    "entrie": []
+    "total": [13]
   },
   "73": {
     "ref": ["estar"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [4]
   },
   "74": {
     "ref": ["fazer"],
     "class": [2],
-    "entrie": []
+    "total": [22]
   },
   "75": {
     "ref": ["haver"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "76": {
     "ref": ["poder"],
     "class": [2],
-    "entrie": []
+    "total": [1]
   },
   "77": {
     "ref": ["querer"],
     "class": [2],
-    "entrie": []
+    "total": [7]
   },
   "78": {
     "ref": ["saber"],
     "class": [2],
-    "entrie": []
+    "total": [4]
   },
   "79": {
     "ref": ["trazer"],
     "class": [2],
-    "entrie": []
+    "total": [1]
   },
   "80": {
     "ref": ["dar"],
     "class": [2],
-    "entrie": []
+    "total": [4]
   },
   "81": {
     "ref": ["ir"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "82": {
     "ref": ["ler", "crer"],
     "class": [2],
-    "entrie": []
+    "total": [6]
   },
   "83": {
     "ref": ["pôr"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "84": {
     "ref": ["propor"],
     "class": [2],
-    "entrie": []
+    "total": [40]
   },
   "85": {
     "ref": ["rir"],
     "class": [2],
-    "entrie": []
+    "total": [3]
   },
   "86": {
     "ref": ["ser"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "87": {
     "ref": ["ter"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "88": {
     "ref": ["manter"],
     "class": [2],
-    "entrie": []
+    "total": [10]
   },
   "89": {
     "ref": ["ver"],
     "class": [2],
-    "entrie": []
+    "total": [8]
   },
   "90": {
     "ref": ["vir"],
-    "class": [2,5],
-    "entrie": []
+    "class": [2, 5],
+    "total": [1]
   },
   "91": {
     "ref": ["provir"],
     "class": [2],
-    "entrie": []
+    "total": [16]
   },
   "92": {
     "ref": ["abolir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [13]
   },
   "93": {
     "ref": ["excelir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [5]
   },
   "94": {
     "ref": ["fremir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [29]
   },
   "95": {
     "ref": ["puir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [5]
   },
   "96": {
     "ref": ["retorquir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   },
   "97": {
     "ref": ["soer"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [2]
   },
   "98": {
     "ref": ["precaver"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [3]
   },
   "99": {
     "ref": ["reaver"],
-    "class": [2,3],
-    "entrie": []
+    "class": [2, 3],
+    "total": [1]
   },
   "100": {
     "ref": ["embair"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   },
   "101": {
     "ref": ["falir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [47]
   },
   "102": {
     "ref": ["aprazer"],
-    "class": [2,3],
-    "entrie": []
+    "class": [2, 3],
+    "total": [4]
   },
   "103": {
     "ref": ["concernir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   },
   "104": {
     "ref": ["doer"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [2]
   },
   "105": {
     "ref": ["grassar"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   },
   "106": {
     "ref": ["later"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   },
   "107": {
     "ref": ["precluir"],
-    "class": [1,3],
-    "entrie": []
+    "class": [1, 3],
+    "total": [1]
   }
 }

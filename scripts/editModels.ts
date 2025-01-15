@@ -1,75 +1,77 @@
 import fs from 'fs';
 import path from 'path';
 
-interface VerbEntry {
-  [verb: string]: number[];
-}
-
-interface VerbData {
-  ref: string[];
-  entries: string[];
-}
-
 interface ModelsData {
-  Regular: {
-    [model: string]: VerbData;
+  [model: string]: {
+    ref: string[];
+    class: number[];
+    total: number[];
   };
 }
 
-interface RulesByTermData {
-  [key: string]: {
-    [subKey: string]: {
-      verbs?: {
-        entries: VerbEntry;
-      };
-    };
+interface AllVerbsData {
+  [verb: string]: {
+    verb: string[];
+    model: number[];
+    ending: string[];
+    only_reflexive: boolean[];
+    multiple_conj: boolean[];
   };
 }
 
 async function updateModelsJson() {
   const modelsPath = path.join(process.cwd(), 'src/json/models.json');
-  const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
+  const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 
   try {
-    const [modelsDataStr, rulesByTermDataStr] = await Promise.all([
+    const [modelsDataStr, allVerbsDataStr] = await Promise.all([
       fs.promises.readFile(modelsPath, 'utf8'),
-      fs.promises.readFile(rulesByTermPath, 'utf8'),
+      fs.promises.readFile(allVerbsPath, 'utf8'),
     ]);
 
     const modelsData: ModelsData = JSON.parse(modelsDataStr);
-    const rulesByTermData: RulesByTermData = JSON.parse(rulesByTermDataStr);
+    const allVerbsData: AllVerbsData = JSON.parse(allVerbsDataStr);
 
-    // Iterar sobre os modelos em models.json
-    for (const [modelKey, modelData] of Object.entries(modelsData.Regular)) {
-      const allEntries: string[] = [];
+    let totalSumModels = 0; 
+    let totalSumClass1 = 0; 
+    let totalSumClass2 = 0; 
+    const totalAllVerbs = Object.keys(allVerbsData).length; // Total de entradas em allVerbs.json
 
-      // Buscar todos os verbos em rulesByTermData que referenciam o modelo atual
-      for (const mainKeyData of Object.values(rulesByTermData)) {
-        for (const subKeyData of Object.values(mainKeyData)) {
-          if (subKeyData.verbs?.entries) {
-            const verbs = Object.keys(subKeyData.verbs.entries).filter(
-              verb => subKeyData.verbs?.entries[verb]?.includes(Number(modelKey))
-            );
-            allEntries.push(...verbs);
-          }
-        }
+    for (const [modelKey, modelData] of Object.entries(modelsData)) {
+      if ('entries' in modelData) {
+        delete modelData.entries;
       }
 
-      // Atualizar o modelo com os verbos encontrados
-      modelsData.Regular[modelKey] = {
-        ref: modelData.ref,
-        entries: allEntries,
-      };
+      const totalForModel = Object.values(allVerbsData).filter(verbData =>
+        verbData.model.includes(Number(modelKey))
+      ).length;
+
+      modelData.total = [totalForModel]; 
+      totalSumModels += totalForModel; 
+
+      if (modelData.class.includes(1)) {
+        totalSumClass1 += totalForModel;
+      }
+      if (modelData.class.includes(2)) {
+        totalSumClass2 += totalForModel;
+      }
     }
 
-    // Salvar o arquivo atualizado
     await fs.promises.writeFile(
       modelsPath,
-      JSON.stringify(modelsData, null, 2),
+      JSON.stringify(modelsData, null, 2).replace(
+        /\[\s*([\s\S]*?)\s*\]/g,
+        (match, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
+      ),
       'utf8'
     );
 
     console.log('Arquivo models.json atualizado com sucesso!');
+    console.log('Total de entradas em allVerbs.json:', totalAllVerbs);
+    console.log('- não possuem conjugação estabelecida:', totalAllVerbs - (totalSumClass1 + totalSumClass2));
+    console.log('- possuem conjugação estabelecida:', totalSumModels);
+    console.log('-- regulares:', totalSumClass1);
+    console.log('-- irregulares:', totalSumClass2);
   } catch (error) {
     console.error('Erro ao atualizar o arquivo models.json:', error);
   }

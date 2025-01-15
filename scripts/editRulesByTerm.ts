@@ -11,6 +11,14 @@ interface VerbData {
   pronominal: boolean[];
 }
 
+interface ModelsData {
+  [model: string]: {
+    ref: string[];
+    class: number[];
+    total: number[];
+  };
+}
+
 interface RulesByTermData {
   [key: string]: {
     [subKey: string]: {
@@ -26,18 +34,21 @@ interface RulesByTermData {
 
 const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
+const modelsPath = path.join(process.cwd(), 'src/json/models.json');
 
 async function addVerbsToJson() {
   
   try {
     
-    const [allVerbsDataStr, rulesByTermDataStr] = await Promise.all([
+    const [allVerbsDataStr, rulesByTermDataStr, modelsDataStr] = await Promise.all([
       fs.promises.readFile(allVerbsPath, 'utf8'),
-      fs.promises.readFile(rulesByTermPath, 'utf8')
+      fs.promises.readFile(rulesByTermPath, 'utf8'),
+      fs.promises.readFile(modelsPath, 'utf8')
     ]);
 
     const allVerbsData: { [key: string]: VerbData } = JSON.parse(allVerbsDataStr);
     const rulesByTermData: RulesByTermData = JSON.parse(rulesByTermDataStr);
+    const modelsData: ModelsData = JSON.parse(modelsDataStr);
 
     const mainKeys = Object.keys(rulesByTermData);
     const totalKeys = mainKeys.length;
@@ -61,7 +72,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["upor"]
+    let specificMainKey: string | string[] | null = null
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -91,11 +102,11 @@ async function addVerbsToJson() {
 
       if (!rulesByTermData[mainKey]["..."]) {
         rulesByTermData[mainKey]["..."] = {
+          type: [1],
           note: {
             plain: ["Terminação não estabelecida"],
             ref: {}
           },
-          type: [1],
           abundance1: {},
           rules: {},
           test: [false]
@@ -150,6 +161,20 @@ async function addVerbsToJson() {
           .filter((value, index, self) => self.indexOf(value) === index);
 
         dataChanged = true;
+
+        const allClassesForModels: number[] = [];
+
+        for (const model of subKeyData.verbs.models) {
+          if (modelsData[model]) {
+            allClassesForModels.push(...modelsData[model].class);
+          }
+        }
+      
+        subKeyData.type = subKeyData.abundance1 && Object.entries(subKeyData.abundance1).length > 0
+        ? Array.from(new Set([...allClassesForModels, 4]))
+        : Array.from(new Set(allClassesForModels)); 
+        const reorderedSubKeyData = { type: subKeyData.type, ...subKeyData };
+        rulesByTermData[mainKey][subKey] = reorderedSubKeyData;
 
         if (dataChanged) {
           await saveToFile(rulesByTermData, rulesByTermPath);
