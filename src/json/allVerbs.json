@@ -97595,7 +97595,7 @@
   },
   "mascabar": {
     "verb": ["mascabar"],
-    "model": [1],
+    "model": [],
     "ending": ["abar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
