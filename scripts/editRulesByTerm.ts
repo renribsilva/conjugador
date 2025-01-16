@@ -71,7 +71,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["aguar"]
+    let specificMainKey: string | string[] | null = ["ançar"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -180,6 +180,9 @@ async function addVerbsToJson() {
           await saveToFile(rulesByTermData, rulesByTermPath);
         }
 
+        if (subKey === "..." && Object.entries(subKeyData.verbs.entries).length === 0) {
+          subKeyData.note.plain = []
+        }
       }
     } 
 

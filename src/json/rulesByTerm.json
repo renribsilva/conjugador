@@ -3300,7 +3300,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -3348,7 +3348,7 @@
     }
   },
   "ailar": {
-    "bailar": {
+    "...": {
       "type": [1],
       "note": {
         "plain": ["'Bailar' é o único verbo da língua portuguesa brasileira terminado em 'ailar'¹"],
@@ -3366,21 +3366,6 @@
         "entries": {
           "bailar": [1]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -3837,7 +3822,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -4048,7 +4033,7 @@
       "test": [false],
       "verbs": {
         "total": 130,
-        "models": [1, 4, 33],
+        "models": [1, 4],
         "entries": {
           "abadalar": [1],
           "abagualar": [4],
@@ -4123,7 +4108,7 @@
           "emboçalar": [],
           "embuçalar": [1],
           "empalar": [1],
-          "encalar": [33],
+          "encalar": [],
           "encasalar": [],
           "encavalar": [1],
           "encostalar": [1],
@@ -4215,7 +4200,7 @@
           "decalcar": [33],
           "desfalcar": [33],
           "desrecalcar": [],
-          "encalcar": [],
+          "encalcar": [33],
           "esfalcar": [],
           "falcar": [],
           "recalcar": [33],
@@ -4323,7 +4308,7 @@
       "test": [false],
       "verbs": {
         "total": 26,
-        "models": [1, 2, 4],
+        "models": [1, 4],
         "entries": {
           "agrinaldar": [1],
           "alcaldar": [],
@@ -4331,7 +4316,7 @@
           "arrabaldar": [1],
           "baldar": [1],
           "charabaldar": [],
-          "desalealdar": [2],
+          "desalealdar": [1],
           "desengrinaldar": [1],
           "desfraldar": [1],
           "desgrinaldar": [1],
@@ -4359,8 +4344,11 @@
     "galdir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
-        "ref": {}
+        "plain": ["'Galdir' e 'gualdir' são conjugados de preferência somente nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não se encontra no radical¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -4409,7 +4397,7 @@
     "gualdir": {
       "type": [1, 3],
       "note": {
-        "plain": ["'Gualdir' (comer apressadamente; engolir) é conjugado de preferência somente nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não se encontra no radical¹."],
+        "plain": ["'Galdir' e 'gualdir' são conjugados de preferência somente nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -4462,8 +4450,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
-        "ref": {}
+        "plain": ["O verbo 'esbaldir' é regular¹"],
+        "ref": {
+          "3": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -4481,7 +4471,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -4500,7 +4490,7 @@
     "valer": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -4851,7 +4841,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -4869,7 +4859,7 @@
     "encalir": {
       "type": [1],
       "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, é não defectivo. Mas 'combalir' e 'falir' sim, e apresentam defectividade distintas¹"],
+        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir' que, segundo o Dicionário Houaiss, tem a conjugação completa. Mas 'combalir' e 'falir' sim, e apresentam defectividade distintas¹"],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -5502,7 +5492,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Os poucos verbos terminados em 'amir' são defectivos¹"],
+        "plain": ["O verbo 'bramir' e seus derivados são defectivos¹"],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -5877,7 +5867,7 @@
       "test": [false],
       "verbs": {
         "total": 43,
-        "models": [35, 36],
+        "models": [35],
         "entries": {
           "abalançar": [35],
           "acarançar": [35],
@@ -5904,7 +5894,7 @@
           "enrançar": [35],
           "entrançar": [35],
           "esbalançar": [],
-          "escançar": [36],
+          "escançar": [35],
           "escarvançar": [],
           "esfrançar": [35],
           "esperançar": [35],
@@ -7002,7 +6992,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -7046,7 +7036,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -7393,7 +7383,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -7591,7 +7581,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8008,7 +7998,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8309,7 +8299,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8579,7 +8569,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8674,7 +8664,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8894,7 +8884,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -8987,7 +8977,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -9352,7 +9342,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -10294,7 +10284,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -10342,7 +10332,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -10869,7 +10859,7 @@
     "haver": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -11117,7 +11107,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -11392,7 +11382,7 @@
     "...fazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -11491,7 +11481,7 @@
     "tumefazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -11592,7 +11582,7 @@
     "fazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -12229,7 +12219,7 @@
     "...": {
       "type": [2, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -16081,7 +16071,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -18757,7 +18747,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -19536,7 +19526,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -20511,7 +20501,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -20852,7 +20842,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -20930,7 +20920,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -22752,7 +22742,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -23063,7 +23053,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -23490,7 +23480,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -23572,7 +23562,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -23678,7 +23668,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -25630,7 +25620,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -28053,7 +28043,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -28548,7 +28538,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -35114,7 +35104,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -35143,7 +35133,7 @@
     "dizer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -35655,7 +35645,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -35743,7 +35733,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -35962,7 +35952,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -36362,7 +36352,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -36565,7 +36555,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -36582,7 +36572,7 @@
     "soer": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -36762,7 +36752,7 @@
     "...doer": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -38077,7 +38067,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -39768,7 +39758,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -39882,7 +39872,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -41029,7 +41019,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -41919,7 +41909,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -41937,7 +41927,7 @@
     "sorrir": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -42246,7 +42236,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -42748,7 +42738,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -43379,7 +43369,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -43781,7 +43771,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -44150,7 +44140,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -44535,7 +44525,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -45232,7 +45222,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -45604,7 +45594,7 @@
     "concluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45663,7 +45653,7 @@
     "diluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45722,7 +45712,7 @@
     "excluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45781,7 +45771,7 @@
     "incluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45840,7 +45830,7 @@
     "possuir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45899,7 +45889,7 @@
     "prostituir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -45958,7 +45948,7 @@
     "recluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -46382,7 +46372,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -47233,7 +47223,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -49045,7 +49035,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51252,7 +51242,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51271,7 +51261,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51294,7 +51284,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51314,7 +51304,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51334,7 +51324,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51353,7 +51343,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51372,7 +51362,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51393,7 +51383,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51412,7 +51402,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51431,7 +51421,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51450,7 +51440,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51470,7 +51460,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51490,7 +51480,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51513,7 +51503,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51532,7 +51522,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51551,7 +51541,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51673,7 +51663,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51699,7 +51689,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51722,7 +51712,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51741,7 +51731,7 @@
     "hirtar": {
       "type": [1, 4],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {
@@ -51769,7 +51759,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51786,7 +51776,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51805,7 +51795,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51825,7 +51815,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51844,7 +51834,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51863,7 +51853,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51882,7 +51872,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51901,7 +51891,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51923,7 +51913,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51942,7 +51932,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -51961,7 +51951,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52016,7 +52006,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52035,7 +52025,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52054,7 +52044,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52074,7 +52064,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52155,7 +52145,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52172,7 +52162,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52191,7 +52181,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52210,7 +52200,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52231,7 +52221,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52263,7 +52253,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52282,7 +52272,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52302,7 +52292,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52327,7 +52317,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52347,7 +52337,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52366,7 +52356,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52385,7 +52375,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52407,7 +52397,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52428,7 +52418,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52448,7 +52438,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52468,7 +52458,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52487,7 +52477,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52507,7 +52497,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52526,7 +52516,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52545,7 +52535,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52564,7 +52554,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -52583,7 +52573,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54268,7 +54258,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54285,7 +54275,7 @@
     "moquir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54335,7 +54325,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54354,7 +54344,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54406,7 +54396,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54459,7 +54449,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54512,7 +54502,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54529,7 +54519,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54548,7 +54538,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54567,7 +54557,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54588,7 +54578,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54661,7 +54651,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54678,7 +54668,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54697,7 +54687,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54717,7 +54707,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54765,7 +54755,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54784,7 +54774,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54803,7 +54793,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54823,7 +54813,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54844,7 +54834,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54865,7 +54855,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54895,7 +54885,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54914,7 +54904,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54933,7 +54923,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54952,7 +54942,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54971,7 +54961,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -54990,7 +54980,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55009,7 +54999,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55028,7 +55018,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55047,7 +55037,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55066,7 +55056,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55085,7 +55075,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55104,7 +55094,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55123,7 +55113,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55142,7 +55132,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55161,7 +55151,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55180,7 +55170,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55199,7 +55189,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55218,7 +55208,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55237,7 +55227,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55256,7 +55246,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55275,7 +55265,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55294,7 +55284,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55313,7 +55303,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55365,7 +55355,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55384,7 +55374,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55403,7 +55393,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55422,7 +55412,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55441,7 +55431,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55460,7 +55450,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55479,7 +55469,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55498,7 +55488,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55518,7 +55508,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55537,7 +55527,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55556,7 +55546,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55575,7 +55565,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55594,7 +55584,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55613,7 +55603,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55632,7 +55622,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55651,7 +55641,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55670,7 +55660,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55689,7 +55679,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55708,7 +55698,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55727,7 +55717,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55746,7 +55736,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55765,7 +55755,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55786,7 +55776,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55805,7 +55795,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55824,7 +55814,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55843,7 +55833,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55862,7 +55852,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55881,7 +55871,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -55928,7 +55918,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -56011,7 +56001,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -56241,7 +56231,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},

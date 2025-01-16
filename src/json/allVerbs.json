@@ -41189,7 +41189,7 @@
   },
   "desalealdar": {
     "verb": ["desalealdar"],
-    "model": [2],
+    "model": [1],
     "ending": ["aldar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -60320,7 +60320,7 @@
   },
   "encalar": {
     "verb": ["encalar"],
-    "model": [33],
+    "model": [],
     "ending": ["alar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -60334,7 +60334,7 @@
   },
   "encalcar": {
     "verb": ["encalcar"],
-    "model": [],
+    "model": [33],
     "ending": ["alcar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -71807,7 +71807,7 @@
   },
   "escançar": {
     "verb": ["escançar"],
-    "model": [36],
+    "model": [35],
     "ending": ["ançar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
