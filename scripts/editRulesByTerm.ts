@@ -59,7 +59,7 @@ async function addVerbsToJson() {
       .filter(([_, value]) => value.ending.length === 0)
       .map(([key]) => key);
 
-    console.log(
+    console.log (
       invalidVerbs.length === 0
         ? '- todos os verbos possuem valor na propriedade ending'
         : `- verbos sem terminação: ${invalidVerbs.join(', ')}`

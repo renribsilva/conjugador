@@ -63,11 +63,11 @@ async function updateModelsJson() {
       }
     }
 
-    await fs.promises.writeFile(
+    await fs.promises.writeFile (
       modelsPath,
       JSON.stringify(modelsData, null, 2).replace(
         /\[\s*([\s\S]*?)\s*\]/g,
-        (match, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
+        (_, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
       ),
       'utf8'
     );
