@@ -107,7 +107,7 @@ export default async function processVerbsFile(): Promise<void> {
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs
       .map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)])
-      .filter(verb => /acar$/.test(verb));
+      // .filter(verb => /acar$/.test(verb));
 
     console.log(`- quantidade de verbos após remoção de duplicados: ${finalVerbs.length}`)
 

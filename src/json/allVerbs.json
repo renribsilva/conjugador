@@ -31886,7 +31886,7 @@
   },
   "circunvagar": {
     "verb": ["circunvagar"],
-    "model": [1],
+    "model": [34],
     "ending": ["agar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -112578,7 +112578,7 @@
     "model": [97],
     "ending": ["aer"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "rafar": {
     "verb": ["rafar"],
