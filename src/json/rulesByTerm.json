@@ -18894,11 +18894,23 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'ençar' são regulares, mas têm o 'ç' substituído por 'c' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 4,
