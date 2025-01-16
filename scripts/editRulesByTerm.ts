@@ -71,7 +71,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = null
+    let specificMainKey: string | string[] | null = ["ecer", "egrir","igrar","escer","igrir"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -103,12 +103,11 @@ async function addVerbsToJson() {
         rulesByTermData[mainKey]["..."] = {
           type: [1],
           note: {
-            plain: ["Terminação não estabelecida"],
+            plain: [],
             ref: {}
           },
           abundance1: {},
-          rules: {},
-          test: [false]
+          canonical1: {}
         };
 
         dataChanged = true;

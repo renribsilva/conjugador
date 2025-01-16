@@ -51774,7 +51774,7 @@
   "despor": {
     "verb": ["despor"],
     "model": [],
-    "ending": ["por"],
+    "ending": ["espor"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -53531,7 +53531,7 @@
   "desver": {
     "verb": ["desver"],
     "model": [],
-    "ending": ["ver"],
+    "ending": ["esver"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -68496,14 +68496,14 @@
   },
   "entressacar": {
     "verb": ["entressacar"],
-    "model": [1],
+    "model": [],
     "ending": ["acar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "entressachar": {
     "verb": ["entressachar"],
-    "model": [],
+    "model": [1],
     "ending": ["achar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -97595,7 +97595,7 @@
   },
   "mascabar": {
     "verb": ["mascabar"],
-    "model": [],
+    "model": [1],
     "ending": ["abar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -117422,7 +117422,7 @@
     "model": [93],
     "ending": ["elir"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "relocalizar": {
     "verb": ["relocalizar"],
@@ -119011,7 +119011,7 @@
     "model": [98],
     "ending": ["rer"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "rerranger": {
     "verb": ["rerranger"],
@@ -131658,7 +131658,7 @@
   "traspor": {
     "verb": ["traspor"],
     "model": [],
-    "ending": ["por"],
+    "ending": ["aspor"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -132281,7 +132281,7 @@
   "trespor": {
     "verb": ["trespor"],
     "model": [],
-    "ending": ["por"],
+    "ending": ["espor"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -132323,7 +132323,7 @@
   "tresver": {
     "verb": ["tresver"],
     "model": [],
-    "ending": ["ver"],
+    "ending": ["esver"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },

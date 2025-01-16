@@ -107,7 +107,7 @@ export default async function processVerbsFile(): Promise<void> {
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs
       .map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)])
-      // .filter(verb => /egar$/.test(verb));
+      .filter(verb => /acar$/.test(verb));
 
     console.log(`- quantidade de verbos após remoção de duplicados: ${finalVerbs.length}`)
 
@@ -130,9 +130,9 @@ export default async function processVerbsFile(): Promise<void> {
     
       const processBatch = async (batch: string[], startIndex: number) => {
         
-        const useCustomVerbs = true;
+        const useCustomVerbs = false;
         if (useCustomVerbs) {
-          batch = ["anediar", "assediar", "atediar", "desarremediar", "desatediar",
+          batch = ["sotopor", "assediar", "atediar", "desarremediar", "desatediar",
              "desentediar", "desremediar", "entediar", "obsediar", "sediar", "tragediar"];
         }
         

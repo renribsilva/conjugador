@@ -56,7 +56,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -73,8 +73,10 @@
     "dar": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["'Dar' é um verbo monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -135,7 +137,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -254,7 +256,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -271,8 +273,10 @@
     "ler": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'ler' é monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -322,7 +326,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -336,10 +340,10 @@
     }
   },
   "por": {
-    "...por": {
+    "soto-pôr": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -354,7 +358,7 @@
             "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
             "im1": ["p3", "p4", "p5", "p6"],
             "im2": ["p2", "p3", "p4", "p5", "p6"],
-            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p2", "p4", "p5", "p6"],
             "gd": ["n"],
             "pa": ["n"]
           },
@@ -370,7 +374,8 @@
             "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
           },
           "ô": {
-            "pt1_ind": ["p3"]
+            "pt1_ind": ["p3"],
+            "inf": ["p1", "p3"]
           },
           "ú": {
             "pt2_ind": ["p4", "p5"]
@@ -427,20 +432,17 @@
       },
       "test": [false],
       "verbs": {
-        "total": 4,
+        "total": 1,
         "models": [84],
         "entries": {
-          "despor": [],
-          "soto-por": [84],
-          "traspor": [],
-          "trespor": []
+          "soto-por": [84]
         }
       }
     },
     "pôr": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -539,7 +541,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -556,7 +558,7 @@
     "rer": {
       "type": [1, 3],
       "note": {
-        "plain": ["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'. Aqui, optou-se pela primeira forma."],
+        "plain": ["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ],
@@ -601,6 +603,40 @@
           }
         }
       },
+      "canonical2": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -613,7 +649,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -627,52 +663,13 @@
     }
   },
   "rir": {
-    "...rir": {
-      "type": [1],
-      "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p5", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "a": {
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "em": {
-            "pr_ind": ["p6"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
     "rir": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'rir' é monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -714,7 +711,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -731,8 +728,10 @@
     "ser": {
       "type": [2, 5],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'ser' é tido como anômalo devido a sua acentuada irregularidade¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -823,7 +822,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -837,104 +836,13 @@
     }
   },
   "ter": {
-    "...ter": {
-      "type": [1],
-      "note": {
-        "plain": ["As conjugações dos verbos derivados de 'ter' diferem da do verbo 'ter' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
-        "ref": {
-          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "e": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "ê": {
-            "pr_ind": ["p6"]
-          },
-          "i": {
-            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "é": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          }
-        },
-        "MT": {
-          "nh": {
-            "pr_ind": ["p1"]
-          },
-          "n": {
-            "pr_ind": ["p2", "p5"],
-            "im1": ["p5"]
-          },
-          "m": {
-            "pr_ind": ["p3"],
-            "im1": ["p2"]
-          },
-          "ve": {
-            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "nha": {
-            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "nhe": {
-            "pt2_ind": ["p5"]
-          },
-          "vera": {
-            "pt3_ind": ["p1", "p2", "p3", "p6"]
-          },
-          "véra": {
-            "pt3_ind": ["p4"]
-          },
-          "vére": {
-            "pt3_ind": ["p5"]
-          },
-          "vesse": {
-            "pt_sub": ["p1", "p2", "p3", "p6"]
-          },
-          "vésse": {
-            "pt_sub": ["p4", "p5"]
-          },
-          "ver": {
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "": {
-            "pt1_ind": ["p1", "p3"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
     "ter": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'ter' é monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -1022,7 +930,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -1036,76 +944,13 @@
     }
   },
   "ver": {
-    "...ver": {
-      "type": [1],
-      "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "e": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "ê": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "i": {
-            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "í": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
-          }
-        },
-        "MT": {
-          "sto": {
-            "pa": ["n"]
-          },
-          "j": {
-            "pr_ind": ["p1"]
-          },
-          "ja": {
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "em": {
-            "pr_ind": ["p6"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 2,
-        "models": [],
-        "entries": {
-          "desver": [],
-          "tresver": []
-        }
-      }
-    },
     "ver": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'ver' é monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -1168,7 +1013,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -1182,114 +1027,13 @@
     }
   },
   "vir": {
-    "...vir": {
-      "type": [1],
-      "note": {
-        "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
-        "ref": {
-          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "e": {
-            "pr_ind": ["p1"],
-            "pt1_ind": ["p3"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "i": {
-            "pr_ind": ["p5"],
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"],
-            "im1": ["p5"]
-          },
-          "ê": {
-            "pr_ind": ["p6"]
-          },
-          "é": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          }
-        },
-        "MT": {
-          "ndo": {
-            "pa": ["n"]
-          },
-          "nh": {
-            "pr_ind": ["p1"]
-          },
-          "n": {
-            "pr_ind": ["p2", "p5"],
-            "im1": ["p5"]
-          },
-          "e": {
-            "pt1_ind": ["p2", "p4", "p5", "p6"]
-          },
-          "i": {
-            "pt1_ind": ["p3"]
-          },
-          "nha": {
-            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "nhe": {
-            "pt2_ind": ["p5"]
-          },
-          "era": {
-            "pt3_ind": ["p1", "p2", "p3", "p6"]
-          },
-          "éra": {
-            "pt3_ind": ["p4"]
-          },
-          "ére": {
-            "pt3_ind": ["p5"]
-          },
-          "esse": {
-            "pt_sub": ["p1", "p2", "p3", "p6"]
-          },
-          "ésse": {
-            "pt_sub": ["p4", "p5"]
-          },
-          "er": {
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "m": {
-            "pr_ind": ["p3"],
-            "im1": ["p2"]
-          },
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "im": {
-            "pt1_ind": ["p1"]
-          },
-          "o": {
-            "pt1_ind": ["p3"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
     "vir": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
+        "plain": ["O verbo 'vir' é monossilábico e irregular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -1387,7 +1131,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -1452,7 +1196,7 @@
     "...caber": {
       "type": [2],
       "note": {
-        "plain": ["Alguns gramáticos e dicionaristas defendem que o verbo 'caber' e seus derivados não podem ser empregados nas formas imperativas¹, em que pese a sua conjugação em quase todas as obras de referência."],
+        "plain": ["Há dois grupos de verbos terminados em 'aber': 'caber' e seus derivados; 'saber' e seus derivados. Quanto a 'caber', alguns gramáticos e dicionaristas defendem que ele não pode ser empregado nas formas imperativas¹, em que pese a sua conjugação completa em quase todas as obras de referência."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1501,7 +1245,7 @@
     "caber": {
       "type": [2],
       "note": {
-        "plain": ["Alguns gramáticos e dicionaristas defendem que o verbo 'caber' e seus derivados não podem ser empregados nas formas imperativas¹, em que pese a sua conjugação em quase todas as obras de referência."],
+        "plain": ["Há dois grupos de verbos terminados em 'aber': 'caber' e seus derivados; 'saber' e seus derivados. Quanto a 'caber', alguns gramáticos e dicionaristas defendem que ele não pode ser empregado nas formas imperativas¹, em que pese a sua conjugação completa em quase todas as obras de referência."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1549,7 +1293,7 @@
     "...saber": {
       "type": [2],
       "note": {
-        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹. Por essa razão, este conjugador apresenta ambas as formas de conjugação."],
+        "plain": ["Há dois grupos de verbos terminados em 'aber': 'caber' e seus derivados; 'saber' e seus derivados. Quanto a 'saber', deve-se apenas pontuar que, quando usados na acepção de 'ter o sabor de', ele apresenta defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹ as formas do Imperativo. Por essa razão, este conjugador apresenta ambas as formas de conjugação."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1648,7 +1392,7 @@
     "saber": {
       "type": [2],
       "note": {
-        "plain": ["Quando usados na acepção de 'ter o sabor de', o verbo 'saber' e seus derivados apresentam defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹. Por essa razão, este conjugador apresentas ambas as formas de conjugação."],
+        "plain": ["Há dois grupos de verbos terminados em 'aber': 'caber' e seus derivados; 'saber' e seus derivados. Quanto a 'saber', deve-se apenas pontuar que, quando usados na acepção de 'ter o sabor de', ele apresenta defectividade na 1ª pessoa do singular do Presente do Indicativo, mas possui todas as formas do presente do Subjuntivo¹ as formas do Imperativo. Por essa razão, este conjugador apresenta ambas as formas de conjugação."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -1745,7 +1489,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": [],
         "ref": {}
       },
       "abundance1": {},
@@ -1762,7 +1506,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'abir' são regulares"],
+        "plain": ["'Desenxabir' é o único verbo cuja terminação é 'abir'. A sua conjugação é regular¹"],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -1781,29 +1525,14 @@
     }
   },
   "abrir": {
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": ["Terminação não estabelecida"],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [],
-        "entries": {
-          "escabrir": []
-        }
-      }
-    },
     "...abrir": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '...abrido' no particípio, mas sim '...aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário online Houaiss²."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ]
         }
       },
@@ -1841,9 +1570,11 @@
     "abrir": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'abrir' são regulares, com exceção do particípio. Por exemplo, o particípio do verbo 'abrir' não segue a forma regular 'abrido', mas sim 'aberto'. Essa exceção também se aplica aos derivados de 'abrir'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário Houaiss."],
+        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '...abrido' no particípio, mas sim '...aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'malcriado', de acordo com o dicionário online Houaiss²."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ]
         }
       },
@@ -1873,6 +1604,23 @@
           "abrir": [3]
         }
       }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência utilizada na construção deste conjugador, razão pela qual ela será estruturada com o paradigma de conjugação regular"],
+        "ref": {}
+      },
+      "abundance1": {},
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [],
+        "entries": {
+          "escabrir": []
+        }
+      }
     }
   },
   "acar": {
@@ -1899,7 +1647,7 @@
       "test": [false],
       "verbs": {
         "total": 67,
-        "models": [33, 1],
+        "models": [33],
         "entries": {
           "abarracar": [33],
           "abasbacar": [33],
@@ -1945,7 +1693,7 @@
           "enfracar": [33],
           "ensacar": [33],
           "ensovacar": [33],
-          "entressacar": [1],
+          "entressacar": [],
           "envelhacar": [33],
           "esbabacar": [33],
           "esburacar": [33],
@@ -2196,7 +1944,7 @@
           "encachar": [1],
           "encapachar": [1],
           "entachar": [],
-          "entressachar": [],
+          "entressachar": [1],
           "esbagachar": [1],
           "esborrachar": [1],
           "escachar": [1],
@@ -2279,7 +2027,7 @@
     "contactar": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -3291,7 +3039,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -3481,7 +3229,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -3552,7 +3300,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -4018,7 +3766,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -4540,7 +4288,7 @@
     "galdir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -4643,7 +4391,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -4662,7 +4410,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -4681,7 +4429,7 @@
     "valer": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -5032,7 +4780,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -7183,7 +6931,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -7227,7 +6975,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -7574,7 +7322,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -7772,7 +7520,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -8189,7 +7937,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -8490,7 +8238,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -8760,7 +8508,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -8855,7 +8603,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -9075,7 +8823,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -9168,7 +8916,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -9533,7 +9281,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -10475,7 +10223,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -10523,7 +10271,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -11050,7 +10798,7 @@
     "haver": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -11298,7 +11046,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -11573,7 +11321,7 @@
     "...fazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -11672,7 +11420,7 @@
     "tumefazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -11773,7 +11521,7 @@
     "fazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -12410,7 +12158,7 @@
     "...": {
       "type": [2, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -14284,6 +14032,98 @@
         }
       }
     },
+    "denegrecer": {
+      "type": [1],
+      "note": {
+        "plain": ["Este conjugador não irá conjuga o verbo 'denegrecer'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
+        "ref": {
+          "1": ["Pombo R. Dicionário de sinônimos da língua portuguesa. 2. ed. Rio de Janeiro: Academia Brasileira de Letras, 2011."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [27, 36],
+        "entries": {
+          "denegrecer": [27, 36]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -14306,7 +14146,7 @@
       },
       "test": [false],
       "verbs": {
-        "total": 356,
+        "total": 355,
         "models": [27, 36, 33, 11],
         "entries": {
           "abalorecer": [],
@@ -14370,7 +14210,6 @@
           "conhecer": [27, 36],
           "cooferecer": [27, 36],
           "coudecer": [],
-          "denegrecer": [27, 36],
           "deperecer": [27, 36],
           "desabastecer": [27, 36],
           "desaborrecer": [27, 36],
@@ -16171,7 +16010,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -18088,7 +17927,7 @@
     "relir": {
       "type": [1, 3],
       "note": {
-        "plain": ["O verbo 'relir' (mesmo que rir) é uma forma antiga não conjugável pelos padrões atuais¹. No entanto, há obras de referência que o conjugam, como o Dicionário Houaiss de Conjugação de Verbos², e outros que não o conjugam, como o Dicionário Online Houiass³."],
+        "plain": ["O verbo 'relir' (m.q. rir) é uma forma antiga não conjugável pelos padrões atuais¹. No entanto, há obras de referência que o conjugam pelo paradigma de conjugação do verbo 'excelir', como o Dicionário Houaiss de Conjugação de Verbos², e outros que não o conjugam em nenhuma forma, como o Dicionário Online Houiass³."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ],
@@ -18129,6 +17968,80 @@
             "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
             "im1": ["p3", "p4", "p6"],
             "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "canonical2": {
+        "RAD": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
           }
         }
       },
@@ -18773,7 +18686,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -19552,7 +19465,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -20527,7 +20440,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -20868,7 +20781,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -20946,7 +20859,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -22768,7 +22681,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -23079,7 +22992,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -23218,6 +23131,98 @@
     }
   },
   "escer": {
+    "denigrescer": {
+      "type": [1],
+      "note": {
+        "plain": ["Este conjugador não irá conjuga o verbo 'denigrescer'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
+        "ref": {
+          "1": ["Pombo R. Dicionário de sinônimos da língua portuguesa. 2. ed. Rio de Janeiro: Academia Brasileira de Letras, 2011."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [27, 36],
+        "entries": {
+          "denigrescer": [27, 36]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -23240,7 +23245,7 @@
       },
       "test": [false],
       "verbs": {
-        "total": 88,
+        "total": 87,
         "models": [27, 36],
         "entries": {
           "acaulescer": [],
@@ -23264,7 +23269,6 @@
           "decrescer": [27, 36],
           "defervescer": [27, 36],
           "deliquescer": [27, 36],
-          "denigrescer": [27, 36],
           "descer": [27, 36],
           "desengravescer": [27, 36],
           "desenrubescer": [27, 36],
@@ -23415,7 +23419,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -23497,7 +23501,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -23603,7 +23607,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -25555,7 +25559,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -27978,7 +27982,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -28473,7 +28477,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -35039,7 +35043,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -35068,7 +35072,7 @@
     "dizer": {
       "type": [2, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -35580,7 +35584,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -35668,7 +35672,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -35887,7 +35891,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -36287,7 +36291,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -36490,7 +36494,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -36507,7 +36511,7 @@
     "soer": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -36687,7 +36691,7 @@
     "...doer": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -38002,7 +38006,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -39693,7 +39697,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -39807,7 +39811,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -40954,7 +40958,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -41844,7 +41848,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -41862,7 +41866,7 @@
     "sorrir": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -42171,7 +42175,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -42673,7 +42677,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -43304,7 +43308,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -43706,7 +43710,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -44075,7 +44079,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -44460,7 +44464,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -45157,7 +45161,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -45529,7 +45533,7 @@
     "concluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45588,7 +45592,7 @@
     "diluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45647,7 +45651,7 @@
     "excluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45706,7 +45710,7 @@
     "incluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45765,7 +45769,7 @@
     "possuir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45824,7 +45828,7 @@
     "prostituir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -45883,7 +45887,7 @@
     "recluir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -46307,7 +46311,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -47158,7 +47162,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -48970,7 +48974,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51177,7 +51181,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51196,7 +51200,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51219,7 +51223,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51239,7 +51243,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51259,7 +51263,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51278,7 +51282,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51297,7 +51301,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51318,7 +51322,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51337,7 +51341,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51356,7 +51360,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51375,7 +51379,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51395,7 +51399,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51415,7 +51419,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51438,7 +51442,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51457,7 +51461,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51476,7 +51480,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51503,22 +51507,113 @@
     }
   },
   "igrar": {
+    "denigrar": {
+      "type": [1],
+      "note": {
+        "plain": ["Este conjugador não irá conjuga o verbo 'denigrar'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
+        "ref": {
+          "1": ["Pombo R. Dicionário de sinônimos da língua portuguesa. 2. ed. Rio de Janeiro: Academia Brasileira de Letras, 2011."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [1],
+        "entries": {
+          "denigrar": [1]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 9,
+        "total": 8,
         "models": [1],
         "entries": {
           "abmigrar": [],
           "atigrar": [1],
-          "denigrar": [1],
           "emigrar": [1],
           "imigrar": [1],
           "migrar": [1],
@@ -51533,7 +51628,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51556,7 +51651,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51575,7 +51670,7 @@
     "hirtar": {
       "type": [1, 4],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {
@@ -51603,7 +51698,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51620,7 +51715,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51639,7 +51734,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51659,7 +51754,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51678,7 +51773,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51697,7 +51792,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51716,7 +51811,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51735,7 +51830,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51757,7 +51852,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51776,7 +51871,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51795,7 +51890,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51850,7 +51945,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51869,7 +51964,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51888,7 +51983,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51908,7 +52003,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -51989,7 +52084,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52006,7 +52101,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52025,7 +52120,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52044,7 +52139,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52065,7 +52160,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52097,7 +52192,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52116,7 +52211,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52136,7 +52231,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52161,7 +52256,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52181,7 +52276,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52200,7 +52295,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52219,7 +52314,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52241,7 +52336,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52262,7 +52357,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52282,7 +52377,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52302,7 +52397,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52321,7 +52416,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52341,7 +52436,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52360,7 +52455,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52379,7 +52474,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52398,7 +52493,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -52417,7 +52512,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54102,7 +54197,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54119,7 +54214,7 @@
     "moquir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54169,7 +54264,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54188,7 +54283,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54240,7 +54335,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54293,7 +54388,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54346,7 +54441,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54363,7 +54458,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54382,7 +54477,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54401,7 +54496,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54422,7 +54517,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54495,7 +54590,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54512,7 +54607,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54531,7 +54626,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54551,7 +54646,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54599,7 +54694,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54618,7 +54713,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54637,7 +54732,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54657,7 +54752,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54678,7 +54773,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54699,7 +54794,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54729,7 +54824,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54748,7 +54843,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54767,7 +54862,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54786,7 +54881,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54805,7 +54900,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54824,7 +54919,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54843,7 +54938,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54862,7 +54957,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54881,7 +54976,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54900,7 +54995,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54919,7 +55014,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54938,7 +55033,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54957,7 +55052,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54976,7 +55071,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -54995,7 +55090,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55014,7 +55109,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55033,7 +55128,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55052,7 +55147,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55071,7 +55166,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55090,7 +55185,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55109,7 +55204,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55128,7 +55223,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55147,7 +55242,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55199,7 +55294,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55218,7 +55313,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55237,7 +55332,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55256,7 +55351,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55275,7 +55370,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55294,7 +55389,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55313,7 +55408,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55332,7 +55427,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55352,7 +55447,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55371,7 +55466,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55390,7 +55485,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55409,7 +55504,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55428,7 +55523,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55447,7 +55542,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55466,7 +55561,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55485,7 +55580,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55504,7 +55599,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55523,7 +55618,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55542,7 +55637,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55561,7 +55656,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55580,7 +55675,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55599,7 +55694,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55620,7 +55715,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55639,7 +55734,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55658,7 +55753,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55677,7 +55772,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55696,7 +55791,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55715,7 +55810,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55762,7 +55857,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55845,7 +55940,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Terminação não estabelecida"],
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
         "ref": {}
       },
       "abundance1": {},
@@ -55866,6 +55961,274 @@
           "obsediar": [9],
           "sediar": [9],
           "tragediar": [9]
+        }
+      }
+    }
+  },
+  "espor": {
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 2,
+        "models": [],
+        "entries": {
+          "despor": [],
+          "trespor": []
+        }
+      }
+    }
+  },
+  "aspor": {
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "ref": {
+          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "o": {
+            "pr_ind": ["p1", "p4", "p5"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "gd": ["n"],
+            "pa": ["n"]
+          },
+          "õ": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "u": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ô": {
+            "pt1_ind": ["p3"]
+          },
+          "ú": {
+            "pt2_ind": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "e": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "n": {
+            "pr_ind": ["p5"],
+            "im1": ["p5"]
+          },
+          "se": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "sera": {
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sesse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "sésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "ser": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "sto": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "s": {
+            "pt1_ind": ["p1", "p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [],
+        "entries": {
+          "traspor": []
+        }
+      }
+    }
+  },
+  "esver": {
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Conjugação não estabelecida em nenhuma obra de referência, razão pela qual a conjugação"],
+        "ref": {}
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "i": {
+            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "í": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "sto": {
+            "pa": ["n"]
+          },
+          "j": {
+            "pr_ind": ["p1"]
+          },
+          "ja": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "em": {
+            "pr_ind": ["p6"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 2,
+        "models": [],
+        "entries": {
+          "desver": [],
+          "tresver": []
         }
       }
     }
