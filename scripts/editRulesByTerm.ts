@@ -71,7 +71,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["ançar"]
+    let specificMainKey: string | string[] | null = ["einar"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }

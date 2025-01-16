@@ -28589,14 +28589,14 @@
   },
   "carrar": {
     "verb": ["carrar"],
-    "model": [54],
+    "model": [],
     "ending": ["arrar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "carrear": {
     "verb": ["carrear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -47111,7 +47111,7 @@
   },
   "desengrandecer": {
     "verb": ["desengrandecer"],
-    "model": [27,33],
+    "model": [27,36],
     "ending": ["ecer"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -47132,7 +47132,7 @@
   },
   "desengravecer": {
     "verb": ["desengravecer"],
-    "model": [27,33],
+    "model": [27,36],
     "ending": ["ecer"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -50261,7 +50261,7 @@
   },
   "desmerecer": {
     "verb": ["desmerecer"],
-    "model": [33],
+    "model": [27,36],
     "ending": ["ecer"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -110965,14 +110965,14 @@
   },
   "prorratear": {
     "verb": ["prorratear"],
-    "model": [12,34],
+    "model": [],
     "ending": ["ear"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "prorrogar": {
     "verb": ["prorrogar"],
-    "model": [],
+    "model": [12,34],
     "ending": ["ogar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -116488,7 +116488,7 @@
   },
   "refranzir": {
     "verb": ["refranzir"],
-    "model": [7],
+    "model": [3],
     "ending": ["anzir"],
     "only_reflexive": [false],
     "multiple_conj": [false]
