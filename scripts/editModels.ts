@@ -6,6 +6,7 @@ interface ModelsData {
     ref: string[];
     class: number[];
     total: number[];
+    group: string[];
   };
 }
 
@@ -35,11 +36,16 @@ async function updateModelsJson() {
     let totalSumModels = 0; 
     let totalSumClass1 = 0; 
     let totalSumClass2 = 0; 
-    const totalAllVerbs = Object.keys(allVerbsData).length; // Total de entradas em allVerbs.json
+    const totalAllVerbs = Object.keys(allVerbsData).length; 
 
     for (const [modelKey, modelData] of Object.entries(modelsData)) {
+
       if ('entries' in modelData) {
         delete modelData.entries;
+      }
+
+      if (!modelData.group) {
+        modelData.group = []
       }
 
       const totalForModel = Object.values(allVerbsData).filter(verbData =>

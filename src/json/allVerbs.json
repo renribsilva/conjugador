@@ -171,7 +171,7 @@
     "verb": ["abagualar"],
     "model": [4],
     "ending": ["alar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "abagunçar": {
@@ -2950,7 +2950,7 @@
     "verb": ["acaipirar"],
     "model": [4],
     "ending": ["irar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acairelar": {
@@ -2985,7 +2985,7 @@
     "verb": ["acaiçarar"],
     "model": [4],
     "ending": ["arar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acajadar": {
@@ -3398,7 +3398,7 @@
     "verb": ["acapoeirar"],
     "model": [21],
     "ending": ["eirar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acapuchar": {
@@ -3622,7 +3622,7 @@
     "verb": ["acarraçar"],
     "model": [35],
     "ending": ["açar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acarrear": {
@@ -4875,7 +4875,7 @@
     "verb": ["acoelhar"],
     "model": [42],
     "ending": ["elhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acofiar": {
@@ -4952,7 +4952,7 @@
     "verb": ["acolar"],
     "model": [12],
     "ending": ["olar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acolchear": {
@@ -5393,7 +5393,7 @@
     "verb": ["acotinhar"],
     "model": [4],
     "ending": ["inhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acotoar": {
@@ -5575,7 +5575,7 @@
     "verb": ["acrochar"],
     "model": [12],
     "ending": ["ochar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "acromatizar": {
@@ -6212,7 +6212,7 @@
     "verb": ["adligar"],
     "model": [34],
     "ending": ["igar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "adminicular": {
@@ -6793,7 +6793,7 @@
     "verb": ["afainar"],
     "model": [4],
     "ending": ["ainar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afalagar": {
@@ -6842,14 +6842,14 @@
     "verb": ["afamilhar"],
     "model": [4],
     "ending": ["ilhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afamiliar": {
     "verb": ["afamiliar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afanar": {
@@ -6898,7 +6898,7 @@
     "verb": ["afarar"],
     "model": [4],
     "ending": ["arar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afarfalhar": {
@@ -6940,7 +6940,7 @@
     "verb": ["afazendar"],
     "model": [4],
     "ending": ["endar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afazer": {
@@ -7633,7 +7633,7 @@
     "verb": ["aforçurar"],
     "model": [4],
     "ending": ["urar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "afoutar": {
@@ -9327,7 +9327,7 @@
     "verb": ["alambazar"],
     "model": [4],
     "ending": ["azar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "alambicar": {
@@ -9446,7 +9446,7 @@
     "verb": ["alapoar"],
     "model": [14],
     "ending": ["oar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "alapuzar": {
@@ -9516,7 +9516,7 @@
     "verb": ["alarpar"],
     "model": [4],
     "ending": ["arpar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "alarvajar": {
@@ -9768,7 +9768,7 @@
     "verb": ["alcandorar"],
     "model": [12],
     "ending": ["orar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "alcanforar": {
@@ -10629,7 +10629,7 @@
     "verb": ["aliteratar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "alitizar": {
@@ -11714,14 +11714,14 @@
     "verb": ["amancebar"],
     "model": [11],
     "ending": ["ebar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amanchar": {
     "verb": ["amanchar"],
     "model": [4],
     "ending": ["anchar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amandar": {
@@ -11826,7 +11826,7 @@
     "verb": ["amantizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amanuensar": {
@@ -12099,7 +12099,7 @@
     "verb": ["amasiar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amassar": {
@@ -12141,7 +12141,7 @@
     "verb": ["amatular"],
     "model": [4],
     "ending": ["ular"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amatungar": {
@@ -12155,7 +12155,7 @@
     "verb": ["amatutar"],
     "model": [4],
     "ending": ["utar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amaurosar": {
@@ -13037,7 +13037,7 @@
     "verb": ["amoriscar"],
     "model": [33],
     "ending": ["iscar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amorlotar": {
@@ -13170,7 +13170,7 @@
     "verb": ["amoucar"],
     "model": [22,33],
     "ending": ["oucar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "amouriscar": {
@@ -13506,7 +13506,7 @@
     "verb": ["anarcisar"],
     "model": [4],
     "ending": ["isar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "anarquizar": {
@@ -13800,7 +13800,7 @@
     "verb": ["angurriar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "angustiar": {
@@ -14388,7 +14388,7 @@
     "verb": ["apachorrar"],
     "model": [12],
     "ending": ["orrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apacificar": {
@@ -15060,7 +15060,7 @@
     "verb": ["apejar"],
     "model": [42],
     "ending": ["ejar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apelar": {
@@ -15396,7 +15396,7 @@
     "verb": ["apichar"],
     "model": [4],
     "ending": ["ichar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apichelar": {
@@ -15452,7 +15452,7 @@
     "verb": ["apimpolhar"],
     "model": [12],
     "ending": ["olhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apimponar": {
@@ -15606,7 +15606,7 @@
     "verb": ["aplebear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "aplicar": {
@@ -15774,7 +15774,7 @@
     "verb": ["apoltronar"],
     "model": [1,4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apolvilhar": {
@@ -15942,14 +15942,14 @@
     "verb": ["apossear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apossuir": {
     "verb": ["apossuir"],
     "model": [16],
     "ending": ["uir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apostar": {
@@ -16061,7 +16061,7 @@
     "verb": ["apotrar"],
     "model": [12],
     "ending": ["otrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apoucar": {
@@ -16194,7 +16194,7 @@
     "verb": ["apresbiterar"],
     "model": [11],
     "ending": ["erar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apresentar": {
@@ -16313,7 +16313,7 @@
     "verb": ["aprochegar"],
     "model": [43],
     "ending": ["egar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "aproejar": {
@@ -16432,7 +16432,7 @@
     "verb": ["apulhastrar"],
     "model": [4],
     "ending": ["astrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "apunchar": {
@@ -16649,7 +16649,7 @@
     "verb": ["aquilotar"],
     "model": [12],
     "ending": ["otar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "aquiltar": {
@@ -17244,7 +17244,7 @@
     "verb": ["arracimar"],
     "model": [4],
     "ending": ["imar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arraialar": {
@@ -17328,7 +17328,7 @@
     "verb": ["arrancorar"],
     "model": [12],
     "ending": ["orar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arranhar": {
@@ -17370,7 +17370,7 @@
     "verb": ["arraposar"],
     "model": [12],
     "ending": ["osar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arrarar": {
@@ -17713,7 +17713,7 @@
     "verb": ["arremansar"],
     "model": [4],
     "ending": ["ansar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arrematar": {
@@ -17748,7 +17748,7 @@
     "verb": ["arreminar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arrendar": {
@@ -17993,7 +17993,7 @@
     "verb": ["arrispidar"],
     "model": [4],
     "ending": ["idar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "arriçar": {
@@ -19680,7 +19680,7 @@
     "verb": ["atavizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "atavolar": {
@@ -20275,7 +20275,7 @@
     "verb": ["atrafegar"],
     "model": [11,34],
     "ending": ["egar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "atrafilar": {
@@ -20443,7 +20443,7 @@
     "verb": ["atrever"],
     "model": [27],
     "ending": ["ever"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "atrevincar": {
@@ -20485,7 +20485,7 @@
     "verb": ["atrigar"],
     "model": [34],
     "ending": ["igar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "atrigueirar": {
@@ -20940,42 +20940,42 @@
     "verb": ["autoadministrar"],
     "model": [4],
     "ending": ["istrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoafirmar": {
     "verb": ["autoafirmar"],
     "model": [4],
     "ending": ["irmar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoagredir": {
     "verb": ["autoagredir"],
     "model": [45],
     "ending": ["gredir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoanalisar": {
     "verb": ["autoanalisar"],
     "model": [4],
     "ending": ["isar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoaperfeiçoar": {
     "verb": ["autoaperfeiçoar"],
     "model": [],
     "ending": ["oar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autobiografar": {
     "verb": ["autobiografar"],
     "model": [4],
     "ending": ["afar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autocopiar": {
@@ -20989,91 +20989,91 @@
     "verb": ["autodefender"],
     "model": [5],
     "ending": ["ender"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodefinir": {
     "verb": ["autodefinir"],
     "model": [6],
     "ending": ["inir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodenominar": {
     "verb": ["autodenominar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodescartar": {
     "verb": ["autodescartar"],
     "model": [],
     "ending": ["artar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodesenvolver": {
     "verb": ["autodesenvolver"],
     "model": [],
     "ending": ["olver"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodesligar": {
     "verb": ["autodesligar"],
     "model": [],
     "ending": ["igar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodestruir": {
     "verb": ["autodestruir"],
     "model": [51],
     "ending": ["uir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autodisciplinar": {
     "verb": ["autodisciplinar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoesquematizar": {
     "verb": ["autoesquematizar"],
     "model": [],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autofecundar": {
     "verb": ["autofecundar"],
     "model": [4],
     "ending": ["undar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autofertilizar": {
     "verb": ["autofertilizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autofinanciar": {
     "verb": ["autofinanciar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autogovernar": {
     "verb": ["autogovernar"],
     "model": [11],
     "ending": ["ernar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autografar": {
@@ -21087,21 +21087,21 @@
     "verb": ["autogratificar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoincriminar": {
     "verb": ["autoincriminar"],
     "model": [],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autointitular": {
     "verb": ["autointitular"],
     "model": [4],
     "ending": ["ular"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "automatar": {
@@ -21122,7 +21122,7 @@
     "verb": ["automedicar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "automobilizar": {
@@ -21136,14 +21136,14 @@
     "verb": ["automotivar"],
     "model": [4],
     "ending": ["ivar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autonomear": {
     "verb": ["autonomear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autonomizar": {
@@ -21157,28 +21157,28 @@
     "verb": ["autopreencher"],
     "model": [],
     "ending": ["encher"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoproclamar": {
     "verb": ["autoproclamar"],
     "model": [4],
     "ending": ["amar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autopromover": {
     "verb": ["autopromover"],
     "model": [28],
     "ending": ["over"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autoproteger": {
     "verb": ["autoproteger"],
     "model": [27,38],
     "ending": ["eger"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autopsiar": {
@@ -21199,42 +21199,42 @@
     "verb": ["autorreformar"],
     "model": [],
     "ending": ["ormar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autorregenerar": {
     "verb": ["autorregenerar"],
     "model": [11],
     "ending": ["erar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autorreparar": {
     "verb": ["autorreparar"],
     "model": [],
     "ending": ["arar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autorrepresentar": {
     "verb": ["autorrepresentar"],
     "model": [],
     "ending": ["entar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autorretratar": {
     "verb": ["autorretratar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autorrevogar": {
     "verb": ["autorrevogar"],
     "model": [],
     "ending": ["ogar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autosporular": {
@@ -21255,7 +21255,7 @@
     "verb": ["autossugestionar"],
     "model": [4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "autotomizar": {
@@ -21325,7 +21325,7 @@
     "verb": ["avalentoar"],
     "model": [14],
     "ending": ["oar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "avaliar": {
@@ -21423,7 +21423,7 @@
     "verb": ["aveadar"],
     "model": [4],
     "ending": ["adar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "avelanar": {
@@ -21633,7 +21633,7 @@
     "verb": ["avilanar"],
     "model": [4],
     "ending": ["anar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "avilar": {
@@ -26505,7 +26505,7 @@
     "verb": ["cabralizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "cabrapear": {
@@ -26841,7 +26841,7 @@
     "verb": ["cafrealizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "caftinar": {
@@ -28486,7 +28486,7 @@
     "verb": ["carnificar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "carocar": {
@@ -28514,7 +28514,7 @@
     "verb": ["carpar"],
     "model": [1,4],
     "ending": ["arpar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "carpear": {
@@ -28577,7 +28577,7 @@
     "verb": ["carrapatar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "carrapatear": {
@@ -32476,7 +32476,7 @@
     "verb": ["coalizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "coaltarizar": {
@@ -34191,7 +34191,7 @@
     "verb": ["concubinar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "conculcar": {
@@ -34569,7 +34569,7 @@
     "verb": ["confusionar"],
     "model": [4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "confutar": {
@@ -36004,7 +36004,7 @@
     "verb": ["convolver"],
     "model": [28],
     "ending": ["olver"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "convulsar": {
@@ -38881,7 +38881,7 @@
     "verb": ["dedignar"],
     "model": [13],
     "ending": ["ignar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "dedilhar": {
@@ -39945,7 +39945,7 @@
     "verb": ["dequitar"],
     "model": [4],
     "ending": ["uitar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "derivar": {
@@ -41331,7 +41331,7 @@
     "verb": ["desamagoar"],
     "model": [14],
     "ending": ["oar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desamalgamar": {
@@ -42472,7 +42472,7 @@
     "verb": ["desatolar"],
     "model": [12],
     "ending": ["olar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desatordoar": {
@@ -43753,7 +43753,7 @@
     "verb": ["descaçar"],
     "model": [35],
     "ending": ["açar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "descegar": {
@@ -43970,7 +43970,7 @@
     "verb": ["descocar"],
     "model": [12,33],
     "ending": ["ocar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "descochar": {
@@ -44103,7 +44103,7 @@
     "verb": ["descomedir"],
     "model": [93],
     "ending": ["edir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "descomer": {
@@ -44894,7 +44894,7 @@
     "verb": ["desdiferenciar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desdizer": {
@@ -45846,7 +45846,7 @@
     "verb": ["desempulhar"],
     "model": [4],
     "ending": ["ulhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desempunhar": {
@@ -47176,21 +47176,21 @@
     "verb": ["desengrimpar"],
     "model": [4],
     "ending": ["impar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desengrimpinar": {
     "verb": ["desengrimpinar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desengrimponar": {
     "verb": ["desengrimponar"],
     "model": [4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desengrinaldar": {
@@ -48338,7 +48338,7 @@
     "verb": ["desfaçar"],
     "model": [35],
     "ending": ["açar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desfear": {
@@ -50305,7 +50305,7 @@
     "verb": ["desmilinguir"],
     "model": [61],
     "ending": ["inguir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desmilitarizar": {
@@ -50571,7 +50571,7 @@
     "verb": ["desnalgar"],
     "model": [34],
     "ending": ["algar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desnamorar": {
@@ -51089,7 +51089,7 @@
     "verb": ["desossificar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desovar": {
@@ -51859,7 +51859,7 @@
     "verb": ["desprecatar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "desprecaver": {
@@ -56570,7 +56570,7 @@
     "verb": ["emarar"],
     "model": [4],
     "ending": ["arar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "emarear": {
@@ -56962,7 +56962,7 @@
     "verb": ["embarretar"],
     "model": [11],
     "ending": ["etar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "embarricar": {
@@ -57480,7 +57480,7 @@
     "verb": ["embodocar"],
     "model": [12,33],
     "ending": ["ocar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "emboitar": {
@@ -58516,7 +58516,7 @@
     "verb": ["empalamar"],
     "model": [4],
     "ending": ["amar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "empalar": {
@@ -58691,7 +58691,7 @@
     "verb": ["empantufar"],
     "model": [4],
     "ending": ["ufar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "empanturrar": {
@@ -58747,7 +58747,7 @@
     "verb": ["empaquetar"],
     "model": [11],
     "ending": ["etar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "empar": {
@@ -60252,7 +60252,7 @@
     "verb": ["encaipirar"],
     "model": [4],
     "ending": ["irar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encaiporar": {
@@ -60861,7 +60861,7 @@
     "verb": ["encapetar"],
     "model": [11],
     "ending": ["etar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encapoeirar": {
@@ -60882,7 +60882,7 @@
     "verb": ["encaprichar"],
     "model": [4],
     "ending": ["ichar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encapsular": {
@@ -61162,7 +61162,7 @@
     "verb": ["encarrapichar"],
     "model": [4],
     "ending": ["ichar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encarrapitar": {
@@ -61190,14 +61190,14 @@
     "verb": ["encarrascar"],
     "model": [33],
     "ending": ["ascar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encarraspanar": {
     "verb": ["encarraspanar"],
     "model": [1],
     "ending": ["anar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encarregar": {
@@ -62555,7 +62555,7 @@
     "verb": ["encorujar"],
     "model": [4],
     "ending": ["ujar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encoscorar": {
@@ -62758,7 +62758,7 @@
     "verb": ["encristar"],
     "model": [4],
     "ending": ["istar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "encristinar": {
@@ -62968,7 +62968,7 @@
     "verb": ["endefluxar"],
     "model": [4],
     "ending": ["uxar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "endejar": {
@@ -63276,7 +63276,7 @@
     "verb": ["enfanicar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "enfarar": {
@@ -64186,7 +64186,7 @@
     "verb": ["engadanhar"],
     "model": [4],
     "ending": ["anhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engadelhar": {
@@ -64375,7 +64375,7 @@
     "verb": ["engalispar"],
     "model": [4],
     "ending": ["ispar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engalopar": {
@@ -64487,7 +64487,7 @@
     "verb": ["engaravitar"],
     "model": [4],
     "ending": ["itar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engarbonar": {
@@ -64536,14 +64536,14 @@
     "verb": ["engarupar"],
     "model": [4],
     "ending": ["upar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engasgalhar": {
     "verb": ["engasgalhar"],
     "model": [4],
     "ending": ["alhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engasgar": {
@@ -64767,14 +64767,14 @@
     "verb": ["engogar"],
     "model": [12,34],
     "ending": ["ogar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engoiar": {
     "verb": ["engoiar"],
     "model": [20],
     "ending": ["oiar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engolfar": {
@@ -64872,7 +64872,7 @@
     "verb": ["engorrar"],
     "model": [12],
     "ending": ["orrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engorvinhar": {
@@ -64998,7 +64998,7 @@
     "verb": ["engravitar"],
     "model": [4],
     "ending": ["itar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engraxar": {
@@ -65082,21 +65082,21 @@
     "verb": ["engrimpar"],
     "model": [4],
     "ending": ["impar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engrimpinar": {
     "verb": ["engrimpinar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engrimponar": {
     "verb": ["engrimponar"],
     "model": [4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "engrinaldar": {
@@ -65313,7 +65313,7 @@
     "verb": ["enjerir"],
     "model": [29],
     "ending": ["erir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "enjerizar": {
@@ -66230,7 +66230,7 @@
     "verb": ["enrestar"],
     "model": [11],
     "ending": ["estar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "enrestiar": {
@@ -66517,7 +66517,7 @@
     "verb": ["enruminar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "enrustir": {
@@ -66930,7 +66930,7 @@
     "verb": ["ensimesmar"],
     "model": [11],
     "ending": ["esmar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "ensinar": {
@@ -67021,7 +67021,7 @@
     "verb": ["ensolteirar"],
     "model": [21],
     "ending": ["eirar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "ensolvar": {
@@ -68015,7 +68015,7 @@
     "verb": ["entreajudar"],
     "model": [4],
     "ending": ["udar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entreamar": {
@@ -68043,7 +68043,7 @@
     "verb": ["entrebeijar"],
     "model": [21],
     "ending": ["eijar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entrecerrar": {
@@ -68106,21 +68106,21 @@
     "verb": ["entrecruzar"],
     "model": [4],
     "ending": ["uzar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entredevorar": {
     "verb": ["entredevorar"],
     "model": [12],
     "ending": ["orar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entredilacerar": {
     "verb": ["entredilacerar"],
     "model": [11],
     "ending": ["erar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entredisputar": {
@@ -68141,7 +68141,7 @@
     "verb": ["entredizimar"],
     "model": [4],
     "ending": ["imar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entredormir": {
@@ -68190,7 +68190,7 @@
     "verb": ["entrefigurar"],
     "model": [4],
     "ending": ["urar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entrefolhar": {
@@ -68204,7 +68204,7 @@
     "verb": ["entrefulminar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entregar": {
@@ -68225,7 +68225,7 @@
     "verb": ["entrelembrar"],
     "model": [4],
     "ending": ["embrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entrelhar": {
@@ -68274,14 +68274,14 @@
     "verb": ["entremarrar"],
     "model": [4],
     "ending": ["arrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entrematar": {
     "verb": ["entrematar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entremear": {
@@ -68337,7 +68337,7 @@
     "verb": ["entrenublar"],
     "model": [4],
     "ending": ["ublar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entreocultar": {
@@ -68351,7 +68351,7 @@
     "verb": ["entreolhar"],
     "model": [12],
     "ending": ["olhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entreouvir": {
@@ -68456,7 +68456,7 @@
     "verb": ["entrequerer"],
     "model": [77],
     "ending": ["erer"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "entrerreclamar": {
@@ -69667,7 +69667,7 @@
     "verb": ["enxodozar"],
     "model": [12],
     "ending": ["ozar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "enxofrar": {
@@ -70241,7 +70241,7 @@
     "verb": ["esbaforir"],
     "model": [101],
     "ending": ["orir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "esbagachar": {
@@ -70290,7 +70290,7 @@
     "verb": ["esbaldar"],
     "model": [4],
     "ending": ["aldar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "esbaldir": {
@@ -71263,7 +71263,7 @@
     "verb": ["escafeder"],
     "model": [27],
     "ending": ["eder"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "escafelar": {
@@ -71879,7 +71879,7 @@
     "verb": ["escarambar"],
     "model": [4],
     "ending": ["ambar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "escaramelar": {
@@ -71928,7 +71928,7 @@
     "verb": ["escarar"],
     "model": [4],
     "ending": ["arar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "escaravelhar": {
@@ -73174,7 +73174,7 @@
     "verb": ["escucir"],
     "model": [101],
     "ending": ["ucir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "escudar": {
@@ -73447,7 +73447,7 @@
     "verb": ["esfarfalhar"],
     "model": [4],
     "ending": ["alhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "esfarinhar": {
@@ -74679,7 +74679,7 @@
     "verb": ["esmagriçar"],
     "model": [35],
     "ending": ["içar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "esmagunchar": {
@@ -76478,7 +76478,7 @@
     "verb": ["espolinhar"],
     "model": [4],
     "ending": ["inhar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "espolpar": {
@@ -76674,7 +76674,7 @@
     "verb": ["espritar"],
     "model": [4],
     "ending": ["itar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "espuir": {
@@ -76940,7 +76940,7 @@
     "verb": ["estabacar"],
     "model": [33],
     "ending": ["acar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "estabanar": {
@@ -80538,7 +80538,7 @@
     "verb": ["extroverter"],
     "model": [27],
     "ending": ["erter"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "extubar": {
@@ -81917,7 +81917,7 @@
     "verb": ["fenomenizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "feriar": {
@@ -83107,7 +83107,7 @@
     "verb": ["foragir"],
     "model": [39],
     "ending": ["agir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "forcar": {
@@ -83709,7 +83709,7 @@
     "verb": ["fradar"],
     "model": [4],
     "ending": ["adar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "fradejar": {
@@ -88014,7 +88014,7 @@
     "verb": ["hematosar"],
     "model": [12],
     "ending": ["osar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "hemoaglutinar": {
@@ -88063,7 +88063,7 @@
     "verb": ["hepatizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "hepta-hidratar": {
@@ -88609,14 +88609,14 @@
     "verb": ["hispar"],
     "model": [4],
     "ending": ["ispar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "hispidar": {
     "verb": ["hispidar"],
     "model": [1],
     "ending": ["idar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "hissopar": {
@@ -89155,7 +89155,7 @@
     "verb": ["ignizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "ignobilizar": {
@@ -89463,7 +89463,7 @@
     "verb": ["imiscuir"],
     "model": [16],
     "ending": ["uir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "imitar": {
@@ -90002,7 +90002,7 @@
     "verb": ["inanimar"],
     "model": [4],
     "ending": ["imar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "inanir": {
@@ -90443,7 +90443,7 @@
     "verb": ["indiferentar"],
     "model": [4],
     "ending": ["entar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "indigenizar": {
@@ -90765,7 +90765,7 @@
     "verb": ["infinitizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "infirmar": {
@@ -91556,7 +91556,7 @@
     "verb": ["intercomunicar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "interconectar": {
@@ -91738,7 +91738,7 @@
     "verb": ["intermisturar"],
     "model": [4],
     "ending": ["urar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "intermitir": {
@@ -91780,7 +91780,7 @@
     "verb": ["interpenetrar"],
     "model": [11],
     "ending": ["etrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "interpolar": {
@@ -92620,14 +92620,14 @@
     "verb": ["jactanciar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "jactar": {
     "verb": ["jactar"],
     "model": [13],
     "ending": ["actar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "jactitar": {
@@ -92788,7 +92788,7 @@
     "verb": ["jatar"],
     "model": [4],
     "ending": ["atar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "jatear": {
@@ -92872,7 +92872,7 @@
     "verb": ["jesuitizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "jiboiar": {
@@ -95266,7 +95266,7 @@
     "verb": ["locomover"],
     "model": [28],
     "ending": ["over"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "locucionar": {
@@ -95350,7 +95350,7 @@
     "verb": ["lombear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "lombiar": {
@@ -95980,7 +95980,7 @@
     "verb": ["madeixar"],
     "model": [21],
     "ending": ["eixar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "madonizar": {
@@ -99312,7 +99312,7 @@
     "verb": ["miscar"],
     "model": [33],
     "ending": ["iscar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "miscigenar": {
@@ -101090,7 +101090,7 @@
     "verb": ["narcisar"],
     "model": [4],
     "ending": ["isar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "narcotizar": {
@@ -102007,7 +102007,7 @@
     "verb": ["nupciar"],
     "model": [9],
     "ending": ["iar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "nuquear": {
@@ -103596,7 +103596,7 @@
     "verb": ["padrar"],
     "model": [4],
     "ending": ["adrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "padrear": {
@@ -104758,7 +104758,7 @@
     "verb": ["parrar"],
     "model": [4],
     "ending": ["arrar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "parronar": {
@@ -106662,7 +106662,7 @@
     "verb": ["persignar"],
     "model": [13],
     "ending": ["ignar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "persilhar": {
@@ -107250,7 +107250,7 @@
     "verb": ["pilchar"],
     "model": [4],
     "ending": ["ilchar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "pildar": {
@@ -107789,7 +107789,7 @@
     "verb": ["pirulitar"],
     "model": [4],
     "ending": ["itar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "pisar": {
@@ -107824,7 +107824,7 @@
     "verb": ["pisgar"],
     "model": [34],
     "ending": ["isgar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "pisoar": {
@@ -108538,7 +108538,7 @@
     "verb": ["poltronear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "poluir": {
@@ -109469,7 +109469,7 @@
     "verb": ["precaucionar"],
     "model": [4],
     "ending": ["onar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "precautelar": {
@@ -110799,7 +110799,7 @@
     "verb": ["promiscuir"],
     "model": [16],
     "ending": ["uir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "promover": {
@@ -111219,7 +111219,7 @@
     "verb": ["provincianizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "provir": {
@@ -111849,7 +111849,7 @@
     "verb": ["queixar"],
     "model": [21],
     "ending": ["eixar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "quelar": {
@@ -112773,7 +112773,7 @@
     "verb": ["rancorar"],
     "model": [12],
     "ending": ["orar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "rancorejar": {
@@ -113662,7 +113662,7 @@
     "verb": ["reapoderar"],
     "model": [11],
     "ending": ["erar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "reaportuguesar": {
@@ -113774,7 +113774,7 @@
     "verb": ["rearrepender"],
     "model": [2],
     "ending": ["ender"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "rearrumar": {
@@ -114201,7 +114201,7 @@
     "verb": ["rebolquear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "rebombar": {
@@ -116252,7 +116252,7 @@
     "verb": ["refestelar"],
     "model": [11],
     "ending": ["elar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "refezar": {
@@ -117575,7 +117575,7 @@
     "verb": ["remansar"],
     "model": [4],
     "ending": ["ansar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "remansear": {
@@ -117799,7 +117799,7 @@
     "verb": ["reminar"],
     "model": [4],
     "ending": ["inar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "reminiscenciar": {
@@ -118324,7 +118324,7 @@
     "verb": ["repatanar"],
     "model": [4],
     "ending": ["anar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "repatriar": {
@@ -118436,7 +118436,7 @@
     "verb": ["repetenar"],
     "model": [4],
     "ending": ["enar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "repetir": {
@@ -118611,14 +118611,14 @@
     "verb": ["repoltrear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "repoltronear": {
     "verb": ["repoltronear"],
     "model": [54],
     "ending": ["ear"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "repontar": {
@@ -123406,7 +123406,7 @@
     "verb": ["sedentarizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "sediar": {
@@ -126535,7 +126535,7 @@
     "verb": ["suberificar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "suberinizar": {
@@ -126549,7 +126549,7 @@
     "verb": ["suberizar"],
     "model": [4],
     "ending": ["izar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "subestimar": {
@@ -127046,7 +127046,7 @@
     "verb": ["suicidar"],
     "model": [4],
     "ending": ["idar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "suingar": {
@@ -127781,7 +127781,7 @@
     "verb": ["susquir"],
     "model": [101],
     "ending": ["usquir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "sussurrar": {
@@ -133059,7 +133059,7 @@
     "verb": ["trumbicar"],
     "model": [33],
     "ending": ["icar"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "truncar": {
@@ -136692,7 +136692,7 @@
     "verb": ["zumbrir"],
     "model": [6],
     "ending": ["umbrir"],
-    "only_reflexive": [false],
+    "only_reflexive": [true],
     "multiple_conj": [false]
   },
   "zunir": {

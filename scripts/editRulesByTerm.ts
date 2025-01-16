@@ -55,7 +55,6 @@ async function addVerbsToJson() {
 
     console.log("Iniciando verificação de terminações em allVerbs.json...")
 
-    // Validar verbos sem terminação
     const invalidVerbs = Object.entries(allVerbsData)
       .filter(([_, value]) => value.ending.length === 0)
       .map(([key]) => key);
@@ -133,7 +132,6 @@ async function addVerbsToJson() {
 
         const result: { [termEntrie: string]: { [verb: string]: number[] } } = {};
 
-        // Processar em lotes
         for (let i = 0; i < filteredVerbs.length; i += batchSize) {
           const batch = filteredVerbs.slice(i, i + batchSize);
 
@@ -172,7 +170,10 @@ async function addVerbsToJson() {
       
         subKeyData.type = subKeyData.abundance1 && Object.entries(subKeyData.abundance1).length > 0
         ? Array.from(new Set([...allClassesForModels, 4]))
-        : Array.from(new Set(allClassesForModels)); 
+        : Array.from(new Set(allClassesForModels)).length === 0 
+        ? Array.from(new Set([1]))
+        : Array.from(new Set(allClassesForModels))
+
         const reorderedSubKeyData = { type: subKeyData.type, ...subKeyData };
         rulesByTermData[mainKey][subKey] = reorderedSubKeyData;
 
