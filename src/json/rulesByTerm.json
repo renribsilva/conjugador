@@ -14944,12 +14944,12 @@
         "total": 1,
         "models": [80],
         "entries": {
-          "redar": [80]
+          "antedar": [80]
         }
       }
     },
     "...": {
-      "type": [1, 2],
+      "type": [1],
       "note": {
         "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
         "ref": {
@@ -14961,8 +14961,8 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 53,
-        "models": [11, 80],
+        "total": 52,
+        "models": [11],
         "entries": {
           "abcedar": [],
           "abecedar": [11],
@@ -14971,7 +14971,6 @@
           "alevedar": [11],
           "almoedar": [11],
           "amoedar": [11],
-          "antedar": [80],
           "apedar": [],
           "apiedar": [11],
           "aquedar": [11],
