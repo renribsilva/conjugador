@@ -2,19 +2,19 @@
   "1": {
     "ref": ["passar"],
     "class": [1],
-    "total": [6328],
+    "total": [6329],
     "group": ["A"]
   },
   "2": {
     "ref": ["bater"],
     "class": [1],
-    "total": [122],
+    "total": [121],
     "group": ["A"]
   },
   "3": {
     "ref": ["partir"],
     "class": [1],
-    "total": [241],
+    "total": [242],
     "group": ["A"]
   },
   "4": {
@@ -38,7 +38,7 @@
   "7": {
     "ref": ["conduzir"],
     "class": [1],
-    "total": [32],
+    "total": [31],
     "group": ["A"]
   },
   "8": {
@@ -158,7 +158,7 @@
   "27": {
     "ref": ["mexer"],
     "class": [1],
-    "total": [454],
+    "total": [455],
     "group": ["C"]
   },
   "28": {
@@ -194,7 +194,7 @@
   "33": {
     "ref": ["atacar"],
     "class": [1],
-    "total": [1006],
+    "total": [1003],
     "group": ["D"]
   },
   "34": {
@@ -206,13 +206,13 @@
   "35": {
     "ref": ["dançar"],
     "class": [1],
-    "total": [353],
+    "total": [354],
     "group": ["D"]
   },
   "36": {
     "ref": ["vencer"],
     "class": [1],
-    "total": [369],
+    "total": [371],
     "group": ["D"]
   },
   "37": {
