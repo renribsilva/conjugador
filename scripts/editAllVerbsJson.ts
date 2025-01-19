@@ -15,7 +15,7 @@ const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
 const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
 
-export default async function processVerbsFile(): Promise<void> {
+export default async function ediAllVerbsJson(): Promise<void> {
 
   try {
 
@@ -107,7 +107,7 @@ export default async function processVerbsFile(): Promise<void> {
     const uniqueVerbs = Array.from(new Set(normalizedVerbs));
     const finalVerbs = uniqueVerbs
       .map(normVerb => allVerbs[normalizedVerbs.indexOf(normVerb)])
-      .filter(verb => /crer$/.test(verb));
+      // .filter(verb => /crer$/.test(verb));
 
     console.log(`- quantidade de verbos após remoção de duplicados: ${finalVerbs.length}`)
 
@@ -130,10 +130,9 @@ export default async function processVerbsFile(): Promise<void> {
     
       const processBatch = async (batch: string[], startIndex: number) => {
         
-        const useCustomVerbs = false;
+        const useCustomVerbs = true;
         if (useCustomVerbs) {
-          batch = ["sotopor", "assediar", "atediar", "desarremediar", "desatediar",
-             "desentediar", "desremediar", "entediar", "obsediar", "sediar", "tragediar"];
+          batch = ["auspiciar"];
         }
         
         const batchPromises = batch.map(async (verb) => {
@@ -141,7 +140,13 @@ export default async function processVerbsFile(): Promise<void> {
           const normalized = ni(verb);
       
           if (!acc[normalized]) {
-            acc[normalized] = { verb: [], model: [], ending: [] };
+            acc[normalized] = { 
+              verb: [], 
+              model: [], 
+              ending: [],  
+              only_reflexive: [false],
+              multiple_conj: [false]
+            };
           }
       
           if (!acc[normalized].verb.includes(verb)) {
@@ -197,27 +202,13 @@ export default async function processVerbsFile(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    // const removedVerbs = Object.keys(currentVerbs).filter(
-    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    // );
+    const removedVerbs = Object.keys(currentVerbs).filter(
+      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    );
 
-    // removedVerbs.forEach((normalized) => {
-    //   delete J[normalized];
-    // });
-
-    // Object.keys(J).forEach(normalized => {
-    //   if (J[normalized].multiple) {
-    //     delete J[normalized].multiple;
-    //   }
-    // });
-
-    // Object.keys(J).forEach(normalized => {
-    //   J[normalized].only_reflexive = [false]
-    // });
-
-    // Object.keys(J).forEach(normalized => {
-    //   J[normalized].multiple_conj = [false];
-    // });
+    removedVerbs.forEach((normalized) => {
+      delete J[normalized];
+    });
 
     const sortedJ = Object.keys(J)
       .sort()
@@ -252,6 +243,6 @@ export default async function processVerbsFile(): Promise<void> {
   }
 }
 
-processVerbsFile();
+ediAllVerbsJson();
 
    

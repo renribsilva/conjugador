@@ -4843,10 +4843,10 @@
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
-  "acochicar": {
-    "verb": ["acochicar"],
+  "acochichar": {
+    "verb": ["acochichar"],
     "model": [1],
-    "ending": ["icar"],
+    "ending": ["ichar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -19769,14 +19769,14 @@
   },
   "atendar": {
     "verb": ["atendar"],
-    "model": [2],
+    "model": [],
     "ending": ["endar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "atender": {
     "verb": ["atender"],
-    "model": [],
+    "model": [2],
     "ending": ["ender"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -20896,14 +20896,14 @@
   },
   "auspicar": {
     "verb": ["auspicar"],
-    "model": [9],
+    "model": [],
     "ending": ["icar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "auspiciar": {
     "verb": ["auspiciar"],
-    "model": [],
+    "model": [9],
     "ending": ["iar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -23500,14 +23500,14 @@
   },
   "barretar": {
     "verb": ["barretar"],
-    "model": [54],
+    "model": [],
     "ending": ["etar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "barretear": {
     "verb": ["barretear"],
-    "model": [],
+    "model": [54],
     "ending": ["ear"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -29814,7 +29814,7 @@
   },
   "cernir": {
     "verb": ["cernir"],
-    "model": [31],
+    "model": [94],
     "ending": ["ernir"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -38620,7 +38620,7 @@
   },
   "decernir": {
     "verb": ["decernir"],
-    "model": [29],
+    "model": [94],
     "ending": ["ernir"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -54559,7 +54559,7 @@
   },
   "discernir": {
     "verb": ["discernir"],
-    "model": [29],
+    "model": [101],
     "ending": ["ernir"],
     "only_reflexive": [false],
     "multiple_conj": [false]

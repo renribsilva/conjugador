@@ -12549,7 +12549,7 @@
           "barranquear": [],
           "barraquear": [],
           "barrear": [54],
-          "barretear": [],
+          "barretear": [54],
           "barrotear": [54],
           "basbaquear": [],
           "basear": [54],
@@ -14787,10 +14787,41 @@
     }
   },
   "edar": {
+    "quedar": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [11],
+        "entries": {
+          "quedar": [11]
+        }
+      }
+    },
     "redar": {
       "type": [2],
       "note": {
-        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar' quando a sua acepção for 'dar novamente'. Neste caso, a conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto os verbos 'antedar' e 'redar' (quando a sua acepção for 'dar novamente'). Nestes casos, a conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -14849,37 +14880,6 @@
         "models": [80],
         "entries": {
           "redar": [80]
-        }
-      }
-    },
-    "quedar": {
-      "type": [1, 4],
-      "note": {
-        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [11],
-        "entries": {
-          "quedar": [11]
         }
       }
     },
@@ -19073,13 +19073,13 @@
       "test": [false],
       "verbs": {
         "total": 28,
-        "models": [4, 1, 2],
+        "models": [4, 1],
         "entries": {
           "afazendar": [4],
           "agendar": [1],
           "amesendar": [1],
           "arrendar": [1],
-          "atendar": [2],
+          "atendar": [],
           "coarrendar": [1],
           "comendar": [],
           "desemendar": [1],
@@ -19209,11 +19209,9 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 1,
+        "total": 0,
         "models": [],
-        "entries": {
-          "atender": []
-        }
+        "entries": {}
       }
     },
     "defender": {
@@ -21075,23 +21073,6 @@
     }
   },
   "erer": {
-    "...": {
-      "type": [2],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [77],
-        "entries": {
-          "maisquerer": [77]
-        }
-      }
-    },
     "...querer": {
       "type": [2],
       "note": {
@@ -21353,6 +21334,68 @@
           "malquerer": [77]
         }
       }
+    },
+    "maisquerer": {
+      "type": [2],
+      "note": {
+        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo, exceto o verbo 'requerer' que faz 'requeiro'¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "quis4": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "queir4": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [77],
+        "entries": {
+          "maisquerer": [77]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": [],
+        "ref": {}
+      },
+      "abundance1": {},
+      "canonical1": {},
+      "verbs": {
+        "total": 0,
+        "models": [],
+        "entries": {}
+      }
     }
   },
   "ergar": {
@@ -21566,87 +21609,6 @@
         }
       }
     },
-    "...aspergir": {
-      "type": [1],
-      "note": {
-        "plain": ["Todos os verbos terminados em 'ergir' são regulares, observando algumas acomodações gráficas em todos eles¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "irj3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
-    "...convergir": {
-      "type": [1],
-      "note": {
-        "plain": ["Todos os verbos terminados em 'ergir' são regulares, observando algumas acomodações gráficas em todos eles¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "irj3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
-    "...divergir": {
-      "type": [1],
-      "note": {
-        "plain": ["Todos os verbos terminados em 'ergir' são regulares, observando algumas acomodações gráficas em todos eles¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "irj3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
     "detergir": {
       "type": [1],
       "note": {
@@ -21811,33 +21773,6 @@
         }
       }
     },
-    "...detergir": {
-      "type": [1],
-      "note": {
-        "plain": ["Todos os verbos terminados em 'ergir' são regulares, observando algumas acomodações gráficas em todos eles¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "j1": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
     "...emergir": {
       "type": [1],
       "note": {
@@ -21894,33 +21829,6 @@
         "entries": {
           "reimergir": [46]
         }
-      }
-    },
-    "...submergir": {
-      "type": [1],
-      "note": {
-        "plain": ["Todos os verbos terminados em 'ergir' são regulares, observando algumas acomodações gráficas em todos eles¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "j1": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -21988,7 +21896,7 @@
       },
       "canonical1": {
         "RAD": {
-          "ir2": {
+          "ír2": {
             "pr_ind": ["p1"],
             "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
             "im1": ["p3", "p4", "p6"],
@@ -22366,7 +22274,114 @@
         }
       }
     },
-    "...": {
+    "cernir": {
+      "type": [1, 3],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ernir' são defectivos para as formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [94],
+        "entries": {
+          "cernir": [94]
+        }
+      }
+    },
+    "...cernir": {
+      "type": [1, 3],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ernir' são defectivos para as formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 2,
+        "models": [94, 101],
+        "entries": {
+          "decernir": [94],
+          "discernir": [101]
+        }
+      }
+    },
+    "empedernir": {
       "type": [1, 3],
       "note": {
         "plain": ["Todos os verbos terminados em 'ernir' são defectivos para as formas rizotônicas¹."],
@@ -22412,16 +22427,78 @@
       },
       "test": [false],
       "verbs": {
-        "total": 6,
-        "models": [31, 29, 101],
+        "total": 1,
+        "models": [101],
         "entries": {
-          "cernir": [31],
-          "chernir": [],
-          "decernir": [29],
-          "desempedernir": [101],
-          "discernir": [29],
           "empedernir": [101]
         }
+      }
+    },
+    "...empedernir": {
+      "type": [1, 3],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ernir' são defectivos para as formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [101],
+        "entries": {
+          "desempedernir": [101]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": [],
+        "ref": {}
+      },
+      "abundance1": {},
+      "canonical1": {},
+      "verbs": {
+        "total": 0,
+        "models": [],
+        "entries": {}
       }
     }
   },
@@ -22900,75 +22977,31 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ertir' são regulares, observando algumas acomodações gráficas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "irt3": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
-        "total": 2,
+        "total": 4,
         "models": [29],
         "entries": {
           "adivertir": [29],
-          "animadvertir": [29]
-        }
-      }
-    },
-    "advertir": {
-      "type": [1],
-      "note": {
-        "plain": ["'Advertir' e 'divertir' são regulares, observando algumas acomodações gráficas¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "irt3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [29],
-        "entries": {
-          "advertir": [29]
-        }
-      }
-    },
-    "divertir": {
-      "type": [1],
-      "note": {
-        "plain": ["'Advertir' e 'divertir' são regulares, observando algumas acomodações gráficas¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "irt3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [29],
-        "entries": {
+          "advertir": [29],
+          "animadvertir": [29],
           "divertir": [29]
         }
       }
@@ -23009,10 +23042,76 @@
     }
   },
   "erver": {
-    "...": {
-      "type": [1, 2],
+    "interver": {
+      "type": [2],
       "note": {
-        "plain": ["Todos os verbos terminados em 'erver' são regulares¹."],
+        "plain": ["Exceto 'interver', todos os verbos terminados em 'erver' são regulares¹."],
+        "ref": {
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "i": {
+            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "í": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "sto": {
+            "pa": ["n"]
+          },
+          "j": {
+            "pr_ind": ["p1"]
+          },
+          "ja": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "em": {
+            "pr_ind": ["p6"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [89],
+        "entries": {
+          "interver": [89]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Exceto 'interver', todos os verbos terminados em 'erver' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -23022,12 +23121,11 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 5,
-        "models": [27, 89],
+        "total": 4,
+        "models": [27],
         "entries": {
           "esferver": [],
           "ferver": [27],
-          "interver": [89],
           "perver": [],
           "referver": [27]
         }
@@ -23036,7 +23134,7 @@
   },
   "ervir": {
     "...": {
-      "type": [2, 1],
+      "type": [1],
       "note": {
         "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
@@ -23057,10 +23155,9 @@
       },
       "test": [false],
       "verbs": {
-        "total": 4,
-        "models": [91, 29],
+        "total": 3,
+        "models": [29],
         "entries": {
-          "desintervir": [91],
           "desservir": [29],
           "resservir": [29],
           "servir": [29]
@@ -23166,6 +23263,108 @@
         "models": [91],
         "entries": {
           "intervir": [91]
+        }
+      }
+    },
+    "...intervir": {
+      "type": [2],
+      "note": {
+        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pt1_ind": ["p3"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pr_ind": ["p5"],
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"],
+            "im1": ["p5"]
+          },
+          "ê": {
+            "pr_ind": ["p6"]
+          }
+        },
+        "MT": {
+          "ndo": {
+            "pa": ["n"]
+          },
+          "nh": {
+            "pr_ind": ["p1"]
+          },
+          "n": {
+            "pr_ind": ["p2", "p5"],
+            "im1": ["p5"]
+          },
+          "e": {
+            "pt1_ind": ["p2", "p4", "p5", "p6"]
+          },
+          "i": {
+            "pt1_ind": ["p3"]
+          },
+          "nha": {
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "nhe": {
+            "pt2_ind": ["p5"]
+          },
+          "era": {
+            "pt3_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "éra": {
+            "pt3_ind": ["p4"]
+          },
+          "ére": {
+            "pt3_ind": ["p5"]
+          },
+          "esse": {
+            "pt_sub": ["p1", "p2", "p3", "p6"]
+          },
+          "ésse": {
+            "pt_sub": ["p4", "p5"]
+          },
+          "er": {
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "m": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "im": {
+            "pt1_ind": ["p1"]
+          },
+          "o": {
+            "pt1_ind": ["p3"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [91],
+        "entries": {
+          "desintervir": [91]
         }
       }
     }
@@ -24170,6 +24369,82 @@
         }
       }
     },
+    "sobre-estar": {
+      "type": [2],
+      "note": {
+        "plain": ["Com exceção de 'estar' e seus derivados, todos os verbos terminados em 'estar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "tiv1": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "tej1": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "á": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "ã": {
+            "pr_ind": ["p6"]
+          },
+          "e": {
+            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          },
+          "a": {
+            "im1": ["p3", "p4", "p6"]
+          }
+        },
+        "MT": {
+          "a": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "ou": {
+            "pr_ind": ["p1"]
+          },
+          "o": {
+            "pr_ind": ["p6"]
+          },
+          "": {
+            "pt1_ind": ["p1"]
+          },
+          "ve": {
+            "pt1_ind": ["p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [73],
+        "entries": {
+          "sobre-estar": [73]
+        }
+      }
+    },
     "estar": {
       "type": [2],
       "note": {
@@ -24278,7 +24553,7 @@
       }
     },
     "...": {
-      "type": [1, 2],
+      "type": [1],
       "note": {
         "plain": ["Com exceção de 'estar' e seus derivados, todos os verbos terminados em 'estar' são regulares¹."],
         "ref": {
@@ -24290,8 +24565,8 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 72,
-        "models": [11, 12, 73],
+        "total": 71,
+        "models": [11, 12],
         "entries": {
           "abestar": [11],
           "abintestar": [11],
@@ -24358,7 +24633,6 @@
           "reflorestar": [11],
           "requestar": [11],
           "restar": [11],
-          "sobre-estar": [73],
           "sobrerrestar": [11],
           "socrestar": [11],
           "sudoestar": [],
@@ -24556,7 +24830,7 @@
       "test": [false],
       "verbs": {
         "total": 243,
-        "models": [11, 54],
+        "models": [11],
         "entries": {
           "abaetar": [11],
           "abaionetar": [11],
@@ -24611,7 +24885,7 @@
           "azoretar": [11],
           "baionetar": [],
           "baquetar": [11],
-          "barretar": [54],
+          "barretar": [],
           "betar": [11],
           "bissetar": [11],
           "bofetar": [],
@@ -25300,26 +25574,56 @@
     }
   },
   "eusar": {
+    "reusar": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'eusar' são regulares¹, observando que 'reusar' é conjugado pelo paradigma de conjugação do verbo 'saudar'²."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ús2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "reusar": [24]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'eusar' são regulares¹."],
+        "plain": ["Todos os verbos terminados em 'eusar' são regulares¹, observando que 'reusar' é conjugado pelo paradigma de conjugação do verbo 'saudar'²."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 4,
-        "models": [19, 24],
+        "total": 3,
+        "models": [19],
         "entries": {
           "adeusar": [19],
           "desendeusar": [19],
-          "endeusar": [19],
-          "reusar": [24]
+          "endeusar": [19]
         }
       }
     }
@@ -25371,88 +25675,6 @@
     }
   },
   "ever": {
-    "...": {
-      "type": [1, 2],
-      "note": {
-        "plain": ["Dentre os verbos terminados em 'ever' há aqueles que são conjugados como o verbo 'ver' e aqueles que são conjugados como o verbo 'dever'¹"],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "e": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "ê": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "i": {
-            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "í": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
-          }
-        },
-        "MT": {
-          "sto": {
-            "pa": ["n"]
-          },
-          "j": {
-            "pr_ind": ["p1"]
-          },
-          "ja": {
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "em": {
-            "pr_ind": ["p6"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 16,
-        "models": [27, 89],
-        "entries": {
-          "adscrever": [27],
-          "antever": [89],
-          "atrever": [27],
-          "audiodescrever": [],
-          "circunscrever": [27],
-          "entrever": [89],
-          "inscrever": [27],
-          "manuscrever": [27],
-          "prever": [89],
-          "proscrever": [27],
-          "reinscrever": [27],
-          "retranscrever": [27],
-          "rever": [89],
-          "subscrever": [27],
-          "telever": [89],
-          "transcrever": [27]
-        }
-      }
-    },
     "dever": {
       "type": [1],
       "note": {
@@ -25546,6 +25768,107 @@
         "models": [27],
         "entries": {
           "escrever": [27]
+        }
+      }
+    },
+    "...ver": {
+      "type": [2],
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ever' há aqueles que são conjugados como o verbo 'ver' e aqueles que são conjugados como o verbo 'dever'¹"],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "VT": {
+          "e": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "ê": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "i": {
+            "pt1_ind": ["p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "í": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          }
+        },
+        "MT": {
+          "sto": {
+            "pa": ["n"]
+          },
+          "j": {
+            "pr_ind": ["p1"]
+          },
+          "ja": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "em": {
+            "pr_ind": ["p6"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 5,
+        "models": [89],
+        "entries": {
+          "antever": [89],
+          "entrever": [89],
+          "prever": [89],
+          "rever": [89],
+          "telever": [89]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ever' há aqueles que são conjugados como o verbo 'ver' e aqueles que são conjugados como o verbo 'dever'¹"],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 11,
+        "models": [27],
+        "entries": {
+          "adscrever": [27],
+          "atrever": [27],
+          "audiodescrever": [],
+          "circunscrever": [27],
+          "inscrever": [27],
+          "manuscrever": [27],
+          "proscrever": [27],
+          "reinscrever": [27],
+          "retranscrever": [27],
+          "subscrever": [27],
+          "transcrever": [27]
         }
       }
     }
@@ -26688,7 +27011,7 @@
       "test": [false],
       "verbs": {
         "total": 18,
-        "models": [1, 36],
+        "models": [1],
         "entries": {
           "acagibar": [1],
           "aceibar": [],
@@ -26700,7 +27023,7 @@
           "derribar": [1],
           "destribar": [1],
           "estribar": [1],
-          "guaribar": [36],
+          "guaribar": [1],
           "ilibar": [1],
           "libar": [1],
           "prelibar": [1],

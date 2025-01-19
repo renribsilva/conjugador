@@ -20,7 +20,7 @@ interface AllVerbsData {
   };
 }
 
-async function updateModelsJson() {
+export default async function editModelJson() {
   const modelsPath = path.join(process.cwd(), 'src/json/models.json');
   const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 
@@ -83,4 +83,4 @@ async function updateModelsJson() {
   }
 }
 
-updateModelsJson();
+editModelJson();

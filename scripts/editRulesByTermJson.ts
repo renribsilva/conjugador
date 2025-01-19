@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path'; 
 import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 import { ni } from '../src/lib/normalizeVerb';
-import processVerbsFile from './editAllVerbJson';
+import editModelJson from './editModelsJson';
+import editAllVerbsJson from './editAllVerbsJson';
 
 interface VerbData {
   verb: string[];
@@ -36,7 +37,7 @@ const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
 const modelsPath = path.join(process.cwd(), 'src/json/models.json');
 
-async function addVerbsToJson() {
+async function editRulesByTerm() {
   
   try {
     
@@ -71,7 +72,7 @@ async function addVerbsToJson() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["edar"]
+    let specificMainKey: string | string[] | null = null
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -79,7 +80,6 @@ async function addVerbsToJson() {
     for (let index = 0; index < totalKeys; index++) {
       const mainKey = mainKeys[index];
       
-      // Verifica se specificMainKey é um array e não contém mainKey, ou se é uma string que não é igual a mainKey
       if (
         specificMainKey &&
         ((Array.isArray(specificMainKey) && !specificMainKey.includes(mainKey)) ||
@@ -288,14 +288,15 @@ function extractVerbsEntries(rulesByTermData: RulesByTermData): { [key: string]:
 async function saveToFile(data: any, filePath: string) {
   const jsonString = JSON.stringify(data, null, 2).replace(
     /\[\s*([\s\S]*?)\s*\]/g,
-    (match, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
+    (_, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
   );
   await fs.promises.writeFile(filePath, jsonString, 'utf8');
 }
 
 async function executeInOrder() {
-  // await processVerbsFile(); 
-  await addVerbsToJson();
+  // await editAllVerbsJson();
+  await editRulesByTerm();
+  // await editModelJson();
 }
 
 executeInOrder();

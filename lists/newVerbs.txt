@@ -205,7 +205,7 @@ aclimatizar
 acoar
 acobrear
 acocar
-acochicar
+acochichar
 acocorar
 acofiar
 acogular
@@ -814,6 +814,7 @@ atufar
 atumultuar
 aturar
 aunar
+auspiciar
 autoadministrar
 autoafirmar
 autoagredir
