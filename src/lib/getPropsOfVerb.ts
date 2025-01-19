@@ -146,6 +146,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 }
 
-// getPropsOfVerb("doer", true, "doer").then(test => {
+// getPropsOfVerb("atender", true, "atender").then(test => {
 //   console.log(test);
 // });

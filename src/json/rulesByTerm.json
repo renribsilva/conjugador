@@ -1976,7 +1976,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'acir' são regulares¹. Neste conjugador, no entanto, não há verbos terminador em 'acir'. Se você está vendo esse texto, é porque alguma coisa deu muito errada aqui. Contate-me via Mastodon"],
+        "plain": [],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -19181,7 +19181,7 @@
       }
     },
     "atender": {
-      "type": [4],
+      "type": [1, 4],
       "note": {
         "plain": ["Todos os verbos terminados em 'ender' são regulares¹."],
         "ref": {
@@ -19209,9 +19209,11 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
+        "total": 1,
+        "models": [2],
+        "entries": {
+          "atender": [2]
+        }
       }
     },
     "defender": {
@@ -22496,9 +22498,11 @@
       "abundance1": {},
       "canonical1": {},
       "verbs": {
-        "total": 0,
+        "total": 1,
         "models": [],
-        "entries": {}
+        "entries": {
+          "chernir": []
+        }
       }
     }
   },
@@ -26286,7 +26290,7 @@
           "atibiar": [],
           "atoniar": [9],
           "atrofiar": [9],
-          "auspiciar": [],
+          "auspiciar": [9],
           "autocopiar": [9],
           "autofinanciar": [9],
           "autopsiar": [9],
@@ -27011,7 +27015,7 @@
       "test": [false],
       "verbs": {
         "total": 18,
-        "models": [1],
+        "models": [1, 36],
         "entries": {
           "acagibar": [1],
           "aceibar": [],
@@ -27023,7 +27027,7 @@
           "derribar": [1],
           "destribar": [1],
           "estribar": [1],
-          "guaribar": [1],
+          "guaribar": [36],
           "ilibar": [1],
           "libar": [1],
           "prelibar": [1],
@@ -27210,8 +27214,8 @@
       },
       "test": [false],
       "verbs": {
-        "total": 631,
-        "models": [33, 1, 9, 22],
+        "total": 630,
+        "models": [33, 22, 1, 9],
         "entries": {
           "abanicar": [33],
           "abarricar": [33],
@@ -27224,7 +27228,6 @@
           "acetificar": [33],
           "achicar": [33],
           "acidificar": [33],
-          "acochicar": [1],
           "acoticar": [33],
           "acrosticar": [],
           "adicar": [33],
@@ -27259,7 +27262,7 @@
           "atoxicar": [33],
           "audioamplificar": [33],
           "aurificar": [33],
-          "auspicar": [9],
+          "auspicar": [],
           "autenticar": [33],
           "autentificar": [33],
           "autogratificar": [33],
@@ -27978,11 +27981,12 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 53,
+        "total": 54,
         "models": [1, 4, 23],
         "entries": {
           "abichar": [1],
           "abochichar": [],
+          "acochichar": [1],
           "aguichar": [],
           "anichar": [1],
           "apichar": [4],
@@ -29068,7 +29072,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'izar' são regulares, observando que quando o 'i' é precedido de vogal ele recebe acentuação¹."],
+        "plain": [],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -33548,7 +33552,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'iudar' são regulares, mas alguns apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": [],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]

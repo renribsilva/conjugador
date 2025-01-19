@@ -219,5 +219,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('ser', 'p3','pt2_ind',"RAD")
+// const res = findNoRegRule('atender', 'p3','pt2_ind',"RAD")
 // console.log(res)
