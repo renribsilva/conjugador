@@ -126267,7 +126267,7 @@
   },
   "soto-por": {
     "verb": ["soto-pôr"],
-    "model": [84],
+    "model": [83],
     "ending": ["por"],
     "only_reflexive": [false],
     "multiple_conj": [false]

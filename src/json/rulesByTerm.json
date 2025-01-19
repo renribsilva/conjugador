@@ -1,9 +1,9 @@
 {
   "crer": {
-    "crer": {
+    "...": {
       "type": [2],
       "note": {
-        "plain": ["Monossilábico e irregular, o verbo 'crer' é o único com a exata terminação 'crer'. O seu paradigma de conjugação é o mesmo do verbo 'ler'¹."],
+        "plain": ["'Crer' é um verbo monossilábico e irregular. O seu paradigma de conjugação é o mesmo do verbo 'ler'¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -52,25 +52,10 @@
           "crer": [82]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "dar": {
-    "dar": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["'Dar' é um verbo monossilábico e irregular¹"],
@@ -133,25 +118,10 @@
           "dar": [80]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ir": {
-    "ir": {
+    "...": {
       "type": [2, 5],
       "note": {
         "plain": ["O verbo 'ir', além de irregular, é tido como anômalo, porque possui radicais de origem histórica diversa¹"],
@@ -252,25 +222,10 @@
           "ir": [81]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ler": {
-    "ler": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'ler' é monossilábico e irregular¹"],
@@ -322,25 +277,10 @@
           "ler": [82]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "por": {
-    "soto-pôr": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
@@ -432,130 +372,17 @@
       },
       "test": [false],
       "verbs": {
-        "total": 1,
-        "models": [84],
-        "entries": {
-          "soto-por": [84]
-        }
-      }
-    },
-    "pôr": {
-      "type": [2],
-      "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
-        "ref": {
-          "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "VT": {
-          "o": {
-            "pr_ind": ["p1", "p4", "p5"],
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p5", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"],
-            "inf": ["p2", "p4", "p5", "p6"],
-            "gd": ["n"],
-            "pa": ["n"]
-          },
-          "õ": {
-            "pr_ind": ["p2", "p3", "p6"],
-            "im1": ["p2"]
-          },
-          "u": {
-            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "ô": {
-            "pt1_ind": ["p3"],
-            "inf": ["p1", "p3"]
-          },
-          "ú": {
-            "pt2_ind": ["p4", "p5"]
-          }
-        },
-        "MT": {
-          "nh": {
-            "pr_ind": ["p1"]
-          },
-          "e": {
-            "pr_ind": ["p2", "p3", "p6"],
-            "im1": ["p2"]
-          },
-          "n": {
-            "pr_ind": ["p5"],
-            "im1": ["p5"]
-          },
-          "se": {
-            "pt1_ind": ["p2", "p4", "p5", "p6"]
-          },
-          "nha": {
-            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "sera": {
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "sesse": {
-            "pt_sub": ["p1", "p2", "p3", "p6"]
-          },
-          "sésse": {
-            "pt_sub": ["p4", "p5"]
-          },
-          "ser": {
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "sto": {
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "des": {
-            "pr_ind": ["p5"]
-          },
-          "s": {
-            "pt1_ind": ["p1", "p3"]
-          },
-          "de": {
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
+        "total": 2,
         "models": [83],
         "entries": {
-          "por": [83]
+          "por": [83],
+          "soto-por": [83]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
   "rer": {
-    "rer": {
+    "...": {
       "type": [1, 3],
       "note": {
         "plain": ["De acordo com Houiass, citado por Salum¹, 'rer', que está relacionado ao verbo 'raer', não se conjuga por ser 'forma antiga não conjugável pelos padrões atuais'. No entanto, tanto o Dicionário Online Houiass² quanto o Dicionário Houiass de Conjugação de Verbos³ o conjugam, porém com paradigmas distintos. O primeiro conjuga 'rer' com os mesmo padrões de conjugação do verbo 'ler' e o segundo, 'precaver'."],
@@ -645,25 +472,10 @@
           "rer": [98]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "rir": {
-    "rir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'rir' é monossilábico e irregular¹"],
@@ -707,25 +519,10 @@
           "rir": [85]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ser": {
-    "ser": {
+    "...": {
       "type": [2, 5],
       "note": {
         "plain": ["O verbo 'ser' é tido como anômalo devido a sua acentuada irregularidade¹"],
@@ -818,25 +615,10 @@
           "ser": [86]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ter": {
-    "ter": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'ter' é monossilábico e irregular¹"],
@@ -926,25 +708,10 @@
           "ter": [87]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ver": {
-    "ver": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'ver' é monossilábico e irregular¹"],
@@ -1009,25 +776,10 @@
           "ver": [89]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "vir": {
-    "vir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'vir' é monossilábico e irregular¹"],
@@ -1126,21 +878,6 @@
         "entries": {
           "vir": [90]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
