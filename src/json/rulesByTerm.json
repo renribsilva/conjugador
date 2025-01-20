@@ -6952,7 +6952,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 2ª e 3ª pessoas do Presente do Indicativo e na 2ª pessoa do Imperativo Afirmativo¹."],
+        "plain": ["O verbo 'manter' é conjugado com os mesmos padrões do verbo 'ter', exceto pelo acento agudo nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singular do Imperativo Afirmativo¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -7199,7 +7199,7 @@
     "...": {
       "type": [1, 4],
       "note": {
-        "plain": ["O verbo 'usucapir' (único verbo terminado em 'apir'), não obstante o uso raro na 1ª pessoa do Presente do Indicativo e, por conseguinte, em todas as pessoas do Presente do Subjuntivo e Imperativo Negativo, é regular¹."],
+        "plain": ["O verbo 'usucapir' (único verbo terminado em 'apir'), não obstante o uso raro na 1ª pessoa do singular do Presente do Indicativo e, por conseguinte, em todas as pessoas do Presente do Subjuntivo e Imperativo Negativo, é regular¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10844,7 +10844,7 @@
     "...jazer": {
       "type": [1, 4],
       "note": {
-        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do singular do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10878,7 +10878,7 @@
     "jazer": {
       "type": [1, 4],
       "note": {
-        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do singular do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -20443,7 +20443,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'erder' fazem na 1ª pessoa do Presente do Indicativo 'erco'¹."],
+        "plain": ["Os verbos terminados em 'erder' fazem na 1ª pessoa do singular do Presente do Indicativo 'erco'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -20476,7 +20476,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
+        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do singular do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -20530,7 +20530,7 @@
     "requerer": {
       "type": [2, 4],
       "note": {
-        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
+        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do singular do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -22248,7 +22248,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -22279,7 +22279,7 @@
     "intervir": {
       "type": [2],
       "note": {
-        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -22381,7 +22381,7 @@
     "...intervir": {
       "type": [2],
       "note": {
-        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["Exceto 'intervir', que é conjugado como 'vir', todos os verbos terminados em 'ervir' tem -irvo na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -35027,7 +35027,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["O verbo cobrir e seus derivados fazem '-ubro' na 1ª pessoa do Presente do Indicativo e flexões correlatas, além de apresentar irregularidade no particípio¹."],
+        "plain": ["O verbo cobrir e seus derivados fazem '-ubro' na 1ª pessoa do singular do Presente do Indicativo e flexões correlatas, além de apresentar irregularidade no particípio¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -40874,7 +40874,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["O verbo 'dormir' e seus derivados fazem '-urmo' na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["O verbo 'dormir' e seus derivados fazem '-urmo' na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -41966,7 +41966,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["O verbo 'tossir' troca o 'o' por 'u' na 1ª pessoa do Presente do Indicativo e nas flexões correlacionadas¹."],
+        "plain": ["O verbo 'tossir' troca o 'o' por 'u' na 1ª pessoa do singular do Presente do Indicativo e nas flexões correlacionadas¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -42747,7 +42747,7 @@
     "ouvir": {
       "type": [2],
       "note": {
-        "plain": ["O verbo 'ouvir' e seus derivados fazem na 1ª pessoa do Presente do Indicativo e flexões correlacionadas 'ç'¹."],
+        "plain": ["O verbo 'ouvir' e seus derivados fazem na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas 'ç'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -42776,7 +42776,7 @@
     "...ouvir": {
       "type": [2],
       "note": {
-        "plain": ["O verbo 'ouvir' e seus derivados fazem na 1ª pessoa do Presente do Indicativo e flexões correlacionadas 'ç'¹."],
+        "plain": ["O verbo 'ouvir' e seus derivados fazem na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas 'ç'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -44081,7 +44081,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do singular do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -44115,7 +44115,7 @@
     "acudir": {
       "type": [2],
       "note": {
-        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do singular do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -44142,7 +44142,7 @@
     "sacudir": {
       "type": [2],
       "note": {
-        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Todos os verbos terminados em 'udir' são regulares, observando que 'acudir' e 'sacudir' trocam o 'u' por 'o' nas formas rizotônicas exceto a 1ª pessoa do singular do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -49718,7 +49718,7 @@
     "entourir": {
       "type": [1],
       "note": {
-        "plain": ["Com exceção de 'entourir', que é regular, todos os verbos terminados em 'urir' não são conjugados na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["Com exceção de 'entourir', que é regular, todos os verbos terminados em 'urir' não são conjugados na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -49737,7 +49737,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": ["Com exceção de 'entourir', que é regular, todos os verbos terminados em 'urir' não são conjugados na 1ª pessoa do Presente do Indicativo e flexões correlacionadas¹."],
+        "plain": ["Com exceção de 'entourir', que é regular, todos os verbos terminados em 'urir' não são conjugados na 1ª pessoa do singular do Presente do Indicativo e flexões correlacionadas¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -52519,7 +52519,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -52619,7 +52619,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -52724,7 +52724,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -52829,7 +52829,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -52930,7 +52930,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53033,7 +53033,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53136,7 +53136,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53239,7 +53239,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53339,7 +53339,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53443,7 +53443,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53547,7 +53547,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53647,7 +53647,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -53747,7 +53747,7 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -55749,7 +55749,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
@@ -55850,7 +55850,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' possuir acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹"],
+        "plain": ["Os verbos terminados em 'por', tal como 'pôr' e seus derivados (compor, dispor, repor, supor, etc.), pertencem por motivos históricos à 2ª conjugação, isto é, à classe de verbos terminados em 'er'. Isso mesmo! A forma arcaica de 'pôr' era 'poer'. Além disso, 'pôr' e 'soto-pôr' possuem acento cincunflexo na 1ª e 3ª pessoas do singular do Infinitivo Pessoal, ao passo que seus devivados não¹."],
         "ref": {
           "1": ["Sobral JJV. Verbos: Guia prático de conjugação e concordância. 1. ed. São Paulo: Iglu; 1996."]
         }
