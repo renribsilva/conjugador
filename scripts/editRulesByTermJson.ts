@@ -72,7 +72,7 @@ async function editRulesByTerm() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["atir"]
+    let specificMainKey: string | string[] | null = ["ecer"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }

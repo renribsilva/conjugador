@@ -9995,7 +9995,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10005,21 +10005,49 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 5,
-        "models": [1, 24],
+        "total": 4,
+        "models": [1],
         "entries": {
           "ajaular": [],
           "desenjaular": [1],
           "enjaular": [1],
-          "faular": [24],
           "paular": []
+        }
+      }
+    },
+    "faular": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "úl2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "faular": [24]
         }
       }
     },
     "abaular": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10048,7 +10076,7 @@
     "apaular": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10077,7 +10105,7 @@
     "desembaular": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10106,7 +10134,7 @@
     "embaular": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'aular' são regulares, mas os verbos 'abaular', 'apaular', 'desembaular' e 'embaular' apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
+        "plain": ["Todos os verbos terminados em 'aular' são regulares, observando que os verbos 'abaular', 'apaular', 'faular' e 'embaular' (e derivados) apresentam modificações nas formas rizotônicas, isto é, naquelas cuja vogal tônica se encontra no radical¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -10500,7 +10528,7 @@
         }
       }
     },
-    "precaver": {
+    "...": {
       "type": [1, 3],
       "note": {
         "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
@@ -10546,79 +10574,12 @@
       },
       "test": [false],
       "verbs": {
-        "total": 1,
+        "total": 2,
         "models": [98],
         "entries": {
+          "desprecaver": [98],
           "precaver": [98]
         }
-      }
-    },
-    "desprecaver": {
-      "type": [1, 3],
-      "note": {
-        "plain": ["Os verbos 'precaver' e 'desprecaver' só são conjugados nas formas arrizotônicas, isto é, naquelas cuja vogal tônica não está no radical¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [98],
-        "entries": {
-          "desprecaver": [98]
-        }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -10881,298 +10842,10 @@
     }
   },
   "azer": {
-    "...fazer": {
-      "type": [2, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "VT": {
-          "": {
-            "im1": ["p2"]
-          }
-        }
-      },
-      "canonical1": {
-        "RAD": {
-          "faç3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "fiz3": {
-            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fez3": {
-            "pt1_ind": ["p3"]
-          },
-          "far3": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fei3": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p3"],
-            "pt1_ind": ["p3"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pa": ["n"]
-          },
-          "é": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
-          },
-          "á": {
-            "ft1_ind": ["p2", "p3"]
-          },
-          "ã": {
-            "ft1_ind": ["p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "ia": {
-            "ft2_ind": ["p1", "p2", "p3", "p6"]
-          },
-          "ía": {
-            "ft2_ind": ["p4"]
-          },
-          "íe": {
-            "ft2_ind": ["p5"]
-          },
-          "to": {
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "": {
-            "pt1_ind": ["p1", "p3"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 12,
-        "models": [74],
-        "entries": {
-          "afazer": [74],
-          "bem-fazer": [74],
-          "benfazer": [74],
-          "contrafazer": [74],
-          "desfazer": [74],
-          "entrefazer": [74],
-          "esfazer": [74],
-          "malfazer": [74],
-          "putrefazer": [74],
-          "rarefazer": [74],
-          "refazer": [74],
-          "transfazer": [74]
-        }
-      }
-    },
-    "tumefazer": {
-      "type": [2, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "tumefact": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "": {
-            "im1": ["p2"]
-          },
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "RAD": {
-          "faç3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "fiz3": {
-            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fez3": {
-            "pt1_ind": ["p3"]
-          },
-          "far3": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fei3": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p3"],
-            "pt1_ind": ["p3"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pa": ["n"]
-          },
-          "é": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
-          },
-          "á": {
-            "ft1_ind": ["p2", "p3"]
-          },
-          "ã": {
-            "ft1_ind": ["p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "ia": {
-            "ft2_ind": ["p1", "p2", "p3", "p6"]
-          },
-          "ía": {
-            "ft2_ind": ["p4"]
-          },
-          "íe": {
-            "ft2_ind": ["p5"]
-          },
-          "to": {
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "": {
-            "pt1_ind": ["p1", "p3"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [74],
-        "entries": {
-          "tumefazer": [74]
-        }
-      }
-    },
-    "fazer": {
-      "type": [2, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "VT": {
-          "": {
-            "im1": ["p2"]
-          }
-        }
-      },
-      "canonical1": {
-        "RAD": {
-          "faç3": {
-            "pr_ind": ["p1"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          },
-          "fiz3": {
-            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fez3": {
-            "pt1_ind": ["p3"]
-          },
-          "far3": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "fei3": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p3"],
-            "pt1_ind": ["p3"],
-            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "pa": ["n"]
-          },
-          "é": {
-            "pt3_ind": ["p4", "p5"],
-            "pt_sub": ["p4", "p5"]
-          },
-          "á": {
-            "ft1_ind": ["p2", "p3"]
-          },
-          "ã": {
-            "ft1_ind": ["p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
-          },
-          "ia": {
-            "ft2_ind": ["p1", "p2", "p3", "p6"]
-          },
-          "ía": {
-            "ft2_ind": ["p4"]
-          },
-          "íe": {
-            "ft2_ind": ["p5"]
-          },
-          "to": {
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "": {
-            "pt1_ind": ["p1", "p3"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [74],
-        "entries": {
-          "fazer": [74]
-        }
-      }
-    },
     "...jazer": {
       "type": [1, 4],
       "note": {
-        "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -11206,7 +10879,7 @@
     "jazer": {
       "type": [1, 4],
       "note": {
-        "plain": ["O verbo 'jazer' e seus derivados são regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'jazer' e seus derivados, trata-se de verbos regulares, salvo na 3ª pessoa do Presente do Indicativo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -11238,7 +10911,7 @@
     "prazer": {
       "type": [2, 3, 4],
       "note": {
-        "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'prazer' e seus derivados, trata-se de verbos que apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
           "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
@@ -11339,7 +11012,7 @@
     "...prazer": {
       "type": [2, 3, 4],
       "note": {
-        "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'prazer' e seus derivados, trata-se de verbos que apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
           "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
@@ -11441,7 +11114,7 @@
     "desaprazer": {
       "type": [2, 3, 4],
       "note": {
-        "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'prazer' e seus derivados, trata-se de verbos que apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
           "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
@@ -11542,7 +11215,7 @@
     "comprazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'prazer' e seus derivados, trata-se de verbos que apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
           "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
@@ -11598,7 +11271,7 @@
     "...comprazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["A conjugação do verbo 'prazer' e seus derivados apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'prazer' e seus derivados, trata-se de verbos que apresentam alta defectividade (exceto 'comprazer', cuja conjugação é completa)¹. A ocorrência mais comum é a conjugação feita apenas nas terceiras pessoas de cada tempo verbal (exceto no modo Imperativo, no qual nenhuma conjugação é feita). Vale acrescentar ainda que o Pretérito Perfeito possui formas modernas de conjugação que são gramaticalmente corretas, quais sejam, 'prazeu' e 'prazeram', porém não tão utilizadas quanto as formas 'prouve' e 'prouveram'²."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."],
           "2": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
@@ -11654,7 +11327,7 @@
     "trazer": {
       "type": [2, 4],
       "note": {
-        "plain": ["O verbo 'trazer' é irregular¹. A abundância com relação a 2ª pessoa do singular do Imperativo Afirmativo é registra no Dicionário Online Houiass² e no Dicionário Houiass de Conjugação de Verbos³."],
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'trazer', trata-se de um verbo irregular¹. A abundância com relação a 2ª pessoa do singular do Imperativo Afirmativo é registra no Dicionário Online Houiass² e no Dicionário Houiass de Conjugação de Verbos³."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ],
@@ -11718,11 +11391,307 @@
         }
       }
     },
+    "...fazer": {
+      "type": [2, 4],
+      "note": {
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'fazer' e seus derivados, trata-se de verbos com irregularidades bastante acentuadas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "VT": {
+          "": {
+            "im1": ["p2"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "faç3": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "fiz3": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fez3": {
+            "pt1_ind": ["p3"]
+          },
+          "far3": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fei3": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "pt1_ind": ["p3"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pa": ["n"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          },
+          "á": {
+            "ft1_ind": ["p2", "p3"]
+          },
+          "ã": {
+            "ft1_ind": ["p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ia": {
+            "ft2_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "ía": {
+            "ft2_ind": ["p4"]
+          },
+          "íe": {
+            "ft2_ind": ["p5"]
+          },
+          "to": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 12,
+        "models": [74],
+        "entries": {
+          "afazer": [74],
+          "bem-fazer": [74],
+          "benfazer": [74],
+          "contrafazer": [74],
+          "desfazer": [74],
+          "entrefazer": [74],
+          "esfazer": [74],
+          "malfazer": [74],
+          "putrefazer": [74],
+          "rarefazer": [74],
+          "refazer": [74],
+          "transfazer": [74]
+        }
+      }
+    },
+    "tumefazer": {
+      "type": [2, 4],
+      "note": {
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'fazer' e seus derivados, trata-se de verbos com irregularidades bastante acentuadas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "tumefact": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "": {
+            "im1": ["p2"]
+          },
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "faç3": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "fiz3": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fez3": {
+            "pt1_ind": ["p3"]
+          },
+          "far3": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fei3": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "pt1_ind": ["p3"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pa": ["n"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          },
+          "á": {
+            "ft1_ind": ["p2", "p3"]
+          },
+          "ã": {
+            "ft1_ind": ["p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ia": {
+            "ft2_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "ía": {
+            "ft2_ind": ["p4"]
+          },
+          "íe": {
+            "ft2_ind": ["p5"]
+          },
+          "to": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [74],
+        "entries": {
+          "tumefazer": [74]
+        }
+      }
+    },
+    "fazer": {
+      "type": [2, 4],
+      "note": {
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'fazer' e seus derivados, trata-se de verbos com irregularidades bastante acentuadas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "VT": {
+          "": {
+            "im1": ["p2"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "faç3": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "fiz3": {
+            "pt1_ind": ["p1", "p2", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fez3": {
+            "pt1_ind": ["p3"]
+          },
+          "far3": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "fei3": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "pt1_ind": ["p3"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pa": ["n"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"],
+            "pt_sub": ["p4", "p5"]
+          },
+          "á": {
+            "ft1_ind": ["p2", "p3"]
+          },
+          "ã": {
+            "ft1_ind": ["p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "ia": {
+            "ft2_ind": ["p1", "p2", "p3", "p6"]
+          },
+          "ía": {
+            "ft2_ind": ["p4"]
+          },
+          "íe": {
+            "ft2_ind": ["p5"]
+          },
+          "to": {
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [74],
+        "entries": {
+          "fazer": [74]
+        }
+      }
+    },
     "...": {
       "type": [2, 4],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Há quatro grupos de verbos terminados em 'azer', quais sejam, os verbos correlatos de 'jazer', 'prazer', 'trazer' e 'fazer'. Com relação a 'fazer' e seus derivados, trata-se de verbos com irregularidades bastante acentuadas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {
         "VT": {
@@ -13808,7 +13777,7 @@
           "desentorpecer": [27, 36],
           "desentretecer": [27],
           "desentristecer": [27, 36],
-          "desfalecer": [27],
+          "desfalecer": [27, 36],
           "desfavocerecer": [27, 36],
           "desfortalecer": [27, 36],
           "desguarnecer": [27, 36],

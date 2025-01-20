@@ -48280,7 +48280,7 @@
   },
   "desfalecer": {
     "verb": ["desfalecer"],
-    "model": [27],
+    "model": [27,36],
     "ending": ["ecer"],
     "only_reflexive": [false],
     "multiple_conj": [false]
