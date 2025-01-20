@@ -14239,7 +14239,7 @@
     "quedar": {
       "type": [1, 4],
       "note": {
-        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto os verbos 'antedar' e 'redar' (quando a sua acepção for 'dar novamente'). Nestes casos, a conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -14400,7 +14400,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto o verbo 'redar', cuja conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
+        "plain": ["Em geral, os verbos terminados em 'edar' são regulares, exceto os verbos 'antedar' e 'redar' (quando a sua acepção for 'dar novamente'). Nestes casos, a conjugação é feita com o paradigma de conjugação do verbo 'dar'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -14550,10 +14550,11 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": ["Grande parte dos verbos terminados em 'edir' seguem o padrão abaixo de conjugação¹."],
+        "plain": ["Os verbos terminados em 'edir' seguem o padrão de conjugação do verbo 'medir'¹ (exceto 'comedir' e seus derivados, que são defectivos²)."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -14590,9 +14591,11 @@
     "comedir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Dos verbos terminados em 'edir', 'comedir' e seus derivados apresentam defectividade tal como o verbo 'excelir'¹."],
+        "plain": ["Os verbos terminados em 'edir' seguem o padrão de conjugação do verbo 'medir'¹ (exceto 'comedir' e seus derivados, que são defectivos²)."],
         "ref": {
-          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -14642,9 +14645,11 @@
     "...comedir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Dos verbos terminados em 'edir', 'comedir' e seus derivados apresentam defectividade tal como o verbo 'excelir'¹."],
+        "plain": ["Os verbos terminados em 'edir' seguem o padrão de conjugação do verbo 'medir'¹ (exceto 'comedir' e seus derivados, que são defectivos²)."],
         "ref": {
-          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -15511,7 +15516,7 @@
     }
   },
   "egrir": {
-    "denegrir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["Este conjugador não irá conjuga o verbo 'denegrir'. O uso desse verbo na acepção de 'depreciar' ou 'difamar' tem conotações racistas, razão por que deve ser rigorosamente rechaçado. Para provar que é possível desusar esse verbo, a seguir estão elencados dezenas de verbos e expressões constantes do Dicionário de sinônimos da língua portuguesa¹ que podem ser usados no seu lugar:  | depreciar | não dar apreço | ter em nada | estimar em nada | deprimir | viltar | aviltar | detratar | não fazer justiça | menosprezar | desprezar | subestimar | subvalorizar | subavaliar | ridicularizar | negligenciar | apoucar | apequenar | minimizar | deslouvar | enodoar | fazer perder em valor | passar por alto sobre | marear | embaçar | embaciar | desvirtuar | desdourar | deslustrar | desprimorar | desluzir | desencarecer | apear das estrelas | desmaiar os encantos | afear | despintar | fazer descer a um nível de inferioridade | tomar as coisas por onde elas queimam | desengrandecer | desapreciar | abater | amesquinhar | desconsiderar | falsetear | ter em pouca conta | malbaratear | miniaturar | acanhar | baratar | baratear | abaratar | abaratear | ludibriar de | desnaturar | desfigurar | malsinar | diminuir | acalcanhar | atrofiar | regatear | lançar sombra sobre | diminuir o brilho | desengrandecer | desestimar | ofuscar | desprestigiar | ver com maus olhos | ver com os olhos da inveja | desendeusar | deslouvar | desgabar | vilipendiar | vituperar |"],
@@ -15601,21 +15606,6 @@
         "entries": {
           "denegrir": [45]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
