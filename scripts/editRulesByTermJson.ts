@@ -72,7 +72,7 @@ async function editRulesByTerm() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["egrir"]
+    let specificMainKey: string | string[] | null = ["olgar"]
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -166,12 +166,17 @@ async function editRulesByTerm() {
             allClassesForModels.push(...modelsData[model].class);
           }
         }
-      
+
+        let uniqueClasses = Array.from(new Set(allClassesForModels));
+        if (uniqueClasses.includes(1) && uniqueClasses.includes(2)) {
+          uniqueClasses = uniqueClasses.filter((value) => value !== 1); 
+        }
+
         subKeyData.type = subKeyData.abundance1 && Object.entries(subKeyData.abundance1).length > 0
-        ? Array.from(new Set([...allClassesForModels, 4]))
-        : Array.from(new Set(allClassesForModels)).length === 0 
-        ? Array.from(new Set([1]))
-        : Array.from(new Set(allClassesForModels))
+          ? [...uniqueClasses, 4]
+          : uniqueClasses.length === 0
+          ? [1]
+          : uniqueClasses;
 
         const reorderedSubKeyData = { type: subKeyData.type, ...subKeyData };
         rulesByTermData[mainKey][subKey] = reorderedSubKeyData;

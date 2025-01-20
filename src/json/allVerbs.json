@@ -11663,7 +11663,7 @@
   },
   "amalocar": {
     "verb": ["amalocar"],
-    "model": [12],
+    "model": [12,33],
     "ending": ["ocar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -28148,7 +28148,7 @@
   },
   "carbonificar": {
     "verb": ["carbonificar"],
-    "model": [22],
+    "model": [33],
     "ending": ["icar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -30892,7 +30892,7 @@
   },
   "chiscar": {
     "verb": ["chiscar"],
-    "model": [1],
+    "model": [],
     "ending": ["iscar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -30906,7 +30906,7 @@
   },
   "chispar": {
     "verb": ["chispar"],
-    "model": [],
+    "model": [1],
     "ending": ["ispar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -32152,7 +32152,7 @@
   },
   "classificar": {
     "verb": ["classificar"],
-    "model": [1],
+    "model": [33],
     "ending": ["icar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -38739,7 +38739,7 @@
   },
   "decolgar": {
     "verb": ["decolgar"],
-    "model": [12],
+    "model": [12,34],
     "ending": ["olgar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -45242,7 +45242,7 @@
   },
   "desembocar": {
     "verb": ["desembocar"],
-    "model": [11],
+    "model": [11,33],
     "ending": ["ocar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -55140,7 +55140,7 @@
   },
   "doirar": {
     "verb": ["doirar"],
-    "model": [48],
+    "model": [18],
     "ending": ["oirar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -55406,7 +55406,7 @@
   },
   "doçar": {
     "verb": ["doçar"],
-    "model": [12,33],
+    "model": [12,35],
     "ending": ["oçar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -79857,14 +79857,14 @@
   },
   "exemplarizar": {
     "verb": ["exemplarizar"],
-    "model": [33],
+    "model": [],
     "ending": ["izar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "exemplificar": {
     "verb": ["exemplificar"],
-    "model": [],
+    "model": [33],
     "ending": ["icar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -87522,7 +87522,7 @@
   },
   "guaribar": {
     "verb": ["guaribar"],
-    "model": [36],
+    "model": [1],
     "ending": ["ibar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -92877,7 +92877,7 @@
   },
   "jiboiar": {
     "verb": ["jiboiar"],
-    "model": [2],
+    "model": [20],
     "ending": ["oiar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -109976,9 +109976,16 @@
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
+  "prenunciar": {
+    "verb": ["prenunciar"],
+    "model": [9],
+    "ending": ["iar"],
+    "only_reflexive": [false],
+    "multiple_conj": [false]
+  },
   "prenunicar": {
     "verb": ["prenunicar"],
-    "model": [9],
+    "model": [],
     "ending": ["icar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -132602,14 +132609,14 @@
   },
   "trisar": {
     "verb": ["trisar"],
-    "model": [33],
+    "model": [],
     "ending": ["isar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "triscar": {
     "verb": ["triscar"],
-    "model": [],
+    "model": [33],
     "ending": ["iscar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -133830,7 +133837,7 @@
     "model": [39,94],
     "ending": ["urgir"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "urinar": {
     "verb": ["urinar"],

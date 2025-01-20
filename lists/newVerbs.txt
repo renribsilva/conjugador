@@ -2976,6 +2976,7 @@ prematurar
 premunir
 prenominar
 prenotar
+prenunciar
 pré-ocupar
 preopinar
 preordenar
