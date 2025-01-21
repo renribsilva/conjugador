@@ -141,7 +141,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
     }
   );
 
-  // Retornar o resultado acumulado como array
   return [accumulatedResult];
 
 }

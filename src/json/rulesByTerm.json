@@ -52603,7 +52603,7 @@
   },
   "elgar": {
     "...": {
-      "type": [1, 4],
+      "type": [1],
       "note": {
         "plain": ["Todos os verbos terminados em 'elgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
         "ref": {
