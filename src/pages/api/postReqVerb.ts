@@ -1,31 +1,59 @@
-// /pages/api/addToFile.js
-import fs from 'fs';
-import path from 'path';
+import { sql } from '@vercel/postgres';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req, res) {
-  // Só responde a requisições POST
-  if (req.method === 'POST') {
-    const { data } = req.body;
+export default async function handler(
+  request: NextApiRequest,
+  response: NextApiResponse
+) {
+  if (request.method !== 'POST') {
+    return response.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-    if (!data) {
-      return res.status(400).json({ error: 'A string "data" é obrigatória.' });
+  try {
+
+    const { data, type } = request.body;
+
+    if (!data || typeof data !== 'string') {
+      return response.status(400).json({ error: 'A valid string is required' });
     }
 
-    // Caminho do arquivo onde vamos gravar a string
-    const filePath = path.join(process.cwd(), 'lists', 'reqToDo', 'reqVerbs.txt');
-
-    // Verifica se o diretório existe, se não, cria
-    if (!fs.existsSync(path.dirname(filePath))) {
-      fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    if (!type || typeof type !== 'string') {
+      return response.status(400).json({ error: 'A valid type is required' });
     }
 
-    // Escreve a string no arquivo (adicionando no final)
-    fs.appendFileSync(filePath, data + '\n', 'utf8');
+    // await sql`DELETE FROM requisitions WHERE type = ${type};`;
 
-    // Responde com sucesso
-    return res.status(200).json({ message: `String '${data}' foi adicionada ao arquivo.` });
-  } else {
-    // Retorna erro para métodos que não sejam POST
-    return res.status(405).json({ error: 'Método não permitido.' });
+    const result = await sql`
+      SELECT data
+      FROM requisitions
+      WHERE type = ${type}
+      LIMIT 1;
+    `;
+
+    let currentData: string[] = [];
+
+    if (result.rowCount && result.rowCount > 0) {
+      currentData = result.rows[0].data || [];
+    } else {
+      await sql`
+        INSERT INTO requisitions (type, data)
+        VALUES (${type}, '[]'::jsonb);
+      `;
+    }
+
+    currentData.push(data);
+
+    const uniqueData = Array.from(new Set(currentData));
+
+    await sql`
+      UPDATE requisitions
+      SET data = ${JSON.stringify(uniqueData)}::jsonb
+      WHERE type = ${type};
+    `;
+
+    return response.status(200).json({ message: 'Data successfully added to the database!' });
+  } catch (error) {
+    console.error('Error handling request:', error.message);
+    return response.status(500).json({ error: error.message });
   }
 }

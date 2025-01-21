@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Table from "../components/table";
 import { flowOfReact } from "../lib/flowOfReact";
-import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import styles from "../styles/index.module.css";
 import Footer from "../components/footer";
 import Socials from "../components/socials";
@@ -14,9 +13,9 @@ import Emphasis from "../mdx/Emphasis.mdx";
 import Reflexive from "../mdx/Reflexive.mdx";
 import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
-import Button from "../components/button";
-import { ni, nw } from "../lib/normalizeVerb";
-import postRevConjByAPI from "../lib/postRevConjByAPI";
+import Button from "../components/button";  
+import { nw } from "../lib/normalizeVerb";
+import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -29,16 +28,16 @@ const Index = () => {
   const [currentProgress, setCurrentProgress] = useState<number>(0);
 
   const handleSolicitar = async (inputReq) => {
-    await postReqVerbByAPI(inputReq);
+    await postReqVerbByAPI(inputReq, "new_verbs");
     setState({ 
-      ...state, 
+      ...state,
       showButton: false,
       isButtonDisabled: true,
     });
   };
 
   const handleReview = async (inputReq) => {
-    await postRevConjByAPI(inputReq, true);
+    await postReqVerbByAPI(inputReq, "review_conj");
     setState({
       ...state, 
       showButton: false,
