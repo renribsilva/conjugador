@@ -15,8 +15,8 @@ import Reflexive from "../mdx/Reflexive.mdx";
 import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";
-import postReqConjByAPI from "../lib/postReqConjByAPI";
 import { ni, nw } from "../lib/normalizeVerb";
+import postRevConjByAPI from "../lib/postRevConjByAPI";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -38,8 +38,8 @@ const Index = () => {
   };
 
   const handleReview = async (inputReq) => {
-    await postReqConjByAPI(inputReq);
-    setState({ 
+    await postRevConjByAPI(inputReq, true);
+    setState({
       ...state, 
       showButton: false,
       showReviewButton: false,
