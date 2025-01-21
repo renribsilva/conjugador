@@ -132,7 +132,7 @@ export default async function ediAllVerbsJson(): Promise<void> {
         
         const useCustomVerbs = true;
         if (useCustomVerbs) {
-          batch = ["trissar"];
+          batch = ["desempregar"];
         }
         
         const batchPromises = batch.map(async (verb) => {

@@ -45821,10 +45821,10 @@
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
-  "desempregrar": {
-    "verb": ["desempregrar"],
+  "desempregar": {
+    "verb": ["desempregar"],
     "model": [11,34],
-    "ending": ["egrar"],
+    "ending": ["egar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
@@ -46915,7 +46915,7 @@
   },
   "desenfuscar": {
     "verb": ["desenfuscar"],
-    "model": [27,36],
+    "model": [33],
     "ending": ["uscar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -84631,14 +84631,14 @@
   },
   "fusar": {
     "verb": ["fusar"],
-    "model": [33],
+    "model": [],
     "ending": ["usar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "fuscar": {
     "verb": ["fuscar"],
-    "model": [],
+    "model": [33],
     "ending": ["uscar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -115403,7 +115403,7 @@
   },
   "recudir": {
     "verb": ["recudir"],
-    "model": [1],
+    "model": [],
     "ending": ["udir"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -127583,14 +127583,14 @@
   },
   "supurar": {
     "verb": ["supurar"],
-    "model": [2],
+    "model": [1],
     "ending": ["urar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "suputar": {
     "verb": ["suputar"],
-    "model": [2],
+    "model": [1],
     "ending": ["utar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
@@ -131923,14 +131923,14 @@
   },
   "trejugar": {
     "verb": ["trejugar"],
-    "model": [1],
+    "model": [],
     "ending": ["ugar"],
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
   "trejurar": {
     "verb": ["trejurar"],
-    "model": [],
+    "model": [1],
     "ending": ["urar"],
     "only_reflexive": [false],
     "multiple_conj": [false]

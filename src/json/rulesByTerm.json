@@ -15168,7 +15168,7 @@
       },
       "test": [false],
       "verbs": {
-        "total": 163,
+        "total": 164,
         "models": [11, 34, 43],
         "entries": {
           "abarregar": [11, 34],
@@ -15231,6 +15231,7 @@
           "descegar": [11, 34],
           "desconchegar": [43],
           "desempegar": [11, 34],
+          "desempregar": [11, 34],
           "desencarregar": [11, 34],
           "desgregar": [11, 34],
           "desnegar": [11, 34],
@@ -41270,11 +41271,39 @@
     "...": {
       "type": [2],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'orrir' dividem-se em dois grupos: 'aborrir' e derivados; 'sorrir' e derivados. Os primeiros são defectivos e os segundos, irregulares¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "a": {
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "des": {
+            "pr_ind": ["p5"]
+          },
+          "em": {
+            "pr_ind": ["p6"]
+          },
+          "de": {
+            "im1": ["p5"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 2,
@@ -41288,8 +41317,10 @@
     "sorrir": {
       "type": [2],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Os verbos terminados em 'orrir' dividem-se em dois grupos: 'aborrir' e derivados; 'sorrir' e derivados. Os primeiros são defectivos e os segundos, irregulares¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -41331,10 +41362,9 @@
     "aborrir": {
       "type": [1, 3],
       "note": {
-        "plain": ["O verbo 'aborrir' e seus derivados são defectivos¹."],
+        "plain": ["Os verbos terminados em 'orrir' dividem-se em dois grupos: 'aborrir' e derivados; 'sorrir' e derivados. Os primeiros são defectivos e os segundos, irregulares¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -41384,10 +41414,9 @@
     "...aborrir": {
       "type": [1, 3],
       "note": {
-        "plain": ["O verbo 'aborrir' e seus derivados são defectivos¹."],
+        "plain": ["Os verbos terminados em 'orrir' dividem-se em dois grupos: 'aborrir' e derivados; 'sorrir' e derivados. Os primeiros são defectivos e os segundos, irregulares¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -41512,7 +41541,7 @@
     }
   },
   "ortir": {
-    "sortir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'sortir' troca o 'o' por 'u' nas formas rizotônicas¹."],
@@ -41592,21 +41621,6 @@
         "entries": {
           "enfortir": [101]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -42043,7 +42057,7 @@
     }
   },
   "ostir": {
-    "rostir": {
+    "...": {
       "type": [1, 3],
       "note": {
         "plain": ["O verbo 'rostir' é defectivo nas formas rizotônicas¹."],
@@ -42094,21 +42108,6 @@
         "entries": {
           "rostir": [101]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -43024,7 +43023,7 @@
     }
   },
   "ovir": {
-    "provir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["As conjugações dos verbos derivados de 'vir' diferem da do verbo 'vir' nas flexões da 2ª e 3ª pessoas do singular do Presente do Indicativo e na 2ª pessoa do singula do Imperativo Afirmativo, por recebeberem acento agudo na parte desinencial¹."],
@@ -43127,21 +43126,6 @@
         "entries": {
           "provir": [91]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -43446,7 +43430,7 @@
     }
   },
   "ubir": {
-    "subir": {
+    "...": {
       "type": [2],
       "note": {
         "plain": ["O verbo 'subir' e seus derivados trocam o 'u' por 'o' em algumas flexões¹."],
@@ -43471,46 +43455,6 @@
         "entries": {
           "subir": [52]
         }
-      }
-    },
-    "...subir": {
-      "type": [1],
-      "note": {
-        "plain": ["O verbo 'subir' e seus derivados trocam o 'u' por 'o' em algumas flexões¹."],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "ob2": {
-            "pr_ind": ["p2", "p3", "p6"],
-            "im1": ["p2"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -43692,8 +43636,8 @@
       },
       "test": [false],
       "verbs": {
-        "total": 38,
-        "models": [35, 24],
+        "total": 37,
+        "models": [35],
         "entries": {
           "abuçar": [35],
           "acaramuçar": [],
@@ -43709,7 +43653,6 @@
           "descarapuçar": [35],
           "desembuçar": [35],
           "desencarapuçar": [35],
-          "desmiuçar": [24],
           "destoutuçar": [],
           "emanhuçar": [],
           "embuçar": [35],
@@ -43771,6 +43714,44 @@
         "models": [24, 35],
         "entries": {
           "esmiuçar": [24, 35]
+        }
+      }
+    },
+    "...esmiuçar": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ucar' são regulares, mas algumas flexões têm o 'c' substituído por 'qu' antes do 'e' desinencial. Além disso, em alguns casos em que '-ucar' é precedido de vogal, o 'u' é acentuado¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "úç2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "úc2": {
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"],
+            "im1": ["p3", "p6"]
+          },
+          "c1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p4", "p5"],
+            "im2": ["p4", "p5"],
+            "im1": ["p4"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "desmiuçar": [24]
         }
       }
     }
@@ -43886,57 +43867,7 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "VT": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "MT": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        },
-        "NP": {
-          "": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
-            "im1": ["p2", "p3", "p4", "p6"],
-            "im2": ["p2", "p3", "p4", "p5", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [101],
-        "entries": {
-          "escucir": [101]
-        }
-      }
-    },
-    "aducir": {
-      "type": [1, 3],
-      "note": {
-        "plain": ["O verbo 'aducir' é defectivo nas formas rizotônicas."],
+        "plain": ["Os poucos verbos terminados em 'aducir' são defectivos nas formas rizotônicas."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -43979,10 +43910,11 @@
       },
       "test": [false],
       "verbs": {
-        "total": 1,
+        "total": 2,
         "models": [101],
         "entries": {
-          "aducir": [101]
+          "aducir": [101],
+          "escucir": [101]
         }
       }
     }
@@ -44092,7 +44024,7 @@
       "test": [false],
       "verbs": {
         "total": 15,
-        "models": [3, 1],
+        "models": [3],
         "entries": {
           "aludir": [3],
           "aplaudir": [3],
@@ -44108,7 +44040,7 @@
           "includir": [],
           "percudir": [],
           "plaudir": [3],
-          "recudir": [1]
+          "recudir": []
         }
       }
     },
@@ -44242,7 +44174,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'uflar' são regulares¹."],
+        "plain": ["Os verbos terminados em 'uflar' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -44333,7 +44265,7 @@
       "test": [false],
       "verbs": {
         "total": 52,
-        "models": [34, 22, 1],
+        "models": [34, 22],
         "entries": {
           "abjugar": [34],
           "abougar": [22, 34],
@@ -44384,7 +44316,7 @@
           "sujugar": [],
           "tarugar": [34],
           "testugar": [],
-          "trejugar": [1],
+          "trejugar": [],
           "ugar": [34],
           "verrugar": []
         }
@@ -44393,7 +44325,7 @@
   },
   "ugir": {
     "...": {
-      "type": [1, 2],
+      "type": [1],
       "note": {
         "plain": ["Com exceção do verbo 'fugir' e seus derivados, todos os verbos terminados em 'agir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
         "ref": {
@@ -44414,8 +44346,8 @@
       },
       "test": [false],
       "verbs": {
-        "total": 11,
-        "models": [39, 52],
+        "total": 10,
+        "models": [39],
         "entries": {
           "destrugir": [],
           "encorrugir": [39],
@@ -44426,13 +44358,12 @@
           "remugir": [39],
           "restrugir": [39],
           "rugir": [39],
-          "subterfugir": [39, 52],
           "tugir": [39]
         }
       }
     },
     "fugir": {
-      "type": [2, 1],
+      "type": [2],
       "note": {
         "plain": ["Com exceção do verbo 'fugir' e seus derivados, todos os verbos terminados em 'agir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
         "ref": {
@@ -44464,8 +44395,41 @@
         }
       }
     },
+    "subterfugir": {
+      "type": [2],
+      "note": {
+        "plain": ["Com exceção do verbo 'fugir' e seus derivados, todos os verbos terminados em 'agir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "og2": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          },
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [39, 52],
+        "entries": {
+          "subterfugir": [39, 52]
+        }
+      }
+    },
     "...fugir": {
-      "type": [2, 1],
+      "type": [2],
       "note": {
         "plain": ["Com exceção do verbo 'fugir' e seus derivados, todos os verbos terminados em 'agir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
         "ref": {
@@ -44583,8 +44547,11 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'idar' são regulares, observando que o verbo 'ruidar' é acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -44949,419 +44916,6 @@
         "models": [107],
         "entries": {
           "precluir": [107]
-        }
-      }
-    },
-    "concluir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "conclus": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "concluir": [16]
-        }
-      }
-    },
-    "diluir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "dilut": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "diluir": [16]
-        }
-      }
-    },
-    "excluir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "exclus": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "excluir": [16]
-        }
-      }
-    },
-    "incluir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "inclus": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "incluir": [16]
-        }
-      }
-    },
-    "possuir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "possess": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "possuir": [16]
-        }
-      }
-    },
-    "prostituir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "prostitut": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "prostituir": [16]
-        }
-      }
-    },
-    "recluir": {
-      "type": [1, 4],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {
-        "RAD": {
-          "reclus": {
-            "pa": ["n"]
-          }
-        },
-        "VT": {
-          "o": {
-            "pa": ["n"]
-          }
-        },
-        "MT": {
-          "": {
-            "pa": ["n"]
-          }
-        }
-      },
-      "canonical1": {
-        "VT": {
-          "i": {
-            "pr_ind": ["p2", "p3"],
-            "im1": ["p2"]
-          },
-          "í": {
-            "pr_ind": ["p4"],
-            "pt1_ind": ["p2", "p4", "p5", "p6"],
-            "pt2_ind": ["p1", "p2", "p3", "p6"],
-            "pt3_ind": ["p1", "p2", "p3", "p6"],
-            "pt_sub": ["p1", "p2", "p3", "p6"],
-            "fut_sub": ["p2", "p6"],
-            "inf": ["p2", "p6"],
-            "pa": ["n"]
-          }
-        },
-        "NP": {
-          "ís": {
-            "pr_ind": ["p5"]
-          },
-          "í": {
-            "pt1_ind": ["p1"],
-            "im1": ["p5"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [16],
-        "entries": {
-          "recluir": [16]
         }
       }
     },
@@ -45730,11 +45284,440 @@
         }
       }
     },
+    "concluir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "conclus": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "concluir": [16]
+        }
+      }
+    },
+    "diluir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "dilut": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "diluir": [16]
+        }
+      }
+    },
+    "excluir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "exclus": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "excluir": [16]
+        }
+      }
+    },
+    "incluir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "inclus": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "incluir": [16]
+        }
+      }
+    },
+    "possuir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "possess": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "possuir": [16]
+        }
+      }
+    },
+    "prostituir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "prostitut": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "prostituir": [16]
+        }
+      }
+    },
+    "recluir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "reclus": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [16],
+        "entries": {
+          "recluir": [16]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["A terminação 'uir' é a mais heterogênea. Há verbos irregulares ('destruir' e 'construir'), defectivos ('precluir', 'puir', 'pruir', 'buir', 'ruir') e os regulares (cuja conjugação segue o paradigma do verbo 'atribuir')¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -46369,7 +46352,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'ujir' são regulares¹."],
+        "plain": ["Os poucos verbos terminados em 'ujir' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -46392,23 +46375,14 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'ular' são regulares, mas quando '-ular' é precedido de vogal (exceto 'enjaular') o 'u' é acentuado¹."],
+        "plain": ["Todos os verbos terminados em 'ular' são regulares, mas quando '-ular' é precedido de vogal formando um hiato (exceto 'enjaular') o 'u' é acentuado¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
         }
       },
       "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "úl2": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p6"],
-            "im1": ["p2", "p3", "p6"],
-            "im2": ["p2", "p3", "p6"]
-          }
-        }
-      },
+      "canonical1": {},
       "test": [false],
       "verbs": {
         "total": 245,
@@ -46773,21 +46747,48 @@
     }
   },
   "ulhar": {
+    "faulhar": {
+      "type": [1],
+      "note": {
+        "plain": ["Exceto 'faulhar', que é conjugado pelo paradigma de conjugação do verbo 'saudar', todos os verbos terminados em 'ulhar' são regulares¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "úlh3": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "faulhar": [24]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'ulhar' são regulares¹."],
+        "plain": ["Exceto 'faulhar', que é conjugado pelo paradigma de conjugação do verbo 'saudar', todos os verbos terminados em 'ulhar' são regulares¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 75,
-        "models": [1, 4, 24],
+        "total": 74,
+        "models": [1, 4],
         "entries": {
           "aborbulhar": [1],
           "acambulhar": [1],
@@ -46842,7 +46843,6 @@
           "esmiulhar": [],
           "estremulhar": [],
           "fagulhar": [1],
-          "faulhar": [24],
           "frufrulhar": [1],
           "frulhar": [],
           "garabulhar": [1],
@@ -47241,10 +47241,9 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "plain": ["Todos os verbos terminados em 'umar' são regulares, observando que 'ciumar e 'aziumar' têm o 'u' acentuado nas formas rizotônicas¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -47337,10 +47336,9 @@
     "ciumar": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "plain": ["Todos os verbos terminados em 'umar' são regulares, observando que 'ciumar e 'aziumar' têm o 'u' acentuado nas formas rizotônicas¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -47366,10 +47364,9 @@
     "aziumar": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'umar' são regulares, observando que 'aziumar' e 'ciumar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "plain": ["Todos os verbos terminados em 'umar' são regulares, observando que 'ciumar e 'aziumar' têm o 'u' acentuado nas formas rizotônicas¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -47635,7 +47632,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Muitos verbos terminados em 'umprir' são regulares¹."],
+        "plain": ["Os poucos verbos terminados em 'umprir' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -48750,7 +48747,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'unzar' são regulares¹."],
+        "plain": ["Os poucos verbos terminados em 'unzar' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -48820,9 +48817,9 @@
   },
   "upir": {
     "...": {
-      "type": [2, 1],
+      "type": [1],
       "note": {
-        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "plain": ["Com exceção de 'entupir' (e seus derivados) e 'desatupir', todos os verbos terminados em 'upir' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -48832,10 +48829,9 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 9,
-        "models": [52, 3],
+        "total": 8,
+        "models": [3],
         "entries": {
-          "desatupir": [52],
           "encrupir": [],
           "engrupir": [3],
           "escupir": [],
@@ -48850,7 +48846,7 @@
     "entupir": {
       "type": [2],
       "note": {
-        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "plain": ["Com exceção de 'entupir' (e seus derivados) e 'desatupir', todos os verbos terminados em 'upir' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -48874,10 +48870,37 @@
         }
       }
     },
+    "desatupir": {
+      "type": [2],
+      "note": {
+        "plain": ["Com exceção de 'entupir' (e seus derivados) e 'desatupir', todos os verbos terminados em 'upir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "op2": {
+            "pr_ind": ["p2", "p3", "p6"],
+            "im1": ["p2"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [52],
+        "entries": {
+          "desatupir": [52]
+        }
+      }
+    },
     "...entupir": {
       "type": [2],
       "note": {
-        "plain": ["Com exceção de 'entupir' e seus derivados, todos os verbos terminados em 'upir' são regulares¹."],
+        "plain": ["Com exceção de 'entupir' (e seus derivados) e 'desatupir', todos os verbos terminados em 'upir' são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -48928,7 +48951,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'uprir' são regulares¹."],
+        "plain": ["'Suprir', único verbo terminado em 'uprir', é regular¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -49028,7 +49051,7 @@
       "test": [false],
       "verbs": {
         "total": 184,
-        "models": [1, 4, 2],
+        "models": [1, 4],
         "entries": {
           "aberturar": [1],
           "abjurar": [1],
@@ -49199,7 +49222,7 @@
           "sulfurar": [1],
           "superfaturar": [1],
           "supersaturar": [1],
-          "supurar": [2],
+          "supurar": [1],
           "suturar": [1],
           "terjurar": [],
           "tonsurar": [1],
@@ -49208,7 +49231,7 @@
           "transcurar": [1],
           "transfigurar": [1],
           "trascurar": [],
-          "trejurar": [],
+          "trejurar": [1],
           "tresfigurar": [],
           "tresjurar": [1],
           "triturar": [1],
@@ -50113,7 +50136,7 @@
     "escusar": {
       "type": [1, 4],
       "note": {
-        "plain": ["Todos os verbos terminados em 'usar' são regulares¹."],
+        "plain": ["Todos os verbos terminados em 'usar' são regulares¹, observando que 'enviusar' tem o 'u' acentuado nas formas rizotônicas."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -50141,10 +50164,39 @@
         }
       }
     },
+    "enviusar": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'usar' são regulares¹, observando que 'enviusar' tem o 'u' acentuado nas formas rizotônicas."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ús2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "enviusar": [24]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'usar' são regulares¹."],
+        "plain": ["Todos os verbos terminados em 'usar' são regulares¹, observando que 'enviusar' tem o 'u' acentuado nas formas rizotônicas."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -50154,8 +50206,8 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 21,
-        "models": [1, 24, 33],
+        "total": 20,
+        "models": [1],
         "entries": {
           "abusar": [1],
           "acusar": [1],
@@ -50168,8 +50220,7 @@
           "desparafusar": [1],
           "desusar": [1],
           "enfusar": [1],
-          "enviusar": [24],
-          "fusar": [33],
+          "fusar": [],
           "infusar": [1],
           "mal-usar": [1],
           "parafusar": [1],
@@ -50206,7 +50257,7 @@
       "test": [false],
       "verbs": {
         "total": 23,
-        "models": [33, 27, 36],
+        "models": [33],
         "entries": {
           "barruscar": [],
           "buscar": [33],
@@ -50215,13 +50266,13 @@
           "desafuscar": [],
           "desembruscar": [33],
           "desenfarruscar": [33],
-          "desenfuscar": [27, 36],
+          "desenfuscar": [33],
           "desofuscar": [33],
           "embruscar": [33],
           "enfarruscar": [33],
           "enfuscar": [33],
           "enlabruscar": [],
-          "fuscar": [],
+          "fuscar": [33],
           "luscar": [],
           "lusco-fuscar": [],
           "ofuscar": [33],
@@ -50324,27 +50375,48 @@
     }
   },
   "ustar": {
-    "...": {
+    "austar": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'ustar' são regulares¹."],
+        "plain": ["Todos os verbos terminados em 'ustar' são regulares¹, observando que 'austar' tem o 'u' acentuado nas formas rizotônicas²."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 27,
-        "models": [1, 24],
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "austar": [24]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ustar' são regulares¹, observando que 'austar' tem o 'u' acentuado nas formas rizotônicas²."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 26,
+        "models": [1],
         "entries": {
           "afustar": [],
           "ajustar": [1],
           "arrobustar": [1],
           "assustar": [1],
-          "austar": [24],
           "barafustar": [1],
           "coangustar": [],
           "combustar": [1],
@@ -50535,7 +50607,7 @@
       "test": [false],
       "verbs": {
         "total": 77,
-        "models": [1, 4, 2],
+        "models": [1, 4],
         "entries": {
           "abrutar": [1],
           "acanutar": [],
@@ -50606,7 +50678,7 @@
           "relutar": [1],
           "reputar": [1],
           "rutar": [],
-          "suputar": [2],
+          "suputar": [1],
           "sutar": [1],
           "tarrutar": [1],
           "transmutar": [1],
@@ -50802,24 +50874,54 @@
     }
   },
   "uzar": {
+    "afiuzar": {
+      "type": [1],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'uzar' são regulares¹, observando que 'afiuzar' tem o 'u' acentuado nas formas rizotônicas²."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "úz2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [24],
+        "entries": {
+          "afiuzar": [24]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'uzar' são regulares¹."],
+        "plain": ["Todos os verbos terminados em 'uzar' são regulares¹, observando que 'afiuzar' tem o 'u' acentuado nas formas rizotônicas²."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          ],
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 30,
-        "models": [1, 24, 19, 4],
+        "total": 29,
+        "models": [1, 19, 4],
         "entries": {
           "acatruzar": [1],
-          "afiuzar": [24],
           "ajudeuzar": [19],
           "alambuzar": [1],
           "alapuzar": [1],
@@ -50961,8 +51063,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["'Cablar', único verbo terminado em 'ablar', é regular¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -50980,8 +51084,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'abrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51003,8 +51109,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'aflar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51023,8 +51131,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'afrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51043,8 +51153,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'albar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51062,8 +51174,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ampir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51081,8 +51195,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'anfar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51102,8 +51218,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'anfrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51447,7 +51565,7 @@
     }
   },
   "irtar": {
-    "hirtar": {
+    "...": {
       "type": [1, 4],
       "note": {
         "plain": [],
@@ -51473,21 +51591,6 @@
         "entries": {
           "hirtar": [1]
         }
-      }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
       }
     }
   },
@@ -51748,7 +51851,16 @@
         "ref": {}
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p3", "p4", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
@@ -51860,23 +51972,6 @@
       }
     }
   },
-  "ãzar": {
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    }
-  },
   "eclar": {
     "...": {
       "type": [1],
@@ -51947,14 +52042,13 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 14,
-        "models": [11, 34],
+        "total": 13,
+        "models": [11],
         "entries": {
           "alegrar": [11],
           "anegrar": [11],
           "contrarregrar": [],
           "desalegrar": [11],
-          "desempregrar": [11, 34],
           "desintegrar": [11],
           "desregrar": [11],
           "indegrar": [],
@@ -52009,13 +52103,24 @@
   },
   "elgar": {
     "...": {
-      "type": [1],
+      "type": [1, 4],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'elgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 7,
@@ -52094,11 +52199,23 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ilgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 4,
@@ -52137,11 +52254,23 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'irgar' são regulares, mas algumas flexões têm o 'g' substituído por 'gu' antes do 'e' desinencial¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "gu1": {
+            "pt1_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 2,
