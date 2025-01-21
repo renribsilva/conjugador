@@ -53530,7 +53530,7 @@
   },
   "desver": {
     "verb": ["desver"],
-    "model": [],
+    "model": [89],
     "ending": ["esver"],
     "only_reflexive": [false],
     "multiple_conj": [false]

@@ -51239,8 +51239,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'antrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51258,8 +51260,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'arsar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51277,8 +51281,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'astir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51297,8 +51303,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eiar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51317,8 +51325,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'embar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51340,8 +51350,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'emblar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51359,8 +51371,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'enrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51378,8 +51392,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ibrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51500,8 +51516,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'igrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51526,8 +51544,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'imbrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51549,8 +51569,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'iplar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51568,8 +51590,10 @@
     "...": {
       "type": [1, 4],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'irtar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {
         "VT": {
@@ -51598,8 +51622,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'isdar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51617,8 +51643,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'udrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51637,8 +51665,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ufir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51656,8 +51686,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'umbrir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51675,8 +51707,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'usir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51694,8 +51728,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'unstar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51713,8 +51749,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'uplar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51735,8 +51773,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'urfar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51754,8 +51794,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'aibar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51773,8 +51815,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'aislar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51847,8 +51891,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'augir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -51875,8 +51921,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'aunar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51895,8 +51943,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51918,8 +51968,7 @@
       "note": {
         "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -51947,8 +51996,7 @@
       "note": {
         "plain": ["Todos os verbos terminados em 'ustrar' são regulares, observando que 'abalaustrar' e 'balaustrar' têm o 'u' acentuado nas formas rizotônicas¹."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -51976,8 +52024,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eclar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -51995,8 +52045,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eflar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52014,8 +52066,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'egnar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52035,8 +52089,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'egrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52066,8 +52122,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eidar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52085,8 +52143,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eldar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52141,8 +52201,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'elpar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52161,8 +52223,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eltar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52180,8 +52244,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'emptar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52233,8 +52299,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'iptar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52286,8 +52354,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'oldrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52306,8 +52376,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'orber' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52325,8 +52397,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'orfar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52345,8 +52419,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'oslar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52364,8 +52440,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ortar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52383,8 +52461,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'uctar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52402,8 +52482,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'udlar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -52421,8 +52503,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'uivar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -53977,10 +54061,9 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["O verbo 'arguir' e seu derivado 'redarguir' são irregulares¹"],
+        "plain": ["O verbo 'arguir' e seu derivado 'redarguir' são regulares com acomodações gráficas¹"],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -54026,7 +54109,7 @@
     "delinquir": {
       "type": [1],
       "note": {
-        "plain": ["Há dois verbos terminados em 'inquir': 'delinquir' e 'relinquir'. O primeiro é irregular e o segundo defectivo¹."],
+        "plain": ["Há dois verbos terminados em 'inquir': 'delinquir' e 'relinquir'. O primeiro é regular com acomodações gráficas e o segundo, defectivo¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -54123,8 +54206,10 @@
     "moquir": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["O verbo 'moquir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -54192,8 +54277,10 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["O verbo 'mosquir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -54241,11 +54328,13 @@
     }
   },
   "uquir": {
-    "...": {
+    "suquir": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["O verbo 'suquir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -54284,21 +54373,74 @@
       },
       "test": [false],
       "verbs": {
-        "total": 2,
+        "total": 1,
         "models": [101],
         "entries": {
-          "retruquir": [],
           "suquir": [101]
+        }
+      }
+    },
+    "...": {
+      "type": [1],
+      "note": {
+        "plain": ["Os verbos terminados em 'moquir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [],
+        "entries": {
+          "retruquir": []
         }
       }
     }
   },
   "usquir": {
-    "...": {
+    "susquir": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["O verbo 'susquir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -54337,16 +54479,13 @@
       },
       "test": [false],
       "verbs": {
-        "total": 2,
+        "total": 1,
         "models": [101],
         "entries": {
-          "lusquir": [],
           "susquir": [101]
         }
       }
-    }
-  },
-  "ager": {
+    },
     "...": {
       "type": [1],
       "note": {
@@ -54354,12 +54493,47 @@
         "ref": {}
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
-        "total": 0,
+        "total": 1,
         "models": [],
-        "entries": {}
+        "entries": {
+          "lusquir": []
+        }
       }
     }
   },
@@ -54367,8 +54541,10 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["O verbo 'exir' é defectivo¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54386,8 +54562,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ipir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54426,8 +54604,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'oler' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54443,7 +54623,7 @@
     }
   },
   "ulcir": {
-    "demulcir": {
+    "...": {
       "type": [1, 3],
       "note": {
         "plain": ["O verbo demulcir, único verbo terminado em 'ulcir', é defectivo¹."],
@@ -54495,21 +54675,6 @@
           "demulcir": [94]
         }
       }
-    },
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
     }
   },
   "ocer": {
@@ -54535,8 +54700,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'uxir' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54555,8 +54722,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'intar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54682,8 +54851,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'ubrar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54703,8 +54874,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'eber' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -54885,8 +55058,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'apsar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -55151,8 +55326,10 @@
     "...": {
       "type": [1, 3],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'esir' são defectivos¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -55451,8 +55628,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'enclar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -55527,8 +55706,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'usnar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -55546,8 +55727,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'abdar' são regulares¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -55738,7 +55921,7 @@
     "incendiar": {
       "type": [2],
       "note": {
-        "plain": ["Dentre os verbos terminados em 'endiar', 'incendiar' é conjugado a partir do paradigma do verbo 'passear'¹."],
+        "plain": ["Exceto 'incendiar', que é conjugado a partir do paradigma do verbo 'passear', todos os verbos terminados em 'endiar' são regulares¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -55766,8 +55949,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Exceto 'incendiar', que é conjugado a partir do paradigma do verbo 'passear', todos os verbos terminados em 'endiar' são regulares¹."],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {},
@@ -55788,7 +55973,7 @@
     "mediar": {
       "type": [2],
       "note": {
-        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear'¹."],
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear', ao passo que os demais são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -55814,10 +55999,10 @@
         }
       }
     },
-    "...mediar": {
-      "type": [1, 2],
+    "remediar": {
+      "type": [2],
       "note": {
-        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear'¹."],
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear', ao passo que os demais são regulares¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -55836,38 +56021,69 @@
       },
       "test": [false],
       "verbs": {
-        "total": 4,
-        "models": [9, 55],
+        "total": 1,
+        "models": [55],
         "entries": {
-          "comediar": [9],
-          "intermediar": [55],
-          "promediar": [9],
           "remediar": [55]
+        }
+      }
+    },
+    "intermediar": {
+      "type": [2],
+      "note": {
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear', ao passo que os demais são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "ansei": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [55],
+        "entries": {
+          "intermediar": [55]
         }
       }
     },
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Dentre os verbos terminados em 'ediar', 'mediar' (e seus derivados) são conjugados a partir do paradigma do verbo 'passear', ao passo que os demais são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 11,
+        "total": 13,
         "models": [9],
         "entries": {
           "anediar": [9],
           "assediar": [9],
           "atediar": [9],
+          "comediar": [9],
           "desarremediar": [],
           "desatediar": [9],
           "desentediar": [9],
           "desremediar": [],
           "entediar": [9],
           "obsediar": [9],
+          "promediar": [9],
           "sediar": [9],
           "tragediar": [9]
         }
@@ -56077,10 +56293,12 @@
   },
   "esver": {
     "...": {
-      "type": [1],
+      "type": [2],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Todos os verbos terminados em 'esver' seguem o paradigma de conjugação dos verbos derivados de 'ver'¹"],
+        "ref": {
+          "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
+        }
       },
       "abundance1": {},
       "canonical1": {
@@ -56134,9 +56352,9 @@
       "test": [false],
       "verbs": {
         "total": 2,
-        "models": [],
+        "models": [89],
         "entries": {
-          "desver": [],
+          "desver": [89],
           "tresver": []
         }
       }
