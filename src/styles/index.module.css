@@ -280,3 +280,38 @@
 .foot_info {
   padding-top: 40px;
 }
+
+.progressContainer {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Define uma largura máxima fixa */
+  height: 8px;
+  background-color: #e5e7eb; /* Fundo cinza */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Barra animada */
+.progressBar {
+  position: absolute;
+  height: 100%;
+  background-color: #4a8df8; /* Azul do progresso */
+  border-radius: 4px;
+  animation: progressIndeterminate 2s infinite;
+}
+
+/* Animação da barra de progresso */
+@keyframes progressIndeterminate {
+  0% {
+    left: -40%;
+    width: 30%;
+  }
+  50% {
+    left: 30%;
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    width: 30%;
+  }
+}
