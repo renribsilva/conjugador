@@ -2,13 +2,13 @@
   "1": {
     "ref": ["passar"],
     "class": [1],
-    "total": [6329],
+    "total": [6330],
     "group": ["A"]
   },
   "2": {
     "ref": ["bater"],
     "class": [1],
-    "total": [121],
+    "total": [118],
     "group": ["A"]
   },
   "3": {
@@ -104,7 +104,7 @@
   "18": {
     "ref": ["pernoitar"],
     "class": [1],
-    "total": [93],
+    "total": [94],
     "group": ["A"]
   },
   "19": {
@@ -116,7 +116,7 @@
   "20": {
     "ref": ["apoiar"],
     "class": [1],
-    "total": [11],
+    "total": [12],
     "group": ["A"]
   },
   "21": {
@@ -128,7 +128,7 @@
   "22": {
     "ref": ["poupar"],
     "class": [1],
-    "total": [110],
+    "total": [109],
     "group": ["A"]
   },
   "23": {
@@ -158,7 +158,7 @@
   "27": {
     "ref": ["mexer"],
     "class": [1],
-    "total": [455],
+    "total": [454],
     "group": ["C"]
   },
   "28": {
@@ -194,25 +194,25 @@
   "33": {
     "ref": ["atacar"],
     "class": [1],
-    "total": [1003],
+    "total": [1007],
     "group": ["D"]
   },
   "34": {
     "ref": ["afagar"],
     "class": [1],
-    "total": [515],
+    "total": [516],
     "group": ["D"]
   },
   "35": {
     "ref": ["dançar"],
     "class": [1],
-    "total": [354],
+    "total": [355],
     "group": ["D"]
   },
   "36": {
     "ref": ["vencer"],
     "class": [1],
-    "total": [371],
+    "total": [370],
     "group": ["D"]
   },
   "37": {
@@ -284,7 +284,7 @@
   "48": {
     "ref": ["polir"],
     "class": [2],
-    "total": [6],
+    "total": [5],
     "group": ["E"]
   },
   "49": {
@@ -494,13 +494,13 @@
   "83": {
     "ref": ["pôr"],
     "class": [2],
-    "total": [1],
+    "total": [2],
     "group": ["J"]
   },
   "84": {
     "ref": ["propor"],
     "class": [2],
-    "total": [40],
+    "total": [39],
     "group": ["J"]
   },
   "85": {
@@ -530,7 +530,7 @@
   "89": {
     "ref": ["ver"],
     "class": [2],
-    "total": [8],
+    "total": [9],
     "group": ["J"]
   },
   "90": {

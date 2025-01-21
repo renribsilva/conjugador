@@ -3402,6 +3402,84 @@
         }
       }
     },
+    "contrair": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Com exceção de 'embair', que é defectivo, todos os verbos terminados em 'air' seguem o padrão de conjugação do verbo irregular 'sair'¹"],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "contract": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "VT": {
+          "": {
+            "pr_ind": ["p1"]
+          },
+          "i": {
+            "pr_ind": ["p2", "p3"],
+            "im1": ["p2", "p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          },
+          "í": {
+            "pr_ind": ["p4"],
+            "pt1_ind": ["p2", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p6"],
+            "fut_sub": ["p2", "p6"],
+            "inf": ["p2", "p6"],
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "i": {
+            "pr_ind": ["p1"]
+          },
+          "ia": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "a": {
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "ís": {
+            "pr_ind": ["p5"]
+          },
+          "í": {
+            "pt1_ind": ["p1"],
+            "im1": ["p5"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [15],
+        "entries": {
+          "contrair": [15]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -3457,14 +3535,13 @@
       },
       "test": [false],
       "verbs": {
-        "total": 22,
+        "total": 21,
         "models": [15],
         "entries": {
           "arrair": [],
           "atrair": [15],
           "açair": [15],
           "cair": [15],
-          "contrair": [15],
           "decair": [15],
           "descontrair": [15],
           "desvair": [15],
@@ -20515,16 +20592,142 @@
       },
       "test": [false],
       "verbs": {
-        "total": 7,
+        "total": 5,
         "models": [77],
         "entries": {
           "bem-querer": [77],
-          "benquerer": [77],
           "desquerer": [77],
           "entrequerer": [77],
           "maisquerer": [77],
-          "malquerer": [77],
           "querer": [77]
+        }
+      }
+    },
+    "benquerer": {
+      "type": [2, 4],
+      "note": {
+        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do singular do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "benquist": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "quis4": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "queir4": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [77],
+        "entries": {
+          "benquerer": [77]
+        }
+      }
+    },
+    "malquerer": {
+      "type": [2, 4],
+      "note": {
+        "plain": ["O verbo 'querer' e seus derivados fazem 'quero' na 1ª pessoa do singular do Presente do Indicativo (exceto o verbo 'requerer' que faz 'requeiro'¹)."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "malquist": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "quis4": {
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          },
+          "queir4": {
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pr_ind": ["p3"],
+            "im1": ["p2"]
+          },
+          "é": {
+            "pt3_ind": ["p4", "p5"]
+          }
+        },
+        "NP": {
+          "": {
+            "pt1_ind": ["p1", "p3"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [77],
+        "entries": {
+          "malquerer": [77]
         }
       }
     },
@@ -22050,6 +22253,42 @@
         }
       }
     },
+    "reverter": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ertar' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "revers": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [27],
+        "entries": {
+          "reverter": [27]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -22063,7 +22302,7 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 16,
+        "total": 15,
         "models": [27],
         "entries": {
           "ambiverter": [],
@@ -22077,7 +22316,6 @@
           "introverter": [27],
           "reconverter": [27],
           "retroverter": [27],
-          "reverter": [27],
           "soverter": [27],
           "subverter": [27],
           "transverter": [27],
@@ -30380,6 +30618,96 @@
         }
       }
     },
+    "restringir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ingir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "restrit": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [39],
+        "entries": {
+          "restringir": [39]
+        }
+      }
+    },
+    "retingir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'ingir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "restint": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [39],
+        "entries": {
+          "retingir": [39]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -30402,7 +30730,7 @@
       },
       "test": [false],
       "verbs": {
-        "total": 18,
+        "total": 16,
         "models": [39],
         "entries": {
           "acingir": [39],
@@ -30419,8 +30747,6 @@
           "percingir": [39],
           "precingir": [39],
           "recingir": [39],
-          "restringir": [39],
-          "retingir": [39],
           "ringir": [39],
           "vasoconstringir": []
         }
@@ -38149,6 +38475,42 @@
         }
       }
     },
+    "revolver": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'olver' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "revolt": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [28],
+        "entries": {
+          "revolver": [28]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -38162,7 +38524,7 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 13,
+        "total": 12,
         "models": [28],
         "entries": {
           "absolver": [28],
@@ -38174,7 +38536,6 @@
           "hipodesenvolver": [],
           "persolver": [28],
           "redissolver": [28],
-          "revolver": [28],
           "solver": [28],
           "subdesenvolver": [],
           "volver": [28]
@@ -48054,6 +48415,42 @@
         }
       }
     },
+    "retundir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'undir' são regulares¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "retus": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {},
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [3],
+        "entries": {
+          "retundir": [3]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -48067,7 +48464,7 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 15,
+        "total": 14,
         "models": [3],
         "entries": {
           "afundir": [3],
@@ -48082,7 +48479,6 @@
           "radiofundir": [],
           "refundir": [3],
           "reinfundir": [3],
-          "retundir": [3],
           "teledifundir": [],
           "transfundir": [3]
         }
@@ -49704,6 +50100,51 @@
         }
       }
     },
+    "ressurgir": {
+      "type": [1, 4],
+      "note": {
+        "plain": ["Todos os verbos terminados em 'urgir' são regulares, mas algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "ref": {
+          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          ]
+        }
+      },
+      "abundance1": {
+        "RAD": {
+          "ressurret": {
+            "pa": ["n"]
+          }
+        },
+        "VT": {
+          "o": {
+            "pa": ["n"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"]
+          }
+        }
+      },
+      "canonical1": {
+        "RAD": {
+          "j1": {
+            "pr_ind": ["p1"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p3", "p4", "p6"],
+            "im2": ["p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [39],
+        "entries": {
+          "ressurgir": [39]
+        }
+      }
+    },
     "...": {
       "type": [1],
       "note": {
@@ -49726,12 +50167,11 @@
       },
       "test": [false],
       "verbs": {
-        "total": 4,
+        "total": 3,
         "models": [39],
         "entries": {
           "assurgir": [39],
           "exsurgir": [39],
-          "ressurgir": [39],
           "turgir": [39]
         }
       }

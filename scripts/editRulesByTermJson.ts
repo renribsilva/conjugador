@@ -72,7 +72,8 @@ async function editRulesByTerm() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = ["esver"]
+    let specificMainKey: string | string[] | null = null
+
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
     }
@@ -113,7 +114,6 @@ async function editRulesByTerm() {
         dataChanged = true;
       }
 
-      // Filtrar verbos correspondentes ao mainKey
       const filteredVerbs = Object.entries(allVerbsData)
       .filter(([_, value]) => value.ending.includes(mainKey))
       .map(([key]) => key);
