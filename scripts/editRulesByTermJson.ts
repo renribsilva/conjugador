@@ -225,27 +225,29 @@ async function editRulesByTerm() {
       });
     });
 
-    let maxMainKey = '';
-    let maxTotal = 0;
-
     console.log(`Calculando o total de terminações verbais...`);
     const totalTerm = Object.entries(rulesByTermData).length
     console.log(`- total: ${totalTerm}`);
 
-    console.log(`Verificando terminação com maior quantidade de verbos...`)
+    console.log(`Verificando as 3 terminações com mais verbos...`);
+
+    const totals: { mainKey: string; total: number }[] = [];
 
     Object.entries(rulesByTermData).forEach(([mainKey, mainKeyData]) => {
-      Object.entries(mainKeyData).forEach(([subKey, subKeyData]) => {
-        const total = subKeyData.verbs?.total || 0;
-        if (total > maxTotal) {
-          maxTotal = total;
-          maxMainKey = mainKey;
-        }
+      let mainKeyTotal = 0;
+      Object.values(mainKeyData).forEach((subKeyData) => {
+        mainKeyTotal += subKeyData.verbs?.total || 0;
       });
+      totals.push({ mainKey, total: mainKeyTotal });
     });
 
-    console.log(`- mainKey com mais verbos: ${maxMainKey}`);
-    console.log(`- total: ${maxTotal}`);
+    totals.sort((a, b) => b.total - a.total);
+
+    const top3 = totals.slice(0, 3);
+
+    top3.forEach((entry, index) => {
+      console.log(`- ${entry.mainKey}: ${entry.total}`);
+    });
 
     await compareAndLogMissingVerbs(allVerbsData, rulesByTermData);
 

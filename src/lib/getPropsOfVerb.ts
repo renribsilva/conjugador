@@ -1,4 +1,4 @@
-import { findTermRule } from "./findTermVerbs";
+import { findTermRule } from "./findTermRules";
 import allVerbsData from '../json/allVerbs.json'
 import modelsData from '../json/models.json'
 import groupedModelsData from '../json/groupedModels.json'
