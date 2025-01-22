@@ -184,6 +184,6 @@ export async function getPropsOfVerb(
 
 }
 
-getPropsOfVerb("aceitar", true, "aceitar").then(test => {
-  console.log(test);
-});
+// getPropsOfVerb("aceitar", true, "aceitar").then(test => {
+//   console.log(test);
+// });
