@@ -1,5 +1,5 @@
 import reg from '../json/rulesForReg.json'; 
-import { findNoRegRule } from './findNoRegVerbs';
+import { findTermRule } from './findTermVerbs';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import allVerbsData from "../json/allVerbs.json"
@@ -12,22 +12,22 @@ export const conjugateVerb = (verb: string) => {
   const NOT_FOUND = "N/A";
 
   const F = (P: string, M: string, D: string, key: string): string => {
-    const result = findNoRegRule(verb, P, M, D);
+    const result = findTermRule(verb, P, M, D);
     const rule = result.results[key].hasTarget ? result.results[key].rule : NOT_FOUND;
     return rule ?? NOT_FOUND; 
   };
 
   const getCanonical = (P: string, M: string, num: number, canonical: string): string => {
     
-    const forRrule = findNoRegRule(verb, P, M, "RAD").results[canonical].hasTarget;
-    const forVTrule = findNoRegRule(verb, P, M, "VT").results[canonical].hasTarget;
-    const forMTrule = findNoRegRule(verb, P, M, "MT").results[canonical].hasTarget;
-    const forNPrule = findNoRegRule(verb, P, M, "NP").results[canonical].hasTarget;
+    const forRrule = findTermRule(verb, P, M, "RAD").results[canonical].hasTarget;
+    const forVTrule = findTermRule(verb, P, M, "VT").results[canonical].hasTarget;
+    const forMTrule = findTermRule(verb, P, M, "MT").results[canonical].hasTarget;
+    const forNPrule = findTermRule(verb, P, M, "NP").results[canonical].hasTarget;
 
-    const Rcontent = findNoRegRule(verb, P, M, "RAD").results[canonical].rule;
-    const VTcontent = findNoRegRule(verb, P, M, "VT").results[canonical].rule;
-    const MTcontent = findNoRegRule(verb, P, M, "MT").results[canonical].rule;
-    const NPcontent = findNoRegRule(verb, P, M, "NP").results[canonical].rule;
+    const Rcontent = findTermRule(verb, P, M, "RAD").results[canonical].rule;
+    const VTcontent = findTermRule(verb, P, M, "VT").results[canonical].rule;
+    const MTcontent = findTermRule(verb, P, M, "MT").results[canonical].rule;
+    const NPcontent = findTermRule(verb, P, M, "NP").results[canonical].rule;
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -69,15 +69,15 @@ export const conjugateVerb = (verb: string) => {
 
   const getAbundance = (P: string, M: string, num: number, abundance: string): string | null => {
     
-    const forRrule = findNoRegRule(verb, P, M, "RAD").results[abundance].hasTarget;
-    const forVTrule = findNoRegRule(verb, P, M, "VT").results[abundance].hasTarget;
-    const forMTrule = findNoRegRule(verb, P, M, "MT").results[abundance].hasTarget;
-    const forNPrule = findNoRegRule(verb, P, M, "NP").results[abundance].hasTarget;
+    const forRrule = findTermRule(verb, P, M, "RAD").results[abundance].hasTarget;
+    const forVTrule = findTermRule(verb, P, M, "VT").results[abundance].hasTarget;
+    const forMTrule = findTermRule(verb, P, M, "MT").results[abundance].hasTarget;
+    const forNPrule = findTermRule(verb, P, M, "NP").results[abundance].hasTarget;
 
-    const Rcontent = findNoRegRule(verb, P, M, "RAD").results[abundance].rule;
-    const VTcontent = findNoRegRule(verb, P, M, "VT").results[abundance].rule;
-    const MTcontent = findNoRegRule(verb, P, M, "MT").results[abundance].rule;
-    const NPcontent = findNoRegRule(verb, P, M, "NP").results[abundance].rule;
+    const Rcontent = findTermRule(verb, P, M, "RAD").results[abundance].rule;
+    const VTcontent = findTermRule(verb, P, M, "VT").results[abundance].rule;
+    const MTcontent = findTermRule(verb, P, M, "MT").results[abundance].rule;
+    const NPcontent = findTermRule(verb, P, M, "NP").results[abundance].rule;
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 

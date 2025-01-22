@@ -1,4 +1,7 @@
-import { findNoRegRule } from "./findNoRegVerbs";
+import { findTermRule } from "./findTermVerbs";
+import allVerbsData from '../json/allVerbs.json'
+import modelsData from '../json/models.json'
+import groupedModelsData from '../json/groupedModels.json'
 
 interface VerbProps {
   hasTargetCanonical1: boolean | null;
@@ -12,6 +15,7 @@ interface VerbProps {
   note_plain: string[] | null;
   note_ref: object | null;
   afixo: string | null | undefined;
+  model: object | null
 }
 
 function mapTypesToStrings(types: any) {
@@ -26,7 +30,12 @@ function mapTypesToStrings(types: any) {
   return types.map(type => typeDescriptions[type] || "tipo desconhecido");
 }
 
-export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVerb: string): Promise<VerbProps[]> {
+export async function getPropsOfVerb(
+  verb: string, 
+  isValidVerb: boolean, 
+  validVerb: string): Promise<VerbProps[]> 
+  {
+
   const P = ["p1", "p2", "p3", "p4", "p5", "p6", "n"];
   const M = ["gd", "pa", "pr_ind", "pt1_ind", "pt2_ind", "pt3_ind", "ft1_ind", "ft2_ind", 
              "pr_sub", "pt_sub", "fut_sub", "inf", "im1", "im2"];
@@ -37,12 +46,38 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
   const resultsMap = new Map<string, VerbProps>();
   // console.log(resultsMap)
 
+  const modelNumbers = allVerbsData[verb]?.model || [];
+
+  const accumulatedData: Record<string, any[]> = {};
+
+  modelNumbers.forEach((num: number) => {
+    const model = modelsData[num];
+    const verbKey = model?.ref?.[0];
+    const totalKey = model?.total?.[0];
+    const groupKey = model?.group?.[0];
+    const groupDescription = groupedModelsData[groupKey]?.[0];
+
+    if (!accumulatedData.modelNumber) accumulatedData.modelNumber = [];
+    if (!accumulatedData.verbRef) accumulatedData.verbRef = [];
+    if (!accumulatedData.total) accumulatedData.total = [];
+    if (!accumulatedData.group) accumulatedData.group = [];
+    if (!accumulatedData.groupDescription) accumulatedData.groupDescription = [];
+
+    accumulatedData.modelNumber.push(num);
+    if (verbKey) accumulatedData.verbRef.push(verbKey);
+    if (totalKey) accumulatedData.total.push(totalKey);
+    if (groupKey) accumulatedData.group.push(groupKey);
+    if (groupDescription) accumulatedData.groupDescription.push(groupDescription);
+  });
+
+  // console.log(accumulatedData);
+
   // Iterando sobre as combinações P, M, D
   for (let p of P) {
     for (let m of M) {
       for (let d of D) {
 
-        const result = findNoRegRule(verb, p, m, d);
+        const result = findTermRule(verb, p, m, d);
         // console.log(result)
 
         if (result) {
@@ -66,7 +101,8 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
                 types: mappedTypes,
                 note_plain,
                 note_ref,
-                afixo: result.afixo
+                afixo: result.afixo,
+                model: accumulatedData
 
               };
 
@@ -90,10 +126,11 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
               termination: result.termination,
               termEntrie: result.termEntrie,
               verb: validVerb,
-              types: ["regular"],
+              types: mappedTypes,
               note_plain,
               note_ref,
-              afixo: result.afixo
+              afixo: result.afixo,
+              model: accumulatedData
             };
 
             const key = `${validVerb}-${p}-${m}-${d}`;
@@ -125,6 +162,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
       note_plain: curr.note_plain || acc.note_plain,
       note_ref: curr.note_ref || acc.note_ref,
       afixo: curr.afixo || acc.afixo,
+      model: curr.model || acc.model
     }),
     {
       hasTargetCanonical1: null,
@@ -138,6 +176,7 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
       note_plain: null,
       note_ref: null,
       afixo: null,
+      model: null
     }
   );
 
@@ -145,6 +184,6 @@ export async function getPropsOfVerb(verb: string, isValidVerb: boolean, validVe
 
 }
 
-// getPropsOfVerb("atender", true, "atender").then(test => {
-//   console.log(test);
-// });
+getPropsOfVerb("aceitar", true, "aceitar").then(test => {
+  console.log(test);
+});

@@ -23,6 +23,7 @@ export const flowOfReact = () => {
     note_plain: string[] | null | undefined;
     note_ref: object | null;
     types: string[] | null | undefined;
+    model: object | null;
     loading: boolean;
     suggestions: string[] | null;
     showSuggestions: boolean;
@@ -70,6 +71,7 @@ export const flowOfReact = () => {
     note_plain: null,
     note_ref: null,
     types: null,
+    model: null,
     loading: false,
     suggestions: null,
     showButton: false,
@@ -156,6 +158,7 @@ export const flowOfReact = () => {
         note_plain: null,
         note_ref: null,
         types: null,
+        model: null,
 
         goThrough: false,
         enter: false,
@@ -354,6 +357,7 @@ export const flowOfReact = () => {
           note_plain: propsOfWord[0].note_plain,
           note_ref: propsOfWord[0].note_ref,
           afixo: propsOfWord[0].afixo,
+          model: propsOfWord[0].model,
           showReviewButton: true,
           goThrough: false,
 
@@ -401,6 +405,7 @@ export const flowOfReact = () => {
     state.note_plain,
     state.note_ref,
     state.types,
+    state.model,
     state.loading,
     state.suggestions,
     state.showButton,
@@ -462,6 +467,7 @@ export const flowOfReact = () => {
         types: state.types,
         note_plain: state.note_plain, 
         note_ref: state.note_ref,
+        model: state.model
       },
       loading: state.loading,
       suggestions: state.suggestions,

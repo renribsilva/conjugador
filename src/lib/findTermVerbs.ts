@@ -65,7 +65,7 @@ function getDefaultResponse() {
   };
 }
 
-export function findNoRegRule(verb: string, P: string, M: string, D: string) {
+export function findTermRule(verb: string, P: string, M: string, D: string) {
 
   const { terminationData: terminationData, termination } = getVerbKeys(verb, terminations);
   // console.log(termination)
@@ -219,5 +219,5 @@ export function findNoRegRule(verb: string, P: string, M: string, D: string) {
 
 }
 
-// const res = findNoRegRule('atender', 'p3','pt2_ind',"RAD")
+// const res = findTermRule('ser', 'p1','pr_ind',"VT")
 // console.log(res)

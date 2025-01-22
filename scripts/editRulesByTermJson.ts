@@ -72,7 +72,7 @@ async function editRulesByTerm() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = null
+    let specificMainKey: string | string[] | null = ["crer"]
 
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));
@@ -207,6 +207,7 @@ async function editRulesByTerm() {
       .reduce((acc, curr) => acc + curr, 0);
 
     console.log(`- total: ${totalVerbs}`);
+
     console.log("Verificando a ocorrência de verbos em mais de uma terminação...")
 
     const seenVerbs = new Set();
@@ -226,6 +227,10 @@ async function editRulesByTerm() {
 
     let maxMainKey = '';
     let maxTotal = 0;
+
+    console.log(`Calculando o total de terminações verbais...`);
+    const totalTerm = Object.entries(rulesByTermData).length
+    console.log(`- total: ${totalTerm}`);
 
     console.log(`Verificando terminação com maior quantidade de verbos...`)
 
