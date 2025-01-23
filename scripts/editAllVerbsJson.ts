@@ -130,7 +130,7 @@ export default async function ediAllVerbsJson(): Promise<void> {
     
       const processBatch = async (batch: string[], startIndex: number) => {
         
-        const useCustomVerbs = false;
+        const useCustomVerbs = true;
         if (useCustomVerbs) {
           batch = ["desempregar"];
         }
@@ -202,13 +202,13 @@ export default async function ediAllVerbsJson(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    const removedVerbs = Object.keys(currentVerbs).filter(
-      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    );
+    // const removedVerbs = Object.keys(currentVerbs).filter(
+    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    // );
 
-    removedVerbs.forEach((normalized) => {
-      delete J[normalized];
-    });
+    // removedVerbs.forEach((normalized) => {
+    //   delete J[normalized];
+    // });
 
     const sortedJ = Object.keys(J)
       .sort()
