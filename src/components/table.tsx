@@ -203,7 +203,7 @@ export default function Table ({ conj, canonical }: { conj: Conjugation, canonic
         ) : isAfirmative ? (
           <>
             <Line p="p1" q="eu" order={1}/>
-            <Line p="p2" q="tu" suffix="tu" order={1}/>
+            <Line p="p2" q="tu" suffix="te" order={1}/>
             <Line p="p3" q={activePronoun? `${activePronoun}` : "ela"} suffix="se" order={1}/>
             <Line p="p4" q="nós" suffix="nos" removeS={true} order={1}/>
             <Line p="p5" q="vós" suffix="vos" order={1}/>
