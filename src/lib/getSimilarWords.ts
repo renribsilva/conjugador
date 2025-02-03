@@ -74,6 +74,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-const word = "crido";
+const word = "poer";
 const result = getSimilarVerbs(word);
 console.log(result);
