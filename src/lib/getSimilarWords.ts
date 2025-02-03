@@ -74,6 +74,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-const word = "poer";
-const result = getSimilarVerbs(word);
-console.log(result);
+// const word = "poer";
+// const result = getSimilarVerbs(word);
+// console.log(result);
