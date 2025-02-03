@@ -48,7 +48,6 @@ function combinedSimilarity(a: string, b: string): number {
   const levenshteinScore = 1 - levenshtein(a, b) / maxLevenshtein;
   const substringScore = substringSimilarity(a, b);
   const halfWeight = halfMatchWeight(a, b);
-
   return (levenshteinScore * 0.4) + (substringScore * 0.6) + halfWeight;
 }
 
@@ -66,6 +65,12 @@ export default function getSimilarVerbs(verb: string): string[] {
     }
   }
 
+  // console.log(similarVerbs
+  //   .sort((a, b) => b.score - a.score)
+  //   .slice(0, 5)
+  //   .map(v => `${v.value}: ${v.score.toFixed(2)}`)
+  //   .join("\n"));
+
   similarVerbs.sort((a, b) => b.score - a.score);
 
   const uniqueVerbs = Array.from(new Set(similarVerbs.map(v => v.value)));
@@ -73,7 +78,5 @@ export default function getSimilarVerbs(verb: string): string[] {
   return uniqueVerbs.slice(0, 5);
 }
 
-// Exemplo de uso
 // const word = "poer";
-// const result = getSimilarVerbs(word);
-// console.log(result);
+// getSimilarVerbs(word);
