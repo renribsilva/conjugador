@@ -1,4 +1,3 @@
-import { addHookAliases } from "next/dist/server/require-hook";
 import jsonData from "../json/allVerbs.json";
 import { AllVerbsEntry } from "../types";
 import { ni } from "./normalizeVerb";
@@ -31,36 +30,50 @@ function substringSimilarity(a: string, b: string): number {
   return common / maxLength;
 }
 
+/**
+ * Retorna um peso extra caso a primeira metade da palavra seja semelhante à outra palavra.
+ */
+function halfMatchWeight(a: string, b: string): number {
+  const halfA = a.slice(0, Math.ceil(a.length / 2));
+  const halfB = b.slice(0, Math.ceil(b.length / 2));
+  
+  const maxHalfLength = Math.max(halfA.length, halfB.length);
+  const halfLevenshteinScore = 1 - levenshtein(halfA, halfB) / maxHalfLength;
+
+  return halfLevenshteinScore * 0.3; // Peso extra de até 30%
+}
+
 function combinedSimilarity(a: string, b: string): number {
   const maxLevenshtein = Math.max(a.length, b.length);
   const levenshteinScore = 1 - levenshtein(a, b) / maxLevenshtein;
   const substringScore = substringSimilarity(a, b);
-  return (levenshteinScore * 0.4) + (substringScore * 0.6);
+  const halfWeight = halfMatchWeight(a, b);
+
+  return (levenshteinScore * 0.4) + (substringScore * 0.6) + halfWeight;
 }
 
 export default function getSimilarVerbs(verb: string): string[] {
-  const similarVerbs: { key: string; score: number }[] = [];
+  const normalizedVerb = ni(verb);
+  const similarVerbs: { value: string; score: number }[] = [];
 
-  for (const [key, values] of Object.entries(data)) {
-    for (const value of values.verb) {
-      if (value !== verb) {
-        const similarityScore = combinedSimilarity(ni(verb), ni(value));
-        similarVerbs.push({ key, score: similarityScore });
-      }
+  for (const key in data) {
+    const values = data[key];
+    const normalizedKey = ni(key);
+
+    if (normalizedKey !== normalizedVerb) {
+      const similarityScore = combinedSimilarity(normalizedVerb, normalizedKey);
+      similarVerbs.push({ value: values.verb[0], score: similarityScore });
     }
   }
 
   similarVerbs.sort((a, b) => b.score - a.score);
 
-  const topSimilar = similarVerbs.slice(0, 5);
-  while (topSimilar.length < 5 && similarVerbs.length > topSimilar.length) {
-    topSimilar.push(similarVerbs[topSimilar.length]);
-  }
+  const uniqueVerbs = Array.from(new Set(similarVerbs.map(v => v.value)));
 
-  return topSimilar.map(({ key }) => key);
+  return uniqueVerbs.slice(0, 5);
 }
 
 // Exemplo de uso
-// const word = "cohecer";
-// const result = getSimilarVerbs(word);
-// console.log(result);
+const word = "ser";
+const result = getSimilarVerbs(word);
+console.log(result);
