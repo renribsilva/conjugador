@@ -40,7 +40,7 @@ function halfMatchWeight(a: string, b: string): number {
   const maxHalfLength = Math.max(halfA.length, halfB.length);
   const halfLevenshteinScore = 1 - levenshtein(halfA, halfB) / maxHalfLength;
 
-  return halfLevenshteinScore * 0.3; // Peso extra de até 30%
+  return halfLevenshteinScore * 0.4; // Peso extra de até 30%
 }
 
 function combinedSimilarity(a: string, b: string): number {
@@ -74,6 +74,6 @@ export default function getSimilarVerbs(verb: string): string[] {
 }
 
 // Exemplo de uso
-const word = "ser";
+const word = "crido";
 const result = getSimilarVerbs(word);
 console.log(result);
