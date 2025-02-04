@@ -1709,23 +1709,6 @@
       }
     }
   },
-  "acir": {
-    "...": {
-      "type": [1],
-      "note": {
-        "plain": [],
-        "ref": {}
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 0,
-        "models": [],
-        "entries": {}
-      }
-    }
-  },
   "acrar": {
     "...": {
       "type": [1],
@@ -2633,7 +2616,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'agir' são regulares, observando que algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "plain": ["Todos os verbos terminados em 'agir' são regulares e sofrem alterações em algumas flexões, quais sejam, a substituição do  'g' por 'j' antes do 'o' e do 'a' desinenciais. Todavia, o verbo 'vagir' é uma exceção a essa regra: nas formas que seriam com 'j' ele é defectivo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
@@ -2668,7 +2651,7 @@
     "coagir": {
       "type": [1, 4],
       "note": {
-        "plain": ["Todos os verbos terminados em 'agir' são regulares, observando que algumas flexões têm o 'g' substituído por 'j' antes do 'o' e do 'a' desinenciais¹."],
+        "plain": ["Todos os verbos terminados em 'agir' são regulares e sofrem alterações em algumas flexões, quais sejam, a substituição do  'g' por 'j' antes do 'o' e do 'a' desinenciais. Todavia, o verbo 'vagir' é uma exceção a essa regra: nas formas que seriam com 'j' ele é defectivo¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
