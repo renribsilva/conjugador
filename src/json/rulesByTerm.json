@@ -2834,9 +2834,13 @@
       },
       "test": [false],
       "verbs": {
-        "total": 1,
+        "total": 5,
         "models": [58],
         "entries": {
+          "aguar": [58],
+          "anaguar": [58],
+          "desaguar": [58],
+          "enxaguar": [58],
           "fraguar": [58]
         }
       }
@@ -4565,57 +4569,34 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir', 'entalir' e 'estalir' que, segundo o Dicionário Houaiss², tem a conjugação completa. Vale acrescentar que 'combalir' e 'balir' apresentam defectividade distintas¹"],
+        "plain": ["Dentre os verbos terminados em 'alir', há tanto verbos regulares quanto verbos defectivos. De acordo com o Dicionário Online Houaiss¹, 'encalir', 'entalir' e 'estalir' são regulares e têm a conjugação completa. Já 'balir' (seus derivados) e 'falir' são defectivos e possuem defectividades distintas²."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
-          ]
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 2,
-        "models": [],
-        "entries": {
-          "entalir": [],
-          "estalir": []
-        }
-      }
-    },
-    "encalir": {
-      "type": [1],
-      "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir', 'entalir' e 'estalir' que, segundo o Dicionário Houaiss², tem a conjugação completa. Vale acrescentar que 'combalir' e 'balir' apresentam defectividade distintas¹"],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {},
-      "test": [false],
-      "verbs": {
-        "total": 1,
+        "total": 3,
         "models": [3],
         "entries": {
-          "encalir": [3]
+          "encalir": [3],
+          "entalir": [],
+          "estalir": []
         }
       }
     },
     "combalir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir', 'entalir' e 'estalir' que, segundo o Dicionário Houaiss², tem a conjugação completa. Vale acrescentar que 'combalir' e 'balir' apresentam defectividade distintas¹"],
+        "plain": ["Dentre os verbos terminados em 'alir', há tanto verbos regulares quanto verbos defectivos. De acordo com o Dicionário Online Houaiss¹, 'encalir', 'entalir' e 'estalir' são regulares e têm a conjugação completa. Já 'balir' (seus derivados) e 'falir' são defectivos e possuem defectividades distintas²."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
-          ]
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -4665,12 +4646,11 @@
     "balir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir', 'entalir' e 'estalir' que, segundo o Dicionário Houaiss², tem a conjugação completa. Vale acrescentar que 'combalir' e 'balir' apresentam defectividade distintas¹"],
+        "plain": ["Dentre os verbos terminados em 'alir', há tanto verbos regulares quanto verbos defectivos. De acordo com o Dicionário Online Houaiss¹, 'encalir', 'entalir' e 'estalir' são regulares e têm a conjugação completa. Já 'balir' (seus derivados) e 'falir' são defectivos e possuem defectividades distintas²."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
-          ]
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
@@ -4720,12 +4700,11 @@
     "falir": {
       "type": [1, 3],
       "note": {
-        "plain": ["Quase todos os verbos terminados em 'alir' são defectivos, com excessão de 'encalir', 'entalir' e 'estalir' que, segundo o Dicionário Houaiss², tem a conjugação completa. Vale acrescentar que 'combalir' e 'balir' apresentam defectividade distintas¹"],
+        "plain": ["Dentre os verbos terminados em 'alir', há tanto verbos regulares quanto verbos defectivos. De acordo com o Dicionário Online Houaiss¹, 'encalir', 'entalir' e 'estalir' são regulares e têm a conjugação completa. Já 'balir' (seus derivados) e 'falir' são defectivos e possuem defectividades distintas²."],
         "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
+          "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
-          ]
+          "2": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
       },
       "abundance1": {},
