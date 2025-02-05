@@ -50376,7 +50376,7 @@
     "model": [60],
     "ending": ["iar"],
     "only_reflexive": [false],
-    "multiple_conj": [false]
+    "multiple_conj": [true]
   },
   "desmobilizar": {
     "verb": ["desmobilizar"],
