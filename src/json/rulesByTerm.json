@@ -2816,7 +2816,7 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": ["Dentre os verbos terminados em 'aguar', o verbo 'fraguar' segue o paradigma de conjugação do verbo 'enxaguar'¹."],
+        "plain": ["Todos os verbos terminados em 'aguar' seguem o paradigma de conjugação do verbo 'enxaguar'¹."],
         "ref": {
           "1": ["Azeredo JC. Dicionário Houaiss de conjugação de verbos. 1. ed. Rio de Janeiro: PubliFolha; 2012."]
         }
@@ -2834,70 +2834,14 @@
       },
       "test": [false],
       "verbs": {
-        "total": 1,
+        "total": 5,
         "models": [58],
         "entries": {
-          "fraguar": [58]
-        }
-      }
-    },
-    "...aguar": {
-      "type": [1],
-      "note": {
-        "plain": ["Nos verbos terminados em 'aguar', é comum e gramaticalmente correto ocorrer acentuação nas formas rizotônicas, isto é, nas formas que apresentam a vogal tônica no radical¹"],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "águ3": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p6"],
-            "im1": ["p2", "p3", "p6"],
-            "im2": ["p2", "p3", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 3,
-        "models": [58],
-        "entries": {
+          "aguar": [58],
           "anaguar": [58],
           "desaguar": [58],
-          "enxaguar": [58]
-        }
-      }
-    },
-    "aguar": {
-      "type": [1],
-      "note": {
-        "plain": ["Nos verbos terminados em 'aguar', é comum e gramaticalmente correto ocorrer acentuação nas formas rizotônicas, isto é, nas formas que apresentam a vogal tônica no radical¹"],
-        "ref": {
-          "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ]
-        }
-      },
-      "abundance1": {},
-      "canonical1": {
-        "RAD": {
-          "águ3": {
-            "pr_ind": ["p1", "p2", "p3", "p6"],
-            "pr_sub": ["p1", "p2", "p3", "p6"],
-            "im1": ["p2", "p3", "p6"],
-            "im2": ["p2", "p3", "p6"]
-          }
-        }
-      },
-      "test": [false],
-      "verbs": {
-        "total": 1,
-        "models": [58],
-        "entries": {
-          "aguar": [58]
+          "enxaguar": [58],
+          "fraguar": [58]
         }
       }
     }
