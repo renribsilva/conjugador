@@ -1265,11 +1265,9 @@
     "...abrir": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '-abrido' no particípio, mas sim '-aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo cuja origem é constroversa (um cognato de 'abrir' ou uma contração de 'dessaborido'). De qualquer modo, ele geralmente significa 'desagradável, áspero, rude, descomedido, imoderado, etc.' em um contexto formal, de acordo com o dicionário online Houaiss²."],
+        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '-abrido' no particípio, mas sim '-aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ]
         }
       },
@@ -1307,11 +1305,9 @@
     "abrir": {
       "type": [1],
       "note": {
-        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '-abrido' no particípio, mas sim '-aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹. Vale lembrar que a palavra 'desabrido' é um adjetivo com um etimológico distinto (uma contração de 'dessaborido') e significa 'desagradável, áspero, rude, descomedido, imoderado, etc.', de acordo com o dicionário online Houaiss²."],
+        "plain": ["Todos os verbos terminados em 'abrir' são regulares. Entretanto, o verbo 'abrir' e seus derivados não segue a forma regular '-abrido' no particípio, mas sim '-aberto'. O verbo 'desabrir', por exemplo, tem como particípio 'desaberto'¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
-          ],
-          "2": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"
           ]
         }
       },
