@@ -50724,7 +50724,16 @@
         }
       },
       "abundance1": {},
-      "canonical1": {},
+      "canonical1": {
+        "RAD": {
+          "úst2": {
+            "pr_ind": ["p1", "p2", "p3", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p6"],
+            "im1": ["p2", "p3", "p6"],
+            "im2": ["p2", "p3", "p6"]
+          }
+        }
+      },
       "test": [false],
       "verbs": {
         "total": 1,
