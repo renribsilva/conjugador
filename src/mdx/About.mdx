@@ -5,125 +5,119 @@ _typescript_, uma linguagem de programação. O seu código, aberto, pode ser
 conferido clicando neste [link](https://github.com/renribsilva/conjugador) ou em _source_,
 no rodapé desta página.
 
-### foda-se a Academia Brasileira de Letras (ABL)
+### Do elitismo da Academia Brasileira de Letras (ABL)
 
-em primeiro lugar, é preciso dizer: foda-se a ABL. foda-se o seu elitismo 
-e os seus direitos autorais que de "direito" não têm nada. digo isso porque
-não existe uma forma prática de usar o Vocabulário Ortográfico da Língua Portuguesa (VOLP) 
-para o desenvolvimento de softwares e coisas afins. sim, é possível usar o buscador
-oficial do VOLP no site da ABL, mas esse tipo de acesso é bastante limitado
-e reduz drasticamente as possibilidades de uso do seu conteúdo, 
-seja para pesquisa científica, seja para o desenvolvimento de tecnologias ou softwares
-baseados na nossa própria língua. frente a isso, é necessário buscar alternativas, 
-a exemplo da base de palavras da língua portuguesa brasileira 
-do projeto VERO do LibreOffice. esse projeto disponibiliza uma base
-de vocábulos bastante robusta, que pode ser acessada
-livremente por qualquer pessoa neste 
-[link](https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic). 
-graças a essa iniciativa, temos acesso a um acervo digital com mais de 312 mil 
-palavras da língua portuguesa, que podem ser utilizdas, por exemplo,
-no desenvolvimento de ferramentas como conjugadores
-de verbos ou outros recursos linguísticos.
+Em primeiro lugar, é preciso repudiar o elitismo da Academia Brasileira 
+de Letras e os seus direitos autorais, que de "direito" não têm nada. 
+Digo isso porque o Vocabulário Ortográfico da Língua Portuguesa (VOLP), 
+construído com recursos públicos, tem acesso restrito. Sim, é possível 
+usar o buscador oficial do VOLP no site da ABL; todavia, não é possível 
+acessar diretamente a sua base de dados, sem a qual a pesquisa científica 
+ou o desenvolvimento de softwares livres baseados na nossa própria língua 
+tornam-se inviáveis. Por isso, é preciso buscar alternativas, como a base 
+de palavras da língua portuguesa brasileira do projeto VERO do LibreOffice. 
+Esse projeto disponibiliza uma base de vocábulos bastante robusta, acessível 
+neste [link](https://raw.githubusercontent.com/LibreOffice/dictionaries/refs/heads/master/pt_BR/pt_BR.dic). 
+Graças a essa iniciativa, temos acesso a um acervo digital com mais 
+de 312 mil palavras da língua portuguesa, que podem ser utilizadas, 
+por exemplo, no desenvolvimento de ferramentas como conjugadores de 
+verbos ou outros recursos linguísticos.
 
-### pré-processamento de dados
+### Do pré-processamento de dados
 
-mas então, como construir a porra de um conjugador de verbos utilizando 
-apenas uma lista de palavras? o primeiro passo é processar essa lista, 
-filtrando as palavras mais relevantes para o conjugador: aquelas que 
-terminam em "ar", "er", "ir" e "por". nessa etapa inicial, foram identificados 
-aproximadamente 23 mil vocábulos, verbos e não verbos.
-entre essas palavras estavam termos como "celular" e "irregular",
-que claramente não são verbos. isso tornou necessário um trabalho de 
-filtragem manual. foi preciso revisar uma a uma as palavras, verificando 
-quais eram de fato verbos e quais não eram, utilizando para isso duas referências
-ortográficas: o Dicionário Houiass de Conjugação de Verbos[^1] e o já 
-mencionado VOLP[^2].
-esse processo foi demorado e não podia ser ignorado, já que a intenção 
-era tornar o conjugador o mais confiável possível. como resultado, 
-pode-se reduzir a lista para pouco mais de 19 mil verbos no total (ver **dados**).
+Mas então, como construir a porra de um conjugador de verbos usando apenas 
+uma lista de palavras? O primeiro passo é processar essa lista, filtrando 
+as palavras mais relevantes para o conjugador: aquelas que terminam em "ar", 
+"er", "ir" e "por". Nesta etapa inicial, foram identificados aproximadamente 
+23 mil vocábulos, verbos e outros tipos de palavras. Entre essas palavras, 
+estavam termos como "celular" e "irregular", que claramente não são verbos. 
+Isso tornou necessário um trabalho de filtragem manual. Foi preciso revisar 
+uma a uma as palavras, verificando quais eram de fato verbos e quais não 
+eram, utilizando para isso duas referências ortográficas: o Dicionário 
+Houiass de Conjugação de Verbos[^1] e o já  mencionado VOLP[^2]. Esse 
+processo foi demorado e não podia ser ignorado, já que a intenção era 
+tornar o conjugador o mais confiável possível. Como resultado, a lista 
+para pouco mais de 19 mil verbos no total (ver dados).
 
-### combinação das partes do verbo 
+### Da combinação das partes do verbo
 
-agora, entrando no mérito do código, aqui tão ruim quando o de um amador, dado que 
-sou um e não passo de um curioso que usa a codificação como  hobbie e 
-que gosta de aprender coisas novas, incluindo
-palavras, quero falar um pouco sobre como este 
-conjugador utiliza a lista do verificador ortográfico do LibreOffice. 
-a pergunta que surge é: como, afinal, ocorre a conjugação? bem, o processo se baseia 
-na combinação das partes que compõem os verbos. você deve saber que
-o verbo é composto por três elementos principais: radical, vogal temática e 
-sufixo (que pode ser modo-temporal e/ou número-pessoal). a primeira parte, 
-o radical, é extraída diretamente da lista fornecida pelo LibreOffice — fácil, né?
-já as demais partes (vogal temática e sufixos) exigiram a criação de 'regras de conjugação'
-(ver `/src/json/rulesbyTerm.json` em **source**)
-baseadas nas terminações verbais (segmento final de uma palavra),
-tanto para verbos regulares quanto para irregulares. com isso, 
-o restante do processo se torna intuitivo: combinar as partes de acordo 
-com as regras estabelecidas. 
+Agora, entrando no mérito do código, quero falar um pouco sobre como 
+este conjugador utiliza a lista do verificador ortográfico do LibreOffice. 
+A pergunta que surge é: como, afinal, ocorre a conjugação? Bem, o processo 
+se baseia na combinação das partes que compõem os verbos. Você deve saber 
+que o verbo é composto por três elementos principais: radical, vogal 
+temática e sufixo (que pode ser modo-temporal e/ou número-pessoal). 
+A primeira parte, o radical, é extraída diretamente da lista fornecida 
+pelo LibreOffice — fácil, né? Já as demais partes (vogal temática e sufixos) 
+exigiram a criação de 'regras de conjugação' (ver /src/json/rulesbyTerm.json em source) 
+baseadas nas terminações verbais (segmento final de uma palavra), tanto para verbos 
+regulares quanto para irregulares. Com isso, o restante do processo torna-se intuitivo: 
+combinar as partes de acordo com as regras estabelecidas. 
 
-### exibição da conjugação na tela
+### Da exibição da conjugação na tela
 
-tudo acontece com um simples pressionar da tecla Enter na caixa de texto. 
-como funciona isso? ao pressionar Enter, a palavra digitada é pesquisada na 
-lista de palavras previamente processada, e dela é extraído um radical.
-em seguida, esse radical é combinado com suas respectivas regras de conjugação, 
+Tudo acontece com um simples pressionar da tecla Enter na caixa de texto. 
+Como funciona isso? Ao pressionar Enter, a palavra digitada é pesquisada 
+na lista de palavras previamente processada, e dela é extraído um radical. 
+Em seguida, esse radical é combinado com suas respectivas regras de conjugação, 
 gerando todas as formas verbais correspondentes a cada modo, tempo e flexão. 
-após a criação, as conjugações são armazenadas temporariamente na nuvem, 
-utilizando o PostgreSQL. a partir de lá, as formas conjugadas são organizadas 
-e exibidas em uma tabela. tudo isso ocorre de maneira menos rápida quando comparado
-com conjugadores que já têm as conjugações prontas e que só precisam exibi-las. 
-diferentemente disso, fazemos a conjugação na hora e as descartamos depois. com efeito,
-nenhuma informação é permanentemente armazenada na nuvem: 
-a cada nova requisição, os dados da conjugação anterior são apagados, 
-e o processo é reiniciado do zero.
+Após a criação, as conjugações são armazenadas temporariamente na nuvem, 
+utilizando o PostgreSQL. A partir de lá, as formas conjugadas são organizadas 
+e exibidas em uma tabela. Tudo isso ocorre de maneira menos rápida quando 
+comparado a conjugadores que já têm as conjugações prontas e que só precisam 
+exibi-las. Diferentemente disso, fazemos a conjugação na hora e a descartamos 
+depois. Com efeito, nenhuma informação é armazenada permanentemente na nuvem: 
+a cada nova requisição, os dados da conjugação anterior são apagados e o 
+processo é reiniciado do zero.
 
-### coleta de dados solicitada
+### Da coleta de dados solicitada
 
-então quer dizer que nenhum dado é coletado nessa giribosca?
-pera lá! Sim, mas só se você quiser. os dados utilizados por esta aplicação
-só são armazenados se você permitir. como assim? bem, os únicos dados que
-interessam a este conjugador são aqueles que podem ajudar a corrigir erros ou
-expandir a lista de verbos. e como isso funciona? com botões! no rodapé da página
-de conjugação, há um botão que você pode clicar caso encontre algum erro.
-além disso, quando o conjugador não encontra a palavra digitada na nossa 
-lista de verbos, outro botão aparece, permitindo que você sugira sua inclusão.
-essas ações capturam a palavra digitada no conjugador e a salvam para posterior
-revisão ou inserção na base de dados. e só isso! nada é coletado sem a sua solicitação.
-vale lembrar que qualquer pessoa pode verificar o código, copiá-lo, modificá-lo ou 
-reproduzi-lo como quiser, bastanto acessá-lo [aqui](http://github.com/renribsilva/conjugador)
+Então, quer dizer que nenhum dado é coletado nessa giribosca? Pera lá! 
+Sim, mas só se você quiser. os dados utilizados por esta aplicação só 
+são armazenados se você permitir. Como assim? Bem, os únicos dados que 
+interessam a este conjugador são aqueles que podem ajudar a corrigir 
+erros ou expandir a lista de verbos. E como isso funciona? Com botões! 
+No rodapé da página de conjugação, há um botão que você pode clicar caso 
+encontre algum erro. Além disso, quando o conjugador não encontra a palavra 
+digitada na nossa lista de verbos, outro botão aparece, permitindo que você 
+sugira sua inclusão. Essas ações capturam a palavra digitada no conjugador 
+e a salvam para posterior revisão ou inserção na base de dados. É só isso! 
+Nada é coletado sem a sua solicitação. Vale lembrar que qualquer pessoa pode 
+verificar o código, copiá-lo, modificá-lo ou reproduzi-lo como quiser, 
+bastanto acessá-lo [aqui](http://github.com/renribsilva/conjugador)
 
-### design voltado para o que interessa
+### Do design voltado para o que interessa
 
-na era da economia da atenção, é até estranho acessar sites que não 
-ficam o tempo todo piscando e tentando capturar nossa atenção. essa estranheza
-acontece porque nos acostumamos com o lixo, o assédio visual e a mercantilização de tudo.
-para tentar fazer algo diferente, pensei em um design leve, sem recursos apelativos. 
-o objetivo aqui é conjugar a porra de um verbo, nada mais. não é vender porra de nada,
-nem caçar cliques. não há imagens ou figuras, exceto o botão de alternância entre 
-o modo escuro e claro, pois muitas pessoas têm sensibilidade à luz. 
-além disso, a aplicação possui apenas uma única página. o que isso significa?
-significa que não há www.conjugador-gules/alguma-coisa por aqui. 
-toda a navegação ocorre em uma única página (no _home_),
-que reage às ações do visitante — seja clicando aqui ou ali, ou pedindo a conjugação
- de um verbo. tudo acontece em um só lugar.
+Na era da economia da atenção, é até estranho acessar sites que não ficam o 
+tempo todo piscando e tentando capturar nossa atenção. Essa estranheza acontece 
+porque nos acostumamos com o lixo, o assédio visual e a mercantilização de tudo. 
+Para tentar fazer algo diferente, pensei em um design leve, sem recursos apelativos. 
+O objetivo aqui é conjugar a porra de um verbo, nada mais. Não é vender porcaria 
+de nada, nem caçar cliques. Não há imagens ou figuras, exceto o botão de alternância 
+entre o modo escuro e claro, pois muitas pessoas têm sensibilidade à luz. 
+Além disso, a aplicação possui apenas uma única página. O que isso significa? 
+Significa que não há www.conjugador-gules/alguma-coisa por aqui. Toda a 
+navegação ocorre em uma única página (na home), que reage às ações do 
+visitante — seja clicando aqui ou ali, ou pedindo a conjugação de um verbo. 
+Tudo acontece em um só lugar.
 
-### referências bibliográficas
+### Das referências bibliográficas
 
-outro aspecto importante deste conjugador é a referência bibliográfica 
-utilizada para apoiar seu desenvolvimento. sem dúvida, a referência mais importante
-para a construção deste conjugado é a tese 
-**Morfologia do verbo português em obras de referência**[^3]
-da doutora Maria Elizabeth Leuba Salum. foi a partir desse trabalho que
-as 'regras de conjugação' baseadas em terminações verbais (segmento final de uma palavra)
-se tornaram possíveis. com efeito, ele foi uma verdadeira luz 
-e um norte para o desenvolvimento do conjugador. além desse estudo, pude contar também
-com as referências **Dicionário Houaiss de Conjugação de Verbos**[^1] e 
-**Dicionário Online Houiass**[^4], que foram fundamentais para os momentos de incerteza.
-e assim este conjugador ganhou vida e fundamento.
+Outro aspecto relevante deste conjugador é a referência bibliográfica 
+utilizada para fundamentar seu desenvolvimento. Sem dúvida, a referência 
+mais significativa para a construção deste conjugador é a tese Morfologia 
+do verbo português em obras de referência[^3] da doutora Maria Elizabeth 
+Leuba Salum. Foi a partir deste trabalho que as 'regras de conjugação' 
+baseadas em terminações verbais (segmento final de uma palavra) se tornaram 
+viáveis. De fato, ele foi uma verdadeira luz e um norte para o desenvolvimento 
+do conjugador. Além deste estudo, também pude contar com as referências 
+Dicionário Houaiss de Conjugação de Verbos[^1] e Dicionário Online Houiass[^4], 
+que foram fundamentais para os momentos de incerteza. E, assim, este conjugador 
+ganhou vida e fundamento.
 
-### benefícios deste conjugador para o seu criador
+### Dos benefícios deste conjugador para o seu criador
 
-por fim, motivos que me trouxeram aqui:
+Por fim, motivos que me trouxeram aqui:
 
 1. diversão para os momentos de tédio: é divertido codificar;
 1. dissipação da ansiedade em momentos de crise;
