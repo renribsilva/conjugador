@@ -28,15 +28,13 @@ Mas então, como construir a porra de um conjugador de verbos usando apenas
 uma lista de palavras? O primeiro passo é processar essa lista, filtrando 
 as palavras mais relevantes para o conjugador: aquelas que terminam em "ar", 
 "er", "ir" e "por". Nesta etapa inicial, foram identificados aproximadamente 
-23 mil vocábulos, verbos e outros tipos de palavras. Entre essas palavras, 
-estavam termos como "celular" e "irregular", que claramente não são verbos. 
-Isso tornou necessário um trabalho de filtragem manual. Foi preciso revisar 
-uma a uma as palavras, verificando quais eram de fato verbos e quais não 
-eram, utilizando para isso duas referências ortográficas: o Dicionário 
-Houiass de Conjugação de Verbos[^1] e o já  mencionado VOLP[^2]. Esse 
-processo foi demorado e não podia ser ignorado, já que a intenção era 
-tornar o conjugador o mais confiável possível. Como resultado, a lista 
-para pouco mais de 19 mil verbos no total (ver dados).
+23 mil vocábulos, verbos e outros tipos de palavras. Assim, palavras 
+como "celular" e "irregular", que claramente não são verbos, foram removidas 
+manualmente da lista, em um processo longo e trabalhoso. Para tanto,
+foi necessário usar duas referências ortográficas: o Dicionário 
+Houiass de Conjugação de Verbos[^1] e o já  mencionado VOLP[^2]. 
+Como resultado disso, a lista de 23 mil vocábulos foi reduzida
+para pouco mais de 19 mil verbos no total (ver dados para mais detalhes).
 
 ### Da combinação das partes do verbo
 
