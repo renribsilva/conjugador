@@ -35912,8 +35912,10 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
-        "ref": {}
+        "plain": ["Os verbos 'foder' e 'eroder' são regulares"],
+        "ref": {
+          "1": ["Houaiss UOL [Internet]. houaiss.uol.com.br. Available from: https://houaiss.uol.com.br/"]
+        }
       },
       "abundance1": {},
       "canonical1": {},
