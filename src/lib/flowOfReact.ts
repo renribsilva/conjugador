@@ -115,11 +115,32 @@ export const flowOfReact = () => {
     }));
   };
 
-  const updateProgress = (n: number) => {
-    setState(prev => ({
-      ...prev,
-      progress: n,
-    }));
+  const targetProgressRef = useRef<number>(100);
+  const animationRef = useRef<number | null>(null);
+
+  const updateProgress = (target: number) => {
+    targetProgressRef.current = target;
+
+    if (animationRef.current !== null) return; // já animando
+
+    const animate = () => {
+      setState(prev => {
+        const current = prev.progress;
+        const diff = targetProgressRef.current - current;
+
+        if (Math.abs(diff) < 1) {
+          animationRef.current = null;
+          return { ...prev, progress: targetProgressRef.current };
+        }
+
+        const step = diff * 0.1; // suavidade da curva
+        return { ...prev, progress: current + step };
+      });
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
   };
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -436,6 +457,9 @@ export const flowOfReact = () => {
   ];
   
   useEffect(() => {
+
+    
+
     const data = {
       // inputValue: state.inputValue,
       inputReq: state.inputReq,
