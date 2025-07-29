@@ -30,23 +30,23 @@ export default async function ediAllVerbsJson(): Promise<void> {
 
     console.log('Iniciando o processamento...');
 
-    const prBRWords = await readTxtLines(ptBRPath);
+    const ptBRWords = await readTxtLines(ptBRPath);
     
-    console.log(`- quantidade de vocábulos encontrados: ${prBRWords.length}`);
+    console.log(`- quantidade de vocábulos encontrados: ${ptBRWords.length}`);
     console.log('Adicionando novos verbos à lista do libreOffice...');
 
     const newWords = await readTxtLines(newVerbsPath);
     const normNewWords = newWords.map(verb => nw(verb)).filter(verb => verb !== '');
-    const existingWordsSet = new Set(prBRWords.map(verb => nw(verb)));
+    const existingWordsSet = new Set(ptBRWords.map(verb => nw(verb)));
     const filteredNewWords = normNewWords.filter(verb => !existingWordsSet.has(verb));
     const notAddedWords = normNewWords.filter(verb => existingWordsSet.has(verb));
 
     console.log('- verbos que NÃO serão adicionados:', notAddedWords);
     console.log(`- quantidade de novos verbos a serem adicionados: ${newWords.filter(Boolean).length}`);
     
-    const updatedWords = [...prBRWords, ...filteredNewWords];
+    const updatedWords = [...ptBRWords, ...filteredNewWords];
 
-    console.log(`- quantidade de verbos efetivamente acrescidos: ${updatedWords.length - prBRWords.length}`);
+    console.log(`- quantidade de verbos efetivamente acrescidos: ${updatedWords.length - ptBRWords.length}`);
     console.log(`- nova quantidade de vocábulos após complementação: ${updatedWords.length}`);
 
     console.log("Filtrando os vocábulos terminados em 'ar', 'er', 'ir' e 'por'...");
@@ -202,6 +202,7 @@ export default async function ediAllVerbsJson(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
+    // remove entradas que não fazem parte de finalVerbs
     const removedVerbs = Object.keys(currentVerbs).filter(
       (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
     );
