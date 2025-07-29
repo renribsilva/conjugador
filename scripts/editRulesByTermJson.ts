@@ -306,9 +306,9 @@ async function saveToFile(data: any, filePath: string) {
 }
 
 async function executeInOrder() {
-  // await editAllVerbsJson();
+  await editAllVerbsJson();
   await editRulesByTerm();
-  // await editModelJson();
+  await editModelJson();
 }
 
 executeInOrder();

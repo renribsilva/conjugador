@@ -10,7 +10,7 @@ import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
 const listsDir = path.join(process.cwd(), 'lists');
-const ptBRPath = path.join(libreOfficeSourceDir, 'pt_BR.txt');
+const ptBRPath = path.join(libreOfficeSourceDir, 'pt_BR.dic');
 const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
 const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
@@ -202,13 +202,13 @@ export default async function ediAllVerbsJson(): Promise<void> {
 
     const J = await processVerbsAsync(finalVerbs, currentVerbs);
 
-    // const removedVerbs = Object.keys(currentVerbs).filter(
-    //   (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
-    // );
+    const removedVerbs = Object.keys(currentVerbs).filter(
+      (normalized) => !finalVerbs.some((verb) => ni(verb) === normalized)
+    );
 
-    // removedVerbs.forEach((normalized) => {
-    //   delete J[normalized];
-    // });
+    removedVerbs.forEach((normalized) => {
+      delete J[normalized];
+    });
 
     const sortedJ = Object.keys(J)
       .sort()
