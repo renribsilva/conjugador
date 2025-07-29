@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import pullLibreOfficeWords from './pullLibreOfficeWords';
-import readTxtLines from './readTxtLines';
+import pullLibreOfficeWords from './utils/pullLibreOfficeWords';
 import { ni, nw } from '../src/lib/normalizeVerb';
-import { filterNonVerbs } from './filterNonVerbs';
 import { VerbEntry } from '../src/types';
 import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
+import readTxtLines from './utils/readTxtLines';
+import { filterNonVerbs } from './utils/filterNonVerbs';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');

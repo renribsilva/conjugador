@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { nw } from '../src/lib/normalizeVerb';
 
-function createAfixosJson() {
+export default function editAfixosJson() {
 
   const caminhoTxt = path.join(process.cwd(), 'lists', 'afixos.txt');
   const caminhoJson = path.join(process.cwd(), 'src', 'json', 'afixos.json');
@@ -21,4 +21,4 @@ function createAfixosJson() {
   
 }
 
-createAfixosJson();
+editAfixosJson()

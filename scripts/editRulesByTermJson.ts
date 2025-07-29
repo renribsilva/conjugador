@@ -4,6 +4,7 @@ import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 import { ni } from '../src/lib/normalizeVerb';
 import editModelJson from './editModelsJson';
 import editAllVerbsJson from './editAllVerbsJson';
+import editAfixosJson from './editAfixosJson';
 
 interface VerbData {
   verb: string[];
@@ -306,6 +307,7 @@ async function saveToFile(data: any, filePath: string) {
 }
 
 async function executeInOrder() {
+  await editAfixosJson();
   await editAllVerbsJson();
   await editRulesByTerm();
   await editModelJson();
