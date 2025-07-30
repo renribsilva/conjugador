@@ -307,7 +307,7 @@ const Index = () => {
                 <>
                   <Home />
                   <div className={styles.knowmore}>
-                    <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
+                    <Button onClick={handleSobre}>saber mais</Button>
                   </div>
                 </>
               }
