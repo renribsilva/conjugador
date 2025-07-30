@@ -26,9 +26,7 @@ sudo npm i
 
 1. Adicionar verbos
 
-Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt`
-e para filtrar, no arquivo `lists/nonVerb.txt`. Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem.
-Como resultado, os arquivos json em `src/json/` usados pela aplicação serão atualizados.
+    Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt` e para filtrar, no arquivo `lists/nonVerb.txt`. Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem. Como resultado, os arquivos json em `src/json/` usados pela aplicação serão atualizados.
 
 ## rodar a aplicação localmente
 
