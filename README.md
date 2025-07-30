@@ -4,7 +4,7 @@
 *[Vercel](https://vercel.com)*.
 
 A base de dados de vocábulos é oriunda do do projeto VERO do LibreOffice
-(lista de palavras do corretor ortográfico), que pode ser acessada livremente através do [link aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic). No repositório do projeto, essa lista de vocábulos foi salva em pt-BR.dic, na pasta /libreOfficeSource. A base contém mais de 312 mil palavras, das quais cerca de 19 mil são verbos terminados em *-ar, -er, -ir e -por*.
+(lista de palavras do corretor ortográfico), que pode ser acessada livremente através do [link aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic). No repositório do projeto, essa lista de vocábulos foi salva em `pt-BR.dic`, na pasta `libreOfficeSource`. A base contém mais de 312 mil palavras, das quais cerca de 19 mil são verbos terminados em *-ar, -er, -ir e -por*.
 
 ## primeiros passos
 
