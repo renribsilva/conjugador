@@ -83,7 +83,7 @@ export const flowOfReact = () => {
     showReviewButton: false,
     goThrough: false,
     enter: false,
-    progress: 100,
+    progress: 0,
 
     originalVerb: null,
     variationVerb: null,
@@ -340,7 +340,7 @@ export const flowOfReact = () => {
           return
         }
 
-        updateProgress(60);
+        updateProgress(50);
         
         const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
         
@@ -366,11 +366,9 @@ export const flowOfReact = () => {
           
         }));
 
-        updateProgress(70);
+        updateProgress(100);
 
         await conjVerbByAPI(ni(findedWord));
-
-        updateProgress(100);
 
         await fetchConjugations();
 

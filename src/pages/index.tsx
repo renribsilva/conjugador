@@ -172,13 +172,13 @@ const Index = () => {
     if (currentProgress === 100) {
       setCurrentProgress(0)
       const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 4, 25));
+        setCurrentProgress(prev => Math.min(prev + 3, 25));
       }, 10);
       return () => clearInterval(interval);
     }
     if (currentProgress < state.progress) {
       const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 4, state.progress));
+        setCurrentProgress(prev => Math.min(prev + 3, state.progress));
       }, 10);
       return () => clearInterval(interval);
     }
