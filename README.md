@@ -26,9 +26,16 @@ sudo npm i
 
 1. Adicionar verbos
 
-    Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt` e para filtrar, no arquivo `lists/nonVerb.txt`. Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem. Como resultado, os arquivos json em `src/json/` usados pela aplicação serão atualizados.
+    Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt` 
+2. Filtrar verbos
 
-## rodar a aplicação localmente
+    Para filtrar verbos da lista do libreOffice, deve-se inserir o vocábulo desejado no arquivo `lists/nonVerb.txt`. 
+    
+3. Atualizando arquivos Json
+
+    Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem.
+
+## Rodar a aplicação localmente
 
 Pode-se rodar a aplicação localmente chamando no terminal, por exemplo, 
 
