@@ -33,7 +33,7 @@ sudo npm i
     
 3. Atualizando arquivos Json
 
-    Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem.
+    Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem. Isso pode levar algumas algumas horas.
 
 ## Rodar a aplicação localmente
 
