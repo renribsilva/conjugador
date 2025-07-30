@@ -1,13 +1,10 @@
-# conjugador-gules
+# Conjugador-gules
 
-**Conjugador-gules**
-é um conjugador de verbos da língua portuguesa brasileira. Ele foi escrito essencialmente em 
-_typescript_, uma linguagem de programação. Ele foi estruturado com [nextjs](https://nextjs.org/) 
-e [postgresql](https://www.postgresql.org/), dois recursos totalmente
-gratuitos dentro da hospedagem do vercel, tabém grátis. Neste projeto, a base de vocábulos é a lista de palavras do corretor ortográfico do libreOffice, que pode ser acessada
-livremente [aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic)
-— no projeto, ela foi salva em `pt-BR.dic` na pasta `/libreOfficeSource` do 
-repositório da aplicação. Essa base de vocábulos conta com mais de 312 mil entradas, dentre as quais cerca de 19 mil são verbos terminadas em 'ar', 'er', 'ir' e 'por'.
+**Conjugador-gules** é uma ferramenta para conjugação de verbos da língua portuguesa brasileira. O projeto foi desenvolvido principalmente em *Typescript* e utiliza *[Nextjs](https://nextjs.org/)* 
+e *[Postgresql](https://www.postgresql.org/)* — ambos recursos gratuitos na hospedagem da 
+*[Vercel](https://vercel.com).
+
+A base de dados de vocábulos é oriunda do corretor ortográfico do LibreOffice, que pode ser acessada livremente através do [link aqui](https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic). No repositório do projeto, essa lista de vocábulos foi salva em pt-BR.dic, na pasta /libreOfficeSource. A base contém mais de 312 mil palavras, das quais cerca de 19 mil são verbos terminados em *-ar, -er, -ir e -por*.
 
 ## primeiros passos
 
