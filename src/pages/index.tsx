@@ -310,7 +310,7 @@ const Index = () => {
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
                 </>
-              }
+              } 
               {!state.showHome && state.showSobre && !state.showStatistic &&
                 <>
                   <About />
