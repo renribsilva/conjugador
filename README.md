@@ -41,8 +41,8 @@ Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel
 
 ```
 List of relations
-Schema	Name	Type	Owner
-public 	json 	table 	default
+Schema	Name        	Type	Owner
+public 	json 	        table 	default
 public 	requisitions 	table 	default
 ```
 
