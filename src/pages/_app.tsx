@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import React from 'react'; // Corrigido aqui
+import React from 'react';
 import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
 import Head from 'next/head';
