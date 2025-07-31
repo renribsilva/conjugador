@@ -27,8 +27,6 @@ const Index = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentProgress, setCurrentProgress] = useState<number>(0);
 
-  preLoadFunction();
-
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
     setState({ 
@@ -209,6 +207,7 @@ const Index = () => {
 
   useEffect(() => {
     setMounted(true);
+    preLoadFunction();
   }, []);
   
   if (!mounted) {
