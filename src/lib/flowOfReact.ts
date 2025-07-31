@@ -122,6 +122,12 @@ export const flowOfReact = () => {
     }));
   };
 
+  const preLoadFunction = async() => {
+    await conjVerbByAPI(ni("recomeçar"));
+    await isValidVerbByAPI(ni("recomeçar")); 
+    await getPropsOfVerb("recomeçar", true, "recomeçar");
+  }
+
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
     if (event.key === "Enter" && state.inputValue !== "") {
@@ -491,5 +497,6 @@ export const flowOfReact = () => {
     state,
     setState,
     handleKeyDown,
+    preLoadFunction,
   };
 };

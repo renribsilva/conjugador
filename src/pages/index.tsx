@@ -20,12 +20,14 @@ import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 
 const Index = () => {
 
-  const { state, setState, handleKeyDown } = flowOfReact();
+  const { state, setState, handleKeyDown, preLoadFunction } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
   const [mounted, setMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentProgress, setCurrentProgress] = useState<number>(0);
+
+  preLoadFunction();
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
