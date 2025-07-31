@@ -37,7 +37,7 @@ sudo npm i
 
 ## Integrar com o Postgres
 
-Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel.com/docs/postgres) (esta aplicação optou pelo provedor Neon). Para esta aplicação, apenas duas tabelas são necessárias: uma para armazenar a conjugação e outra para armazenar as sugestões de novos verbos.
+Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel.com/docs/postgres) (optou-se pelo provedor Neon). Nele, apenas duas tabelas são necessárias: uma para armazenar a conjugação e outra para armazenar as sugestões de novos verbos.
 
 ```
 List of relations
