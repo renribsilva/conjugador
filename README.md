@@ -24,6 +24,8 @@ sudo npm i
 
 ## Adicionar ou filtrar palavras da lista do libreOffice
 
+É possível adicionar novos verbos ao conjugador ou filtrar palavras contantes da lista de vocábulos do projeto VERO a fim de otimizar a base de verbos deste conjugador.
+
 1. Adicionar verbos
 
     Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt` 
