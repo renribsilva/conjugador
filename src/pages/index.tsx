@@ -20,7 +20,7 @@ import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 
 const Index = () => {
 
-  const { state, setState, handleKeyDown, preLoadFunction } = flowOfReact();
+  const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
   const [mounted, setMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -207,7 +207,6 @@ const Index = () => {
 
   useEffect(() => {
     setMounted(true);
-    preLoadFunction();
   }, []);
   
   if (!mounted) {
