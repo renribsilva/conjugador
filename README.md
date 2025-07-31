@@ -65,7 +65,7 @@ type 	    text
 data 	    jsonb 			
 ```
 
-A primeira coluna, `type` deve ter duas linhas, uma chamada de `new_verbs` e outra chamada de `review_conj`.
+A primeira coluna de `requisitions`, `type`, deve ter duas linhas: uma chamada de `new_verbs` e outra chamada de `review_conj`.
 
 ```
 #	type
@@ -77,14 +77,14 @@ Feito isso, todas as chaves criadas em _Environments_ do projeto Vercel devem se
 
 ```
 # Created by Vercel CLI
-POSTGRES_DATABASE=*************
-POSTGRES_HOST=*************
-POSTGRES_PASSWORD=*************
-POSTGRES_PRISMA_URL=*************
-POSTGRES_URL=*************
-POSTGRES_URL_NON_POOLING=*************
-POSTGRES_URL_NO_SSL=*************
-POSTGRES_USER=*************
+POSTGRES_DATABASE=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_PRISMA_URL=
+POSTGRES_URL=
+POSTGRES_URL_NON_POOLING=
+POSTGRES_URL_NO_SSL=
+POSTGRES_USER=
 ```
 
 O uso de estrutura e nomes distintos implica necessariamente na moficação das APIs contidas em `src/pages/api`. 
