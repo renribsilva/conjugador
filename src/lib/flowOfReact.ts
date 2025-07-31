@@ -366,9 +366,9 @@ export const flowOfReact = () => {
           
         }));
 
-        updateProgress(100);
-
         await conjVerbByAPI(ni(findedWord));
+
+        updateProgress(100);
 
         await fetchConjugations();
 
