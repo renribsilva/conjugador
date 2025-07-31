@@ -37,11 +37,33 @@ sudo npm i
 
 ## Integrar com o Postgres
 
-Essa aplicação utiliza o serviço gratuito Postgres próprio da Vercel. Para esta aplicação,
-apenas duas tabelas são necessárias, uma para armazenar a conjugação e outra para armazenar
-as sugestões de novos verbos. A primeira deve ser nomeada `json` (com uma única coluna nomeada de _conjugations_) e a segunda, `requisitions` (com duas colunas, uma nomeada de _type_ e outra de )_data_). O uso de estrutura e nomes distintos implica necessariamente na moficação das APIs contidas em `src/pages/api`. 
+Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel.com/docs/postgres) (esta aplicação optou pelo provedor Neon). Para esta aplicação, apenas duas tabelas são necessárias: uma para armazenar a conjugação e outra para armazenar as sugestões de novos verbos.
 
-Com o Postgres integrado a Vercel, todas as chaves contidas em _Environments_ do seu projeto Vercel deverão ser copiadas em um arquivo `.env` na raiz da aplicação (pode-se usar as dependências da [Vercel CLI](https://vercel.com/docs/cli/env) para fazer isso automaticamente)
+```
+List of relations
+Schema	Name	Type	Owner
+public 	json 	table 	default
+public 	requisitions 	table 	default
+```
+
+A primeira deve ser nomeada `json` (com uma única coluna nomeada de `conjugations`) 
+ 
+ ```
+ Table "public.json"
+Column	        Type
+conjugations 	jsonb
+ ```
+ 
+A segunda, `requisitions` (com duas colunas, uma nomeada de `type` e outra de `data`). 
+
+```
+Table "public.requisitions"
+Column	    Type
+type 	    text 			
+data 	    jsonb 			
+```
+
+Feito isso, todas as chaves criadas em _Environments_ do projeto Vercel devem ser copiadas em um arquivo `.env` na raiz da aplicação (pode-se usar a dependência da [Vercel CLI](https://vercel.com/docs/cli/env) para fazer isso automaticamente)
 
 ```
 # Created by Vercel CLI
@@ -54,6 +76,8 @@ POSTGRES_URL_NON_POOLING=*************
 POSTGRES_URL_NO_SSL=*************
 POSTGRES_USER=*************
 ```
+
+O uso de estrutura e nomes distintos implica necessariamente na moficação das APIs contidas em `src/pages/api`. 
 
 ## Rodar a aplicação localmente
 
