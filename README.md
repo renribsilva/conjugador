@@ -48,7 +48,7 @@ public 	json 	        table 	default
 public 	requisitions 	table 	default
 ```
 
-A primeira deve ser nomeada `json` (com uma única coluna nomeada de `conjugations`) 
+A primeira deve ser nomeada `json`, com uma única coluna nomeada de `conjugations`.
  
  ```
  Table "public.json"
@@ -56,13 +56,21 @@ Column	        Type
 conjugations 	jsonb
  ```
  
-A segunda, `requisitions` (com duas colunas, uma nomeada de `type` e outra de `data`). 
+A segunda deve ser nomeada `requisitions`, com duas colunas: `type` e `data`. 
 
 ```
 Table "public.requisitions"
 Column	    Type
 type 	    text 			
 data 	    jsonb 			
+```
+
+A primeira coluna, `type` deve ter duas linhas, uma chamada de `new_verbs` e outra chamada de `review_conj`.
+
+```
+#	type
+1	new_verbs
+2	review_conj
 ```
 
 Feito isso, todas as chaves criadas em _Environments_ do projeto Vercel devem ser copiadas em um arquivo `.env` na raiz da aplicação (pode-se usar a dependência da [Vercel CLI](https://vercel.com/docs/cli/env) para fazer isso automaticamente)
