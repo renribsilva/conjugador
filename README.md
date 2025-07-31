@@ -22,7 +22,7 @@ git clone https://github.com/renribsilva/conjugador
 sudo npm i
 ```
 
-## Adicionando ou filtrando palavras da lista do libreOffice
+## Adicionar ou filtrar palavras da lista do libreOffice
 
 1. Adicionar verbos
 
@@ -34,6 +34,26 @@ sudo npm i
 3. Atualizando arquivos Json
 
     Em seguida, os scripts `scripts/editAllVerbsJson.ts`, `scripts/editRulesByTermJson.ts` e `scripts/ModelsJson.ts` devem ser executados, nesta ordem. Isso pode levar algumas algumas horas.
+
+## Integrar com o Postgres
+
+Essa aplicação utiliza o serviço gratuito Postgres próprio da Vercel. Para esta aplicação,
+apenas duas tabelas são necessárias, uma para armazenar a conjugação e outra para armazenar
+as sugestões de novos verbos. A primeira deve ser nomeada `json` (com uma única coluna nomeada de _conjugations_) e a segunda, `requisitions` (com duas colunas, uma nomeada de _type_ e outra de )_data_). O uso de estrutura e nomes distintos implica necessariamente na moficação das APIs contidas em `src/pages/api`. 
+
+Com o Postgres integrado a Vercel, todas as chaves contidas em _Environments_ do seu projeto Vercel deverão ser copiadas em um arquivo `.env` na raiz da aplicação (pode-se usar as dependências da [Vercel CLI](https://vercel.com/docs/cli/env) para fazer isso automaticamente)
+
+```
+# Created by Vercel CLI
+POSTGRES_DATABASE=*************
+POSTGRES_HOST=*************
+POSTGRES_PASSWORD=*************
+POSTGRES_PRISMA_URL=*************
+POSTGRES_URL=*************
+POSTGRES_URL_NON_POOLING=*************
+POSTGRES_URL_NO_SSL=*************
+POSTGRES_USER=*************
+```
 
 ## Rodar a aplicação localmente
 
