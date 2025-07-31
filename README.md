@@ -27,7 +27,7 @@ sudo npm i
 1. Adicionar verbos
 
     Para adicionar novos verbos, deve-se acrescentar o novo vocábulo no arquivo `lists/newVerbs.txt` 
-2. Filtrar verbos
+2. Filtrar palavras da lista do libreOffice
 
     Para filtrar verbos da lista do libreOffice, deve-se inserir o vocábulo desejado no arquivo `lists/nonVerb.txt`. 
     
