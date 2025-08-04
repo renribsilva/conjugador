@@ -9,3 +9,15 @@ hasNonPrefixedVerb (V)
   forced (F) && similar (V) - reabracar/reabraçar
   forced (V) && similar (F) - realcar | remacar
   forced (V) && similar (V) - 
+
+!hasPunct (F)
+  forced (F) && similar (F) - 
+  forced (F) && similar (V) - 
+  forced (V) && similar (F) - 
+  forced (V) && similar (V) - 
+
+!hasPunct (V)
+  forced (F) && similar (F) - 
+  forced (F) && similar (V) - 
+  forced (V) && similar (F) - 
+  forced (V) && similar (V) - 
