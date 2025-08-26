@@ -228,6 +228,7 @@ const Index = () => {
               onKeyDown={(e) => { handleKeyDown(e) } }
               placeholder="amar, escrever, colorir, ..."
               maxLength={50}
+              disabled={state.isDisabled}
             />
           </div>
           <div className={styles.buttons_container}>

@@ -36,6 +36,7 @@ export const flowOfReact = () => {
     goThrough: boolean;
     enter: boolean;
     progress: number;
+    isDisabled: boolean;
 
     originalVerb: object | null;
     variationVerb: object| null,
@@ -84,6 +85,7 @@ export const flowOfReact = () => {
     goThrough: false,
     enter: false,
     progress: 0,
+    isDisabled: false,
 
     originalVerb: null,
     variationVerb: null,
@@ -163,6 +165,7 @@ export const flowOfReact = () => {
         goThrough: false,
         enter: false,
         progress: 0,
+        isDisabled: true,
 
         originalVerb: null,
         variationVerb: null,
@@ -193,6 +196,11 @@ export const flowOfReact = () => {
         }));
 
         updateProgress(100);
+
+        setState(prev => ({
+          ...prev,
+          isDisabled: false,
+        }));
 
         return
 
@@ -226,6 +234,11 @@ export const flowOfReact = () => {
 
         updateProgress(100);
 
+        setState(prev => ({
+          ...prev,
+          isDisabled: false,
+        }));
+
         return
 
       }
@@ -256,6 +269,11 @@ export const flowOfReact = () => {
         }));
 
         updateProgress(100);
+
+        setState(prev => ({
+          ...prev,
+          isDisabled: false,
+        }));
 
         return
       }
@@ -310,6 +328,11 @@ export const flowOfReact = () => {
 
         updateProgress(100);
 
+        setState(prev => ({
+          ...prev,
+          isDisabled: false,
+        }));
+
         return
 
       }
@@ -336,6 +359,11 @@ export const flowOfReact = () => {
           }));
 
           updateProgress(100);
+
+          setState(prev => ({
+            ...prev,
+            isDisabled: false,
+          }));
 
           return
         }
@@ -381,10 +409,20 @@ export const flowOfReact = () => {
       }
 
       updateProgress(100);
+      
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
 
     }
 
     updateProgress(100);
+
+    setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
 
   };
 
@@ -414,6 +452,7 @@ export const flowOfReact = () => {
     state.showReviewButton,
     state.goThrough,
     state.enter,
+    state.isDisabled,
     state.originalVerb,
     state.variationVerb,
     state.result,
@@ -481,7 +520,8 @@ export const flowOfReact = () => {
       showReviewButton: state.showReviewButton,
       goThrough: state.goThrough,
       enter: state.enter,
-      progress: state.progress
+      progress: state.progress,
+      isDisabled: state.isDisabled
     };
   
     console.log(data);

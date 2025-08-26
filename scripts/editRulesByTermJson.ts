@@ -35,6 +35,9 @@ const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
 const rulesByTermPath = path.join(process.cwd(), 'src/json/rulesByTerm.json');
 const modelsPath = path.join(process.cwd(), 'src/json/models.json');
 
+// SUBSTITUA NULL POR UMA TERMINAÇÃO VERBAL ESPECÍFICA PARA EXECUTAR O SCRIPT SELETIVAMENTE
+const specificMainKeyObject = null
+
 async function editRulesByTerm() {
   
   try {
@@ -70,7 +73,7 @@ async function editRulesByTerm() {
     let dataChanged = false;
     const startTime = Date.now();
 
-    let specificMainKey: string | string[] | null = "iar"
+    let specificMainKey: string | string[] | null = specificMainKeyObject
 
     if (Array.isArray(specificMainKey)) {
       specificMainKey = Array.from(new Set(specificMainKey));

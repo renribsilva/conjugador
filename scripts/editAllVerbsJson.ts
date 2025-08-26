@@ -15,6 +15,10 @@ const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
 const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
 
+// USE CUSTOMVERBS PARA EXECUTAR O SCRIPT DE FORMA SELETIVA
+const useCustomVerbs = false;
+const batchObject=["amar"]
+
 export default async function ediAllVerbsJson(): Promise<void> {
 
   try {
@@ -130,9 +134,8 @@ export default async function ediAllVerbsJson(): Promise<void> {
     
       const processBatch = async (batch: string[], startIndex: number) => {
         
-        const useCustomVerbs = true;
         if (useCustomVerbs) {
-          batch = ["desempregar"];
+          batch = batchObject;
         }
         
         const batchPromises = batch.map(async (verb) => {
