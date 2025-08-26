@@ -25317,7 +25317,7 @@
       "canonical1": {},
       "test": [false],
       "verbs": {
-        "total": 681,
+        "total": 680,
         "models": [9, 1],
         "entries": {
           "abaciar": [9],
@@ -25773,7 +25773,6 @@
           "jactanciar": [9],
           "jatanciar": [],
           "jeremiar": [9],
-          "judiar": [9],
           "judiciar": [9],
           "lampiar": [],
           "lamuriar": [9],
@@ -26001,6 +26000,96 @@
           "ziar": [],
           "zizaniar": [],
           "ziziar": [9]
+        }
+      }
+    },
+    "judiar": {
+      "type": [1],
+      "note": {
+        "plain": ["Devido à carga antissemita que o verbo 'judiar' carregar, este conjugador de verbos o não conjugará. Para substituí-lo, pode-se preferir seus sinônimos, como 'maltratar', 'torturar' ou 'infligir sofrimentos'"],
+        "ref": {}
+      },
+      "abundance1": {},
+      "canonical1": {
+        "RAD": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "VT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "MT": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        },
+        "NP": {
+          "": {
+            "pa": ["n"],
+            "gd": ["n"],
+            "pr_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt3_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft1_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "ft2_ind": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pr_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "pt_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "fut_sub": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im1": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "im2": ["p1", "p2", "p3", "p4", "p5", "p6"],
+            "inf": ["p1", "p2", "p3", "p4", "p5", "p6"]
+          }
+        }
+      },
+      "test": [false],
+      "verbs": {
+        "total": 1,
+        "models": [9],
+        "entries": {
+          "judiar": [9]
         }
       }
     },
