@@ -72,3 +72,5 @@ export async function processVerb (verb: string) {
     };
   }  
 }
+
+// processVerb("reabracar.,")

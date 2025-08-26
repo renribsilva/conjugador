@@ -5,6 +5,7 @@ import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
+import { extractPunctuation } from "./isValidVerbUtils";
 
 export const flowOfReact = () => {
 
@@ -264,7 +265,7 @@ export const flowOfReact = () => {
           loading: false,
           showButton: true,
           punct: puncts,
-          foundVerb: apiResponse.originalVerb.findedWord || apiResponse.variationVerb.findedWord
+          foundVerb: apiResponse.originalVerb?.findedWord || apiResponse.variationVerb?.findedWord
 
         }));
 
