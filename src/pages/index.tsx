@@ -508,7 +508,7 @@ const Index = () => {
                             </h2>
                             <p>
                               <span>[err 21] </span>
-                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice não possui todas as formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
                               <span>. Mas encontramos o verbo </span>
                               <span><strong>'{state.foundVerb}'.</strong></span>
@@ -536,7 +536,7 @@ const Index = () => {
                             </h2>
                             <p>
                               <span>[err 22] </span>
-                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice não possui todas as formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
                               <span>. Mas encontramos palavras muito parecidas. Clique no botão da palavra que gostaria de conjugar:</span>
                             </p>
@@ -568,7 +568,7 @@ const Index = () => {
                             </h2>
                             <p>
                               <span>[err 23] </span>
-                              <span>Infelizmente a lista de vocábulos do LibreOffice carece de formas verbais prefixadas. Por isso, não encontramos a palavra </span>
+                              <span>Infelizmente a lista de vocábulos do LibreOffice não possui todas as formas verbais prefixadas. Por isso, não encontramos a palavra </span>
                               <span><strong>'{state.inputReq}'</strong></span>
                               <span>. Mas encontramos o verbo </span>
                               <span><strong>'{state.foundVerb}'.</strong></span>
