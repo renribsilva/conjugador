@@ -1,0 +1,42 @@
+Object { inputReq: "denegrir", conjugations: {…}, showConjugations: true, foundVerb: "denegrir", canonical: "canonical1", isValidVerbByAPI: {…}, propsOfVerb: {…}, loading: false, suggestions: (5) […], showButton: false, … }
+​
+canonical: "canonical1"
+​
+conjugations: Object { model: (1) […], canonical1: {…}, canonical2: {…}, … }
+​
+enter: false
+​
+foundVerb: "denegrir"
+​
+goThrough: false
+​
+inputReq: "denegrir"
+​
+isButtonDisabled: false
+​
+isValidVerbByAPI: Object { result: false, varHasVariations: false, varForcedVerb: false, … }
+​
+loading: false
+​
+progress: 100
+​
+propsOfVerb: Object { hasTargetCanonical1: true, hasTargetCanonical2: false, hasTargetAbundance1: false, … }
+​
+showButton: false
+​
+showConjugations: true
+​
+showHome: false
+​
+showReviewButton: true
+​
+showSobre: false
+​
+showStatistic: false
+​
+showSuggestions: false
+​
+suggestions: Array(5) [ "denigrir", "denegar", "denigrar", … ]
+​
+<prototype>: Object { … }
+index-d5678c8b648ab9b7.js:1:3307735

@@ -211,4 +211,4 @@ export const conjugateVerb = (verb: string) => {
   
 };
 
-// conjugateVerb("doer");
+// conjugateVerb("amar");

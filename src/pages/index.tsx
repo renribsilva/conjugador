@@ -631,8 +631,10 @@ const Index = () => {
             <div>
               {state.conjugations !== null 
               && state.foundVerb
-              && nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
-                === nw(String(state.foundVerb).replace("*","")) && (
+              && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
+                === nw(String(state.foundVerb).replace("*","")) || 
+                nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
+                === "---") && (
                 <>
                   <h2>
                     <span>Verbo </span> 
