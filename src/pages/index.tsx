@@ -691,6 +691,9 @@ const Index = () => {
                       <NoteRefList noteRef={state.note_ref} />
                     </div>
                   )}
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
                 </>
               )}
             </div>
