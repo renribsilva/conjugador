@@ -5,9 +5,13 @@ import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
-import { extractPunctuation } from "./isValidVerbUtils";
 
 export const flowOfReact = () => {
+
+  useEffect(() => {
+    isValidVerbByAPI("rebracar");
+    getPropsOfVerb("rebracar", true, "rebracar");
+  }, [])
 
   const [state, setState] = useState<{
     conjugations: Conjugation | null;
@@ -474,8 +478,6 @@ export const flowOfReact = () => {
   ];
   
   useEffect(() => {
-
-    
 
     const data = {
       // inputValue: state.inputValue,
