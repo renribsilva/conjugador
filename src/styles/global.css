@@ -1,12 +1,12 @@
 :root, html, body {
   --color-fill-light: rgb(255, 255, 255);
-  --color-text-base-light: rgb(61, 61, 61);
+  --color-text-base-light: rgb(39, 39, 40);
   --color-mod-light: rgba(230, 230, 230);
   --color-tense-light: rgb(242, 242, 242);
   --color-button-light:rgb(242, 242, 242);
   
-  --color-fill-dark: rgb(45, 45, 45);
-  --color-text-base-dark: rgb(240, 240, 240);
+  --color-fill-dark: rgb(33, 37, 43); 
+  --color-text-base-dark: rgb(243, 238, 234);
   --color-mod-dark: rgba(60, 60, 60);
   --color-tense-dark: rgba(55, 55, 55);
   --color-button-dark:rgb(61, 61, 61);

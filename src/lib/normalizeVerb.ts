@@ -50,5 +50,4 @@ export const nw = (word: string | any): string => {
 // console.log(ni("começar"));  
 // console.log(ni("café"));     
 // console.log(ni("ação"));     
-// console.log(ni("co-habitar"));     
-
+// console.log(ni("co-habitar"));    
