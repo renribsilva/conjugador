@@ -299,7 +299,7 @@ const Index = () => {
             <div className={styles.loading}>
               {state.loading && (
                 <>
-                  <p>buscando...</p>
+                  <p>aguarde...</p>
                 </>
               )}
             </div>
