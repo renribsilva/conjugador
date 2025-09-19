@@ -24,7 +24,7 @@
 [data-theme="light"] {
   --background: var(--color-fill-light);
   --foreground: var(--color-text-base-light);
-  --largeshadow: rgb(173, 162, 162) 0px 0px 1px;
+  --largeshadow: rgb(165, 155, 155) 0px 0px 1px;
   --modbox:var(--color-mod-light);
   --tensebox:var(--color-tense-light);
   --button: var(--color-button-light)
