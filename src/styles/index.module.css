@@ -204,7 +204,7 @@
 }
 
 .foundedVerb, .notFoundedVerb {
-  background-color: aqua;
+  /* background-color: aqua; */
   margin-inline: 10px;
 }
 
