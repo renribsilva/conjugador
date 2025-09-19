@@ -19,7 +19,7 @@ const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
 const useCustomVerbs = false;
 const batchObject=["amar"]
 
-export default async function ediAllVerbsJson(): Promise<void> {
+async function ediAllVerbsJson() {
 
   try {
 
