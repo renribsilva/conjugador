@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { processVerb } from '../../lib/isValidVerbProcess';
 
-export async function handler(request: NextApiRequest, response: NextApiResponse) {
+export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   if (request.method !== 'GET') return response.status(405).end();
 
   const { verb } = request.query;
