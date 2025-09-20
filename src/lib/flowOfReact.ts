@@ -6,7 +6,7 @@ import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 
-export const flowOfReact = () => {
+export function flowOfReact () {
 
   useEffect(() => {
     isValidVerbByAPI("rebracar");
