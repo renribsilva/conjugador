@@ -7,7 +7,6 @@ import {
   loadJsonObject 
 } from './isValidVerbUtils';
 import findVariations from './findVariations';
-import { json } from 'stream/consumers';
 
 export async function processVerb (verb: string) {
 
@@ -30,6 +29,7 @@ export async function processVerb (verb: string) {
   const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
   const originalVerb = findOriginalVerb(normalizedJsonObject, cleanedVerb);
   const variations = findVariations(cleanedVerb);
+  // console.log(variations)
 
   if (originalVerb && originalVerb in normalizedJsonObject) {
 

@@ -211,7 +211,8 @@ export const flowOfReact = () => {
 
       }
 
-      const apiResponse = await isValidVerbByAPI(normalizedInputValue);      
+      const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+      console.log(apiResponse)  
       const originalVerb = apiResponse.originalVerb;
       const variationVerb = apiResponse.variationVerb;
 
