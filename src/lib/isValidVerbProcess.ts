@@ -7,6 +7,7 @@ import {
   loadJsonObject 
 } from './isValidVerbUtils';
 import findVariations from './findVariations';
+import { json } from 'stream/consumers';
 
 export async function processVerb (verb: string) {
 
