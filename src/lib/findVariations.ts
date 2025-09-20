@@ -20,6 +20,7 @@ const normalizedVerbs = new Set(Object.keys(allVerbs).map((v) => ni(v) || ''));
 const normalizedAfixos = afixos.map(nw);
 
 export default function findVariations(input: string): ValidPrefixResult {
+  
   if (cache.has(input)) {
     return cache.get(input)!;
   }
