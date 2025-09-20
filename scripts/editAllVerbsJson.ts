@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import pullLibreOfficeWords from './utils/pullLibreOfficeWords';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { VerbEntry } from '../src/types';
 import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
+import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -46,7 +46,7 @@ async function ediAllVerbsJson() {
     const notAddedWords = normNewWords.filter(verb => existingWordsSet.has(verb));
 
     console.log('- verbos que NÃO serão adicionados:', notAddedWords);
-    console.log(`- quantidade de novos verbos a serem adicionados: ${newWords.filter(Boolean).length}`);
+    console.log(`- quantidade de novos verbos a serem adicionados: ${filteredNewWords.filter(Boolean).length}`);
     
     const updatedWords = [...ptBRWords, ...filteredNewWords];
 
@@ -55,7 +55,7 @@ async function ediAllVerbsJson() {
 
     console.log("Filtrando os vocábulos terminados em 'ar', 'er', 'ir' e 'por'...");
     const exceptions = new Set(["dar", "ir", "ler", "pôr", "rer", "rir", "ser", "ter", "ver", "vir"]);
-    let allVerbsSet = updatedWords.filter(word =>
+    const allVerbsSet = updatedWords.filter(word =>
       /(ar|er|ir|por|pôr)$/.test(word) &&
       !/'/.test(word) &&
       (word.length > 3 || exceptions.has(word))
@@ -88,6 +88,7 @@ async function ediAllVerbsJson() {
     allVerbs.sort((a, b) => a.localeCompare(b));
 
     const v2 = allVerbs.filter(Boolean).length;
+
     console.log(`- quantidade de vocábulos retirados da lista: ${v1 - v2}`);
     console.log(`- quantidade de verbos após retirada de não verbos: ${v2}`);
 
@@ -127,7 +128,6 @@ async function ediAllVerbsJson() {
     const processVerbsAsync = async (finalVerbs: string[], currentVerbs: object) => {
 
       const acc = { ...currentVerbs };
-
       const BATCH_SIZE = 10;
       const startTime = Date.now(); 
       const cache = new Map(); 
@@ -195,8 +195,7 @@ async function ediAllVerbsJson() {
 
       for (let i = 0; i < finalVerbs.length; i += BATCH_SIZE) {
         const batch = finalVerbs.slice(i, i + BATCH_SIZE);
-        await processBatch(batch, i);
-        
+        await processBatch(batch, i);      
       }
 
       return acc;

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import https from 'https';
 
-export default async function pullLibreOfficeWords(url: string, dest: string): Promise<void> {
+export async function pullLibreOfficeWords(url: string, dest: string): Promise<void> {
   const file = fs.createWriteStream(dest);
   return new Promise((resolve, reject) => {
     https.get(url, (response) => {
