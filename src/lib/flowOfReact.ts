@@ -9,6 +9,7 @@ export const flowOfReact = () => {
 
   useEffect(() => {
     isValidVerbByAPI("rebracar");
+    conjVerbByAPI(ni("recomeçar"));
   }, [])
 
   const [state, setState] = useState<{

@@ -12,20 +12,37 @@ export const conjugateVerb = (verb: string) => {
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
 
-  const F = (P: string, M: string, D: string, key: string): string => {
-    const result = getTermData(verb, P, M, D);
-    const rule = result.result.results[key].hasTarget ? result.result.results[key].rule : NOT_FOUND;
-    return rule ?? NOT_FOUND; 
+  const verbPropsMap = new Map<string, VerbProps>();
+  const termDataCache = new Map();
+
+  const F = (P: string, M: string, D: string, canonical: string): string => {
+    const cacheKey = `${verb}_${P}_${M}_${D}_${canonical}`;
+    if (termDataCache.has(cacheKey)) {
+      const result = termDataCache.get(cacheKey)
+      const rule = result.result.results[canonical].hasTarget ? result.result.results[canonical].rule : NOT_FOUND;
+      return rule ?? NOT_FOUND; 
+    } else {
+      return NOT_FOUND
+    }
   };
 
-  const verbPropsMap = new Map<string, VerbProps>();
+  const getCachedTermData = (verb: string, P: string, M: string, D: string, canonical: string) => {
+    const cacheKey = `${verb}_${P}_${M}_${D}_${canonical}`;
+    if (termDataCache.has(cacheKey)) {
+      // console.log("use cachê")
+      return termDataCache.get(cacheKey);
+    }
+    const data = getTermData(verb, P, M, D);
+    termDataCache.set(cacheKey, data);
+    return data;
+  }
 
   const getCanonical = (P: string, M: string, num: number, canonical: string): string => {
     
-    const RADData = getTermData(verb, P, M, "RAD");
-    const VTData = getTermData(verb, P, M, "VT");
-    const MTData = getTermData(verb, P, M, "MT");
-    const NPData = getTermData(verb, P, M, "NP");
+    const RADData = getCachedTermData(verb, P, M, "RAD", canonical);
+    const VTData = getCachedTermData(verb, P, M, "VT", canonical);
+    const MTData = getCachedTermData(verb, P, M, "MT", canonical);
+    const NPData = getCachedTermData(verb, P, M, "NP", canonical);
 
     verbPropsMap.set('RAD', RADData.verbProps);
     verbPropsMap.set('VT', VTData.verbProps);
@@ -81,10 +98,10 @@ export const conjugateVerb = (verb: string) => {
 
   const getAbundance = (P: string, M: string, num: number, abundance: string): string | null => {
     
-    const RADData = getTermData(verb, P, M, "RAD");
-    const VTData = getTermData(verb, P, M, "VT");
-    const MTData = getTermData(verb, P, M, "MT");
-    const NPData = getTermData(verb, P, M, "NP");
+    const RADData = getCachedTermData(verb, P, M, "RAD", abundance);
+    const VTData = getCachedTermData(verb, P, M, "VT", abundance);
+    const MTData = getCachedTermData(verb, P, M, "MT", abundance);
+    const NPData = getCachedTermData(verb, P, M, "NP", abundance);
 
     const forRrule = RADData.result.results[abundance].hasTarget
     const forVTrule = VTData.result.results[abundance].hasTarget
