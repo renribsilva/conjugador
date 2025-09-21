@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { ni, nw } from '../src/lib/normalizeVerb';
 import { VerbEntry } from '../src/types';
-import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
 import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
+import { conjugateVerb } from '../src/lib/conjugateVerb';
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -164,7 +164,7 @@ async function ediAllVerbsJson() {
               const input = normalized;
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
-                verbPropsArray = await getPropsOfVerb(input, true, input);
+                verbPropsArray = await conjugateVerb(input).propOfVerb
                 cache.set(input, verbPropsArray);
               }
         

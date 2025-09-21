@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path'; 
-import { getPropsOfVerb } from '../src/lib/getPropsOfVerb';
 import { ni } from '../src/lib/normalizeVerb';
+import { conjugateVerb } from '../src/lib/conjugateVerb';
 
 interface VerbData {
   verb: string[];
@@ -135,17 +135,18 @@ async function editRulesByTerm() {
         for (let i = 0; i < filteredVerbs.length; i += batchSize) {
           const batch = filteredVerbs.slice(i, i + batchSize);
 
-          const verbPropsPromises = batch.map(verb =>
-            getPropsOfVerb(ni(verb), true, verb).then(props => {
-              if (props && props.length > 0) {
-                const termEntrie = props[0].termEntrie ?? '';
-                if (!result[termEntrie]) {
-                  result[termEntrie] = {};
-                }
-                result[termEntrie][verb] = allVerbsData[verb]?.model || [];
+          // ESSA FUNÇÃO FOI ALTERADA QUANDO GETPROPSOSVERBS FOI SUBSTITUÍDA POR CONJUGATEVERB... FALTAM TESTES
+          const verbPropsPromises = batch.map(verb => {
+            const props = conjugateVerb(ni(verb)).propOfVerb;
+
+            if (props) {
+              const termEntrie = props[0].termEntrie ?? '';
+              if (!result[termEntrie]) {
+                result[termEntrie] = {};
               }
-            })
-          );
+              result[termEntrie][verb] = allVerbsData[verb]?.model || [];
+            }
+          });
 
           await Promise.all(verbPropsPromises);
         }
