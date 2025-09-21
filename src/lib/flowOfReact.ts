@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
 import { ni } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
-import { getPropsOfVerb } from "./getPropsOfVerb";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 
@@ -10,7 +9,6 @@ export const flowOfReact = () => {
 
   useEffect(() => {
     isValidVerbByAPI("rebracar");
-    getPropsOfVerb("rebracar", true, "rebracar");
   }, [])
 
   const [state, setState] = useState<{
@@ -112,7 +110,7 @@ export const flowOfReact = () => {
 
   });
 
-  const fetchConjugations = async () => {
+  const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
     if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
     const data: Conjugation = await response.json();
@@ -212,7 +210,7 @@ export const flowOfReact = () => {
       }
 
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-      console.log(apiResponse)  
+      // console.log(apiResponse)  
       const originalVerb = apiResponse.originalVerb;
       const variationVerb = apiResponse.variationVerb;
 
@@ -376,22 +374,23 @@ export const flowOfReact = () => {
 
         updateProgress(50);
         
-        const propsOfWord = await getPropsOfVerb(normalizedInputValue, result, findedWord);
+        const propsOfWord = await conjVerbByAPI(ni(findedWord));
+        // console.log(propsOfWord)
         
         setState(prev => ({
 
           ...prev,
-          termination: propsOfWord[0].termination,
-          termEntrie: propsOfWord[0].termEntrie,
-          hasTargetCanonical1: propsOfWord[0].hasTargetCanonical1,
-          hasTargetCanonical2: propsOfWord[0].hasTargetCanonical2,
-          hasTargetAbundance1: propsOfWord[0].hasTargetAbundance1,
-          hasTargetAbundance2: propsOfWord[0].hasTargetAbundance2,
-          types: propsOfWord[0].types,
-          note_plain: propsOfWord[0].note_plain,
-          note_ref: propsOfWord[0].note_ref,
-          afixo: propsOfWord[0].afixo,
-          model: propsOfWord[0].model,
+          termination: propsOfWord.termination,
+          termEntrie: propsOfWord.termEntrie,
+          hasTargetCanonical1: propsOfWord.hasTargetCanonical1,
+          hasTargetCanonical2: propsOfWord.hasTargetCanonical2,
+          hasTargetAbundance1: propsOfWord.hasTargetAbundance1,
+          hasTargetAbundance2: propsOfWord.hasTargetAbundance2,
+          types: propsOfWord.types,
+          note_plain: propsOfWord.note_plain,
+          note_ref: propsOfWord.note_ref,
+          afixo: propsOfWord.afixo,
+          model: propsOfWord.model,
           showReviewButton: true,
           goThrough: false,
 
@@ -400,11 +399,9 @@ export const flowOfReact = () => {
           
         }));
 
-        await conjVerbByAPI(ni(findedWord));
-
         updateProgress(100);
 
-        await fetchConjugations();
+        await fetchConjugationsData();
 
         setState(prev => ({
           ...prev,
@@ -433,49 +430,7 @@ export const flowOfReact = () => {
   };
 
   const dependencies = [
-    state.conjugations,
-    // state.inputValue,
     state.inputReq,
-    state.showConjugations,
-    state.foundVerb,
-    state.termination,
-    state.termEntrie,
-    state.hasTargetCanonical1,
-    state.hasTargetCanonical2,
-    state.hasTargetAbundance1,
-    state.hasTargetAbundance2,
-    state.note_plain,
-    state.note_ref,
-    state.types,
-    state.model,
-    state.loading,
-    state.suggestions,
-    state.showButton,
-    state.isButtonDisabled,
-    state.showSuggestions,
-    state.showHome,
-    state.showSobre,
-    state.showReviewButton,
-    state.goThrough,
-    state.enter,
-    state.isDisabled,
-    state.originalVerb,
-    state.variationVerb,
-    state.result,
-    state.findedWord,
-    state.similar,
-    state.punct,
-    state.variations,
-    state.varHasVariations,
-    state.varProcessedInput,
-    state.varForcedVerb,
-    state.varPrefixFounded,
-    state.varMatchingAfixo,
-    state.varConector,
-    state.varOriginalInput,
-    state.showStatistic,
-    state.progress,
-    state.canonical
   ];
   
   useEffect(() => {

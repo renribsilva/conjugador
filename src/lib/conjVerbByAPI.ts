@@ -25,11 +25,12 @@ export const conjVerbByAPI = async (verb: string) => {
     }
 
     const data = await response.json();
-    console.log('Resposta da API:', data.message); 
+    console.log('Resposta da API:', data.message);
 
   } catch (error) {
 
     console.error('writeConjVerbByAPI failed:', error, 'verb:', verb, 'conjugations:', conjugations);
     
   }
+  return conjugations.propOfVerb
 };

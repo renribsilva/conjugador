@@ -3,6 +3,8 @@ import { findTermRule } from './findTermRules';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import allVerbsData from "../json/allVerbs.json"
+import { getTermData } from './getTermData';
+import { VerbProps } from '../types';
 
 export const conjugateVerb = (verb: string) => {
 
@@ -12,22 +14,34 @@ export const conjugateVerb = (verb: string) => {
   const NOT_FOUND = "N/A";
 
   const F = (P: string, M: string, D: string, key: string): string => {
-    const result = findTermRule(verb, P, M, D);
-    const rule = result.results[key].hasTarget ? result.results[key].rule : NOT_FOUND;
+    const result = getTermData(verb, P, M, D);
+    const rule = result.result.results[key].hasTarget ? result.result.results[key].rule : NOT_FOUND;
     return rule ?? NOT_FOUND; 
   };
 
+  const verbPropsMap = new Map<string, VerbProps>();
+
   const getCanonical = (P: string, M: string, num: number, canonical: string): string => {
     
-    const forRrule = findTermRule(verb, P, M, "RAD").results[canonical].hasTarget;
-    const forVTrule = findTermRule(verb, P, M, "VT").results[canonical].hasTarget;
-    const forMTrule = findTermRule(verb, P, M, "MT").results[canonical].hasTarget;
-    const forNPrule = findTermRule(verb, P, M, "NP").results[canonical].hasTarget;
+    const RADData = getTermData(verb, P, M, "RAD");
+    const VTData = getTermData(verb, P, M, "VT");
+    const MTData = getTermData(verb, P, M, "MT");
+    const NPData = getTermData(verb, P, M, "NP");
 
-    const Rcontent = findTermRule(verb, P, M, "RAD").results[canonical].rule;
-    const VTcontent = findTermRule(verb, P, M, "VT").results[canonical].rule;
-    const MTcontent = findTermRule(verb, P, M, "MT").results[canonical].rule;
-    const NPcontent = findTermRule(verb, P, M, "NP").results[canonical].rule;
+    verbPropsMap.set('RAD', RADData.verbProps);
+    verbPropsMap.set('VT', VTData.verbProps);
+    verbPropsMap.set('MT', MTData.verbProps);
+    verbPropsMap.set('NP', NPData.verbProps);
+
+    const forRrule = RADData.result.results[canonical].hasTarget
+    const forVTrule = VTData.result.results[canonical].hasTarget
+    const forMTrule = MTData.result.results[canonical].hasTarget
+    const forNPrule = NPData.result.results[canonical].hasTarget
+
+    const Rcontent = RADData.result.results[canonical].rule
+    const VTcontent = VTData.result.results[canonical].rule
+    const MTcontent = MTData.result.results[canonical].rule
+    const NPcontent = NPData.result.results[canonical].rule
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -64,20 +78,24 @@ export const conjugateVerb = (verb: string) => {
               ${verbRules.NP[num]}`);
     
     return canonicalData;
-
   };
 
   const getAbundance = (P: string, M: string, num: number, abundance: string): string | null => {
     
-    const forRrule = findTermRule(verb, P, M, "RAD").results[abundance].hasTarget;
-    const forVTrule = findTermRule(verb, P, M, "VT").results[abundance].hasTarget;
-    const forMTrule = findTermRule(verb, P, M, "MT").results[abundance].hasTarget;
-    const forNPrule = findTermRule(verb, P, M, "NP").results[abundance].hasTarget;
+    const RADData = getTermData(verb, P, M, "RAD");
+    const VTData = getTermData(verb, P, M, "VT");
+    const MTData = getTermData(verb, P, M, "MT");
+    const NPData = getTermData(verb, P, M, "NP");
 
-    const Rcontent = findTermRule(verb, P, M, "RAD").results[abundance].rule;
-    const VTcontent = findTermRule(verb, P, M, "VT").results[abundance].rule;
-    const MTcontent = findTermRule(verb, P, M, "MT").results[abundance].rule;
-    const NPcontent = findTermRule(verb, P, M, "NP").results[abundance].rule;
+    const forRrule = RADData.result.results[abundance].hasTarget
+    const forVTrule = VTData.result.results[abundance].hasTarget
+    const forMTrule = MTData.result.results[abundance].hasTarget
+    const forNPrule = NPData.result.results[abundance].hasTarget
+
+    const Rcontent = RADData.result.results[abundance].rule
+    const VTcontent = VTData.result.results[abundance].rule
+    const MTcontent = MTData.result.results[abundance].rule
+    const NPcontent = NPData.result.results[abundance].rule
 
     if (Rcontent !== null && typeof Rcontent === "string" && (Rcontent as string)) {
 
@@ -200,6 +218,41 @@ export const conjugateVerb = (verb: string) => {
     }
   };
 
+  const uniqueResults: VerbProps[] = Array.from(verbPropsMap.values());
+
+  const accumulatedResult: VerbProps = uniqueResults.reduce(
+    (acc, curr) => ({
+      hasTargetCanonical1: acc.hasTargetCanonical1 || curr.hasTargetCanonical1,
+      hasTargetCanonical2: acc.hasTargetCanonical2 || curr.hasTargetCanonical2,
+      hasTargetAbundance1: acc.hasTargetAbundance1 || curr.hasTargetAbundance1,
+      hasTargetAbundance2: acc.hasTargetAbundance2 || curr.hasTargetAbundance2,
+      termination: curr.termination || acc.termination,
+      termEntrie: curr.termEntrie|| acc.termEntrie,
+      verb: curr.verb || acc.verb,
+      types: curr.types || acc.types,
+      note_plain: curr.note_plain || acc.note_plain,
+      note_ref: curr.note_ref || acc.note_ref,
+      afixo: curr.afixo || acc.afixo,
+      model: curr.model || acc.model
+    }),
+    {
+      hasTargetCanonical1: false,
+      hasTargetCanonical2: false,
+      hasTargetAbundance1: false,
+      hasTargetAbundance2: false,
+      termination: null,
+      termEntrie: null,
+      verb: null,
+      types: null,
+      note_plain: null,
+      note_ref: null,
+      afixo: null,
+      model: null
+    }
+  );
+
+  // console.log(accumulatedResult)
+
   const conjugations: Record<string, any> = {};
   for (const [tense, reg] of Object.entries(conj)) {
     conjugations[tense] = reg;
@@ -207,7 +260,10 @@ export const conjugateVerb = (verb: string) => {
 
   // console.log(JSON.stringify(conjugations, null, 2));
 
-  return conjugations;
+  return {
+    conjugations: conjugations,
+    propOfVerb: accumulatedResult
+  };
   
 };
 

@@ -38,6 +38,11 @@ export type Conjugation = {
   canonical2: CanonicalForms;
 };
 
+export type ConjugationData = {
+  conjugations: object,
+  propOfVerb: object
+}
+
 export type InputTypes = {
   A: React.RefObject<HTMLInputElement>;
   B: { inputValue: string };
@@ -55,4 +60,19 @@ export type VerbEntry = {
 
 export type AllVerbsEntry = {
   [key: string]: VerbEntry
+}
+
+export type VerbProps = {
+  hasTargetCanonical1: boolean;
+  hasTargetCanonical2: boolean;
+  hasTargetAbundance1: boolean;
+  hasTargetAbundance2: boolean;
+  termination: string | null;
+  termEntrie: string | null | undefined;
+  verb: string | null;
+  types: string[] | null;
+  note_plain: string[] | null;
+  note_ref: object | null;
+  afixo: string | null | undefined;
+  model: object | null;
 }

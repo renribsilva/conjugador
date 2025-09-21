@@ -16,7 +16,7 @@ export default async function handler(
       await sql`DELETE FROM json;`;
 
       // Insere as novas conjugações na tabela JSON
-      await sql`INSERT INTO json (conjugations) VALUES (${JSON.stringify(conjugations)});`;
+      await sql`INSERT INTO json (conjugations) VALUES (${JSON.stringify(conjugations.conjugations)});`;
 
       return response.status(200).json({ message: 'Conjugations rewrite successfully!' });
     } catch (error) {
