@@ -19,7 +19,9 @@ export const conjugateVerb = (verb: string) => {
     const cacheKey = `${verb}_${P}_${M}_${D}_${canonical}`;
     if (termDataCache.has(cacheKey)) {
       const result = termDataCache.get(cacheKey)
-      const rule = result.result.results[canonical].hasTarget ? result.result.results[canonical].rule : NOT_FOUND;
+      const rule = result.result.results[canonical].hasTarget 
+        ? result.result.results[canonical].rule 
+        : NOT_FOUND;
       return rule ?? NOT_FOUND; 
     } else {
       return NOT_FOUND
