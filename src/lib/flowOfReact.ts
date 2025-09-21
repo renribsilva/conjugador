@@ -485,7 +485,7 @@ export const flowOfReact = () => {
       },
       B_VALIDAÇÃO_DO_VERBO: {
         result: state.result,
-        findedWord: state.findedWord,
+        foundVerb: state.foundVerb,
         similar: state.similar,
         punct: state.punct,
         variations: {
@@ -499,7 +499,6 @@ export const flowOfReact = () => {
         }
       },
       C_OUTPUT: {
-        foundVerb: state.foundVerb,
         conjugations: state.conjugations,
         propsOfVerb: {
           hasTargetCanonical1: state.hasTargetCanonical1,
