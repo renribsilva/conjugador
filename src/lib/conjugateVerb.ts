@@ -5,7 +5,7 @@ import allVerbsData from "../json/allVerbs.json"
 import { getTermData } from './getTermData';
 import { VerbProps } from '../types';
 
-export const conjugateVerb = (verb: string) => {
+export function conjugateVerb (verb: string) {
 
   let r = nw(ni(verb)).slice(0, -2);
   let R = ''

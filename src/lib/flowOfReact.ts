@@ -14,7 +14,7 @@ export const flowOfReact = () => {
 
   const [state, setState] = useState<{
     conjugations: Conjugation | null;
-    inputValue: string;
+    inputValue: string; 
     inputReq: string;
     showConjugations: boolean;
     foundVerb: string | null;
@@ -44,7 +44,7 @@ export const flowOfReact = () => {
 
     originalVerb: object | null;
     variationVerb: object| null,
-    result: boolean,
+    result: string | null,
     findedWord: string | null,
     similar: string[] | null,
     punct: string [] | null,
@@ -93,7 +93,7 @@ export const flowOfReact = () => {
 
     originalVerb: null,
     variationVerb: null,
-    result: false,
+    result: null,
     findedWord: null,
     similar: null,
     punct: null,
@@ -173,7 +173,7 @@ export const flowOfReact = () => {
 
         originalVerb: null,
         variationVerb: null,
-        result: false,
+        result: null,
         findedWord: null,
         similar: null,
         punct: null,
@@ -211,7 +211,6 @@ export const flowOfReact = () => {
       }
 
       const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-      // console.log(apiResponse)  
       const originalVerb = apiResponse.originalVerb;
       const variationVerb = apiResponse.variationVerb;
 
@@ -283,11 +282,12 @@ export const flowOfReact = () => {
         return
       }
 
-      let result = false;
+      //isValidVerb returns
+      let result = '';
       let findedWord = ''
       let similar = null
+      let punct = null
       let variations = null
-
       let varHasVariations = false
       let varForcedVerb = false 
       let varProcessedInput = null
@@ -298,10 +298,11 @@ export const flowOfReact = () => {
 
       if (variationVerb !== null && originalVerb === null) {
 
-        result = apiResponse.variationVerb.result;
+        result = "variationVerb";
         findedWord = apiResponse.variationVerb.findedWord;
         similar = apiResponse.variationVerb.similar;
         variations = apiResponse.variationVerb.variations;
+        punct = apiResponse.variationVerb.punct
 
         varHasVariations = apiResponse.variationVerb.variations.hasVariations;
         varForcedVerb = apiResponse.variationVerb.variations.forcedVerb
@@ -318,6 +319,12 @@ export const flowOfReact = () => {
           loading: false,
           showButton: true,
 
+          result: result,
+          findedWord: findedWord,
+          similar: similar,
+          variations: variations,
+          punct: punct,
+
           varHasVariations: varHasVariations,
           varForcedVerb: varForcedVerb,
           varProcessedInput: varProcessedInput,
@@ -327,7 +334,6 @@ export const flowOfReact = () => {
           varConector: varConector,
 
           foundVerb: findedWord,
-          similar: similar
 
         }));
 
@@ -344,10 +350,19 @@ export const flowOfReact = () => {
 
       if (originalVerb !== null && variationVerb === null) {
 
-        result = apiResponse.originalVerb.result;
+        result = "originalVerb";
         findedWord = apiResponse.originalVerb.findedWord;
         similar = apiResponse.originalVerb.similar;
         variations = apiResponse.originalVerb.variations;
+        punct = apiResponse.originalVerb.punct
+
+        varHasVariations = apiResponse.originalVerb.variations.hasVariations;
+        varForcedVerb = apiResponse.originalVerb.variations.forcedVerb
+        varProcessedInput = apiResponse.originalVerb.variations.processedInput;
+        varOriginalInput = apiResponse.originalVerb.variations.originalInput;
+        varPrefixFounded = apiResponse.originalVerb.variations.prefixFounded;
+        varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
+        varConector = apiResponse.originalVerb.variations.conector;
 
         if  (similar !== null && !state.goThrough) {
 
@@ -358,8 +373,21 @@ export const flowOfReact = () => {
             loading: false,
             showButton: true,
 
+            result: result,
+            findedWord: findedWord,
+            similar: similar,
+            variations: variations,
+            punct: punct,
+
+            varHasVariations: varHasVariations,
+            varForcedVerb: varForcedVerb,
+            varProcessedInput: varProcessedInput,
+            varOriginalInput: varOriginalInput,
+            varPrefixFounded: varPrefixFounded,
+            varMatchingAfixo: varMatchingAfixo,
+            varConector: varConector,
+
             foundVerb: findedWord,
-            similar: similar
 
           }));
 
@@ -369,7 +397,6 @@ export const flowOfReact = () => {
             ...prev,
             isDisabled: false,
           }));
-
           return
         }
 
@@ -392,11 +419,25 @@ export const flowOfReact = () => {
           note_ref: propsOfWord.note_ref,
           afixo: propsOfWord.afixo,
           model: propsOfWord.model,
+
           showReviewButton: true,
           goThrough: false,
 
-          foundVerb:findedWord,
-          similar: similar
+          result: result,
+          findedWord: findedWord,
+          similar: similar,
+          variations: variations,
+          punct: punct,
+
+          varHasVariations: varHasVariations,
+          varForcedVerb: varForcedVerb,
+          varProcessedInput: varProcessedInput,
+          varOriginalInput: varOriginalInput,
+          varPrefixFounded: varPrefixFounded,
+          varMatchingAfixo: varMatchingAfixo,
+          varConector: varConector,
+
+          foundVerb: findedWord,
           
         }));
 
@@ -431,57 +472,65 @@ export const flowOfReact = () => {
   };
 
   const dependencies = [
-    state.inputReq,
+    state.isDisabled,
   ];
   
   useEffect(() => {
 
+    if (state.isDisabled) return;
+
     const data = {
-      // inputValue: state.inputValue,
-      inputReq: state.inputReq,
-      conjugations: state.conjugations,
-      showConjugations: state.showConjugations,
-      foundVerb: state.foundVerb,
-      canonical: state.canonical,
-      isValidVerbByAPI: {
+      A_INPUT: {
+        inputReq: state.inputReq,
+      },
+      B_VALIDAÇÃO_DO_VERBO: {
         result: state.result,
         findedWord: state.findedWord,
         similar: state.similar,
         punct: state.punct,
-        variations: state.variations,
-        varHasVariations: state.varHasVariations,
-        varProcessedInput: state.varProcessedInput,
-        varForcedVerb: state.varForcedVerb,
-        varPrefixFounded: state.varPrefixFounded,
-        varMatchingAfixo: state.varMatchingAfixo,
-        varConector: state.varConector,
-        varOriginalInput: state.varOriginalInput,
+        variations: {
+          varHasVariations: state.varHasVariations,
+          varProcessedInput: state.varProcessedInput,
+          varForcedVerb: state.varForcedVerb,
+          varPrefixFounded: state.varPrefixFounded,
+          varMatchingAfixo: state.varMatchingAfixo,
+          varConector: state.varConector,
+          varOriginalInput: state.varOriginalInput,
+        }
       },
-      propsOfVerb: {
-        hasTargetCanonical1: state.hasTargetCanonical1,
-        hasTargetCanonical2: state.hasTargetCanonical2,
-        hasTargetAbundance1: state.hasTargetAbundance1,
-        hasTargetAbundance2: state.hasTargetAbundance2,
-        termination: state.termination,
-        termEntrie: state.termEntrie,
-        types: state.types,
-        note_plain: state.note_plain, 
-        note_ref: state.note_ref,
-        model: state.model
+      C_OUTPUT: {
+        foundVerb: state.foundVerb,
+        conjugations: state.conjugations,
+        propsOfVerb: {
+          hasTargetCanonical1: state.hasTargetCanonical1,
+          hasTargetCanonical2: state.hasTargetCanonical2,
+          hasTargetAbundance1: state.hasTargetAbundance1,
+          hasTargetAbundance2: state.hasTargetAbundance2,
+          termination: state.termination,
+          termEntrie: state.termEntrie,
+          types: state.types,
+          note_plain: state.note_plain, 
+          note_ref: state.note_ref,
+          model: state.model
+        },
+        suggestions: state.suggestions,
       },
-      loading: state.loading,
-      suggestions: state.suggestions,
-      showButton: state.showButton,
-      isButtonDisabled: state.isButtonDisabled,
-      showSuggestions: state.showSuggestions,
-      showHome: state.showHome,
-      showSobre: state.showSobre,
-      showStatistic: state.showStatistic,
-      showReviewButton: state.showReviewButton,
-      goThrough: state.goThrough,
-      enter: state.enter,
-      progress: state.progress,
-      isDisabled: state.isDisabled
+      D_CONTROLADORES_DE_FLUXO: {
+        showConjugations: state.showConjugations,
+        canonical: state.canonical,
+        loading: state.loading,
+        showButton: state.showButton,
+        isButtonDisabled: state.isButtonDisabled,
+        showSuggestions: state.showSuggestions,
+        showHome: state.showHome,
+        showSobre: state.showSobre,
+        showStatistic: state.showStatistic,
+        showReviewButton: state.showReviewButton,
+        goThrough: state.goThrough,
+        enter: state.enter,
+        progress: state.progress,
+        isDisabled: state.isDisabled
+      },
     };
   
     console.log(data);
