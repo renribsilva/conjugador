@@ -1,5 +1,4 @@
-import reg from '../json/rulesForReg.json'; 
-import { findTermRule } from './findTermRules';
+import reg from '../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import allVerbsData from "../json/allVerbs.json"
