@@ -8,8 +8,12 @@ import getSimilarVerbs from "./getSimilarWords";
 export const flowOfReact = () => {
 
   useEffect(() => {
-    isValidVerbByAPI("rebracar");
-    conjVerbByAPI(ni("recomeçar"));
+    isValidVerbByAPI("reabracar");
+    isValidVerbByAPI("reabraçar");
+    isValidVerbByAPI("descalcar");
+    conjVerbByAPI("recomeçar");
+    getSimilarVerbs("renato")
+    console.log("pré-carregamento ok")
   }, [])
 
   const [state, setState] = useState<{
