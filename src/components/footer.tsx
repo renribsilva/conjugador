@@ -19,7 +19,7 @@ export default function Footer() {
       <span>© {currentYear} MIT</span>
       <span> | </span>
       <span>
-        criado com:{" "}
+        criado por um humano com:{" "}
         {linkfooter.map(({ label, href }) => (
           <Link key={href} href={href} {...linkProps} prefetch={false}>
           {label}
