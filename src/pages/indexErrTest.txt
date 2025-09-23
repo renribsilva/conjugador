@@ -1,11 +1,13 @@
+er00                            - reabracar., | realcar., 
+
 !hasNonPrefixedVerb (F)
-er11  forced (F) && similar (F) - amigo | amigo.,,
-er12  forced (F) && similar (V) - abracar | abracar.,
-er13  forced (V) && similar (F) - alcar | alcar.;,
+er11  forced (F) && similar (F) - amigo
+er12  forced (F) && similar (V) - abracar
+er13  forced (V) && similar (F) - alcar
       forced (V) && similar (V) - 
 
 hasNonPrefixedVerb (V)
-      forced (F) && similar (F) - repousar | repousar.,
-er22  forced (F) && similar (V) - reabracar | reabracar.,;
-er23  forced (V) && similar (F) - realcar | realcar.,;
+      forced (F) && similar (F) - 
+er22  forced (F) && similar (V) - reabracar | remocar
+er23  forced (V) && similar (F) - realcar
       forced (V) && similar (V) - 
