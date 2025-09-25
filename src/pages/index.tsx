@@ -8,15 +8,27 @@ import Theme from "../components/theme";
 import Button from "../components/button";  
 import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
+import dynamic from "next/dynamic";
 
-const Home = lazy(() => import("../mdx/Home.mdx"));
-const About = lazy(() => import("../mdx/About.mdx"));
-const Gracias = lazy(() => import("../mdx/Gracias.mdx"));
-const Statistic = lazy(() => import("../mdx/Statistic.mdx"));
-const Warning = lazy(() => import("../mdx/Warning.mdx"));
-const Emphasis = lazy(() => import("../mdx/Emphasis.mdx"));
-const Reflexive = lazy(() => import("../mdx/Reflexive.mdx"));
-const SobreErros = lazy(() => import("../mdx/SobreErros.mdx"));
+const mdxModules = [
+  () => import("../mdx/Home.mdx"),
+  () => import("../mdx/About.mdx"),
+  () => import("../mdx/Gracias.mdx"),
+  () => import("../mdx/Statistic.mdx"),
+  () => import("../mdx/Warning.mdx"),
+  () => import("../mdx/Emphasis.mdx"),
+  () => import("../mdx/Reflexive.mdx"),
+  () => import("../mdx/SobreErros.mdx"),
+];
+
+const Home = dynamic(() => import("../mdx/Home.mdx"), { ssr: false });
+const About = dynamic(() => import("../mdx/About.mdx"), { ssr: false });
+const Gracias = dynamic(() => import("../mdx/Gracias.mdx"), { ssr: false });
+const Statistic = dynamic(() => import("../mdx/Statistic.mdx"), { ssr: false });
+const Warning = dynamic(() => import("../mdx/Warning.mdx"), { ssr: false });
+const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"), { ssr: false });
+const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"), { ssr: false });
+const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"), { ssr: false });
 
 const Index = () => {
 
@@ -204,17 +216,7 @@ const Index = () => {
   // console.log(state.progress)
 
   useEffect(() => {
-    // Faz preload de todos os .mdx antes de renderizar
-    Promise.all([
-      import("../mdx/Home.mdx"),
-      import("../mdx/About.mdx"),
-      import("../mdx/Gracias.mdx"),
-      import("../mdx/Statistic.mdx"),
-      import("../mdx/Warning.mdx"),
-      import("../mdx/Emphasis.mdx"),
-      import("../mdx/Reflexive.mdx"),
-      import("../mdx/SobreErros.mdx"),
-    ]).then(() => {
+    Promise.all(mdxModules.map(fn => fn())).then(() => {
       setReady(true);
     });
   }, []);
