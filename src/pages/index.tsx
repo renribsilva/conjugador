@@ -4,40 +4,28 @@ import { flowOfReact } from "../lib/flowOfReact";
 import styles from "../styles/index.module.css";
 import Footer from "../components/footer";
 import Socials from "../components/socials";
+import Home from "../mdx/Home.mdx";
+import Gracias from "../mdx/Gracias.mdx";
+import About from "../mdx/About.mdx";
+import Statistic from "../mdx/Statistic.mdx";
+import Warning from "../mdx/Warning.mdx";
+import Emphasis from "../mdx/Emphasis.mdx";
+import Reflexive from "../mdx/Reflexive.mdx";
+import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";  
 import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
-import dynamic from "next/dynamic";
-
-const mdxModules = [
-  () => import("../mdx/Home.mdx"),
-  () => import("../mdx/About.mdx"),
-  () => import("../mdx/Gracias.mdx"),
-  () => import("../mdx/Statistic.mdx"),
-  () => import("../mdx/Warning.mdx"),
-  () => import("../mdx/Emphasis.mdx"),
-  () => import("../mdx/Reflexive.mdx"),
-  () => import("../mdx/SobreErros.mdx"),
-];
-
-const Home = dynamic(() => import("../mdx/Home.mdx"), { ssr: true });
-const About = dynamic(() => import("../mdx/About.mdx"), { ssr: true });
-const Gracias = dynamic(() => import("../mdx/Gracias.mdx"), { ssr: true });
-const Statistic = dynamic(() => import("../mdx/Statistic.mdx"), { ssr: true });
-const Warning = dynamic(() => import("../mdx/Warning.mdx"), { ssr: true });
-const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"), { ssr: true });
-const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"), { ssr: true });
-const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"), { ssr: true });
+// import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
+  const [mounted, setMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentProgress, setCurrentProgress] = useState<number>(0);
-  const [ready, setReady] = useState(false);
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
@@ -129,6 +117,8 @@ const Index = () => {
     randomEita();
   }, [state.enter]);
 
+  // console.log(inputRef)
+
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
       return null; 
@@ -216,12 +206,10 @@ const Index = () => {
   // console.log(state.progress)
 
   useEffect(() => {
-    Promise.all(mdxModules.map(fn => fn())).then(() => {
-      setReady(true);
-    });
+    setMounted(true);
   }, []);
-
-  if (!ready) {
+  
+  if (!mounted) {
     return null;
   }
 
@@ -297,7 +285,7 @@ const Index = () => {
                 >
                   sobre
                 </button>
-                {ready && <Theme />}
+                {mounted && <Theme />}
               </div>
             </div>
           </div>
@@ -671,21 +659,15 @@ const Index = () => {
                   />
                   <div className={styles.warning}>
                     <strong>Aviso:</strong>
-                    <ul>
-                      <Warning />
-                    </ul>
+                    <ul><Warning /></ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Destaques:</strong>
-                    <ul>
-                      <Emphasis />
-                    </ul>
+                    <ul><Emphasis /></ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Conjugação reflexiva:</strong>
-                    <ul>
-                      <Reflexive />
-                    </ul>
+                    <ul><Reflexive /></ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Sobre erros:</strong>
@@ -720,7 +702,7 @@ const Index = () => {
       </section>
       {/* foot */}
       <section className={styles.foot_info}>
-        {ready && <Socials />}
+        {mounted && <Socials />}
         <Footer />
       </section>
     </div>
