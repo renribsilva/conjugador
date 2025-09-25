@@ -1,6 +1,7 @@
 import styles from "../styles/components.module.css";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Arrow from "./svgs/arrow";
 
 const SocialObjects = [
   {
@@ -32,7 +33,7 @@ export default function Socials() {
           <li key={name}>
             <Link target="_blank" href={link} rel="noopener noreferrer">
               <span>{name}</span>
-              <span className="material-symbols-outlined">arrow_outward</span>
+              <Arrow/>
             </Link>
           </li>
         );

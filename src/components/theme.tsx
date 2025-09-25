@@ -1,11 +1,17 @@
 import { useTheme } from "next-themes";
 import styles from "../styles/components.module.css";
 import React, { useEffect, useState } from "react";
+import Dark from "./svgs/dark";
+import Light from "./svgs/light";
 
 function Theme() {
   
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -15,10 +21,6 @@ function Theme() {
     return null;
   }
 
-  const toggleTheme = () => {
-    setTheme(resolvedTheme === "light" ? "dark" : "light");
-  };
-
   return (
     <button
       onClick={toggleTheme}
@@ -26,9 +28,11 @@ function Theme() {
       style={{ cursor: "pointer" }}
       className={styles.theme_button}
     >
-      {<span className="material-symbols-outlined" aria-hidden="true">
-        {resolvedTheme === "light" ? "dark_mode" : "sunny"}
-      </span>}
+      {resolvedTheme === "light" ? (
+        <Dark/>
+      ) : (
+        <Light/>
+      )}
     </button>
   );
 }
