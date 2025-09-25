@@ -1,0 +1,13 @@
+{
+  //configurações do code runner
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "javascript": "sudo clear && node",
+    "typescript": "sudo clear && npx sucrase-node"
+  },
+
+  //configurações do eslint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}

@@ -6,9 +6,6 @@
 # next.js
 /.next/
 
-# vscode
-/.vscode/
-
 # env
 .env
 
