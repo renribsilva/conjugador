@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Head from 'next/head';
 import { useMDXComponents } from '../mdx-components';
 import { MDXProvider } from "@mdx-js/react";
+import Layout from '../layout/layout';
 
 const title = "Conjugador pt-BR"
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira"
@@ -33,9 +34,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:provider_name" content="Conjugador Gules" />
         
       </Head>
-      <MDXProvider components={components}>
-        <Component {...pageProps} />
-      </MDXProvider>
+      <Layout>
+        <MDXProvider components={components}>
+          <Component {...pageProps} />
+        </MDXProvider>
+      </Layout>
     </ThemeProvider>
   )
 }

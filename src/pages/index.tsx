@@ -1,31 +1,31 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, lazy, Suspense } from "react";
 import Table from "../components/table";
 import { flowOfReact } from "../lib/flowOfReact";
 import styles from "../styles/index.module.css";
 import Footer from "../components/footer";
 import Socials from "../components/socials";
-import Home from "../mdx/Home.mdx";
-import Gracias from "../mdx/Gracias.mdx";
-import About from "../mdx/About.mdx";
-import Statistic from "../mdx/Statistic.mdx";
-import Warning from "../mdx/Warning.mdx";
-import Emphasis from "../mdx/Emphasis.mdx";
-import Reflexive from "../mdx/Reflexive.mdx";
-import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";  
 import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
-// import {Tooltip} from "@nextui-org/tooltip";
+
+const Home = lazy(() => import("../mdx/Home.mdx"));
+const About = lazy(() => import("../mdx/About.mdx"));
+const Gracias = lazy(() => import("../mdx/Gracias.mdx"));
+const Statistic = lazy(() => import("../mdx/Statistic.mdx"));
+const Warning = lazy(() => import("../mdx/Warning.mdx"));
+const Emphasis = lazy(() => import("../mdx/Emphasis.mdx"));
+const Reflexive = lazy(() => import("../mdx/Reflexive.mdx"));
+const SobreErros = lazy(() => import("../mdx/SobreErros.mdx"));
 
 const Index = () => {
 
   const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
-  const [mounted, setMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentProgress, setCurrentProgress] = useState<number>(0);
+  const [ready, setReady] = useState(false);
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
@@ -117,8 +117,6 @@ const Index = () => {
     randomEita();
   }, [state.enter]);
 
-  // console.log(inputRef)
-
   function NoteRefList({ noteRef }) {
     if (!noteRef || Object.keys(noteRef).length === 0) {
       return null; 
@@ -206,10 +204,22 @@ const Index = () => {
   // console.log(state.progress)
 
   useEffect(() => {
-    setMounted(true);
+    // Faz preload de todos os .mdx antes de renderizar
+    Promise.all([
+      import("../mdx/Home.mdx"),
+      import("../mdx/About.mdx"),
+      import("../mdx/Gracias.mdx"),
+      import("../mdx/Statistic.mdx"),
+      import("../mdx/Warning.mdx"),
+      import("../mdx/Emphasis.mdx"),
+      import("../mdx/Reflexive.mdx"),
+      import("../mdx/SobreErros.mdx"),
+    ]).then(() => {
+      setReady(true);
+    });
   }, []);
-  
-  if (!mounted) {
+
+  if (!ready) {
     return null;
   }
 
@@ -285,7 +295,7 @@ const Index = () => {
                 >
                   sobre
                 </button>
-                {mounted && <Theme />}
+                {ready && <Theme />}
               </div>
             </div>
           </div>
@@ -306,7 +316,9 @@ const Index = () => {
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
-                  <Home />
+                  <Suspense fallback={null}>
+                    <Home />
+                  </Suspense>
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
@@ -314,7 +326,9 @@ const Index = () => {
               } 
               {!state.showHome && state.showSobre && !state.showStatistic &&
                 <>
-                  <About />
+                  <Suspense fallback={null}>
+                    <About />
+                  </Suspense>
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -322,7 +336,9 @@ const Index = () => {
               }
               {!state.showHome && !state.showSobre && state.showStatistic &&
                 <>
-                  <Statistic />
+                  <Suspense fallback={null}>
+                    <Statistic />
+                  </Suspense>
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -622,7 +638,9 @@ const Index = () => {
               )}
               {state.isButtonDisabled && (
                 <>
-                  <Gracias />
+                  <Suspense fallback={null}>
+                    <Gracias />
+                  </Suspense>
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -659,20 +677,34 @@ const Index = () => {
                   />
                   <div className={styles.warning}>
                     <strong>Aviso:</strong>
-                    <ul><Warning /></ul>
+                    <ul>
+                      <Suspense fallback={null}>
+                        <Warning />
+                      </Suspense>
+                    </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Destaques:</strong>
-                    <ul><Emphasis /></ul>
+                    <ul>
+                      <Suspense fallback={null}>
+                        <Emphasis />
+                      </Suspense>
+                    </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Conjugação reflexiva:</strong>
-                    <ul><Reflexive /></ul>
+                    <ul>
+                      <Suspense fallback={null}>
+                        <Reflexive />
+                      </Suspense>
+                    </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Sobre erros:</strong>
                     <ul>
-                      <SobreErros />
+                      <Suspense fallback={null}>
+                        <SobreErros />
+                      </Suspense>
                       {state.showReviewButton && state.showConjugations && (
                         <Button
                           onClick={() => handleReview(state.foundVerb)}                      
@@ -702,7 +734,7 @@ const Index = () => {
       </section>
       {/* foot */}
       <section className={styles.foot_info}>
-        {mounted && <Socials />}
+        {ready && <Socials />}
         <Footer />
       </section>
     </div>
