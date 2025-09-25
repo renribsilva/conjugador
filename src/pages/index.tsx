@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, lazy, Suspense } from "react";
+import { useRef, useEffect, useState } from "react";
 import Table from "../components/table";
 import { flowOfReact } from "../lib/flowOfReact";
 import styles from "../styles/index.module.css";
@@ -21,14 +21,14 @@ const mdxModules = [
   () => import("../mdx/SobreErros.mdx"),
 ];
 
-const Home = dynamic(() => import("../mdx/Home.mdx"), { ssr: false });
-const About = dynamic(() => import("../mdx/About.mdx"), { ssr: false });
-const Gracias = dynamic(() => import("../mdx/Gracias.mdx"), { ssr: false });
-const Statistic = dynamic(() => import("../mdx/Statistic.mdx"), { ssr: false });
-const Warning = dynamic(() => import("../mdx/Warning.mdx"), { ssr: false });
-const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"), { ssr: false });
-const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"), { ssr: false });
-const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"), { ssr: false });
+const Home = dynamic(() => import("../mdx/Home.mdx"), { ssr: true });
+const About = dynamic(() => import("../mdx/About.mdx"), { ssr: true });
+const Gracias = dynamic(() => import("../mdx/Gracias.mdx"), { ssr: true });
+const Statistic = dynamic(() => import("../mdx/Statistic.mdx"), { ssr: true });
+const Warning = dynamic(() => import("../mdx/Warning.mdx"), { ssr: true });
+const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"), { ssr: true });
+const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"), { ssr: true });
+const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"), { ssr: true });
 
 const Index = () => {
 
@@ -318,9 +318,7 @@ const Index = () => {
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
-                  <Suspense fallback={null}>
-                    <Home />
-                  </Suspense>
+                  <Home />
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
@@ -328,9 +326,7 @@ const Index = () => {
               } 
               {!state.showHome && state.showSobre && !state.showStatistic &&
                 <>
-                  <Suspense fallback={null}>
-                    <About />
-                  </Suspense>
+                  <About />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -338,9 +334,7 @@ const Index = () => {
               }
               {!state.showHome && !state.showSobre && state.showStatistic &&
                 <>
-                  <Suspense fallback={null}>
-                    <Statistic />
-                  </Suspense>
+                  <Statistic />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -640,9 +634,7 @@ const Index = () => {
               )}
               {state.isButtonDisabled && (
                 <>
-                  <Suspense fallback={null}>
-                    <Gracias />
-                  </Suspense>
+                  <Gracias />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
@@ -680,33 +672,25 @@ const Index = () => {
                   <div className={styles.warning}>
                     <strong>Aviso:</strong>
                     <ul>
-                      <Suspense fallback={null}>
-                        <Warning />
-                      </Suspense>
+                      <Warning />
                     </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Destaques:</strong>
                     <ul>
-                      <Suspense fallback={null}>
-                        <Emphasis />
-                      </Suspense>
+                      <Emphasis />
                     </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Conjugação reflexiva:</strong>
                     <ul>
-                      <Suspense fallback={null}>
-                        <Reflexive />
-                      </Suspense>
+                      <Reflexive />
                     </ul>
                   </div>
                   <div className={styles.warning}>
                     <strong>Sobre erros:</strong>
                     <ul>
-                      <Suspense fallback={null}>
-                        <SobreErros />
-                      </Suspense>
+                      <SobreErros />
                       {state.showReviewButton && state.showConjugations && (
                         <Button
                           onClick={() => handleReview(state.foundVerb)}                      
