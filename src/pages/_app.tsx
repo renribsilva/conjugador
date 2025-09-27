@@ -57,6 +57,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:site_name" content="by renribsilva" />
         <meta property="og:author_name" content="renribsilva" />
         <meta property="og:provider_name" content="Conjugador Gules" />
+
+        {/*To avoid unwanted scroll behavior on iOS Safari*/}
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
         
       </Head>
       <Layout>

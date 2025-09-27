@@ -1,27 +1,32 @@
-// Importa o pacote @next/mdx
 import createMDX from '@next/mdx';
 import remarkFootnotes from 'remark-footnotes';
+import withPWAInit from 'next-pwa';
 
+// Configuração base do Next.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Extensões de página que incluem arquivos JS, JSX, MD, MDX, TS, e TSX
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-
   webpack: (config) => {
-    // Não altera a configuração devtool; usa a padrão do Next.js
     return config;
   },
 };
 
+// Configuração do MDX
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [
-      [remarkFootnotes, { inlineNotes: true }],
-    ],
+    remarkPlugins: [[remarkFootnotes, { inlineNotes: true }]],
   },
 });
 
-export default withMDX({
-  ...nextConfig,
+// Configuração do PWA
+const withPWA = withPWAInit({
+  dest: 'public',
 });
+
+// Exporta combinando MDX + PWA
+export default withPWA(
+  withMDX({
+    ...nextConfig,
+  })
+);
