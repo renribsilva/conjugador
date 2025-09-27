@@ -178,6 +178,7 @@
 .panel {
   /* background-color: rgb(180, 206, 197); */
   max-width:840px;
+  min-width:801px;
   min-height: 260px;
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
@@ -187,7 +188,7 @@
   .panel {
     /* background-color: #4a8df8; */
     margin-top: 15px;
-    min-width: 300px;
+    min-width: 100%
   }
 }
 
