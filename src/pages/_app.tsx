@@ -7,7 +7,7 @@ import { useMDXComponents } from '../mdx-components';
 import { MDXProvider } from "@mdx-js/react";
 import Layout from '../layout/layout';
 
-const title = "Conjugador pt-BR"
+const title = "Conjugador Gules"
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira"
 const url = "https://conjugador-gules.vercel.app"
 
