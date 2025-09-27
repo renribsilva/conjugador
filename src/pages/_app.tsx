@@ -28,6 +28,14 @@ export default function App({ Component, pageProps }: AppProps) {
   const [mdxReady, setMdxReady] = useState(false);
 
   useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log('Service Worker registered');
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     Promise.all(mdxModules.map(fn => fn()))
       .then(() => {
         setMdxReady(true);
