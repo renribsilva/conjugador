@@ -17,6 +17,7 @@ import Button from "../components/button";
 import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import InstallPrompt from "../components/pwa/installPrompt";
+import InstallButton from "../components/pwa/isntallPWA";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Index = () => {
@@ -312,6 +313,7 @@ const Index = () => {
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
                   <InstallPrompt />
+                  <InstallButton />
                 </>
               } 
               {!state.showHome && state.showSobre && !state.showStatistic &&
