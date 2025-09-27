@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Button from "../button";
+import styles from "../../styles/components.module.css";
+import Safari from "../svgs/safari";
 
 const InstallButton = () => {
 
@@ -35,9 +36,12 @@ const InstallButton = () => {
   return (
     <>
       {isInstallable && (
-        <Button onClick={handleInstallClick} className="install-button">
+        <button 
+          onClick={handleInstallClick}
+          className={styles.install_button}
+        >
           Adicionar à tela inicial
-        </Button>
+        </button>
       )}
     </>
   );
@@ -45,14 +49,12 @@ const InstallButton = () => {
 
 export default function InstallPWA() {
   const [isIOS, setIsIOS] = useState(false);
-  const [isFirefox, setIsFirefox] = useState(false);
   const [isStandalone, setIsStandalone] = useState(false);
 
   useEffect(() => {
     if (typeof navigator !== "undefined") {
       const ua = navigator.userAgent.toLowerCase();
       setIsIOS(/ipad|iphone|ipod/.test(ua) && !(window as any).MSStream);
-      setIsFirefox(/firefox/i.test(ua));
       setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
     }
   }, []);
@@ -64,15 +66,7 @@ export default function InstallPWA() {
   return (
     <div>
       {/* Chromium e outros browsers que suportam beforeinstallprompt */}
-      {!isIOS && !isFirefox && <InstallButton />}
-
-      {/* Firefox: instruções manuais */}
-      {/* {isFirefox && (
-        <p>
-          Para instalar este app no Firefox, abra o menu do navegador (três linhas
-          no canto superior direito) e selecione "Adicionar à tela inicial".
-        </p>
-      )} */}
+      {!isIOS && <InstallButton />}
 
       {/* iOS: instruções manuais */}
       {isIOS && (
@@ -80,13 +74,10 @@ export default function InstallPWA() {
           Para instalar este app no iOS, toque no botão de compartilhamento
           <span role="img" aria-label="share icon">
             {" "}
-            ⎋{" "}
+            <Safari />
+            {" "}
           </span>
           e depois em "Adicionar à Tela de Início"
-          <span role="img" aria-label="plus icon">
-            {" "}
-            ➕{" "}
-          </span>.
         </p>
       )}
     </div>

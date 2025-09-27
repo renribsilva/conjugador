@@ -311,7 +311,9 @@ const Index = () => {
                   <div className={styles.knowmore}>
                     <Button onClick={handleSobre}>saber mais sobre essa porra</Button>
                   </div>
-                  <InstallPWA />
+                  <div className={styles.install}>
+                    <InstallPWA />
+                  </div>
                 </>
               } 
               {!state.showHome && state.showSobre && !state.showStatistic &&
