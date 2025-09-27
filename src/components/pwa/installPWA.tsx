@@ -67,12 +67,12 @@ export default function InstallPWA() {
       {!isIOS && !isFirefox && <InstallButton />}
 
       {/* Firefox: instruções manuais */}
-      {isFirefox && (
+      {/* {isFirefox && (
         <p>
           Para instalar este app no Firefox, abra o menu do navegador (três linhas
           no canto superior direito) e selecione "Adicionar à tela inicial".
         </p>
-      )}
+      )} */}
 
       {/* iOS: instruções manuais */}
       {isIOS && (
