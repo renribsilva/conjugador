@@ -73,7 +73,7 @@
 
 .buttons_container {
   /* background-color: rgb(123, 255, 0); */
-  width: 100%;
+  width: 100%;  
   height: 100%;
 }
 
@@ -177,7 +177,7 @@
 
 .panel {
   /* background-color: rgb(180, 206, 197); */
-  width:840px;
+  max-width:840px;
   min-height: 260px;
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
@@ -185,7 +185,9 @@
 
 @media (max-width: 800px) {
   .panel {
+    /* background-color: #4a8df8; */
     margin-top: 15px;
+    min-width: 300px;
   }
 }
 
