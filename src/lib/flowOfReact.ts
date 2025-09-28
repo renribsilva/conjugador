@@ -118,8 +118,6 @@ export const flowOfReact = () => {
     window.addEventListener("offline", handleOffline);
     window.addEventListener("online", handleOnline);
 
-    console.log(navigator.onLine)
-
     // Detecta estado inicial
     if (!navigator.onLine) setState(prev => ({ ...prev, isOffline: true }));
 
@@ -571,7 +569,8 @@ export const flowOfReact = () => {
           goThrough: state.goThrough,
           enter: state.enter,
           progress: state.progress,
-          isDisabled: state.isDisabled
+          isDisabled: state.isDisabled,
+          isOffline: state.isOffline
         },
       };
     

@@ -2,18 +2,28 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/components.module.css";
 import Safari from "../svgs/safari";
 
-const InstallButton = () => {
-
+export default function InstallPWA() {
+  
+  const [isIOS, setIsIOS] = useState(false);
+  const [isStandalone, setIsStandalone] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
+
+    //verifica se navegador é iOS
+    if (typeof navigator !== "undefined") {
+      const ua = navigator.userAgent.toLowerCase();
+      setIsIOS(/ipad|iphone|ipod/.test(ua) && !(window as any).MSStream);
+      setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
+    }
+    
+    //verifica se já há um app instalado
     const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
+      // console.log(e)
       setDeferredPrompt(e);
       setIsInstallable(true);
     };
-
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     return () =>
@@ -21,6 +31,7 @@ const InstallButton = () => {
         "beforeinstallprompt",
         handleBeforeInstallPrompt
       );
+
   }, []);
 
   const handleInstallClick = async () => {
@@ -33,31 +44,7 @@ const InstallButton = () => {
     }
   };
 
-  return (
-    <>
-      {isInstallable && (
-        <button 
-          onClick={handleInstallClick}
-          className={styles.install_button}
-        >
-          Instalar app
-        </button>
-      )}
-    </>
-  );
-};
-
-export default function InstallPWA() {
-  const [isIOS, setIsIOS] = useState(false);
-  const [isStandalone, setIsStandalone] = useState(false);
-
-  useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      const ua = navigator.userAgent.toLowerCase();
-      setIsIOS(/ipad|iphone|ipod/.test(ua) && !(window as any).MSStream);
-      setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
-    }
-  }, []);
+  // console.log(isUpdateAvailable)
 
   if (isStandalone) {
     return null; // App já instalado
@@ -66,7 +53,14 @@ export default function InstallPWA() {
   return (
     <div>
       {/* Chromium e outros browsers que suportam beforeinstallprompt */}
-      {!isIOS && <InstallButton />}
+      {!isIOS && isInstallable && (
+        <button 
+          onClick={handleInstallClick}
+          className={styles.install_button}
+        >
+          Instalar app
+        </button>
+      )}
 
       {/* iOS: instruções manuais */}
       {isIOS && (
