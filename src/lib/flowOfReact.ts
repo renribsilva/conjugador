@@ -5,16 +5,7 @@ import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import type { Conjugation } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 
-export const flowOfReact = () => {
-
-  useEffect(() => {
-    isValidVerbByAPI("reabracar");
-    isValidVerbByAPI("reabraçar");
-    isValidVerbByAPI("descalcar");
-    conjVerbByAPI("recomeçar");
-    getSimilarVerbs("renato")
-    console.log("pré-carregamento ok")
-  }, [])
+export const flowOfReact = () => { 
 
   const [state, setState] = useState<{
     conjugations: Conjugation | null;
@@ -64,6 +55,8 @@ export const flowOfReact = () => {
     
     canonical: string
 
+    isOffline: boolean
+
   }>({
 
     conjugations: null,
@@ -111,9 +104,30 @@ export const flowOfReact = () => {
     varConector: null,
     varOriginalInput: null,
 
-    canonical: "canonical1"
+    canonical: "canonical1",
+
+    isOffline: false
 
   });
+
+  useEffect(() => {
+
+    const handleOffline = () => setState(prev => ({ ...prev, isOffline: true }));
+    const handleOnline = () => setState(prev => ({ ...prev, isOffline: false }));
+
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+
+    console.log(navigator.onLine)
+
+    // Detecta estado inicial
+    if (!navigator.onLine) setState(prev => ({ ...prev, isOffline: true }));
+
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
+    };
+  }, []);
 
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
@@ -132,6 +146,19 @@ export const flowOfReact = () => {
     }));
   };
 
+  if (state.isOffline) {
+
+    useEffect(() => {
+      isValidVerbByAPI("reabracar");
+      isValidVerbByAPI("reabraçar");
+      isValidVerbByAPI("descalcar");
+      conjVerbByAPI("recomeçar");
+      getSimilarVerbs("renato")
+      console.log("pré-carregamento ok")
+    }, [])
+
+  }
+
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
     if (event.key === "Enter" && state.inputValue !== "") {
@@ -139,6 +166,14 @@ export const flowOfReact = () => {
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
+
+      if (state.isOffline) {
+        setState(prev => ({
+          ...prev,
+        }));
+        alert("Você está offline. A conjugação de verbos não está disponível.");
+        return;
+      }
 
       const normalizedInputValue = ni(state.inputValue);
       const suggestions = getSimilarVerbs(state.inputValue);
@@ -478,66 +513,70 @@ export const flowOfReact = () => {
   const dependencies = [
     state.isDisabled,
   ];
-  
-  useEffect(() => {
 
-    if (state.isDisabled) return;
+  if (!state.isOffline) {
 
-    const data = {
-      A_INPUT: {
-        inputReq: state.inputReq,
-      },
-      B_VALIDAÇÃO_DO_VERBO: {
-        result: state.result,
-        foundVerb: state.foundVerb,
-        similar: state.similar,
-        punct: state.punct,
-        variations: {
-          varHasVariations: state.varHasVariations,
-          varProcessedInput: state.varProcessedInput,
-          varForcedVerb: state.varForcedVerb,
-          varPrefixFounded: state.varPrefixFounded,
-          varMatchingAfixo: state.varMatchingAfixo,
-          varConector: state.varConector,
-          varOriginalInput: state.varOriginalInput,
-        }
-      },
-      C_OUTPUT: {
-        conjugations: state.conjugations,
-        propsOfVerb: {
-          hasTargetCanonical1: state.hasTargetCanonical1,
-          hasTargetCanonical2: state.hasTargetCanonical2,
-          hasTargetAbundance1: state.hasTargetAbundance1,
-          hasTargetAbundance2: state.hasTargetAbundance2,
-          termination: state.termination,
-          termEntrie: state.termEntrie,
-          types: state.types,
-          note_plain: state.note_plain, 
-          note_ref: state.note_ref,
-          model: state.model
+    useEffect(() => {
+
+      if (!state.isOffline && state.isDisabled) return;
+
+      const data = {
+        A_INPUT: {
+          inputReq: state.inputReq,
         },
-        suggestions: state.suggestions,
-      },
-      D_CONTROLADORES_DE_FLUXO: {
-        showConjugations: state.showConjugations,
-        canonical: state.canonical,
-        loading: state.loading,
-        showButton: state.showButton,
-        isButtonDisabled: state.isButtonDisabled,
-        showSuggestions: state.showSuggestions,
-        showHome: state.showHome,
-        showSobre: state.showSobre,
-        showStatistic: state.showStatistic,
-        showReviewButton: state.showReviewButton,
-        goThrough: state.goThrough,
-        enter: state.enter,
-        progress: state.progress,
-        isDisabled: state.isDisabled
-      },
-    };
-  
-    console.log(data);
-  }, dependencies); 
+        B_VALIDAÇÃO_DO_VERBO: {
+          result: state.result,
+          foundVerb: state.foundVerb,
+          similar: state.similar,
+          punct: state.punct,
+          variations: {
+            varHasVariations: state.varHasVariations,
+            varProcessedInput: state.varProcessedInput,
+            varForcedVerb: state.varForcedVerb,
+            varPrefixFounded: state.varPrefixFounded,
+            varMatchingAfixo: state.varMatchingAfixo,
+            varConector: state.varConector,
+            varOriginalInput: state.varOriginalInput,
+          }
+        },
+        C_OUTPUT: {
+          conjugations: state.conjugations,
+          propsOfVerb: {
+            hasTargetCanonical1: state.hasTargetCanonical1,
+            hasTargetCanonical2: state.hasTargetCanonical2,
+            hasTargetAbundance1: state.hasTargetAbundance1,
+            hasTargetAbundance2: state.hasTargetAbundance2,
+            termination: state.termination,
+            termEntrie: state.termEntrie,
+            types: state.types,
+            note_plain: state.note_plain, 
+            note_ref: state.note_ref,
+            model: state.model
+          },
+          suggestions: state.suggestions,
+        },
+        D_CONTROLADORES_DE_FLUXO: {
+          showConjugations: state.showConjugations,
+          canonical: state.canonical,
+          loading: state.loading,
+          showButton: state.showButton,
+          isButtonDisabled: state.isButtonDisabled,
+          showSuggestions: state.showSuggestions,
+          showHome: state.showHome,
+          showSobre: state.showSobre,
+          showStatistic: state.showStatistic,
+          showReviewButton: state.showReviewButton,
+          goThrough: state.goThrough,
+          enter: state.enter,
+          progress: state.progress,
+          isDisabled: state.isDisabled
+        },
+      };
+    
+      console.log(data);
+    }, dependencies); 
+
+  }
 
   return {
     state,
