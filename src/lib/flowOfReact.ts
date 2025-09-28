@@ -130,13 +130,15 @@ export const flowOfReact = () => {
   }, []);
 
   const fetchConjugationsData = async () => {
-    const response = await fetch("/api/queryVerb");
-    if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
-    const data: Conjugation = await response.json();
-    setState(prev => ({
-      ...prev,
-      conjugations: data,
-    }));
+    if (!state.isOffline) {
+      const response = await fetch("/api/queryVerb");
+      if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
+      const data: Conjugation = await response.json();
+      setState(prev => ({
+        ...prev,
+        conjugations: data,
+      }));
+    }
   };
 
   const updateProgress = (n: number) => {
@@ -482,9 +484,7 @@ export const flowOfReact = () => {
 
         updateProgress(100);
 
-        if (!state.isOffline) {
-          await fetchConjugationsData();
-        }
+        await fetchConjugationsData();
 
         setState(prev => ({
           ...prev,
