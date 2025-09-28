@@ -170,6 +170,9 @@ export const flowOfReact = () => {
       if (state.isOffline) {
         setState(prev => ({
           ...prev,
+          showHome: false,
+          showSobre: false,
+          showStatistic: false
         }));
         alert("Você está offline. A conjugação de verbos não está disponível.");
         return;

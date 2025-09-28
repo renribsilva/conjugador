@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google"
 
 const ubuntu = Roboto({
   subsets: ["latin"],
-  weight: ["300", "400"]
+  weight: ["300", "400"],
 });
 
 export default function Layout({ children }) {
