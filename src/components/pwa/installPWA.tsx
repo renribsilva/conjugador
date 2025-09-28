@@ -40,7 +40,7 @@ const InstallButton = () => {
           onClick={handleInstallClick}
           className={styles.install_button}
         >
-          Adicionar à tela inicial
+          Instalar app
         </button>
       )}
     </>

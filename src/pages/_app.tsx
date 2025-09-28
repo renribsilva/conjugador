@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { useMDXComponents } from '../mdx-components';
 import { MDXProvider } from "@mdx-js/react";
 import Layout from '../layout/layout';
+import { Serwist } from "@serwist/window";
 
 const title = "Conjugador Gules"
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira"
@@ -28,10 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
   const [mdxReady, setMdxReady] = useState(false);
 
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then(() => {
-        console.log('Service Worker registered');
+    if ("serviceWorker" in navigator) {
+      // Passa a URL do sw.js diretamente no construtor
+      const sw = new Serwist("/sw.js", {
+        type: "module",       // opcional, bom para Next.js moderno
       });
+      sw.register();
     }
   }, []);
 
@@ -52,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
         <title>{title}</title>
 
@@ -66,8 +69,20 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:author_name" content="renribsilva" />
         <meta property="og:provider_name" content="Conjugador Gules" />
 
-        {/*To avoid unwanted scroll behavior on iOS Safari*/}
-        <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="apple-touch-icon" href="/gules192.png" />
+        {/*Icon for iOS devices*/}
+        <link
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="gules192.png"
+        />
+        {/*Splash screen for iOS devices*/}
+        <link
+          rel="apple-touch-startup-image"
+          href="/gules512.png"
+          sizes="512X512"
+        />
         
       </Head>
       <Layout>
