@@ -482,7 +482,9 @@ export const flowOfReact = () => {
 
         updateProgress(100);
 
-        await fetchConjugationsData();
+        if (!state.isOffline) {
+          await fetchConjugationsData();
+        }
 
         setState(prev => ({
           ...prev,
