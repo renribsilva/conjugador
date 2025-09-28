@@ -48,10 +48,8 @@ const InstallButton = () => {
 };
 
 export default function InstallPWA() {
-
   const [isIOS, setIsIOS] = useState(false);
   const [isStandalone, setIsStandalone] = useState(false);
-  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
 
   useEffect(() => {
     if (typeof navigator !== "undefined") {
@@ -61,36 +59,8 @@ export default function InstallPWA() {
     }
   }, []);
 
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.getRegistration().then((reg) => {
-        if (!reg) return;
-        reg.onupdatefound = () => {
-          const newSW = reg.installing;
-          if (!newSW) return;
-          newSW.addEventListener("statechange", () => {
-            // Só dispara quando o SW foi instalado e já existe um controlador (SW anterior)
-            if (newSW.state === "installed" && navigator.serviceWorker.controller) {
-              // Verifica se o SW instalado é realmente diferente
-              if (reg.waiting) {
-                setIsUpdateAvailable(true);
-              }
-            }
-          });
-        };
-      });
-    }
-  }, []);
-
   if (isStandalone) {
-    return isUpdateAvailable ? (
-      <button
-        onClick={() => window.location.reload()}
-        className={styles.install_button}
-      >
-        Atualizar app
-      </button>
-    ) : null; // App já instalado e sem atualização
+    return null; // App já instalado
   }
 
   return (
