@@ -131,17 +131,29 @@ export const flowOfReact = () => {
     return new Promise((resolve) => {
       if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
         resolve(navigator.onLine); // fallback se não houver SW
+        setState(prev => ({
+          ...prev,
+          isOnline: navigator.onLine
+        }))
         return;
       }
       const listener = (event: MessageEvent) => {
         if (event.data?.type === "NETWORK_STATUS") {
           navigator.serviceWorker.removeEventListener("message", listener);
+          setState(prev => ({
+            ...prev,
+            isOnline: event.data.isOnline
+          }))
           resolve(event.data.isOnline);
         }
       };
       navigator.serviceWorker.addEventListener("message", listener);
       setTimeout(() => {
         navigator.serviceWorker.removeEventListener("message", listener);
+        setState(prev => ({
+          ...prev,
+          isOnline: navigator.onLine
+        }))
         resolve(navigator.onLine);
       }, 500);
     });

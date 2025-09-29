@@ -28,23 +28,13 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { state, setState, handleKeyDown } = flowOfReact();
+  const { state, setState, handleKeyDown, getNetworkStatusFromSW } = flowOfReact();
 
   useEffect(() => {
-    async function first () {
-    await fetch("api/checkConnection")
-  }
-  first();
-
-  navigator.serviceWorker.addEventListener("message", (event) => {
-    console.log(event)
-    if (event.data?.type === "NETWORK_STATUS") {
-      setState((prev) => ({
-        ...prev,
-        isOnline: event.data.isOnline,
-      }));
+    async function teste() {
+      await getNetworkStatusFromSW;
     }
-  });
+    teste();
   }, [])
 
   useEffect(() => {
