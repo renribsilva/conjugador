@@ -29,13 +29,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const [mdxReady, setMdxReady] = useState(false);
 
   useEffect(() => {
-    async function first () {
-      await fetch("api/checkConnection")
-    }
-    first();
-  }, []);
-  
-  useEffect(() => {
     if ("serviceWorker" in navigator) {
       // Passa a URL do sw.js diretamente no construtor
       const sw = new Serwist("/sw.js", {

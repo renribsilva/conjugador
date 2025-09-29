@@ -110,6 +110,34 @@ export const flowOfReact = () => {
 
   });
 
+  const checkConnection = async () => {
+    try {
+      const response = await fetch("/api/checkConnection");  
+      if (!response.ok) {
+        setState(prev => ({ ...prev, isOnline: navigator.onLine }));
+      }      
+      const data = await response.json();
+      setState(prev => ({ ...prev, isOnline: data.ok }));
+      return data.ok;
+    } catch (error) {
+      setState(prev => ({ ...prev, isOnline: false }));
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    checkConnection().then(isOnline => {
+      if (isOnline) {
+        isValidVerbByAPI("reabracar");
+        isValidVerbByAPI("reabraçar");
+        isValidVerbByAPI("descalcar");
+        conjVerbByAPI("recomeçar");
+        getSimilarVerbs("renato");
+        console.log("pré-carregamento ok");
+      }
+    });
+  }, []);
+
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
     if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
@@ -125,38 +153,6 @@ export const flowOfReact = () => {
       ...prev,
       progress: n,
     }));
-  };
-
-  const getNetworkStatusFromSW = (): Promise<boolean> => {
-    return new Promise((resolve) => {
-      if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
-        resolve(navigator.onLine); // fallback se não houver SW
-        setState(prev => ({
-          ...prev,
-          isOnline: navigator.onLine
-        }))
-        return;
-      }
-      const listener = (event: MessageEvent) => {
-        if (event.data?.type === "NETWORK_STATUS") {
-          navigator.serviceWorker.removeEventListener("message", listener);
-          setState(prev => ({
-            ...prev,
-            isOnline: event.data.isOnline
-          }))
-          resolve(event.data.isOnline);
-        }
-      };
-      navigator.serviceWorker.addEventListener("message", listener);
-      setTimeout(() => {
-        navigator.serviceWorker.removeEventListener("message", listener);
-        setState(prev => ({
-          ...prev,
-          isOnline: navigator.onLine
-        }))
-        resolve(navigator.onLine);
-      }, 500);
-    });
   };
 
   const processEnter = async () => {
@@ -492,7 +488,7 @@ export const flowOfReact = () => {
     
     if (event.key === "Enter" && state.inputValue !== "") {      
 
-      const teste = await getNetworkStatusFromSW();
+      const check = await checkConnection();
       
       setState(prev => ({
         ...prev,
@@ -505,7 +501,7 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
       
-      if (!teste) {
+      if (!check) {
         setState(prev => ({
           ...prev,
           showHome: false,
@@ -525,7 +521,7 @@ export const flowOfReact = () => {
       isDisabled: false,
     }));
     return
-  };  
+  };
 
   const dependencies = [
     state.isDisabled,
@@ -595,5 +591,6 @@ export const flowOfReact = () => {
     state,
     setState,
     handleKeyDown,
+    checkConnection
   };
 };

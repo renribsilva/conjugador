@@ -4,6 +4,9 @@ import { Serwist } from "serwist";
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
+    // Change this attribute's name to your `injectionPoint`.
+    // `injectionPoint` is an InjectManifest option.
+    // See https://serwist.pages.dev/docs/build/configuring
     __SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
   }
 }
@@ -15,40 +18,27 @@ const serwist = new Serwist({
   skipWaiting: true,
   clientsClaim: true,
   navigationPreload: true,
-  runtimeCaching: defaultCache, // tudo exceto /api/checkConnection
+  runtimeCaching: defaultCache,
 });
 
 serwist.addEventListeners();
 
-// Intercepta todas as requisições
 self.addEventListener("fetch", (event) => {
-  const url = event.request.url;
-
-  if (url.includes("/api/isValidVerb")) return;
-
-  // Intercepta /api/checkConnection **antes do defaultCache**
-  if (url.includes("/api/checkConnection")) {
-    event.respondWith(
-      (async () => {
-        try {
-          const response = await fetch(event.request);
-          sendStatusToClients(true);
-          return response;
-        } catch {
-          sendStatusToClients(false);
-          return new Response(
-            JSON.stringify({ ok: false }),
-            { headers: { "Content-Type": "application/json" }, status: 503 }
-          );
-        }
-      })()
-    );
-    return;
-  }
-
-  // todas as outras requisições ficam com defaultCache
+  if (event.request.url.includes("/api/isValidVerb")) return;
+  if (event.request.url.includes("/api/checkConnection")) return;
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        sendStatusToClients(true);
+        return response;
+      })
+      .catch(() => {
+        sendStatusToClients(false);
+        return new Response("Offline", { status: 503, statusText: "Offline" });
+      })
+  );
 });
-  
+
 function sendStatusToClients(status: boolean) {
   self.clients.matchAll().then((clients) => {
     clients.forEach((client) => {
