@@ -23,9 +23,11 @@ const Index = () => {
 
   const [activeTab, setActiveTab] = useState('home');
   const [mounted, setMounted] = useState(false);
+  const [currentProgress, setCurrentProgress] = useState<number>(0);
+  const [axi, setAxi] = useState<string>('');
+  const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const [currentProgress, setCurrentProgress] = useState<number>(0);
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
@@ -141,14 +143,12 @@ const Index = () => {
   const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
 
   const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
-  const [axi, setAxi] = useState<string>('');
   const randomAxi = () => {
     const randomIndex = Math.floor(Math.random() * axiExpression.length);
     setAxi(axiExpression[randomIndex]);
   };
 
   const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
-  const [eita, setEita] = useState<string>('');
   const randomEita = () => {
     const randomIndex = Math.floor(Math.random() * eitaExpression.length);
     setEita(eitaExpression[randomIndex]);
