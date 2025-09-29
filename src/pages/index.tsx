@@ -191,6 +191,24 @@ const Index = () => {
     randomAxi();
     randomEita();
   }, []);
+
+  const ConnectionStatus = () => {
+    return (
+      <>
+        {(!state.showOffline && state.loading) && (
+          <p>aguarde...</p>
+        )}
+        {(state.showOffline && !state.showHome && !state.showSobre && !state.showStatistic) && (
+          <>
+            <p>Você está offline. A conjugação não está disponível</p>
+            <div className={styles.gotohome}>
+              <Button onClick={handleHome}>voltar para o início</Button>
+            </div>
+          </>
+        )}
+      </>
+    );
+  };
   
   if (!mounted || state.isOnline === null) {
     return null;
@@ -280,19 +298,7 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.isOnline && state.loading && (
-                <>
-                  <p>aguarde...</p>
-                </>
-              )}
-              {!state.isOnline && !state.showHome && !state.showStatistic && !state.showSobre && (
-                <>
-                  <p>Você está offline. A conjugação não está disponível</p>
-                  <div className={styles.gotohome}>
-                    <Button onClick={handleHome}>voltar para o início</Button>
-                  </div>
-                </>
-              )}
+              <ConnectionStatus/>
             </div>
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
@@ -624,7 +630,7 @@ const Index = () => {
               )}
             </div>
             <div>
-              {state.isOnline && state.conjugations !== null 
+              {state.conjugations !== null 
               && state.foundVerb
               && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
                 === nw(String(state.foundVerb).replace("*","")) || 
