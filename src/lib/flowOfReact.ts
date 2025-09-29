@@ -154,7 +154,28 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
+    const check = await checkConnection();
+
     if (event.key === "Enter" && state.inputValue !== "") {
+
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 0);
+
+      if (!check) {
+        setState(prev => ({
+          ...prev,
+          showHome: false,
+          showSobre: false,
+          showStatistic: false,
+          showConjugations: false,
+        }));
+        alert("Você está offline. A conjugação não está disponível no momento")
+        return
+      }
+
+      const normalizedInputValue = ni(state.inputValue);
+      const suggestions = getSimilarVerbs(state.inputValue);
 
       setState(prev => ({
         ...prev,
@@ -163,6 +184,7 @@ export const flowOfReact = () => {
         inputValue: "",
         inputReq: state.inputValue,
         showConjugations: false,
+        suggestions: suggestions,
         showSuggestions: false,
         showButton: false,
         isButtonDisabled: false,
@@ -205,33 +227,6 @@ export const flowOfReact = () => {
 
         canonical: "canonical1"
 
-      }));
-
-      setTimeout(() => {
-        (event.target as HTMLInputElement).blur();
-      }, 0);
-
-      const check = await checkConnection();
-
-      if (!check) {
-        setState(prev => ({
-          ...prev,
-          showHome: false,
-          showSobre: false,
-          showStatistic: false,
-          showConjugations: false,
-          loading: false
-        }));
-        alert("Você está offline. A conjugação não está disponível no momento")
-        return
-      }
-
-      const normalizedInputValue = ni(state.inputValue);
-      const suggestions = getSimilarVerbs(state.inputValue);
-
-      setState(prev => ({
-        ...prev,
-        suggestions: suggestions,
       }));
 
       if (normalizedInputValue.trim() === "") {
