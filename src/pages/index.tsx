@@ -107,18 +107,16 @@ const Index = () => {
   };
 
   useEffect(() => {
-    if (inputRef.current) {
-      const enterEvent = new KeyboardEvent("keydown", {
-        bubbles: true,
-        cancelable: true,
-        key: "Enter",
-        code: "Enter",        
-      });
-      inputRef.current.dispatchEvent(enterEvent);
-    } 
-    randomAxi();
-    randomEita();
-  }, [state.enter]);
+  if (state.enter) {
+    handleKeyDown({
+      key: "Enter",
+      preventDefault: () => {},
+      stopPropagation: () => {},
+    } as unknown as React.KeyboardEvent<HTMLInputElement>);
+  }
+  randomAxi();
+  randomEita();
+}, [state.enter]);
 
   // console.log(inputRef)
 
@@ -298,7 +296,7 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && state.isOnline &&(
+              {state.loading && state.isOnline && (
                 <>
                   <p>aguarde...</p>
                 </>
