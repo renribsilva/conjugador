@@ -298,17 +298,9 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && !state.isOffline && (
+              {state.loading && (
                 <>
                   <p>aguarde...</p>
-                </>
-              )}
-              {state.isOffline && !state.showHome && !state.showSobre && !state.showStatistic && (
-                <>
-                  <p>Você está offline. A conjugação não está disponível.</p>
-                  <div className={styles.gotohome}>
-                    <Button onClick={handleHome}>voltar para o início</Button>
-                  </div>
                 </>
               )}
             </div>

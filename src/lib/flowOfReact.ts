@@ -118,6 +118,8 @@ export const flowOfReact = () => {
     window.addEventListener("offline", handleOffline);
     window.addEventListener("online", handleOnline);
 
+    console.log(navigator.onLine)
+
     // Detecta estado inicial
     if (!navigator.onLine) setState(prev => ({ ...prev, isOffline: true }));
 
@@ -170,9 +172,6 @@ export const flowOfReact = () => {
       if (state.isOffline) {
         setState(prev => ({
           ...prev,
-          showHome: false,
-          showSobre: false,
-          showStatistic: false
         }));
         alert("Você está offline. A conjugação de verbos não está disponível.");
         return;
@@ -572,8 +571,7 @@ export const flowOfReact = () => {
           goThrough: state.goThrough,
           enter: state.enter,
           progress: state.progress,
-          isDisabled: state.isDisabled,
-          isOffline: state.isOffline
+          isDisabled: state.isDisabled
         },
       };
     
