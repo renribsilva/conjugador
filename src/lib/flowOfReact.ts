@@ -494,8 +494,6 @@ export const flowOfReact = () => {
 
       const check = await checkConnection();
 
-      updateProgress(5)
-
       if (!check) {
         setState(prev => ({
           ...prev,
