@@ -44,11 +44,22 @@ self.addEventListener("fetch", (event) => {
       fetch(event.request)
         .then((response) => {
           sendStatusToClients(true);
-          return response;
+          if(response.ok) {
+            caches.open("my-cache").then((cache) => {
+              cache.put(event.request, response.clone());
+            })
+          }
+          return response
         })
         .catch(() => {
           sendStatusToClients(false);
-          return new Response("Offline", { status: 503, statusText: "Offline" });
+          return caches.match(event.request)
+            .then((cachedResponse) => {
+              if (cachedResponse) {
+                return cachedResponse
+              }
+              return new Response("API não acessível")
+            })
         })
     );
   }
