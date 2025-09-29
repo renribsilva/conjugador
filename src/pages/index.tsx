@@ -211,7 +211,7 @@ const Index = () => {
     setMounted(true);
   }, []);
 
-  console.log(state.isOnline)
+  console.log(state.loading)
   
   if (!mounted) {
     return null;
