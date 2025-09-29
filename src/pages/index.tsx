@@ -301,16 +301,17 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.isOnline && state.loading  && (
+              {(state.isOnline && state.loading) && (
                 <>
                   <p>aguarde...</p>
                 </>
               )}
-              {!state.isOnline && 
+              {(!state.isOnline && 
+              !state.loading &&
               !state.showConjugations && 
               !state.showHome && 
               !state.showStatistic && 
-              !state.showSobre && (
+              !state.showSobre) && (
                 <>
                   <p>Você está offline. A conjugação não está disponível</p>
                   <div className={styles.gotohome}>

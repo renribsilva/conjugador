@@ -134,7 +134,7 @@ export const flowOfReact = () => {
       setState(prev => ({ ...prev, isOnline: data.ok }));
       return data.ok;
     } catch (error) {
-      setState(prev => ({ ...prev, isOnline: false }));
+      setState(prev => ({ ...prev, isOnline: false, loading: false, conjugations: null }));
       return false;
     }
   };
