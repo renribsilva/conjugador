@@ -499,6 +499,7 @@ export const flowOfReact = () => {
           showSobre: false,
           showStatistic: false,
           showConjugations: false,
+          loading: false
         }));
         alert("Você está offline. A conjugação não está disponível no momento")
         return
