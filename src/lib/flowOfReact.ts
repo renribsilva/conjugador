@@ -156,6 +156,8 @@ export const flowOfReact = () => {
 
     if (event.key === "Enter" && state.inputValue !== "") {
 
+      setState(prev => ({ ...prev, loading: true }));
+
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
