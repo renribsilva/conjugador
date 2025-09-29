@@ -110,17 +110,30 @@ export const flowOfReact = () => {
 
   });
 
-  // useEffect(() => {
-  //   const cachedState = localStorage.getItem("flowOfReactState");
-  //   if (cachedState) {
-  //     setState(JSON.parse(cachedState));
-  //   }
-  // }, []);
+  const checkConnection = async () => {
+    try {
+      const response = await fetch("/api/checkConnection");
+      const data = await response.json();
+      setState(prev => ({ ...prev, isOnline: data.ok }));
+      return data.ok;
+    } catch (error) {
+      setState(prev => ({ ...prev, isOnline: false }));
+      return false;
+    }
+  };
 
-  // // Salvar o estado no cache sempre que ele mudar
-  // useEffect(() => {
-  //   localStorage.setItem("flowOfReactState", JSON.stringify(state));
-  // }, [state]);
+  useEffect(() => {
+    checkConnection().then(isOnline => {
+      if (isOnline) {
+        isValidVerbByAPI("reabracar");
+        isValidVerbByAPI("reabraçar");
+        isValidVerbByAPI("descalcar");
+        conjVerbByAPI("recomeçar");
+        getSimilarVerbs("renato");
+        console.log("pré-carregamento ok");
+      }
+    });
+  }, []);
 
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
@@ -138,31 +151,6 @@ export const flowOfReact = () => {
       progress: n,
     }));
   };
-
-  const checkConnection = async () => {
-    try {
-      const response = await fetch("/api/checkConnection");
-      const data = await response.json();
-      setState(prev => ({ ...prev, isOnline: data.ok }));
-      return data.ok;
-    } catch (error) {
-      setState(prev => ({ ...prev, isOnline: false, loading: false, conjugations: null }));
-      return false;
-    }
-  };
-
-  useEffect(() => {
-    checkConnection().then(isOnline => {
-      if (isOnline) {
-        isValidVerbByAPI("reabracar");
-        isValidVerbByAPI("reabraçar");
-        isValidVerbByAPI("descalcar");
-        conjVerbByAPI("recomeçar");
-        getSimilarVerbs("renato");
-        console.log("pré-carregamento ok");
-      }
-    });
-  }, []);
 
   const processEnter = async () => {
 
@@ -494,16 +482,22 @@ export const flowOfReact = () => {
   }
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    const check = await checkConnection();
+    
     if (event.key === "Enter" && state.inputValue !== "") {      
+
+      const check = await checkConnection();
+      
       setState(prev => ({
         ...prev,
         loading: false
       }));
+      
       event.preventDefault();
+      
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
+      
       if (!check) {
         setState(prev => ({
           ...prev,

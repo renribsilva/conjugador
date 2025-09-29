@@ -24,7 +24,7 @@ const mdxModules = [
 ];
 
 export default function App({ Component, pageProps }: AppProps) {
-  
+
   const components = useMDXComponents({});
   const [mdxReady, setMdxReady] = useState(false);
 

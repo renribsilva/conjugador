@@ -28,10 +28,19 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { state, setState, handleKeyDown, checkConnection } = flowOfReact();
+  const { state, setState, handleKeyDown } = flowOfReact();
 
   useEffect(() => {
-    checkConnection
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.addEventListener("message", (event) => {
+        if (event.data?.type === "NETWORK_STATUS") {
+          setState((prev) => ({
+            ...prev,
+            isOnline: event.data.isOnline,
+          }));
+        }
+      });
+    }
   },[])
 
   useEffect(() => {
@@ -214,6 +223,8 @@ const Index = () => {
   if (!mounted) {
     return null;
   }
+  
+  console.log(state.isOnline)
 
   return (
     <div className={styles.index}>

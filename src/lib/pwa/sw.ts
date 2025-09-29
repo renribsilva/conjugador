@@ -22,3 +22,28 @@ const serwist = new Serwist({
 });
 
 serwist.addEventListeners();
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        sendStatusToClients(true);
+        return response;
+      })
+      .catch(() => {
+        sendStatusToClients(false);
+        return new Response("Offline", { status: 503, statusText: "Offline" });
+      })
+  );
+});
+
+function sendStatusToClients(status: boolean) {
+  self.clients.matchAll().then((clients) => {
+    clients.forEach((client) => {
+      client.postMessage({
+        type: "NETWORK_STATUS",
+        isOnline: status,
+      });
+    });
+  });
+}
