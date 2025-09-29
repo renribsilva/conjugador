@@ -106,18 +106,10 @@ const Index = () => {
     setActiveTab('statistic');
   };
 
-  useEffect(() => {
-  randomAxi();
-  randomEita();
-}, []);
-
-  // console.log(inputRef)
-
-  function NoteRefList({ noteRef }) {
+  const NoteRefList = ({ noteRef }) => {
     if (!noteRef || Object.keys(noteRef).length === 0) {
       return null; 
-    }
-  
+    }  
     return (
       <ol>
         {Object.keys(noteRef)
@@ -130,20 +122,6 @@ const Index = () => {
       </ol>
     );
   }
-
-  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
-
-  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
-  const randomAxi = () => {
-    const randomIndex = Math.floor(Math.random() * axiExpression.length);
-    setAxi(axiExpression[randomIndex]);
-  };
-
-  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
-  const randomEita = () => {
-    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
-    setEita(eitaExpression[randomIndex]);
-  };
 
   const formatPuncts = (puncts: string[] | null) => {
     if (!puncts || puncts.length === 0) return null;
@@ -194,11 +172,24 @@ const Index = () => {
     );
   };
 
-  // console.log(currentProgress)
-  // console.log(state.progress)
+  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
+  
+  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
+  const randomAxi = () => {
+    const randomIndex = Math.floor(Math.random() * axiExpression.length);
+    setAxi(axiExpression[randomIndex]);
+  };
+
+  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
+  const randomEita = () => {
+    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
+    setEita(eitaExpression[randomIndex]);
+  };
 
   useEffect(() => {
     setMounted(true);
+    randomAxi();
+    randomEita();
   }, []);
   
   if (!mounted) {

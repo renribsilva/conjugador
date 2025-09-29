@@ -154,20 +154,6 @@ export const flowOfReact = () => {
 
   const processEnter = async () => {
 
-    const check = await checkConnection();
-
-    if (!check) {
-      setState(prev => ({
-        ...prev,
-        showHome: false,
-        showSobre: false,
-        showStatistic: false,
-        showConjugations: false,
-      }));
-      alert("Você está offline. A conjugação não está disponível no momento")
-      return
-    }
-
     const normalizedInputValue = ni(state.inputValue);
     const suggestions = getSimilarVerbs(state.inputValue);
 
@@ -499,10 +485,28 @@ export const flowOfReact = () => {
     if (event.key === "Enter" && state.inputValue !== "") {
       
       event.preventDefault();
+
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
-      processEnter();
+
+      const check = await checkConnection();
+
+      if (!check) {
+        setState(prev => ({
+          ...prev,
+          showHome: false,
+          showSobre: false,
+          showStatistic: false,
+          showConjugations: false,
+        }));
+        alert("Você está offline. A conjugação não está disponível no momento")
+        return
+      }
+
+      if(check) {
+        processEnter();
+      }
     }
     setState(prev => ({
         ...prev,
