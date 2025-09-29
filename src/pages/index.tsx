@@ -298,24 +298,23 @@ const Index = () => {
         <div className={styles.panel}>
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
-            <div className={styles.loading}>
-              {(state.isOnline && state.loading) && (
-                <>
-                  <p>aguarde...</p>
-                </>
+            <div>
+              {state.isOnline && ( 
+                <div className={styles.loading}>
+                  {(state.loading) && (
+                    <>
+                      <p>aguarde...</p>
+                    </>
+                  )}
+                </div>
               )}
-              {(!state.isOnline && 
-              !state.loading &&
-              !state.showConjugations && 
-              !state.showHome && 
-              !state.showStatistic && 
-              !state.showSobre) && (
-                <>
+              {!state.isOnline && (!state.showSobre && !state.showStatistic && !state.showHome) && (
+                <div>
                   <p>Você está offline. A conjugação não está disponível</p>
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
-                </>
+                </div>
               )}
             </div>
             <div>
