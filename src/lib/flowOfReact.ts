@@ -205,7 +205,9 @@ export const flowOfReact = () => {
       varConector: null,
       varOriginalInput: null,
 
-      canonical: "canonical1"
+      canonical: "canonical1",
+
+      isOnline: true
 
     }));
 
@@ -251,7 +253,6 @@ export const flowOfReact = () => {
         ...prev,
         loading: false,
         showButton: true,
-
       }));
 
       updateProgress(100);
@@ -500,9 +501,7 @@ export const flowOfReact = () => {
         }));
         alert("Você está offline. A conjugação não está disponível no momento")
         return
-      }
-
-      if(check) {
+      } else {
         processEnter();
       }
     }
