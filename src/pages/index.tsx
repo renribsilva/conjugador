@@ -298,7 +298,7 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && (
+              {state.loading && state.isOnline &&(
                 <>
                   <p>aguarde...</p>
                 </>
@@ -642,7 +642,7 @@ const Index = () => {
               )}
             </div>
             <div>
-              {state.conjugations !== null 
+              {state.isOnline && state.conjugations !== null 
               && state.foundVerb
               && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
                 === nw(String(state.foundVerb).replace("*","")) || 
