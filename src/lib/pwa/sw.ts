@@ -24,6 +24,7 @@ const serwist = new Serwist({
 serwist.addEventListeners();
 
 self.addEventListener("fetch", (event) => {
+  if (event.request.url.includes("/api/isValidVerb")) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {
@@ -35,34 +36,6 @@ self.addEventListener("fetch", (event) => {
         return new Response("Offline", { status: 503, statusText: "Offline" });
       })
   );
-});
-
-self.addEventListener("fetch", (event) => {
-
-  if(event.request.url.includes("isValidVerb")) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          if(response.ok) {
-            caches.open("my-cache").then((cache) => {
-              cache.put(event.request, response.clone());
-            })
-          }
-          sendStatusToClients(true);
-          return response
-        })
-        .catch(() => {
-          return caches.match(event.request)
-            .then((cachedResponse) => {
-              if (cachedResponse) {
-                return cachedResponse
-              }
-              sendStatusToClients(false);
-              return new Response("API não acessível")
-            })
-        })
-    );
-  }
 });
 
 function sendStatusToClients(status: boolean) {
