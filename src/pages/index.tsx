@@ -41,10 +41,9 @@ const Index = () => {
         }
       });
     }
-  },[])
+  },[state.inputReq])
 
   useEffect(() => {
-
     if (currentProgress === 100) {
       setCurrentProgress(0)
       const interval = setInterval(() => {
@@ -223,8 +222,8 @@ const Index = () => {
   if (!mounted) {
     return null;
   }
-  
-  console.log(state.isOnline)
+
+  console.log("home:",state.isOnline)
 
   return (
     <div className={styles.index}>
