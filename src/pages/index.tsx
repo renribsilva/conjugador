@@ -205,8 +205,6 @@ const Index = () => {
     setIsNavOn(navigator.onLine)
   });
 
-  console.log(isNavOn)
-
   useEffect(() => {
     setMounted(true);
   }, []);
