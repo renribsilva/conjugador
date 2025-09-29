@@ -209,6 +209,8 @@ export const flowOfReact = () => {
 
     }));
 
+    updateProgress(30)
+
     if (normalizedInputValue.trim() === "") {
 
       setState(prev => ({
@@ -492,6 +494,8 @@ export const flowOfReact = () => {
 
       const check = await checkConnection();
 
+      updateProgress(5)
+
       if (!check) {
         setState(prev => ({
           ...prev,
@@ -503,16 +507,16 @@ export const flowOfReact = () => {
         }));
         alert("Você está offline. A conjugação não está disponível no momento")
         return
-      }
-
-      if(check) {
+      } else {
+        updateProgress(15)
         processEnter();
+        updateProgress(100)
       }
     }
     setState(prev => ({
-        ...prev,
-        isDisabled: false,
-      }));
+      ...prev,
+      isDisabled: false,
+    }));
   };
 
   const dependencies = [
