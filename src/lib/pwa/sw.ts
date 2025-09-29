@@ -37,6 +37,23 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
+self.addEventListener("fetch", (event) => {
+
+  if(event.request.url.includes("isValidVerb")) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          sendStatusToClients(true);
+          return response;
+        })
+        .catch(() => {
+          sendStatusToClients(false);
+          return new Response("Offline", { status: 503, statusText: "Offline" });
+        })
+    );
+  }
+});
+
 function sendStatusToClients(status: boolean) {
   self.clients.matchAll().then((clients) => {
     clients.forEach((client) => {
