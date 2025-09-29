@@ -34,7 +34,9 @@ const Index = () => {
     await checkConnection();
   }
 
-  connection();
+  useEffect(() => {
+    connection();
+  },[state.inputReq])
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
