@@ -303,6 +303,14 @@ const Index = () => {
                   <p>aguarde...</p>
                 </>
               )}
+              {!state.isOnline && !state.showHome && !state.showStatistic && !state.showSobre && (
+                <>
+                  <p>Você está offline. A conjugação não está disponível</p>
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </>
+              )}
             </div>
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&

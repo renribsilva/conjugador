@@ -55,7 +55,7 @@ export const flowOfReact = () => {
     
     canonical: string
 
-    isOffline: boolean
+    isOnline: boolean | null
 
   }>({
 
@@ -106,39 +106,18 @@ export const flowOfReact = () => {
 
     canonical: "canonical1",
 
-    isOffline: false
+    isOnline: null
 
   });
 
-  useEffect(() => {
-
-    const handleOffline = () => setState(prev => ({ ...prev, isOffline: true }));
-    const handleOnline = () => setState(prev => ({ ...prev, isOffline: false }));
-
-    window.addEventListener("offline", handleOffline);
-    window.addEventListener("online", handleOnline);
-
-    console.log(navigator.onLine)
-
-    // Detecta estado inicial
-    if (!navigator.onLine) setState(prev => ({ ...prev, isOffline: true }));
-
-    return () => {
-      window.removeEventListener("offline", handleOffline);
-      window.removeEventListener("online", handleOnline);
-    };
-  }, []);
-
   const fetchConjugationsData = async () => {
-    if (!state.isOffline) {
-      const response = await fetch("/api/queryVerb");
-      if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
-      const data: Conjugation = await response.json();
-      setState(prev => ({
-        ...prev,
-        conjugations: data,
-      }));
-    }
+    const response = await fetch("/api/queryVerb");
+    if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
+    const data: Conjugation = await response.json();
+    setState(prev => ({
+      ...prev,
+      conjugations: data,
+    }));
   };
 
   const updateProgress = (n: number) => {
@@ -148,18 +127,30 @@ export const flowOfReact = () => {
     }));
   };
 
-  if (state.isOffline) {
+  const checkConnection = async () => {
+    try {
+      const response = await fetch("/api/checkConnection");
+      const data = await response.json();
+      setState(prev => ({ ...prev, isOnline: data.ok }));
+      return data.ok;
+    } catch (error) {
+      setState(prev => ({ ...prev, isOnline: false }));
+      return false;
+    }
+  };
 
-    useEffect(() => {
-      isValidVerbByAPI("reabracar");
-      isValidVerbByAPI("reabraçar");
-      isValidVerbByAPI("descalcar");
-      conjVerbByAPI("recomeçar");
-      getSimilarVerbs("renato")
-      console.log("pré-carregamento ok")
-    }, [])
-
-  }
+  useEffect(() => {
+    checkConnection().then(isOnline => {
+      if (isOnline) {
+        isValidVerbByAPI("reabracar");
+        isValidVerbByAPI("reabraçar");
+        isValidVerbByAPI("descalcar");
+        conjVerbByAPI("recomeçar");
+        getSimilarVerbs("renato");
+        console.log("pré-carregamento ok");
+      }
+    });
+  }, []);
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
@@ -169,12 +160,18 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
 
-      if (state.isOffline) {
+      const check = await checkConnection();
+
+      if (!check) {
         setState(prev => ({
           ...prev,
+          showHome: false,
+          showSobre: false,
+          showConjugations: false,
+          showStatistic: false,
         }));
-        alert("Você está offline. A conjugação de verbos não está disponível.");
-        return;
+        alert("Você está offline. A conjugação não está disponível no momento")
+        return
       }
 
       const normalizedInputValue = ni(state.inputValue);
@@ -516,69 +513,65 @@ export const flowOfReact = () => {
     state.isDisabled,
   ];
 
-  if (!state.isOffline) {
+  useEffect(() => {
 
-    useEffect(() => {
+    if (state.isDisabled) return;
 
-      if (!state.isOffline && state.isDisabled) return;
-
-      const data = {
-        A_INPUT: {
-          inputReq: state.inputReq,
+    const data = {
+      A_INPUT: {
+        inputReq: state.inputReq,
+      },
+      B_VALIDAÇÃO_DO_VERBO: {
+        result: state.result,
+        foundVerb: state.foundVerb,
+        similar: state.similar,
+        punct: state.punct,
+        variations: {
+          varHasVariations: state.varHasVariations,
+          varProcessedInput: state.varProcessedInput,
+          varForcedVerb: state.varForcedVerb,
+          varPrefixFounded: state.varPrefixFounded,
+          varMatchingAfixo: state.varMatchingAfixo,
+          varConector: state.varConector,
+          varOriginalInput: state.varOriginalInput,
+        }
+      },
+      C_OUTPUT: {
+        conjugations: state.conjugations,
+        propsOfVerb: {
+          hasTargetCanonical1: state.hasTargetCanonical1,
+          hasTargetCanonical2: state.hasTargetCanonical2,
+          hasTargetAbundance1: state.hasTargetAbundance1,
+          hasTargetAbundance2: state.hasTargetAbundance2,
+          termination: state.termination,
+          termEntrie: state.termEntrie,
+          types: state.types,
+          note_plain: state.note_plain, 
+          note_ref: state.note_ref,
+          model: state.model
         },
-        B_VALIDAÇÃO_DO_VERBO: {
-          result: state.result,
-          foundVerb: state.foundVerb,
-          similar: state.similar,
-          punct: state.punct,
-          variations: {
-            varHasVariations: state.varHasVariations,
-            varProcessedInput: state.varProcessedInput,
-            varForcedVerb: state.varForcedVerb,
-            varPrefixFounded: state.varPrefixFounded,
-            varMatchingAfixo: state.varMatchingAfixo,
-            varConector: state.varConector,
-            varOriginalInput: state.varOriginalInput,
-          }
-        },
-        C_OUTPUT: {
-          conjugations: state.conjugations,
-          propsOfVerb: {
-            hasTargetCanonical1: state.hasTargetCanonical1,
-            hasTargetCanonical2: state.hasTargetCanonical2,
-            hasTargetAbundance1: state.hasTargetAbundance1,
-            hasTargetAbundance2: state.hasTargetAbundance2,
-            termination: state.termination,
-            termEntrie: state.termEntrie,
-            types: state.types,
-            note_plain: state.note_plain, 
-            note_ref: state.note_ref,
-            model: state.model
-          },
-          suggestions: state.suggestions,
-        },
-        D_CONTROLADORES_DE_FLUXO: {
-          showConjugations: state.showConjugations,
-          canonical: state.canonical,
-          loading: state.loading,
-          showButton: state.showButton,
-          isButtonDisabled: state.isButtonDisabled,
-          showSuggestions: state.showSuggestions,
-          showHome: state.showHome,
-          showSobre: state.showSobre,
-          showStatistic: state.showStatistic,
-          showReviewButton: state.showReviewButton,
-          goThrough: state.goThrough,
-          enter: state.enter,
-          progress: state.progress,
-          isDisabled: state.isDisabled
-        },
-      };
-    
-      console.log(data);
-    }, dependencies); 
-
-  }
+        suggestions: state.suggestions,
+      },
+      D_CONTROLADORES_DE_FLUXO: {
+        showConjugations: state.showConjugations,
+        canonical: state.canonical,
+        loading: state.loading,
+        showButton: state.showButton,
+        isButtonDisabled: state.isButtonDisabled,
+        showSuggestions: state.showSuggestions,
+        showHome: state.showHome,
+        showSobre: state.showSobre,
+        showStatistic: state.showStatistic,
+        showReviewButton: state.showReviewButton,
+        goThrough: state.goThrough,
+        enter: state.enter,
+        progress: state.progress,
+        isDisabled: state.isDisabled
+      },
+    };
+  
+    console.log(data);
+  }, dependencies); 
 
   return {
     state,
