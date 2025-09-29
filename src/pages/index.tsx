@@ -28,6 +28,7 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const [isNavOn, setIsNavOn] = useState<boolean>(navigator.onLine);
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
@@ -201,6 +202,12 @@ const Index = () => {
   };
 
   useEffect(() => {
+    setIsNavOn(navigator.onLine)
+  });
+
+  console.log(isNavOn)
+
+  useEffect(() => {
     setMounted(true);
   }, []);
   
@@ -292,12 +299,16 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && navigator.onLine && (
+              {isNavOn && state.loading  && (
                 <>
                   <p>aguarde...</p>
                 </>
               )}
-              {!state.showHome && !state.showStatistic && !state.showSobre && (
+              {!isNavOn && 
+              !state.showConjugations && 
+              !state.showHome && 
+              !state.showStatistic && 
+              !state.showSobre && (
                 <>
                   <p>Você está offline. A conjugação não está disponível</p>
                   <div className={styles.gotohome}>
