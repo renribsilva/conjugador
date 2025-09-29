@@ -585,5 +585,6 @@ export const flowOfReact = () => {
     state,
     setState,
     handleKeyDown,
+    checkConnection
   };
 };

@@ -28,7 +28,13 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { state, setState, handleKeyDown } = flowOfReact();
+  const { state, setState, handleKeyDown, checkConnection } = flowOfReact();
+
+  const connection = async () => {
+    await checkConnection();
+  }
+
+  connection();
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
