@@ -210,8 +210,6 @@ const Index = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  console.log(state.loading)
   
   if (!mounted) {
     return null;

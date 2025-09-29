@@ -110,6 +110,18 @@ export const flowOfReact = () => {
 
   });
 
+  // useEffect(() => {
+  //   const cachedState = localStorage.getItem("flowOfReactState");
+  //   if (cachedState) {
+  //     setState(JSON.parse(cachedState));
+  //   }
+  // }, []);
+
+  // // Salvar o estado no cache sempre que ele mudar
+  // useEffect(() => {
+  //   localStorage.setItem("flowOfReactState", JSON.stringify(state));
+  // }, [state]);
+
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
     if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
@@ -482,12 +494,12 @@ export const flowOfReact = () => {
   }
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    setState(prev => ({
-      ...prev,
-      loading: false
-    }));
     const check = await checkConnection();
     if (event.key === "Enter" && state.inputValue !== "") {      
+      setState(prev => ({
+        ...prev,
+        loading: false
+      }));
       event.preventDefault();
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
