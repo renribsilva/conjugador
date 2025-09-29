@@ -192,7 +192,7 @@ const Index = () => {
     randomEita();
   }, []);
   
-  if (!mounted) {
+  if (!mounted || state.isOnline === null) {
     return null;
   }
 
