@@ -223,8 +223,6 @@ const Index = () => {
     return null;
   }
 
-  console.log("home:",state.isOnline)
-
   return (
     <div className={styles.index}>
       {/* header */}
