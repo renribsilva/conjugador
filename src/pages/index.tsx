@@ -28,8 +28,28 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const [isNavOn, setIsNavOn] = useState<boolean>(navigator.onLine);
-  const { state, setState, handleKeyDown } = flowOfReact();
+  const { state, setState, handleKeyDown, checkConnection } = flowOfReact();
+
+  useEffect(() => {
+    checkConnection
+  },[])
+
+  useEffect(() => {
+
+    if (currentProgress === 100) {
+      setCurrentProgress(0)
+      const interval = setInterval(() => {
+        setCurrentProgress(prev => Math.min(prev + 3, 25));
+      }, 10);
+      return () => clearInterval(interval);
+    }
+    if (currentProgress < state.progress) {
+      const interval = setInterval(() => {
+        setCurrentProgress(prev => Math.min(prev + 3, state.progress));
+      }, 10);
+      return () => clearInterval(interval);
+    }
+  }, [state.progress]);
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
@@ -124,65 +144,6 @@ const Index = () => {
     );
   }
 
-  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
-
-  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
-  const randomAxi = () => {
-    const randomIndex = Math.floor(Math.random() * axiExpression.length);
-    setAxi(axiExpression[randomIndex]);
-  };
-
-  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
-  const randomEita = () => {
-    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
-    setEita(eitaExpression[randomIndex]);
-  };
-
-  const formatPuncts = (puncts: string[] | null) => {
-    if (!puncts || puncts.length === 0) return null;
-  
-    return puncts
-      .map(punct => `${punct}`)
-      .join(' ');
-  };
-  
-  const formatTypes = (types: string[] | null | undefined) => {
-    if (!types || types.length === 0) {return "";}
-    if (types.length === 1) {return types[0];}
-    return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
-  };
-
-  useEffect(() => {
-    if (inputRef.current) {
-      const enterEvent = new KeyboardEvent("keydown", {
-        bubbles: true,
-        cancelable: true,
-        key: "Enter",
-        code: "Enter",        
-      });
-      inputRef.current.dispatchEvent(enterEvent);
-    } 
-    randomAxi();
-    randomEita();
-  }, [state.enter]);
-
-  useEffect(() => {
-
-    if (currentProgress === 100) {
-      setCurrentProgress(0)
-      const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 3, 25));
-      }, 10);
-      return () => clearInterval(interval);
-    }
-    if (currentProgress < state.progress) {
-      const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 3, state.progress));
-      }, 10);
-      return () => clearInterval(interval);
-    }
-  }, [state.progress]);
-
   const ProgressBar = ({ progress }: { progress: number }) => {
     return (
       <div className={styles.progress_bar}>
@@ -201,13 +162,53 @@ const Index = () => {
     );
   };
 
+  const formatPuncts = (puncts: string[] | null) => {
+    if (!puncts || puncts.length === 0) return null;
+  
+    return puncts
+      .map(punct => `${punct}`)
+      .join(' ');
+  };
+  
+  const formatTypes = (types: string[] | null | undefined) => {
+    if (!types || types.length === 0) {return "";}
+    if (types.length === 1) {return types[0];}
+    return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
+  };
+
+  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
+
+  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
+  const randomAxi = () => {
+    const randomIndex = Math.floor(Math.random() * axiExpression.length);
+    setAxi(axiExpression[randomIndex]);
+  };
+
+  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
+  const randomEita = () => {
+    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
+    setEita(eitaExpression[randomIndex]);
+  };
+
   useEffect(() => {
-    setIsNavOn(navigator.onLine)
-  });
+    if (inputRef.current) {
+      const enterEvent = new KeyboardEvent("keydown", {
+        bubbles: true,
+        cancelable: true,
+        key: "Enter",
+        code: "Enter",        
+      });
+      inputRef.current.dispatchEvent(enterEvent);
+    } 
+    randomAxi();
+    randomEita();
+  }, [state.enter]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  console.log(state.isOnline)
   
   if (!mounted) {
     return null;
@@ -297,12 +298,12 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {isNavOn && state.loading  && (
+              {state.isOnline && state.loading  && (
                 <>
                   <p>aguarde...</p>
                 </>
               )}
-              {!isNavOn && 
+              {!state.isOnline && 
               !state.showConjugations && 
               !state.showHome && 
               !state.showStatistic && 

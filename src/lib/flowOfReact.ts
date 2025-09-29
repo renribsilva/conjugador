@@ -489,7 +489,6 @@ export const flowOfReact = () => {
         (event.target as HTMLInputElement).blur();
       }, 0);
       const check = await checkConnection();
-      updateProgress(5)
       if (!check) {
         setState(prev => ({
           ...prev,
@@ -579,5 +578,6 @@ export const flowOfReact = () => {
     state,
     setState,
     handleKeyDown,
+    checkConnection
   };
 };
