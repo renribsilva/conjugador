@@ -482,13 +482,13 @@ export const flowOfReact = () => {
   }
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-
+    if (event.key !== "Enter") return
+    const check = await checkConnection();
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
-      const check = await checkConnection();
       if (!check) {
         setState(prev => ({
           ...prev,
@@ -505,9 +505,10 @@ export const flowOfReact = () => {
       }
     }
     setState(prev => ({
-        ...prev,
-        isDisabled: false,
-      }));
+      ...prev,
+      isDisabled: false,
+    }));
+    return
   };
 
   const dependencies = [
