@@ -280,7 +280,7 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              {state.loading && state.isOnline && (
+              {state.isOnline && state.loading && (
                 <>
                   <p>aguarde...</p>
                 </>
