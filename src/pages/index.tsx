@@ -31,17 +31,21 @@ const Index = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
 
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.addEventListener("message", (event) => {
-        if (event.data?.type === "NETWORK_STATUS") {
-          setState((prev) => ({
-            ...prev,
-            isOnline: event.data.isOnline,
-          }));
-        }
-      });
+    async function first () {
+    await fetch("api/checkConnection")
+  }
+  first();
+
+  navigator.serviceWorker.addEventListener("message", (event) => {
+    console.log(event)
+    if (event.data?.type === "NETWORK_STATUS") {
+      setState((prev) => ({
+        ...prev,
+        isOnline: event.data.isOnline,
+      }));
     }
-  },[state.inputReq])
+  });
+  }, [])
 
   useEffect(() => {
     if (currentProgress === 100) {
@@ -222,6 +226,8 @@ const Index = () => {
   if (!mounted) {
     return null;
   }
+
+  console.log(state.isOnline)
 
   return (
     <div className={styles.index}>
