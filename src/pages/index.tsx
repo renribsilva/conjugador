@@ -123,6 +123,20 @@ const Index = () => {
     );
   }
 
+  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
+
+  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
+  const randomAxi = () => {
+    const randomIndex = Math.floor(Math.random() * axiExpression.length);
+    setAxi(axiExpression[randomIndex]);
+  };
+
+  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
+  const randomEita = () => {
+    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
+    setEita(eitaExpression[randomIndex]);
+  };
+
   const formatPuncts = (puncts: string[] | null) => {
     if (!puncts || puncts.length === 0) return null;
   
@@ -136,6 +150,20 @@ const Index = () => {
     if (types.length === 1) {return types[0];}
     return types.slice(0, -1).join(", ") + " e " + types[types.length - 1];
   };
+
+  useEffect(() => {
+    if (inputRef.current) {
+      const enterEvent = new KeyboardEvent("keydown", {
+        bubbles: true,
+        cancelable: true,
+        key: "Enter",
+        code: "Enter",        
+      });
+      inputRef.current.dispatchEvent(enterEvent);
+    } 
+    randomAxi();
+    randomEita();
+  }, [state.enter]);
 
   useEffect(() => {
 
@@ -172,45 +200,11 @@ const Index = () => {
     );
   };
 
-  const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
-  
-  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"]
-  const randomAxi = () => {
-    const randomIndex = Math.floor(Math.random() * axiExpression.length);
-    setAxi(axiExpression[randomIndex]);
-  };
-
-  const eitaExpression = ["Eita!", "Oh só!", "Ih, rapaz!", "Uai!", "Vish!", "Lascou!", "Poxa vida!", "Deu ruim!"]
-  const randomEita = () => {
-    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
-    setEita(eitaExpression[randomIndex]);
-  };
-
   useEffect(() => {
     setMounted(true);
-    randomAxi();
-    randomEita();
   }, []);
-
-  const ConnectionStatus = () => {
-    return (
-      <>
-        {(!state.showOffline && state.loading) && (
-          <p>aguarde...</p>
-        )}
-        {(state.showOffline && !state.showHome && !state.showSobre && !state.showStatistic) && (
-          <>
-            <p>Você está offline. A conjugação não está disponível</p>
-            <div className={styles.gotohome}>
-              <Button onClick={handleHome}>voltar para o início</Button>
-            </div>
-          </>
-        )}
-      </>
-    );
-  };
   
-  if (!mounted || state.isOnline === null) {
+  if (!mounted) {
     return null;
   }
 
@@ -298,7 +292,19 @@ const Index = () => {
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
             <div className={styles.loading}>
-              <ConnectionStatus/>
+              {state.loading && state.isOnline && (
+                <>
+                  <p>aguarde...</p>
+                </>
+              )}
+              {!state.isOnline && !state.showHome && !state.showStatistic && !state.showSobre && (
+                <>
+                  <p>Você está offline. A conjugação não está disponível</p>
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </>
+              )}
             </div>
             <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
@@ -630,7 +636,7 @@ const Index = () => {
               )}
             </div>
             <div>
-              {state.conjugations !== null 
+              {state.isOnline && state.conjugations !== null 
               && state.foundVerb
               && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
                 === nw(String(state.foundVerb).replace("*","")) || 

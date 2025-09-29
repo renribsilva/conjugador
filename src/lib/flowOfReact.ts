@@ -56,7 +56,6 @@ export const flowOfReact = () => {
     canonical: string
 
     isOnline: boolean | null
-    showOffline: boolean
 
   }>({
 
@@ -107,9 +106,7 @@ export const flowOfReact = () => {
 
     canonical: "canonical1",
 
-    isOnline: null,
-
-    showOffline: false
+    isOnline: null
 
   });
 
@@ -208,13 +205,9 @@ export const flowOfReact = () => {
       varConector: null,
       varOriginalInput: null,
 
-      canonical: "canonical1",
-
-      showOffline: false
+      canonical: "canonical1"
 
     }));
-
-    updateProgress(30)
 
     if (normalizedInputValue.trim() === "") {
 
@@ -489,38 +482,34 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    if (event.key === "Enter" && state.inputValue !== "") {
-      
+    if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();
-
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
-
       const check = await checkConnection();
-
+      updateProgress(5)
       if (!check) {
         setState(prev => ({
           ...prev,
           showHome: false,
           showSobre: false,
           showStatistic: false,
-          showOffline: true,
-          conjugations: null,
+          showConjugations: false,
           loading: false
         }));
         alert("Você está offline. A conjugação não está disponível no momento")
         return
-      } else {
-        updateProgress(15)
+      }
+
+      if(check) {
         processEnter();
-        updateProgress(100)
       }
     }
     setState(prev => ({
-      ...prev,
-      isDisabled: false,
-    }));
+        ...prev,
+        isDisabled: false,
+      }));
   };
 
   const dependencies = [
@@ -591,6 +580,5 @@ export const flowOfReact = () => {
     state,
     setState,
     handleKeyDown,
-    checkConnection
   };
 };
