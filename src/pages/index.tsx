@@ -21,12 +21,12 @@ import InstallPWA from "../components/pwa/installPWA";
 
 const Index = () => {
 
-  const { state, setState, handleKeyDown } = flowOfReact();
   const [activeTab, setActiveTab] = useState('home');
   const [mounted, setMounted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentProgress, setCurrentProgress] = useState<number>(0);
+  const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
