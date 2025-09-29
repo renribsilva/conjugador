@@ -482,7 +482,10 @@ export const flowOfReact = () => {
   }
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key !== "Enter") return
+    setState(prev => ({
+      ...prev,
+      loading: false
+    }));
     const check = await checkConnection();
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();
