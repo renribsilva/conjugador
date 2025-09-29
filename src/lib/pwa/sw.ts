@@ -43,21 +43,21 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          sendStatusToClients(true);
           if(response.ok) {
             caches.open("my-cache").then((cache) => {
               cache.put(event.request, response.clone());
             })
           }
+          sendStatusToClients(true);
           return response
         })
         .catch(() => {
-          sendStatusToClients(false);
           return caches.match(event.request)
             .then((cachedResponse) => {
               if (cachedResponse) {
                 return cachedResponse
               }
+              sendStatusToClients(false);
               return new Response("API não acessível")
             })
         })
