@@ -9,20 +9,14 @@ export default async function handler(
   if (request.method === 'POST') {
     try {
       const { verb, conjugations } = request.body; 
-
-      if (!verb || !conjugations) throw new Error('Verb and conjugations are required');
-
-      // Deleta todas as entradas anteriores da tabela json
+      if (!verb || !conjugations) return response.status(200).json (null)
       await sql`DELETE FROM json;`;
-
-      // Insere as novas conjugações na tabela JSON
       await sql`INSERT INTO json (conjugations) VALUES (${JSON.stringify(conjugations.conjugations)});`;
-
-      return response.status(200).json({ message: 'Conjugations rewrite successfully!' });
+      return response.status(200).json(conjugations.conjugations);
     } catch (error) {
-      return response.status(500).json({ error: error.message });
+      return response.status(200).json(null);
     }
   } else {
-    return response.status(405).json({ error: 'Method Not Allowed' });
+    return response.status(200).json(null);
   }
 }

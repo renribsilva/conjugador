@@ -285,4 +285,4 @@ export function conjugateVerb (verb: string) {
   
 };
 
-// conjugateVerb("amar");
+// conjugateVerb("renato");

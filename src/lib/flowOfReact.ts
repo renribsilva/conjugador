@@ -110,20 +110,16 @@ export const flowOfReact = () => {
 
   });
 
-  const checkConnection = async () => {
-    try {
-      const response = await fetch("/api/checkConnection");  
-      if (!response.ok) {
-        setState(prev => ({ ...prev, isOnline: navigator.onLine }));
-      }      
-      const data = await response.json();
-      setState(prev => ({ ...prev, isOnline: data.ok }));
-      return data.ok;
-    } catch (error) {
-      setState(prev => ({ ...prev, isOnline: false }));
-      return false;
-    }
+  const checkConnection = async (): Promise<boolean> => {
+    const response = await fetch("/api/checkConnection");
+    const data = await response.json();
+    setState(prev => ({
+      ...prev,
+      isOnline: data.ok
+    }))
+    return data.ok;
   };
+
 
   useEffect(() => {
     checkConnection().then(isOnline => {
@@ -140,12 +136,14 @@ export const flowOfReact = () => {
 
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
-    if (!response.ok) {throw new Error("Erro ao buscar as conjugações");}
-    const data: Conjugation = await response.json();
-    setState(prev => ({
-      ...prev,
-      conjugations: data,
-    }));
+    if (response !== null) {
+      const data: Conjugation = await response.json();
+      console.log(data)
+      setState(prev => ({
+        ...prev,
+        conjugations: data,
+      }));
+    } 
   };
 
   const updateProgress = (n: number) => {
@@ -512,7 +510,7 @@ export const flowOfReact = () => {
         }));
         alert("Você está offline. A conjugação não está disponível no momento")
         return
-      } else {
+      } else if (check) {
         processEnter();
       }
     }

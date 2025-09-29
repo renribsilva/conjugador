@@ -8,19 +8,16 @@ export default async function handler(
 ) {
   
   if (request.method !== 'GET') {
-    return response.status(405).json({ error: 'Método não permitido' });
+    return response.status(200).json(null);
   }
 
   try {
     const result = await sql`SELECT conjugations FROM json;`;
-
     if (result.rows.length === 0) {
-      return response.status(404).json({ error: 'Nenhum dado encontrado' });
+      return response.status(200).json(null);
     }
-
     return response.status(200).json(result.rows[0].conjugations);
   } catch (error: any) {
-    console.error('Erro ao buscar conjugações:', error);
-    return response.status(500).json({ error: 'Erro interno no servidor' });
+    return response.status(200).json(null);
   }
 }

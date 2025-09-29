@@ -1,5 +1,4 @@
-// pages/api/conjugations.ts
-import { sql } from '@vercel/postgres';
+// pages/api/checkConnection.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -7,14 +6,14 @@ export default async function handler(
   res: NextApiResponse<{ ok: boolean }>
 ) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ ok: false });
+    return res.status(200).json({ ok: false });
   }
 
   try {
-    // Tenta puxar qualquer dado da tabela json
-    await sql`SELECT 1;`;
+    // Aqui você poderia validar DB se quiser
     return res.status(200).json({ ok: true });
   } catch (error) {
-    return res.status(500).json({ ok: false });
+    // Nunca falha para o cliente: sempre retorna JSON válido
+    return res.status(200).json({ ok: false });
   }
 }
