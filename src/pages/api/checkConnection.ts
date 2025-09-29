@@ -12,9 +12,9 @@ export default async function handler(
 
   try {
     // Tenta puxar qualquer dado da tabela json
-    await sql`SELECT 1 FROM json LIMIT 1;`;
+    await sql`SELECT 1;`;
     return res.status(200).json({ ok: true });
   } catch (error) {
-    return res.status(405).json({ ok: false });
+    return res.status(500).json({ ok: false });
   }
 }
