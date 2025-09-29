@@ -152,206 +152,254 @@ export const flowOfReact = () => {
     });
   }, []);
 
-  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const processEnter = async () => {
 
-    if (event.key === "Enter" && state.inputValue !== "") {
+    const check = await checkConnection();
 
-      setTimeout(() => {
-        (event.target as HTMLInputElement).blur();
-      }, 0);
-
-      const check = await checkConnection();
-
-      if (!check) {
-        setState(prev => ({
-          ...prev,
-          showHome: false,
-          showSobre: false,
-          showStatistic: false,
-          showConjugations: false,
-        }));
-        alert("Você está offline. A conjugação não está disponível no momento")
-        return
-      }
-
-      const normalizedInputValue = ni(state.inputValue);
-      const suggestions = getSimilarVerbs(state.inputValue);
-
+    if (!check) {
       setState(prev => ({
         ...prev,
-        conjugations: null,
-        loading: true,
-        inputValue: "",
-        inputReq: state.inputValue,
-        showConjugations: false,
-        suggestions: suggestions,
-        showSuggestions: false,
-        showButton: false,
-        isButtonDisabled: false,
         showHome: false,
         showSobre: false,
         showStatistic: false,
-        showReviewButton: false,
+        showConjugations: false,
+      }));
+      alert("Você está offline. A conjugação não está disponível no momento")
+      return
+    }
 
-        foundVerb: null,
-        termination: null,
-        termEntrie: null,
-        hasTargetCanonical: null,
-        hasTargetAbundance1: null,
-        hasTargetAbundance2: null,
-        note_plain: null,
-        note_ref: null,
-        types: null,
-        model: null,
+    const normalizedInputValue = ni(state.inputValue);
+    const suggestions = getSimilarVerbs(state.inputValue);
 
-        goThrough: false,
-        enter: false,
-        progress: 0,
-        isDisabled: true,
+    setState(prev => ({
+      ...prev,
+      conjugations: null,
+      loading: true,
+      inputValue: "",
+      inputReq: state.inputValue,
+      showConjugations: false,
+      suggestions: suggestions,
+      showSuggestions: false,
+      showButton: false,
+      isButtonDisabled: false,
+      showHome: false,
+      showSobre: false,
+      showStatistic: false,
+      showReviewButton: false,
 
-        originalVerb: null,
-        variationVerb: null,
-        result: null,
-        findedWord: null,
-        similar: null,
-        punct: null,
+      foundVerb: null,
+      termination: null,
+      termEntrie: null,
+      hasTargetCanonical: null,
+      hasTargetAbundance1: null,
+      hasTargetAbundance2: null,
+      note_plain: null,
+      note_ref: null,
+      types: null,
+      model: null,
 
-        variations: null,
-        varHasVariations: false,
-        varProcessedInput: null,
-        varForcedVerb: false,
-        varPrefixFounded: false,
-        varMatchingAfixo: null,
-        varConector: null,
-        varOriginalInput: null,
+      goThrough: false,
+      enter: false,
+      progress: 0,
+      isDisabled: true,
 
-        canonical: "canonical1"
+      originalVerb: null,
+      variationVerb: null,
+      result: null,
+      findedWord: null,
+      similar: null,
+      punct: null,
+
+      variations: null,
+      varHasVariations: false,
+      varProcessedInput: null,
+      varForcedVerb: false,
+      varPrefixFounded: false,
+      varMatchingAfixo: null,
+      varConector: null,
+      varOriginalInput: null,
+
+      canonical: "canonical1"
+
+    }));
+
+    if (normalizedInputValue.trim() === "") {
+
+      setState(prev => ({
+        ...prev,
+        showHome: true,
+        loading: false
+      }));
+
+      updateProgress(100);
+
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
+
+      return
+
+    }
+
+    const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+    const originalVerb = apiResponse.originalVerb;
+    const variationVerb = apiResponse.variationVerb;
+
+    updateProgress(50);
+
+    if (normalizedInputValue !== "") {
+      
+      setState(prev => ({
+        ...prev,
+        originalVerb: originalVerb,
+        variationVerb: variationVerb
+      }))
+
+    }
+
+    if (originalVerb === null && variationVerb === null ) {
+
+      setState(prev => ({
+        
+        ...prev,
+        loading: false,
+        showButton: true,
 
       }));
 
-      if (normalizedInputValue.trim() === "") {
+      updateProgress(100);
 
-        setState(prev => ({
-          ...prev,
-          showHome: true,
-          loading: false
-        }));
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
 
-        updateProgress(100);
+      return
 
-        setState(prev => ({
-          ...prev,
-          isDisabled: false,
-        }));
+    }
 
-        return
+    let puncts = null
+    puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
 
-      }
 
-      const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-      const originalVerb = apiResponse.originalVerb;
-      const variationVerb = apiResponse.variationVerb;
+    if (originalVerb !== null || variationVerb !== null ) {
 
-      updateProgress(50);
+      setState(prev => ({          
+        ...prev,
+        punct: puncts
+      }))
 
-      if (normalizedInputValue !== "") {
+    }
+
+    if (puncts !== null) {
+
+      setState(prev => ({
         
+        ...prev,
+        loading: false,
+        showButton: true,
+        punct: puncts,
+        foundVerb: apiResponse.originalVerb?.findedWord || apiResponse.variationVerb?.findedWord
+
+      }));
+
+      updateProgress(100);
+
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
+
+      return
+    }
+
+    //isValidVerb returns
+    let result = '';
+    let findedWord = ''
+    let similar = null
+    let punct = null
+    let variations = null
+    let varHasVariations = false
+    let varForcedVerb = false 
+    let varProcessedInput = null
+    let varOriginalInput = null
+    let varPrefixFounded = false 
+    let varMatchingAfixo = null
+    let varConector = null
+
+    if (variationVerb !== null && originalVerb === null) {
+
+      result = "variationVerb";
+      findedWord = apiResponse.variationVerb.findedWord;
+      similar = apiResponse.variationVerb.similar;
+      variations = apiResponse.variationVerb.variations;
+      punct = apiResponse.variationVerb.punct
+
+      varHasVariations = apiResponse.variationVerb.variations.hasVariations;
+      varForcedVerb = apiResponse.variationVerb.variations.forcedVerb
+      varProcessedInput = apiResponse.variationVerb.variations.processedInput;
+      varOriginalInput = apiResponse.variationVerb.variations.originalInput;
+      varPrefixFounded = apiResponse.variationVerb.variations.prefixFounded;
+      varMatchingAfixo = apiResponse.variationVerb.variations.matchingAfixo;
+      varConector = apiResponse.variationVerb.variations.conector;
+
+      setState(prev => ({
+        
+        ...prev,
+        inputReq: state.inputValue,
+        loading: false,
+        showButton: true,
+
+        result: result,
+        findedWord: findedWord,
+        similar: similar,
+        variations: variations,
+        punct: punct,
+
+        varHasVariations: varHasVariations,
+        varForcedVerb: varForcedVerb,
+        varProcessedInput: varProcessedInput,
+        varOriginalInput: varOriginalInput,
+        varPrefixFounded: varPrefixFounded,
+        varMatchingAfixo: varMatchingAfixo,
+        varConector: varConector,
+
+        foundVerb: findedWord,
+
+      }));
+
+      updateProgress(100);
+
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
+
+      return
+
+    }
+
+    if (originalVerb !== null && variationVerb === null) {
+
+      result = "originalVerb";
+      findedWord = apiResponse.originalVerb.findedWord;
+      similar = apiResponse.originalVerb.similar;
+      variations = apiResponse.originalVerb.variations;
+      punct = apiResponse.originalVerb.punct
+
+      varHasVariations = apiResponse.originalVerb.variations.hasVariations;
+      varForcedVerb = apiResponse.originalVerb.variations.forcedVerb
+      varProcessedInput = apiResponse.originalVerb.variations.processedInput;
+      varOriginalInput = apiResponse.originalVerb.variations.originalInput;
+      varPrefixFounded = apiResponse.originalVerb.variations.prefixFounded;
+      varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
+      varConector = apiResponse.originalVerb.variations.conector;
+
+      if  (similar !== null && !state.goThrough) {
+
         setState(prev => ({
-          ...prev,
-          originalVerb: originalVerb,
-          variationVerb: variationVerb
-        }))
 
-      }
-
-      if (originalVerb === null && variationVerb === null ) {
-
-        setState(prev => ({
-          
-          ...prev,
-          loading: false,
-          showButton: true,
-
-        }));
-
-        updateProgress(100);
-
-        setState(prev => ({
-          ...prev,
-          isDisabled: false,
-        }));
-
-        return
-
-      }
-
-      let puncts = null
-      puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
-
-
-      if (originalVerb !== null || variationVerb !== null ) {
-
-        setState(prev => ({          
-          ...prev,
-          punct: puncts
-        }))
-
-      }
-
-      if (puncts !== null) {
-
-        setState(prev => ({
-          
-          ...prev,
-          loading: false,
-          showButton: true,
-          punct: puncts,
-          foundVerb: apiResponse.originalVerb?.findedWord || apiResponse.variationVerb?.findedWord
-
-        }));
-
-        updateProgress(100);
-
-        setState(prev => ({
-          ...prev,
-          isDisabled: false,
-        }));
-
-        return
-      }
-
-      //isValidVerb returns
-      let result = '';
-      let findedWord = ''
-      let similar = null
-      let punct = null
-      let variations = null
-      let varHasVariations = false
-      let varForcedVerb = false 
-      let varProcessedInput = null
-      let varOriginalInput = null
-      let varPrefixFounded = false 
-      let varMatchingAfixo = null
-      let varConector = null
-
-      if (variationVerb !== null && originalVerb === null) {
-
-        result = "variationVerb";
-        findedWord = apiResponse.variationVerb.findedWord;
-        similar = apiResponse.variationVerb.similar;
-        variations = apiResponse.variationVerb.variations;
-        punct = apiResponse.variationVerb.punct
-
-        varHasVariations = apiResponse.variationVerb.variations.hasVariations;
-        varForcedVerb = apiResponse.variationVerb.variations.forcedVerb
-        varProcessedInput = apiResponse.variationVerb.variations.processedInput;
-        varOriginalInput = apiResponse.variationVerb.variations.originalInput;
-        varPrefixFounded = apiResponse.variationVerb.variations.prefixFounded;
-        varMatchingAfixo = apiResponse.variationVerb.variations.matchingAfixo;
-        varConector = apiResponse.variationVerb.variations.conector;
-
-        setState(prev => ({
-          
           ...prev,
           inputReq: state.inputValue,
           loading: false,
@@ -381,132 +429,85 @@ export const flowOfReact = () => {
           ...prev,
           isDisabled: false,
         }));
-
         return
-
       }
 
-      if (originalVerb !== null && variationVerb === null) {
-
-        result = "originalVerb";
-        findedWord = apiResponse.originalVerb.findedWord;
-        similar = apiResponse.originalVerb.similar;
-        variations = apiResponse.originalVerb.variations;
-        punct = apiResponse.originalVerb.punct
-
-        varHasVariations = apiResponse.originalVerb.variations.hasVariations;
-        varForcedVerb = apiResponse.originalVerb.variations.forcedVerb
-        varProcessedInput = apiResponse.originalVerb.variations.processedInput;
-        varOriginalInput = apiResponse.originalVerb.variations.originalInput;
-        varPrefixFounded = apiResponse.originalVerb.variations.prefixFounded;
-        varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
-        varConector = apiResponse.originalVerb.variations.conector;
-
-        if  (similar !== null && !state.goThrough) {
-
-          setState(prev => ({
-
-            ...prev,
-            inputReq: state.inputValue,
-            loading: false,
-            showButton: true,
-
-            result: result,
-            findedWord: findedWord,
-            similar: similar,
-            variations: variations,
-            punct: punct,
-
-            varHasVariations: varHasVariations,
-            varForcedVerb: varForcedVerb,
-            varProcessedInput: varProcessedInput,
-            varOriginalInput: varOriginalInput,
-            varPrefixFounded: varPrefixFounded,
-            varMatchingAfixo: varMatchingAfixo,
-            varConector: varConector,
-
-            foundVerb: findedWord,
-
-          }));
-
-          updateProgress(100);
-
-          setState(prev => ({
-            ...prev,
-            isDisabled: false,
-          }));
-          return
-        }
-
-        updateProgress(50);
-        
-        const propsOfWord = await conjVerbByAPI(ni(findedWord));
-        // console.log(propsOfWord)
-        
-        setState(prev => ({
-
-          ...prev,
-          termination: propsOfWord.termination,
-          termEntrie: propsOfWord.termEntrie,
-          hasTargetCanonical1: propsOfWord.hasTargetCanonical1,
-          hasTargetCanonical2: propsOfWord.hasTargetCanonical2,
-          hasTargetAbundance1: propsOfWord.hasTargetAbundance1,
-          hasTargetAbundance2: propsOfWord.hasTargetAbundance2,
-          types: propsOfWord.types,
-          note_plain: propsOfWord.note_plain,
-          note_ref: propsOfWord.note_ref,
-          afixo: propsOfWord.afixo,
-          model: propsOfWord.model,
-
-          showReviewButton: true,
-          goThrough: false,
-
-          result: result,
-          findedWord: findedWord,
-          similar: similar,
-          variations: variations,
-          punct: punct,
-
-          varHasVariations: varHasVariations,
-          varForcedVerb: varForcedVerb,
-          varProcessedInput: varProcessedInput,
-          varOriginalInput: varOriginalInput,
-          varPrefixFounded: varPrefixFounded,
-          varMatchingAfixo: varMatchingAfixo,
-          varConector: varConector,
-
-          foundVerb: findedWord,
-          
-        }));
-
-        updateProgress(100);
-
-        await fetchConjugationsData();
-
-        setState(prev => ({
-          ...prev,
-          loading: false,
-          showConjugations: true,
-        }));
-
-      }
-
-      updateProgress(100);
+      updateProgress(50);
+      
+      const propsOfWord = await conjVerbByAPI(ni(findedWord));
+      // console.log(propsOfWord)
       
       setState(prev => ({
+
         ...prev,
-        isDisabled: false,
+        termination: propsOfWord.termination,
+        termEntrie: propsOfWord.termEntrie,
+        hasTargetCanonical1: propsOfWord.hasTargetCanonical1,
+        hasTargetCanonical2: propsOfWord.hasTargetCanonical2,
+        hasTargetAbundance1: propsOfWord.hasTargetAbundance1,
+        hasTargetAbundance2: propsOfWord.hasTargetAbundance2,
+        types: propsOfWord.types,
+        note_plain: propsOfWord.note_plain,
+        note_ref: propsOfWord.note_ref,
+        afixo: propsOfWord.afixo,
+        model: propsOfWord.model,
+
+        showReviewButton: true,
+        goThrough: false,
+
+        result: result,
+        findedWord: findedWord,
+        similar: similar,
+        variations: variations,
+        punct: punct,
+
+        varHasVariations: varHasVariations,
+        varForcedVerb: varForcedVerb,
+        varProcessedInput: varProcessedInput,
+        varOriginalInput: varOriginalInput,
+        varPrefixFounded: varPrefixFounded,
+        varMatchingAfixo: varMatchingAfixo,
+        varConector: varConector,
+
+        foundVerb: findedWord,
+        
+      }));
+
+      updateProgress(100);
+
+      await fetchConjugationsData();
+
+      setState(prev => ({
+        ...prev,
+        loading: false,
+        showConjugations: true,
       }));
 
     }
 
     updateProgress(100);
+    
+    setState(prev => ({
+      ...prev,
+      isDisabled: false,
+    }));
 
+  }
+
+  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+
+    if (event.key === "Enter" && state.inputValue !== "") {
+      
+      event.preventDefault();
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 0);
+      processEnter();
+    }
     setState(prev => ({
         ...prev,
         isDisabled: false,
       }));
-
   };
 
   const dependencies = [

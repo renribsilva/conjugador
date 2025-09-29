@@ -107,16 +107,9 @@ const Index = () => {
   };
 
   useEffect(() => {
-  if (state.enter) {
-    handleKeyDown({
-      key: "Enter",
-      preventDefault: () => {},
-      stopPropagation: () => {},
-    } as unknown as React.KeyboardEvent<HTMLInputElement>);
-  }
   randomAxi();
   randomEita();
-}, [state.enter]);
+}, []);
 
   // console.log(inputRef)
 
