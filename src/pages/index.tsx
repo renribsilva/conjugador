@@ -91,6 +91,7 @@ const Index = () => {
       showSuggestions: false,
       showButton: false,
       isButtonDisabled: false,
+      loading: false
     });
     setActiveTab('sobre'); 
   };
@@ -107,6 +108,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
+      loading: false
     });
     setActiveTab('home');
   };
@@ -123,6 +125,7 @@ const Index = () => {
       showButton: false,
       punct: null,
       isButtonDisabled: false,
+      loading: false
     });
     setActiveTab('statistic');
   };
