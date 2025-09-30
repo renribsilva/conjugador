@@ -30,9 +30,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      // Passa a URL do sw.js diretamente no construtor
       const sw = new Serwist("/sw.js", {
-        type: "module",       // opcional, bom para Next.js moderno
+        type: "module", 
       });
       sw.register();
     }

@@ -117,6 +117,7 @@ export const flowOfReact = () => {
       ...prev,
       isOnline: data.ok
     }))
+    console.log("primeira checagem de internet:", data.ok)
     return data.ok;
   };
 
@@ -125,24 +126,29 @@ export const flowOfReact = () => {
     checkConnection().then(isOnline => {
       if (isOnline) {
         isValidVerbByAPI("reabracar");
-        isValidVerbByAPI("reabraçar");
-        isValidVerbByAPI("descalcar");
         conjVerbByAPI("recomeçar");
         getSimilarVerbs("renato");
-        console.log("pré-carregamento ok");
+        console.log("pré-carregamento de script:", true);
       }
     });
   }, []);
 
   const fetchConjugationsData = async () => {
     const response = await fetch("/api/queryVerb");
-    if (response !== null) {
-      const data: Conjugation = await response.json();
-      setState(prev => ({
-        ...prev,
-        conjugations: data,
-      }));
-    } 
+    if (response.ok) {
+    const data: Conjugation = await response.json();
+    console.log("resposta do queryVerb:", data)
+    setState(prev => ({
+      ...prev,
+      conjugations: data,
+    }));
+  } else {
+    console.log("resposta do queryVerb:", null)
+    setState(prev => ({
+      ...prev,
+      conjugations: null,
+    }));
+  }
   };
 
   const updateProgress = (n: number) => {
@@ -150,6 +156,36 @@ export const flowOfReact = () => {
       ...prev,
       progress: n,
     }));
+  };
+
+  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {    
+    if (event.key === "Enter" && state.inputValue !== "") {      
+      const check = await checkConnection();        
+      event.preventDefault();      
+      setTimeout(() => {
+        (event.target as HTMLInputElement).blur();
+      }, 0);
+      console.log ("check internet no keydown:", check)      
+      if (!check) {
+        setState(prev => ({
+          ...prev,
+          showHome: false,
+          showSobre: false,
+          showStatistic: false,
+          showConjugations: false,
+          loading: false
+        }));
+        alert("Você está offline. A conjugação não está disponível no momento")
+        return
+      } else if (check) {
+        processEnter();
+      }
+    }
+    setState(prev => ({
+      ...prev,
+      isDisabled: false,
+    }));
+    return
   };
 
   const processEnter = async () => {
@@ -231,6 +267,7 @@ export const flowOfReact = () => {
     }
 
     const apiResponse = await isValidVerbByAPI(normalizedInputValue);
+    console.log("resposta de isValidVerbByAPI:", apiResponse)
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
@@ -422,7 +459,7 @@ export const flowOfReact = () => {
       updateProgress(50);
       
       const propsOfWord = await conjVerbByAPI(ni(findedWord));
-      // console.log(propsOfWord)
+      console.log("resposta de conVerbByAPI:", propsOfWord)
       
       setState(prev => ({
 
@@ -480,45 +517,6 @@ export const flowOfReact = () => {
     }));
 
   }
-
-  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    
-    if (event.key === "Enter" && state.inputValue !== "") {      
-
-      const check = await checkConnection();
-      
-      setState(prev => ({
-        ...prev,
-        loading: false
-      }));
-      
-      event.preventDefault();
-      
-      setTimeout(() => {
-        (event.target as HTMLInputElement).blur();
-      }, 0);
-      
-      if (!check) {
-        setState(prev => ({
-          ...prev,
-          showHome: false,
-          showSobre: false,
-          showStatistic: false,
-          showConjugations: false,
-          loading: false
-        }));
-        alert("Você está offline. A conjugação não está disponível no momento")
-        return
-      } else if (check) {
-        processEnter();
-      }
-    }
-    setState(prev => ({
-      ...prev,
-      isDisabled: false,
-    }));
-    return
-  };
 
   const dependencies = [
     state.isDisabled,
@@ -581,7 +579,7 @@ export const flowOfReact = () => {
       },
     };
   
-    console.log(data);
+    // console.log(data);
   }, dependencies); 
 
   return {

@@ -1,9 +1,16 @@
 export async function isValidVerbByAPI(verb: string) {
   try {
+    console.log("1")
     const response = await fetch(`/api/isValidVerb?verb=${verb}`);
-    if (!response.ok) throw new Error((await response.json()).error);
-    return (await response.json());
+    console.log("2")
+    if (response.ok) {
+      console.log("2")
+      return await response.json();
+    } else {
+      console.log("2")
+      return ({ originalVerb: null, variationVerb: null });
+    }
   } catch (error) {
-    throw new Error('isValidVerbByAPI failed: ' + error.message);
+    return ({ originalVerb: null, variationVerb: null })
   }
 }
