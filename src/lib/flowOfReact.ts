@@ -270,6 +270,8 @@ export const flowOfReact = () => {
       varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
       varConector = apiResponse.originalVerb.variations.conector;
 
+      updateProgress(75);
+
       if  (similar !== null && !state.goThrough) {
 
         setState(prev => ({
@@ -306,14 +308,12 @@ export const flowOfReact = () => {
         return
       }
 
-      updateProgress(75);
+      updateProgress(100);
 
       const conjData = await conjVerbByAPI(ni(findedWord));
       console.log("resposta de conVerbByAPI no flow:", conjData)
       const propsOfWord = conjData.propOfVerb
       const conjugations = conjData.conjugations
-
-      updateProgress(100);
       
       setState(prev => ({
 
@@ -350,8 +350,6 @@ export const flowOfReact = () => {
         foundVerb: findedWord,
         
       }));
-
-      updateProgress(100);
 
       setState(prev => ({
         ...prev,
