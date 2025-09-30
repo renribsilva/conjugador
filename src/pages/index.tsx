@@ -32,16 +32,25 @@ const Index = () => {
 
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.addEventListener("message", (event) => {
-        if (event.data?.type === "NETWORK_STATUS") {
-          setState((prev) => ({
-            ...prev,
-            isOnline: event.data.isOnline,
-          }));
-        }
+      navigator.serviceWorker.ready.then((registration) => {
+        const activeSW = registration.active;
+        if (!activeSW) return;
+        const handleMessage = (event: MessageEvent) => {
+          if (event.data?.type === "NETWORK_STATUS") {
+            console.log("status home:", event.data.isOnline)
+            setState({ 
+              ...state,
+              isOnline: event.data.isOnline
+            });
+          }
+        };
+        navigator.serviceWorker.addEventListener("message", handleMessage);
+        return () => {
+          navigator.serviceWorker.removeEventListener("message", handleMessage);
+        };
       });
     }
-  },[state.inputReq])
+  });
 
   useEffect(() => {
     if (currentProgress === 100) {

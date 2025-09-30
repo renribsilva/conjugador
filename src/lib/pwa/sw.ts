@@ -1,6 +1,6 @@
 import { defaultCache } from "@serwist/next/worker";
 import type { PrecacheEntry, SerwistGlobalConfig, StrategyHandler } from "serwist";
-import { NetworkFirst, NetworkOnly, Serwist, Strategy } from "serwist";
+import { NetworkFirst, Serwist, Strategy } from "serwist";
 
 const CACHE_CHECK = "check-cache";
 const CACHE_CONJ = "conj-cache";
@@ -10,10 +10,8 @@ class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
       const response = await handler.fetch(request);
-      sendStatusToClients(true);
       return response;
     } catch {
-      sendStatusToClients(false);
       return new Response(
         JSON.stringify({ originalVerb: null, variationVerb: null }),
         { status: 200, headers: { "Content-Type": "application/json" } }
@@ -85,8 +83,8 @@ self.addEventListener("fetch", (event) => {
           // Falha na rede -> retorna do cache
           const cache = await caches.open(CACHE_CONJ);
           const cachedResponse = await cache.match(event.request);
-          if (cachedResponse) return cachedResponse;
           sendStatusToClients(false)
+          if (cachedResponse) return cachedResponse;
           return new Response(
             JSON.stringify(null),
             { status: 200, headers: { "Content-Type": "application/json" } }
@@ -136,13 +134,11 @@ self.addEventListener("fetch", (event) => {
             headers: { "Content-Type": "application/json" },
           });
           await cache.put(event.request, fallback);
-          sendStatusToClients(networkResponse.ok)
-          console.log("sw interceptou checagem de internet:", networkResponse.ok)
+          sendStatusToClients(true)
           return networkResponse;
         } catch {
           const cache = await caches.open(CACHE_CHECK);
           const cachedResponse = await cache.match(event.request);
-          console.log("sw interceptou checagem de internet:", cachedResponse)
           sendStatusToClients(false)
           if (cachedResponse) return cachedResponse;
           return new Response(JSON.stringify({ ok: false }), {
