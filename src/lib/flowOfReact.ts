@@ -138,7 +138,6 @@ export const flowOfReact = () => {
     const response = await fetch("/api/queryVerb");
     if (response !== null) {
       const data: Conjugation = await response.json();
-      console.log(data)
       setState(prev => ({
         ...prev,
         conjugations: data,

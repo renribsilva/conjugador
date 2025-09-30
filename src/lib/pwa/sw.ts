@@ -133,30 +133,4 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
-
-  // Intercepta /api/checkConnection
-  if (url.includes("/api/checkConnection")) {
-    event.respondWith(
-      (async () => {
-        try {
-          const networkResponse = await fetch(event.request);
-          const cache = await caches.open(CACHE_CHECK);
-          const fallback = new Response(JSON.stringify({ ok: false }), {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          });
-          await cache.put(event.request, fallback);
-          return networkResponse;
-        } catch {
-          const cache = await caches.open(CACHE_CHECK);
-          const cachedResponse = await cache.match(event.request);
-          if (cachedResponse) return cachedResponse;
-          return new Response(JSON.stringify({ ok: false }), {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          });
-        }
-      })()
-    );
-  }
 });
