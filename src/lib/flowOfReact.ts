@@ -2,113 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
 import { ni } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
-import type { Conjugation } from "../types";
+import type { Conjugation, flowTypes } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
+import { initialFlow } from "./certainObjects";
+import { queryVerbByAPI } from "./queryVerbByAPI";
 
 export const flowOfReact = () => { 
 
-  const [state, setState] = useState<{
-    conjugations: Conjugation | null;
-    inputValue: string; 
-    inputReq: string;
-    showConjugations: boolean;
-    foundVerb: string | null;
-    termination: string | null | undefined;
-    termEntrie: string | null | undefined;
-    hasTargetCanonical1: string | boolean | null ;
-    hasTargetCanonical2: string | boolean | null ;
-    hasTargetAbundance1: string | boolean | null ;
-    hasTargetAbundance2: string | boolean | null ;
-    note_plain: string[] | null | undefined;
-    note_ref: object | null;
-    types: string[] | null | undefined;
-    model: object | null;
-    loading: boolean;
-    suggestions: string[] | null;
-    showSuggestions: boolean;
-    showButton: boolean;
-    isButtonDisabled: boolean;
-    showHome: boolean;
-    showSobre: boolean;
-    showStatistic: boolean;
-    showReviewButton: boolean;
-    goThrough: boolean;
-    enter: boolean;
-    progress: number;
-    isDisabled: boolean;
-
-    originalVerb: object | null;
-    variationVerb: object| null,
-    result: string | null,
-    findedWord: string | null,
-    similar: string[] | null,
-    punct: string [] | null,
-
-    variations: object | null,
-    varHasVariations: boolean,
-    varProcessedInput: string | null,
-    varForcedVerb: boolean,
-    varPrefixFounded: boolean,
-    varMatchingAfixo: string | null,
-    varConector: string | null,
-    varOriginalInput: string | null,
-    
-    canonical: string
-
-    isOnline: boolean | null
-
-  }>({
-
-    conjugations: null,
-    inputValue: "",
-    inputReq: "",
-    showConjugations: false,
-    foundVerb: null,
-    termination: null,
-    termEntrie: null,
-    hasTargetCanonical1: null,
-    hasTargetCanonical2: null,
-    hasTargetAbundance1: null,
-    hasTargetAbundance2: null,
-    note_plain: null,
-    note_ref: null,
-    types: null,
-    model: null,
-    loading: false,
-    suggestions: null,
-    showButton: false,
-    isButtonDisabled: false,
-    showSuggestions: false,
-    showHome: true,
-    showSobre: false,
-    showStatistic: false,
-    showReviewButton: false,
-    goThrough: false,
-    enter: false,
-    progress: 0,
-    isDisabled: false,
-
-    originalVerb: null,
-    variationVerb: null,
-    result: null,
-    findedWord: null,
-    similar: null,
-    punct: null,
-
-    variations: null,
-    varHasVariations: false,
-    varProcessedInput: null,
-    varForcedVerb: false,
-    varPrefixFounded: false,
-    varMatchingAfixo: null,
-    varConector: null,
-    varOriginalInput: null,
-
-    canonical: "canonical1",
-
-    isOnline: null
-
-  });
+  const [state, setState] = useState<flowTypes>(initialFlow);
 
   const checkConnection = async (): Promise<boolean> => {
     const response = await fetch("/api/checkConnection");
@@ -125,31 +26,13 @@ export const flowOfReact = () => {
   useEffect(() => {
     checkConnection().then(isOnline => {
       if (isOnline) {
-        isValidVerbByAPI("reabracar");
+        isValidVerbByAPI("amar");
         conjVerbByAPI("recomeçar");
         getSimilarVerbs("renato");
         console.log("pré-carregamento de script:", true);
       }
     });
   }, []);
-
-  const fetchConjugationsData = async () => {
-    const response = await fetch("/api/queryVerb");
-    if (response.ok) {
-    const data: Conjugation = await response.json();
-    console.log("resposta do queryVerb:", data)
-    setState(prev => ({
-      ...prev,
-      conjugations: data,
-    }));
-  } else {
-    console.log("resposta do queryVerb:", null)
-    setState(prev => ({
-      ...prev,
-      conjugations: null,
-    }));
-  }
-  };
 
   const updateProgress = (n: number) => {
     setState(prev => ({
@@ -158,9 +41,10 @@ export const flowOfReact = () => {
     }));
   };
 
-  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {    
+  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => { 
+
     if (event.key === "Enter" && state.inputValue !== "") {      
-      const check = await checkConnection();        
+      const check = await checkConnection();    
       event.preventDefault();      
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
@@ -267,7 +151,7 @@ export const flowOfReact = () => {
     }
 
     const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-    console.log("resposta de isValidVerbByAPI:", apiResponse)
+    console.log("resposta de isValidVerbByAPI no flow:", apiResponse)
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
@@ -457,9 +341,8 @@ export const flowOfReact = () => {
       }
 
       updateProgress(50);
-      
       const propsOfWord = await conjVerbByAPI(ni(findedWord));
-      console.log("resposta de conVerbByAPI:", propsOfWord)
+      console.log("resposta de conVerbByAPI no flow:", propsOfWord)
       
       setState(prev => ({
 
@@ -499,10 +382,11 @@ export const flowOfReact = () => {
 
       updateProgress(100);
 
-      await fetchConjugationsData();
-
+      const conjugations = await queryVerbByAPI();
+      console.log("resposta de queryVerbByAPI no flow:", conjugations)
       setState(prev => ({
         ...prev,
+        // conjugations: conjugations
         loading: false,
         showConjugations: true,
       }));

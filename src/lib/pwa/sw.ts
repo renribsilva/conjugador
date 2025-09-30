@@ -1,6 +1,7 @@
 import { defaultCache } from "@serwist/next/worker";
 import type { PrecacheEntry, SerwistGlobalConfig, StrategyHandler } from "serwist";
 import { NetworkFirst, Serwist, Strategy } from "serwist";
+import { pattern } from "../certainObjects";
 
 const CACHE_CHECK = "check-cache";
 const CACHE_CONJ = "conj-cache";
@@ -73,20 +74,18 @@ self.addEventListener("fetch", (event) => {
           const networkResponse = await fetch(event.request);
           const cache = await caches.open(CACHE_CONJ);
           const fallback = new Response(
-            JSON.stringify(null),
+            JSON.stringify({ conjugations: null, propOfVerb: pattern }),
             { status: 200, headers: { "Content-Type": "application/json" } }
           );
           await cache.put(event.request, fallback);
-          sendStatusToClients(true)
           return networkResponse;
         } catch {
           // Falha na rede -> retorna do cache
           const cache = await caches.open(CACHE_CONJ);
           const cachedResponse = await cache.match(event.request);
-          sendStatusToClients(false)
           if (cachedResponse) return cachedResponse;
           return new Response(
-            JSON.stringify(null),
+            JSON.stringify({ conjugations: null, propOfVerb: pattern }),
             { status: 200, headers: { "Content-Type": "application/json" } }
           );
         }

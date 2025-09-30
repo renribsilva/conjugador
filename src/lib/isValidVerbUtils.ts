@@ -39,14 +39,3 @@ export function getNormalizedJsonKeys(jsonObject: Record<string, any>) {
   }
   return normalizedCache;
 }
-
-let cachedJsonObject: Record<string, any> | null = null;
-const filePath = path.join(process.cwd(), 'src/json/allVerbs.json');
-
-export async function loadJsonObject() {
-  if (!cachedJsonObject) {
-    const data = await fs.readFile(filePath, 'utf-8');
-    cachedJsonObject = JSON.parse(data);
-  }
-  return cachedJsonObject;
-}

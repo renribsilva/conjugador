@@ -1,6 +1,8 @@
 export async function isValidVerbByAPI(verb: string) {
   try {
-    const response = await fetch(`/api/isValidVerb?verb=${verb}`);
+    const response = await fetch(`/api/isValidVerb?verb=${verb}`, {
+      method: 'GET',
+    });
     if (response.ok) {
       return await response.json();
     } else {

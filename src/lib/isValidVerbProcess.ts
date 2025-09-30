@@ -4,11 +4,10 @@ import {
   findOriginalVerb, 
   findSimilarWords, 
   getNormalizedJsonKeys, 
-  loadJsonObject 
 } from './isValidVerbUtils';
 import findVariations from './findVariations';
 
-export async function processVerb (verb: string) {
+export function processVerb (verb: string, jsonObject: object) {
 
   const normalizedVerb = ni(verb);
   const { punct } = extractPunctuation(normalizedVerb);
@@ -19,8 +18,6 @@ export async function processVerb (verb: string) {
     const regex = new RegExp(`[${punct.join('')}]`, 'g');
     cleanedVerb = cleanedVerb.replace(regex, '');
   }
-
-  const jsonObject = await loadJsonObject();
 
   if (!jsonObject) {
     throw new Error('Failed to load JSON data.');

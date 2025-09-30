@@ -1,73 +1,13 @@
-import irregularidades from '../json/rulesByTerm.json';  
 import innerSearchOfRules from './innerSearchOfRules';
 import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';
+import { getDefaultResponse, getVerbKeys } from './findTermRulesUtils';
 
-const terminations = Object.keys(irregularidades);
-// console.log(terminations)
+export function findTermRule(verb: string, P: string, M: string, D: string, regJson: object) {
 
-function getVerbKeys(verb: string, terminations: string[]): any {
+  const terminations = Object.keys(regJson)
 
-  terminations.sort((a, b) => b.length - a.length);
-
-  const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
-  const terminationData = termination ? irregularidades[termination] : null;
-  // console.log(terminationData)
-
-  if (terminationData) {
-    const normalizedCanonical = Object.keys(terminationData).reduce((acc, key) => {
-      acc[nw(key)] = terminationData[key];
-      return acc;
-    }, {});
-
-    //  console.log(termination)
-    return { terminationData: normalizedCanonical, termination };
-  }
-
-  return { terminationData: null, termination };
-}
-
-function getDefaultResponse() {
-  return {
-    results: {
-      canonical1: {
-        hasTarget: false,
-        rule: null,
-        P: null,
-        M: null,
-      },
-      canonical2: {
-        hasTarget: false,
-        rule: null,
-        P: null,
-        M: null,
-      },
-      abundance1: {
-        hasTarget: false,
-        rule: null,
-        P: null,
-        M: null,
-      },
-      abundance2: {
-        hasTarget: false,
-        rule: null,
-        P: null,
-        M: null,
-      }
-    },
-    termination: null,
-    termEntrie: null,
-    verb: null,
-    types: null,
-    note_plain: null,
-    note_ref: null,
-    afixo: null  
-  };
-}
-
-export function findTermRule(verb: string, P: string, M: string, D: string) {
-
-  const { terminationData: terminationData, termination } = getVerbKeys(verb, terminations);
+  const { terminationData: terminationData, termination } = getVerbKeys(verb, terminations, regJson);
   // console.log(termination)
   if (!terminationData) {
     return getDefaultResponse();

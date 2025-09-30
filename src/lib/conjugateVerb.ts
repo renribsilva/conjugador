@@ -1,11 +1,9 @@
-import reg from '../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
-import allVerbsData from "../json/allVerbs.json"
 import { getTermData } from './getTermData';
 import { VerbProps } from '../types';
 
-export function conjugateVerb (verb: string) {
+export function conjugateVerb (verb: string, allVerbsJson: object, regJson: object) {
 
   let r = nw(ni(verb)).slice(0, -2);
   let R = ''
@@ -34,7 +32,7 @@ export function conjugateVerb (verb: string) {
       // console.log("use cachê")
       return termDataCache.get(cacheKey);
     }
-    const data = getTermData(verb, P, M, D);
+    const data = getTermData(verb, P, M, D, regJson);
     termDataCache.set(cacheKey, data);
     return data;
   }
@@ -71,7 +69,9 @@ export function conjugateVerb (verb: string) {
 
     }
 
-    const verbRules = reg[M]?.[str];
+    if (regJson === null) return '---'
+
+    const verbRules = regJson[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
@@ -125,7 +125,9 @@ export function conjugateVerb (verb: string) {
 
     }
 
-    const verbRules = reg[M]?.[str];
+    if (regJson === null) return '---'
+
+    const verbRules = regJson[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
@@ -199,9 +201,9 @@ export function conjugateVerb (verb: string) {
   };
 
   const conj = {
-    model: allVerbsData[verb].model,
-    only_reflexive: allVerbsData[verb].only_reflexive,
-    multiple_conj: allVerbsData[verb].multiple_conj,
+    model: allVerbsJson[verb].model,
+    only_reflexive: allVerbsJson[verb].only_reflexive,
+    multiple_conj: allVerbsJson[verb].multiple_conj,
     canonical1: { 
         gd: N("gd", "canonical1"),
         pa: N("pa", "canonical1"),
@@ -272,8 +274,8 @@ export function conjugateVerb (verb: string) {
   // console.log(accumulatedResult)
 
   const conjugations: Record<string, any> = {};
-  for (const [tense, reg] of Object.entries(conj)) {
-    conjugations[tense] = reg;
+  for (const [tense, regJson] of Object.entries(conj)) {
+    conjugations[tense] = regJson;
   }
 
   // console.log(JSON.stringify(conjugations, null, 2));

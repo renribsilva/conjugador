@@ -16,14 +16,14 @@ function mapTypesToStrings(types: any) {
   return types.map((type) => typeDescriptions[type] || "tipo desconhecido");
 }
 
-export function getTermData(verb: string, P: string, M: string, type: string) {
+export function getTermData(verb: string, P: string, M: string, type: string, regJson: object) {
   
   const cacheKey = `${verb}|${P}|${M}|${type}`;
 
   let result = resultCache.get(cacheKey);
 
   if (!result) {
-    result = findTermRule(verb, P, M, type);
+    result = findTermRule(verb, P, M, type, regJson);
     resultCache.set(cacheKey, result);
   }
 

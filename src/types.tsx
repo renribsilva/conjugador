@@ -76,3 +76,54 @@ export type VerbProps = {
   afixo: string | null | undefined;
   model: object | null;
 }
+
+export type flowTypes = {
+  conjugations: Conjugation | null;
+  inputValue: string; 
+  inputReq: string;
+  showConjugations: boolean;
+  foundVerb: string | null;
+  termination: string | null | undefined;
+  termEntrie: string | null | undefined;
+  hasTargetCanonical1: string | boolean | null ;
+  hasTargetCanonical2: string | boolean | null ;
+  hasTargetAbundance1: string | boolean | null ;
+  hasTargetAbundance2: string | boolean | null ;
+  note_plain: string[] | null | undefined;
+  note_ref: object | null;
+  types: string[] | null | undefined;
+  model: object | null;
+  loading: boolean;
+  suggestions: string[] | null;
+  showSuggestions: boolean;
+  showButton: boolean;
+  isButtonDisabled: boolean;
+  showHome: boolean;
+  showSobre: boolean;
+  showStatistic: boolean;
+  showReviewButton: boolean;
+  goThrough: boolean;
+  enter: boolean;
+  progress: number;
+  isDisabled: boolean;
+
+  originalVerb: object | null;
+  variationVerb: object| null,
+  result: string | null,
+  findedWord: string | null,
+  similar: string[] | null,
+  punct: string [] | null,
+
+  variations: object | null,
+  varHasVariations: boolean,
+  varProcessedInput: string | null,
+  varForcedVerb: boolean,
+  varPrefixFounded: boolean,
+  varMatchingAfixo: string | null,
+  varConector: string | null,
+  varOriginalInput: string | null,
+  
+  canonical: string
+
+  isOnline: boolean | null
+}
