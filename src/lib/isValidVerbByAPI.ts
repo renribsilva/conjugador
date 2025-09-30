@@ -1,17 +1,20 @@
 'use client'
 
+import { processVerb } from "./isValidVerbProcess";
+
 export async function isValidVerbByAPI(verb: string) {
   try {
-    const response = await fetch(`/api/isValidVerb?verb=${verb}`, {
-      method: 'GET',
-    });
-    if (response.ok) {
-      const data = await response.json();
-      return data
-    } else {
-      return ({ originalVerb: null, variationVerb: null });
+    const response = await fetch(`/api/isValidVerb?verb=${verb}`);
+    if (response.ok) return await response.json();
+  } catch {
+    // offline: tenta validar localmente
+    const cache = await caches.open("verbs-cache");
+    const cachedAllVerbs = await cache.match(new Request(location.origin + "/api/allVerbs"));
+    if (cachedAllVerbs) {
+      const allVerbsJson = await cachedAllVerbs.json();
+      console.log(allVerbsJson)
+      return processVerb(verb, allVerbsJson);
     }
-  } catch (error) {
-    return ({ originalVerb: null, variationVerb: null })
   }
+  return { originalVerb: null, variationVerb: null };
 }

@@ -3,6 +3,7 @@ import type { PrecacheEntry, SerwistGlobalConfig, StrategyHandler } from "serwis
 import { NetworkFirst, Serwist, Strategy } from "serwist";
 
 const CACHE_CONJ = "conj-cache";
+const CACHE_ALLVERBS = "verbs-cache";
 
 class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
@@ -10,10 +11,11 @@ class NetworkOrFallback extends Strategy {
       const response = await handler.fetch(request);
       return response;
     } catch {
-      return new Response(
-        JSON.stringify({ originalVerb: null, variationVerb: null }),
-        { status: 200, headers: { "Content-Type": "application/json" } }
-      );
+      throw new Error("Offline");
+      // return new Response(
+      //   JSON.stringify({ originalVerb: null, variationVerb: null }),
+      //   { status: 200, headers: { "Content-Type": "application/json" } }
+      // );
     }
   }
 }
@@ -35,6 +37,12 @@ const serwist = new Serwist({
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/isValidVerb"),
       handler: new NetworkOrFallback(),
+    },
+    {
+      matcher: ({ url }) => url.pathname.startsWith("/api/allVerbs"),
+      handler: new NetworkFirst({
+        cacheName: CACHE_ALLVERBS,
+      }),
     },
     // {
     //   matcher: ({ url }) => url.pathname.startsWith("/api/conjVerb"),
@@ -79,6 +87,24 @@ self.addEventListener("fetch", (event) => {
   //     })()
   //   );
   // }
+
+  if (url.includes("/api/allVerbs")) {
+    event.respondWith(
+       (async () => {
+        try {
+          const networkResponse = await fetch(event.request);
+          const cache = await caches.open(CACHE_ALLVERBS);
+          await cache.put(event.request, networkResponse.clone());
+          return networkResponse;
+        } catch {
+          const cache = await caches.open(CACHE_ALLVERBS);
+          const cachedResponse = await cache.match(event.request);
+          if (cachedResponse) return cachedResponse;
+          return new Response("{}", { status: 200, headers: { "Content-Type": "application/json" } });
+        }
+      })()
+    );
+  }
 });
 
 function sendStatusToClients(status: boolean) {

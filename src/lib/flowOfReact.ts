@@ -8,6 +8,13 @@ import { initialFlow } from "./certainObjects";
 
 export const flowOfReact = () => { 
 
+  useEffect (() => {
+    const cacheVerbs = async () => {
+      await fetch("/api/allVerbs")
+    }
+    cacheVerbs();
+  }, [])
+
   const [state, setState] = useState<flowTypes>(initialFlow);
 
   const updateProgress = (n: number) => {
