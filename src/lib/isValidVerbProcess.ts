@@ -7,7 +7,7 @@ import {
 } from './isValidVerbUtils';
 import findVariations from './findVariations';
 
-export function processVerb (verb: string, jsonObject: object) {
+export async function processVerb (verb: string, jsonObject: object) {
 
   const normalizedVerb = ni(verb);
   const { punct } = extractPunctuation(normalizedVerb);

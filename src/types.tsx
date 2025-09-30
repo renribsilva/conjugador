@@ -1,5 +1,3 @@
-// types/conjugation.ts
-
 type Person = {
   p1: string[];
   p2: string[];

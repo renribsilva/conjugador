@@ -1,3 +1,5 @@
+'use client'
+
 import { pattern } from "./certainObjects";
 
 export const conjVerbByAPI = async (verb: string) => {
@@ -8,7 +10,8 @@ export const conjVerbByAPI = async (verb: string) => {
       body: JSON.stringify({ verb })
     });
     if (response.ok) {
-      return await response.json();
+      const data = await response.json();
+      return data
     } else {
       return ({ conjugations: null, propOfVerb: pattern });
     }

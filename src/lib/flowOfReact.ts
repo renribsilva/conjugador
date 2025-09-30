@@ -2,37 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import { conjVerbByAPI } from "./conjVerbByAPI";
 import { ni } from "./normalizeVerb";
 import { isValidVerbByAPI } from "./isValidVerbByAPI";
-import type { Conjugation, flowTypes } from "../types";
+import type { flowTypes } from "../types";
 import getSimilarVerbs from "./getSimilarWords";
 import { initialFlow } from "./certainObjects";
-import { queryVerbByAPI } from "./queryVerbByAPI";
 
 export const flowOfReact = () => { 
 
   const [state, setState] = useState<flowTypes>(initialFlow);
-
-  const checkConnection = async (): Promise<boolean> => {
-    const response = await fetch("/api/checkConnection");
-    const data = await response.json();
-    setState(prev => ({
-      ...prev,
-      isOnline: data.ok
-    }))
-    console.log("primeira checagem de internet:", data.ok)
-    return data.ok;
-  };
-
-
-  useEffect(() => {
-    checkConnection().then(isOnline => {
-      if (isOnline) {
-        isValidVerbByAPI("amar");
-        conjVerbByAPI("recomeçar");
-        getSimilarVerbs("renato");
-        console.log("pré-carregamento de script:", true);
-      }
-    });
-  }, []);
 
   const updateProgress = (n: number) => {
     setState(prev => ({
@@ -44,26 +20,11 @@ export const flowOfReact = () => {
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => { 
 
     if (event.key === "Enter" && state.inputValue !== "") {      
-      const check = await checkConnection();    
       event.preventDefault();      
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
-      }, 0);
-      console.log ("check internet no keydown:", check)      
-      if (!check) {
-        setState(prev => ({
-          ...prev,
-          showHome: false,
-          showSobre: false,
-          showStatistic: false,
-          showConjugations: false,
-          loading: false
-        }));
-        alert("Você está offline. A conjugação não está disponível no momento")
-        return
-      } else if (check) {
-        processEnter();
-      }
+      }, 0);     
+      processEnter();
     }
     setState(prev => ({
       ...prev,
@@ -71,6 +32,11 @@ export const flowOfReact = () => {
     }));
     return
   };
+
+  useEffect(() => {
+    isValidVerbByAPI(ni("recomeçar"))
+    conjVerbByAPI("realçar")
+  }, [])
 
   const processEnter = async () => {
 
@@ -340,9 +306,14 @@ export const flowOfReact = () => {
         return
       }
 
-      updateProgress(50);
-      const propsOfWord = await conjVerbByAPI(ni(findedWord));
-      console.log("resposta de conVerbByAPI no flow:", propsOfWord)
+      updateProgress(75);
+
+      const conjData = await conjVerbByAPI(ni(findedWord));
+      console.log("resposta de conVerbByAPI no flow:", conjData)
+      const propsOfWord = conjData.propOfVerb
+      const conjugations = conjData.conjugations
+
+      updateProgress(100);
       
       setState(prev => ({
 
@@ -382,11 +353,9 @@ export const flowOfReact = () => {
 
       updateProgress(100);
 
-      const conjugations = await queryVerbByAPI();
-      console.log("resposta de queryVerbByAPI no flow:", conjugations)
       setState(prev => ({
         ...prev,
-        // conjugations: conjugations
+        conjugations: conjugations,
         loading: false,
         showConjugations: true,
       }));
@@ -469,7 +438,6 @@ export const flowOfReact = () => {
   return {
     state,
     setState,
-    handleKeyDown,
-    checkConnection
+    handleKeyDown
   };
 };

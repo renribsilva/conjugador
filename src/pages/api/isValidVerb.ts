@@ -1,15 +1,8 @@
+'use server'
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { processVerb } from '../../lib/isValidVerbProcess';
-import allVerbData from "../../json/allVerbs.json"
-
-let allVerbJson: Record<string, any> | null;
-
-async function loadAllVerbObject() {
-  if (!allVerbJson) {
-    allVerbJson = allVerbData;
-  }
-  return allVerbJson;
-}
+import { loadAllVerbObject } from '../../lib/jsonLoad';
 
 export default async function handler(
   request: NextApiRequest, 
@@ -21,7 +14,7 @@ export default async function handler(
     return response.status(200).json({ originalVerb: null, variationVerb: null });
   }
   try {
-    await loadAllVerbObject();
+    const allVerbJson = await loadAllVerbObject();
     if (allVerbJson === null ) return response.status(200).json({ originalVerb: null, variationVerb: null });
     const result = await processVerb(verb as string, allVerbJson);
     return response.status(200).json(result);

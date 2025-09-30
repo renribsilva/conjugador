@@ -1,9 +1,12 @@
+import reg from '../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import { getTermData } from './getTermData';
 import { VerbProps } from '../types';
+// import regData1 from "../json/rulesByTerm.json"
+// import allVerbsData1 from "../json/allVerbs.json"
 
-export function conjugateVerb (verb: string, allVerbsJson: object, regJson: object) {
+export async function conjugateVerb (verb: string, regJson: object, allVerbsJson: object) {
 
   let r = nw(ni(verb)).slice(0, -2);
   let R = ''
@@ -69,9 +72,7 @@ export function conjugateVerb (verb: string, allVerbsJson: object, regJson: obje
 
     }
 
-    if (regJson === null) return '---'
-
-    const verbRules = regJson[M]?.[str];
+    const verbRules = reg[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
@@ -125,9 +126,7 @@ export function conjugateVerb (verb: string, allVerbsJson: object, regJson: obje
 
     }
 
-    if (regJson === null) return '---'
-
-    const verbRules = regJson[M]?.[str];
+    const verbRules = reg[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
@@ -200,43 +199,55 @@ export function conjugateVerb (verb: string, allVerbsJson: object, regJson: obje
     };
   };
 
-  const conj = {
-    model: allVerbsJson[verb].model,
-    only_reflexive: allVerbsJson[verb].only_reflexive,
-    multiple_conj: allVerbsJson[verb].multiple_conj,
-    canonical1: { 
-        gd: N("gd", "canonical1"),
-        pa: N("pa", "canonical1"),
-        pr_ind: W("pr_ind", null, "canonical1"),
-        pt1_ind: W("pt1_ind", null, "canonical1"),
-        pt2_ind: W("pt2_ind", null, "canonical1"),
-        pt3_ind: W("pt3_ind", null, "canonical1"),
-        ft1_ind: W("ft1_ind", null, "canonical1"),
-        ft2_ind: W("ft2_ind", null, "canonical1"),
-        pr_sub: W("pr_sub", null, "canonical1"),
-        pt_sub: W("pt_sub", null, "canonical1"),
-        fut_sub: W("fut_sub", null, "canonical1"),
-        inf: W("inf", null, "canonical1"),
-        im1: W("im1", "---", "canonical1"),
-        im2: W("im2", "---", "canonical1")
-    },
-    canonical2: {
-        gd: N("gd", "canonical2"),
-        pa: N("pa", "canonical2"),
-        pr_ind: W("pr_ind", null, "canonical2"),
-        pt1_ind: W("pt1_ind", null, "canonical2"),
-        pt2_ind: W("pt2_ind", null, "canonical2"),
-        pt3_ind: W("pt3_ind", null, "canonical2"),
-        ft1_ind: W("ft1_ind", null, "canonical2"),
-        ft2_ind: W("ft2_ind", null, "canonical2"),
-        pr_sub: W("pr_sub", null, "canonical2"),
-        pt_sub: W("pt_sub", null, "canonical2"),
-        fut_sub: W("fut_sub", null, "canonical2"),
-        inf: W("inf", null, "canonical2"),
-        im1: W("im1", "---", "canonical2"),
-        im2: W("im2", "---", "canonical2")
-    }
-  };
+  let conj: Record<string, any>;
+
+  if(!allVerbsJson[verb]){
+    conj = {
+      model: null,
+      only_reflexive: null,
+      multiple_conj: null,
+      canonical1: null,
+      canonical2: null
+      }
+  } else {
+    conj = {
+      model: allVerbsJson[verb].model,
+      only_reflexive: allVerbsJson[verb].only_reflexive,
+      multiple_conj: allVerbsJson[verb].multiple_conj,
+      canonical1: { 
+          gd: N("gd", "canonical1"),
+          pa: N("pa", "canonical1"),
+          pr_ind: W("pr_ind", null, "canonical1"),
+          pt1_ind: W("pt1_ind", null, "canonical1"),
+          pt2_ind: W("pt2_ind", null, "canonical1"),
+          pt3_ind: W("pt3_ind", null, "canonical1"),
+          ft1_ind: W("ft1_ind", null, "canonical1"),
+          ft2_ind: W("ft2_ind", null, "canonical1"),
+          pr_sub: W("pr_sub", null, "canonical1"),
+          pt_sub: W("pt_sub", null, "canonical1"),
+          fut_sub: W("fut_sub", null, "canonical1"),
+          inf: W("inf", null, "canonical1"),
+          im1: W("im1", "---", "canonical1"),
+          im2: W("im2", "---", "canonical1")
+      },
+      canonical2: {
+          gd: N("gd", "canonical2"),
+          pa: N("pa", "canonical2"),
+          pr_ind: W("pr_ind", null, "canonical2"),
+          pt1_ind: W("pt1_ind", null, "canonical2"),
+          pt2_ind: W("pt2_ind", null, "canonical2"),
+          pt3_ind: W("pt3_ind", null, "canonical2"),
+          ft1_ind: W("ft1_ind", null, "canonical2"),
+          ft2_ind: W("ft2_ind", null, "canonical2"),
+          pr_sub: W("pr_sub", null, "canonical2"),
+          pt_sub: W("pt_sub", null, "canonical2"),
+          fut_sub: W("fut_sub", null, "canonical2"),
+          inf: W("inf", null, "canonical2"),
+          im1: W("im1", "---", "canonical2"),
+          im2: W("im2", "---", "canonical2")
+      }
+    };
+  }
 
   const uniqueResults: VerbProps[] = Array.from(verbPropsMap.values());
 
@@ -274,8 +285,8 @@ export function conjugateVerb (verb: string, allVerbsJson: object, regJson: obje
   // console.log(accumulatedResult)
 
   const conjugations: Record<string, any> = {};
-  for (const [tense, regJson] of Object.entries(conj)) {
-    conjugations[tense] = regJson;
+  for (const [tense, reg] of Object.entries(conj)) {
+    conjugations[tense] = reg;
   }
 
   // console.log(JSON.stringify(conjugations, null, 2));
@@ -287,4 +298,4 @@ export function conjugateVerb (verb: string, allVerbsJson: object, regJson: obje
   
 };
 
-// conjugateVerb("renato");
+// conjugateVerb("renato", regData1, allVerbsData1);
