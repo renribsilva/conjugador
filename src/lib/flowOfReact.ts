@@ -12,6 +12,10 @@ export const flowOfReact = () => {
     const cacheVerbs = async () => {
       await fetch("/api/allVerbs")
     }
+    const cacheReg = async () => {
+      await fetch("/api/rules")
+    }
+    cacheReg();
     cacheVerbs();
   }, [])
 
@@ -128,7 +132,7 @@ export const flowOfReact = () => {
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
-    updateProgress(50);
+    updateProgress(75);
 
     if (normalizedInputValue !== "") {
       

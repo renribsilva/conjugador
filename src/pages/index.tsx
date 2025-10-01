@@ -31,41 +31,20 @@ const Index = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
 
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then((registration) => {
-        const activeSW = registration.active;
-        if (!activeSW) return;
-        const handleMessage = (event: MessageEvent) => {
-          if (event.data?.type === "NETWORK_STATUS") {
-            console.log("status home:", event.data.isOnline)
-            setState({ 
-              ...state,
-              isOnline: event.data.isOnline
-            });
-          }
-        };
-        navigator.serviceWorker.addEventListener("message", handleMessage);
-        return () => {
-          navigator.serviceWorker.removeEventListener("message", handleMessage);
-        };
+    let raf: number;
+    const animate = () => {
+      setCurrentProgress(prev => {
+        const target = state.progress || 0;
+        if (prev >= target) {
+          cancelAnimationFrame(raf);
+          return target;
+        }
+        return Math.min(prev + 10, target);
       });
-    }
-  });
-
-  useEffect(() => {
-    if (currentProgress === 100) {
-      setCurrentProgress(0)
-      const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 3, 25));
-      }, 10);
-      return () => clearInterval(interval);
-    }
-    if (currentProgress < state.progress) {
-      const interval = setInterval(() => {
-        setCurrentProgress(prev => Math.min(prev + 3, state.progress));
-      }, 10);
-      return () => clearInterval(interval);
-    }
+      raf = requestAnimationFrame(animate);
+    };
+    animate();
+    return () => cancelAnimationFrame(raf);
   }, [state.progress]);
 
   const handleSolicitar = async (inputReq) => {
@@ -315,23 +294,11 @@ const Index = () => {
         <div className={styles.panel}>
           {state.loading && <ProgressBar progress={currentProgress} />}
           <div className={styles.subpanel}>
-            <div>
-              {state.isOnline && ( 
-                <div className={styles.loading}>
-                  {(state.loading) && (
-                    <>
-                      <p>aguarde...</p>
-                    </>
-                  )}
-                </div>
-              )}
-              {!state.isOnline && (!state.showSobre && !state.showStatistic && !state.showHome) && (
-                <div>
-                  <p>Você está offline. A conjugação não está disponível</p>
-                  <div className={styles.gotohome}>
-                    <Button onClick={handleHome}>voltar para o início</Button>
-                  </div>
-                </div>
+            <div className={styles.loading}>
+              {(state.loading) && (
+                <>
+                  <p>aguarde...</p>
+                </>
               )}
             </div>
             <div>
@@ -664,7 +631,7 @@ const Index = () => {
               )}
             </div>
             <div>
-              {state.isOnline && state.conjugations !== null 
+              {state.conjugations !== null 
               && state.foundVerb
               && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
                 === nw(String(state.foundVerb).replace("*","")) || 

@@ -12,7 +12,6 @@ export async function isValidVerbByAPI(verb: string) {
     const cachedAllVerbs = await cache.match(new Request(location.origin + "/api/allVerbs"));
     if (cachedAllVerbs) {
       const allVerbsJson = await cachedAllVerbs.json();
-      console.log(allVerbsJson)
       return processVerb(verb, allVerbsJson);
     }
   }
