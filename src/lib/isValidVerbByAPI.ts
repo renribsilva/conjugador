@@ -3,7 +3,6 @@
 import { processVerb } from "./isValidVerbProcess";
 
 export async function isValidVerbByAPI(verb: string) {
-  console.log("1")
   try {
     const response = await fetch(`/api/isValidVerb?verb=${verb}`);
     if (response.ok) return await response.json();
