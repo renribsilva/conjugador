@@ -6,6 +6,8 @@ import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
 import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
 import { conjugateVerb } from '../src/lib/conjugateVerb';
+import allVerbs from "../src/json/allVerbs.json"
+import regJson from "../src/json/rulesByTerm.json"
 
 const srcDir = path.join(process.cwd(), 'src');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
@@ -164,7 +166,7 @@ async function ediAllVerbsJson() {
               const input = normalized;
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
-                verbPropsArray = await conjugateVerb(input).propOfVerb
+                verbPropsArray = (await conjugateVerb(input, regJson, allVerbs)).propOfVerb
                 cache.set(input, verbPropsArray);
               }
         
