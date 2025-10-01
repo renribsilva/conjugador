@@ -30,23 +30,6 @@ const Index = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { state, setState, handleKeyDown } = flowOfReact();
 
-  useEffect(() => {
-    let raf: number;
-    const animate = () => {
-      setCurrentProgress(prev => {
-        const target = state.progress || 0;
-        if (prev >= target) {
-          cancelAnimationFrame(raf);
-          return target;
-        }
-        return Math.min(prev + 10, target);
-      });
-      raf = requestAnimationFrame(animate);
-    };
-    animate();
-    return () => cancelAnimationFrame(raf);
-  }, [state.progress]);
-
   const handleSolicitar = async (inputReq) => {
     await postReqVerbByAPI(inputReq, "new_verbs");
     setState({ 
@@ -202,6 +185,23 @@ const Index = () => {
     randomAxi();
     randomEita();
   }, [state.enter]);
+
+  useEffect(() => {
+    let raf: number;
+    const animate = () => {
+      setCurrentProgress(prev => {
+        const target = state.progress || 0;
+        if (prev >= target) {
+          cancelAnimationFrame(raf);
+          return target;
+        }
+        return Math.min(prev + 10, target);
+      });
+      raf = requestAnimationFrame(animate);
+    };
+    animate();
+    return () => cancelAnimationFrame(raf);
+  }, [state.progress]);
 
   useEffect(() => {
     setMounted(true);
