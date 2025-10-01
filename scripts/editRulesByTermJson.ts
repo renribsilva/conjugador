@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path'; 
 import { ni } from '../src/lib/normalizeVerb';
 import { conjugateVerb } from '../src/lib/conjugateVerb';
+import allVerbsJson from "../src/json/allVerbs.json"
+import regJson from "../src/json/rulesByTerm.json"
 
 interface VerbData {
   verb: string[];
@@ -39,6 +41,11 @@ const modelsPath = path.join(process.cwd(), 'src/json/models.json');
 const specificMainKeyObject = null
 
 async function editRulesByTerm() {
+
+  async function X (verb: string) {
+    const props = (await conjugateVerb(ni(verb), regJson, allVerbsJson)).propOfVerb;
+    return props
+  }
   
   try {
     
@@ -137,8 +144,7 @@ async function editRulesByTerm() {
 
           // ESSA FUNÇÃO FOI ALTERADA QUANDO GETPROPSOSVERBS FOI SUBSTITUÍDA POR CONJUGATEVERB... FALTAM TESTES
           const verbPropsPromises = batch.map(verb => {
-            const props = conjugateVerb(ni(verb)).propOfVerb;
-
+            const props = X(verb);
             if (props) {
               const termEntrie = props[0].termEntrie ?? '';
               if (!result[termEntrie]) {
