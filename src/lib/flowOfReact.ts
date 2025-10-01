@@ -132,7 +132,7 @@ export const flowOfReact = () => {
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
-    updateProgress(75);
+    updateProgress(50);
 
     if (normalizedInputValue !== "") {
       

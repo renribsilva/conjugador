@@ -207,7 +207,7 @@ const Index = () => {
     setMounted(true);
   }, []);
   
-  if (!mounted) {
+  if (!mounted && state.progress < 100) {
     return null;
   }
 
