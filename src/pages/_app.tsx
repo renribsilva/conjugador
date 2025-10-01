@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
 import Head from 'next/head';

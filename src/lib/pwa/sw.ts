@@ -76,38 +76,44 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (url.includes("/api/allVerbs")) {
-    event.respondWith(
-       (async () => {
-        try {
-          const networkResponse = await fetch(event.request);
-          const cache = await caches.open(CACHE_ALLVERBS);
-          await cache.put(event.request, networkResponse.clone());
-          return networkResponse;
-        } catch {
-          const cache = await caches.open(CACHE_ALLVERBS);
-          const cachedResponse = await cache.match(event.request);
-          if (cachedResponse) return cachedResponse;
-          return new Response("{}", { status: 200, headers: { "Content-Type": "application/json" } });
+    event.respondWith(caches.open(CACHE_ALLVERBS).then((cache) => {
+      // Go to the cache first
+      return cache.match(event.request.url).then((cachedResponse) => {
+        // Return a cached response if we have one
+        if (cachedResponse) {
+          return cachedResponse;
         }
-      })()
-    );
+
+        // Otherwise, hit the network
+        return fetch(event.request).then((fetchedResponse) => {
+          // Add the network response to the cache for later visits
+          cache.put(event.request, fetchedResponse.clone());
+
+          // Return the network response
+          return fetchedResponse;
+        });
+      });
+    }));
   }
 
   if (url.includes("/api/rules")) {
-    event.respondWith(
-       (async () => {
-        try {
-          const networkResponse = await fetch(event.request);
-          const cache = await caches.open(CACHE_RULES);
-          await cache.put(event.request, networkResponse.clone());
-          return networkResponse;
-        } catch {
-          const cache = await caches.open(CACHE_RULES);
-          const cachedResponse = await cache.match(event.request);
-          if (cachedResponse) return cachedResponse;
-          return new Response("{}", { status: 200, headers: { "Content-Type": "application/json" } });
+    event.respondWith(caches.open(CACHE_RULES).then((cache) => {
+      // Go to the cache first
+      return cache.match(event.request.url).then((cachedResponse) => {
+        // Return a cached response if we have one
+        if (cachedResponse) {
+          return cachedResponse;
         }
-      })()
-    );
+
+        // Otherwise, hit the network
+        return fetch(event.request).then((fetchedResponse) => {
+          // Add the network response to the cache for later visits
+          cache.put(event.request, fetchedResponse.clone());
+
+          // Return the network response
+          return fetchedResponse;
+        });
+      });
+    }));
   }
 });

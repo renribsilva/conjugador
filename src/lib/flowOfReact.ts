@@ -54,11 +54,16 @@ export const flowOfReact = () => {
       }, 0);     
       processEnter();
     }
+
+    updateProgress(100);
+    
     setState(prev => ({
       ...prev,
       isDisabled: false,
     }));
+    
     return
+
   };
 
   const processEnter = async () => {
@@ -148,7 +153,7 @@ export const flowOfReact = () => {
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
-    updateProgress(50);
+    updateProgress(25);
 
     if (normalizedInputValue !== "") {
       
@@ -270,7 +275,7 @@ export const flowOfReact = () => {
 
       }));
 
-      updateProgress(50);
+      updateProgress(100);
 
       setState(prev => ({
         ...prev,
@@ -297,7 +302,7 @@ export const flowOfReact = () => {
       varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
       varConector = apiResponse.originalVerb.variations.conector;
 
-      updateProgress(75);
+      updateProgress(50);
 
       if  (similar !== null && !state.goThrough) {
 
@@ -326,16 +331,18 @@ export const flowOfReact = () => {
 
         }));
 
-        updateProgress(75);
+        updateProgress(100);
 
         setState(prev => ({
           ...prev,
           isDisabled: false,
         }));
+
         return
+
       }
 
-      updateProgress(95);
+      updateProgress(75);
 
       const conjData = await conjVerbByAPI(ni(findedWord));
       // console.log("resposta de conVerbByAPI no flow:", conjData)
@@ -393,6 +400,8 @@ export const flowOfReact = () => {
       ...prev,
       isDisabled: false,
     }));
+
+    return
 
   }
 
@@ -457,7 +466,7 @@ export const flowOfReact = () => {
       },
     };
   
-    // console.log(data);
+    console.log(data);
   }, dependencies); 
 
   return {
