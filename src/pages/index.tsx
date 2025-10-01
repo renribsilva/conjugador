@@ -228,8 +228,6 @@ const Index = () => {
     return null;
   }
 
-  console.log("postReq:", state.isButtonDisabled, state.postReq)
-
   return (
     <div className={styles.index}>
       {/* header */}
