@@ -123,5 +123,6 @@ export type flowTypes = {
   
   canonical: string
 
-  isOnline: boolean | null
+  postReq: boolean | null
+  
 }

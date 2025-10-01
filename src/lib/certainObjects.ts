@@ -46,7 +46,7 @@ export const initialFlow = {
 
   canonical: "canonical1",
 
-  isOnline: null
+  postReq: null
 }
 
 export const pattern = {

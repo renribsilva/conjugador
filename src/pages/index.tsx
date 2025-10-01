@@ -9,6 +9,7 @@ import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import dynamic from "next/dynamic";
 import { flowOfReact } from "../lib/flowOfReact";
+import TryAgain from "../mdx/TryAgain.mdx";
 // import {Tooltip} from "@nextui-org/tooltip";
 
 const Table = dynamic(() => import("../components/table"));
@@ -33,11 +34,22 @@ const Index = () => {
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
-    await postReqVerbByAPI(inputReq, "new_verbs");
+    setTimeout(() => {
+      setCurrentProgress(0)
+      setState(prev => ({ 
+        ...prev, 
+        progress: 50, 
+        loading: true
+      }));
+    }, 0);
+    const response = await postReqVerbByAPI(inputReq, "new_verbs");
     setState({ 
       ...state,
       showButton: false,
       isButtonDisabled: true,
+      postReq: response,
+      progress: 100,
+      loading: false
     });
   };
 
@@ -216,6 +228,8 @@ const Index = () => {
     return null;
   }
 
+  console.log("postReq:", state.isButtonDisabled, state.postReq)
+
   return (
     <div className={styles.index}>
       {/* header */}
@@ -336,7 +350,7 @@ const Index = () => {
                   </div>
                 </>
               }
-              {state.conjugations === null && state.showButton && (
+              {state.conjugations === null && state.showButton && !state.loading && (
                 <>
                   {state.punct !== null && 
                     <div className={styles.lascou}>
@@ -628,9 +642,17 @@ const Index = () => {
                   )}
                 </>
               )}
-              {state.isButtonDisabled && (
+              {state.isButtonDisabled && state.postReq && (
                 <>
                   <Gracias />
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </>
+              )}
+              {state.isButtonDisabled && !state.postReq && (
+                <>
+                  <TryAgain/>
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>

@@ -75,6 +75,19 @@ self.addEventListener("fetch", (event) => {
     );
   }
 
+  if (url.includes("/api/postReqVerb")) {
+    event.respondWith(
+      (async () => {
+        try {          
+          const networkResponse = await fetch(event.request);
+          return networkResponse;
+        } catch {
+          throw new Error("Offline");
+        }
+      })()
+    );
+  }
+
   event.waitUntil(
     caches.open(CACHE_ALLVERBS).then(async (cache) => {
       try {

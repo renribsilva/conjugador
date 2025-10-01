@@ -16,7 +16,7 @@ export const flowOfReact = () => {
           import("./conjVerbByAPI")
         ]);
 
-      // dispara sem precisar esperar todos terminarem
+      // dispara sem precisar esperar resposta
       void isValidVerbByAPI("recomeçar");
       void conjVerbByAPI("realçar");
       void getSimilarVerbs("crescer");
@@ -47,7 +47,7 @@ export const flowOfReact = () => {
     }));
   };
 
-  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => { 
+  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();      
@@ -56,12 +56,11 @@ export const flowOfReact = () => {
       }, 0);     
       processEnter();
     }
-
-    updateProgress(100);
     
     setState(prev => ({
       ...prev,
       isDisabled: false,
+      progress: 0,
     }));
     
     return
@@ -69,6 +68,10 @@ export const flowOfReact = () => {
   };
 
   const processEnter = async () => {
+
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 50 }));
+    }, 0);
 
     const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
     const { getSimilarVerbs } = await import("./getSimilarWords");
@@ -126,8 +129,6 @@ export const flowOfReact = () => {
       varOriginalInput: null,
 
       canonical: "canonical1",
-
-      isOnline: true
 
     }));
 
@@ -464,7 +465,8 @@ export const flowOfReact = () => {
         goThrough: state.goThrough,
         enter: state.enter,
         progress: state.progress,
-        isDisabled: state.isDisabled
+        isDisabled: state.isDisabled,
+        postReq: state.postReq
       },
     };
   
