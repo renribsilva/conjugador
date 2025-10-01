@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, Suspense, lazy } from "react";
 import Home from "../mdx/Home.mdx"
 import styles from "../styles/index.module.css";
 import Footer from "../components/footer";
@@ -12,7 +12,7 @@ import { flowOfReact } from "../lib/flowOfReact";
 import TryAgain from "../mdx/TryAgain.mdx";
 // import {Tooltip} from "@nextui-org/tooltip";
 
-const Table = dynamic(() => import("../components/table"));
+const Table = lazy(() => import("../components/table"));
 const InstallPWA = dynamic(() => import("../components/pwa/installPWA"));
 const Gracias = dynamic(() => import("../mdx/Gracias.mdx"));
 const About = dynamic(() => import("../mdx/About.mdx"));
@@ -31,6 +31,7 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const [tableReady, setTableReady] = useState<boolean>(false)
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
@@ -320,7 +321,7 @@ const Index = () => {
                 </>
               )}
             </div>
-            <div>
+            <Suspense fallback={null}>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
                   <Home />
@@ -656,8 +657,8 @@ const Index = () => {
                   </div>
                 </>
               )}
-            </div>
-            <div>
+            </Suspense>
+            <Suspense fallback={null}>
               {state.conjugations !== null 
               && state.foundVerb
               && (nw(String(state.conjugations.canonical1.inf.p3).replace("*","")) 
@@ -681,7 +682,7 @@ const Index = () => {
                       <span>{formatTypes(state.types)}</span>
                     </p>
                   )}
-                  <Table 
+                  <Table
                     conj={state.conjugations}
                     canonical={state.canonical}
                   />
@@ -724,7 +725,7 @@ const Index = () => {
                   </div>
                 </>
               )}
-            </div>
+            </Suspense>
           </div>
         </div>
       </section>
