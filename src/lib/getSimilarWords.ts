@@ -51,7 +51,7 @@ function combinedSimilarity(a: string, b: string): number {
   return (levenshteinScore * 0.4) + (substringScore * 0.6) + halfWeight;
 }
 
-export default function getSimilarVerbs(verb: string): string[] {
+export function getSimilarVerbs(verb: string): string[] {
   const normalizedVerb = ni(verb);
   const similarVerbs: { value: string; score: number }[] = [];
 

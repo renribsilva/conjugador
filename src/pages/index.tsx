@@ -1,23 +1,25 @@
 import { useRef, useEffect, useState } from "react";
-import Table from "../components/table";
-import { flowOfReact } from "../lib/flowOfReact";
+import Home from "../mdx/Home.mdx"
 import styles from "../styles/index.module.css";
 import Footer from "../components/footer";
 import Socials from "../components/socials";
-import Home from "../mdx/Home.mdx";
-import Gracias from "../mdx/Gracias.mdx";
-import About from "../mdx/About.mdx";
-import Statistic from "../mdx/Statistic.mdx";
-import Warning from "../mdx/Warning.mdx";
-import Emphasis from "../mdx/Emphasis.mdx";
-import Reflexive from "../mdx/Reflexive.mdx";
-import SobreErros from "../mdx/SobreErros.mdx";
 import Theme from "../components/theme";
 import Button from "../components/button";  
 import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
-import InstallPWA from "../components/pwa/installPWA";
+import dynamic from "next/dynamic";
+import { flowOfReact } from "../lib/flowOfReact";
 // import {Tooltip} from "@nextui-org/tooltip";
+
+const Table = dynamic(() => import("../components/table"));
+const InstallPWA = dynamic(() => import("../components/pwa/installPWA"));
+const Gracias = dynamic(() => import("../mdx/Gracias.mdx"));
+const About = dynamic(() => import("../mdx/About.mdx"));
+const Statistic = dynamic(() => import("../mdx/Statistic.mdx"));
+const Warning = dynamic(() => import("../mdx/Warning.mdx"));
+const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"));
+const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"));
+const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"));
 
 const Index = () => {
 

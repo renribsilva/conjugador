@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from "react";
-import { conjVerbByAPI } from "./conjVerbByAPI";
+import { useState, useEffect } from "react";
 import { ni } from "./normalizeVerb";
-import { isValidVerbByAPI } from "./isValidVerbByAPI";
 import type { flowTypes } from "../types";
-import getSimilarVerbs from "./getSimilarWords";
-import { initialFlow } from "./certainObjects";
+import { initialFlow } from "./certainObjects";   
 
 export const flowOfReact = () => { 
+
+  const [state, setState] = useState<flowTypes>(initialFlow);
 
   useEffect (() => {
     const cacheVerbs = async () => {
@@ -17,9 +16,27 @@ export const flowOfReact = () => {
     }
     cacheReg();
     cacheVerbs();
+    console.log("json enviado ao cache do sw")
   }, [])
 
-  const [state, setState] = useState<flowTypes>(initialFlow);
+  useEffect(() => {
+    async function warmUpAPI() {
+      const [{ isValidVerbByAPI }, { getSimilarVerbs }, { conjVerbByAPI }] = 
+        await Promise.all([
+          import("./isValidVerbByAPI"),
+          import("./getSimilarWords"),
+          import("./conjVerbByAPI")
+        ]);
+
+      // dispara sem precisar esperar todos terminarem
+      void isValidVerbByAPI("recomeçar");
+      void conjVerbByAPI("realçar");
+      void getSimilarVerbs("crescer");
+
+      console.log("warm-up de API feito");
+    }
+    warmUpAPI();
+  }, []);
 
   const updateProgress = (n: number) => {
     setState(prev => ({
@@ -44,12 +61,11 @@ export const flowOfReact = () => {
     return
   };
 
-  useEffect(() => {
-    isValidVerbByAPI(ni("recomeçar"))
-    conjVerbByAPI("realçar")
-  }, [])
-
   const processEnter = async () => {
+
+    const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
+    const { getSimilarVerbs } = await import("./getSimilarWords");
+    const { conjVerbByAPI } = await import("./conjVerbByAPI");
 
     const normalizedInputValue = ni(state.inputValue);
     const suggestions = getSimilarVerbs(state.inputValue);
@@ -128,7 +144,7 @@ export const flowOfReact = () => {
     }
 
     const apiResponse = await isValidVerbByAPI(normalizedInputValue);
-    console.log("resposta de isValidVerbByAPI no flow:", apiResponse)
+    // console.log("resposta de isValidVerbByAPI no flow:", apiResponse)
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
@@ -254,7 +270,7 @@ export const flowOfReact = () => {
 
       }));
 
-      updateProgress(100);
+      updateProgress(50);
 
       setState(prev => ({
         ...prev,
@@ -310,7 +326,7 @@ export const flowOfReact = () => {
 
         }));
 
-        updateProgress(100);
+        updateProgress(75);
 
         setState(prev => ({
           ...prev,
@@ -319,10 +335,10 @@ export const flowOfReact = () => {
         return
       }
 
-      updateProgress(100);
+      updateProgress(95);
 
       const conjData = await conjVerbByAPI(ni(findedWord));
-      console.log("resposta de conVerbByAPI no flow:", conjData)
+      // console.log("resposta de conVerbByAPI no flow:", conjData)
       const propsOfWord = conjData.propOfVerb
       const conjugations = conjData.conjugations
       

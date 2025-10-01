@@ -12,21 +12,9 @@ const title = "Conjugador Gules"
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira"
 const url = "https://conjugador-gules.vercel.app"
 
-const mdxModules = [
-  () => import("../mdx/Home.mdx"),
-  () => import("../mdx/About.mdx"),
-  () => import("../mdx/Gracias.mdx"),
-  () => import("../mdx/Statistic.mdx"),
-  () => import("../mdx/Warning.mdx"),
-  () => import("../mdx/Emphasis.mdx"),
-  () => import("../mdx/Reflexive.mdx"),
-  () => import("../mdx/SobreErros.mdx"),
-];
-
 export default function App({ Component, pageProps }: AppProps) {
 
   const components = useMDXComponents({});
-  const [mdxReady, setMdxReady] = useState(false);
 
   useEffect(() => {
     if ("serviceWorker" in navigator) {
@@ -36,15 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
       sw.register();
     }
   }, []);
-
-  useEffect(() => {
-    Promise.all(mdxModules.map(fn => fn()))
-      .then(() => {
-        setMdxReady(true);
-      });
-  }, []);
-
-  if (!mdxReady) return null;
 
   return (
     <ThemeProvider

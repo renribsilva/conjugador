@@ -1,6 +1,11 @@
 import createMDX from "@next/mdx";
 import remarkFootnotes from "remark-footnotes";
 import withSerwistInit from "@serwist/next";
+import NextBundleAnalyzer from "@next/bundle-analyzer";
+
+const withAnalyzer = NextBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** Configuração base do Next.js */
 const nextConfig = {
@@ -26,5 +31,5 @@ const withSerwist = withSerwistInit({
 });
 
 /** Aplica MDX primeiro, depois Serwist */
-const baseConfig = withMDX(nextConfig);
-export default withSerwist(baseConfig);
+const composedConfig = withAnalyzer(withSerwist(withMDX(nextConfig)));
+export default composedConfig;
