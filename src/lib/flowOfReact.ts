@@ -7,18 +7,6 @@ export const flowOfReact = () => {
 
   const [state, setState] = useState<flowTypes>(initialFlow);
 
-  useEffect (() => {
-    const cacheVerbs = async () => {
-      await fetch("/api/allVerbs")
-    }
-    const cacheReg = async () => {
-      await fetch("/api/rules")
-    }
-    cacheReg();
-    cacheVerbs();
-    console.log("json enviado ao cache do sw")
-  }, [])
-
   useEffect(() => {
     async function warmUpAPI() {
       const [{ isValidVerbByAPI }, { getSimilarVerbs }, { conjVerbByAPI }] = 
@@ -37,6 +25,20 @@ export const flowOfReact = () => {
     }
     warmUpAPI();
   }, []);
+
+  // useEffect (() => {
+  //   if ("serviceWorker" in navigator) {
+  //     navigator.serviceWorker.addEventListener("message", (event) => {
+  //       const data = event.data;
+  //       if (data?.type === "ALLVERBS_UPDATED") {
+  //         console.log(`allVerbJson atualizado: ${data.date}`);
+  //       }
+  //       if (data?.type === "RULES_UPDATED") {
+  //         console.log(`rulesJson atualizado: ${data.date}`);
+  //       }
+  //     });
+  //   }
+  // },[])
 
   const updateProgress = (n: number) => {
     setState(prev => ({

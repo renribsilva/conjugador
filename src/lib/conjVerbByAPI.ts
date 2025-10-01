@@ -4,6 +4,7 @@ import { pattern } from "./certainObjects";
 import { conjugateVerb } from "./conjugateVerb";
 
 export const conjVerbByAPI = async (verb: string) => {
+  console.log("2")
   try {
     const response = await fetch('/api/conjVerb', {
       method: 'POST',

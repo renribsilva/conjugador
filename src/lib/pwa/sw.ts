@@ -75,45 +75,46 @@ self.addEventListener("fetch", (event) => {
     );
   }
 
-  if (url.includes("/api/allVerbs")) {
-    event.respondWith(caches.open(CACHE_ALLVERBS).then((cache) => {
-      // Go to the cache first
-      return cache.match(event.request.url).then((cachedResponse) => {
-        // Return a cached response if we have one
-        if (cachedResponse) {
-          return cachedResponse;
+  event.waitUntil(
+    caches.open(CACHE_ALLVERBS).then(async (cache) => {
+      try {
+        const response = await fetch("/allVerbs.json", { cache: "no-store" })
+        const allClients = await self.clients.matchAll();
+        const formattedDate = getFormattedDate();
+        for (const client of allClients) {
+          client.postMessage({ type: "ALLVERBS_UPDATED", date: formattedDate });
         }
+        return await cache.put(event.request, response.clone());
+      } catch (err) {
+        console.warn("Não gravou allVerbsJson no cache");
+      }
+    }
+  ))
 
-        // Otherwise, hit the network
-        return fetch(event.request).then((fetchedResponse) => {
-          // Add the network response to the cache for later visits
-          cache.put(event.request, fetchedResponse.clone());
-
-          // Return the network response
-          return fetchedResponse;
-        });
-      });
-    }));
-  }
-
-  if (url.includes("/api/rules")) {
-    event.respondWith(caches.open(CACHE_RULES).then((cache) => {
-      // Go to the cache first
-      return cache.match(event.request.url).then((cachedResponse) => {
-        // Return a cached response if we have one
-        if (cachedResponse) {
-          return cachedResponse;
+  event.waitUntil(
+    caches.open(CACHE_RULES).then(async (cache) => {
+      try {
+        const response = await fetch("/rulesByTerm.json", { cache: "no-store" });
+        const allClients = await self.clients.matchAll();
+        const formattedDate = getFormattedDate();
+        for (const client of allClients) {
+          client.postMessage({ type: "RULES_UPDATED", date: formattedDate });
         }
+        return await cache.put("/rulesByTerm.json", response.clone());
+      } catch {
+        console.warn("Não gravou rulesJson no cache");
+      }
+    })
+  );
 
-        // Otherwise, hit the network
-        return fetch(event.request).then((fetchedResponse) => {
-          // Add the network response to the cache for later visits
-          cache.put(event.request, fetchedResponse.clone());
-
-          // Return the network response
-          return fetchedResponse;
-        });
-      });
-    }));
-  }
 });
+
+const getFormattedDate = () => {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  return `${day}-${month}-${year} ${hours}:${minutes}`;
+};
