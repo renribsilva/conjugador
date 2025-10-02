@@ -167,21 +167,20 @@ const Index = () => {
 
   useEffect(() => {
     let raf: number;
-
-    const animate = () => {
+    const animate = (time: number) => {
       setCurrentProgress(prev => {
         const target = state.progress;
-        if (prev >= target - 1) {
+        const increment = ((target - prev) * 0.2)/0.1;
+        const next = prev + increment;
+        if (next >= target - 1000) {
           cancelAnimationFrame(raf);
           return target;
         }
-        // incrementa proporcionalmente para chegar no target
-        const increment = (target - prev) * 0.3;
-        return prev + increment;
+        return next;
       });
       raf = requestAnimationFrame(animate);
     };
-    animate();
+    raf = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(raf);
   }, [state.progress]);
 
@@ -193,7 +192,8 @@ const Index = () => {
     return null;
   }
 
-  console.log(state.isButtonDisabled, state.postReq)
+  console.log("currente:", currentProgress)
+  console.log("progress:", state.progress)
 
   return (
     <div className={styles.index}>
@@ -276,7 +276,7 @@ const Index = () => {
       {/* main */}
       <section className={styles.main} role="main">
         <div className={styles.panel}>
-          {state.progress <= 100 &&
+          {currentProgress !== 0 &&
             <ProgressBar progress={currentProgress} />
           }
           <div className={styles.subpanel}>

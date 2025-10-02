@@ -79,10 +79,6 @@ export const flowOfReact = () => {
 
   const processEnter = async () => {
 
-    setTimeout(() => {
-      setState(prev => ({ ...prev, progress: 50 }));
-    }, 0);
-
     const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
     const { getSimilarVerbs } = await import("../ssr/getSimilarWords");
     const { conjVerbByAPI } = await import("./conjVerbByAPI");
@@ -142,6 +138,10 @@ export const flowOfReact = () => {
 
     }));
 
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 1 }));
+    }, 0);
+
     if (normalizedInputValue.trim() === "") {
 
       setState(prev => ({
@@ -166,7 +166,9 @@ export const flowOfReact = () => {
     const originalVerb = apiResponse.originalVerb;
     const variationVerb = apiResponse.variationVerb;
 
-    updateProgress(25);
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 20 }));
+    }, 0);
 
     if (normalizedInputValue !== "") {
       
@@ -197,6 +199,10 @@ export const flowOfReact = () => {
       return
 
     }
+
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 25 }));
+    }, 0);
 
     let puncts = null
     puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
@@ -232,6 +238,10 @@ export const flowOfReact = () => {
 
       return
     }
+
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 30 }));
+    }, 0);
 
     //isValidVerb returns
     let result = '';
@@ -298,6 +308,10 @@ export const flowOfReact = () => {
       return
 
     }
+
+    setTimeout(() => {
+      setState(prev => ({ ...prev, progress: 40 }));
+    }, 0);
 
     if (originalVerb !== null && variationVerb === null) {
 
