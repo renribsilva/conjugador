@@ -1,4 +1,4 @@
-import { VerbProps } from "../types";
+import { VerbProps } from "../../types";
 import { findTermRule } from "./findTermRules";
 import { getModelsData } from "./getModelsData";
 

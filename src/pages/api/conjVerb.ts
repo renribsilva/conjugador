@@ -1,10 +1,10 @@
 'use server'
 
 import { NextApiResponse, NextApiRequest } from 'next';
-import { loadAllVerbObject, loadIrregObject } from '../../lib/jsonLoad';
-import { conjugateVerb } from '../../lib/conjugateVerb';
-import { ni } from '../../lib/normalizeVerb';
-import { pattern } from '../../lib/certainObjects';
+import { loadAllVerbObject, loadIrregObject } from '../../lib/ssr/jsonLoad';
+import { conjugateVerb } from '../../lib/ssr/conjugateVerb';
+import { ni } from '../../lib/ssr/normalizeVerb';
+import { pattern } from '../../lib/ssr/certainObjects';
 
 export default async function handler(
   request: NextApiRequest,

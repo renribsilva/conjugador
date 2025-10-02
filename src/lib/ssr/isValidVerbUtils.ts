@@ -1,3 +1,5 @@
+'use server'
+
 import { ni } from "./normalizeVerb";
 
 const INVALID_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~1234567890";

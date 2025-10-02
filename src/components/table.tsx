@@ -1,7 +1,7 @@
 // components/ConjugationSection.tsx
 import React, { useEffect, useState } from "react";
 import styles from "../styles/components.module.css";
-import { nw } from "../lib/normalizeVerb";
+import { nw } from "../lib/ssr/normalizeVerb";
 import { Conjugation } from "../types";
 
 const pronouns = {

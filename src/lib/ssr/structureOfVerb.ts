@@ -1,3 +1,5 @@
+'use server'
+
 export const structureOfVerb = (verb: string): string => {
   if (verb.endsWith("ar")) {
     return "1st";

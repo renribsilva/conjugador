@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { nw } from '../../src/lib/normalizeVerb';
+import { nw } from '../../src/lib/ssr/normalizeVerb';
 
 export default async function readTxtLines(filePath: string): Promise<string[]> {
 

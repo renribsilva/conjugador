@@ -1,6 +1,6 @@
 'use client'
 
-import { processVerb } from "./isValidVerbProcess";
+import { processVerb } from "../ssr/isValidVerbProcess";
 
 export async function isValidVerbByAPI(verb: string) {
   try {

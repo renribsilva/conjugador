@@ -5,10 +5,10 @@ import Footer from "../components/footer";
 import Socials from "../components/socials";
 import Theme from "../components/theme";
 import Button from "../components/button";  
-import { nw } from "../lib/normalizeVerb";
-import postReqVerbByAPI from "../lib/postReqVerbByAPI";
+import { nw } from "../lib/ssr/normalizeVerb";
+import postReqVerbByAPI from "../lib/csr/postReqVerbByAPI";
 import dynamic from "next/dynamic";
-import { flowOfReact } from "../lib/flowOfReact";
+import { flowOfReact } from "../lib/csr/flowOfReact";
 
 const Table = lazy(() => import("../components/table"));
 const InstallPWA = dynamic(() => import("../components/pwa/installPWA"));

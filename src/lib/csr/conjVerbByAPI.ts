@@ -1,7 +1,7 @@
 'use client'
 
-import { pattern } from "./certainObjects";
-import { conjugateVerb } from "./conjugateVerb";
+import { pattern } from "../ssr/certainObjects";
+import { conjugateVerb } from "../ssr/conjugateVerb";
 
 export const conjVerbByAPI = async (verb: string) => {
   try {

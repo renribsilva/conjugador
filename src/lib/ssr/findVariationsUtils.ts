@@ -1,3 +1,5 @@
+'use server'
+
 import { ni } from './normalizeVerb';
 
 export default function tryVariations (

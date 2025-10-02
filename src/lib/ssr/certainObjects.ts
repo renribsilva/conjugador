@@ -1,3 +1,5 @@
+'use server'
+
 export const initialFlow = {
   conjugations: null,
   inputValue: "",

@@ -1,6 +1,8 @@
-import allVerbsData from '../json/allVerbs.json'
-import modelsData from '../json/models.json'
-import groupedModelsData from '../json/groupedModels.json'
+'use server'
+
+import allVerbsData from '../../json/allVerbs.json'
+import modelsData from '../../json/models.json'
+import groupedModelsData from '../../json/groupedModels.json'
 
 export function getModelsData (verb: string) {
 

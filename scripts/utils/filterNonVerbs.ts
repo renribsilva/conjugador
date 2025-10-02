@@ -1,6 +1,6 @@
 import path from 'path';
 import readTxtLines from './readTxtLines';
-import { nw } from '../../src/lib/normalizeVerb';
+import { nw } from '../../src/lib/ssr/normalizeVerb';
 
 const listsDir = path.join(process.cwd(), 'lists');
 

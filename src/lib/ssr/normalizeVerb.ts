@@ -1,3 +1,5 @@
+'use server'
+
 export function ni(input: string): string {
   
   if (input == null) {

@@ -1,8 +1,8 @@
-import regular from '../json/rulesForReg.json';
+import regular from '../../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import { getTermData } from './getTermData';
-import { VerbProps } from '../types';
+import { VerbProps } from '../../types';
 // import regData1 from "../json/rulesByTerm.json"
 // import allVerbsData1 from "../json/allVerbs.json"
 

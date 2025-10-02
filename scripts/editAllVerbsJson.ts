@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { ni, nw } from '../src/lib/normalizeVerb';
+import { ni, nw } from '../src/lib/ssr/normalizeVerb';
 import { VerbEntry } from '../src/types';
 import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
 import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
-import { conjugateVerb } from '../src/lib/conjugateVerb';
+import { conjugateVerb } from '../src/lib/ssr/conjugateVerb';
 import irregJson from "../public/json/rulesByTerm.json"
 import allVerbsJson from "../public/json/allVerbs.json"
 import modelsJson from "../public/json/models.json"

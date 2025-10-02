@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path'; 
-import { ni } from '../src/lib/normalizeVerb';
-import { conjugateVerb } from '../src/lib/conjugateVerb';
+import { ni } from '../src/lib/ssr/normalizeVerb';
+import { conjugateVerb } from '../src/lib/ssr/conjugateVerb';
 import allVerbsJson from "../public/json/allVerbs.json"
 import regJson from "../public/json/rulesByTerm.json"
 

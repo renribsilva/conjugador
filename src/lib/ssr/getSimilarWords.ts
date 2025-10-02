@@ -1,5 +1,7 @@
-import jsonData from "../json/allVerbs.json";
-import { AllVerbsEntry } from "../types";
+'use server'
+
+import jsonData from "../../json/allVerbs.json";
+import { AllVerbsEntry } from "../../types";
 import { ni } from "./normalizeVerb";
 
 const data: AllVerbsEntry = jsonData;

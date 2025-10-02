@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { nw } from '../src/lib/normalizeVerb';
+import { nw } from '../src/lib/ssr/normalizeVerb';
 
 function editAfixosJson() {
 

@@ -1,8 +1,8 @@
 'use server'
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { processVerb } from '../../lib/isValidVerbProcess';
-import { loadAllVerbObject } from '../../lib/jsonLoad';
+import { processVerb } from '../../lib/ssr/isValidVerbProcess';
+import { loadAllVerbObject } from '../../lib/ssr/jsonLoad';
 
 export default async function handler(
   request: NextApiRequest, 

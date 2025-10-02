@@ -1,3 +1,5 @@
+'use server'
+
 import innerSearchOfRules from './innerSearchOfRules';
 import { ni, nw } from './normalizeVerb';
 import findVariations from './findVariations';

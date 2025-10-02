@@ -1,3 +1,5 @@
+'use server'
+
 import { ni } from './normalizeVerb';
 import { 
   extractPunctuation, 

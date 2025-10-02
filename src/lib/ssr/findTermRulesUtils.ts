@@ -1,3 +1,5 @@
+'use server'
+
 import { ni, nw } from "./normalizeVerb";
 
 export function getVerbKeys(verb: string, terminations: string[], regJson: object): any {
