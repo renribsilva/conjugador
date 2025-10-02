@@ -43,7 +43,7 @@ const specificMainKeyObject = null
 async function editRulesByTerm() {
 
   async function X (verb: string) {
-    const props = (await conjugateVerb(ni(verb), regJson, allVerbsJson)).propOfVerb;
+    const props = (await conjugateVerb(ni(verb), allVerbsJson)).propOfVerb;
     return props
   }
   
