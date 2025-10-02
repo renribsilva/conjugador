@@ -175,9 +175,19 @@ const Index = () => {
               return prev;
           }
           const target = state.progress;
+          const shouldReach100 = target >= 100 && state.loading === false;
           if (prev >= target - 1) {
+            if (shouldReach100) {
+              // Atinge 100
+              setTimeout(() => {
+                setState(prev => ({ ...prev, progress: null }));
+                setCurrentProgress(0);
+              }, 500);
+              return 100;
+            } else {
               cancelAnimationFrame(raf);
-              return target;
+              return prev;
+            }
           }
           const increment = (target - prev) * 0.3;
           // console.log(prev)
