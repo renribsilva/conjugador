@@ -9,11 +9,10 @@ import { nw } from "../lib/normalizeVerb";
 import postReqVerbByAPI from "../lib/postReqVerbByAPI";
 import dynamic from "next/dynamic";
 import { flowOfReact } from "../lib/flowOfReact";
-import TryAgain from "../mdx/TryAgain.mdx";
-// import {Tooltip} from "@nextui-org/tooltip";
 
 const Table = lazy(() => import("../components/table"));
 const InstallPWA = dynamic(() => import("../components/pwa/installPWA"));
+const NoteRefList = dynamic(() => import("../components/references"));
 const Gracias = dynamic(() => import("../mdx/Gracias.mdx"));
 const About = dynamic(() => import("../mdx/About.mdx"));
 const Statistic = dynamic(() => import("../mdx/Statistic.mdx"));
@@ -21,6 +20,7 @@ const Warning = dynamic(() => import("../mdx/Warning.mdx"));
 const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"));
 const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"));
 const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"));
+const Sorry = dynamic(() => import("../mdx/Sorry.mdx"));
 
 const Index = () => {
 
@@ -31,7 +31,6 @@ const Index = () => {
   const [eita, setEita] = useState<string>('');
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const [tableReady, setTableReady] = useState<boolean>(false)
   const { state, setState, handleKeyDown } = flowOfReact();
 
   const handleSolicitar = async (inputReq) => {
@@ -124,23 +123,6 @@ const Index = () => {
     setActiveTab('statistic');
   };
 
-  const NoteRefList = ({ noteRef }) => {
-    if (!noteRef || Object.keys(noteRef).length === 0) {
-      return null; 
-    }  
-    return (
-      <ol>
-        {Object.keys(noteRef)
-          .sort((a, b) => parseInt(a) - parseInt(b)) 
-          .map((key) => (
-            Array.isArray(noteRef[key]) && noteRef[key].map((text, index) => (
-              <li key={`${key}-${index}`}>{text}</li>
-            ))
-          ))}
-      </ol>
-    );
-  }
-
   const ProgressBar = ({ progress }: { progress: number }) => {
     return (
       <div className={styles.progress_bar}>
@@ -232,6 +214,7 @@ const Index = () => {
   return (
     <div className={styles.index}>
       {/* header */}
+      <Sorry/>
       <section className={styles.navbar_container}>
         <div className={styles.navbar}>
           <div className={styles.input_container}>
@@ -321,7 +304,7 @@ const Index = () => {
                 </>
               )}
             </div>
-            <Suspense fallback={null}>
+            <div>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
                   <Home />
@@ -641,23 +624,23 @@ const Index = () => {
                   )}
                 </>
               )}
+              {state.isButtonDisabled && !state.postReq &&(
+                <div>
+                  <Sorry/>
+                  <div className={styles.gotohome}>
+                    <Button onClick={handleHome}>voltar para o início</Button>
+                  </div>
+                </div>
+              )}
               {state.isButtonDisabled && state.postReq && (
-                <>
+                <div>
                   <Gracias />
                   <div className={styles.gotohome}>
                     <Button onClick={handleHome}>voltar para o início</Button>
                   </div>
-                </>
+                </div>
               )}
-              {state.isButtonDisabled && !state.postReq && (
-                <>
-                  <TryAgain/>
-                  <div className={styles.gotohome}>
-                    <Button onClick={handleHome}>voltar para o início</Button>
-                  </div>
-                </>
-              )}
-            </Suspense>
+            </div>
             <Suspense fallback={null}>
               {state.conjugations !== null 
               && state.foundVerb
