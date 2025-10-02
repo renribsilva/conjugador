@@ -357,7 +357,7 @@ export const flowOfReact = () => {
 
       }
 
-      updateProgress(75)
+      updateProgress(100)
 
       const conjData = await conjVerbByAPI(ni(findedWord));
       // console.log("resposta de conVerbByAPI no flow:", conjData)
