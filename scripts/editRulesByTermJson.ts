@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path'; 
 import { ni } from '../src/lib/normalizeVerb';
 import { conjugateVerb } from '../src/lib/conjugateVerb';
-import allVerbsJson from "../src/json/allVerbs.json"
-import regJson from "../src/json/rulesByTerm.json"
+import allVerbsJson from "../public/json/allVerbs.json"
+import regJson from "../public/json/rulesByTerm.json"
 
 interface VerbData {
   verb: string[];

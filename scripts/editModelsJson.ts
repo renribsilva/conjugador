@@ -21,8 +21,8 @@ interface AllVerbsData {
 }
 
 async function editModelJson() {
-  const modelsPath = path.join(process.cwd(), 'src/json/models.json');
-  const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
+  const modelsPath = path.join(process.cwd(), 'public/json/models.json');
+  const allVerbsPath = path.join(process.cwd(), 'public/json/allVerbs.json');
 
   try {
     const [modelsDataStr, allVerbsDataStr] = await Promise.all([

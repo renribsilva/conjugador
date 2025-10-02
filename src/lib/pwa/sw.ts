@@ -82,7 +82,6 @@ const JSON_URLS = [
   { url: "/json/rulesByTerm.json", cacheName: CACHE_RULES, type: "RULES_UPDATED" },
 ];
 
-// Instalação do SW e pré-cache
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
