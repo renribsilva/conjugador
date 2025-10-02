@@ -5,7 +5,6 @@ import { NetworkFirst, Serwist, Strategy } from "serwist";
 const CACHE_CONJ = "conj-cache";
 const CACHE_ALLVERBS = "verbs-cache";
 const CACHE_RULES = "rules-cache";
-const CACHE_AFIXOS = "afixos-cache";
 
 class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
@@ -81,7 +80,6 @@ self.addEventListener("fetch", (event) => {
 const JSON_URLS = [
   { url: "/json/allVerbs.json", cacheName: CACHE_ALLVERBS, type: "ALLVERBS_UPDATED" },
   { url: "/json/rulesByTerm.json", cacheName: CACHE_RULES, type: "RULES_UPDATED" },
-  { url: "/json/afixos.json", cacheName: CACHE_AFIXOS, type: "AFIXOS_UPDATED" },
 ];
 
 self.addEventListener("install", (event) => {
@@ -90,6 +88,11 @@ self.addEventListener("install", (event) => {
       try {
         for (const json of JSON_URLS) {
           const cache = await caches.open(json.cacheName);
+          // limpa tudo do cache antes de colocar o novo item
+          const keys = await cache.keys();
+          for (const req of keys) {
+            await cache.delete(req);
+          }
           const response = await fetch(json.url, { cache: "no-store" });
           await cache.put(json.url, response.clone());
         }
@@ -97,6 +100,29 @@ self.addEventListener("install", (event) => {
       } catch (err) {
         console.warn("Erro ao pré-cachear JSONs:", err);
       }
+    })()
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      const cacheNames = await caches.keys();
+      await Promise.all(
+        cacheNames.map((cacheName) => {
+          const isValid =
+            cacheName === "pages" ||
+            cacheName === "serwist-precache-v2-http://localhost:3000/" ||
+            cacheName === "conj-cache" ||
+            cacheName === "verbs-cache" ||
+            cacheName === "rules-cache"
+          if (!isValid) {
+            console.log("🗑️ Deletando cache inútil:", cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+      await self.clients.claim();
     })()
   );
 });

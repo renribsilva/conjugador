@@ -26,32 +26,30 @@ export const flowOfReact = () => {
     warmUpAPI();
   }, []);
 
-  // useEffect (() => {
-  //   async function cachear () {
-  //     const cacheNames = ["verbs-cache", "rules-cache"];
-  //     for (const name of cacheNames) {
-  //       const cache = await caches.open(name);
-  //       const requests = await cache.keys();
-  //       console.log(`\n--- Conteúdo do cache ${name} ---`);
-  //       if (!requests.length) {
-  //         console.log("Cache vazio");
-  //         continue;
-  //       }
-  //       for (const req of requests) {
-  //         console.log("URL:", req.url);
-  //         const response = await cache.match(req);
-  //         if (response) {
-  //           const contentType = response.headers.get("content-type") || "";
-  //           if (contentType.includes("application/json")) {
-  //             const data = await response.json();
-  //             console.log("Conteúdo JSON:", data);
-  //           }
-  //         }
-  //       }
-  //     }      
-  //   }
-  //   cachear();
-  // },[])
+  useEffect (() => {
+    async function cachear () {
+      const cacheNames = await caches.keys();
+      for (const name of cacheNames) {
+        const cache = await caches.open(name);
+        const requests = await cache.keys();
+        if (!requests.length) {
+          console.log(`Cache de ${name} vazio`);
+          continue;
+        }
+        for (const req of requests) {
+          const response = await cache.match(req);
+          if (response) {
+            const contentType = response.headers.get("content-type") || "";
+            if (contentType.includes("application/json")) {
+              const data = await response.json();
+              console.log(`Conteúdo de ${name}`, data);
+            }
+          }
+        }
+      }      
+    }
+    cachear();
+  },[])
 
   const updateProgress = (n: number) => {
     setState(prev => ({
