@@ -183,7 +183,7 @@ const Index = () => {
           // console.log(prev)
           // console.log(increment)
           // console.log(target)
-          if (target >= 100) {
+          if (target >= 100 && !state.isDisabled) {
             setTimeout(() => {
               setState(prev => ({ ...prev, progress: null }));
               setCurrentProgress(0);
