@@ -50,13 +50,15 @@ export const flowOfReact = () => {
   //   cachear();
   // },[])
 
-  const updateProgress = (n: number) => {
+  const updateProgress = (n: number | null) => {
     setTimeout(() => {
       setState(prev => ({ ...prev, progress: n }));
     }, 0);
   };
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+
+    updateProgress(null)
 
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();      
@@ -65,11 +67,12 @@ export const flowOfReact = () => {
       }, 0);     
       processEnter();
     }
+
+    // updateProgress(null)
     
     setState(prev => ({
       ...prev,
       isDisabled: false,
-      progress: 0,
     }));
     
     return
@@ -116,7 +119,7 @@ export const flowOfReact = () => {
 
       goThrough: false,
       enter: false,
-      progress: 0,
+      progress: null,
       isDisabled: true,
 
       originalVerb: null,

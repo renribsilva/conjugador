@@ -1,6 +1,6 @@
 import styles from "../../styles/index.module.css"
 
-export default function ProgressBar ({ progress }: { progress: number }) {
+export default function ProgressBar ({ progress }: { progress: number | null }) {
   return (
     <div className={styles.progress_bar}>
       <div

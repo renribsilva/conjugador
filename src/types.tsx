@@ -102,7 +102,7 @@ export type flowTypes = {
   showReviewButton: boolean;
   goThrough: boolean;
   enter: boolean;
-  progress: number;
+  progress: number | null;
   isDisabled: boolean;
 
   originalVerb: object | null;
