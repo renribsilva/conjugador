@@ -160,9 +160,11 @@ const Index = () => {
         code: "Enter",        
       });
       inputRef.current.dispatchEvent(enterEvent);
-    } 
-    randomAxi();
-    randomEita();
+    }
+    setTimeout(() => {
+      randomAxi();
+      randomEita();
+    }, 500)
   }, [state.enter]);
 
   useEffect(() => {
@@ -720,8 +722,12 @@ const Index = () => {
       </section>
       {/* foot */}
       <section className={styles.foot_info}>
-        {mounted && <Socials />}
-        <Footer />
+        <div className={styles.foot_info_div}>
+          {mounted && <Socials />}
+        </div>
+        <div className={styles.foot_info_div}>
+          <Footer />
+        </div>
       </section>
     </div>
   );

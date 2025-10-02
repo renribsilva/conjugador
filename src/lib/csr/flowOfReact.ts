@@ -21,7 +21,9 @@ export const flowOfReact = () => {
       void conjVerbByAPI("realçar");
       console.log("Warm-up de API feito");
     }
-    warmUpAPI();
+    setTimeout(() => {
+      warmUpAPI();
+    }, 1000)
   }, []);
 
   // useEffect (() => {
@@ -64,8 +66,10 @@ export const flowOfReact = () => {
       event.preventDefault();      
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
-      }, 0);     
-      processEnter();
+      }, 0);
+      setTimeout(() => {
+        processEnter();
+      }, 2000)     
     }
 
     // updateProgress(null)

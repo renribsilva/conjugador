@@ -286,14 +286,13 @@
 /******************************************************/
 
 .foot_info {
+  /* background-color: #4a8df8; */
   padding-top: 40px;
-  display: flex;
-  flex-direction: column;
 }
 
-.foot_info div {
-  flex: 1;
-  width: 25px;
+.foot_info_div {
+  /* background-color: #4a8df8; */
+  height: 25px;
 }
 
 .progressContainer {
