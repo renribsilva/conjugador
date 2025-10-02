@@ -36,18 +36,6 @@ const serwist = new Serwist({
       handler: new NetworkOrFallback(),
     },
     {
-      matcher: ({ url }) => url.pathname.startsWith("/api/allVerbs"),
-      handler: new NetworkFirst({
-        cacheName: CACHE_ALLVERBS,
-      }),
-    },
-    {
-      matcher: ({ url }) => url.pathname.startsWith("/api/rules"),
-      handler: new NetworkFirst({
-        cacheName: CACHE_RULES,
-      }),
-    },
-    {
       matcher: ({ url }) => url.pathname.startsWith("/api/conjVerb"),
       handler: new NetworkFirst({
         cacheName: CACHE_CONJ,
@@ -87,47 +75,27 @@ self.addEventListener("fetch", (event) => {
       })()
     );
   }
-
-  event.waitUntil(
-    caches.open(CACHE_ALLVERBS).then(async (cache) => {
-      try {
-        const response = await fetch("/allVerbs.json", { cache: "no-store" })
-        const allClients = await self.clients.matchAll();
-        const formattedDate = getFormattedDate();
-        for (const client of allClients) {
-          client.postMessage({ type: "ALLVERBS_UPDATED", date: formattedDate });
-        }
-        return await cache.put(event.request, response.clone());
-      } catch (err) {
-        console.warn("Não gravou allVerbsJson no cache");
-      }
-    }
-  ))
-
-  event.waitUntil(
-    caches.open(CACHE_RULES).then(async (cache) => {
-      try {
-        const response = await fetch("/rulesByTerm.json", { cache: "no-store" });
-        const allClients = await self.clients.matchAll();
-        const formattedDate = getFormattedDate();
-        for (const client of allClients) {
-          client.postMessage({ type: "RULES_UPDATED", date: formattedDate });
-        }
-        return await cache.put("/rulesByTerm.json", response.clone());
-      } catch {
-        console.warn("Não gravou rulesJson no cache");
-      }
-    })
-  );
-
 });
 
-const getFormattedDate = () => {
-  const now = new Date();
-  const day = String(now.getDate()).padStart(2, "0");
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const year = now.getFullYear();
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  return `${day}-${month}-${year} ${hours}:${minutes}`;
-};
+const JSON_URLS = [
+  { url: "/json/allVerbs.json", cacheName: CACHE_ALLVERBS, type: "ALLVERBS_UPDATED" },
+  { url: "/json/rulesByTerm.json", cacheName: CACHE_RULES, type: "RULES_UPDATED" },
+];
+
+// Instalação do SW e pré-cache
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    (async () => {
+      try {
+        for (const json of JSON_URLS) {
+          const cache = await caches.open(json.cacheName);
+          const response = await fetch(json.url, { cache: "no-store" });
+          await cache.put(json.url, response.clone());
+        }
+        self.skipWaiting(); // ativa SW imediatamente
+      } catch (err) {
+        console.warn("Erro ao pré-cachear JSONs:", err);
+      }
+    })()
+  );
+});

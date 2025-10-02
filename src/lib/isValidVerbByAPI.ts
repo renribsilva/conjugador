@@ -9,7 +9,7 @@ export async function isValidVerbByAPI(verb: string) {
   } catch {
     // offline: tenta validar localmente
     const cache = await caches.open("verbs-cache");
-    const cachedAllVerbs = await cache.match(new Request(location.origin + "/api/allVerbs"));
+    const cachedAllVerbs = await cache.match("/json/allVerbs.json");
     if (cachedAllVerbs) {
       const allVerbsJson = await cachedAllVerbs.json();
       return processVerb(verb, allVerbsJson);

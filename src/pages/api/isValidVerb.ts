@@ -15,8 +15,9 @@ export default async function handler(
   }
   try {
     const allVerbJson = await loadAllVerbObject();
-    if (allVerbJson === null ) return response.status(200).json({ originalVerb: null, variationVerb: null });
+    if (!allVerbJson) return response.status(200).json({ originalVerb: null, variationVerb: null });
     const result = await processVerb(verb as string, allVerbJson);
+    // console.log(result)
     return response.status(200).json(result);
   } catch (error) {
     return response.status(200).json({ originalVerb: null, variationVerb: null });

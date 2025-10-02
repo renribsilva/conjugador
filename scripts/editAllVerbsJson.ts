@@ -6,22 +6,29 @@ import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
 import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
 import { conjugateVerb } from '../src/lib/conjugateVerb';
-import allVerbs from "../src/json/allVerbs.json"
-import regJson from "../src/json/rulesByTerm.json"
+import irregJson from "../public/json/rulesByTerm.json"
+import allVerbsJson from "../public/json/allVerbs.json"
+import modelsJson from "../public/json/models.json"
+import groupedModelsJson from "../public/json/groupedModels.json"
 
-const srcDir = path.join(process.cwd(), 'src');
+
+const publicDir = path.join(process.cwd(), 'public');
 const libreOfficeSourceDir = path.join(process.cwd(), 'libreOfficeSource');
 const listsDir = path.join(process.cwd(), 'lists');
 const ptBRPath = path.join(libreOfficeSourceDir, 'pt_BR.dic');
-const allVerbsPath = path.join(srcDir, 'json', 'allVerbs.json');
+const allVerbsPath = path.join(publicDir, 'json', 'allVerbs.json');
 const nonVerbsPath = path.join(listsDir, 'nonVerb.txt');
 const newVerbsPath = path.join(listsDir, 'newVerbs.txt');
+
+
 
 // USE CUSTOMVERBS PARA EXECUTAR O SCRIPT DE FORMA SELETIVA
 const useCustomVerbs = false;
 const batchObject=["amar"]
 
 async function ediAllVerbsJson() {
+
+  if (!irregJson || !allVerbsJson || !modelsJson || !groupedModelsJson) return
 
   try {
 
@@ -166,7 +173,11 @@ async function ediAllVerbsJson() {
               const input = normalized;
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
-                verbPropsArray = (await conjugateVerb(input, regJson, allVerbs)).propOfVerb
+                verbPropsArray = (await conjugateVerb(
+                  input, 
+                  irregJson, 
+                  allVerbsJson
+                )).propOfVerb
                 cache.set(input, verbPropsArray);
               }
         

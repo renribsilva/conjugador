@@ -1,4 +1,4 @@
-import reg from '../json/rulesForReg.json';
+import regular from '../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import { getTermData } from './getTermData';
@@ -72,7 +72,7 @@ export async function conjugateVerb (verb: string, regJson: object, allVerbsJson
 
     }
 
-    const verbRules = reg[M]?.[str];
+    const verbRules = regular[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
@@ -126,7 +126,7 @@ export async function conjugateVerb (verb: string, regJson: object, allVerbsJson
 
     }
 
-    const verbRules = reg[M]?.[str];
+    const verbRules = regular[M]?.[str];
 
     if (!verbRules) return NOT_FOUND;  
 
