@@ -175,21 +175,18 @@ const Index = () => {
               return prev;
           }
           const target = state.progress;
-          const shouldReach100 = target >= 100 && state.conjugations !== null;
           if (prev >= target - 1) {
-          if (shouldReach100) {
-              // Só atinge 100 se conjugations !== null
-              setTimeout(() => {
-                setState(prev => ({ ...prev, progress: null }));
-                setCurrentProgress(0);
-              }, 200);
-              return 100;
-            } else {
               cancelAnimationFrame(raf);
-              return prev; // Para aqui até conjugations ficar pronto
-            }
+              return target;
           }
           const increment = (target - prev) * 0.3;
+          if (target >= 100) {
+            setTimeout(() => {
+              setState(prev => ({ ...prev, progress: null }));
+              setCurrentProgress(0);
+            }, 300);
+            return 100;
+          }
           return prev + increment;
       });
       raf = requestAnimationFrame(animate);
@@ -197,6 +194,7 @@ const Index = () => {
     animate();
     return () => cancelAnimationFrame(raf);
 }, [state.progress]);
+
 
   useEffect(() => {
     setMounted(true);

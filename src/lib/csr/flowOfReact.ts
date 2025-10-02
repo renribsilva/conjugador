@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ni } from "../ssr/normalizeVerb";
 import type { flowTypes } from "../../types";
 import { initialFlow } from "../ssr/certainObjects";   
+import { conjugateVerb } from "../ssr/conjugateVerb";
 
 export const flowOfReact = () => { 
 
@@ -121,7 +122,7 @@ export const flowOfReact = () => {
 
       goThrough: false,
       enter: false,
-      progress: 50,
+      progress: 0,
       isDisabled: true,
 
       originalVerb: null,
@@ -404,6 +405,15 @@ export const flowOfReact = () => {
         loading: false,
         showConjugations: true,
       }));
+
+      setState(prev => ({
+        ...prev,
+        isDisabled: false,
+      }));
+
+      updateProgress(100)
+
+      return
 
     }
 
