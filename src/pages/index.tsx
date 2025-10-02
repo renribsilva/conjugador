@@ -238,49 +238,57 @@ const Index = () => {
             </div>
             <div className={styles.index_tabs}>
               <div className={styles.index_tabs_container}>
-                <button
-                  onClick={handleHome}
-                  className={`${styles.index_tabs_button} ${
-                    activeTab === 'home' 
-                    && state.conjugations === null 
-                    && !state.showButton
-                    && !state.loading
-                    ? styles.active 
-                    : styles.inactive
-                  }`}
-                  disabled={state.loading === true}
-                >
-                  início
-                </button>
-                <button
-                  onClick={handleStatistic}
-                  className={`${styles.index_tabs_button} ${
-                    activeTab === 'statistic' 
-                    && state.conjugations === null 
-                    && !state.showButton
-                    && !state.loading
-                    ? styles.active 
-                    : styles.inactive
-                  }`}
-                  disabled={state.loading === true}
-                >
-                  dados
-                </button>
-                <button
-                  onClick={handleSobre}
-                  className={`${styles.index_tabs_button} ${
-                    activeTab === 'sobre' 
-                    && state.conjugations === null 
-                    && !state.showButton
-                    && !state.loading
-                    ? styles.active 
-                    : styles.inactive
-                  }`}
-                  disabled={state.loading === true}
-                >
-                  sobre
-                </button>
-                {mounted && <Theme />}
+                <div className={styles.index_tabs_button}>
+                  <button
+                    onClick={handleHome}
+                    className={`${styles.index_tabs_button} ${
+                      activeTab === 'home' 
+                      && state.conjugations === null 
+                      && !state.showButton
+                      && !state.loading
+                      ? styles.active 
+                      : styles.inactive
+                    }`}
+                    disabled={state.loading === true}
+                  >
+                    início
+                  </button>
+                </div>
+                <div className={styles.index_tabs_button}>
+                  <button
+                    onClick={handleStatistic}
+                    className={`${styles.index_tabs_button} ${
+                      activeTab === 'statistic' 
+                      && state.conjugations === null 
+                      && !state.showButton
+                      && !state.loading
+                      ? styles.active 
+                      : styles.inactive
+                    }`}
+                    disabled={state.loading === true}
+                  >
+                    dados
+                  </button>
+                </div>
+                <div className={styles.index_tabs_button}>
+                  <button
+                    onClick={handleSobre}
+                    className={`${styles.index_tabs_button} ${
+                      activeTab === 'sobre' 
+                      && state.conjugations === null 
+                      && !state.showButton
+                      && !state.loading
+                      ? styles.active 
+                      : styles.inactive
+                    }`}
+                    disabled={state.loading === true}
+                  >
+                    sobre
+                  </button>
+                </div>
+                <div className={styles.index_tabs_button}>
+                  {mounted && <Theme />}
+                </div>
               </div>
             </div>
           </div>
