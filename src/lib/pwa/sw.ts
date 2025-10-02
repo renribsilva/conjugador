@@ -88,17 +88,20 @@ self.addEventListener("install", (event) => {
       try {
         for (const json of JSON_URLS) {
           const cache = await caches.open(json.cacheName);
-          // limpa tudo do cache antes de colocar o novo item
           const keys = await cache.keys();
+          // se existir key diferente da atual -> remove
           for (const req of keys) {
-            await cache.delete(req);
+            if (req.url !== new URL(json.url, self.location.origin).href) {
+              await cache.delete(req);
+              console.log("🗑️ Removida key antiga:", req.url, "de", json.cacheName);
+            }
           }
           const response = await fetch(json.url, { cache: "no-store" });
           await cache.put(json.url, response.clone());
         }
         self.skipWaiting(); // ativa SW imediatamente
       } catch (err) {
-        console.warn("Erro ao pré-cachear JSONs:", err);
+        console.warn("⚠️ Erro ao pré-cachear JSONs:", err);
       }
     })()
   );

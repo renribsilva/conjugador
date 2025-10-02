@@ -214,7 +214,6 @@ const Index = () => {
   return (
     <div className={styles.index}>
       {/* header */}
-      <Sorry/>
       <section className={styles.navbar_container}>
         <div className={styles.navbar}>
           <div className={styles.input_container}>
