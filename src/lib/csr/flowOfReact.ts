@@ -61,7 +61,7 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    updateProgress(null)
+    updateProgress(0)
 
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();      
