@@ -175,9 +175,9 @@ const Index = () => {
           return target;
         }
         const increment = (target - prev) * 0.3;
-        console.log(prev)
-        console.log(increment)
-        console.log(target)
+        // console.log(prev)
+        // console.log(increment)
+        // console.log(target)
         if (target >= 100) {
           setTimeout(() => {
             setState(prev => ({ ...prev, progress: 0 }));
