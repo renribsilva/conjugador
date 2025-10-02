@@ -302,7 +302,7 @@ const Index = () => {
                 </>
               )}
             </div>
-            <Suspense>
+            <Suspense fallback={null}>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
                   <Home />
