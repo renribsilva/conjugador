@@ -285,7 +285,7 @@ const Index = () => {
       {/* main */}
       <section className={styles.main} role="main">
         <div className={styles.panel}>
-          {(currentProgress > 0 && currentProgress <= 100) &&
+          {(currentProgress >= 0 && currentProgress <= 100) &&
             <ProgressBar progress={currentProgress} />
           }
           <div className={styles.subpanel}>

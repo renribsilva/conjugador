@@ -78,7 +78,7 @@ export const flowOfReact = () => {
 
   const processEnter = async () => {
 
-    updateProgress(1)
+    updateProgress(0)
 
     const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
     const { getSimilarVerbs } = await import("../ssr/getSimilarWords");
