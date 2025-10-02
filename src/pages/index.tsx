@@ -187,7 +187,7 @@ const Index = () => {
             setTimeout(() => {
               setState(prev => ({ ...prev, progress: null }));
               setCurrentProgress(0);
-            }, 400);
+            }, 500);
             return 100;
           }
           return prev + increment;
