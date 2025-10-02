@@ -61,8 +61,6 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    updateProgress(0)
-
     if (event.key === "Enter" && state.inputValue !== "") {      
       event.preventDefault();      
       setTimeout(() => {
@@ -122,7 +120,7 @@ export const flowOfReact = () => {
 
       goThrough: false,
       enter: false,
-      progress: 0,
+      progress: 25,
       isDisabled: true,
 
       originalVerb: null,
