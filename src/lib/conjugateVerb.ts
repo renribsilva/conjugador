@@ -1,4 +1,4 @@
-import regular from '../../public/json/rulesForReg.json';
+import regular from '../json/rulesForReg.json';
 import { ni, nw } from './normalizeVerb';
 import { structureOfVerb } from './structureOfVerb';
 import { getTermData } from './getTermData';

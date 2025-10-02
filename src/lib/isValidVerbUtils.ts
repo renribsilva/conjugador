@@ -1,6 +1,4 @@
 import { ni } from "./normalizeVerb";
-import fs from 'fs/promises';
-import path from 'path';
 
 const INVALID_CHARS = "!\"#$%&'()*+,./:;<=>?@[\\]^_`{|}~1234567890";
 
