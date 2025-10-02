@@ -9,13 +9,12 @@ import { nw } from "../lib/ssr/normalizeVerb";
 import postReqVerbByAPI from "../lib/csr/postReqVerbByAPI";
 import { flowOfReact } from "../lib/csr/flowOfReact";
 import ProgressBar from "../components/tsx/progress";
-// import Sorry from "../components/mdx/Sorry.mdx"
+import Sorry from "../components/mdx/Sorry.mdx"
 
 const Table = lazy(() => import("../components/tsx/table"));
 const InstallPWA = lazy(() => import("../components/tsx/install"));
 const NoteRefList = lazy(() => import("../components/tsx/references"));
 const Gracias = lazy(() => import("../components/mdx/Gracias.mdx"));
-const Sorry = lazy(() => import("../components/mdx/Sorry.mdx"));
 const About = lazy(() => import("../components/mdx/About.mdx"));
 const Statistic = lazy(() => import("../components/mdx/Statistic.mdx"));
 const Warning = lazy(() => import("../components/mdx/Warning.mdx"));
