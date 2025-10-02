@@ -8,8 +8,8 @@ import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
 import { conjugateVerb } from '../src/lib/ssr/conjugateVerb';
 import irregJson from "../public/json/rulesByTerm.json"
 import allVerbsJson from "../public/json/allVerbs.json"
-import modelsJson from "../public/json/models.json"
-import groupedModelsJson from "../public/json/groupedModels.json"
+import modelsJson from "../src/json/models.json"
+import groupedModelsJson from "../src/json/groupedModels.json"
 
 
 const publicDir = path.join(process.cwd(), 'public');
@@ -174,8 +174,7 @@ async function ediAllVerbsJson() {
               let verbPropsArray = cache.get(input);
               if (!verbPropsArray) {
                 verbPropsArray = (await conjugateVerb(
-                  input, 
-                  irregJson, 
+                  input,
                   allVerbsJson
                 )).propOfVerb
                 cache.set(input, verbPropsArray);

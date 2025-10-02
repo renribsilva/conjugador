@@ -168,13 +168,14 @@ const Index = () => {
   useEffect(() => {
     let raf: number;
     const animate = () => {
-      setCurrentProgress(prev => {
+      setCurrentProgress(prev => { 
         const target = state.progress;
         if (prev >= target - 1) {
           cancelAnimationFrame(raf);
           return target;
         }
         const increment = (target - prev) * 0.3;
+        console.log(prev)
         console.log(increment)
         console.log(target)
         if (target >= 100) {
