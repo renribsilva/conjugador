@@ -1,5 +1,5 @@
-import allVerbs from '../json/allVerbs.json';
-import afixos from '../json/afixos.json';
+import allVerbs from '../../public/json/allVerbs.json';
+import afixos from '../../public/json/afixos.json';
 import { ni, nw } from './normalizeVerb';
 import tryVariations from './findVariationsUtils';
 

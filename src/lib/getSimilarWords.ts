@@ -1,4 +1,4 @@
-import jsonData from "../json/allVerbs.json";
+import jsonData from "../../public/json/allVerbs.json";
 import { AllVerbsEntry } from "../types";
 import { ni } from "./normalizeVerb";
 
