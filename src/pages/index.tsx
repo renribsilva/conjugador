@@ -33,7 +33,7 @@ const Index = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { state, setState, handleKeyDown } = flowOfReact();
 
-  const handleSolicitar = async (inputReq) => {
+  const handleSolicitar = async (inputReq: string) => {
     setTimeout(() => {
       setCurrentProgress(0)
       setState(prev => ({ 
