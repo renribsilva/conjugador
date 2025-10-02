@@ -1,6 +1,7 @@
 import { VerbProps } from "../../types";
 import { findTermRule } from "./findTermRules";
 import { getModelsData } from "./getModelsData";
+import rulesJson from "../../json/rulesByTerm.json"
 
 const resultCache = new Map<string, ReturnType<typeof findTermRule>>();
 
@@ -16,14 +17,14 @@ function mapTypesToStrings(types: any) {
   return types.map((type) => typeDescriptions[type] || "tipo desconhecido");
 }
 
-export function getTermData(verb: string, P: string, M: string, type: string, regJson: object) {
+export function getTermData(verb: string, P: string, M: string, type: string) {
   
   const cacheKey = `${verb}|${P}|${M}|${type}`;
 
   let result = resultCache.get(cacheKey);
 
   if (!result) {
-    result = findTermRule(verb, P, M, type, regJson);
+    result = findTermRule(verb, P, M, type, rulesJson);
     resultCache.set(cacheKey, result);
   }
 

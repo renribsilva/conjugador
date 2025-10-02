@@ -6,7 +6,7 @@ import { VerbProps } from '../../types';
 // import regData1 from "../json/rulesByTerm.json"
 // import allVerbsData1 from "../json/allVerbs.json"
 
-export async function conjugateVerb (verb: string, regJson: object, allVerbsJson: object) {
+export async function conjugateVerb (verb: string, allVerbsJson: object) {
 
   let r = nw(ni(verb)).slice(0, -2);
   let R = ''
@@ -35,7 +35,7 @@ export async function conjugateVerb (verb: string, regJson: object, allVerbsJson
       // console.log("use cachê")
       return termDataCache.get(cacheKey);
     }
-    const data = getTermData(verb, P, M, D, regJson);
+    const data = getTermData(verb, P, M, D);
     termDataCache.set(cacheKey, data);
     return data;
   }

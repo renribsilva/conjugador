@@ -14,13 +14,10 @@ export const conjVerbByAPI = async (verb: string) => {
   } catch {
     // offline: tenta validar localmente
     const verbsCache = await caches.open("verbs-cache");
-    const rulesCache = await caches.open("rules-cache");
     const cachedVerbs = await verbsCache.match("/json/allVerbs.json");
-    const cachedRules = await rulesCache.match("/json/rulesByTerm.json");
-    if (cachedVerbs && cachedRules) {
+    if (cachedVerbs) {
       const allVerbsJson = await cachedVerbs.json();
-      const rulesJson = await cachedRules.json();
-      return conjugateVerb(verb, rulesJson, allVerbsJson);
+      return conjugateVerb(verb, allVerbsJson);
     }  
   }
   return ({ conjugations: null, propOfVerb: pattern });

@@ -4,16 +4,11 @@ import { NetworkFirst, Serwist, Strategy } from "serwist";
 
 const CACHE_CONJ = "conj-cache";
 const CACHE_ALLVERBS = "verbs-cache";
-const CACHE_RULES = "rules-cache";
 
 class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
-    try {
-      const response = await handler.fetch(request);
-      return response;
-    } catch {
-      throw new Error("Offline");
-    }
+    const response = await handler.fetch(request);
+    return response;
   }
 }
 
@@ -53,12 +48,8 @@ self.addEventListener("fetch", (event) => {
   if (url.includes("/api/conjVerb")) {
     event.respondWith(
       (async () => {
-        try {          
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
-        } catch {
-          throw new Error("Offline");
-        }
+        const networkResponse = await fetch(event.request);
+        return networkResponse;
       })()
     );
   }
@@ -75,7 +66,6 @@ self.addEventListener("fetch", (event) => {
 
 const JSON_URLS = [
   { url: "/json/allVerbs.json", cacheName: CACHE_ALLVERBS, type: "ALLVERBS_UPDATED" },
-  { url: "/json/rulesByTerm.json", cacheName: CACHE_RULES, type: "RULES_UPDATED" },
 ];
 
 self.addEventListener("install", (event) => {

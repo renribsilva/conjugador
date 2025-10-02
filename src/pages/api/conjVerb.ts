@@ -22,7 +22,7 @@ export default async function handler(
         loadIrregObject()
       ]);
       if (!allVerbJson || !regJson ) return ({ conjugations: null, propOfVerb: pattern })
-      const conjugations = await conjugateVerb(ni(verb), regJson, allVerbJson)
+      const conjugations = await conjugateVerb(ni(verb), allVerbJson)
       // console.dir(conjugations, {depth: null, colors: true})
       return response.status(200).json(conjugations);
     } catch (error) {
