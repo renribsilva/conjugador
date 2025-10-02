@@ -183,7 +183,7 @@ const Index = () => {
           // console.log(prev)
           // console.log(increment)
           // console.log(target)
-          if (target >= 100 && !state.loading) {
+          if (target >= 100) {
             setTimeout(() => {
               setState(prev => ({ ...prev, progress: null }));
               setCurrentProgress(0);
@@ -209,6 +209,7 @@ const Index = () => {
 
   // console.log("currente:", currentProgress)
   // console.log("progress:", state.progress)
+  // console.log(state.progress)
 
   return (
     <div className={styles.index}>
