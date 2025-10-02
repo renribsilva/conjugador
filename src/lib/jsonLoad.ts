@@ -15,7 +15,7 @@ export async function loadAllVerbObject() {
   return allVerbJson;
 }
 
-export async function loadRegObject() {
+export async function loadIrregObject() {
   if (regJson === null) {
     const data = await fs.readFile(regPath, 'utf-8');
     regJson = JSON.parse(data);

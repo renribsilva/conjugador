@@ -1,7 +1,7 @@
 'use server'
 
 import { NextApiResponse, NextApiRequest } from 'next';
-import { loadAllVerbObject, loadRegObject } from '../../lib/jsonLoad';
+import { loadAllVerbObject, loadIrregObject } from '../../lib/jsonLoad';
 import { conjugateVerb } from '../../lib/conjugateVerb';
 import { ni } from '../../lib/normalizeVerb';
 import { pattern } from '../../lib/certainObjects';
@@ -17,8 +17,10 @@ export default async function handler(
       if (!verb || typeof verb !== 'string') {
         return response.status(200).json ({ conjugations: null, propOfVerb: pattern }) 
       }
-      const allVerbJson = await loadAllVerbObject();
-      const regJson = await loadRegObject();
+      const [allVerbJson, regJson] = await Promise.all([
+        loadAllVerbObject(),
+        loadIrregObject()
+      ]);
       if (!allVerbJson || !regJson ) return ({ conjugations: null, propOfVerb: pattern })
       const conjugations = await conjugateVerb(ni(verb), regJson, allVerbJson)
       // console.dir(conjugations, {depth: null, colors: true})
