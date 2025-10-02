@@ -271,8 +271,14 @@
   font-size: 12px;
 }
 
+/*PROGRESS*/
+
 .progress_bar {
   margin-inline: 3px;
+}
+
+.progress_container {
+  height: 1.5px;
 }
 
 .punctButton {

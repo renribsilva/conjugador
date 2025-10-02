@@ -166,49 +166,33 @@ const Index = () => {
   }, [state.enter]);
 
   useEffect(() => {
-    // Declara uma variável para armazenar o ID do requestAnimationFrame
     let raf: number;
-    // Função que será chamada repetidamente para animar o progresso
     const animate = () => {
-        // Atualiza o estado currentProgress
-        setCurrentProgress(prev => { 
-            // Se state.progress for null, não faz nada e retorna o valor atual
-            if (state.progress === null) {
-                return prev;
-            }
-            // Define o valor alvo do progresso
-            const target = state.progress;
-            // Se o progresso atual já estiver próximo do target (menos de 1 unidade),
-            // cancela a animação e retorna o target
-            if (prev >= target - 1) {
-                cancelAnimationFrame(raf);
-                return target;
-            }
-            // Calcula o incremento suave em direção ao target
-            const increment = (target - prev) * 0.3;
-            // console.log(prev)
-            // console.log(increment)
-            // console.log(target)
-            // Caso o target seja 100 ou mais, espera 0.4s e reseta os estados
-            if (target >= 100) {
-                setTimeout(() => {
-                    // Reseta state.progress para null
-                    setState(prev => ({ ...prev, progress: null }));
-                    // Reseta currentProgress para 0
-                    setCurrentProgress(0);
-                }, 400);
-                // Retorna 100 imediatamente para atualizar a barra
-                return 100;
-            }
-            // Se nenhum dos casos acima ocorreu, incrementa suavemente o progresso
-            return prev + increment;
-        });
-        // Agenda a próxima chamada do animate para o próximo frame
-        raf = requestAnimationFrame(animate);
+      setCurrentProgress(prev => { 
+          if (state.progress === null) {
+              return prev;
+          }
+          const target = state.progress;
+          if (prev >= target - 1) {
+              cancelAnimationFrame(raf);
+              return target;
+          }
+          const increment = (target - prev) * 0.3;
+          // console.log(prev)
+          // console.log(increment)
+          // console.log(target)
+          if (target >= 100) {
+            setTimeout(() => {
+              setState(prev => ({ ...prev, progress: null }));
+              setCurrentProgress(0);
+            }, 400);
+            return 100;
+          }
+          return prev + increment;
+      });
+      raf = requestAnimationFrame(animate);
     };
-    // Inicia a animação imediatamente
     animate();
-    // Cleanup: cancela o requestAnimationFrame quando o effect for desmontado
     return () => cancelAnimationFrame(raf);
 }, [state.progress]);
 
@@ -305,9 +289,11 @@ const Index = () => {
       {/* main */}
       <section className={styles.main} role="main">
         <div className={styles.panel}>
-          {state.progress !== null && (
-            <ProgressBar progress={currentProgress} />
-          )}
+          <div className={styles.progress_container}>
+            {state.progress !== null && (
+              <ProgressBar progress={currentProgress} />
+            )}
+          </div>
           <div className={styles.subpanel}>
             <div className={styles.loading}>
               {(state.loading) && (
