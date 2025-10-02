@@ -1,26 +1,26 @@
 import { useRef, useEffect, useState, Suspense, lazy } from "react";
-import Home from "../mdx/Home.mdx"
+import Home from "../components/mdx/Home.mdx"
 import styles from "../styles/index.module.css";
-import Footer from "../components/footer";
-import Socials from "../components/socials";
-import Theme from "../components/theme";
-import Button from "../components/button";  
+import Footer from "../components/tsx/footer";
+import Socials from "../components/tsx/socials";
+import Theme from "../components/tsx/theme";
+import Button from "../components/tsx/button";  
 import { nw } from "../lib/ssr/normalizeVerb";
 import postReqVerbByAPI from "../lib/csr/postReqVerbByAPI";
-import dynamic from "next/dynamic";
 import { flowOfReact } from "../lib/csr/flowOfReact";
+import ProgressBar from "../components/tsx/progress";
+import Sorry from "../components/mdx/Sorry.mdx"
 
-const Table = lazy(() => import("../components/table"));
-const InstallPWA = dynamic(() => import("../components/pwa/installPWA"));
-const NoteRefList = dynamic(() => import("../components/references"));
-const Gracias = dynamic(() => import("../mdx/Gracias.mdx"));
-const About = dynamic(() => import("../mdx/About.mdx"));
-const Statistic = dynamic(() => import("../mdx/Statistic.mdx"));
-const Warning = dynamic(() => import("../mdx/Warning.mdx"));
-const Emphasis = dynamic(() => import("../mdx/Emphasis.mdx"));
-const Reflexive = dynamic(() => import("../mdx/Reflexive.mdx"));
-const SobreErros = dynamic(() => import("../mdx/SobreErros.mdx"));
-const Sorry = dynamic(() => import("../mdx/Sorry.mdx"));
+const Table = lazy(() => import("../components/tsx/table"));
+const InstallPWA = lazy(() => import("../components/tsx/install"));
+const NoteRefList = lazy(() => import("../components/tsx/references"));
+const Gracias = lazy(() => import("../components/mdx/Gracias.mdx"));
+const About = lazy(() => import("../components/mdx/About.mdx"));
+const Statistic = lazy(() => import("../components/mdx/Statistic.mdx"));
+const Warning = lazy(() => import("../components/mdx/Warning.mdx"));
+const Emphasis = lazy(() => import("../components/mdx/Emphasis.mdx"));
+const Reflexive = lazy(() => import("../components/mdx/Reflexive.mdx"));
+const SobreErros = lazy(() => import("../components/mdx/SobreErros.mdx"));
 
 const Index = () => {
 
@@ -123,24 +123,6 @@ const Index = () => {
     setActiveTab('statistic');
   };
 
-  const ProgressBar = ({ progress }: { progress: number }) => {
-    return (
-      <div className={styles.progress_bar}>
-        {currentProgress !== 100 && (
-          <div
-            style={{
-              width: `${progress}%`,
-              background: 'var(--foreground)',
-              height: '1.5px',
-              transition: 'width 0.3s ease-in-out',
-              borderRadius: '2rem',
-            }}
-          />
-        )}
-      </div>
-    );
-  };
-
   const formatPuncts = (puncts: string[] | null) => {
     if (!puncts || puncts.length === 0) return null;
   
@@ -210,6 +192,8 @@ const Index = () => {
   if (!mounted) {
     return null;
   }
+
+  console.log(state.isButtonDisabled, state.postReq)
 
   return (
     <div className={styles.index}>
@@ -303,7 +287,7 @@ const Index = () => {
                 </>
               )}
             </div>
-            <div>
+            <Suspense>
               {state.showHome && !state.showSobre && !state.showStatistic &&
                 <>
                   <Home />
@@ -639,7 +623,7 @@ const Index = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </Suspense>
             <Suspense fallback={null}>
               {state.conjugations !== null 
               && state.foundVerb

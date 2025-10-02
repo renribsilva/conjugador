@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/components.module.css";
+import styles from "../../styles/components.module.css";
 
 const Button = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
   ({ children, ...props }, ref) => {

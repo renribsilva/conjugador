@@ -66,12 +66,8 @@ self.addEventListener("fetch", (event) => {
   if (url.includes("/api/postReqVerb")) {
     event.respondWith(
       (async () => {
-        try {          
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
-        } catch {
-          throw new Error("Offline");
-        }
+        const response = await fetch(event.request);
+        return response; // Response válido
       })()
     );
   }

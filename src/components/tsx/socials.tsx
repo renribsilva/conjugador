@@ -1,7 +1,7 @@
-import styles from "../styles/components.module.css";
+import styles from "../../styles/components.module.css";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Arrow from "./svgs/arrow";
+import Arrow from "../svgs/arrow";
 
 const SocialObjects = [
   {

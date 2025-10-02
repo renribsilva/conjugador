@@ -1,8 +1,8 @@
 import { useTheme } from "next-themes";
-import styles from "../styles/components.module.css";
+import styles from "../../styles/components.module.css";
 import React, { useEffect, useState } from "react";
-import Dark from "./svgs/dark";
-import Light from "./svgs/light";
+import Dark from "../svgs/dark";
+import Light from "../svgs/light";
 
 function Theme() {
   

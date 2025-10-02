@@ -50,10 +50,8 @@ export default async function handler(
       SET data = ${JSON.stringify(uniqueData)}::jsonb
       WHERE type = ${type};
     `;
-
-    return response.status(200).json({ message: 'Data successfully added to the database!' });
+    return response.status(200).json({ post: true });
   } catch (error) {
-    console.error('Error handling request:', error.message);
-    return response.status(500).json({ error: error.message });
+    return response.status(200).json({ post: false });
   }
 }
