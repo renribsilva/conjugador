@@ -175,7 +175,7 @@ const Index = () => {
               return prev;
           }
           const target = state.progress;
-          const shouldReach100 = target >= 100 && state.loading === false;
+          const shouldReach100 = target >= 100 && state.conjugations !== null;
           if (prev >= target - 1) {
             if (shouldReach100) {
               // Atinge 100
