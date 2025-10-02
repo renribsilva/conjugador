@@ -23,7 +23,7 @@ export const flowOfReact = () => {
     }
     setTimeout(() => {
       warmUpAPI();
-    }, 1000)
+    }, 2000)
   }, []);
 
   // useEffect (() => {
@@ -69,7 +69,7 @@ export const flowOfReact = () => {
       }, 0);
       setTimeout(() => {
         processEnter();
-      }, 2000)     
+      }, 0)     
     }
 
     // updateProgress(null)
