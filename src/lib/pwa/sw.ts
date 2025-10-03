@@ -102,6 +102,7 @@ self.addEventListener("activate", (event) => {
           const isValid =
             cacheName === "pages" ||
             cacheName === "serwist-precache-v2-http://localhost:3000/" ||
+            cacheName === "serwist-precache-v2-https://conjugador-gules.vercel.app/" ||
             cacheName === "conj-cache" ||
             cacheName === "verbs-cache" ||
             cacheName === "rules-cache"
