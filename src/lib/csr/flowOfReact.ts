@@ -432,12 +432,12 @@ export const flowOfReact = () => {
   }
 
   const dependencies = [
-    state.inputReq,
+    state.showConjugations,
   ];
 
   useEffect(() => {
 
-    if (state.isDisabled) return;
+    if (!state.showConjugations) return;
 
     const data = {
       A_INPUT: {
