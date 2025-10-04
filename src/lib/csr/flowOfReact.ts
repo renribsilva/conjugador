@@ -111,7 +111,7 @@ export const flowOfReact = () => {
     const { conjVerbByAPI } = await import("./conjVerbByAPI");
 
     const normalizedInputValue = ni(state.inputValue);
-    const suggestions = await getSimilarWordsByAPI(state.inputValue);
+    const suggestions = await getSimilarWordsByAPI(normalizedInputValue);
 
     setState(prev => ({
       ...prev,

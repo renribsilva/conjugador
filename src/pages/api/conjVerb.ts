@@ -11,7 +11,7 @@ export default async function handler(
 ) {
   // Verifica se o método da requisição é POST
   if (request.method !== 'GET') {
-    return response.status(405).json({ error: 'Método não permitido. Use POST.' });
+    return response.status(405).json({ error: 'Método não permitido. Use GET.' });
   }
   try {
     const { verb } = request.query;
@@ -23,6 +23,7 @@ export default async function handler(
       return response.status(500).json({ error: 'Erro ao carregar os dados necessários.' });
     }
     const conjugations = await conjugateVerb(ni(verb) as string, allVerbJson);
+    // console.log("conjVerbs deu bom")
     return response.status(200).json(conjugations);
   } catch (error: any) {
     throw error

@@ -21,6 +21,7 @@ export default async function handler(
       return response.status(500).json({ error: 'Erro ao carregar os dados necessários.' });
     }
     const result = await processVerb(verb as string, allVerbJson);
+    // console.log("isValidVerb deu bom")
     return response.status(200).json(result);
   } catch (error) {
     throw error

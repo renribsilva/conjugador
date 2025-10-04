@@ -7,7 +7,7 @@ import { getSimilarVerbs } from "../ssr/getSimilarWords";
 
 const CACHE_ALLVERBS = "verbs-cache";
 
-class NetworkOrFallback extends Strategy {
+class isValidVerb extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
       // console.log("isvalidverb tentou rede")
@@ -38,6 +38,80 @@ class NetworkOrFallback extends Strategy {
   }
 }
 
+class conjVerb extends Strategy {
+  async _handle(request: Request, handler: StrategyHandler) {
+    try {
+      // console.log("conjVerb tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
+      // console.log("conjVerb não encontrou rede e tentou cache")
+      const cache = await caches.open("verbs-cache");
+      const fallback = await cache.match("/api/allVerbs");
+      if (fallback) {
+        const json = await fallback.json();
+        const url = new URL(request.url);
+        const verb = url.searchParams.get("verb");
+        if (!verb) return new Response(JSON.stringify({
+          model: null,
+          only_reflexive: null,
+          multiple_conj: null,
+          canonical1: null,
+          canonical2: null
+        }))
+        const result = await conjugateVerb(verb, json);
+        // console.log("conjVerb no fallback do sw:", JSON.stringify(result))
+        return new Response(JSON.stringify(result), {
+          headers: { 'Content-Type': 'application/json' },
+          status: 200
+        });
+      }
+
+      return new Response(JSON.stringify({
+          model: null,
+          only_reflexive: null,
+          multiple_conj: null,
+          canonical1: null,
+          canonical2: null
+        }), {
+        status: 503,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  }
+}
+
+class similarWords extends Strategy {
+  async _handle(request: Request, handler: StrategyHandler) {
+    try {
+      // console.log("similarWords tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
+      // console.log("similarWords não encontrou rede e tentou cache")
+      const cache = await caches.open("verbs-cache");
+      const fallback = await cache.match("/api/allVerbs");
+      if (fallback) {
+        const json = await fallback.json();
+        const url = new URL(request.url);
+        const verb = url.searchParams.get("verb");
+        if (!verb) return new Response(JSON.stringify(null))
+        const result = await getSimilarVerbs(verb, json);
+        // console.log("similarWords no fallback do sw:", JSON.stringify(result))
+        return new Response(JSON.stringify(result), {
+          headers: { 'Content-Type': 'application/json' },
+          status: 200
+        });
+      }
+
+      return new Response(JSON.stringify(null), {
+        status: 503,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  }
+}
+
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
     __SW_MANIFEST: (PrecacheEntry | string)[] | undefined;
@@ -54,15 +128,15 @@ const serwist = new Serwist({
   runtimeCaching: [
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/isValidVerb"),
-      handler: new NetworkOrFallback(),
+      handler: new isValidVerb(),
     },
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/conjVerb"),
-      handler: new NetworkFirst(),
+      handler: new conjVerb(),
     },
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/similarWords"),
-      handler: new NetworkFirst(),
+      handler: new similarWords(),
     },
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/allVerbs"),
@@ -78,96 +152,6 @@ serwist.addEventListeners();
 
 self.addEventListener("fetch", (event) => {
   const url = event.request.url;
-
-  if (url.includes("/api/conjVerb")) {
-    event.respondWith(
-      (async () => {
-        try {
-          // console.log("conjVerb tentou rede")
-          const response = await fetch(event.request);
-          return response;
-        } catch (err) {
-          // console.log("conjVerb não encontrou rede e tentou cache")
-          const cache = await caches.open("verbs-cache");
-          const fallback = await cache.match("/api/allVerbs");
-          if (fallback) {
-            const json = await fallback.json();
-            const url = new URL(event.request.url);
-            const verb = url.searchParams.get("verb");
-            if (!verb) {
-              return new Response(JSON.stringify({
-                model: null,
-                only_reflexive: null,
-                multiple_conj: null,
-                canonical1: null,
-                canonical2: null
-              }), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' }
-              });
-            }
-            const result = await conjugateVerb(verb, json);
-            // console.log("conjVerbs no fallback do sw:", JSON.stringify(result))
-            return new Response(JSON.stringify(result), {
-              headers: { 'Content-Type': 'application/json' },
-              status: 200
-            });
-          }
-
-          // Falha total: sem rede e sem cache
-          return new Response(JSON.stringify({
-            model: null,
-            only_reflexive: null,
-            multiple_conj: null,
-            canonical1: null,
-            canonical2: null
-          }), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' }
-          });
-        }
-      })()
-    );
-  }
-
-  if (url.includes("/api/similarWords")) {
-    event.respondWith(
-      (async () => {
-        try {
-          // console.log("similarWords tentou rede")
-          const response = await fetch(event.request);
-          return response;
-        } catch (err) {
-          // console.log("similarWords não encontrou rede e tentou cache")
-          const cache = await caches.open("verbs-cache");
-          const fallback = await cache.match("/api/allVerbs");
-          if (fallback) {
-            const json = await fallback.json();
-            const url = new URL(event.request.url);
-            const verb = url.searchParams.get("verb");
-            if (!verb) {
-              return new Response(JSON.stringify(null), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' }
-              });
-            }
-            const result = await getSimilarVerbs(verb, json);
-            // console.log("similarWords no fallback do sw:", JSON.stringify(result))
-            return new Response(JSON.stringify(result), {
-              headers: { 'Content-Type': 'application/json' },
-              status: 200
-            });
-          }
-
-          // Falha total: sem rede e sem cache
-          return new Response(JSON.stringify(null), {
-            status: 400,
-            headers: { 'Content-Type': 'application/json' }
-          });
-        }
-      })()
-    );
-  }
 
   if (url.includes("/api/postReqVerb")) {
     event.respondWith(

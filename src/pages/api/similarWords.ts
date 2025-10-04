@@ -1,7 +1,6 @@
 'use server'
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import { processVerb } from '../../lib/ssr/isValidVerbProcess';
 import { loadAllVerbObject } from '../../lib/ssr/jsonLoad';
 import { getSimilarVerbs } from '../../lib/ssr/getSimilarWords';
 
@@ -22,6 +21,7 @@ export default async function handler(
       return response.status(500).json({ error: 'Erro ao carregar os dados necessários.' });
     }
     const result = await getSimilarVerbs(verb as string, allVerbJson);
+    // console.log("similarWords deu bom")
     return response.status(200).json(result);
   } catch (error) {
     throw error
