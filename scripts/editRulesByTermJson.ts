@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path'; 
 import { ni } from '../src/lib/ssr/normalizeVerb';
 import { conjugateVerb } from '../src/lib/ssr/conjugateVerb';
-import allVerbsJson from "../public/json/allVerbs.json"
-import regJson from "../public/json/rulesByTerm.json"
+import allVerbsJson from "../src/json/allVerbs.json"
 
 interface VerbData {
   verb: string[];

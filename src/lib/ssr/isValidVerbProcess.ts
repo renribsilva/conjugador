@@ -9,7 +9,7 @@ import {
 } from './isValidVerbUtils';
 import findVariations from './findVariations';
 
-export async function processVerb (verb: string, jsonObject: object) {
+export async function processVerb (verb: string, allVerbJson: object) {
 
   const normalizedVerb = ni(verb);
   const { punct } = extractPunctuation(normalizedVerb);
@@ -21,19 +21,19 @@ export async function processVerb (verb: string, jsonObject: object) {
     cleanedVerb = cleanedVerb.replace(regex, '');
   }
 
-  if (!jsonObject) {
+  if (!allVerbJson) {
     throw new Error('Failed to load JSON data.');
   }
 
-  const normalizedJsonObject = getNormalizedJsonKeys(jsonObject);
-  const originalVerb = findOriginalVerb(normalizedJsonObject, cleanedVerb);
+  const normalizedallVerbJson = getNormalizedJsonKeys(allVerbJson);
+  const originalVerb = findOriginalVerb(normalizedallVerbJson, cleanedVerb);
   const variations = findVariations(cleanedVerb);
   // console.log(variations)
 
-  if (originalVerb && originalVerb in normalizedJsonObject) {
+  if (originalVerb && originalVerb in normalizedallVerbJson) {
 
-    const similarWords = findSimilarWords(normalizedJsonObject, cleanedVerb);
-    const originalValue = jsonObject[originalVerb];
+    const similarWords = findSimilarWords(normalizedallVerbJson, cleanedVerb);
+    const originalValue = allVerbJson[originalVerb];
     const findedWord = originalValue.verb[0];
     
     return {
@@ -50,8 +50,8 @@ export async function processVerb (verb: string, jsonObject: object) {
   
   if (variations.processedInput) {
     
-    const similarWords = findSimilarWords(normalizedJsonObject, variations.processedInput);
-    const originalValue = jsonObject[variations.processedInput];
+    const similarWords = findSimilarWords(normalizedallVerbJson, variations.processedInput);
+    const originalValue = allVerbJson[variations.processedInput];
     const findedWord = originalValue.verb[0];
   
     return {

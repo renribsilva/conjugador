@@ -3,6 +3,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { processVerb } from '../../lib/ssr/isValidVerbProcess';
 import { loadAllVerbObject } from '../../lib/ssr/jsonLoad';
+import { getSimilarVerbs } from '../../lib/ssr/getSimilarWords';
 
 export default async function handler(
   request: NextApiRequest, 
@@ -20,7 +21,7 @@ export default async function handler(
     if (!allVerbJson) {
       return response.status(500).json({ error: 'Erro ao carregar os dados necessários.' });
     }
-    const result = await processVerb(verb as string, allVerbJson);
+    const result = await getSimilarVerbs(verb as string, allVerbJson);
     return response.status(200).json(result);
   } catch (error) {
     throw error

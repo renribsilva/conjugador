@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { ni } from "../ssr/normalizeVerb";
 import type { flowTypes } from "../../types";
-import { initialFlow } from "../ssr/certainObjects";   
-import { conjugateVerb } from "../ssr/conjugateVerb";
+import { initialFlow } from "../ssr/certainObjects";
 
 export const flowOfReact = () => { 
 
@@ -12,14 +11,16 @@ export const flowOfReact = () => {
 
   useEffect(() => {
     async function warmUpAPI() {
-      const [{ isValidVerbByAPI }, { conjVerbByAPI }] = 
+      const [{ isValidVerbByAPI }, { conjVerbByAPI }, {getSimilarWordsByAPI}] = 
         await Promise.all([
           import("./isValidVerbByAPI"),
-          import("./conjVerbByAPI")
+          import("./conjVerbByAPI"),
+          import("./getSimilarWordsByAPI")
         ]);
       // dispara sem precisar esperar resposta
       void isValidVerbByAPI("recomeçar");
       void conjVerbByAPI("realçar");
+      void getSimilarWordsByAPI("renato")
       console.log("Warm-up de API feito");
     }
     setTimeout(() => {
@@ -85,11 +86,11 @@ export const flowOfReact = () => {
   const processEnter = async () => {
 
     const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
-    const { getSimilarVerbs } = await import("../ssr/getSimilarWords");
+    const { getSimilarWordsByAPI } = await import("./getSimilarWordsByAPI");
     const { conjVerbByAPI } = await import("./conjVerbByAPI");
 
     const normalizedInputValue = ni(state.inputValue);
-    const suggestions = getSimilarVerbs(state.inputValue);
+    const suggestions = await getSimilarWordsByAPI(state.inputValue);
 
     setState(prev => ({
       ...prev,

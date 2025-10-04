@@ -1,14 +1,40 @@
 import { defaultCache } from "@serwist/next/worker";
 import type { PrecacheEntry, SerwistGlobalConfig, StrategyHandler } from "serwist";
 import { NetworkFirst, Serwist, Strategy } from "serwist";
+import { processVerb } from "../ssr/isValidVerbProcess";
+import { conjugateVerb } from "../ssr/conjugateVerb";
+import { getSimilarVerbs } from "../ssr/getSimilarWords";
 
-const CACHE_CONJ = "conj-cache";
 const CACHE_ALLVERBS = "verbs-cache";
 
 class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
-    const response = await handler.fetch(request);
-    return response;
+    try {
+      console.log("isvalidverb tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
+      console.log("isvalidverb não encontrou rede e tentou cache")
+      const cache = await caches.open("verbs-cache");
+      const fallback = await cache.match("/api/allVerbs");
+      if (fallback) {
+        const json = await fallback.json();
+        const url = new URL(request.url);
+        const verb = url.searchParams.get("verb");
+        if (!verb) return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }))
+        const result = await processVerb(verb, json);
+        console.log("isvalidverb no fallback do sw:", JSON.stringify(result))
+        return new Response(JSON.stringify(result), {
+          headers: { 'Content-Type': 'application/json' },
+          status: 200
+        });
+      }
+
+      return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }), {
+        status: 503,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
   }
 }
 
@@ -32,8 +58,16 @@ const serwist = new Serwist({
     },
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/conjVerb"),
-      handler: new NetworkFirst({
-        cacheName: CACHE_CONJ,
+      handler: new NetworkFirst(),
+    },
+    {
+      matcher: ({ url }) => url.pathname.startsWith("/api/similarWords"),
+      handler: new NetworkFirst(),
+    },
+    {
+      matcher: ({ url }) => url.pathname.startsWith("/api/allVerbs"),
+        handler: new NetworkFirst({
+        cacheName: CACHE_ALLVERBS,
       }),
     },
     ...defaultCache
@@ -48,8 +82,89 @@ self.addEventListener("fetch", (event) => {
   if (url.includes("/api/conjVerb")) {
     event.respondWith(
       (async () => {
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
+        try {
+          console.log("conjVerb tentou rede")
+          const response = await fetch(event.request);
+          return response;
+        } catch (err) {
+          console.log("conjVerb não encontrou rede e tentou cache")
+          const cache = await caches.open("verbs-cache");
+          const fallback = await cache.match("/api/allVerbs");
+          if (fallback) {
+            const json = await fallback.json();
+            const url = new URL(event.request.url);
+            const verb = url.searchParams.get("verb");
+            if (!verb) {
+              return new Response(JSON.stringify({
+                model: null,
+                only_reflexive: null,
+                multiple_conj: null,
+                canonical1: null,
+                canonical2: null
+              }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+            const result = await conjugateVerb(verb, json);
+            console.log("conjVerbs no fallback do sw:", JSON.stringify(result))
+            return new Response(JSON.stringify(result), {
+              headers: { 'Content-Type': 'application/json' },
+              status: 200
+            });
+          }
+
+          // Falha total: sem rede e sem cache
+          return new Response(JSON.stringify({
+            model: null,
+            only_reflexive: null,
+            multiple_conj: null,
+            canonical1: null,
+            canonical2: null
+          }), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }
+      })()
+    );
+  }
+
+  if (url.includes("/api/similarWords")) {
+    event.respondWith(
+      (async () => {
+        try {
+          console.log("similarWords tentou rede")
+          const response = await fetch(event.request);
+          return response;
+        } catch (err) {
+          console.log("similarWords não encontrou rede e tentou cache")
+          const cache = await caches.open("verbs-cache");
+          const fallback = await cache.match("/api/allVerbs");
+          if (fallback) {
+            const json = await fallback.json();
+            const url = new URL(event.request.url);
+            const verb = url.searchParams.get("verb");
+            if (!verb) {
+              return new Response(JSON.stringify(null), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+            const result = await getSimilarVerbs(verb, json);
+            console.log("similarWords no fallback do sw:", JSON.stringify(result))
+            return new Response(JSON.stringify(result), {
+              headers: { 'Content-Type': 'application/json' },
+              status: 200
+            });
+          }
+
+          // Falha total: sem rede e sem cache
+          return new Response(JSON.stringify(null), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }
       })()
     );
   }
@@ -58,61 +173,41 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       (async () => {
         const response = await fetch(event.request);
-        return response; // Response válido
+        return response;
       })()
     );
   }
 });
 
 const JSON_URLS = [
-  { url: "/json/allVerbs.json", cacheName: CACHE_ALLVERBS, type: "ALLVERBS_UPDATED" },
+  { url: "/api/allVerbs", cacheName: CACHE_ALLVERBS, type: "ALLVERBS_UPDATED" },
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       try {
-        for (const json of JSON_URLS) {
-          const cache = await caches.open(json.cacheName);
-          const keys = await cache.keys();
-          // se existir key diferente da atual -> remove
-          for (const req of keys) {
-            if (req.url !== new URL(json.url, self.location.origin).href) {
-              await cache.delete(req);
-              console.log("🗑️ Removida key antiga:", req.url, "de", json.cacheName);
+        await Promise.all(JSON_URLS.map(async (json) => {
+          try {
+            const cache = await caches.open(json.cacheName);
+            const keys = await cache.keys();
+            for (const req of keys) {
+              if (req.url !== new URL(json.url, self.location.origin).href) {
+                await cache.delete(req);
+              }
             }
+            const response = await fetch(json.url, { cache: "no-store" });
+            if (!response.ok) throw new Error(`Erro: ${response.status}`);
+            await cache.put(json.url, response.clone());
+            console.log("dados inseridos em verbs-cache:", await response.json())
+          } catch (error) {
+            console.warn(`Falha ao pré-cachear ${json.url}:`, error);
           }
-          const response = await fetch(json.url, { cache: "no-store" });
-          await cache.put(json.url, response.clone());
-        }
+        }));
         self.skipWaiting(); // ativa SW imediatamente
       } catch (err) {
         console.warn("⚠️ Erro ao pré-cachear JSONs:", err);
       }
-    })()
-  );
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    (async () => {
-      const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map((cacheName) => {
-          const isValid =
-            cacheName === "pages" ||
-            cacheName === "serwist-precache-v2-http://localhost:3000/" ||
-            cacheName === "serwist-precache-v2-https://conjugador-gules.vercel.app/" ||
-            cacheName === "conj-cache" ||
-            cacheName === "verbs-cache" ||
-            cacheName === "rules-cache"
-          if (!isValid) {
-            console.log("🗑️ Deletando cache inútil:", cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-      await self.clients.claim();
     })()
   );
 });

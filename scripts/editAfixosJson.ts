@@ -5,7 +5,7 @@ import { nw } from '../src/lib/ssr/normalizeVerb';
 function editAfixosJson() {
 
   const caminhoTxt = path.join(process.cwd(), 'lists', 'afixos.txt');
-  const caminhoJson = path.join(process.cwd(), 'public', 'json', 'afixos.json');
+  const caminhoJson = path.join(process.cwd(), 'src', 'json', 'afixos.json');
 
   const dados = fs.readFileSync(caminhoTxt, 'utf-8');
 

@@ -1,10 +1,7 @@
 'use server'
 
-import jsonData from "../../json/allVerbs.json";
 import { AllVerbsEntry } from "../../types";
 import { ni } from "./normalizeVerb";
-
-const data: AllVerbsEntry = jsonData;
 
 function levenshtein(a: string, b: string): number {
   const tmp: number[][] = [];
@@ -53,7 +50,9 @@ function combinedSimilarity(a: string, b: string): number {
   return (levenshteinScore * 0.4) + (substringScore * 0.6) + halfWeight;
 }
 
-export function getSimilarVerbs(verb: string): string[] {
+export async function getSimilarVerbs(verb: string, allVerbsJson: AllVerbsEntry): Promise<string[]> {
+
+  const data: AllVerbsEntry = allVerbsJson;
   const normalizedVerb = ni(verb);
   const similarVerbs: { value: string; score: number }[] = [];
 
@@ -76,6 +75,7 @@ export function getSimilarVerbs(verb: string): string[] {
   similarVerbs.sort((a, b) => b.score - a.score);
 
   const uniqueVerbs = Array.from(new Set(similarVerbs.map(v => v.value)));
+  // console.log(uniqueVerbs)
 
   return uniqueVerbs.slice(0, 5);
 }

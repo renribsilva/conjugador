@@ -1,34 +1,30 @@
 'use server'
 
 import { NextApiResponse, NextApiRequest } from 'next';
-import { loadAllVerbObject, loadIrregObject } from '../../lib/ssr/jsonLoad';
+import { loadAllVerbObject } from '../../lib/ssr/jsonLoad';
 import { conjugateVerb } from '../../lib/ssr/conjugateVerb';
 import { ni } from '../../lib/ssr/normalizeVerb';
-import { pattern } from '../../lib/ssr/certainObjects';
 
 export default async function handler(
   request: NextApiRequest,
   response: NextApiResponse,
 ) {
-  
-  if (request.method === 'POST') {
-    try {
-      const { verb } = request.body;
-      if (!verb || typeof verb !== 'string') {
-        return response.status(200).json ({ conjugations: null, propOfVerb: pattern }) 
-      }
-      const [allVerbJson, regJson] = await Promise.all([
-        loadAllVerbObject(),
-        loadIrregObject()
-      ]);
-      if (!allVerbJson || !regJson ) return ({ conjugations: null, propOfVerb: pattern })
-      const conjugations = await conjugateVerb(ni(verb), allVerbJson)
-      // console.dir(conjugations, {depth: null, colors: true})
-      return response.status(200).json(conjugations);
-    } catch (error) {
-      return response.status(200).json({ conjugations: null, propOfVerb: pattern });
+  // Verifica se o método da requisição é POST
+  if (request.method !== 'GET') {
+    return response.status(405).json({ error: 'Método não permitido. Use POST.' });
+  }
+  try {
+    const { verb } = request.query;
+    if (!verb || typeof verb !== 'string') {
+      return response.status(400).json({ error: 'Entrada inválida: "verb" é obrigatório e deve ser uma string.' });
     }
-  } else {
-    return response.status(200).json({ conjugations: null, propOfVerb: pattern });
+    const allVerbJson = await loadAllVerbObject();
+    if (!allVerbJson) {
+      return response.status(500).json({ error: 'Erro ao carregar os dados necessários.' });
+    }
+    const conjugations = await conjugateVerb(ni(verb) as string, allVerbJson);
+    return response.status(200).json(conjugations);
+  } catch (error: any) {
+    throw error
   }
 }

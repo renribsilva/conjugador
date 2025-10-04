@@ -282,20 +282,20 @@ export async function conjugateVerb (verb: string, allVerbsJson: object) {
     }
   );
 
-  // console.log(accumulatedResult)
+  // const conjugations: Record<string, any> = {};
+  // for (const [tense, reg] of Object.entries(conj)) {
+  //   conjugations[tense] = reg;
+  // }
 
-  const conjugations: Record<string, any> = {};
-  for (const [tense, reg] of Object.entries(conj)) {
-    conjugations[tense] = reg;
-  }
-
-  // console.log(JSON.stringify(conjugations, null, 2));
-
-  return {
-    conjugations: conjugations,
+  const result = {
+    conjugations: conj,
     propOfVerb: accumulatedResult
   };
+
+  // console.log(result)
+
+  return result
   
 };
 
-// conjugateVerb("renato", regData1, allVerbsData1);
+// conjugateVerb("renato", allVerbsData1);

@@ -6,8 +6,8 @@ import readTxtLines from './utils/readTxtLines';
 import { filterNonVerbs } from './utils/filterNonVerbs';
 import { pullLibreOfficeWords } from './utils/pullLibreOfficeWords';
 import { conjugateVerb } from '../src/lib/ssr/conjugateVerb';
-import irregJson from "../public/json/rulesByTerm.json"
-import allVerbsJson from "../public/json/allVerbs.json"
+import irregJson from "../src/json/rulesByTerm.json"
+import allVerbsJson from "../src/json/allVerbs.json"
 import modelsJson from "../src/json/models.json"
 import groupedModelsJson from "../src/json/groupedModels.json"
 
