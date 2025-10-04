@@ -432,7 +432,7 @@ export const flowOfReact = () => {
   }
 
   const dependencies = [
-    state.isDisabled,
+    state.inputReq,
   ];
 
   useEffect(() => {

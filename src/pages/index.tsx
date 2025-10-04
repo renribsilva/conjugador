@@ -245,7 +245,7 @@ const Index = () => {
                       && state.conjugations === null 
                       && !state.showButton
                       && !state.loading
-                      && (state.showHome)
+                      && state.showHome
                       ? styles.active 
                       : styles.inactive
                     }`}
@@ -262,7 +262,7 @@ const Index = () => {
                       && state.conjugations === null 
                       && !state.showButton
                       && !state.loading
-                      && (state.showStatistic)
+                      && state.showStatistic
                       ? styles.active 
                       : styles.inactive
                     }`}
@@ -279,7 +279,7 @@ const Index = () => {
                       && state.conjugations === null 
                       && !state.showButton
                       && !state.loading
-                      && (state.showSobre)
+                      && state.showSobre
                       ? styles.active 
                       : styles.inactive
                     }`}
