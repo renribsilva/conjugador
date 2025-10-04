@@ -62,7 +62,28 @@ export const flowOfReact = () => {
 
   const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
 
-    if (event.key === "Enter" && state.inputValue !== "") {      
+    if (event.key === "Enter" && state.inputValue !== "") {  
+      
+      setState(prev => ({
+        ...prev,
+        conjugations: null,
+        loading: true,
+        inputValue: "",
+        inputReq: state.inputValue,
+        showConjugations: false,
+        showSuggestions: false,
+        showButton: false,
+        isButtonDisabled: false,
+        showHome: false,
+        showSobre: false,
+        showStatistic: false,
+        showReviewButton: false,
+        goThrough: false,
+        enter: false,
+        progress: 25,
+        isDisabled: true,
+      }))
+
       event.preventDefault();      
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
@@ -94,19 +115,7 @@ export const flowOfReact = () => {
 
     setState(prev => ({
       ...prev,
-      conjugations: null,
-      loading: true,
-      inputValue: "",
-      inputReq: state.inputValue,
-      showConjugations: false,
       suggestions: suggestions,
-      showSuggestions: false,
-      showButton: false,
-      isButtonDisabled: false,
-      showHome: false,
-      showSobre: false,
-      showStatistic: false,
-      showReviewButton: false,
 
       foundVerb: null,
       termination: null,
@@ -118,11 +127,6 @@ export const flowOfReact = () => {
       note_ref: null,
       types: null,
       model: null,
-
-      goThrough: false,
-      enter: false,
-      progress: 25,
-      isDisabled: true,
 
       originalVerb: null,
       variationVerb: null,
