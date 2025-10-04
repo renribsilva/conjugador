@@ -32,7 +32,8 @@ export default function App({ Component, pageProps }: AppProps) {
       enableSystem={true}
     >
       <Head>
-
+  
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Conjugador de verbos da Língua Portuguesa Brasileira construído a partir da base de palavras do projeto VERO do LibreOffice." />
 
