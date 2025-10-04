@@ -10,11 +10,11 @@ const CACHE_ALLVERBS = "verbs-cache";
 class NetworkOrFallback extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
-      console.log("isvalidverb tentou rede")
+      // console.log("isvalidverb tentou rede")
       const response = await handler.fetch(request);
       return response;
     } catch (err) {
-      console.log("isvalidverb não encontrou rede e tentou cache")
+      // console.log("isvalidverb não encontrou rede e tentou cache")
       const cache = await caches.open("verbs-cache");
       const fallback = await cache.match("/api/allVerbs");
       if (fallback) {
@@ -23,7 +23,7 @@ class NetworkOrFallback extends Strategy {
         const verb = url.searchParams.get("verb");
         if (!verb) return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }))
         const result = await processVerb(verb, json);
-        console.log("isvalidverb no fallback do sw:", JSON.stringify(result))
+        // console.log("isvalidverb no fallback do sw:", JSON.stringify(result))
         return new Response(JSON.stringify(result), {
           headers: { 'Content-Type': 'application/json' },
           status: 200
@@ -83,11 +83,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       (async () => {
         try {
-          console.log("conjVerb tentou rede")
+          // console.log("conjVerb tentou rede")
           const response = await fetch(event.request);
           return response;
         } catch (err) {
-          console.log("conjVerb não encontrou rede e tentou cache")
+          // console.log("conjVerb não encontrou rede e tentou cache")
           const cache = await caches.open("verbs-cache");
           const fallback = await cache.match("/api/allVerbs");
           if (fallback) {
@@ -107,7 +107,7 @@ self.addEventListener("fetch", (event) => {
               });
             }
             const result = await conjugateVerb(verb, json);
-            console.log("conjVerbs no fallback do sw:", JSON.stringify(result))
+            // console.log("conjVerbs no fallback do sw:", JSON.stringify(result))
             return new Response(JSON.stringify(result), {
               headers: { 'Content-Type': 'application/json' },
               status: 200
@@ -134,11 +134,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       (async () => {
         try {
-          console.log("similarWords tentou rede")
+          // console.log("similarWords tentou rede")
           const response = await fetch(event.request);
           return response;
         } catch (err) {
-          console.log("similarWords não encontrou rede e tentou cache")
+          // console.log("similarWords não encontrou rede e tentou cache")
           const cache = await caches.open("verbs-cache");
           const fallback = await cache.match("/api/allVerbs");
           if (fallback) {
@@ -152,7 +152,7 @@ self.addEventListener("fetch", (event) => {
               });
             }
             const result = await getSimilarVerbs(verb, json);
-            console.log("similarWords no fallback do sw:", JSON.stringify(result))
+            // console.log("similarWords no fallback do sw:", JSON.stringify(result))
             return new Response(JSON.stringify(result), {
               headers: { 'Content-Type': 'application/json' },
               status: 200
@@ -199,7 +199,7 @@ self.addEventListener("install", (event) => {
             const response = await fetch(json.url, { cache: "no-store" });
             if (!response.ok) throw new Error(`Erro: ${response.status}`);
             await cache.put(json.url, response.clone());
-            console.log("dados inseridos em verbs-cache:", await response.json())
+            // console.log("dados inseridos em verbs-cache:", await response.json())
           } catch (error) {
             console.warn(`Falha ao pré-cachear ${json.url}:`, error);
           }
