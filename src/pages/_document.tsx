@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="pt-BR">
       <Head>
+        <meta charSet="UTF-8" />
         {/* Manifest do PWA */}
         <link rel="manifest" href="/manifest.json" />
       </Head>
