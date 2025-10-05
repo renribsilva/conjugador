@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { ni } from "../ssr/normalizeVerb";
 import type { flowTypes } from "../../types";
-import { initialFlow } from "../ssr/certainObjects";
+import { initialFlow } from "./initalFlow";
 
 export const flowOfReact = () => { 
 

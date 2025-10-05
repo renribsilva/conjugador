@@ -15,7 +15,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
       return (
         <a 
-          className={styles.customA} 
           {...props} 
           target={!isFooterLink ? "_blank" : undefined} 
           rel={!isFooterLink ? "noopener noreferrer" : undefined} 

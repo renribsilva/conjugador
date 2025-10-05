@@ -1,5 +1,3 @@
-'use server'
-
 export const initialFlow = {
   conjugations: null,
   inputValue: "",
@@ -49,19 +47,4 @@ export const initialFlow = {
   canonical: "canonical1",
 
   postReq: null
-}
-
-export const pattern = {
-  hasTargetCanonical1: false,
-  hasTargetCanonical2: false,
-  hasTargetAbundance1: false,
-  hasTargetAbundance2: false,
-  termination: null,
-  termEntrie: null,
-  verb: null,
-  types: null,
-  note_plain: null,
-  note_ref: null,
-  afixo: null,
-  model: null
 }
