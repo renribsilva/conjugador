@@ -13,6 +13,30 @@ const nextConfig = {
   webpack(config) {
     return config;
   },
+  async headers() {
+    return [
+      {
+        source: "/manifest.json",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+          },
+        ],
+      },
+      {
+        source: "/:all*(png|ico|svg|jpg|jpeg|webp)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value:
+              "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 /** Configuração do MDX */
