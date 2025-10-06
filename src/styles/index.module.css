@@ -13,7 +13,7 @@
 @media (max-width: 800px) {
   .navbar_container {
     height: auto;
-    padding-top: 15px;
+    padding-top: 30px;
   }
 }
 
@@ -179,7 +179,7 @@
   /* background-color: rgb(180, 206, 197); */
   max-width:840px;
   min-width:801px;
-  min-height: 260px;
+  min-height: calc(100dvh - 400px);
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
 }
@@ -187,6 +187,7 @@
 @media (max-width: 800px) {
   .panel {
     /* background-color: #4a8df8; */
+    min-height: calc(100dvh - 450px);
     margin-top: 15px;
     min-width: 100%
   }
@@ -288,7 +289,7 @@
 /******************************************************/
 
 .foot_info {
-  /* background-color: #4a8df8; */
+  background-color: #4a8df8;
   padding-top: 40px;
 }
 
