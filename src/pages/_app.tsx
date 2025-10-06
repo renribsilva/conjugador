@@ -50,17 +50,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:provider_name" content="Conjugador Gules" />
 
         <meta name="theme-color" content="#ffffff" />
-        <link rel="apple-touch-icon" href="/gules192.png" />
+        <link rel="apple-touch-icon" href="/gules192-v1.png" />
         {/*Icon for iOS devices*/}
         <link
           rel="apple-touch-icon"
           sizes="192x192"
-          href="gules192.png"
+          href="gules192-v1.png"
         />
         {/*Splash screen for iOS devices*/}
         <link
           rel="apple-touch-startup-image"
-          href="/gules512.png"
+          href="/gules512-v1.png"
           sizes="512X512"
         />
         
