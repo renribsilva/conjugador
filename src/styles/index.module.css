@@ -289,8 +289,9 @@
 /******************************************************/
 
 .foot_info {
-  background-color: #4a8df8;
+  /* background-color: #4a8df8; */
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .foot_info_div {
