@@ -177,8 +177,7 @@
 
 .panel {
   /* background-color: rgb(180, 206, 197); */
-  max-width:840px;
-  min-width:801px;
+  width: 835px;
   min-height: calc(100svh - 300px);
   border-radius: 0.4rem;
   box-shadow: var(--largeshadow);
