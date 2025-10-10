@@ -23,7 +23,7 @@
       }
     ],
     "strictNullChecks": true,
-    "target": "ES2017",
+    "target": "ESNext",
     "types": [
       "@serwist/next/typings"
     ]
