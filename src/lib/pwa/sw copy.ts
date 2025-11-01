@@ -10,6 +10,10 @@ const CACHE_ALLVERBS = "verbs-cache";
 class isValidVerb extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
+      // console.log("isvalidverb tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
       // console.log("isvalidverb não encontrou rede e tentou cache")
       const cache = await caches.open("verbs-cache");
       const fallback = await cache.match("/api/allVerbs");
@@ -25,12 +29,7 @@ class isValidVerb extends Strategy {
           status: 200
         });
       }
-    } catch (err) {
-      // console.log("isvalidverb tentou rede")
-      const response = await handler.fetch(request);
-      if (response.ok) {
-        return response;
-      }
+
       return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }), {
         status: 503,
         headers: { 'Content-Type': 'application/json' }
@@ -42,6 +41,10 @@ class isValidVerb extends Strategy {
 class conjVerb extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
+      // console.log("conjVerb tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
       // console.log("conjVerb não encontrou rede e tentou cache")
       const cache = await caches.open("verbs-cache");
       const fallback = await cache.match("/api/allVerbs");
@@ -63,12 +66,7 @@ class conjVerb extends Strategy {
           status: 200
         });
       }
-    } catch (err) {
-      // console.log("conjVerb tentou rede")
-      const response = await handler.fetch(request);
-      if (response.ok) {
-        return response;
-      }
+
       return new Response(JSON.stringify({
           model: null,
           only_reflexive: null,
@@ -86,6 +84,10 @@ class conjVerb extends Strategy {
 class similarWords extends Strategy {
   async _handle(request: Request, handler: StrategyHandler) {
     try {
+      // console.log("similarWords tentou rede")
+      const response = await handler.fetch(request);
+      return response;
+    } catch (err) {
       // console.log("similarWords não encontrou rede e tentou cache")
       const cache = await caches.open("verbs-cache");
       const fallback = await cache.match("/api/allVerbs");
@@ -101,12 +103,7 @@ class similarWords extends Strategy {
           status: 200
         });
       }
-    } catch (err) {
-      // console.log("similarWords tentou rede")
-      const response = await handler.fetch(request);
-      if (response.ok) {
-        return response;
-      }
+
       return new Response(JSON.stringify(null), {
         status: 503,
         headers: { 'Content-Type': 'application/json' }
