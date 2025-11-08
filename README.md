@@ -39,24 +39,15 @@ sudo npm i
 
 ## Integrar com o Postgres
 
-Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel.com/docs/postgres) (optou-se pelo provedor Neon). Nele, apenas duas tabelas são necessárias: uma para armazenar a conjugação e outra para armazenar as sugestões de novos verbos.
+Essa aplicação utiliza o serviço gratuito [Postgres da Vercel](https://vercel.com/docs/postgres) (optou-se pelo provedor Neon). Nele, apenas uma tabela é necessária: para armazenar as sugestões de novos verbos.
 
 ```
 List of relations
 Schema	Name        	Type	Owner
-public 	json 	        table 	default
 public 	requisitions 	table 	default
 ```
 
-A primeira deve ser nomeada `json`, com uma única coluna nomeada de `conjugations`.
- 
- ```
- Table "public.json"
-Column	        Type
-conjugations 	jsonb
- ```
- 
-A segunda deve ser nomeada `requisitions`, com duas colunas: `type` e `data`. 
+A tabela deve ser nomeada `requisitions`, com duas colunas: `type` e `data`. 
 
 ```
 Table "public.requisitions"
