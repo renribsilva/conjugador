@@ -62,15 +62,17 @@ Assim, nos bastidores (_server side rendering_), o radical da palavra pesquisada
 é extraído, a fim de compor as flexões de acordo com as regras de conjugação
 pré-definidas, gerando todas as formas verbais correspondentes a cada modo, tempo e flexão. 
 Em seguida, as formas conjugadas são organizadas 
-e exibidas em uma tabela (_client side rendering_). 
+e exibidas em uma tabela (_client side rendering_). Nesse processo, nenhum tipo 
+de dado é coletado ou armazenado em nuvem: todo o processamento é feito no próprio
+navegador.
 
 ### Da coleta de dados solicitada
 
 Então, quer dizer que nenhum dado é coletado nessa giribosca? Pera lá! 
-Sim, mas só se você quiser. Os dados utilizados por esta aplicação só 
-são armazenados se você permitir. Como assim? Bem, os únicos dados que 
+Sim, mas só se você quiser. A rigor, os únicos dados que 
 interessam a este conjugador são aqueles que podem ajudar a corrigir 
-erros ou expandir a lista de verbos. E como isso funciona? Com botões! 
+erros ou expandir a lista de verbos. Assim, quando necessário, esta aplicação
+pede solicitação para armazenar algum dado. E como isso funciona? Com botões! 
 No rodapé da página de conjugação, há um botão que você pode clicar caso 
 encontre algum erro. Além disso, quando o conjugador não encontra a palavra 
 digitada na nossa lista de verbos, outro botão aparece, permitindo que você 
