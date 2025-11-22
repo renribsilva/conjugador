@@ -55,17 +55,14 @@ combinar as partes de acordo com as regras estabelecidas.
 
 Tudo acontece com um simples pressionar da tecla Enter na caixa de texto. 
 Como funciona isso? Ao pressionar Enter, a palavra digitada é pesquisada 
-na lista de palavras previamente processada, e dela é extraído um radical. 
-Em seguida, esse radical é combinado com suas respectivas regras de conjugação, 
-gerando todas as formas verbais correspondentes a cada modo, tempo e flexão. 
-Após a criação, as conjugações são armazenadas temporariamente na nuvem, 
-utilizando o PostgreSQL. A partir de lá, as formas conjugadas são organizadas 
-e exibidas em uma tabela. Tudo isso ocorre de maneira menos rápida quando 
-comparado a conjugadores que já têm as conjugações prontas e que só precisam 
-exibi-las. Diferentemente disso, fazemos a conjugação na hora e a descartamos 
-depois. Com efeito, nenhuma informação é armazenada permanentemente na nuvem: 
-a cada nova requisição, os dados da conjugação anterior são apagados e o 
-processo é reiniciado do zero.
+na lista de palavras previamente processada.
+Essa lista fica armazenada em cachê, utilizando o espaço de armazenamento
+do próprio navegador, o que permite ao site funcionar mesmo sem internet. 
+Assim, nos bastidores (_server side rendering_), o radical da palavra pesquisada
+é extraído, a fim de compor as flexões de acordo com as regras de conjugação
+pré-definidas, gerando todas as formas verbais correspondentes a cada modo, tempo e flexão. 
+Em seguida, as formas conjugadas são organizadas 
+e exibidas em uma tabela (_client side rendering_). 
 
 ### Da coleta de dados solicitada
 
