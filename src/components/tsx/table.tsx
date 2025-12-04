@@ -26,7 +26,7 @@ export default function Table ({ conj, canonical }: { conj: Conjugation, canonic
   const [activePronoun, setActivePronoun] = useState<string>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ?? "ela";
+      return saved ?? "ela"; // se não tiver nada, retorna "ela"
     }
     return "ela";
   });
