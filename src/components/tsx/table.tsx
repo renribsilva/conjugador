@@ -1,4 +1,5 @@
-// components/ConjugationSection.tsx
+'use client'
+
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/components.module.css";
 import { nw } from "../../lib/ssr/normalizeVerb";
@@ -17,11 +18,40 @@ const pronouns = {
   elus: "elus"
 };
 
+const STORAGE_KEY = "activePronoun";
+const EXPIRATION_KEY = "activePronounExpires";
+
 export default function Table ({ conj, canonical }: { conj: Conjugation, canonical: string }) {
 
-  const [activePronoun, setActiveButton] = useState<string | null>("ela");
+  const [activePronoun, setActivePronoun] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ?? "ela";
+    }
+    return "ela";
+  });
   const [isSeActive, setSeActive] = useState(false);
   const [canonicalType, setCanonicalType] = useState(canonical)
+
+  useEffect(() => {
+    if (isOnlyReflexive) {
+      setSeActive(true);
+    }
+    const savedPronoun = localStorage.getItem(STORAGE_KEY);
+    const expires = localStorage.getItem(EXPIRATION_KEY);
+    if (savedPronoun && expires) {
+      const expiresDate = new Date(expires);
+      const now = new Date();
+      if (now < expiresDate) {
+        setActivePronoun(savedPronoun); // mantém o pronome salvo
+      } else {
+        // expirou, limpa storage
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(EXPIRATION_KEY);
+        setActivePronoun("ela"); // volta para o padrão
+      }
+    }
+  }, []);
   
   const conjugations = conj[canonicalType]
   
@@ -29,7 +59,11 @@ export default function Table ({ conj, canonical }: { conj: Conjugation, canonic
   const isMultiple = conj.multiple_conj[0]
 
   const handlePronounClick = (pronoun: string) => {
-    setActiveButton(pronoun);
+    setActivePronoun(pronoun);
+    localStorage.setItem(STORAGE_KEY, pronoun);
+    const expires = new Date();
+    expires.setDate(expires.getDate() + 1); // expira em 1 dia
+    localStorage.setItem(EXPIRATION_KEY, expires.toISOString());
   };
 
   const handleSeClick = () => {
@@ -160,12 +194,6 @@ export default function Table ({ conj, canonical }: { conj: Conjugation, canonic
         setSeActive(true);
       }
     }, [activePronoun, isSeActive, canonicalType]);
-
-    useEffect(() => {
-      if (isOnlyReflexive) {
-        setSeActive(true);
-      }
-    }, []);
 
     const Line = ({p, q, suffix, removeS, order}: {p:string, q: string, suffix?: string, removeS?: boolean, order: number}) => {
       
