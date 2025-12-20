@@ -9,9 +9,6 @@
 # env
 .env
 
-# workspace
-conjugador.code-workspace
-
 # drafts
 drafts
 
