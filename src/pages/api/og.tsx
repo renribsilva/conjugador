@@ -15,9 +15,9 @@ export default async function handler(req: NextRequest) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#090d16",
+          backgroundColor: "#0d0d0d",
           fontFamily: "sans-serif",
-          padding: "70px 80px",
+          padding: "80px 90px",
         }}
       >
         {/* Linha superior minimalista */}
@@ -31,51 +31,50 @@ export default async function handler(req: NextRequest) {
         >
           <span
             style={{
-              fontSize: 18,
-              color: "#64748b",
-              letterSpacing: "0.2em",
+              fontSize: 16,
+              color: "#737373",
+              letterSpacing: "0.25em",
               textTransform: "uppercase",
-              fontWeight: 600,
+              fontWeight: 700,
             }}
           >
-            Conjugador de Verbos
+            Língua Portuguesa Brasileira
           </span>
           <div
             style={{
-              width: "40px",
-              height: "2px",
-              backgroundColor: "#ef4444",
+              width: "48px",
+              height: "3px",
+              backgroundColor: "#dc2626",
             }}
           />
         </div>
 
-        {/* Bloco central construtivista (G + Textos) */}
+        {/* Bloco central construtivista: G + Títulos directos no fundo */}
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            gap: "60px",
+            gap: "56px",
             width: "100%",
           }}
         >
-          {/* Bloco geométrico do G */}
+          {/* Bloco tipográfico puro do G */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "#ef4444",
-              borderRadius: "20px",
-              width: "130px",
-              height: "130px",
+              backgroundColor: "#dc2626",
+              width: "140px",
+              height: "140px",
             }}
           >
             <span
               style={{
-                fontSize: "80px",
+                fontSize: "92px",
                 fontWeight: 900,
-                color: "#090d16",
+                color: "#0d0d0d",
                 lineHeight: 1,
               }}
             >
@@ -83,7 +82,7 @@ export default async function handler(req: NextRequest) {
             </span>
           </div>
 
-          {/* Tipografia principal */}
+          {/* Tipografia */}
           <div
             style={{
               display: "flex",
@@ -94,12 +93,12 @@ export default async function handler(req: NextRequest) {
           >
             <h1
               style={{
-                fontSize: 64,
-                fontWeight: 800,
-                color: "#ffffff",
-                margin: "0 0 16px 0",
+                fontSize: 68,
+                fontWeight: 900,
+                color: "#fafafa",
+                margin: "0 0 14px 0",
                 letterSpacing: "-0.03em",
-                lineHeight: 1.05,
+                lineHeight: 1,
               }}
             >
               Conjugador Gules
@@ -107,42 +106,43 @@ export default async function handler(req: NextRequest) {
 
             <p
               style={{
-                fontSize: 22,
-                color: "#94a3b8",
+                fontSize: 24,
+                color: "#a3a3a3",
                 margin: 0,
-                lineHeight: 1.5,
-                maxWidth: "700px",
+                lineHeight: 1.4,
+                maxWidth: "640px",
               }}
             >
-              Consulte a conjugação completa de verbos da Língua Portuguesa
-              Brasileira a partir da base do projeto VERO.
+              Consulte a conjugação completa de verbos a partir da base de
+              palavras do projeto VERO.
             </p>
           </div>
         </div>
 
-        {/* Rodapé minimalista */}
+        {/* Rodapé cru */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "12px",
+            gap: "10px",
           }}
         >
           <span
             style={{
-              fontSize: 16,
-              color: "#ef4444",
-              fontWeight: 700,
-              letterSpacing: "0.05em",
+              fontSize: 14,
+              color: "#dc2626",
+              fontWeight: 900,
             }}
           >
-            ●
+            //
           </span>
           <span
             style={{
-              fontSize: 16,
-              color: "#64748b",
-              letterSpacing: "0.05em",
+              fontSize: 15,
+              color: "#737373",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              fontWeight: 600,
             }}
           >
             conjugador-gules.vercel.app
