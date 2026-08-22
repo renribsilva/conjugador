@@ -822,9 +822,10 @@ const Index = () => {
                         >
                           <Image
                             src="/lular.png"
-                            alt="Ilustração do verbo lular"
+                            alt="Foto do rosto do Lula rodeado de flores"
                             width={165}
                             height={200}
+                            className={styles.header_image}
                           />
                         </div>
                       )}

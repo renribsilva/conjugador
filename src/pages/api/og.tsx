@@ -14,58 +14,76 @@ export default async function handler(req: NextRequest) {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "linear-gradient(135deg, #090d16 0%, #171f33 100%)",
+          justifyContent: "space-between",
+          backgroundColor: "#090d16",
           fontFamily: "sans-serif",
-          padding: "60px",
+          padding: "70px 80px",
         }}
       >
-        {/* Card Glassmorphism Principal */}
+        {/* Linha superior minimalista */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <span
+            style={{
+              fontSize: 18,
+              color: "#64748b",
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              fontWeight: 600,
+            }}
+          >
+            Conjugador de Verbos
+          </span>
+          <div
+            style={{
+              width: "40px",
+              height: "2px",
+              backgroundColor: "#ef4444",
+            }}
+          />
+        </div>
+
+        {/* Bloco central construtivista (G + Textos) */}
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(255, 255, 255, 0.03)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
-            borderRadius: "32px",
-            padding: "50px 70px",
-            boxShadow: "0 30px 60px rgba(0, 0, 0, 0.5)",
-            gap: "48px",
+            gap: "60px",
             width: "100%",
-            maxWidth: "1060px",
           }}
         >
-          {/* Ícone do G Vermelho Estilizado à Esquerda */}
+          {/* Bloco geométrico do G */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "rgba(239, 68, 68, 0.12)",
-              border: "2px solid rgba(239, 68, 68, 0.3)",
-              borderRadius: "32px",
-              width: "140px",
-              height: "140px",
-              boxShadow: "0 10px 30px rgba(239, 68, 68, 0.2)",
+              backgroundColor: "#ef4444",
+              borderRadius: "20px",
+              width: "130px",
+              height: "130px",
             }}
           >
             <span
               style={{
-                fontSize: "90px",
+                fontSize: "80px",
                 fontWeight: 900,
-                color: "#ef4444",
+                color: "#090d16",
                 lineHeight: 1,
-                fontFamily: "sans-serif",
               }}
             >
               G
             </span>
           </div>
 
-          {/* Bloco de Textos */}
+          {/* Tipografia principal */}
           <div
             style={{
               display: "flex",
@@ -74,34 +92,14 @@ export default async function handler(req: NextRequest) {
               flex: 1,
             }}
           >
-            {/* Badge */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "rgba(59, 130, 246, 0.15)",
-                color: "#60a5fa",
-                padding: "6px 16px",
-                borderRadius: "20px",
-                fontSize: 15,
-                fontWeight: 700,
-                marginBottom: "14px",
-                width: "fit-content",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-              }}
-            >
-              Língua Portuguesa Brasileira
-            </div>
-
             <h1
               style={{
-                fontSize: 58,
+                fontSize: 64,
                 fontWeight: 800,
                 color: "#ffffff",
-                margin: "0 0 12px 0",
+                margin: "0 0 16px 0",
                 letterSpacing: "-0.03em",
-                lineHeight: 1.1,
+                lineHeight: 1.05,
               }}
             >
               Conjugador Gules
@@ -112,14 +110,43 @@ export default async function handler(req: NextRequest) {
                 fontSize: 22,
                 color: "#94a3b8",
                 margin: 0,
-                lineHeight: 1.45,
-                maxWidth: "580px",
+                lineHeight: 1.5,
+                maxWidth: "700px",
               }}
             >
-              Consulte a conjugação completa de verbos construída a partir da
-              base de palavras do projeto VERO.
+              Consulte a conjugação completa de verbos da Língua Portuguesa
+              Brasileira a partir da base do projeto VERO.
             </p>
           </div>
+        </div>
+
+        {/* Rodapé minimalista */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <span
+            style={{
+              fontSize: 16,
+              color: "#ef4444",
+              fontWeight: 700,
+              letterSpacing: "0.05em",
+            }}
+          >
+            ●
+          </span>
+          <span
+            style={{
+              fontSize: 16,
+              color: "#64748b",
+              letterSpacing: "0.05em",
+            }}
+          >
+            conjugador-gules.vercel.app
+          </span>
         </div>
       </div>,
       {
