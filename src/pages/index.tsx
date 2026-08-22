@@ -792,7 +792,15 @@ const Index = () => {
                   ) === "---") && (
                   <>
                     <div className={styles.header}>
-                      <div className={styles.header_verb}>
+                      <div
+                        className={styles.header_verb}
+                        style={{
+                          marginRight:
+                            state.foundVerb?.toLocaleLowerCase() === "lular"
+                              ? "180px"
+                              : "0px",
+                        }}
+                      >
                         <h2>
                           <span>Verbo </span>
                           <span>{state.foundVerb} </span>
