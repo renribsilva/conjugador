@@ -29,5 +29,8 @@
     "@types/web-push": "^3.6.4",
     "globals": "^15.12.0",
     "typescript": "5.6.3"
+  },
+  "allowScripts": {
+    "bufferutil@4.1.0": true
   }
 }
