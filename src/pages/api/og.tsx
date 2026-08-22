@@ -1,18 +1,17 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
-import fs from "fs";
-import path from "path";
 
 export const config = {
-  runtime: "nodejs", // Alterado para nodejs para permitir a leitura do arquivo local com fs
+  runtime: "edge",
 };
 
 export default async function handler(req: NextRequest) {
   try {
-    // Lê o logo diretamente da pasta public de forma síncrona
-    const filePath = path.join(process.cwd(), "public", "gules192-v1.png");
-    const logoBuffer = fs.readFileSync(filePath);
-    const logoBase64 = `data:image/png;base64,${logoBuffer.toString("base64")}`;
+    const baseUrl = req.nextUrl.origin;
+
+    // Busca o logo como ArrayBuffer direto do servidor em execução
+    const logoRes = await fetch(`${baseUrl}/gules512-v1.png`);
+    const logoArrayBuffer = await logoRes.arrayBuffer();
 
     return new ImageResponse(
       <div
@@ -23,49 +22,50 @@ export default async function handler(req: NextRequest) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)",
+          background: "linear-gradient(135deg, #090d16 0%, #171f33 100%)",
           fontFamily: "sans-serif",
           padding: "60px",
         }}
       >
-        {/* Card principal estilo glassmorphism */}
+        {/* Card Glassmorphism Principal */}
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(255, 255, 255, 0.05)",
-            border: "1px solid rgba(255, 255, 255, 0.15)",
+            backgroundColor: "rgba(255, 255, 255, 0.03)",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
             borderRadius: "32px",
-            padding: "60px 80px",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
-            gap: "50px",
+            padding: "50px 70px",
+            boxShadow: "0 30px 60px rgba(0, 0, 0, 0.5)",
+            gap: "48px",
             width: "100%",
-            maxWidth: "1050px",
+            maxWidth: "1060px",
           }}
         >
-          {/* Logo com sombra e container */}
+          {/* Container do Logo com fundo iluminado */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "rgba(255, 255, 255, 0.9)",
-              borderRadius: "24px",
-              padding: "20px",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+              backgroundColor: "rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              borderRadius: "28px",
+              padding: "24px",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
             }}
           >
             <img
-              src={logoBase64}
-              width="130"
-              height="130"
+              src={logoArrayBuffer as any}
+              width="140"
+              height="140"
               style={{ objectFit: "contain" }}
             />
           </div>
 
-          {/* Textos */}
+          {/* Bloco de Textos */}
           <div
             style={{
               display: "flex",
@@ -74,29 +74,29 @@ export default async function handler(req: NextRequest) {
               flex: 1,
             }}
           >
-            {/* Badge superior */}
+            {/* Badge */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                backgroundColor: "rgba(99, 102, 241, 0.2)",
-                color: "#818cf8",
+                backgroundColor: "rgba(59, 130, 246, 0.15)",
+                color: "#60a5fa",
                 padding: "6px 16px",
                 borderRadius: "20px",
-                fontSize: 16,
-                fontWeight: 600,
-                marginBottom: "16px",
+                fontSize: 15,
+                fontWeight: 700,
+                marginBottom: "14px",
                 width: "fit-content",
                 textTransform: "uppercase",
-                letterSpacing: "0.05em",
+                letterSpacing: "0.08em",
               }}
             >
-              Língua Portuguesa
+              Língua Portuguesa Brasileira
             </div>
 
             <h1
               style={{
-                fontSize: 56,
+                fontSize: 58,
                 fontWeight: 800,
                 color: "#ffffff",
                 margin: "0 0 12px 0",
@@ -106,16 +106,18 @@ export default async function handler(req: NextRequest) {
             >
               Conjugador Gules
             </h1>
+
             <p
               style={{
                 fontSize: 22,
                 color: "#94a3b8",
                 margin: 0,
-                lineHeight: 1.4,
+                lineHeight: 1.45,
+                maxWidth: "580px",
               }}
             >
-              Conjugador de verbos da Língua Portuguesa Brasileira construído
-              com base no projeto VERO.
+              Consulte a conjugação completa de verbos construída a partir da
+              base de palavras do projeto VERO.
             </p>
           </div>
         </div>
