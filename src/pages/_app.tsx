@@ -11,7 +11,7 @@ import { Serwist } from "@serwist/window";
 const title = "Conjugador Gules";
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira";
 const url = "https://conjugador-gules.vercel.app";
-const image = "https://conjugador-gules.vercel.app/gules512-v1.png";
+const image = "https://conjugador-gules.vercel.app/gules256-v1.png";
 
 export default function App({ Component, pageProps }: AppProps) {
   const components = useMDXComponents({});
