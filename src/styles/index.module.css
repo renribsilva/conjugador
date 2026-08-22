@@ -41,7 +41,7 @@
   .input_container {
     height: 100px;
     justify-content: center;
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -54,14 +54,14 @@
   justify-content: center;
   font-size: 18px;
   color: var(--foreground);
-  outline: none; 
+  outline: none;
   background-color: var(--button);
   width: 300px;
   z-index: 999;
 }
 
 .input::placeholder {
-  color: var(--foreground); 
+  color: var(--foreground);
 }
 
 @media (max-width: 800px) {
@@ -73,7 +73,7 @@
 
 .buttons_container {
   /* background-color: rgb(123, 255, 0); */
-  width: 100%;  
+  width: 100%;
   height: 100%;
 }
 
@@ -95,7 +95,7 @@
 
 .button_title {
   border: none;
-  background-color:var(--background); 
+  background-color: var(--background);
   font-size: 35px;
   font-weight: 700;
   cursor: pointer;
@@ -133,8 +133,8 @@
 }
 
 .index_tabs_container .index_tabs_button:hover {
-  background-color: var(--foreground)!important;
-  color: var(--background)!important;
+  background-color: var(--foreground) !important;
+  color: var(--background) !important;
 }
 
 .index_tabs_button {
@@ -150,12 +150,12 @@
 
 .index_tabs_button.active {
   background-color: var(--foreground);
-  color:var(--background);
+  color: var(--background);
 }
 
 .index_tabs_button.inactive {
   background-color: var(--button);
-  color:var(--foreground);
+  color: var(--foreground);
 }
 
 @media (max-width: 800px) {
@@ -172,7 +172,19 @@
 .main {
   /* background-color: aquamarine; */
   display: flex;
-  justify-content: center;  
+  justify-content: center;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header_verb {
+  width: 100%;
+  margin-right: 180px;
 }
 
 .panel {
@@ -188,7 +200,7 @@
     /* background-color: #4a8df8; */
     min-height: calc(100svh - 400px);
     margin-top: 15px;
-    min-width: 100%
+    min-width: 100%;
   }
 }
 
@@ -197,14 +209,16 @@
   margin-top: 25px;
 }
 
-.references, .warning {
+.references,
+.warning {
   /* background-color: aquamarine; */
   margin-top: 20px;
   margin-inline: 20px;
   font-size: small;
 }
 
-.foundedVerb, .notFoundedVerb {
+.foundedVerb,
+.notFoundedVerb {
   /* background-color: aqua; */
   margin-inline: 10px;
 }
@@ -216,8 +230,8 @@
 }
 
 .knowmore {
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .install {
