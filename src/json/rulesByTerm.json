@@ -46731,12 +46731,12 @@
     "...": {
       "type": [1],
       "note": {
-        "plain": [],
+        "plain": ["Todos os verbos terminados em 'ular' são regulares, mas quando '-ular' é precedido de vogal formando um hiato (exceto 'enjaular') o 'u' é acentuado¹."],
         "ref": {
           "1": ["Salum MEL. Morfologia do verbo português em obras de referência [tese]. São Paulo: , Faculdade de Filosofia, Letras e Ciências Humanas; 2007."
           ]
         }
-      },
+      }, 
       "abundance1": {},
       "canonical1": {},
       "test": [false],
