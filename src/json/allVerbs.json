@@ -95647,6 +95647,13 @@
     "only_reflexive": [false],
     "multiple_conj": [false]
   },
+  "lular": {
+    "verb": ["lular"],
+    "model": [],
+    "ending": ["ular"],
+    "only_reflexive": [false],
+    "multiple_conj": [false]
+  },
   "lumiar": {
     "verb": ["lumiar"],
     "model": [9],

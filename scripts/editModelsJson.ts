@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 interface ModelsData {
   [model: string]: {
@@ -21,39 +21,38 @@ interface AllVerbsData {
 }
 
 async function editModelJson() {
-  const modelsPath = path.join(process.cwd(), 'src/json/models.json');
-  const allVerbsPath = path.join(process.cwd(), 'src/json/allVerbs.json');
+  const modelsPath = path.join(process.cwd(), "src/json/models.json");
+  const allVerbsPath = path.join(process.cwd(), "src/json/allVerbs.json");
 
   try {
     const [modelsDataStr, allVerbsDataStr] = await Promise.all([
-      fs.promises.readFile(modelsPath, 'utf8'),
-      fs.promises.readFile(allVerbsPath, 'utf8'),
+      fs.promises.readFile(modelsPath, "utf8"),
+      fs.promises.readFile(allVerbsPath, "utf8"),
     ]);
 
     const modelsData: ModelsData = JSON.parse(modelsDataStr);
     const allVerbsData: AllVerbsData = JSON.parse(allVerbsDataStr);
 
-    let totalSumModels = 0; 
-    let totalSumClass1 = 0; 
-    let totalSumClass2 = 0; 
-    const totalAllVerbs = Object.keys(allVerbsData).length; 
+    let totalSumModels = 0;
+    let totalSumClass1 = 0;
+    let totalSumClass2 = 0;
+    const totalAllVerbs = Object.keys(allVerbsData).length;
 
     for (const [modelKey, modelData] of Object.entries(modelsData)) {
-
-      if ('entries' in modelData) {
+      if ("entries" in modelData) {
         delete modelData.entries;
       }
 
       if (!modelData.group) {
-        modelData.group = []
+        modelData.group = [];
       }
 
-      const totalForModel = Object.values(allVerbsData).filter(verbData =>
-        verbData.model.includes(Number(modelKey))
+      const totalForModel = Object.values(allVerbsData).filter((verbData) =>
+        verbData.model.includes(Number(modelKey)),
       ).length;
 
-      modelData.total = [totalForModel]; 
-      totalSumModels += totalForModel; 
+      modelData.total = [totalForModel];
+      totalSumModels += totalForModel;
 
       if (modelData.class.includes(1)) {
         totalSumClass1 += totalForModel;
@@ -63,23 +62,26 @@ async function editModelJson() {
       }
     }
 
-    await fs.promises.writeFile (
+    await fs.promises.writeFile(
       modelsPath,
       JSON.stringify(modelsData, null, 2).replace(
         /\[\s*([\s\S]*?)\s*\]/g,
-        (_, p1) => `[${p1.replace(/\s*,\s*/g, ', ').replace(/\n\s*/g, '')}]`
+        (_, p1) => `[${p1.replace(/\s*,\s*/g, ", ").replace(/\n\s*/g, "")}]`,
       ),
-      'utf8'
+      "utf8",
     );
 
-    console.log('Arquivo models.json atualizado com sucesso!');
-    console.log('Total de entradas em allVerbs.json:', totalAllVerbs);
-    console.log('- não possuem conjugação estabelecida:', totalAllVerbs - (totalSumClass1 + totalSumClass2));
-    console.log('- possuem conjugação estabelecida:', totalSumModels);
-    console.log('-- regulares:', totalSumClass1);
-    console.log('-- irregulares:', totalSumClass2);
+    console.log("Arquivo models.json atualizado com sucesso!");
+    console.log("Total de entradas em allVerbs.json:", totalAllVerbs);
+    console.log(
+      "- não possuem conjugação estabelecida:",
+      totalAllVerbs - (totalSumClass1 + totalSumClass2),
+    );
+    console.log("- possuem conjugação estabelecida:", totalSumModels);
+    console.log("-- regulares:", totalSumClass1);
+    console.log("-- irregulares:", totalSumClass2);
   } catch (error) {
-    console.error('Erro ao atualizar o arquivo models.json:', error);
+    console.error("Erro ao atualizar o arquivo models.json:", error);
   }
 }
 
