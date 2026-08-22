@@ -187,6 +187,10 @@
   margin-right: 180px;
 }
 
+.header_image {
+  background-color: var(--panel);
+}
+
 .panel {
   /* background-color: rgb(180, 206, 197); */
   width: 835px;
