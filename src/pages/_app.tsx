@@ -11,7 +11,7 @@ import { Serwist } from "@serwist/window";
 const title = "Conjugador Gules";
 const description = "Conjugador de verbos da Língua Portuguesa Brasileira";
 const url = "https://conjugador-gules.vercel.app";
-const image = "https://conjugador-gules.vercel.app/gules256-v1.png";
+const image = `${url}/api/og`;
 
 export default function App({ Component, pageProps }: AppProps) {
   const components = useMDXComponents({});
@@ -50,13 +50,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
-        {/* <meta name="twitter:creator" content="@seu_usuario" /> */}
 
         <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/gules192-v1.png" />
-        {/*Icon for iOS devices*/}
         <link rel="apple-touch-icon" sizes="192x192" href="gules192-v1.png" />
-        {/*Splash screen for iOS devices*/}
         <link
           rel="apple-touch-startup-image"
           href="/gules512-v1.png"
