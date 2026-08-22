@@ -51,7 +51,7 @@ const withMDX = createMDX({
 const withSerwist = withSerwistInit({
   swSrc: "src/lib/pwa/sw.ts",
   swDest: "public/sw.js",
-  cacheOnNavigation: true, 
+  cacheOnNavigation: true,
 });
 
 /** Aplica MDX primeiro, depois Serwist */
