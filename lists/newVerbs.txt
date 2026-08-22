@@ -2892,6 +2892,7 @@ latonizar
 literalizar
 lubrinar
 luitar
+lular
 
 malenconizar
 manchetar
