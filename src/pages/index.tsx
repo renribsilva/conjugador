@@ -811,8 +811,6 @@ const Index = () => {
                           </p>
                         )}
                       </div>
-
-                      {/* Div com position absolute para flutuar sem afetar a tabela */}
                       {state.foundVerb.toLocaleLowerCase() === "lular" && (
                         <div
                           style={{

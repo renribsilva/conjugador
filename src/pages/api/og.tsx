@@ -7,12 +7,6 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
   try {
-    const baseUrl = req.nextUrl.origin;
-
-    // Busca o logo como ArrayBuffer direto do servidor em execução
-    const logoRes = await fetch(`${baseUrl}/gules512-v1.png`);
-    const logoArrayBuffer = await logoRes.arrayBuffer();
-
     return new ImageResponse(
       <div
         style={{
@@ -44,25 +38,31 @@ export default async function handler(req: NextRequest) {
             maxWidth: "1060px",
           }}
         >
-          {/* Container do Logo com fundo iluminado */}
+          {/* Ícone do G Vermelho Estilizado à Esquerda */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "rgba(255, 255, 255, 0.08)",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
-              borderRadius: "28px",
-              padding: "24px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+              backgroundColor: "rgba(239, 68, 68, 0.12)",
+              border: "2px solid rgba(239, 68, 68, 0.3)",
+              borderRadius: "32px",
+              width: "140px",
+              height: "140px",
+              boxShadow: "0 10px 30px rgba(239, 68, 68, 0.2)",
             }}
           >
-            <img
-              src={logoArrayBuffer as any}
-              width="140"
-              height="140"
-              style={{ objectFit: "contain" }}
-            />
+            <span
+              style={{
+                fontSize: "90px",
+                fontWeight: 900,
+                color: "#ef4444",
+                lineHeight: 1,
+                fontFamily: "sans-serif",
+              }}
+            >
+              G
+            </span>
           </div>
 
           {/* Bloco de Textos */}
