@@ -820,16 +820,15 @@ const Index = () => {
                             pointerEvents: "none",
                           }}
                         >
-                          <Image
+                          <img
                             src="/lular.png"
                             alt="Foto do rosto do Lula rodeado de flores"
                             width={165}
                             height={200}
-                            className={styles.header_image}
                           />
                         </div>
                       )}
-                    </div>{" "}
+                    </div>
                     <Table
                       conj={state.conjugations}
                       canonical={state.canonical}
