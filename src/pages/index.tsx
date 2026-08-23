@@ -797,7 +797,7 @@ const Index = () => {
                         style={{
                           marginRight:
                             state.foundVerb?.toLocaleLowerCase() === "lular"
-                              ? "180px"
+                              ? "150px"
                               : "0px",
                         }}
                       >
@@ -831,8 +831,8 @@ const Index = () => {
                           <img
                             src="/lular.png"
                             alt="Foto do rosto do Lula rodeado de flores"
-                            width={165}
-                            height={200}
+                            width={145}
+                            height={170}
                           />
                         </div>
                       )}
