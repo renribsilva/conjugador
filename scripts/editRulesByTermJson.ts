@@ -32,9 +32,9 @@ interface RulesByTermData {
   };
 }
 
-const allVerbsPath = path.join(process.cwd(), "src/json/allVerbs.json");
-const rulesByTermPath = path.join(process.cwd(), "src/json/rulesByTerm.json");
-const modelsPath = path.join(process.cwd(), "src/json/models.json");
+const allVerbsPath = path.join(process.cwd(), "public/json/allVerbs.json");
+const rulesByTermPath = path.join(process.cwd(), "public/json/rulesByTerm.json");
+const modelsPath = path.join(process.cwd(), "public/json/models.json");
 
 // SUBSTITUA NULL POR UMA TERMINAÇÃO VERBAL ESPECÍFICA PARA EXECUTAR O SCRIPT SELETIVAMENTE
 const specificMainKeyObject = "ular";

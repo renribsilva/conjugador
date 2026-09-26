@@ -4,8 +4,8 @@ import path from "path";
 let allVerbJson: Record<string, any> | null = null;
 let regJson: Record<string, any> | null = null;
 
-const allVerbsPath = path.join(process.cwd(), "src/json/allVerbs.json");
-const regPath = path.join(process.cwd(), "src/json/rulesByTerm.json");
+const allVerbsPath = path.join(process.cwd(), "public/json/allVerbs.json");
+const regPath = path.join(process.cwd(), "public/json/rulesByTerm.json");
 
 export async function loadAllVerbObject() {
   if (allVerbJson === null) {
