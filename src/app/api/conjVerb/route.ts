@@ -1,38 +1,38 @@
-import { NextApiResponse, NextApiRequest } from "next";
+import { NextResponse } from "next/server";
 import { loadAllVerbObject } from "../../../lib/ssr/jsonLoad";
 import { conjugateVerb } from "../../../lib/ssr/conjugateVerb";
 import { ni } from "../../../lib/ssr/normalizeVerb";
 
-export default async function handler(
-  request: NextApiRequest,
-  response: NextApiResponse,
-) {
-  // Verifica se o método da requisição é POST
-  if (request.method !== "GET") {
-    return response
-      .status(405)
-      .json({ error: "Método não permitido. Use GET." });
-  }
+export async function GET(request: Request) {
   try {
-    const { verb } = request.query;
-    if (!verb || typeof verb !== "string") {
-      return response
-        .status(400)
-        .json({
+    // Captura os parâmetros de busca da URL (ex: /api/conjVerb?verb=amar)
+    const { searchParams } = new URL(request.url);
+    const verb = searchParams.get("verb");
+
+    if (!verb) {
+      return NextResponse.json(
+        {
           error:
             'Entrada inválida: "verb" é obrigatório e deve ser uma string.',
-        });
+        },
+        { status: 400 },
+      );
     }
+
     const allVerbJson = await loadAllVerbObject();
     if (!allVerbJson) {
-      return response
-        .status(500)
-        .json({ error: "Erro ao carregar os dados necessários." });
+      return NextResponse.json(
+        { error: "Erro ao carregar os dados necessários." },
+        { status: 500 },
+      );
     }
+
     const conjugations = await conjugateVerb(ni(verb) as string, allVerbJson);
-    // console.log("conjVerbs deu bom")
-    return response.status(200).json(conjugations);
+    return NextResponse.json(conjugations, { status: 200 });
   } catch (error: any) {
-    throw error;
+    return NextResponse.json(
+      { error: "Erro interno no servidor." },
+      { status: 500 },
+    );
   }
 }

@@ -1,16 +1,22 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { loadAllVerbObject } from "../../../lib/ssr/jsonLoad";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export async function GET() {
   try {
     const allVerbJson = await loadAllVerbObject();
-    if (!allVerbJson)
-      return res.status(500).json({ error: "Falha ao carregar verbos" });
-    return res.status(200).json(allVerbJson);
+
+    if (!allVerbJson) {
+      return NextResponse.json(
+        { error: "Falha ao carregar verbos" },
+        { status: 500 },
+      );
+    }
+
+    return NextResponse.json(allVerbJson, { status: 200 });
   } catch (err) {
-    return res.status(500).json({ error: "Erro interno no servidor" });
+    return NextResponse.json(
+      { error: "Erro interno no servidor" },
+      { status: 500 },
+    );
   }
 }

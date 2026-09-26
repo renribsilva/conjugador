@@ -1,11 +1,6 @@
-import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
+import { ImageResponse } from "next/og";
 
-export const config = {
-  runtime: "edge",
-};
-
-export default async function handler(req: NextRequest) {
+export async function GET() {
   try {
     return new ImageResponse(
       <div
@@ -49,7 +44,7 @@ export default async function handler(req: NextRequest) {
           />
         </div>
 
-        {/* Bloco central construtivista: G + Títulos directos no fundo */}
+        {/* Bloco central construtivista: G + Títulos diretos no fundo */}
         <div
           style={{
             display: "flex",

@@ -1,36 +1,36 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { loadAllVerbObject } from "../../../lib/ssr/jsonLoad";
 import { getSimilarVerbs } from "../../../lib/ssr/getSimilarWords";
 
-export default async function handler(
-  request: NextApiRequest,
-  response: NextApiResponse,
-) {
-  if (request.method !== "GET") {
-    return response
-      .status(405)
-      .json({ error: "Método não permitido. Use GET." });
-  }
+export async function GET(request: Request) {
   try {
-    const { verb } = request.query;
-    if (!verb || typeof verb !== "string") {
-      return response
-        .status(400)
-        .json({
+    const { searchParams } = new URL(request.url);
+    const verb = searchParams.get("verb");
+
+    if (!verb) {
+      return NextResponse.json(
+        {
           error:
             'Entrada inválida: "verb" é obrigatório e deve ser uma string.',
-        });
+        },
+        { status: 400 },
+      );
     }
+
     const allVerbJson = await loadAllVerbObject();
     if (!allVerbJson) {
-      return response
-        .status(500)
-        .json({ error: "Erro ao carregar os dados necessários." });
+      return NextResponse.json(
+        { error: "Erro ao carregar os dados necessários." },
+        { status: 500 },
+      );
     }
-    const result = await getSimilarVerbs(verb as string, allVerbJson);
-    // console.log("similarWords deu bom")
-    return response.status(200).json(result);
+
+    const result = await getSimilarVerbs(verb, allVerbJson);
+    return NextResponse.json(result, { status: 200 });
   } catch (error) {
-    throw error;
+    return NextResponse.json(
+      { error: "Erro interno no servidor." },
+      { status: 500 },
+    );
   }
 }

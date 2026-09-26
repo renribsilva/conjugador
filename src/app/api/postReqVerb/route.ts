@@ -1,26 +1,24 @@
 import { sql } from "@vercel/postgres";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-export default async function handler(
-  request: NextApiRequest,
-  response: NextApiResponse,
-) {
-  if (request.method !== "POST") {
-    return response.status(405).json({ error: "Method Not Allowed" });
-  }
-
+export async function POST(request: Request) {
   try {
-    const { data, type } = request.body;
+    const body = await request.json();
+    const { data, type } = body;
 
     if (!data || typeof data !== "string") {
-      return response.status(400).json({ error: "A valid string is required" });
+      return NextResponse.json(
+        { error: "A valid string is required" },
+        { status: 400 },
+      );
     }
 
     if (!type || typeof type !== "string") {
-      return response.status(400).json({ error: "A valid type is required" });
+      return NextResponse.json(
+        { error: "A valid type is required" },
+        { status: 400 },
+      );
     }
-
-    // await sql`DELETE FROM requisitions WHERE type = ${type};`;
 
     const result = await sql`
       SELECT data
@@ -49,8 +47,9 @@ export default async function handler(
       SET data = ${JSON.stringify(uniqueData)}::jsonb
       WHERE type = ${type};
     `;
-    return response.status(200).json({ post: true });
+
+    return NextResponse.json({ post: true }, { status: 200 });
   } catch (error) {
-    return response.status(200).json({ post: false });
+    return NextResponse.json({ post: false }, { status: 200 });
   }
 }
