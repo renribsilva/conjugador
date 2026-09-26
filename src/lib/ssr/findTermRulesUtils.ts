@@ -1,20 +1,24 @@
-'use server'
-
 import { ni, nw } from "./normalizeVerb";
 
-export function getVerbKeys(verb: string, terminations: string[], regJson: object): any {
-
+export function getVerbKeys(
+  verb: string,
+  terminations: string[],
+  regJson: object,
+): any {
   terminations.sort((a, b) => b.length - a.length);
 
-  const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));  
+  const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));
   const terminationData = termination ? regJson[termination] : null;
   // console.log(terminationData)
 
   if (terminationData) {
-    const normalizedCanonical = Object.keys(terminationData).reduce((acc, key) => {
-      acc[nw(key)] = terminationData[key];
-      return acc;
-    }, {});
+    const normalizedCanonical = Object.keys(terminationData).reduce(
+      (acc, key) => {
+        acc[nw(key)] = terminationData[key];
+        return acc;
+      },
+      {},
+    );
 
     //  console.log(termination)
     return { terminationData: normalizedCanonical, termination };
@@ -49,7 +53,7 @@ export function getDefaultResponse() {
         rule: null,
         P: null,
         M: null,
-      }
+      },
     },
     termination: null,
     termEntrie: null,
@@ -57,6 +61,6 @@ export function getDefaultResponse() {
     types: null,
     note_plain: null,
     note_ref: null,
-    afixo: null  
+    afixo: null,
   };
 }
