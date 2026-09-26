@@ -14,7 +14,12 @@ import groupedModelsJson from "../public/json/groupedModels.json";
 const libreOfficeSourceDir = path.join(process.cwd(), "libreOfficeSource");
 const listsDir = path.join(process.cwd(), "lists");
 const ptBRPath = path.join(libreOfficeSourceDir, "pt_BR.dic");
-const allVerbsPath = path.join(process.cwd(), "src", "json", "allVerbs.json");
+const allVerbsPath = path.join(
+  process.cwd(),
+  "public",
+  "json",
+  "allVerbs.json",
+);
 const nonVerbsPath = path.join(listsDir, "nonVerb.txt");
 const newVerbsPath = path.join(listsDir, "newVerbs.txt");
 
