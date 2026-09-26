@@ -1,23 +1,21 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/components.module.css";
+import styles from "./components.module.css";
 import Safari from "../svgs/safari";
 
 export default function InstallPWA() {
-  
   const [isIOS, setIsIOS] = useState(false);
   const [isStandalone, setIsStandalone] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
 
   useEffect(() => {
-
     //verifica se navegador é iOS
     if (typeof navigator !== "undefined") {
       const ua = navigator.userAgent.toLowerCase();
       setIsIOS(/ipad|iphone|ipod/.test(ua) && !(window as any).MSStream);
       setIsStandalone(window.matchMedia("(display-mode: standalone)").matches);
     }
-    
+
     //verifica se já há um app instalado
     const handleBeforeInstallPrompt = (e: Event) => {
       // console.log(e)
@@ -29,9 +27,8 @@ export default function InstallPWA() {
     return () =>
       window.removeEventListener(
         "beforeinstallprompt",
-        handleBeforeInstallPrompt
+        handleBeforeInstallPrompt,
       );
-
   }, []);
 
   const handleInstallClick = async () => {
@@ -54,10 +51,7 @@ export default function InstallPWA() {
     <div>
       {/* Chromium e outros browsers que suportam beforeinstallprompt */}
       {!isIOS && isInstallable && (
-        <button 
-          onClick={handleInstallClick}
-          className={styles.install_button}
-        >
+        <button onClick={handleInstallClick} className={styles.install_button}>
           Instalar app
         </button>
       )}
@@ -68,8 +62,7 @@ export default function InstallPWA() {
           Para instalar este app no iOS, toque no botão de compartilhamento
           <span role="img" aria-label="share icon">
             {" "}
-            <Safari />
-            {" "}
+            <Safari />{" "}
           </span>
           e depois em "Adicionar à Tela de Início"
         </p>

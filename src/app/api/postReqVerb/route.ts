@@ -1,24 +1,23 @@
-import { sql } from '@vercel/postgres';
-import { NextApiRequest, NextApiResponse } from 'next';
+import { sql } from "@vercel/postgres";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   request: NextApiRequest,
-  response: NextApiResponse
+  response: NextApiResponse,
 ) {
-  if (request.method !== 'POST') {
-    return response.status(405).json({ error: 'Method Not Allowed' });
+  if (request.method !== "POST") {
+    return response.status(405).json({ error: "Method Not Allowed" });
   }
 
   try {
-
     const { data, type } = request.body;
 
-    if (!data || typeof data !== 'string') {
-      return response.status(400).json({ error: 'A valid string is required' });
+    if (!data || typeof data !== "string") {
+      return response.status(400).json({ error: "A valid string is required" });
     }
 
-    if (!type || typeof type !== 'string') {
-      return response.status(400).json({ error: 'A valid type is required' });
+    if (!type || typeof type !== "string") {
+      return response.status(400).json({ error: "A valid type is required" });
     }
 
     // await sql`DELETE FROM requisitions WHERE type = ${type};`;

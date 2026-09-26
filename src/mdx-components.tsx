@@ -1,5 +1,5 @@
-import type { MDXComponents } from 'mdx/types';
-import styles from "../src/styles/mdx-components.module.css";
+import type { MDXComponents } from "mdx/types";
+import styles from "./mdx-components.module.css";
 
 // This file allows you to provide custom React components
 // to be used in MDX files. You can import and use any
@@ -10,14 +10,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     a: ({ children, ...props }) => {
-      
       const isFooterLink = props.className?.includes("data-footnote-backref");
 
       return (
-        <a 
-          {...props} 
-          target={!isFooterLink ? "_blank" : undefined} 
-          rel={!isFooterLink ? "noopener noreferrer" : undefined} 
+        <a
+          {...props}
+          target={!isFooterLink ? "_blank" : undefined}
+          rel={!isFooterLink ? "noopener noreferrer" : undefined}
         >
           {children}
         </a>
@@ -25,9 +24,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
 
     p: ({ children, ...props }) => (
-      <p className={styles.customP} {...props}> 
+      <p className={styles.customP} {...props}>
         {children}
-      </p> 
+      </p>
     ),
 
     hr: (props) => <hr {...props} className={styles.customHR} />,

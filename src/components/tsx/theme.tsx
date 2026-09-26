@@ -1,11 +1,10 @@
 import { useTheme } from "next-themes";
-import styles from "../../styles/components.module.css";
-import React, { useEffect, useState } from "react";
+import styles from "./components.module.css";
+import { useEffect, useState } from "react";
 import Dark from "../svgs/dark";
 import Light from "../svgs/light";
 
 function Theme() {
-  
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -24,15 +23,13 @@ function Theme() {
   return (
     <button
       onClick={toggleTheme}
-      aria-label={resolvedTheme === "light" ? "Ativar tema escuro" : "Ativar tema claro"}
+      aria-label={
+        resolvedTheme === "light" ? "Ativar tema escuro" : "Ativar tema claro"
+      }
       style={{ cursor: "pointer" }}
       className={styles.theme_button}
     >
-      {resolvedTheme === "light" ? (
-        <Dark/>
-      ) : (
-        <Light/>
-      )}
+      {resolvedTheme === "light" ? <Dark /> : <Light />}
     </button>
   );
 }

@@ -1,7 +1,7 @@
 import { VerbProps } from "../../types";
 import { findTermRule } from "./findTermRules";
 import { getModelsData } from "./getModelsData";
-import rulesJson from "../../json/rulesByTerm.json"
+import rulesJson from "../../../public/json/rulesByTerm.json";
 
 const resultCache = new Map<string, ReturnType<typeof findTermRule>>();
 
@@ -18,7 +18,6 @@ function mapTypesToStrings(types: any) {
 }
 
 export function getTermData(verb: string, P: string, M: string, type: string) {
-  
   const cacheKey = `${verb}|${P}|${M}|${type}`;
 
   let result = resultCache.get(cacheKey);
@@ -29,9 +28,17 @@ export function getTermData(verb: string, P: string, M: string, type: string) {
   }
 
   const validTypes = [1, 2]; // Tipos válidos
-  const mappedTypes = result.types?.length ? mapTypesToStrings(result.types) : null;
-  const note_plain = result.note_plain && result.note_plain.length > 0 ? result.note_plain : null;
-  const note_ref = result.note_ref && Object.keys(result.note_ref).length > 0 ? result.note_ref : null;
+  const mappedTypes = result.types?.length
+    ? mapTypesToStrings(result.types)
+    : null;
+  const note_plain =
+    result.note_plain && result.note_plain.length > 0
+      ? result.note_plain
+      : null;
+  const note_ref =
+    result.note_ref && Object.keys(result.note_ref).length > 0
+      ? result.note_ref
+      : null;
 
   let verbProps: VerbProps = {
     hasTargetCanonical1: false,

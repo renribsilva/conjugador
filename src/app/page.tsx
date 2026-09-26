@@ -1,6 +1,7 @@
+"use client";
+
 import { useRef, useEffect, useState, Suspense } from "react";
 import Home from "../components/mdx/Home.mdx";
-import styles from "../styles/index.module.css";
 import Footer from "../components/tsx/footer";
 import Socials from "../components/tsx/socials";
 import Theme from "../components/tsx/theme";
@@ -20,7 +21,7 @@ import Reflexive from "../components/mdx/Reflexive.mdx";
 import Emphasis from "../components/mdx/Emphasis.mdx";
 import SobreErros from "../components/mdx/SobreErros.mdx";
 import NoteRefList from "../components/tsx/references";
-import Image from "next/image";
+import styles from "./page.module.css";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("home");

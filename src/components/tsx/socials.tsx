@@ -1,6 +1,6 @@
-import styles from "../../styles/components.module.css";
+import styles from "./components.module.css";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Arrow from "../svgs/arrow";
 
 const SocialObjects = [
@@ -15,7 +15,6 @@ const SocialObjects = [
 ];
 
 export default function Socials() {
-
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export default function Socials() {
           <li key={name}>
             <Link target="_blank" href={link} rel="noopener noreferrer">
               <span>{name}</span>
-              <Arrow/>
+              <Arrow />
             </Link>
           </li>
         );

@@ -1,37 +1,39 @@
-:root, html, body {
+:root,
+html,
+body {
   --color-fill-light: rgb(255, 255, 255);
   --color-text-base-light: rgb(39, 39, 40);
   --color-mod-light: rgba(230, 230, 230);
   --color-tense-light: rgb(242, 242, 242);
-  --color-button-light:rgb(242, 242, 242);
-  
-  --color-fill-dark: rgb(26, 26, 27); 
+  --color-button-light: rgb(242, 242, 242);
+
+  --color-fill-dark: rgb(26, 26, 27);
   --color-text-base-dark: rgb(255, 255, 255);
   --color-mod-dark: rgba(60, 60, 60);
   --color-tense-dark: rgba(55, 55, 55);
-  --color-button-dark:rgb(61, 61, 61);
+  --color-button-dark: rgb(61, 61, 61);
 }
 
 .dark {
   --background: var(--color-fill-dark);
   --foreground: var(--color-text-base-dark);
   --largeshadow: rgb(148, 133, 133) 0px 0px 1px;
-  --modbox:var(--color-mod-dark);
-  --tensebox:var(--color-tense-dark);
-  --button: var(--color-button-dark)
+  --modbox: var(--color-mod-dark);
+  --tensebox: var(--color-tense-dark);
+  --button: var(--color-button-dark);
 }
 
 .light {
   --background: var(--color-fill-light);
   --foreground: var(--color-text-base-light);
   --largeshadow: rgb(165, 155, 155) 0px 0px 1px;
-  --modbox:var(--color-mod-light);
-  --tensebox:var(--color-tense-light);
-  --button: var(--color-button-light)
+  --modbox: var(--color-mod-light);
+  --tensebox: var(--color-tense-light);
+  --button: var(--color-button-light);
 }
 
 * {
-  background-color: var(--background); 
+  background-color: var(--background);
   color: var(--foreground);
   -webkit-tap-highlight-color: transparent;
 }

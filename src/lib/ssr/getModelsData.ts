@@ -1,11 +1,8 @@
-'use server'
+import allVerbsData from "../../../public/json/allVerbs.json";
+import modelsData from "../../../public/json/models.json";
+import groupedModelsData from "../../../public/json/groupedModels.json";
 
-import allVerbsData from '../../json/allVerbs.json'
-import modelsData from '../../json/models.json'
-import groupedModelsData from '../../json/groupedModels.json'
-
-export function getModelsData (verb: string) {
-
+export function getModelsData(verb: string) {
   const modelNumbers = allVerbsData[verb]?.model || [];
   const accumulatedData: Record<string, any[]> = {};
 
@@ -20,16 +17,17 @@ export function getModelsData (verb: string) {
     if (!accumulatedData.verbRef) accumulatedData.verbRef = [];
     if (!accumulatedData.total) accumulatedData.total = [];
     if (!accumulatedData.group) accumulatedData.group = [];
-    if (!accumulatedData.groupDescription) accumulatedData.groupDescription = [];
+    if (!accumulatedData.groupDescription)
+      accumulatedData.groupDescription = [];
 
     accumulatedData.modelNumber.push(num);
     if (verbKey) accumulatedData.verbRef.push(verbKey);
     if (totalKey) accumulatedData.total.push(totalKey);
     if (groupKey) accumulatedData.group.push(groupKey);
-    if (groupDescription) accumulatedData.groupDescription.push(groupDescription);
+    if (groupDescription)
+      accumulatedData.groupDescription.push(groupDescription);
   });
 
   // console.log(accumulatedData);
-  return accumulatedData
-
+  return accumulatedData;
 }

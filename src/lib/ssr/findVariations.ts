@@ -1,9 +1,7 @@
-'use server'
-
-import allVerbs from '../../json/allVerbs.json';
-import afixos from '../../json/afixos.json';
-import { ni, nw } from './normalizeVerb';
-import tryVariations from './findVariationsUtils';
+import allVerbs from "../../../public/json/allVerbs.json";
+import afixos from "../../../public/json/afixos.json";
+import { ni, nw } from "./normalizeVerb";
+import tryVariations from "./findVariationsUtils";
 
 type ValidPrefixResult = {
   hasVariations: boolean;
@@ -18,7 +16,7 @@ type ValidPrefixResult = {
 
 const cache = new Map<string, ValidPrefixResult>();
 const allVerbsSet = new Set(Object.keys(allVerbs));
-const normalizedVerbs = new Set(Object.keys(allVerbs).map((v) => ni(v) || ''));
+const normalizedVerbs = new Set(Object.keys(allVerbs).map((v) => ni(v) || ""));
 const normalizedAfixos = afixos.map(nw);
 
 export default function findVariations(input: string): ValidPrefixResult {
@@ -27,7 +25,7 @@ export default function findVariations(input: string): ValidPrefixResult {
   }
 
   const originalInput = nw(input);
-  let verb: string = ni(input.replace(/-/g, '')) || ni(input);
+  let verb: string = ni(input.replace(/-/g, "")) || ni(input);
 
   const sortedAfixos = normalizedAfixos
     .slice()
@@ -35,7 +33,8 @@ export default function findVariations(input: string): ValidPrefixResult {
 
   const matchingAfixos = sortedAfixos.filter((afixo) => verb.startsWith(afixo));
 
-  if (matchingAfixos.length === 0) { //lançar, caçar
+  if (matchingAfixos.length === 0) {
+    //lançar, caçar
     if (allVerbsSet.has(verb)) {
       const result = {
         hasVariations: false,
@@ -53,7 +52,8 @@ export default function findVariations(input: string): ValidPrefixResult {
 
     const variation = tryVariations(verb, 0, normalizedVerbs);
 
-    if (variation && allVerbsSet.has(variation)) { // lancar, cacar
+    if (variation && allVerbsSet.has(variation)) {
+      // lancar, cacar
       const result = {
         hasVariations: true,
         forcedVerb: true,
@@ -70,14 +70,13 @@ export default function findVariations(input: string): ValidPrefixResult {
   }
 
   if (matchingAfixos.length > 0) {
-
     for (const matchingAfixo of matchingAfixos) {
-
       let restOfVerb = verb.slice(matchingAfixo.length);
       let conector: string | null = null;
-      let variation: string | null = null
+      let variation: string | null = null;
 
-      if (allVerbsSet.has(restOfVerb)) { //relançar, recomeçar
+      if (allVerbsSet.has(restOfVerb)) {
+        //relançar, recomeçar
         const result = {
           hasVariations: true,
           forcedVerb: false,
@@ -94,7 +93,8 @@ export default function findVariations(input: string): ValidPrefixResult {
 
       variation = tryVariations(restOfVerb, 0, normalizedVerbs);
 
-      if (variation && allVerbsSet.has(variation)) { //relancar, recomecar
+      if (variation && allVerbsSet.has(variation)) {
+        //relancar, recomecar
         const result = {
           hasVariations: true,
           forcedVerb: true,
@@ -109,41 +109,59 @@ export default function findVariations(input: string): ValidPrefixResult {
         return result;
       }
 
-      let restOfVerbTest
+      let restOfVerbTest;
       // console.log(restOfVerb)
 
-      if (/^([rs])\1/.test(restOfVerb)) { //ressaber
+      if (/^([rs])\1/.test(restOfVerb)) {
+        //ressaber
         conector = restOfVerb[0];
         restOfVerbTest = restOfVerb.slice(1);
         variation = tryVariations(restOfVerbTest, 0, normalizedVerbs);
         // console.log(variation)
-        if (allVerbsSet.has(restOfVerbTest) || (variation && allVerbsSet.has(variation))) {
-          restOfVerb = restOfVerbTest
+        if (
+          allVerbsSet.has(restOfVerbTest) ||
+          (variation && allVerbsSet.has(variation))
+        ) {
+          restOfVerb = restOfVerbTest;
         }
         // console.log(1)
-      } else if (/^m[pb]/.test(restOfVerb)) { //comprazer
-        conector = 'm';
+      } else if (/^m[pb]/.test(restOfVerb)) {
+        //comprazer
+        conector = "m";
         restOfVerbTest = restOfVerb.slice(1);
         variation = tryVariations(restOfVerbTest, 0, normalizedVerbs);
-        if (allVerbsSet.has(restOfVerbTest) || (variation && allVerbsSet.has(variation))) {
-          restOfVerb = restOfVerbTest
+        if (
+          allVerbsSet.has(restOfVerbTest) ||
+          (variation && allVerbsSet.has(variation))
+        ) {
+          restOfVerb = restOfVerbTest;
         }
         // console.log(3)
-      } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) { //enxaguar
-        conector = 'x';
+      } else if (/^x[aeiouáéíóúãõâêîôû]/.test(restOfVerb)) {
+        //enxaguar
+        conector = "x";
         restOfVerbTest = restOfVerb.slice(1);
         variation = tryVariations(restOfVerbTest, 0, normalizedVerbs);
-        if (allVerbsSet.has(restOfVerbTest) || (variation && allVerbsSet.has(variation))) {
-          restOfVerb = restOfVerbTest
+        if (
+          allVerbsSet.has(restOfVerbTest) ||
+          (variation && allVerbsSet.has(variation))
+        ) {
+          restOfVerb = restOfVerbTest;
         }
         // console.log(4)
-      } else if (/[aeiou]$/.test(matchingAfixo) && /^[bcdfghjklmnpqrstvwxyz]/.test(restOfVerb)) { //sobrexceler
-        const vogalFinal = matchingAfixo.slice(-1); 
-        restOfVerbTest = vogalFinal + restOfVerb; 
+      } else if (
+        /[aeiou]$/.test(matchingAfixo) &&
+        /^[bcdfghjklmnpqrstvwxyz]/.test(restOfVerb)
+      ) {
+        //sobrexceler
+        const vogalFinal = matchingAfixo.slice(-1);
+        restOfVerbTest = vogalFinal + restOfVerb;
         variation = tryVariations(restOfVerbTest, 0, normalizedVerbs);
-        if ((allVerbsSet.has(restOfVerbTest) && restOfVerbTest !== verb) || 
-            (variation && allVerbsSet.has(variation) && restOfVerbTest !== verb)) {
-          restOfVerb = restOfVerbTest
+        if (
+          (allVerbsSet.has(restOfVerbTest) && restOfVerbTest !== verb) ||
+          (variation && allVerbsSet.has(variation) && restOfVerbTest !== verb)
+        ) {
+          restOfVerb = restOfVerbTest;
         }
         // console.log(5)
         // console.log(restOfVerbTest)
@@ -151,7 +169,8 @@ export default function findVariations(input: string): ValidPrefixResult {
 
       // console.log(restOfVerb)
 
-      if (allVerbsSet.has(restOfVerb)) { //ressaber, arregaçar, comprazer
+      if (allVerbsSet.has(restOfVerb)) {
+        //ressaber, arregaçar, comprazer
         const result = {
           hasVariations: true,
           forcedVerb: false,
@@ -168,7 +187,8 @@ export default function findVariations(input: string): ValidPrefixResult {
 
       variation = tryVariations(restOfVerb, 0, normalizedVerbs);
 
-      if (variation && allVerbsSet.has(variation)) { // arregacar
+      if (variation && allVerbsSet.has(variation)) {
+        // arregacar
         const result = {
           hasVariations: true,
           forcedVerb: true,
@@ -185,7 +205,8 @@ export default function findVariations(input: string): ValidPrefixResult {
     }
   }
 
-  if (allVerbsSet.has(verb)) { //amar, atrasar
+  if (allVerbsSet.has(verb)) {
+    //amar, atrasar
     const result = {
       hasVariations: false,
       forcedVerb: false,
@@ -201,7 +222,7 @@ export default function findVariations(input: string): ValidPrefixResult {
   }
 
   const variation = tryVariations(verb, 0, normalizedVerbs);
-  
+
   if (variation) {
     const result = {
       hasVariations: true,
