@@ -1,31 +1,33 @@
-'use client'
+"use client";
 
 import { useState, useEffect } from "react";
 import { ni } from "../ssr/normalizeVerb";
 import type { flowTypes } from "../../types";
 import { initialFlow } from "./initalFlow";
 
-export const flowOfReact = () => { 
-
+export const flowOfReact = () => {
   const [state, setState] = useState<flowTypes>(initialFlow);
 
   useEffect(() => {
     async function warmUpAPI() {
-      const [{ isValidVerbByAPI }, { conjVerbByAPI }, {getSimilarWordsByAPI}] = 
-        await Promise.all([
-          import("./isValidVerbByAPI"),
-          import("./conjVerbByAPI"),
-          import("./getSimilarWordsByAPI")
-        ]);
+      const [
+        { isValidVerbByAPI },
+        { conjVerbByAPI },
+        { getSimilarWordsByAPI },
+      ] = await Promise.all([
+        import("./isValidVerbByAPI"),
+        import("./conjVerbByAPI"),
+        import("./getSimilarWordsByAPI"),
+      ]);
       // dispara sem precisar esperar resposta
       void isValidVerbByAPI("recomeçar");
       void conjVerbByAPI("realçar");
-      void getSimilarWordsByAPI("renato")
+      void getSimilarWordsByAPI("renato");
       console.log("Warm-up de API feito");
     }
     setTimeout(() => {
       warmUpAPI();
-    }, 2000)
+    }, 2000);
   }, []);
 
   // useEffect (() => {
@@ -49,22 +51,22 @@ export const flowOfReact = () => {
   //           }
   //         }
   //       }
-  //     }      
+  //     }
   //   }
   //   cachear();
   // },[])
 
   const updateProgress = (n: number | null) => {
     setTimeout(() => {
-      setState(prev => ({ ...prev, progress: n }));
+      setState((prev) => ({ ...prev, progress: n }));
     }, 0);
   };
 
-  const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-
-    if (event.key === "Enter" && state.inputValue !== "") {  
-      
-      setState(prev => ({
+  const handleKeyDown = async (
+    event: React.KeyboardEvent<HTMLInputElement>,
+  ) => {
+    if (event.key === "Enter" && state.inputValue !== "") {
+      setState((prev) => ({
         ...prev,
         conjugations: null,
         loading: true,
@@ -82,30 +84,28 @@ export const flowOfReact = () => {
         enter: false,
         progress: 25,
         isDisabled: true,
-      }))
+      }));
 
-      event.preventDefault();      
+      event.preventDefault();
       setTimeout(() => {
         (event.target as HTMLInputElement).blur();
       }, 0);
       setTimeout(() => {
         processEnter();
-      }, 0)     
+      }, 0);
     }
 
     // updateProgress(null)
-    
-    setState(prev => ({
+
+    setState((prev) => ({
       ...prev,
       isDisabled: false,
     }));
-    
-    return
 
+    return;
   };
 
   const processEnter = async () => {
-
     const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
     const { getSimilarWordsByAPI } = await import("./getSimilarWordsByAPI");
     const { conjVerbByAPI } = await import("./conjVerbByAPI");
@@ -113,7 +113,7 @@ export const flowOfReact = () => {
     const normalizedInputValue = ni(state.inputValue);
     const suggestions = await getSimilarWordsByAPI(normalizedInputValue);
 
-    setState(prev => ({
+    setState((prev) => ({
       ...prev,
       suggestions: suggestions,
 
@@ -145,26 +145,23 @@ export const flowOfReact = () => {
       varOriginalInput: null,
 
       canonical: "canonical1",
-
     }));
 
     if (normalizedInputValue.trim() === "") {
-
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         showHome: true,
-        loading: false
+        loading: false,
       }));
 
-      updateProgress(100)
+      updateProgress(100);
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isDisabled: false,
       }));
 
-      return
-
+      return;
     }
 
     const apiResponse = await isValidVerbByAPI(normalizedInputValue);
@@ -173,19 +170,15 @@ export const flowOfReact = () => {
     const variationVerb = apiResponse.variationVerb;
 
     if (normalizedInputValue !== "") {
-      
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         originalVerb: originalVerb,
-        variationVerb: variationVerb
-      }))
-
+        variationVerb: variationVerb,
+      }));
     }
 
-    if (originalVerb === null && variationVerb === null ) {
-
-      setState(prev => ({
-        
+    if (originalVerb === null && variationVerb === null) {
+      setState((prev) => ({
         ...prev,
         loading: false,
         showButton: true,
@@ -193,82 +186,78 @@ export const flowOfReact = () => {
 
       updateProgress(100);
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isDisabled: false,
       }));
 
-      return
-
+      return;
     }
 
-    let puncts = null
-    puncts = apiResponse.originalVerb?.punct || apiResponse.variationVerb?.punct || null;
+    let puncts = null;
+    puncts =
+      apiResponse.originalVerb?.punct ||
+      apiResponse.variationVerb?.punct ||
+      null;
 
-
-    if (originalVerb !== null || variationVerb !== null ) {
-
-      setState(prev => ({          
+    if (originalVerb !== null || variationVerb !== null) {
+      setState((prev) => ({
         ...prev,
-        punct: puncts
-      }))
-
+        punct: puncts,
+      }));
     }
 
     if (puncts !== null) {
-
-      setState(prev => ({
-        
+      setState((prev) => ({
         ...prev,
         loading: false,
         showButton: true,
         punct: puncts,
-        foundVerb: apiResponse.originalVerb?.findedWord || apiResponse.variationVerb?.findedWord
-
+        foundVerb:
+          apiResponse.originalVerb?.findedWord ||
+          apiResponse.variationVerb?.findedWord,
       }));
 
       updateProgress(100);
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isDisabled: false,
       }));
 
-      return
+      return;
     }
 
     //isValidVerb returns
-    let result = '';
-    let findedWord = ''
-    let similar = null
-    let punct = null
-    let variations = null
-    let varHasVariations = false
-    let varForcedVerb = false 
-    let varProcessedInput = null
-    let varOriginalInput = null
-    let varPrefixFounded = false 
-    let varMatchingAfixo = null
-    let varConector = null
+    let result = "";
+    let findedWord = "";
+    let similar = null;
+    let punct = null;
+    let variations = null;
+    let varHasVariations = false;
+    let varForcedVerb = false;
+    let varProcessedInput = null;
+    let varOriginalInput = null;
+    let varPrefixFounded = false;
+    let varMatchingAfixo = null;
+    let varConector = null;
 
     if (variationVerb !== null && originalVerb === null) {
-
       result = "variationVerb";
       findedWord = apiResponse.variationVerb.findedWord;
       similar = apiResponse.variationVerb.similar;
       variations = apiResponse.variationVerb.variations;
-      punct = apiResponse.variationVerb.punct
+      punct = apiResponse.variationVerb.punct;
 
       varHasVariations = apiResponse.variationVerb.variations.hasVariations;
-      varForcedVerb = apiResponse.variationVerb.variations.forcedVerb
+      varForcedVerb = apiResponse.variationVerb.variations.forcedVerb;
       varProcessedInput = apiResponse.variationVerb.variations.processedInput;
       varOriginalInput = apiResponse.variationVerb.variations.originalInput;
       varPrefixFounded = apiResponse.variationVerb.variations.prefixFounded;
       varMatchingAfixo = apiResponse.variationVerb.variations.matchingAfixo;
       varConector = apiResponse.variationVerb.variations.conector;
 
-      setState(prev => ({
-        
+      setState((prev) => ({
         ...prev,
         inputReq: state.inputValue,
         loading: false,
@@ -289,42 +278,37 @@ export const flowOfReact = () => {
         varConector: varConector,
 
         foundVerb: findedWord,
-
       }));
 
       updateProgress(100);
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isDisabled: false,
       }));
 
-      return
-
+      return;
     }
 
     if (originalVerb !== null && variationVerb === null) {
-
       result = "originalVerb";
       findedWord = apiResponse.originalVerb.findedWord;
       similar = apiResponse.originalVerb.similar;
       variations = apiResponse.originalVerb.variations;
-      punct = apiResponse.originalVerb.punct
+      punct = apiResponse.originalVerb.punct;
 
       varHasVariations = apiResponse.originalVerb.variations.hasVariations;
-      varForcedVerb = apiResponse.originalVerb.variations.forcedVerb
+      varForcedVerb = apiResponse.originalVerb.variations.forcedVerb;
       varProcessedInput = apiResponse.originalVerb.variations.processedInput;
       varOriginalInput = apiResponse.originalVerb.variations.originalInput;
       varPrefixFounded = apiResponse.originalVerb.variations.prefixFounded;
       varMatchingAfixo = apiResponse.originalVerb.variations.matchingAfixo;
       varConector = apiResponse.originalVerb.variations.conector;
 
-      updateProgress(50)
+      updateProgress(50);
 
-      if  (similar !== null && !state.goThrough) {
-
-        setState(prev => ({
-
+      if (similar !== null && !state.goThrough) {
+        setState((prev) => ({
           ...prev,
           inputReq: state.inputValue,
           loading: false,
@@ -345,29 +329,26 @@ export const flowOfReact = () => {
           varConector: varConector,
 
           foundVerb: findedWord,
-
         }));
 
         updateProgress(100);
 
-        setState(prev => ({
+        setState((prev) => ({
           ...prev,
           isDisabled: false,
         }));
 
-        return
-
+        return;
       }
 
-      updateProgress(75)
+      updateProgress(75);
 
       const conjData = await conjVerbByAPI(ni(findedWord));
       // console.log("resposta de conVerbByAPI no flow:", conjData)
-      const propsOfWord = conjData.propOfVerb
-      const conjugations = conjData.conjugations
-      
-      setState(prev => ({
+      const propsOfWord = conjData.propOfVerb;
+      const conjugations = conjData.conjugations;
 
+      setState((prev) => ({
         ...prev,
         termination: propsOfWord.termination,
         termEntrie: propsOfWord.termEntrie,
@@ -399,44 +380,38 @@ export const flowOfReact = () => {
         varConector: varConector,
 
         foundVerb: findedWord,
-        
       }));
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         conjugations: conjugations,
         loading: false,
         showConjugations: true,
       }));
 
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isDisabled: false,
       }));
 
-      updateProgress(100)
+      updateProgress(100);
 
-      return
-
+      return;
     }
 
     updateProgress(null);
-    
-    setState(prev => ({
+
+    setState((prev) => ({
       ...prev,
       isDisabled: false,
     }));
 
-    return
+    return;
+  };
 
-  }
-
-  const dependencies = [
-    state.showConjugations,
-  ];
+  const dependencies = [state.showConjugations];
 
   useEffect(() => {
-
     if (!state.showConjugations) return;
 
     const data = {
@@ -456,7 +431,7 @@ export const flowOfReact = () => {
           varMatchingAfixo: state.varMatchingAfixo,
           varConector: state.varConector,
           varOriginalInput: state.varOriginalInput,
-        }
+        },
       },
       C_OUTPUT: {
         conjugations: state.conjugations,
@@ -468,9 +443,9 @@ export const flowOfReact = () => {
           termination: state.termination,
           termEntrie: state.termEntrie,
           types: state.types,
-          note_plain: state.note_plain, 
+          note_plain: state.note_plain,
           note_ref: state.note_ref,
-          model: state.model
+          model: state.model,
         },
         suggestions: state.suggestions,
       },
@@ -489,16 +464,14 @@ export const flowOfReact = () => {
         enter: state.enter,
         progress: state.progress,
         isDisabled: state.isDisabled,
-        postReq: state.postReq
+        postReq: state.postReq,
       },
     };
-  
-    console.log(data);
-  }, dependencies); 
+  }, dependencies);
 
   return {
     state,
     setState,
-    handleKeyDown
+    handleKeyDown,
   };
 };
