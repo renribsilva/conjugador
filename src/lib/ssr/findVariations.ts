@@ -25,7 +25,7 @@ export default function findVariations(input: string): ValidPrefixResult {
   }
 
   const originalInput = nw(input);
-  let verb: string = ni(input.replace(/-/g, "")) || ni(input);
+  const verb: string = ni(input.replace(/-/g, "")) || ni(input);
 
   const sortedAfixos = normalizedAfixos
     .slice()

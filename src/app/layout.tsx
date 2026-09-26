@@ -1,7 +1,6 @@
 import { Roboto } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Layout from "../layout/layout";
 import { Providers } from "../components/tsx/providers";
 
 const ubuntu = Roboto({
@@ -11,7 +10,9 @@ const ubuntu = Roboto({
 
 const title = "Conjugador Gules";
 const description =
-  "Conjugador de verbos da Língua Portuguesa Brasileira construído a partir da base de palavras do projeto VERO do LibreOffice.";
+  `Conjugador de verbos da Língua Portuguesa Brasileira` +
+  `construído a partir da base de palavras do projeto` +
+  ` VERO do LibreOffice.`;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -57,9 +58,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={ubuntu.className}>
-        <Providers>
-          <Layout>{children}</Layout>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

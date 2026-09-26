@@ -32,8 +32,9 @@ function substringSimilarity(a: string, b: string): number {
   return common / maxLength;
 }
 
-/**
- * Retorna um peso extra caso a primeira metade da palavra seja semelhante à outra palavra.
+/*
+ * Retorna um peso extra caso a primeira
+ * metade da palavra seja semelhante à outra palavra.
  */
 function halfMatchWeight(a: string, b: string): number {
   const halfA = a.slice(0, Math.ceil(a.length / 2));
