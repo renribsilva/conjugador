@@ -12,7 +12,7 @@ import modelsJson from "../public/json/models.json";
 import groupedModelsJson from "../public/json/groupedModels.json";
 
 const libreOfficeSourceDir = path.join(process.cwd(), "libreOfficeSource");
-const listsDir = path.join(process.cwd(), "lists");
+const listsDir = path.join(process.cwd(), "scripts", "lists");
 const ptBRPath = path.join(libreOfficeSourceDir, "pt_BR.dic");
 const allVerbsPath = path.join(
   process.cwd(),
@@ -285,7 +285,7 @@ async function ediAllVerbsJson() {
       allVerbsPath,
       JSON.stringify(sortedJ, null, 2).replace(
         /\[\s*([\s\S]*?)\s*\]/g,
-        (match, p1) => `[${p1.replace(/\s*,\s*/g, ",").replace(/\n\s*/g, "")}]`,
+        (_, p1) => `[${p1.replace(/\s*,\s*/g, ",").replace(/\n\s*/g, "")}]`,
       ),
     );
 
