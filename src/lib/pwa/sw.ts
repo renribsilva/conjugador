@@ -1,5 +1,9 @@
 import { defaultCache } from "@serwist/next/worker";
-import type { PrecacheEntry, SerwistGlobalConfig, StrategyHandler } from "serwist";
+import type {
+  PrecacheEntry,
+  SerwistGlobalConfig,
+  StrategyHandler,
+} from "serwist";
 import { NetworkFirst, Serwist, Strategy } from "serwist";
 import { processVerb } from "../ssr/isValidVerbProcess";
 import { conjugateVerb } from "../ssr/conjugateVerb";
@@ -17,24 +21,30 @@ class isValidVerb extends Strategy {
         const json = await fallback.json();
         const url = new URL(request.url);
         const verb = url.searchParams.get("verb");
-        if (!verb) return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }))
+        if (!verb)
+          return new Response(
+            JSON.stringify({ originalVerb: null, variationVerb: null }),
+          );
         const result = await processVerb(verb, json);
         // console.log("isvalidverb no fallback do sw:", JSON.stringify(result))
         return new Response(JSON.stringify(result), {
-          headers: { 'Content-Type': 'application/json' },
-          status: 200
+          headers: { "Content-Type": "application/json" },
+          status: 200,
         });
       }
-    } catch (err) {
+    } catch {
       // console.log("isvalidverb tentou rede")
       const response = await handler.fetch(request);
       if (response.ok) {
         return response;
       }
-      return new Response(JSON.stringify({ originalVerb: null, variationVerb: null }), {
-        status: 503,
-        headers: { 'Content-Type': 'application/json' }
-      });
+      return new Response(
+        JSON.stringify({ originalVerb: null, variationVerb: null }),
+        {
+          status: 503,
+          headers: { "Content-Type": "application/json" },
+        },
+      );
     }
   }
 }
@@ -49,36 +59,42 @@ class conjVerb extends Strategy {
         const json = await fallback.json();
         const url = new URL(request.url);
         const verb = url.searchParams.get("verb");
-        if (!verb) return new Response(JSON.stringify({
-          model: null,
-          only_reflexive: null,
-          multiple_conj: null,
-          canonical1: null,
-          canonical2: null
-        }))
+        if (!verb)
+          return new Response(
+            JSON.stringify({
+              model: null,
+              only_reflexive: null,
+              multiple_conj: null,
+              canonical1: null,
+              canonical2: null,
+            }),
+          );
         const result = await conjugateVerb(verb, json);
         // console.log("conjVerb no fallback do sw:", JSON.stringify(result))
         return new Response(JSON.stringify(result), {
-          headers: { 'Content-Type': 'application/json' },
-          status: 200
+          headers: { "Content-Type": "application/json" },
+          status: 200,
         });
       }
-    } catch (err) {
+    } catch {
       // console.log("conjVerb tentou rede")
       const response = await handler.fetch(request);
       if (response.ok) {
         return response;
       }
-      return new Response(JSON.stringify({
+      return new Response(
+        JSON.stringify({
           model: null,
           only_reflexive: null,
           multiple_conj: null,
           canonical1: null,
-          canonical2: null
-        }), {
-        status: 503,
-        headers: { 'Content-Type': 'application/json' }
-      });
+          canonical2: null,
+        }),
+        {
+          status: 503,
+          headers: { "Content-Type": "application/json" },
+        },
+      );
     }
   }
 }
@@ -93,15 +109,16 @@ class similarWords extends Strategy {
         const json = await fallback.json();
         const url = new URL(request.url);
         const verb = url.searchParams.get("verb");
-        if (!verb) return new Response(JSON.stringify(null))
+        if (!verb) return new Response(JSON.stringify(null));
         const result = await getSimilarVerbs(verb, json);
-        // console.log("similarWords no fallback do sw:", JSON.stringify(result))
+        // console.log("similarWords no
+        // fallback do sw:", JSON.stringify(result))
         return new Response(JSON.stringify(result), {
-          headers: { 'Content-Type': 'application/json' },
-          status: 200
+          headers: { "Content-Type": "application/json" },
+          status: 200,
         });
       }
-    } catch (err) {
+    } catch {
       // console.log("similarWords tentou rede")
       const response = await handler.fetch(request);
       if (response.ok) {
@@ -109,7 +126,7 @@ class similarWords extends Strategy {
       }
       return new Response(JSON.stringify(null), {
         status: 503,
-        headers: { 'Content-Type': 'application/json' }
+        headers: { "Content-Type": "application/json" },
       });
     }
   }
@@ -121,6 +138,7 @@ declare global {
   }
 }
 
+// Foi preciso inserir "webworker" em compilerOptions: lib:
 declare const self: ServiceWorkerGlobalScope;
 
 const serwist = new Serwist({
@@ -143,11 +161,11 @@ const serwist = new Serwist({
     },
     {
       matcher: ({ url }) => url.pathname.startsWith("/api/allVerbs"),
-        handler: new NetworkFirst({
+      handler: new NetworkFirst({
         cacheName: CACHE_ALLVERBS,
       }),
     },
-    ...defaultCache
+    ...defaultCache,
   ],
 });
 
@@ -161,7 +179,7 @@ self.addEventListener("fetch", (event) => {
       (async () => {
         const response = await fetch(event.request);
         return response;
-      })()
+      })(),
     );
   }
 });
@@ -174,27 +192,30 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       try {
-        await Promise.all(JSON_URLS.map(async (json) => {
-          try {
-            const cache = await caches.open(json.cacheName);
-            const keys = await cache.keys();
-            for (const req of keys) {
-              if (req.url !== new URL(json.url, self.location.origin).href) {
-                await cache.delete(req);
+        await Promise.all(
+          JSON_URLS.map(async (json) => {
+            try {
+              const cache = await caches.open(json.cacheName);
+              const keys = await cache.keys();
+              for (const req of keys) {
+                if (req.url !== new URL(json.url, self.location.origin).href) {
+                  await cache.delete(req);
+                }
               }
+              const response = await fetch(json.url, { cache: "no-store" });
+              if (!response.ok) throw new Error(`Erro: ${response.status}`);
+              await cache.put(json.url, response.clone());
+              // console.log("dados inseridos em
+              // verbs-cache:", await response.json())
+            } catch (error) {
+              console.warn(`Falha ao pré-cachear ${json.url}:`, error);
             }
-            const response = await fetch(json.url, { cache: "no-store" });
-            if (!response.ok) throw new Error(`Erro: ${response.status}`);
-            await cache.put(json.url, response.clone());
-            // console.log("dados inseridos em verbs-cache:", await response.json())
-          } catch (error) {
-            console.warn(`Falha ao pré-cachear ${json.url}:`, error);
-          }
-        }));
+          }),
+        );
         self.skipWaiting(); // ativa SW imediatamente
       } catch (err) {
         console.warn("⚠️ Erro ao pré-cachear JSONs:", err);
       }
-    })()
+    })(),
   );
 });

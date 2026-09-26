@@ -7,7 +7,7 @@ import { VerbProps } from "../../types";
 // import allVerbsData1 from "../../json/allVerbs.json";
 
 export async function conjugateVerb(verb: string, allVerbsJson: object) {
-  let r = nw(ni(verb)).slice(0, -2);
+  const r = nw(ni(verb)).slice(0, -2);
   let R = "";
   const str = structureOfVerb(verb);
   const NOT_FOUND = "N/A";
@@ -76,12 +76,11 @@ export async function conjugateVerb(verb: string, allVerbsJson: object) {
       typeof Rcontent === "string" &&
       (Rcontent as string)
     ) {
-      let sliceLength: number;
-      sliceLength =
+      const sliceLength: number =
         nw(Rcontent as string)
           .match(/\d+/g)
           ?.map((num) => parseInt(num, 10))?.[0] || 0;
-      let ralt = nw(Rcontent as string)
+      const ralt = nw(Rcontent as string)
         .replace("...", "")
         .replace(/\d+/g, "");
       const originalR = r;
@@ -101,10 +100,26 @@ export async function conjugateVerb(verb: string, allVerbsJson: object) {
         : forRrule || forVTrule || forMTrule || forNPrule
           ? (() => {
               let result = nw(`
-            ${F(P, M, "RAD", canonical) === NOT_FOUND ? r : F(P, M, "RAD", canonical)}
-            ${F(P, M, "VT", canonical) === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", canonical)}
-            ${F(P, M, "MT", canonical) === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", canonical)}
-            ${F(P, M, "NP", canonical) === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", canonical)}*`);
+            ${
+              F(P, M, "RAD", canonical) === NOT_FOUND
+                ? r
+                : F(P, M, "RAD", canonical)
+            }
+            ${
+              F(P, M, "VT", canonical) === NOT_FOUND
+                ? verbRules.VT[num]
+                : F(P, M, "VT", canonical)
+            }
+            ${
+              F(P, M, "MT", canonical) === NOT_FOUND
+                ? verbRules.MT[num]
+                : F(P, M, "MT", canonical)
+            }
+            ${
+              F(P, M, "NP", canonical) === NOT_FOUND
+                ? verbRules.NP[num]
+                : F(P, M, "NP", canonical)
+            }*`);
               if (Rcontent !== null && Rcontent !== "") {
                 result = result.replace(Rcontent, R);
               }
@@ -145,12 +160,11 @@ export async function conjugateVerb(verb: string, allVerbsJson: object) {
       typeof Rcontent === "string" &&
       (Rcontent as string)
     ) {
-      let sliceLength: number;
-      sliceLength =
+      const sliceLength: number =
         nw(Rcontent as string)
           .match(/\d+/g)
           ?.map((num) => parseInt(num, 10))?.[0] || 0;
-      let ralt = nw(Rcontent as string)
+      const ralt = nw(Rcontent as string)
         .replace("...", "")
         .replace(/\d+/g, "");
       const originalR = r;
@@ -170,10 +184,26 @@ export async function conjugateVerb(verb: string, allVerbsJson: object) {
         : forRrule || forVTrule || forMTrule || forNPrule
           ? (() => {
               let result = nw(`
-            ${F(P, M, "RAD", abundance) === NOT_FOUND ? r : F(P, M, "RAD", abundance)}
-            ${F(P, M, "VT", abundance) === NOT_FOUND ? verbRules.VT[num] : F(P, M, "VT", abundance)}
-            ${F(P, M, "MT", abundance) === NOT_FOUND ? verbRules.MT[num] : F(P, M, "MT", abundance)}
-            ${F(P, M, "NP", abundance) === NOT_FOUND ? verbRules.NP[num] : F(P, M, "NP", abundance)}*`);
+            ${
+              F(P, M, "RAD", abundance) === NOT_FOUND
+                ? r
+                : F(P, M, "RAD", abundance)
+            }
+            ${
+              F(P, M, "VT", abundance) === NOT_FOUND
+                ? verbRules.VT[num]
+                : F(P, M, "VT", abundance)
+            }
+            ${
+              F(P, M, "MT", abundance) === NOT_FOUND
+                ? verbRules.MT[num]
+                : F(P, M, "MT", abundance)
+            }
+            ${
+              F(P, M, "NP", abundance) === NOT_FOUND
+                ? verbRules.NP[num]
+                : F(P, M, "NP", abundance)
+            }*`);
               if (Rcontent !== null && Rcontent !== "") {
                 result = result.replace(Rcontent, R);
               }
@@ -232,7 +262,7 @@ export async function conjugateVerb(verb: string, allVerbsJson: object) {
     };
   };
 
-  let conj: Record<string, any>;
+  let conj: Record<string, unknown>;
 
   if (!allVerbsJson[verb]) {
     conj = {

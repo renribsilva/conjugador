@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ni } from "../ssr/normalizeVerb";
-import type { flowTypes } from "../../types";
-import { initialFlow } from "./initalFlow";
+import { flowTypes } from "../types";
+import { initialFlow } from "../lib/csr/initalFlow";
+import { ni } from "../lib/ssr/normalizeVerb";
 
-export const flowOfReact = () => {
+export const useFlowOfReact = () => {
   const [state, setState] = useState<flowTypes>(initialFlow);
 
   useEffect(() => {
@@ -15,9 +15,9 @@ export const flowOfReact = () => {
         { conjVerbByAPI },
         { getSimilarWordsByAPI },
       ] = await Promise.all([
-        import("./isValidVerbByAPI"),
-        import("./conjVerbByAPI"),
-        import("./getSimilarWordsByAPI"),
+        import("../lib/csr/isValidVerbByAPI"),
+        import("../lib/csr/conjVerbByAPI"),
+        import("../lib/csr/getSimilarWordsByAPI"),
       ]);
       // dispara sem precisar esperar resposta
       void isValidVerbByAPI("recomeçar");
@@ -106,9 +106,10 @@ export const flowOfReact = () => {
   };
 
   const processEnter = async () => {
-    const { isValidVerbByAPI } = await import("./isValidVerbByAPI");
-    const { getSimilarWordsByAPI } = await import("./getSimilarWordsByAPI");
-    const { conjVerbByAPI } = await import("./conjVerbByAPI");
+    const { isValidVerbByAPI } = await import("../lib/csr//isValidVerbByAPI");
+    const { getSimilarWordsByAPI } =
+      await import("../lib/csr/getSimilarWordsByAPI");
+    const { conjVerbByAPI } = await import("../lib/csr/conjVerbByAPI");
 
     const normalizedInputValue = ni(state.inputValue);
     const suggestions = await getSimilarWordsByAPI(normalizedInputValue);
@@ -409,65 +410,67 @@ export const flowOfReact = () => {
     return;
   };
 
-  const dependencies = [state.showConjugations];
+  // const dependencies = [state.showConjugations];
 
-  useEffect(() => {
-    if (!state.showConjugations) return;
-
-    const data = {
-      A_INPUT: {
-        inputReq: state.inputReq,
-      },
-      B_VALIDAÇÃO_DO_VERBO: {
-        result: state.result,
-        foundVerb: state.foundVerb,
-        similar: state.similar,
-        punct: state.punct,
-        variations: {
-          varHasVariations: state.varHasVariations,
-          varProcessedInput: state.varProcessedInput,
-          varForcedVerb: state.varForcedVerb,
-          varPrefixFounded: state.varPrefixFounded,
-          varMatchingAfixo: state.varMatchingAfixo,
-          varConector: state.varConector,
-          varOriginalInput: state.varOriginalInput,
-        },
-      },
-      C_OUTPUT: {
-        conjugations: state.conjugations,
-        propsOfVerb: {
-          hasTargetCanonical1: state.hasTargetCanonical1,
-          hasTargetCanonical2: state.hasTargetCanonical2,
-          hasTargetAbundance1: state.hasTargetAbundance1,
-          hasTargetAbundance2: state.hasTargetAbundance2,
-          termination: state.termination,
-          termEntrie: state.termEntrie,
-          types: state.types,
-          note_plain: state.note_plain,
-          note_ref: state.note_ref,
-          model: state.model,
-        },
-        suggestions: state.suggestions,
-      },
-      D_CONTROLADORES_DE_FLUXO: {
-        showConjugations: state.showConjugations,
-        canonical: state.canonical,
-        loading: state.loading,
-        showButton: state.showButton,
-        isButtonDisabled: state.isButtonDisabled,
-        showSuggestions: state.showSuggestions,
-        showHome: state.showHome,
-        showSobre: state.showSobre,
-        showStatistic: state.showStatistic,
-        showReviewButton: state.showReviewButton,
-        goThrough: state.goThrough,
-        enter: state.enter,
-        progress: state.progress,
-        isDisabled: state.isDisabled,
-        postReq: state.postReq,
-      },
-    };
-  }, dependencies);
+  // useEffect(() => {
+  //   if (!state.showConjugations) return;
+  //
+  //   const data = {
+  //     A_INPUT: {
+  //       inputReq: state.inputReq,
+  //     },
+  //     B_VALIDAÇÃO_DO_VERBO: {
+  //       result: state.result,
+  //       foundVerb: state.foundVerb,
+  //       similar: state.similar,
+  //       punct: state.punct,
+  //       variations: {
+  //         varHasVariations: state.varHasVariations,
+  //         varProcessedInput: state.varProcessedInput,
+  //         varForcedVerb: state.varForcedVerb,
+  //         varPrefixFounded: state.varPrefixFounded,
+  //         varMatchingAfixo: state.varMatchingAfixo,
+  //         varConector: state.varConector,
+  //         varOriginalInput: state.varOriginalInput,
+  //       },
+  //     },
+  //     C_OUTPUT: {
+  //       conjugations: state.conjugations,
+  //       propsOfVerb: {
+  //         hasTargetCanonical1: state.hasTargetCanonical1,
+  //         hasTargetCanonical2: state.hasTargetCanonical2,
+  //         hasTargetAbundance1: state.hasTargetAbundance1,
+  //         hasTargetAbundance2: state.hasTargetAbundance2,
+  //         termination: state.termination,
+  //         termEntrie: state.termEntrie,
+  //         types: state.types,
+  //         note_plain: state.note_plain,
+  //         note_ref: state.note_ref,
+  //         model: state.model,
+  //       },
+  //       suggestions: state.suggestions,
+  //     },
+  //     D_CONTROLADORES_DE_FLUXO: {
+  //       showConjugations: state.showConjugations,
+  //       canonical: state.canonical,
+  //       loading: state.loading,
+  //       showButton: state.showButton,
+  //       isButtonDisabled: state.isButtonDisabled,
+  //       showSuggestions: state.showSuggestions,
+  //       showHome: state.showHome,
+  //       showSobre: state.showSobre,
+  //       showStatistic: state.showStatistic,
+  //       showReviewButton: state.showReviewButton,
+  //       goThrough: state.goThrough,
+  //       enter: state.enter,
+  //       progress: state.progress,
+  //       isDisabled: state.isDisabled,
+  //       postReq: state.postReq,
+  //     },
+  //   };
+  //
+  //   console.log(data);
+  // }, dependencies);
 
   return {
     state,

@@ -12,11 +12,12 @@ export function findTermRule(
 ) {
   const terminations = Object.keys(regJson);
 
-  const { terminationData: terminationData, termination } = getVerbKeys(
+  const { terminationData, termination } = getVerbKeys(
     verb,
     terminations,
     regJson,
-  );
+  ) as { terminationData: Record<string, any>; termination: string };
+
   // console.log(termination)
   if (!terminationData) {
     return getDefaultResponse();

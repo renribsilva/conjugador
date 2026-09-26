@@ -46,5 +46,6 @@ export const initialFlow = {
 
   canonical: "canonical1",
 
-  postReq: null
-}
+  postReq: null,
+};
+

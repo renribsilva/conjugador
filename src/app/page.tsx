@@ -8,7 +8,6 @@ import Theme from "../components/tsx/theme";
 import Button from "../components/tsx/button";
 import { nw } from "../lib/ssr/normalizeVerb";
 import postReqVerbByAPI from "../lib/csr/postReqVerbByAPI";
-import { flowOfReact } from "../lib/csr/flowOfReact";
 import ProgressBar from "../components/tsx/progress";
 import Sorry from "../components/mdx/Sorry.mdx";
 import About from "../components/mdx/About.mdx";
@@ -22,6 +21,7 @@ import Emphasis from "../components/mdx/Emphasis.mdx";
 import SobreErros from "../components/mdx/SobreErros.mdx";
 import NoteRefList from "../components/tsx/references";
 import styles from "./page.module.css";
+import { useFlowOfReact } from "../hooks/useFlowOfReact";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -31,7 +31,7 @@ const Index = () => {
   const [eita, setEita] = useState<string>("");
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { state, setState, handleKeyDown } = flowOfReact();
+  const { state, setState, handleKeyDown } = useFlowOfReact();
 
   const handleSolicitar = async (inputReq: string) => {
     setTimeout(() => {
@@ -53,7 +53,7 @@ const Index = () => {
     });
   };
 
-  const handleReview = async (inputReq) => {
+  const handleReview = async (inputReq: string) => {
     await postReqVerbByAPI(inputReq, "review_conj");
     setState({
       ...state,
@@ -141,28 +141,30 @@ const Index = () => {
 
   const hasNotes = state.note_ref && Object.keys(state.note_ref).length > 0;
 
-  const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"];
-  const randomAxi = () => {
-    const randomIndex = Math.floor(Math.random() * axiExpression.length);
-    setAxi(axiExpression[randomIndex]);
-  };
-
-  const eitaExpression = [
-    "Eita!",
-    "Oh só!",
-    "Ih, rapaz!",
-    "Uai!",
-    "Vish!",
-    "Lascou!",
-    "Poxa vida!",
-    "Deu ruim!",
-  ];
-  const randomEita = () => {
-    const randomIndex = Math.floor(Math.random() * eitaExpression.length);
-    setEita(eitaExpression[randomIndex]);
-  };
-
   useEffect(() => {
+    const axiExpression = ["Vish Maria!", "Té doidé!?", "Axi credo!", "Oxi!"];
+
+    const eitaExpression = [
+      "Eita!",
+      "Oh só!",
+      "Ih, rapaz!",
+      "Uai!",
+      "Vish!",
+      "Lascou!",
+      "Poxa vida!",
+      "Deu ruim!",
+    ];
+
+    const randomEita = () => {
+      const randomIndex = Math.floor(Math.random() * eitaExpression.length);
+      setEita(eitaExpression[randomIndex]);
+    };
+
+    const randomAxi = () => {
+      const randomIndex = Math.floor(Math.random() * axiExpression.length);
+      setAxi(axiExpression[randomIndex]);
+    };
+
     if (inputRef.current) {
       const enterEvent = new KeyboardEvent("keydown", {
         bubbles: true,
@@ -204,9 +206,10 @@ const Index = () => {
     };
     animate();
     return () => cancelAnimationFrame(raf);
-  }, [state.progress]);
+  }, [state.progress, setState]);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setMounted(true);
   }, []);
 
@@ -369,14 +372,16 @@ const Index = () => {
                             <span>[err 00] </span>
                             <span>A palavra </span>
                             <span>
-                              <strong>'{state.inputReq}'</strong>
+                              <strong>&apos;{state.inputReq}&apos;</strong>
                             </span>
                             <span>
                               {" "}
                               contém caracteres que não podemos consultar:{" "}
                             </span>
                             <span>
-                              <strong>" {formatPuncts(state.punct)} "</strong>
+                              <strong>
+                                &quot; {formatPuncts(state.punct)} &quot;
+                              </strong>
                             </span>
                             {state.foundVerb && (
                               <>
@@ -384,7 +389,9 @@ const Index = () => {
                                   <span>
                                     {" "}
                                     Mas encontramos o verbo <span></span>
-                                    <strong>'{state.foundVerb}'</strong>
+                                    <strong>
+                                      &apos;{state.foundVerb}&apos;
+                                    </strong>
                                   </span>
                                   <span>
                                     , que você pode conjugar clicando no botão
@@ -445,7 +452,10 @@ const Index = () => {
                             <div className={styles.lascou_suggestion}>
                               <div>
                                 <p>
-                                  <span>{`Ou, se preferir, pode conjugar alguns verbos que semelham a`}</span>
+                                  <span>
+                                    Ou, se preferir, pode conjugar alguns verbos
+                                    que semelham a
+                                  </span>
                                   <strong>{` '${state.inputReq}'`}</strong>
                                 </p>
                               </div>
@@ -480,7 +490,9 @@ const Index = () => {
                                 <span>[err 12] </span>
                                 <span>Quando buscamos a palavra </span>
                                 <span>
-                                  <strong>'{state.inputReq}', </strong>
+                                  <strong>
+                                    &apos;{state.inputReq}&apos;,{" "}
+                                  </strong>
                                 </span>
                                 <span>
                                   encontramos duas palavras com pequenas
@@ -523,14 +535,16 @@ const Index = () => {
                                 <span>[err 13] </span>
                                 <span>Não encontramos a palavra </span>
                                 <span>
-                                  <strong>'{state.inputReq}'</strong>
+                                  <strong>&apos;{state.inputReq}&apos;</strong>
                                 </span>
                                 <span>
                                   {" "}
                                   solicitada. Mas encontramos o verbo{" "}
                                 </span>
                                 <span>
-                                  <strong>'{state.foundVerb}'.</strong>
+                                  <strong>
+                                    &apos;{state.foundVerb}&apos;.
+                                  </strong>
                                 </span>
                                 <span>
                                   {" "}
@@ -561,7 +575,12 @@ const Index = () => {
                               <h2>{eita}</h2>
                               <p>
                                 <span>[err 14] </span>
-                                <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
+                                <span>
+                                  Não encontramos a palavra solicitada. Mas
+                                  encontramos outras bastante parecidas. Se
+                                  quiser conjugá-las, basta clicar na palavra
+                                  desejada:
+                                </span>
                               </p>
                               <div>
                                 <ul className={styles.similarButton}>
@@ -606,11 +625,13 @@ const Index = () => {
                                   palavra{" "}
                                 </span>
                                 <span>
-                                  <strong>'{state.inputReq}'</strong>
+                                  <strong>&apos;{state.inputReq}&apos;</strong>
                                 </span>
                                 <span>. Mas encontramos o verbo </span>
                                 <span>
-                                  <strong>'{state.foundVerb}'.</strong>
+                                  <strong>
+                                    &apos;{state.foundVerb}&apos;.
+                                  </strong>
                                 </span>
                                 <span>
                                   {" "}
@@ -650,7 +671,7 @@ const Index = () => {
                                   palavra{" "}
                                 </span>
                                 <span>
-                                  <strong>'{state.inputReq}'</strong>
+                                  <strong>&apos;{state.inputReq}&apos;</strong>
                                 </span>
                                 <span>
                                   . Mas encontramos palavras muito parecidas.
@@ -697,11 +718,13 @@ const Index = () => {
                                   palavra{" "}
                                 </span>
                                 <span>
-                                  <strong>'{state.inputReq}'</strong>
+                                  <strong>&apos;{state.inputReq}&apos;</strong>
                                 </span>
                                 <span>. Mas encontramos o verbo </span>
                                 <span>
-                                  <strong>'{state.foundVerb}'.</strong>
+                                  <strong>
+                                    &apos;{state.foundVerb}&apos;.
+                                  </strong>
                                 </span>
                                 <span>
                                   {" "}
@@ -732,7 +755,12 @@ const Index = () => {
                               <h2>{eita}</h2>
                               <p>
                                 <span>[err 24] </span>
-                                <span>{`Não encontramos a palavra solicitada. Mas encontramos outras bastante parecidas. Se quiser conjugá-las, basta clicar na palavra desejada:`}</span>
+                                <span>
+                                  Não encontramos a palavra solicitada. Mas
+                                  encontramos outras bastante parecidas. Se
+                                  quiser conjugá-las, basta clicar na palavra
+                                  desejada:
+                                </span>
                               </p>
                               <div>
                                 <ul className={styles.similarButton}>
@@ -829,6 +857,7 @@ const Index = () => {
                             pointerEvents: "none",
                           }}
                         >
+                          {/* eslint-disable-next-line*/}
                           <img
                             src="/lular.png"
                             alt="Foto do rosto do Lula rodeado de flores"
@@ -866,7 +895,8 @@ const Index = () => {
                         <SobreErros />
                         {state.showReviewButton && state.showConjugations && (
                           <Button onClick={() => handleReview(state.foundVerb)}>
-                            Revisar a conjugação de '{state.foundVerb}'
+                            Revisar a conjugação de &apos;{state.foundVerb}
+                            &apos;
                           </Button>
                         )}
                         {!state.showReviewButton && state.showConjugations && (

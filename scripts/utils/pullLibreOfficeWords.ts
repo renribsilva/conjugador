@@ -1,22 +1,27 @@
-import fs from 'fs';
-import https from 'https';
+import fs from "fs";
+import https from "https";
 
-export async function pullLibreOfficeWords(url: string, dest: string): Promise<void> {
+export async function pullLibreOfficeWords(
+  url: string,
+  dest: string,
+): Promise<void> {
   const file = fs.createWriteStream(dest);
   return new Promise((resolve, reject) => {
-    https.get(url, (response) => {
-      response.pipe(file);
-      file.on('finish', () => {
-        file.close((err) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve();
-          }
+    https
+      .get(url, (response) => {
+        response.pipe(file);
+        file.on("finish", () => {
+          file.close((err) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve();
+            }
+          });
         });
+      })
+      .on("error", (error) => {
+        fs.unlink(dest, () => reject(error));
       });
-    }).on('error', (error) => {
-      fs.unlink(dest, () => reject(error));
-    });
   });
 }

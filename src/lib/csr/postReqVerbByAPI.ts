@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
 export default async function postReqVerbByAPI(data: string, type: string) {
   try {
-    await fetch('/api/postReqVerb', {
-      method: 'POST',
+    await fetch("/api/postReqVerb", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ data, type }),
     });
-    return true
+    return true;
   } catch {
-    return false
+    return false;
   }
 }

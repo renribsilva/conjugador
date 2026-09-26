@@ -27,7 +27,14 @@ interface RulesByTermData {
         models: number[];
         entries: { [verb: string]: number[] };
       };
-      [key: string]: any;
+      type?: number[];
+      note?: {
+        plain: string[];
+        ref: Record<string, unknown>;
+      };
+      abundance1?: Record<string, unknown>;
+      canonical1?: Record<string, unknown>;
+      [key: string]: unknown;
     };
   };
 }
@@ -39,7 +46,8 @@ const rulesByTermPath = path.join(
 );
 const modelsPath = path.join(process.cwd(), "public/json/models.json");
 
-// SUBSTITUA NULL POR UMA TERMINAÇÃO VERBAL ESPECÍFICA PARA EXECUTAR O SCRIPT SELETIVAMENTE
+// SUBSTITUA NULL POR UMA TERMINAÇÃO VERBAL
+// ESPECÍFICA PARA EXECUTAR O SCRIPT SELETIVAMENTE
 const specificMainKeyObject = "ular";
 
 async function editRulesByTerm() {
@@ -67,7 +75,7 @@ async function editRulesByTerm() {
     console.log("Iniciando verificação de terminações em allVerbs.json...");
 
     const invalidVerbs = Object.entries(allVerbsData)
-      .filter(([_, value]) => value.ending.length === 0)
+      .filter(([, value]) => value.ending.length === 0)
       .map(([key]) => key);
 
     console.log(
@@ -108,7 +116,8 @@ async function editRulesByTerm() {
       const remainingTime = estimatedTotalTime - elapsedTime;
 
       process.stdout.write(
-        `- progresso: ${progress}% | Tempo restante: ${Math.floor(remainingTime / 60000)}min\r`,
+        `- progresso: ${progress}% | Tempo restante:` +
+          `${Math.floor(remainingTime / 60000)}min\r`,
       );
 
       if (!rulesByTermData[mainKey]) continue;
@@ -128,7 +137,7 @@ async function editRulesByTerm() {
       }
 
       const filteredVerbs = Object.entries(allVerbsData)
-        .filter(([_, value]) => value.ending.includes(mainKey))
+        .filter(([, value]) => value.ending.includes(mainKey))
         .map(([key]) => key);
 
       const subKeys = Object.keys(rulesByTermData[mainKey]).sort();
@@ -147,7 +156,8 @@ async function editRulesByTerm() {
         for (let i = 0; i < filteredVerbs.length; i += batchSize) {
           const batch = filteredVerbs.slice(i, i + batchSize);
 
-          // ESSA FUNÇÃO FOI ALTERADA QUANDO GETPROPSOSVERBS FOI SUBSTITUÍDA POR CONJUGATEVERB... FALTAM TESTES
+          // ESSA FUNÇÃO FOI ALTERADA QUANDO GETPROPSOSVERBS
+          // FOI SUBSTITUÍDA POR CONJUGATEVERB... FALTAM TESTES
           const verbPropsPromises = batch.map(async (verb) => {
             const props = await X(verb);
             if (props) {
@@ -204,7 +214,10 @@ async function editRulesByTerm() {
           subKey === "..." &&
           Object.entries(subKeyData.verbs.entries).length === 0
         ) {
-          subKeyData.note.plain = [];
+          // O TypeScript agora sabe que note existe de forma segura
+          if (subKeyData.note) {
+            subKeyData.note.plain = [];
+          }
         }
       }
     }
@@ -232,10 +245,10 @@ async function editRulesByTerm() {
     );
 
     const seenVerbs = new Set();
-    Object.entries(rulesByTermData).forEach(([_, mainKeyData]) => {
-      Object.entries(mainKeyData).forEach(([_, subKeyData]) => {
+    Object.entries(rulesByTermData).forEach(([, mainKeyData]) => {
+      Object.entries(mainKeyData).forEach(([, subKeyData]) => {
         if (subKeyData.verbs?.entries) {
-          Object.entries(subKeyData.verbs.entries).forEach(([verb, _]) => {
+          Object.entries(subKeyData.verbs.entries).forEach(([verb]) => {
             if (seenVerbs.has(verb)) {
               console.log(`- ${verb}`);
             } else {
@@ -266,7 +279,7 @@ async function editRulesByTerm() {
 
     const top3 = totals.slice(0, 3);
 
-    top3.forEach((entry, index) => {
+    top3.forEach((entry) => {
       console.log(`- ${entry.mainKey}: ${entry.total}`);
     });
 
@@ -332,7 +345,8 @@ function extractVerbsEntries(rulesByTermData: RulesByTermData): {
   return allEntries;
 }
 
-async function saveToFile(data: any, filePath: string) {
+// data tipado como unknown (mais seguro que any para serialização)
+async function saveToFile(data: unknown, filePath: string) {
   const jsonString = JSON.stringify(data, null, 2).replace(
     /\[\s*([\s\S]*?)\s*\]/g,
     (_, p1) => `[${p1.replace(/\s*,\s*/g, ", ").replace(/\n\s*/g, "")}]`,

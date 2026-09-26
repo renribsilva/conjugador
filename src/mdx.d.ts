@@ -1,5 +1,5 @@
 declare module "*.mdx" {
   import * as React from "react";
-  const MDXComponent: React.ComponentType<any>;
+  const MDXComponent: React.ComponentType;
   export default MDXComponent;
 }

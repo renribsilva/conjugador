@@ -2,7 +2,7 @@ import { Roboto } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Layout from "../layout/layout";
-import { Providers } from "../context/providers";
+import { Providers } from "../components/tsx/providers";
 
 const ubuntu = Roboto({
   subsets: ["latin"],

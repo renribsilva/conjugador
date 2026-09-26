@@ -63,22 +63,26 @@ async function ediAllVerbsJson() {
     );
 
     console.log("- verbos que NÃO serão adicionados:", notAddedWords);
+
+    const newWordsCount = filteredNewWords.filter(Boolean).length;
     console.log(
-      `- quantidade de novos verbos a serem adicionados: ${filteredNewWords.filter(Boolean).length}`,
+      "- quantidade de novos verbos a serem adicionados:",
+      newWordsCount,
     );
 
     const updatedWords = [...ptBRWords, ...filteredNewWords];
 
-    console.log(
-      `- quantidade de verbos efetivamente acrescidos: ${updatedWords.length - ptBRWords.length}`,
-    );
-    console.log(
-      `- nova quantidade de vocábulos após complementação: ${updatedWords.length}`,
-    );
+    const addedCount = updatedWords.length - ptBRWords.length;
+    console.log("- quantidade de verbos efetivamente acrescidos:", addedCount);
 
+    console.log(
+      "- nova quantidade de vocábulos após complementação:",
+      updatedWords.length,
+    );
     console.log(
       "Filtrando os vocábulos terminados em 'ar', 'er', 'ir' e 'por'...",
     );
+
     const exceptions = new Set([
       "dar",
       "ir",
@@ -251,7 +255,8 @@ async function ediAllVerbsJson() {
         const minutes = Math.floor((remainingTime % 3600) / 60); // Minutos
 
         process.stdout.write(
-          `- progresso: ${progress}% | Tempo restante estimado: ${hours}h ${minutes}min\r`,
+          `- progresso: ${progress}% | Tempo restante ` +
+            `estimado: ${hours}h ${minutes}min\r`,
         );
       };
 

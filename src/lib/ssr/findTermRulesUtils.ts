@@ -4,7 +4,7 @@ export function getVerbKeys(
   verb: string,
   terminations: string[],
   regJson: object,
-): any {
+): unknown {
   terminations.sort((a, b) => b.length - a.length);
 
   const termination = terminations.find((end) => ni(verb).endsWith(ni(end)));
