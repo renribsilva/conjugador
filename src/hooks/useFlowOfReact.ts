@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { flowTypes } from "../types";
-import { initialFlow } from "../lib/csr/initalFlow";
+import { initialFlow } from "./initalFlow";
 import { ni } from "../lib/ssr/normalizeVerb";
 
 export const useFlowOfReact = () => {
@@ -106,7 +106,7 @@ export const useFlowOfReact = () => {
   };
 
   const processEnter = async () => {
-    const { isValidVerbByAPI } = await import("../lib/csr//isValidVerbByAPI");
+    const { isValidVerbByAPI } = await import("../lib/csr/isValidVerbByAPI");
     const { getSimilarWordsByAPI } =
       await import("../lib/csr/getSimilarWordsByAPI");
     const { conjVerbByAPI } = await import("../lib/csr/conjVerbByAPI");
